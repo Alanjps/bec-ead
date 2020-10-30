@@ -1,0 +1,71 @@
+page-edit-user {
+  .footerSpace{
+      display: block;
+      margin:auto;
+      margin-bottom:80px;
+  }
+
+  #body{
+      .requiredInfo{
+          font-style: italic;
+      }
+      .fieldElement{
+          padding:0px;
+
+          .label{
+              padding-left:10px;
+          }
+      }
+
+      .recovery-link{
+          margin-top:10px;
+          margin-bottom:40px;
+          display: block;
+          color:#FFF;
+      }
+
+      .buttonLogin{
+          background:#4472c4;
+      }
+
+      .buttonMedium{
+          height:50px;
+      }
+      .buttonLogout{
+          background:#FFA500;
+      }
+  }
+}
+
+.buttonPhoto{
+  position: absolute !important;
+  left: 28% !important;
+  bottom: 0 !important;
+  margin: 0 !important;
+  height: 30px;
+}
+
+.perfil-label{
+  font-size: 8px !important;
+}
+
+.perfil{
+  display: inline-flex;
+  font-size: 12px !important;
+  width: auto;
+}
+.perfil-title{
+  color: #203141 !important;
+  font-weight: 900;
+}
+.perfil-input{
+  color: #000000 !important;
+}
+.text-input-md {
+  margin: 6px 5px;
+}
+
+.cropper-container{
+  min-height: 360px;
+  min-width: 420px;
+}

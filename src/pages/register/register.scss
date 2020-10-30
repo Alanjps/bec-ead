@@ -1,0 +1,103 @@
+page-register {
+
+  .body{
+      &.background-ead{
+          background: #000 url("https://vcc.becinteligencia.com/storage/uploads/configs/loginMobile.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: auto 100%;
+      }
+      &.background-edicom{
+          background: #000 url("https://edicom.becinteligencia.com/storage/uploads/configs/loginMobile.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: auto 100%;
+      }
+      &.background-marketing-house{
+          background: #000 url("https://homolog.marketinghouse.com.br/storage/uploads/configs/loginMobile.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: auto 100%;
+      }
+      &.background-hkt369{
+        background: #000 url("https://descubre.hkt369.com/storage/uploads/configs/loginMobile.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto 100%;
+      }
+      &.background-knowh{
+        background: #000 url("https://knowhouse.marketinghouse.com.br/storage/uploads/configs/loginMobile.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto 100%;
+    }
+  }
+
+  .panel-fisica{
+      display: none;
+  }
+  .panel-fisica.on{
+      display: block;
+  }
+  .panel-juridica{
+      display: none;
+  }
+  .panel-juridica.on{
+      display: block;
+  }
+
+
+  #body{
+      background: #000;
+
+      .fieldElement{
+          color:#FFF;
+          background:#000;
+          padding:0px;
+
+          .label{
+              color:#FFF;
+              padding-left:10px;
+          }
+      }
+
+      .recovery-link{
+          margin-top:10px;
+          margin-bottom:40px;
+          display: block;
+          color:#FFF;
+      }
+
+      .buttonLogin{
+          background:#4472c4;
+      }
+
+      .buttonMedium{
+          height:50px;
+      }
+
+  }
+
+  .fieldElement{
+      background:#FFF;
+      padding:0px;
+/* 
+      .label{
+          color:#FFF;
+          padding-left:10px;
+      } */
+
+      ion-input{
+          color:#FFF;
+      }
+  }
+
+  .requiredInfo{
+      color:#FFF !important;
+      font-style: italic;
+  }
+
+}
+.scroll-content{
+  padding: none !important;
+}

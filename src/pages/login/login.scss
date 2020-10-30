@@ -1,0 +1,155 @@
+page-login {
+
+  .body{
+
+    @media (max-width: 400px) {
+        .min-height{
+            min-height: 50%;
+        }
+    }
+    @media (min-width: 401px) {
+        .min-height{
+            min-height: 50%;
+        }
+    }
+    
+    @media (orientation: landscape){
+        background-size: 100% auto !important;
+    }
+    @media (orientation: portrait){
+        background-size: auto 100% !important;
+    } 
+
+    &.background-ead{
+        background: #000 url("https://vcc.becinteligencia.com/storage/uploads/configs/loginMobile.png");
+        background-repeat: no-repeat;
+        background-position: center;       
+    }
+    &.background-edicom{
+        background: #000 url("https://edicom.becinteligencia.com/storage/uploads/configs/loginMobile.png");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &.background-marketing-house{
+        background: #000 url("https://homolog.marketinghouse.com.br/storage/uploads/configs/loginMobile.png");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &.background-hkt369{
+        background: #000 url("https://descubre.hkt369.com/storage/uploads/configs/loginMobile.png");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &.background-knowh{
+        background: #000 url("https://knowhouse.marketinghouse.com.br/storage/uploads/configs/loginMobile.png");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #logo-header{
+        max-width: 90%;
+        border: 0;
+        margin: auto;
+        text-align: center;
+        display: block;
+        margin-bottom:30px;
+        padding-top: 50%;
+    }
+
+    .fieldElement{
+        background:#FFF;
+        padding:0px;
+
+        .label{
+            padding-left:10px;
+
+            &--know-house{
+                color: #000 !important;
+                border-color: #FC5A16 !important;
+            }
+            &--default{
+                color: #FFF !important;
+                border-color: #000 !important;
+            }
+        }
+
+        .label-marketing-house{
+            color:#5433a8;
+        }
+
+/*         ion-input{
+            color:#FFF;
+        }
+        .ion-input-marketing-house{
+            color:#5433a8 !important;
+        } */
+    }
+
+    .fieldElement.right .label{
+        text-align: right;
+    }
+
+    .recovery-link{
+        margin-top:20px;
+        margin-bottom:25px;
+        display: block;
+        &--default{
+            color:#FFF !important;
+        }
+        &--know-house{
+            color:#000 !important;
+        }
+    }
+
+    .recovery-link-marketing-house{
+        margin-top:20px;
+        margin-bottom:25px;
+        display: block;
+        color:#5433a8;
+    }
+    
+    .buttonLogin{
+        /* background:#C4C4C4; */
+        background: #223342;
+    }
+
+    .buttonLogin-marketing-house{
+        background: #5433a8;
+    }
+
+    .buttonMedium{
+        height:50px;
+    }
+
+    .version{
+        color:#FFF;
+        font-size: 13px;
+        font-style:italic;
+        float:right;
+        margin-top:20px;
+        margin-right:3px;
+    }
+
+    .background{
+        position: absolute;
+        height: 100%;
+        width: auto;
+        top: 0;
+        left: 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% auto;
+        z-index: -1;
+    }
+  }
+
+  .scroll-content{
+      padding: 0 16px !important;
+  }
+
+
+}
+
+/* .tabs-md .tabbar {
+  display: none !important;
+} */

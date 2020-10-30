@@ -1,0 +1,73 @@
+<ion-content padding [ngClass]="
+background == 'marketing-house' ? 'body background-marketing-house' : 
+  background == 'edicom' ? 'body background-edicom' : 
+    background == 'ead' ? 'body background-ead' :
+      background == 'hkt369' ? 'body background-hkt369' :
+        background == 'know-house' ? 'body background-knowh' : ''">
+
+  <ion-list style="margin-top: 20%;">
+    <ion-item class="fieldElement">
+      <ion-label stacked *ngIf="idiom == '01'">Nome *</ion-label>
+      <ion-label stacked *ngIf="idiom == '02'">Nombre *</ion-label>
+      <ion-input type="text" [(ngModel)]="credential.nome"></ion-input>
+    </ion-item>
+
+    <ion-item class="fieldElement">
+      <ion-label stacked>CPF *</ion-label>
+      <ion-input type="text" [(ngModel)]="credential.documento" [brmasker]="{person: true}"></ion-input>
+    </ion-item>
+
+    <ion-item class="fieldElement" *ngIf="hide">
+      <ion-label stacked *ngIf="idiom == '01'">Nome da Empresa *</ion-label>
+      <ion-label stacked *ngIf="idiom == '02'">Nombre de la empresa *</ion-label>
+      <ion-input type="text" [(ngModel)]="credential.empresa"></ion-input>
+    </ion-item>
+
+    <ion-item class="fieldElement">
+      <ion-label stacked>Whatsapp *</ion-label>
+      <ion-input type="text"  [(ngModel)]="credential.whatsapp" [brmasker]="{mask:'(00) 00000-0000', len:15, type:'num'}"></ion-input>
+    </ion-item>
+
+    <ion-item class="fieldElement" *ngIf="project != 'edicom'">
+      <ion-label stacked *ngIf="idiom == '01'">Data de Nascimento *</ion-label>
+      <ion-label stacked *ngIf="idiom == '02'">Fecha de Nacimiento *</ion-label>
+      <ion-input type="text"  [(ngModel)]="credential.nascimento" [brmasker]="{mask:'00/00/0000', len:10, type:'num'}"></ion-input>
+    </ion-item>
+
+    <ion-item class="fieldElement">
+      <ion-label stacked *ngIf="idiom == '01'">E-mail *</ion-label>
+      <ion-label stacked *ngIf="idiom == '02'">Correo *</ion-label>
+      <ion-input type="text" [(ngModel)]="credential.email"></ion-input>
+    </ion-item>
+
+    <ion-item class="fieldElement">
+      <ion-label stacked *ngIf="idiom == '01'">Senha *</ion-label>
+      <ion-label stacked *ngIf="idiom == '02'">Contraseña *</ion-label>
+      <ion-input type="password" [(ngModel)]="credential.password"></ion-input>
+    </ion-item>
+
+    <ion-item class="fieldElement">
+      <ion-checkbox [(ngModel)]="credential.aceite"></ion-checkbox>
+      <ion-label style="color: white;" *ngIf="idiom == '01'">Aceito os <a href="https://becinteligencia.com/politica-de-privacidade" target=_blank>termos e políticas de privacidade</a>.</ion-label>
+      <ion-label style="color: white;" *ngIf="idiom == '02'">Acepto los <a href="https://becinteligencia.com/politica-de-privacidade" target=_blank>términos y políticas de privacidad</a>.</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <p class=requiredInfo *ngIf="idiom == '01'">* Campos obrigatórios</p>
+  <p class=requiredInfo *ngIf="idiom == '02'">* Campos obligatórios</p>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        <button ion-button full color="secondary"  class="buttonMedium" (click)="makeRegister()" >
+          <p *ngIf="idiom == '01'">Cadastrar</p>
+          <p *ngIf="idiom == '02'">Registrar</p>
+        </button>
+    </ion-col>
+      <ion-col col-6>
+        <button ion-button full  class="buttonMedium"  color="light" (click)="goBack()" >
+          <p>Cancelar</p>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

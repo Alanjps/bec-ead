@@ -1,0 +1,23 @@
+photo-modal {
+  .background{
+      background-color: rgba(0, 0, 0, 0.555);
+  }
+
+  ion-select {
+      max-width: 100%;
+  }
+
+  .contest-blue{
+      background-color: #488aff;
+  }
+  .contest-gray{
+      background-color: #999;
+  }
+  .filter-container{
+      padding: 0;
+  }
+
+    .scroll-content {
+        margin-top: 10px !important;
+    }
+}

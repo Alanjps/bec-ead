@@ -1,0 +1,17 @@
+<ion-badge *ngIf="pendentChat" color="danger" round [ngClass]="version == '01' ? 'top-badge badge-margin-v1' : version == '02' ? 'top-badge badge-margin-v2' : 'top-badge badge-margin-v1'">!</ion-badge>
+<!-- <a *ngIf="version == '01' || version == '02' && active != true" (click)="redirectToChatPage()" [ngClass]="version == '01' ? 'menu-top menu-height-v1' : version == '02' ? 'menu-top menu-height-v2' : 'menu-top menu-height-v1'"></a> -->
+<button *ngIf="(version == '01' || version == '02') && active != true" outline (click)="redirectToChatPage()" [ngClass]="version == '01' ? 'menu-top menu-height-v1' : version == '02' ? 'menu-top menu-height-v2' : 'menu-top menu-height-v1'" ion-button icon-only>
+  <ion-icon *ngIf="project == 'ead'" [ngClass]="active == true ? 'vcc-custom-chat-active' : 'vcc-custom-chat'"></ion-icon>
+  <ion-icon *ngIf="project == 'edicom'" [ngClass]="active == true ? 'edicom-custom-chat-active' : 'edicom-custom-chat'"></ion-icon>
+  <ion-icon *ngIf="project == 'marketing-house'" [ngClass]="active == true ? 'mrkhouse-custom-chat-active' : 'mrkhouse-custom-chat'"></ion-icon>
+  <ion-icon *ngIf="project == 'know-house'" [ngClass]="active == true ? 'knowh-custom-chat-active' : 'knowh-custom-chat'"></ion-icon>
+  <ion-icon *ngIf="project == 'hkt369'" [ngClass]="active == true ? 'hkt369-custom-chat-active' : 'hkt369-custom-chat'"></ion-icon>
+</button>
+
+<button *ngIf="(version == '01' || version == '02')  && active == true" [disabled]="true" outline [ngClass]="version == '01' ? 'menu-top menu-height-v1' : version == '02' ? 'menu-top menu-height-v2' : 'menu-top menu-height-v1'" ion-button icon-only>
+  <ion-icon *ngIf="project == 'ead'" [ngClass]="active == true ? 'vcc-custom-chat-active' : 'vcc-custom-chat'"></ion-icon>
+  <ion-icon *ngIf="project == 'edicom'" [ngClass]="active == true ? 'edicom-custom-chat-active' : 'edicom-custom-chat'"></ion-icon>
+  <ion-icon *ngIf="project == 'marketing-house'" [ngClass]="active == true ? 'mrkhouse-custom-chat-active' : 'mrkhouse-custom-chat'"></ion-icon>
+  <ion-icon *ngIf="project == 'know-house'" [ngClass]="active == true ? 'knowh-custom-chat-active' : 'knowh-custom-chat'"></ion-icon>
+  <ion-icon *ngIf="project == 'hkt369'" [ngClass]="active == true ? 'hkt369-custom-chat-active' : 'hkt369-custom-chat'"></ion-icon>
+</button>

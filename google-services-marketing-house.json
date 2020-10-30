@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1010203313691",
+    "firebase_url": "https://marketing-house-ead.firebaseio.com",
+    "project_id": "marketing-house-ead",
+    "storage_bucket": "marketing-house-ead.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010203313691:android:f1df368f26c319806f5abe",
+        "android_client_info": {
+          "package_name": "com.becinteligencia.mkthouse.app.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1010203313691-bh7uhf6p4nv1p6alai02hr13q1i7mg1f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAU0LKaY4VxrveCSqCKNJyB_GWxrkD3CDA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1010203313691-bh7uhf6p4nv1p6alai02hr13q1i7mg1f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

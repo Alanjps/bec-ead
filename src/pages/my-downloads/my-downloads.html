@@ -1,0 +1,38 @@
+<ion-header [ngClass]="version == '01' ? 'principalHeader' : version == '02' ? 'principalHeaderV02' : 'principalHeader'">
+  <!-- <img [ngClass]="version == '01' ? 'testeira' : version == '02' ? 'testeira-v02' : 'testeira'" 
+  src="{{ globalUrl + '/storage/uploads/configs/testeira1.png' }}" > -->
+  <img [ngClass]="version == '01' ? 'principal-icon' : version == '02' ? 'principal-icon-v02' : 'principal-icon'"
+  src="{{ globalUrl + '/storage/uploads/configs/logoHeader.png' }}" />
+  
+  <img *ngIf="version == '01'" class="testeira-v01" 
+  src="{{ globalUrl + '/storage/uploads/configs/testeira1.png' }}" >
+
+  <img *ngIf="version == '02'" class="testeira-v02" 
+  src="{{ globalUrl + '/storage/uploads/configs/testeira2.png' }}" >
+  
+  <!--  <img class=logo-header src="./assets/imgs/movera-logo.png" /> -->
+  <div *ngIf="version == '02' || version == '01'">
+    <p [ngClass]="project == 'know-house' ?  'font-style know-house-title-color' : ''">{{titleTesteira}}  {{complementTitle? '| ' + complementTitle : ''}}</p>
+  </div>
+</ion-header>
+
+<ion-content padding [ngClass]="project == 'marketing-house' ? 'content mrkhouse-custom-bg' : project == 'ead' ? 'content vcc-custom-bg' : project == 'edicom' ? 'content edicom-custom-bg' : ''">
+  <!-- <h2 *ngIf="version == '01'">Meus Downloads</h2> -->
+  <p *ngIf="_attachments.length == 0 && exibirNota && idiom == '01'">Nenhum conteúdo disponível.</p>
+  <p *ngIf="_attachments.length == 0 && exibirNota && idiom == '02'">No hay contenido disponible.</p>
+  <ion-list>
+    <button ion-item no-padding *ngFor="let attachment of _attachments; trackBy: attachment?.id"
+      (click)="openContent(attachment)">
+      <ion-row>
+        <ion-col col-2 style="justify-content: center; display: flex; align-items: center;">
+          <ion-icon name="clipboard" *ngIf="!attachment.isVideo"></ion-icon>
+          <ion-icon name="play" *ngIf="attachment.isVideo"></ion-icon>
+        </ion-col>
+        <ion-col col-10><span class=titleContent>{{attachment.name}}</span></ion-col>
+      </ion-row>
+    </button>
+  </ion-list>
+  <!--<button ion-button full icon-start class="buttonMedium" (click)="returnToLogin()">
+    Voltar
+  </button>-->
+</ion-content>

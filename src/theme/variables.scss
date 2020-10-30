@@ -1,0 +1,378 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+
+$font-family-md-base: "Verdana";
+$font-family-ios-base: "Verdana";
+$font-family-wp-base: "Verdana";
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
+
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+
+
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  //primary:    #488aff,  //DEFAULT
+  primary:    #fc5A16,  //KNOW HOUSE -----------------
+  //primary:    #49a6c9,  //EDICOM -----------------
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #fff,
+  dark:       #222,
+);
+
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+
+@import "ionic.ionicons";
+
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";
+
+
+:root {
+
+  $url-edicom: "https://edicom.becinteligencia.com//storage//uploads//configs//";
+  $url-know-house: "https://knowhouse.marketinghouse.com.br//storage//uploads//configs//";
+  $url-vcc: "https://vcc.becinteligencia.com///storage//uploads//configs//";
+  $url-mrkhouse: "https://homolog.marketinghouse.com.br//storage//uploads//configs//";
+  $url-descubre: "https://descubre.hkt369.com///storage//uploads//configs//";
+
+  ion-icon {
+    //-------------------------------------------------------
+    //EDICON -------------------------------------------------------
+    //-------------------------------------------------------
+
+    &[class*="tab-edicom-"]{
+      width: 30px;
+      height: 30px;
+    }
+/*     &[ng-reflect-is-active="true"]{
+      filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+    }
+    &[ng-reflect-is-active="false"]{
+      filter: none;
+    } */
+    &[ng-reflect-is-active="true"]{
+      filter: invert(64%) sepia(58%) saturate(448%) hue-rotate(153deg) brightness(83%) contrast(88%);
+    }
+    &[class*="tab-edicom-perfil"]{
+      content: url($url-edicom+"internoApp1.svg") !important;
+    }
+    &[class*="tab-edicom-notificacao"]{
+      content: url($url-edicom+"internoApp2.svg") !important;
+    }
+    &[class*="tab-edicom-agenda"]{
+      content: url($url-edicom+"internoApp3.svg") !important;
+    }
+    &[class*="tab-edicom-foto"]{
+      content: url($url-edicom+"internoApp4.svg") !important;
+    }
+    &[class*="tab-edicom-news"]{
+      content: url($url-edicom+"internoApp5.svg") !important;
+    }
+
+    //-------------------------------------------------------
+    //KNOW HOUSE -------------------------------------------------------
+    //-------------------------------------------------------
+
+    &[class*="tab-knowh-"]{
+      width: 30px;
+      height: 30px;
+    }
+
+    &[class*="tab-knowh-perfil"]{
+      content: url($url-know-house+"internoApp1.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-knowh-notificacao"]{
+      content: url($url-know-house+"internoApp2.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-knowh-agenda"]{
+      content: url($url-know-house+"internoApp3.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-knowh-foto"]{
+      content: url($url-know-house+"internoApp4.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-knowh-news"]{
+      content: url($url-know-house+"internoApp5.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+
+    //-------------------------------------------------------
+    //VCC -------------------------------------------------------
+    //-------------------------------------------------------
+
+    &[class*="tab-vcc-"]{
+      width: 30px;
+      height: 30px;
+    }
+
+    &[class*="tab-vcc-perfil"]{
+      content: url($url-vcc+"internoApp1.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-vcc-notificacao"]{
+      content: url($url-vcc+"internoApp2.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-vcc-agenda"]{
+      content: url($url-vcc+"internoApp3.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-vcc-foto"]{
+      content: url($url-vcc+"internoApp4.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-vcc-news"]{
+      content: url($url-vcc+"internoApp5.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+
+    //-------------------------------------------------------
+    //MARKETING HOUSE -------------------------------------------------------
+    //-------------------------------------------------------
+
+    &[class*="tab-mrkhouse-"]{
+      width: 30px;
+      height: 30px;
+    }
+
+    &[class*="tab-mrkhouse-perfil"]{
+      content: url($url-mrkhouse+"internoApp1.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-mrkhouse-notificacao"]{
+      content: url($url-mrkhouse+"internoApp2.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-mrkhouse-agenda"]{
+      content: url($url-mrkhouse+"internoApp3.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-mrkhouse-foto"]{
+      content: url($url-mrkhouse+"internoApp4.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-mrkhouse-news"]{
+      content: url($url-mrkhouse+"internoApp5.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+
+    //-------------------------------------------------------
+    //DESCUBRE -------------------------------------------------------
+    //-------------------------------------------------------
+
+    &[class*="tab-hkt369-"]{
+      width: 30px;
+      height: 30px;
+    }
+
+    &[class*="tab-hkt369-perfil"]{
+      content: url($url-descubre+"internoApp1.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-hkt369-notificacao"]{
+      content: url($url-descubre+"internoApp2.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-hkt369-agenda"]{
+      content: url($url-descubre+"internoApp3.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-hkt369-foto"]{
+      content: url($url-descubre+"internoApp4.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-hkt369-news"]{
+      content: url($url-descubre+"internoApp5.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+  }
+}
+
+/*   :root {
+
+    ion-icon {
+        &[class*="tab-edicom-"]{
+          width: 30px;
+          height: 30px;
+        }
+        &[class*="tab-edicom-perfil"]{
+          content: url("https://edicom.becinteligencia.com//storage//uploads//configs//internoApp1.svg") !important;
+          filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+          &[ng-reflect-is-active="false"]{
+            filter: none;
+          }
+          &[ng-reflect-is-active="true"] {
+            filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+          }
+        } 
+    }
+} */

@@ -1,0 +1,128 @@
+menu-sup {
+    .menu-top{
+        position: absolute !important;
+        top: 0 !important;
+        right: 0 !important;
+        margin: 0 !important;
+        width: 60px;
+        border: none !important;
+        background-color: transparent;
+    }
+    .menu-hover-color{
+        color: #488aff;
+    }
+    .menu-inactive-color{
+        color: #747474;
+    }
+    .menu-height-v1{
+        height: 110px;
+        padding-top: 20px !important;
+    }
+    .menu-height-v2{
+        height: 80px;
+        padding-top: 20px !important;
+    }
+
+    .top-badge{
+        position: absolute !important;
+        right: 0 !important;
+        top: 0 !important;
+        z-index: 10;
+        border-radius: 50% !important;
+        padding: 2px 6px !important;
+        margin-top: 20px !important;
+    }
+    .badge-margin-v1{
+        margin: 20px 4px;
+        margin-top: 37px !important;
+    }
+    .badge-margin-v2{
+        margin: 5px 4px;
+    }
+
+    ion-icon{
+
+        $url-edicom: "https://edicom.becinteligencia.com//storage//uploads//configs//";
+        $url-know-house: "https://knowhouse.marketinghouse.com.br//storage//uploads//configs//";
+        $url-vcc: "https://vcc.becinteligencia.com//storage//uploads//configs//";
+        $url-mrkhouse: "https://homolog.marketinghouse.com.br//storage//uploads//configs//";
+        $url-descubre: "https://descubre.hkt369.com//storage//uploads//configs//";
+        
+        &[class*="edicom-"] {
+            width: 30px;
+            height: 30px; 
+            &[class*="chat"] {
+                background: url($url-edicom+"iconeHeader.png") no-repeat 100% 100%;
+                background-size: contain;
+                filter: none;
+            }      
+            &[class*="chat-active"] {
+                background: url($url-edicom+"iconeHeader.png") no-repeat 100% 100%;
+                background-size: contain;
+                filter: invert(64%) sepia(58%) saturate(448%) hue-rotate(153deg) brightness(83%) contrast(88%);
+            }
+        }
+
+        &[class*="knowh-"] {
+            width: 30px;
+            height: 30px; 
+            &[class*="chat"] {
+                background: url($url-know-house+"iconeHeader.png") no-repeat 100% 100%;
+                background-size: contain;
+                filter: none;
+            }      
+            &[class*="chat-active"] {
+                background: url($url-know-house+"iconeHeader.png") no-repeat 100% 100%;
+                background-size: contain;
+                filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+            }
+        }
+
+        &[class*="vcc-"] {
+            width: 30px;
+            height: 30px; 
+            &[class*="chat"] {
+                background: url($url-vcc+"iconeHeader.png") no-repeat 100% 100%;
+                background-size: contain;
+                filter: none;
+            }      
+            &[class*="chat-active"] {
+                background: url($url-vcc+"iconeHeader.png") no-repeat 100% 100%;
+                background-size: contain;
+                filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+            }
+        }
+
+        &[class*="mrkhouse-"] {
+            width: 30px;
+            height: 30px; 
+            &[class*="chat"] {
+                background: url($url-mrkhouse+"iconeHeader.png") no-repeat 100% 100%;
+                background-size: contain;
+                filter: none;
+            }      
+            &[class*="chat-active"] {
+                background: url($url-mrkhouse+"iconeHeader.png") no-repeat 100% 100%;
+                background-size: contain;
+                filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+            }
+        }
+
+        &[class*="hkt369-"] {
+            width: 30px;
+            height: 30px; 
+            &[class*="chat"] {
+                background: url($url-descubre+"iconeHeader.png") no-repeat 100% 100%;
+                background-size: contain;
+                filter: none;
+            }      
+            &[class*="chat-active"] {
+                background: url($url-descubre+"iconeHeader.png") no-repeat 100% 100%;
+                background-size: contain;
+                filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,184 @@
+import { Component } from '@angular/core';
+import { Platform } from 'ionic-angular';
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
+import { Storage } from '@ionic/storage';
+import { HttpServiceProvider } from '../providers/http-service/http-service';
+import { OneSignal } from '@ionic-native/onesignal';
+import { isCordovaAvailable } from '../common/is-cordova-available';
+
+@Component({
+  templateUrl: 'app.html'
+})
+
+export class MyApp {
+
+  public storage: Storage;
+  rootPage:any = '';
+  projectNumber: number = null;
+  projectName: string = null;
+  onesignalAppId: string = '';
+  firebaseSenderId: string = '';
+
+  constructor(
+    storage: Storage,
+    platform: Platform,
+    statusBar: StatusBar,
+    splashScreen: SplashScreen,
+    private oneSignal: OneSignal,
+    http: HttpServiceProvider) {
+
+      this.clearStorage(storage);
+      
+      if(platform.is('android')){
+        storage.set('Platform', 'android');
+      }else if(platform.is('ios')){
+        storage.set('Platform', 'ios');
+      }
+
+      platform.ready().then(() => {
+        statusBar.styleDefault();
+        splashScreen.hide();
+        
+        //IDIOMA -----------------------------------------
+        //storage.set('Idiom','01'); //português
+        //storage.set('Idiom','02'); //espanhol
+
+        //1 -> ead
+        //2 -> edicom
+        //3 -> marketing-house
+        //4 -> hkt369
+        //5 -> know-house
+        this.projectNumber = 5;
+
+        switch(this.projectNumber){
+          case 1:
+            this.onesignalAppId='946eb156-716e-4000-853f-18f41cc2b193';
+            this.firebaseSenderId='23981024898';
+            this.projectName = 'ead';
+            storage.set('Idiom','01'); //português
+            break;
+          case 2:
+            this.onesignalAppId='c3765e9e-79b4-4dbc-b3ad-a31396017591';
+            this.firebaseSenderId='981777081301';
+            this.projectName = 'edicom';
+            storage.set('Idiom','02'); //espanhol
+            break;
+          case 3:
+            this.onesignalAppId='883bb93e-4053-43f0-865c-a5d52ca89a80';
+            this.firebaseSenderId='1010203313691';
+            this.projectName = 'marketing-house';
+            storage.set('Idiom','01'); //português
+            break;
+          case 4:
+            this.onesignalAppId='abf814a3-a2bb-4ae4-9a63-422d37394e64';
+            this.firebaseSenderId='786704296447';
+            this.projectName = 'hkt369';
+            storage.set('Idiom','02'); //espanhol
+            break;
+          case 5:
+            this.onesignalAppId='d29cd1d1-3a5b-4774-b768-a1026101ea0a';
+            this.firebaseSenderId='823038736964';
+            this.projectName = 'know-house';
+            storage.set('Idiom','01'); //português
+            break;
+        }
+
+        // OneSignal Code start:
+        // Enable to debug issues:
+        // The following options are available with increasingly more information: 
+        // 0 = NONE, 1 = FATAL, 2 = ERROR, 3 = WARN, 4 = INFO, 5 = DEBUG, 6 = VERBOSE
+        // window["plugins"].OneSignal.setLogLevel({logLevel: 6, visualLevel: 6});
+        // window["plugins"].OneSignal.setLogLevel({logLevel: 6, visualLevel: 0});
+
+        if (isCordovaAvailable()) {
+          /*           
+          var notificationOpenedCallback = function(jsonData) {
+            console.log("\n\nENTROU PUSH ----------------------------------\n");
+            console.log(jsonData);
+            console.log("\n----------------------------------\n\n");
+          };
+
+          window["plugins"].OneSignal
+            .startInit(this.onesignalAppId, this.firebaseSenderId)        
+            .handleNotificationOpened(notificationOpenedCallback)
+            .endInit(); 
+          */
+
+          this.oneSignal.startInit(this.onesignalAppId , this.firebaseSenderId);
+          this.oneSignal.handleNotificationReceived().subscribe((jsonData) => {
+            console.log("\n\nNOTIFICAÇÃO RECEBIDA",jsonData);
+          });
+          this.oneSignal.endInit();
+
+        }
+
+        storage.set('Project',this.projectName).then((value) => {
+
+          let url = '';
+          switch(value){
+            case 'marketing-house': {
+              url = 'https://homolog.marketinghouse.com.br';
+              break;
+            }
+            case 'edicom': {
+              url = 'https://edicom.becinteligencia.com';
+              break;
+            }
+            case 'ead': {
+              url = 'https://vcc.becinteligencia.com';
+              break;
+            }
+            case 'hkt369': {
+              url = 'https://descubre.hkt369.com';
+              break;
+            }
+            case 'know-house': {
+              url = 'https://knowhouse.marketinghouse.com.br';
+              break;
+            }
+          }
+
+          storage.set('GlobalUrl',url).then(async (urlBase)=> {
+            let version = 0;
+            //BUG DA REQUISICAO
+            //ERROR Error: Uncaught (in promise): SyntaxError: Unexpected end of JSON input
+            //SyntaxError: Unexpected end of JSON input
+            //at JSON.parse (<anonymous>)
+
+            await new Promise(async (response, reject) => {
+              return await http.getAppVersion().then((res:any) => {
+                storage.set('AppConfig', res);
+                version = res.version;  
+                if (version == 1){
+                  storage.set('LayoutVersion', '01');
+                }else if(version == 2 ){
+                  storage.set('LayoutVersion', '02');
+                }else{
+                  storage.set('LayoutVersion', '02');
+                }
+                response();
+              });
+            })
+
+            storage.get('LayoutVersion').then((value)=>{
+              this.rootPage = 'login-page';
+              platform.ready().then(() => {
+                statusBar.styleDefault();
+                splashScreen.hide();
+              });
+            })
+          });
+        });
+      });     
+  }
+
+  clearStorage(storage){
+    let vars = [
+      'AvailableDefaultProjects'
+    ];
+    vars.map((v)=>{
+      storage.remove(v);
+    });
+  }
+}

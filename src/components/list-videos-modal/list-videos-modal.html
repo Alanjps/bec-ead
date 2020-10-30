@@ -1,0 +1,43 @@
+<ion-content padding class="background">
+  <div *ngIf="playVideo" style="
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  ">
+    <div style="display: flex; justify-content: space-between; height: auto;">
+      <div>
+        <button ion-button icon-only round small *ngIf="showPrevious == true" (click)="selectPrevious()" style="
+        align-self: flex-start;
+        margin: 0 0 12px 0;
+        padding: 0;" >
+          <ion-icon name="md-arrow-back"></ion-icon>
+        </button>
+
+        <button ion-button icon-only round small *ngIf="showNext == true"  (click)="selectNext()" style="
+          align-self: flex-start;
+          margin: 0 0 12px 0;
+          padding-left: 0;" >
+          <ion-icon name="md-arrow-forward"></ion-icon>
+        </button>
+      </div>
+
+      <button  ion-button icon-only round small (click)="dismiss()" style="
+        align-self: flex-end;
+        margin: 0 0 12px 0;
+        padding: 0;" >
+        <ion-icon name="md-close"></ion-icon>
+      </button>
+    </div>
+
+    <div *ngIf="exibirVideo">
+      <video #videoPlayer class="video-player" autoplay="true" controls controlsList="nodownload" style="max-width: 100%; max-height: 100%;"></video>
+    </div>
+    
+    <div *ngIf="exibirEmbed && urlEmbed">
+      <iframe  [src]="urlEmbed" style="width:100%" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    
+<!--     <button ion-button float-right class="cancel-button" (click)="cleanVideo()">Voltar</button> -->  
+  </div>
+</ion-content>

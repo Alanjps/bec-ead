@@ -1,0 +1,53 @@
+<ion-header [ngClass]="version == '01' ? 'principalHeader' : version == '02' ? 'principalHeaderV02' : 'principalHeader'">
+  <img [ngClass]="version == '01' ? 'principal-icon' : version == '02' ? 'principal-icon-v02' : 'principal-icon'"
+     src="{{ globalUrl + '/storage/uploads/configs/logoHeader.png' }}" />
+     
+  <img *ngIf="version == '01'" class="testeira-v01" 
+  src="{{ globalUrl + '/storage/uploads/configs/testeira1.png' }}" >
+
+  <img *ngIf="version == '02'" class="testeira-v02" 
+  src="{{ globalUrl + '/storage/uploads/configs/testeira2.png' }}" >
+
+  <p [ngClass]="project == 'know-house' ?  'font-style know-house-title-color' : ''">{{titleTesteira}}  {{complementTitle? '| ' + complementTitle : ''}}</p>
+  <menu-sup></menu-sup>
+</ion-header>
+  <ion-content [ngClass]="version == '01' ? 'margin-content-l1' : version == '02' ? 'margin-content-l2' : 'margin-content-l1'" [ngClass]="project == 'marketing-house' ? 'content mrkhouse-custom-bg' : project == 'ead' ? 'content vcc-custom-bg' : project == 'edicom' ? 'content edicom-custom-bg' : ''">
+      <ion-list padding>
+        <ion-item *ngFor="let item of items">
+          <ion-grid *ngIf="item.expanded == false" style="background-color: white;">
+            <ion-row>
+              <ion-col col-1>
+                <ion-icon *ngIf="item.lido == 0" name="notifications-outline"></ion-icon>
+                <ion-icon [ngClass]="item.lido == 1 ? 'read-notification' : 'notification'" *ngIf="item.lido == 1" name="md-checkmark"></ion-icon>
+              </ion-col>
+              <ion-col col-11>
+                <button  detail-none (click)="expandItem(item)" [ngClass]="item.lido == 1 ? 'read-notification' : 'notification'">
+                  <h2>{{ item?.remetente.nome }}</h2>
+                  <p >{{ item?.mensagem.substr(0,40) }}...</p>
+                  <p>{{ item?.created_at }}</p>
+                </button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+  
+          <expandable [expanded]="item.expanded" [ngClass]="item.expanded == true ? 'expanded' : ''">
+            <div padding style="overflow: auto;" (click)="expandItem(item)" class="notification">
+              <h2>{{ item?.remetente.nome }}</h2>
+              <p [innerHTML]="item.mensagem_formatada" class="message-receptive"></p>
+              <p>{{ item?.created_at }}</p>
+            </div>
+          </expandable>
+        </ion-item>
+      </ion-list>
+
+      <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content>
+          
+          </ion-infinite-scroll-content>
+      </ion-infinite-scroll>      
+         
+      
+  
+      <!-- <pagination-controls (pageChange)="p = $event" previousLabel="Anterior" nextLabel="Próximo" autoHide="true"></pagination-controls> -->
+    
+</ion-content>

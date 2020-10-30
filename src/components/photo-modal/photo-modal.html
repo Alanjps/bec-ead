@@ -1,0 +1,39 @@
+<ion-content padding>
+  <div style="text-align: center; padding: 0 10px 10px 10px;">
+    <img src={{photo}}>
+  </div>
+
+  <div *ngIf="contestEnabled == true" style="padding: 5px 0;">
+    <p *ngIf="idiom == '01'">Participar do concurso?</p>
+    <p *ngIf="idiom == '02'">¿Participa en el concurso?</p>
+    <button *ngIf="contester == false" ion-button color="light" (click)="signContest()" [ngClass]="contester == true ? contest-blue : contest-gray">
+      <ion-icon *ngIf="photo" name="md-trophy" style="padding-right: 10px;"></ion-icon> 
+      <p *ngIf="idiom == '01'">Não</p>
+      <p *ngIf="idiom == '02'">No</p>
+    </button>
+    <button *ngIf="contester == true" ion-button (click)="signContest()" [ngClass]="contester == true ? contest-blue : contest-gray">
+      <ion-icon *ngIf="photo" name="md-trophy" style="padding-right: 10px;"></ion-icon>
+      <p *ngIf="idiom == '01'">Sim</p> 
+      <p *ngIf="idiom == '02'">Si</p> 
+    </button>
+  </div>
+
+  <ion-list radio-group [(ngModel)]="selectedCategory" (ionChange)="categoryChanged()">
+    <p *ngIf="idiom == '01'">Selecione uma das categorias:</p> 
+    <p *ngIf="idiom == '02'">Seleccione una de las categorías:</p> 
+    
+    <ion-item *ngFor="let category of categories">
+      <ion-avatar item-start>
+        <img src={{category.thumb}}>
+      </ion-avatar>
+      <ion-label>{{category.title}}</ion-label>
+      <ion-radio checked="false" [value]="category.id"></ion-radio>
+    </ion-item>
+  </ion-list>
+
+  <div>
+    <button [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" ion-button (click)="confirm()">Confirmar</button>
+    <button [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" ion-button (click)="cancel()">Cancelar</button>
+  </div>
+
+</ion-content>

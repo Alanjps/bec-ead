@@ -1,0 +1,9 @@
+<ion-content padding class="background">
+  <div>
+    <img src={{file}}>
+  </div>
+  <div>
+    <button [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" ion-button (click)="confirm()">Confirmar</button>
+    <button [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" ion-button (click)="cancel()">Cancelar</button>
+  </div>
+</ion-content>

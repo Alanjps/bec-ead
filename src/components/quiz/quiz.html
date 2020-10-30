@@ -1,0 +1,75 @@
+
+<ion-header [ngClass]="version == '01' ? 'principalHeader' : version == '02' ? 'principalHeaderV02' : 'principalHeader'">
+  <div>
+<!--     <img [ngClass]="version == '01' ? 'testeira' : version == '02' ? 'testeira-v02' : 'testeira'" 
+    src="{{ globalUrl + '/storage/uploads/configs/testeira2.png' }}" >
+ -->
+    <img [ngClass]="version == '01' ? 'principal-icon' : version == '02' ? 'principal-icon-v02' : 'principal-icon'"
+     src="{{ globalUrl + '/storage/uploads/configs/logoHeader.png' }}" />
+
+    <img *ngIf="version == '01'" class="testeira-v01" 
+    src="{{ globalUrl + '/storage/uploads/configs/testeira1.png' }}" >
+
+    <img *ngIf="version == '02'" class="testeira-v02" 
+    src="{{ globalUrl + '/storage/uploads/configs/testeira2.png' }}" >
+    <!-- <img class=logo-header src="./assets/imgs/movera-logo.png" /> -->
+    <p [ngClass]="project == 'know-house' ?  'font-style know-house-title-color' : ''">{{titleTesteira}}  {{complementTitle? '| ' + complementTitle : ''}}</p>
+  </div>
+  
+</ion-header>
+<ion-content padding [ngClass]="version == '01' ? 'margin-content-l1' : version == '02' ? 'margin-content-l2' : 'margin-content-l1'">
+  <div style="margin-bottom: 110px !important;">
+    <h2 *ngIf="idiom == '01'">Questionário</h2>
+    <h2 *ngIf="idiom == '02'">Cuestionario</h2>
+    
+    <div class=singleQuestao *ngFor="let questao of formulario; let i = index">
+      <ion-label >{{i+1}} - {{questao['questao']}}</ion-label>
+      <ion-input  *ngIf="questao['tipo'] == 'TEXT'"  [(ngModel)]="questao['respostas']" type="text" value="" ></ion-input>
+      <ion-input  *ngIf="questao['tipo'] == 'NUMBER'"[(ngModel)]="questao['respostas']" type="number" value="" ></ion-input>
+  
+      <ion-list *ngIf="questao['tipo'] == 'CHECK'">
+        <ion-item *ngFor="let opcao of questao['alternativas'];  let o = index">
+          <ion-label >{{opcao.texto}}</ion-label>
+          <ion-checkbox [(ngModel)]="questao['respostas'][o]" ></ion-checkbox >
+        </ion-item>
+      </ion-list>
+  
+      <ion-list  *ngIf="questao['tipo'] == 'RADIO'" radio-group [(ngModel)]="questao['respostas']">
+        <ion-item *ngFor="let opcao of questao['alternativas'];  let e = index">
+          <ion-label>{{opcao.texto}}</ion-label>
+          <ion-radio  value="{{e}}"></ion-radio>
+        </ion-item>
+      </ion-list>
+  
+      <ion-list *ngIf="questao['tipo'] == 'UPLOAD'">
+        <div *ngIf="fileUpload" class="camera" (click)="openCamera(i)">
+          <img src={{fileUpload}} alt="Upload">
+        </div>
+        <div  class="camera empty" (click)="openCamera(i)">
+          <span *ngIf="!fileUpload && idiom == '01'">Clique para tirar a foto</span>
+          <span *ngIf="!fileUpload && idiom == '02'">Haz clic para tomar una foto</span>
+          <span *ngIf="fileUpload && idiom == '01'">Trocar foto</span>
+          <span *ngIf="fileUpload && idiom == '02'">Cambiar foto</span>
+        </div>
+      </ion-list>
+    </div>
+  
+    <button ion-button full [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" (click)="salva()">
+      <p *ngIf="idiom == '01'">SALVAR RESPOSTAS</p>
+      <p *ngIf="idiom == '02'">GUARDAR RESPUESTA</p>
+    </button>
+    <button ion-button full icon-start color="light" [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-cancel-know-house' : 'button-default'" (click)="fechar()">
+      CANCELAR
+    </button>
+  
+    <ion-select class="hidden" #selectFile interface="action-sheet" [(ngModel)]="this.galleryFile"
+      (ionChange)="openGaleryOrCamera()">
+      <ion-option *ngIf="idiom == '01'" [value]="false">Câmera</ion-option>
+      <ion-option *ngIf="idiom == '02'" [value]="false">Cámara</ion-option>
+      <ion-option *ngIf="idiom == '01'" [value]="true">Galeria</ion-option>
+      <ion-option *ngIf="idiom == '02'" [value]="true">Galería</ion-option>
+    </ion-select>
+  </div>
+  
+
+</ion-content>

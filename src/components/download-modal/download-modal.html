@@ -1,0 +1,26 @@
+<ion-content padding class="background">
+  <div style="padding-top: 80px;">
+    <!-- <h2 *ngIf="version == '01'">Meus Downloads</h2> -->
+    <p *ngIf="_attachments.length == 0 && idiom =='01'" style="color: white;">Nenhum conteúdo disponível.</p>
+    <p *ngIf="_attachments.length == 0 && idiom =='02'" style="color: white;">Ninguno contenido disponible.</p>
+    <ion-list>
+      <button ion-item no-padding *ngFor="let attachment of _attachments; trackBy: attachment?.id"
+        (click)="openContent(attachment)">
+        <ion-row>
+          <ion-col col-2 style="justify-content: center; display: flex; align-items: center;">
+            <ion-icon name="clipboard" *ngIf="!attachment.isVideo"></ion-icon>
+            <ion-icon name="play" *ngIf="attachment.isVideo"></ion-icon>
+          </ion-col>
+          <ion-col col-10><span class=titleContent>{{attachment.name}}</span></ion-col>
+        </ion-row>
+      </button>
+    </ion-list>
+
+    <div>
+      <button [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" *ngIf="idiom =='01'" ion-button (click)="close()">Voltar</button>
+      <button [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" *ngIf="idiom =='02'" ion-button (click)="close()">Volver</button>
+    </div>
+  </div>
+</ion-content>
+
+

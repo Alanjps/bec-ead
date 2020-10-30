@@ -1,0 +1,57 @@
+<ion-content padding 
+[ngClass]="project == 'marketing-house' ? 'content mrkhouse-custom-bg' : 
+project == 'ead' ? 'content vcc-custom-bg' : 
+  project == 'edicom' ? 'content edicom-custom-bg' : 
+    project == 'hkt369' ? 'content hkt369-custom-bg' : 
+      project == 'know-house' ? 'content knowh-custom-bg' : ''">
+  <ion-card padding>
+  <ion-item>
+    <ion-label *ngIf="idiom =='01'" floating>Nome *</ion-label>
+    <ion-label *ngIf="idiom =='02'" floating>Nombre *</ion-label>
+    <ion-input type="text" [(ngModel)]="credential.nome"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label *ngIf="idiom =='01'" floating>Tel *</ion-label>
+    <ion-label *ngIf="idiom =='02'" floating>Mobile *</ion-label>
+    <ion-input type="text" [brmasker]="{mask:'(00) 00000-0000', len:15, type:'num'}" [(ngModel)]="credential.whatsapp"></ion-input>
+  </ion-item>
+
+  <ion-item *ngIf="project != 'edicom'">
+    <ion-label *ngIf="idiom =='01'" floating>Data de Nasc *</ion-label>
+    <ion-label *ngIf="idiom =='02'" floating>Fecha de Nasc *</ion-label>
+    <ion-input type="text" [brmasker]="{mask:'00/00/0000', len:10, type:'num'}" [(ngModel)]="credential.nascimento"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label *ngIf="idiom =='01'" floating>E-mail *</ion-label>
+    <ion-label *ngIf="idiom =='02'" floating>Correo *</ion-label>
+    <ion-input type="email" [(ngModel)]="credential.email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label  *ngIf="habilitaCampos && idiom =='01'" floating>Senha **</ion-label>
+    <ion-label  *ngIf="!habilitaCampos && idiom =='01'" floating>Senha *</ion-label>
+    <ion-label  *ngIf="habilitaCampos && idiom =='02'" floating>Contraseña **</ion-label>
+    <ion-label  *ngIf="!habilitaCampos && idiom =='02'" floating>Contraseña *</ion-label>
+    <ion-input type="password" [(ngModel)]="credential.password"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label  *ngIf="habilitaCampos && idiom =='01'" floating>Confirmar Senha **</ion-label>
+    <ion-label  *ngIf="!habilitaCampos && idiom =='01'" floating>Confirmar Senha *</ion-label>
+    <ion-label  *ngIf="habilitaCampos && idiom =='02'" floating>Confirmar Contraseña **</ion-label>
+    <ion-label  *ngIf="!habilitaCampos && idiom =='02'" floating>Confirmar Contraseña *</ion-label>
+    <ion-input type="password" [(ngModel)]="password2"></ion-input>
+  </ion-item>
+  
+  <div padding>
+    <button [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" *ngIf="idiom =='01'" ion-button (click)="confirm()">Confirmar</button>
+    <button [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" *ngIf="credential.firstAccess == false &&  idiom =='01'" ion-button (click)="cancel()">Voltar</button>
+
+    <button [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" *ngIf="idiom =='02'" ion-button (click)="confirm()">Confirmar</button>
+    <button [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" *ngIf="credential.firstAccess == false && idiom =='02'" ion-button (click)="cancel()">Volver</button>
+  </div>
+  
+  </ion-card>
+</ion-content>

@@ -1,0 +1,36 @@
+page-photo {    
+  .item-inner{
+    border: none !important;
+  }
+  .card-content-md {
+    padding: 0 !important; 
+  }
+  .bg-contest{
+    border: solid chartreuse 1px;
+  }
+
+  .filterV02{
+    .item-block {
+      min-height: 3.5rem !important;
+    }
+  }
+  
+  ion-fab[bottom] {
+    bottom: 110px;
+  }
+  
+  .arrow-color{
+    color: #d8d8d8;
+  }
+
+  .fab-close-active .button-inner {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  .fab-close-active .fab-close-icon {
+    opacity: 0;
+  }
+
+}  

@@ -1,0 +1,30 @@
+{
+  "name": "BeCInteligencia",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "proxies": [
+    {
+      "path": "/vcc",
+      "proxyUrl": "https://vcc.becinteligencia.com"
+    },
+    {
+      "path": "/edc",
+      "proxyUrl": "https://edicom.becinteligencia.com"
+    },
+    {
+      "path": "/mkh",
+      
+      "proxyUrl": "https://homolog.marketinghouse.com.br"
+    },
+    {
+      "path": "/hkt369",
+      "proxyUrl": "https://descubre.hkt369.com"
+    },
+    {
+      "path": "/knowh",
+      "proxyUrl": "https://knowhouse.marketinghouse.com.br"
+    }
+  ]
+}

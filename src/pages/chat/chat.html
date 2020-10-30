@@ -1,0 +1,177 @@
+<ion-header [ngClass]="version == '01' ? 'principalHeader' : version == '02' ? 'principalHeaderV02' : 'principalHeader'">
+  <img [ngClass]="version == '01' ? 'principal-icon' : version == '02' ? 'principal-icon-v02' : 'principal-icon'"
+  src="{{ globalUrl + '/storage/uploads/configs/logoHeader.png' }}" />
+  
+  <img *ngIf="version == '01'" class="testeira-v01" 
+  src="{{ globalUrl + '/storage/uploads/configs/testeira1.png' }}" >
+
+  <img *ngIf="version == '02'" class="testeira-v02" 
+  src="{{ globalUrl + '/storage/uploads/configs/testeira2.png' }}" >
+
+  <div *ngIf="version == '01' || version == '02'">
+    <p [ngClass]="project == 'know-house' ?  'font-style know-house-title-color' : ''">{{titleTesteira}}  {{complementTitle? '| ' + complementTitle : ''}}</p>
+  </div>
+  <menu-sup [active]="true" ></menu-sup>
+</ion-header>
+
+<!-- <ion-content class="background margin-content" > -->
+
+  <ion-content *ngIf="showMotivosContainer" class="background" [ngClass]="version == '01' ? 'margin-content-l1' : version == '02' ? 'margin-content-l2' : 'margin-content-l1'">
+    <ion-header padding>
+      <button [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" ion-button small (click)="cancelMotivos()">
+        <p *ngIf="idiom == '01'">Sair</p>
+        <p *ngIf="idiom == '02'">Salir</p>
+      </button>
+  
+      <button [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" ion-button small (click)="getConversasAtivas()">
+        <p *ngIf="idiom == '01'">Conversas Ativas</p>
+        <p *ngIf="idiom == '02'">Conversaciones Activas</p>
+      </button>
+    </ion-header>
+  
+    <ion-content padding>
+      <ion-card style="padding-top: 80px;" padding-top *ngIf="motivos && motivos.length > 0">
+        <ion-label *ngIf="idiom == '01'">Selecione um motivo.</ion-label>
+        <ion-label *ngIf="idiom == '02'">Seleccione una asitencia</ion-label>
+        <ion-list>
+          <ion-item *ngFor="let motivo of motivos" (click)="selectMotivo(motivo)">
+            <ion-avatar item-start>
+              <img src={{motivo.thumb}}>
+            </ion-avatar>
+            <ion-label>{{motivo.title}}</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+  
+      <ion-card  style="padding-top: 80px;" *ngIf="motivos && motivos.length <= 0">
+        <h1 *ngIf="idiom == '01'">Não há motivos cadastrados.</h1>
+        <h1 *ngIf="idiom == '02'">No hay razones registradas.</h1>
+      </ion-card>
+    </ion-content>
+  </ion-content>
+
+  <!---------------------------------------------------------------------------------->
+
+  <ion-content *ngIf="showRecentUserContainer" style="background-color: #ffffff;"  class="background" [ngClass]="version == '01' ? 'margin-content-l1' : version == '02' ? 'margin-content-l2' : 'margin-content-l1'">
+    <ion-header padding style="position: relative;">
+      <button [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" ion-button small (click)="cancelMotivos()">
+        <p *ngIf="idiom == '01'">Sair</p>
+        <p *ngIf="idiom == '02'">Salir</p>
+      </button>
+      <button [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" ion-button small (click)="cancelRecentUsers()">
+        <p *ngIf="idiom == '01'">Voltar</p>
+        <p *ngIf="idiom == '02'">Volver</p>
+      </button>
+    </ion-header>
+  
+    <ion-content padding *ngIf="recents && recents.length > 0">
+      <p *ngIf="idiom == '01'">Abaixo a lista dos últimos usuários que você conversou</p>
+      <p *ngIf="idiom == '02'">Abajo el listado de los ultimos contactos hechos</p>
+      
+      <ion-list>
+        <ion-item href="#chat-anchor" *ngFor="let recent of recents" (click)="selectRecentUser(recent)" [ngClass]="recent.destacar == true ? 'bg-destaque' : ''">              
+          <a href="#chat-anchor" style="text-decoration: none; display: flex; align-items: center;">
+            <ion-grid>
+              <ion-row>
+                <ion-col col-3>
+                  <ion-avatar item-start>
+                    <img src={{recent.thumb}}>
+                  </ion-avatar>
+                </ion-col>
+                <ion-col col-7 style="margin-top: auto; margin-bottom: auto;">
+                  <ion-row>
+                    <p *ngIf="recent.lido == true"> {{recent.nome}}</p>
+                    <p *ngIf="recent.lido == false"> <b>{{recent.nome}}</b></p>
+                  </ion-row>
+                  <ion-row>
+<!--                     
+                    <p *ngIf="recent.lido == true">{{recent.mensagem.substr(0,25)}}</p><p *ngIf="recent.lido == true && recent.mensagem.length > 25"> ...</p>
+                    <p *ngIf="recent.lido == false"><b>{{recent.mensagem.substr(0,25)}}</b></p><p *ngIf="recent.lido == false && recent.mensagem.length > 25"> <b>...</b></p>
+ -->
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </a>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-content>
+
+  <!---------------------------------------------------------------------------------->
+
+  <ion-content  *ngIf="showChatContainer"  style="background-color: #ffffff;" class="background" [ngClass]="version == '01' ? 'margin-content-l1' : version == '02' ? 'margin-content-l2' : 'margin-content-l1'">
+    <ion-header padding *ngIf="showMessageAllBox == false" class="message-container" style="position: relative;">
+      <button [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" ion-button small (click)="cancelMotivos()">
+        <p *ngIf="idiom == '01'">Sair</p>
+        <p *ngIf="idiom == '02'">Salir</p>
+      </button>
+      <button [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" ion-button small (click)="cancelChat()">
+        <p *ngIf="idiom == '01'">Voltar</p>
+        <p *ngIf="idiom == '02'">Volver</p>
+      </button>
+    </ion-header>
+  
+    <ion-content padding *ngIf="showMessageAllBox == false" class="message-container" style="height: 90%;">
+      <ion-list>
+        <div id="chat-anchor"></div>
+        <div *ngIf="selectedUserId != null">
+          <p *ngIf="idiom == '01'" style="font-size: 1.4rem;">Você está falando com: {{selectedUser.nome}}</p>
+          <p *ngIf="idiom == '02'" style="font-size: 1.4rem;">Usted está hablando con: {{selectedUser.nome}}</p>
+        </div>
+        <div  id="cards">
+          <ion-card class="card-container">
+            <ion-card-content *ngFor="let message of messages">
+              <!-- receptivo -->
+              <ion-item *ngIf="userId !== message.remetente.id && (perfilType == 3 && message.notification == 0 || perfilType != 3)">
+                <ion-avatar item-start>
+                  <img src={{receptivo.thumb}}>
+                </ion-avatar>
+                <span *ngIf="message.notification == 1" class="circle_notification--receptive"><ion-icon name="ios-notifications-outline"></ion-icon></span>
+                <img *ngIf="message.type == 'file'" src={{message.mensagem}} >
+                <h3 *ngIf="message.type != 'file'" [innerHTML]="message.mensagem_formatada" class="message-receptive--default"></h3>
+                <h2 class="date">{{ message.created_at }}</h2>
+              </ion-item>
+  
+              <!-- ativo -->
+              <ion-item *ngIf="userId == message.remetente.id  && (perfilType == 3 && message.notification == 0 || perfilType != 3)">
+                <ion-avatar item-end>
+                  <img src={{ativo.thumb}}>
+                </ion-avatar>
+                <span *ngIf="message.notification == 1" class="circle_notification--active"><ion-icon name="ios-notifications-outline"></ion-icon></span>
+                <img *ngIf="message.type == 'file'" src={{message.mensagem}} />
+                <h3 *ngIf="message.type != 'file'" [innerHTML]="message.mensagem_formatada" [ngClass]="project == 'know-house' ? 'message-active--know-house' : 'message-active--default'"></h3>
+                <h2 class="date">{{ message.created_at }}</h2>
+              </ion-item>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-list>
+  
+      <ion-textarea [disabled]="selectedUserId == null" class="message-input"  *ngIf="idiom == '01'" rows="3" placeholder="Enviar nova mensagem" [(ngModel)]="newMessage" ></ion-textarea>
+      <ion-textarea [disabled]="selectedUserId == null" class="message-input"  *ngIf="idiom == '02'" rows="3" placeholder="Enviar nueva mensaje" [(ngModel)]="newMessage" ></ion-textarea>
+      
+      <button [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" [disabled]="selectedUserId == null" float-right ion-button icon-start (click)="sendMessage()"><ion-icon name="ios-text-outline"></ion-icon>Enviar</button>
+      <button [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" *ngIf="perfilType == 2" [disabled]="selectedUserId == null" float-right ion-button icon-start (click)="sendMessage(false, true)" style="margin-right: 10px;"><ion-icon name="ios-notifications-outline"></ion-icon>Notificar</button>     
+      <button [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" [disabled]="selectedUserId == null" float-right ion-button icon-start (click)="openGallery()" style="margin-right: 10px;"><ion-icon name="ios-document-outline"></ion-icon></button>     
+    </ion-content>
+  
+    <div *ngIf="showMessageAllBox == true">
+      <h2>Enviar Mensagem para todos do projeto {{ selectedProject['titulo'] }}?</h2>
+  
+      <ion-textarea class="message-input" [(ngModel)]="newMessage" autofocus="true" rows="5" placeholder="Insira sua mensagem..."></ion-textarea>
+  
+      <button [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" ion-button float-right icon-start (click)="sendMessageAll()"><ion-icon name="ios-text-outline"></ion-icon>Enviar</button>
+      <button [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" float-right ion-button icon-start (click)="sendMessageAll(true, true)" style="margin-right: 10px;"><ion-icon name="ios-notifications-outline"></ion-icon>Notificar</button>     
+      <button [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" float-right ion-button icon-start (click)="openGallery(true)" style="margin-right: 10px;"><ion-icon name="ios-document-outline"></ion-icon></button>     
+      <button [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" ion-button float-right class="cancel-button" (click)="cancelMessageAll()">
+        <p *ngIf="idiom == '01'">Voltar</p>
+        <p *ngIf="idiom == '02'">Volver</p>
+      </button>
+  
+    </div>
+  </ion-content>
+
+<!-- </ion-content> -->
+
+

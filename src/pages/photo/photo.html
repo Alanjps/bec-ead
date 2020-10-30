@@ -1,0 +1,180 @@
+<ion-header [ngClass]="version == '01' ? 'principalHeader' : version == '02' ? 'principalHeaderV02' : 'principalHeader'">
+  <!-- <img [ngClass]="version == '01' ? 'testeira' : version == '02' ? 'testeira-v02' : 'testeira'" 
+  src="{{ globalUrl + '/storage/uploads/configs/testeira1.png' }}" > -->
+  <img [ngClass]="version == '01' ? 'principal-icon' : version == '02' ? 'principal-icon-v02' : 'principal-icon'"
+  src="{{ globalUrl + '/storage/uploads/configs/logoHeader.png' }}" />
+  
+  <img *ngIf="version == '01'" class="testeira-v01" 
+  src="{{ globalUrl + '/storage/uploads/configs/testeira1.png' }}" >
+
+  <img *ngIf="version == '02'" class="testeira-v02" 
+  src="{{ globalUrl + '/storage/uploads/configs/testeira2.png' }}" >
+  
+  <!--  <img class=logo-header src="./assets/imgs/movera-logo.png" /> -->
+  <div *ngIf="version == '02' || version == '01'">
+    <p [ngClass]="project == 'know-house' ?  'font-style know-house-title-color' : ''">{{titleTesteira}}  {{complementTitle? '| ' + complementTitle : ''}}</p>
+  </div>
+  <menu-sup></menu-sup>
+</ion-header>
+
+<ion-content [ngClass]="version == '01' ? 'margin-content-l1' : version == '02' ? 'margin-content-l2' : 'margin-content-l1'" style="position: relative;" [ngClass]="project == 'marketing-house' ? 'content mrkhouse-custom-bg' :
+ project == 'ead' ? 'content vcc-custom-bg' :
+  project == 'edicom' ? 'content edicom-custom-bg' : ''">
+
+  <div [@inOutAnimation] *ngIf="expanded" style="transition: 2s;">
+    <img *ngIf="imageProject" style="text-align: center; width: 100% !important;" [src]="imageProject.thumb" />
+    <p style="text-align: center; padding: 20px 10%;">{{imageProject?.descricao}}</p>
+  </div>
+
+  <div>
+    <button  *ngIf="imageProject" detail-none (click)="getDetails()" ion-item style="text-align: center; background: none; color: rgb(0, 0, 0);">
+      <ion-icon *ngIf="!expanded" style="font-size: 2em !important;" class="arrow-color" name="ios-arrow-down-outline"></ion-icon>
+      <ion-icon *ngIf="expanded" style="font-size: 2em !important;" class="arrow-color" name="ios-arrow-up-outline"></ion-icon>
+    </button>
+    <h2 *ngIf="!imageProject && idiom == '01'"> Não existe projeto.</h2>
+    <h2 *ngIf="!imageProject && idiom == '02'"> No tiene proyecto.</h2>
+  </div>
+
+  
+  <div *ngIf="showFilterV02 == true" style="position: sticky; background-color: #f6f6f6; width: 60%; top: 0px; z-index: 100; padding-left: 10px; height: 100%;">
+    <ion-list class='filterV02'>
+      <ion-item (click)="filterPics('me')">
+        <ion-label style="font-weight: bold; font-size: 1.5rem;">Mis Fotos</ion-label>
+      </ion-item>
+      <ion-item (click)="filterPics('contest')">
+        <ion-label style="font-weight: bold; font-size: 1.5rem;">Fotos Consurso</ion-label>
+      </ion-item>
+      <ion-item (click)="filterPics('all')">
+        <ion-label style="font-weight: bold; font-size: 1.5rem;">Todas las Fotos</ion-label>
+      </ion-item>
+      <ion-item (click)="categoryExpanded = !categoryExpanded">
+        <ion-label style="font-weight: bold; font-size: 1.5rem;">Categorias <ion-icon name="ios-arrow-down-outline" style="vertical-align: middle;"></ion-icon></ion-label>
+      </ion-item>
+      <div *ngIf="categoryExpanded == true">
+        <ion-item *ngFor="let category of categories" >
+          <ion-label style="padding-left: 10px; font-size: 1.5rem;" (click)="filterPics(category)">{{category.title}}</ion-label>
+        </ion-item>
+      </div>
+    </ion-list>
+  </div>
+
+  <ion-card *ngFor="let pic of items" style="margin-top: 25px !important;">
+    <div style="padding: 0 15px;" [ngClass]="pic.is_contest == 1 && project != 'edicom' ? 'bg-contest' : ''">
+      <h2 *ngIf="pic.is_contest == 1 && idiom == '01' && project != 'edicom'" style="text-align: center; padding: 5px; font-weight: bold;">Foto de concurso!</h2>
+      <h2 *ngIf="pic.is_contest == 1 && idiom == '02' && project != 'edicom'" style="text-align: center; padding: 5px; font-weight: bold;">¡Foto del concurso!</h2>
+      <ion-item>
+        <ion-avatar item-start>
+          <img [src]="pic.user.thumb">
+        </ion-avatar>
+        <h2>{{ pic.user?.nome }}</h2>
+        <p>{{ pic.created_at }}</p>
+      </ion-item>
+      <div style="position: relative;">
+        <img style="position: absolute; height: 45px; width: 45px; right: 0;" *ngIf="project == 'edicom' && pic.is_contest == 1" src={{iconTrofeu}}>
+        <img [src]="pic.path">   
+      </div>
+         
+      <ion-card-content style="height: 60px;">
+        <ion-grid>
+          <ion-row>
+            <ion-col col-2>
+              <ion-item>
+                <ion-avatar item-start>
+                  <img *ngIf="pic.category" src={{pic.category.thumb}}>
+                </ion-avatar>
+              </ion-item>
+            </ion-col>
+            <ion-col col-8 style="display: flex; align-items: center;">
+              <ion-avatar item-start>
+                <ion-label *ngIf="pic.category" style="text-align: initial ! important;">{{pic.category.title}}</ion-label>
+              </ion-avatar>
+            </ion-col>
+            <ion-col *ngIf="pic.user_id != user_id" col-2 style="display: flex; align-items: center;">
+                <button *ngIf="pic.complained == false" ion-button clear round icon-only (click)="setComplaint(pic)">
+                  <ion-icon name="ios-megaphone-outline"></ion-icon>
+                </button>
+                <button *ngIf="pic.complained == true" ion-button clear round icon-only color="danger" (click)="alertMessage(3)">
+                  <ion-icon name="ios-megaphone"></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col *ngIf="pic.user_id == user_id" col-2 style="display: flex; align-items: center;">
+              <button ion-button clear round icon-only (click)="disablePic(pic)">
+                <ion-icon name="ios-trash-outline"></ion-icon>
+              </button>
+          </ion-col>            
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    
+      <ion-row>
+        <ion-col>
+          <button *ngIf="pic.user_id == user_id" ion-button icon-start clear small color="danger" (click)="alertMessage(1)">
+            <ion-icon name="md-heart-outline"></ion-icon>
+            <div>{{pic.total_likes}}</div>
+          </button>
+
+          <button *ngIf="pic.liked == false && pic.user_id != user_id" ion-button icon-start clear small color="danger" (click)="setLiked(pic)">
+            <ion-icon name="md-heart-outline"></ion-icon>
+            <div>{{pic.total_likes}}</div>
+          </button>
+          <button *ngIf="pic.liked == true && pic.user_id != user_id" ion-button icon-start clear small color="danger" (click)="alertMessage(2)">
+            <ion-icon name="md-heart"></ion-icon>
+            <div>{{pic.total_likes}}</div>
+          </button>
+        </ion-col>
+        <ion-col align-self-center text-center>
+          <ion-note>
+            {{pic.uploaded_time}}
+          </ion-note>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-card>
+
+  <ion-infinite-scroll style="padding-bottom: 110px !important;" (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content>
+      
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll> 
+
+<!--   <ion-card *ngFor="let pic of pics">
+    <ion-card-header>
+      {{pic?.user_id}}
+    </ion-card-header>
+    <img [src]="pic.path" />
+  </ion-card> -->
+
+  <ion-fab left bottom *ngIf="imageProject && project == 'edicom' && picsOriginal">
+    <ion-avatar mini ion-fab (click)="filterPicsV02()">
+      <img src={{iconFiltroFoto}}>
+    </ion-avatar>
+  </ion-fab>
+
+  <ion-fab left bottom *ngIf="imageProject && project != 'edicom' && picsOriginal">
+    <button ion-fab mini color="light"><ion-icon name="md-search"></ion-icon></button>
+    <ion-fab-list side="top">
+      <ion-avatar ion-fab (click)="filterPics('all')">
+        <ion-icon name="ios-undo"></ion-icon>
+      </ion-avatar>
+      <ion-avatar ion-fab (click)="filterPics('me')">
+        <img [src]="DomSanitizer.bypassSecurityTrustUrl(user_thumb)">
+      </ion-avatar> 
+      <ion-avatar ion-fab (click)="filterPics('contest')">
+        <ion-icon name="md-trophy"></ion-icon>
+      </ion-avatar>
+      <ion-avatar ion-fab mini *ngFor="let category of categories" (click)="filterPics(category)">
+        <img src={{category.thumb}}>
+      </ion-avatar>     
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-fab right bottom *ngIf="imageProject">
+    <button *ngIf="project != 'edicom'" ion-fab mini color="#7878ff" (click)="presentActionSheet()">
+      <ion-icon name="md-add"></ion-icon>
+    </button>
+
+    <ion-avatar *ngIf="project == 'edicom'" mini ion-fab (click)="presentActionSheet()">
+      <img src={{iconAddFoto}}>
+    </ion-avatar>
+  </ion-fab>
+</ion-content>
