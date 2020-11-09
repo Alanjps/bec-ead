@@ -49,7 +49,7 @@ export class MyApp {
         //3 -> marketing-house
         //4 -> hkt369
         //5 -> know-house
-        this.projectNumber = 5;
+        this.projectNumber = 1;
 
         switch(this.projectNumber){
           case 1:

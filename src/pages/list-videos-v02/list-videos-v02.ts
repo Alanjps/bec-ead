@@ -179,7 +179,7 @@ export class ListVideosV02Page {
         } else {
           /**NÃO FEZ O TESTE */
         }
-        if ( showAlert && showAlert == true ) this.showAlert();
+        if ( showAlert && showAlert == true  && lesson.showEmoji == 1 ) this.showAlert();
       });
     });
 
@@ -431,6 +431,7 @@ export class ListVideosV02Page {
                     return {...lesson, gotVideo, youtubeUrl}
                   });
                 }) */
+                console.log("\n\nPROJETOS -> ",data,"\n\n");
                 this.videos = data;
                 this.storage.set('AvailableDefaultProjects',data);
                 this.checkFinishedProjects();
