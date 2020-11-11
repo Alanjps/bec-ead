@@ -149,7 +149,6 @@ export class ListVideosV03Page {
 
       this.authService.request('/api/testes/resultado', vars).then((result) => {
         if (result) {
-          this.exibirNota = true;
           this.nota = result.pontuacao_final;
           this.notaMaxima = result.test.maxPontos;
           if (result.is_aprovado == '1') {
@@ -179,7 +178,10 @@ export class ListVideosV03Page {
         } else {
           /**NÃO FEZ O TESTE */
         }
-        if ( showAlert && showAlert == true && lesson.showEmoji == 1 ) this.showAlert();
+        if ( showAlert && showAlert == true  && lesson.isScoreable == 1 ) {
+          this.exibirNota = true;
+          this.showAlert();
+        }
       });
     });
 
