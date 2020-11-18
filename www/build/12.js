@@ -1,15 +1,15 @@
 webpackJsonp([12],{
 
-/***/ 466:
+/***/ 467:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChatPageModule", function() { return ChatPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chat__ = __webpack_require__(495);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_menu_sup_menu_sup_module__ = __webpack_require__(476);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chat__ = __webpack_require__(497);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_menu_sup_menu_sup_module__ = __webpack_require__(478);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -41,14 +41,14 @@ var ChatPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 476:
+/***/ 478:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuSupModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__menu_sup__ = __webpack_require__(477);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__menu_sup__ = __webpack_require__(479);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(46);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -75,15 +75,15 @@ var MenuSupModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 477:
+/***/ 479:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuSupComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__ = __webpack_require__(340);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__ = __webpack_require__(341);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_http_service_http_service__ = __webpack_require__(111);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -191,19 +191,20 @@ var MenuSupComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 495:
+/***/ 497:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChatPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_storage__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__ = __webpack_require__(340);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_storage__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__ = __webpack_require__(341);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_http_service_http_service__ = __webpack_require__(111);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_moment__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_moment__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_camera__ = __webpack_require__(343);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_camera__ = __webpack_require__(344);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_pusher_service_pusher_service__ = __webpack_require__(349);
 var __assign = (this && this.__assign) || Object.assign || function(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
         s = arguments[i];
@@ -263,8 +264,9 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 
 
 
+
 var ChatPage = /** @class */ (function () {
-    function ChatPage(navCtrl, navParams, authService, http, loadingCtrl, storage, camera, modalCtrl, viewCtrl) {
+    function ChatPage(navCtrl, navParams, authService, http, loadingCtrl, storage, camera, modalCtrl, viewCtrl, pusher) {
         var _this = this;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
@@ -275,6 +277,7 @@ var ChatPage = /** @class */ (function () {
         this.camera = camera;
         this.modalCtrl = modalCtrl;
         this.viewCtrl = viewCtrl;
+        this.pusher = pusher;
         this.selectedProject = null;
         this.selectedProjectId = null;
         this.selectedUser = null;
@@ -290,8 +293,6 @@ var ChatPage = /** @class */ (function () {
         this.globalUrl = '';
         this.perfilType = 3;
         this.idiom = '';
-        this.intervalHandle = null;
-        this.recentIntervalHandle = null;
         this.showContacts = false;
         this.showChat = false;
         this.motivos = [];
@@ -310,34 +311,53 @@ var ChatPage = /** @class */ (function () {
                 var _this = this;
                 return __generator(this, function (_a) {
                     switch (_a.label) {
-                        case 0: return [4 /*yield*/, new Promise(function (resolve, reject) {
-                                var data = {};
-                                _this.storage.get('clienteId').then(function (user_id) {
-                                    var mensagem = isFile ? _this.fileUpload : _this.newMessage && _this.newMessage.length > 0 ? _this.newMessage.trim() : "";
-                                    var destinatario_id = all == true ?
-                                        null :
-                                        _this.selectedUserId == null ?
+                        case 0:
+                            console.log("\n\nisFile -> ", isFile);
+                            return [4 /*yield*/, new Promise(function (resolve, reject) {
+                                    var data = {};
+                                    _this.storage.get('clienteId').then(function (user_id) {
+                                        var mensagem = isFile ? _this.fileUpload : _this.newMessage && _this.newMessage.length > 0 ? _this.newMessage.trim() : "";
+                                        var destinatario_id = all == true ?
                                             null :
-                                            _this.selectedUserId;
-                                    var project_id = _this.selectedProjectId == null ? null : _this.selectedProjectId;
-                                    if (mensagem.length > 0) {
-                                        data = {
-                                            mensagem: mensagem,
-                                            user_id: user_id,
-                                            notificacao: notification
-                                        };
-                                        _this.sendAll === true ? data['project_id'] = project_id : data['destinatario_id'] = destinatario_id;
-                                        _this.http.post('/mensagens/store', data)
-                                            .subscribe(function (result) {
-                                            if (_this.selectedUserId) {
-                                                _this.getUserMessages(_this.selectedUserId);
-                                            }
-                                            resolve();
-                                        });
-                                        _this.newMessage = '';
-                                    }
-                                });
-                            })];
+                                            _this.selectedUserId == null ?
+                                                null :
+                                                _this.selectedUserId;
+                                        var project_id = _this.selectedProjectId == null ? null : _this.selectedProjectId;
+                                        if (mensagem.length > 0) {
+                                            data = {
+                                                mensagem: mensagem,
+                                                user_id: user_id,
+                                                notificacao: notification
+                                            };
+                                            _this.sendAll === true ? data['project_id'] = project_id : data['destinatario_id'] = destinatario_id;
+                                            _this.http.post('/mensagens/store', data)
+                                                .subscribe(function (result) {
+                                                if (_this.selectedUserId) {
+                                                    if (isFile != true) {
+                                                        var newMessageSend = {
+                                                            remetente: {
+                                                                id: user_id
+                                                            },
+                                                            notification: notification == false ? 0 : 1,
+                                                            type: null,
+                                                            mensagem_formatada: mensagem,
+                                                            created_at: __WEBPACK_IMPORTED_MODULE_5_moment___default()().locale('pt-br').format('lll'),
+                                                        };
+                                                        console.log("\n\nnewMessageSend -> ", user_id);
+                                                        console.log("\n\nuser_id -> ", user_id);
+                                                        _this.messages.push(newMessageSend);
+                                                        _this.scrollToBottom();
+                                                    }
+                                                    else {
+                                                        _this.getUserMessages(_this.selectedUserId);
+                                                    }
+                                                }
+                                                resolve();
+                                            });
+                                            _this.newMessage = '';
+                                        }
+                                    });
+                                })];
                         case 1: return [2 /*return*/, _a.sent()];
                     }
                 });
@@ -392,6 +412,29 @@ var ChatPage = /** @class */ (function () {
             this.showMotivosPage();
         }
     }
+    ChatPage.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        this.storage.get('clienteId').then(function (valor) {
+            var channel = _this.pusher.init();
+            channel.bind('App\\Events\\MessageSent', function (data) {
+                if (data && data.message && data.message.remetente_id == _this.selectedUserId) {
+                    if (_this.perfilType == 3 && data.message.notification == false) {
+                        var newMessageReceived = {
+                            remetente: {
+                                id: data.message.remetente_id
+                            },
+                            notification: data.message.notification == false ? 0 : 1,
+                            type: data.message.mensagem.substring(0, 11) == 'data:image/' ? 'file' : null,
+                            mensagem_formatada: data.message.mensagem_formatada,
+                            created_at: __WEBPACK_IMPORTED_MODULE_5_moment___default()(data.message.created_at).locale('pt-br').format('lll'),
+                        };
+                        _this.messages.push(newMessageReceived);
+                        _this.scrollToBottom();
+                    }
+                }
+            });
+        });
+    };
     ChatPage.prototype.openGallery = function (all) {
         var _this = this;
         if (all === void 0) { all = false; }
@@ -454,7 +497,6 @@ var ChatPage = /** @class */ (function () {
         this.firstAccess = true;
         if (this.recents && this.recents.length > 0)
             this.recentUser = this.recents[0]['id'];
-        clearInterval(this.intervalHandle);
     };
     ChatPage.prototype.getUsers = function () {
         var _this = this;
@@ -676,7 +718,8 @@ var ChatPage = /** @class */ (function () {
             __WEBPACK_IMPORTED_MODULE_1__ionic_storage__["b" /* Storage */],
             __WEBPACK_IMPORTED_MODULE_6__ionic_native_camera__["a" /* Camera */],
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* ModalController */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["q" /* ViewController */]])
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["q" /* ViewController */],
+            __WEBPACK_IMPORTED_MODULE_7__providers_pusher_service_pusher_service__["a" /* PusherServiceProvider */]])
     ], ChatPage);
     return ChatPage;
 }());

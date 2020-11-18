@@ -21,6 +21,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ImagePicker } from '@ionic-native/image-picker/ngx';
 import { AngularCropperjsModule } from 'angular-cropperjs';
+import { PusherServiceProvider } from '../providers/pusher-service/pusher-service';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { AngularCropperjsModule } from 'angular-cropperjs';
     FileOpener,
     CallNumber,
     OneSignal,
-    ImagePicker
+    ImagePicker,
+    PusherServiceProvider
   ],
   exports:[
   ]

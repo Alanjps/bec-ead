@@ -6,6 +6,7 @@ import { HttpServiceProvider } from '../../providers/http-service/http-service';
 import moment from 'moment';
 import { Camera, CameraOptions } from "@ionic-native/camera";
 import { v } from '@angular/core/src/render3';
+import { PusherServiceProvider } from '../../providers/pusher-service/pusher-service';
 
 @IonicPage({
   name: 'chat-page'
@@ -48,8 +49,6 @@ export class ChatPage {
   public idiom: string = '';
   public remetentesUnread: any;
   public project: string;
-  public intervalHandle: any = null;
-  public recentIntervalHandle: any = null;
 
   public showContacts: boolean = false;
   public showChat: boolean = false;
@@ -79,7 +78,7 @@ export class ChatPage {
     public camera: Camera,
     public modalCtrl: ModalController,
     public viewCtrl: ViewController,
-
+    private pusher: PusherServiceProvider
   ) {
     clearInterval(this.lastMessageIdInterval);
     
@@ -118,6 +117,31 @@ export class ChatPage {
       this.showMotivosPage();
     }
 
+  }
+
+  ionViewDidLoad(){
+
+    this.storage.get('clienteId').then((valor) => {
+      const channel = this.pusher.init();
+      channel.bind('App\\Events\\MessageSent', (data) => {
+        if (data && data.message && data.message.remetente_id == this.selectedUserId){
+          if (this.perfilType == 3 && data.message.notification == false){
+
+            let newMessageReceived = {
+              remetente:{
+                id: data.message.remetente_id
+              },
+              notification: data.message.notification == false ? 0 : 1,
+              type:  data.message.mensagem.substring(0, 11) == 'data:image/' ? 'file' : null,
+              mensagem_formatada: data.message.mensagem_formatada,
+              created_at: moment(data.message.created_at).locale('pt-br').format('lll'),
+            } 
+            this.messages.push(newMessageReceived);
+            this.scrollToBottom();
+          }
+        }
+      });
+    });
   }
 
   openGallery(all = false) {
@@ -184,7 +208,6 @@ export class ChatPage {
   ionViewDidLeave(){
     this.firstAccess = true;
     if (this.recents && this.recents.length > 0) this.recentUser = this.recents[0]['id']; 
-    clearInterval(this.intervalHandle);
   }
 
   getUsers(){
@@ -279,7 +302,6 @@ export class ChatPage {
               this.ativo['thumb'] = this.ativo['thumb'] ? this.ativo['thumb'] : this.iconProfile;
               this.receptivo['thumb'] = this.receptivo['thumb'] ? this.receptivo['thumb'] : this.iconProfile;
             }
-
             this.scrollToBottom();
           }
           loading.dismiss();
@@ -314,6 +336,8 @@ export class ChatPage {
   }
   
   sendMessage = async (all = false, notification = false, isFile?) => {
+
+    console.log("\n\nisFile -> ",isFile);
     return await new Promise((resolve, reject) => {
       let data = {};
     
@@ -339,7 +363,28 @@ export class ChatPage {
           this.http.post('/mensagens/store', data)
             .subscribe((result : any) => {
               if (this.selectedUserId) {
-                this.getUserMessages(this.selectedUserId);
+
+                if (isFile != true){
+
+                  let newMessageSend = {
+                    remetente:{
+                      id: user_id
+                    },
+                    notification: notification == false ? 0 : 1,
+                    type: null,
+                    mensagem_formatada: mensagem,
+                    created_at: moment().locale('pt-br').format('lll'),
+                  }
+
+                  console.log("\n\nnewMessageSend -> ",user_id);
+                  console.log("\n\nuser_id -> ",user_id);
+
+                  this.messages.push(newMessageSend);
+                  this.scrollToBottom();
+                }else{
+                  this.getUserMessages(this.selectedUserId);
+
+                }
               }
               resolve(); 
             })

@@ -149,7 +149,6 @@ export class ListVideosV02Page {
 
       this.authService.request('/api/testes/resultado', vars).then((result) => {
         if (result) {
-          this.exibirNota = true;
           this.nota = result.pontuacao_final;
           this.notaMaxima = result.test.maxPontos;
           if (result.is_aprovado == '1') {

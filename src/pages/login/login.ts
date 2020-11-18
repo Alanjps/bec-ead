@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, ToastController, ModalController} from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { AuthProvider } from '../../providers/auth/auth';
+import { environment as ENV } from '../../environments/environment' ;
 
 @IonicPage({
   name: 'login-page'
@@ -41,6 +42,7 @@ export class LoginPage {
 
     this.authService.logout();
     this.hide = false;
+
 
     if (this.navParams.get('logout')) {
       this.navCtrl.push('login-page');
