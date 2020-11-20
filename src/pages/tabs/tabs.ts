@@ -143,6 +143,18 @@ export class TabsPage {
           firebaseSenderId = '823038736964';  
           break;
         }
+        case 'simples-trade':{
+          onesignalAppId='d6e18971-f2cc-41d8-aed7-28384cb957e0';
+          firebaseKey='AAAAsWwKIKs:APA91bGvbUnOUFFYPGEY_rUolZNcgDnhjy1eBuEHM4nWnbpg03Ie8ky09eISCfqh2WmDt9ZnSBrsQebOFb85LPckqOQnMoDYA4RNmQZ5PqulyeAaMT2nqGfksSvU8QFqQR7sY7vTV2ix';
+          firebaseSenderId = '762021814443';  
+          break;
+        }
+        case 'r2m':{
+          onesignalAppId='a7bbe9ca-2e79-4f10-8f68-365da3e09fd5';
+          firebaseKey='AAAAjrxUeko:APA91bEwsLDPKZJkIAnBNMcxrsxEYrGgi49TF7Pg37DQwpvwX9QtWgGojRzSiePJpLwt-qWe08onYfdsqjeUTxeFTz8aYDwS95uoI5ruThJGtz2r9kLxcBAXwzwNavPVHDTOYEw0DmUW';
+          firebaseSenderId = '613045008970';  
+          break;
+        }
       }
       /*
         ANTIGO---------------------------------------------       

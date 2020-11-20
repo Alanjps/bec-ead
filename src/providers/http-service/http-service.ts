@@ -52,6 +52,20 @@ export class HttpServiceProvider {
             }
             break;
           }
+          case 'simples-trade': {
+            this.url = '/strade';
+            if(this._platform.is("cordova")){
+              this.url = "https://simplestrade.becinteligencia.com";
+            }
+            break;
+          }
+          case 'r2m': {
+            this.url = '/r2m';
+            if(this._platform.is("cordova")){
+              this.url = "https://readytomarket.becinteligencia.com";
+            }
+            break;
+          }
           default:{
             this.url = '/vcc';
             if(this._platform.is("cordova")){

@@ -103,6 +103,20 @@ var HttpServiceProvider = /** @class */ (function () {
                                         }
                                         break;
                                     }
+                                    case 'simples-trade': {
+                                        _this.url = '/strade';
+                                        if (_this._platform.is("cordova")) {
+                                            _this.url = "https://simplestrade.becinteligencia.com";
+                                        }
+                                        break;
+                                    }
+                                    case 'r2m': {
+                                        _this.url = '/r2m';
+                                        if (_this._platform.is("cordova")) {
+                                            _this.url = "https://readytomarket.becinteligencia.com";
+                                        }
+                                        break;
+                                    }
                                     default: {
                                         _this.url = '/vcc';
                                         if (_this._platform.is("cordova")) {
@@ -218,11 +232,11 @@ var map = {
 		17
 	],
 	"../components/photo-modal/photo-modal.module": [
-		460,
+		459,
 		16
 	],
 	"../components/quiz/quiz.module": [
-		459,
+		460,
 		15
 	],
 	"../components/user-form/user-form.module": [
@@ -230,23 +244,23 @@ var map = {
 		5
 	],
 	"../pages/chat/chat.module": [
-		467,
+		469,
 		12
 	],
 	"../pages/edit-user-v02/edit-user-v02.module": [
-		468,
+		467,
 		1
 	],
 	"../pages/edit-user/edit-user.module": [
-		469,
+		468,
 		0
 	],
 	"../pages/list-videos-v02/list-videos-v02.module": [
-		471,
+		472,
 		11
 	],
 	"../pages/list-videos-v03/list-videos-v03.module": [
-		472,
+		471,
 		10
 	],
 	"../pages/list-videos-v04/list-videos-v04.module": [
@@ -274,11 +288,11 @@ var map = {
 		8
 	],
 	"../pages/recovery-password/recovery-password.module": [
-		464,
+		465,
 		2
 	],
 	"../pages/register/register.module": [
-		465,
+		464,
 		3
 	],
 	"../pages/tabs/tabs.module": [
@@ -376,6 +390,20 @@ var AuthProvider = /** @class */ (function () {
                     }
                     break;
                 }
+                case 'simples-trade': {
+                    _this.url = '/strade';
+                    if (_this._platform.is("cordova")) {
+                        _this.url = "https://simplestrade.becinteligencia.com";
+                    }
+                    break;
+                }
+                case 'r2m': {
+                    _this.url = '/r2m';
+                    if (_this._platform.is("cordova")) {
+                        _this.url = "https://readytomarket.becinteligencia.com";
+                    }
+                    break;
+                }
                 default: {
                     _this.url = '/vcc';
                     if (_this._platform.is("cordova")) {
@@ -407,6 +435,7 @@ var AuthProvider = /** @class */ (function () {
             .toPromise()
             .then(function (data) {
             if (data.id > 0) {
+                console.log("\n01 -> ", data.company_id);
                 _this.storage.set('clienteId', data.id);
                 _this.storage.set('clienteNome', data.nome);
                 _this.storage.set('clienteEmail', data.email);
@@ -439,6 +468,7 @@ var AuthProvider = /** @class */ (function () {
             .map(function (res) { return res.json(); })
             .toPromise()
             .then(function (data) {
+            console.log("\n02 -> " + _this.url + '/api/usuarios/primeiro-acesso  -> ', data);
             if (data.id > 0) {
                 _this.storage.set('clienteId', data.id);
                 _this.storage.set('clienteNome', data.nome);
@@ -468,6 +498,7 @@ var AuthProvider = /** @class */ (function () {
             .map(function (res) { return res.json(); })
             .toPromise()
             .then(function (data) {
+            console.log("\n03 -> ", data.company_id);
             data.nascimento = data.nascimento ? __WEBPACK_IMPORTED_MODULE_6_moment___default()(data.nascimento.date).format('DD/MM/YYYY') : '';
             if (data.id > 0) {
                 _this.storage.set('clienteId', data.id);
@@ -629,7 +660,7 @@ var isCordovaAvailable = function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PusherServiceProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(124);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(412);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(432);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(38);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -771,20 +802,20 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../components/download-modal/download-modal.module#DownloadModalModule', name: 'download-modal', segment: 'download-modal', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../components/file-modal/file-modal.module#FileModalModule', name: 'file-modal', segment: 'file-modal', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../components/list-videos-modal/list-videos-modal.module#ListVideosModalModule', name: 'list-videos-modal', segment: 'list-videos-modal', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../components/quiz/quiz.module#QuizModule', name: 'quiz', segment: 'quiz', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../components/photo-modal/photo-modal.module#PhotoModalModule', name: 'photo-modal', segment: 'photo-modal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../components/quiz/quiz.module#QuizModule', name: 'quiz', segment: 'quiz', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../components/user-form/user-form.module#UserFormModule', name: 'user-form-modal', segment: 'user-form', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/my-downloads/my-downloads.module#MyDownloadsPageModule', name: 'my-downloads', segment: 'my-downloads', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/notification/notification.module#NotificationPageModule', name: 'notification-page', segment: 'notification', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/recovery-password/recovery-password.module#RecoveryPasswordPageModule', name: 'recovey-password-page', segment: 'recovery-password', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'register-page', segment: 'register', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/recovery-password/recovery-password.module#RecoveryPasswordPageModule', name: 'recovey-password-page', segment: 'recovery-password', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'tab-page', segment: 'tabs', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/chat/chat.module#ChatPageModule', name: 'chat-page', segment: 'chat', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/edit-user-v02/edit-user-v02.module#EditUserV02PageModule', name: 'edit-user-v02-page', segment: 'edit-user-v02', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/edit-user/edit-user.module#EditUserPageModule', name: 'edit-user-page', segment: 'edit-user', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/chat/chat.module#ChatPageModule', name: 'chat-page', segment: 'chat', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'login-page', segment: 'login', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/list-videos-v02/list-videos-v02.module#ListVideosV02PageModule', name: 'list-videos-v02-page', segment: 'list-videos-v02', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/list-videos-v03/list-videos-v03.module#ListVideosV03PageModule', name: 'list-videos-v03-page', segment: 'list-videos-v03', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/list-videos-v02/list-videos-v02.module#ListVideosV02PageModule', name: 'list-videos-v02-page', segment: 'list-videos-v02', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/list-videos-v04/list-videos-v04.module#ListVideosPageV04Module', name: 'list-videos-page-v04', segment: 'list-videos-v04', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/list-videos/list-videos.module#ListVideosPageModule', name: 'list-videos-page', segment: 'list-videos', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/photo/photo.module#PhotoPageModule', name: 'photo-page', segment: 'photo', priority: 'low', defaultHistory: [] }
@@ -1103,17 +1134,23 @@ webpackContext.id = 411;
 
 /***/ }),
 
-/***/ 412:
+/***/ 432:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
 var environment = {
-    //KNOW-HOUSE -----------------------------------
-    PUSHER_APP_ID: "1059211",
-    PUSHER_APP_KEY: "25af961ea9f2ef86b9aa",
-    PUSHER_APP_SECRET: "c6060d1a53114a8365da",
-    PUSHER_APP_CLUSTER: "us2"
+    /*   //KNOW-HOUSE -----------------------------------
+      PUSHER_APP_ID: "1059211",
+      PUSHER_APP_KEY: "25af961ea9f2ef86b9aa",
+      PUSHER_APP_SECRET: "c6060d1a53114a8365da",
+      PUSHER_APP_CLUSTER: "us2",
+        */
+    //EDICOM -----------------------------------
+    PUSHER_APP_ID: "1016195",
+    PUSHER_APP_KEY: "e9b4a92206140e9879bb",
+    PUSHER_APP_SECRET: "92444667633283b9fb77",
+    PUSHER_APP_CLUSTER: "us2",
 };
 //# sourceMappingURL=environment.js.map
 
@@ -1211,6 +1248,8 @@ var MyApp = /** @class */ (function () {
             //3 -> marketing-house
             //4 -> hkt369
             //5 -> know-house
+            //6 -> simples-trade
+            //7 -> r2m
             _this.projectNumber = 2;
             switch (_this.projectNumber) {
                 case 1:
@@ -1241,6 +1280,18 @@ var MyApp = /** @class */ (function () {
                     _this.onesignalAppId = 'd29cd1d1-3a5b-4774-b768-a1026101ea0a';
                     _this.firebaseSenderId = '823038736964';
                     _this.projectName = 'know-house';
+                    storage.set('Idiom', '01'); //português
+                    break;
+                case 6:
+                    _this.onesignalAppId = 'd6e18971-f2cc-41d8-aed7-28384cb957e0';
+                    _this.firebaseSenderId = '823038736964';
+                    _this.projectName = 'simples-trade';
+                    storage.set('Idiom', '01'); //português
+                    break;
+                case 7:
+                    _this.onesignalAppId = 'a7bbe9ca-2e79-4f10-8f68-365da3e09fd5';
+                    _this.firebaseSenderId = '613045008970';
+                    _this.projectName = 'r2m';
                     storage.set('Idiom', '01'); //português
                     break;
             }
@@ -1290,6 +1341,14 @@ var MyApp = /** @class */ (function () {
                     }
                     case 'know-house': {
                         url = 'https://knowhouse.marketinghouse.com.br';
+                        break;
+                    }
+                    case 'simples-trade': {
+                        url = 'https://simplestrade.becinteligencia.com';
+                        break;
+                    }
+                    case 'r2m': {
+                        url = 'https://readytomarket.becinteligencia.com';
                         break;
                     }
                 }

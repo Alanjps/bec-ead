@@ -25,6 +25,14 @@
     {
       "path": "/knowh",
       "proxyUrl": "https://knowhouse.marketinghouse.com.br"
+    },
+    {
+      "path": "/strade",
+      "proxyUrl": "https://simplestrade.becinteligencia.com"
+    },
+    {
+      "path": "/r2m",
+      "proxyUrl": "https://readytomarket.becinteligencia.com"
     }
   ]
 }

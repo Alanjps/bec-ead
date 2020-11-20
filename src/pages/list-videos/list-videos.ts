@@ -384,6 +384,7 @@ export class ListVideosPage {
         this.videos = value;
       }else{
         this.storage.get('clienteCompanyId').then((companyId) => {
+          console.log("\n\nCOMPANY ID -> ",companyId);
           this.storage.get('clienteId').then((clienteId) => {
             this.videos = [];
 

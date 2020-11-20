@@ -38,8 +38,8 @@ $app-direction: ltr;
 
 $colors: (
   //primary:    #488aff,  //DEFAULT
-  primary:    #fc5A16,  //KNOW HOUSE -----------------
-  //primary:    #49a6c9,  //EDICOM -----------------
+  //primary:    #fc5A16,  //KNOW HOUSE -----------------
+  primary:    #49a6c9,  //EDICOM -----------------
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #fff,
@@ -100,6 +100,8 @@ $colors: (
   $url-vcc: "https://vcc.becinteligencia.com///storage//uploads//configs//";
   $url-mrkhouse: "https://homolog.marketinghouse.com.br//storage//uploads//configs//";
   $url-descubre: "https://descubre.hkt369.com///storage//uploads//configs//";
+  $url-simples-trade: "https://simplestrade.becinteligencia.com//storage//uploads//configs//";
+  $url-r2m: "https://readytomarket.becinteligencia.com///storage//uploads//configs//";
 
   ion-icon {
     //-------------------------------------------------------
@@ -347,6 +349,117 @@ $colors: (
     }
     &[class*="tab-hkt369-news"]{
       content: url($url-descubre+"internoApp5.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+
+
+    //-------------------------------------------------------
+    //SIMPLE TRADE -------------------------------------------------------
+    //-------------------------------------------------------
+
+    &[class*="tab-strade-"]{
+      width: 30px;
+      height: 30px;
+    }
+
+    &[class*="tab-strade-perfil"]{
+      content: url($url-simples-trade+"internoApp1.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-strade-notificacao"]{
+      content: url($url-simples-trade+"internoApp2.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-strade-agenda"]{
+      content: url($url-simples-trade+"internoApp3.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-strade-foto"]{
+      content: url($url-simples-trade+"internoApp4.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-strade-news"]{
+      content: url($url-simples-trade+"internoApp5.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+
+    //-------------------------------------------------------
+    //READY TO MARKET -------------------------------------------------------
+    //-------------------------------------------------------
+
+    &[class*="tab-r2m-"]{
+      width: 30px;
+      height: 30px;
+    }
+
+    &[class*="tab-r2m-perfil"]{
+      content: url($url-r2m+"internoApp1.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-r2m-notificacao"]{
+      content: url($url-r2m+"internoApp2.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-r2m-agenda"]{
+      content: url($url-r2m+"internoApp3.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-r2m-foto"]{
+      content: url($url-r2m+"internoApp4.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-r2m-news"]{
+      content: url($url-r2m+"internoApp5.svg") !important;
       &[ng-reflect-is-active="true"]{
         filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
       }

@@ -210,6 +210,24 @@ div.action-sheet-sub-title {
             background-position: center;
         }
     }
+    &[class*="strade-"] {
+        $urlBG: "https://simplestrade.becinteligencia.com//storage//uploads//configs/";
+        &[class*="custom-bg"] {
+            background: url($urlBG + "papelParede.png") no-repeat 100% 100%;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &[class*="r2m-"] {
+        $urlBG: "https://readytomarket.becinteligencia.com//storage//uploads//configs/";
+        &[class*="custom-bg"] {
+            background: url($urlBG + "papelParede.png") no-repeat 100% 100%;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
 }
 
 ion-textarea{

@@ -52,6 +52,20 @@ private url:string= '/vcc';
           }
           break;
         }
+        case 'simples-trade': {
+          this.url = '/strade';
+          if(this._platform.is("cordova")){
+            this.url = "https://simplestrade.becinteligencia.com";
+          }
+          break;
+        }
+        case 'r2m': {
+          this.url = '/r2m';
+          if(this._platform.is("cordova")){
+            this.url = "https://readytomarket.becinteligencia.com";
+          }
+          break;
+        }
         default:{
           this.url = '/vcc';
           if(this._platform.is("cordova")){
@@ -91,6 +105,7 @@ private url:string= '/vcc';
       .toPromise()
       .then(data => {
           if(data.id > 0){
+              console.log("\n01 -> ",data.company_id);
               this.storage.set('clienteId', data.id);
               this.storage.set('clienteNome', data.nome);
               this.storage.set('clienteEmail', data.email);
@@ -129,6 +144,8 @@ private url:string= '/vcc';
       .map(res => res.json())
       .toPromise()
       .then(data => {
+        console.log("\n02 -> "+this.url+'/api/usuarios/primeiro-acesso  -> ',data);
+
           if(data.id > 0){
             this.storage.set('clienteId', data.id);
             this.storage.set('clienteNome', data.nome);
@@ -159,6 +176,8 @@ private url:string= '/vcc';
       .map(res => res.json())
       .toPromise()
       .then(data => {
+          console.log("\n03 -> ",data.company_id);
+
           data.nascimento = data.nascimento ? moment(data.nascimento.date).format('DD/MM/YYYY') : '';
           if(data.id > 0){
             this.storage.set('clienteId', data.id);

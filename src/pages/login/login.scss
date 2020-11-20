@@ -45,7 +45,16 @@ page-login {
         background-repeat: no-repeat;
         background-position: center;
     }
-
+    &.background-strade{
+        background: #000 url("https://simplestrade.becinteligencia.com/storage/uploads/configs/loginMobile.png");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &.background-r2m{
+        background: #000 url("https://readytomarket.becinteligencia.com/storage/uploads/configs/loginMobile.png");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
     #logo-header{
         max-width: 90%;
         border: 0;

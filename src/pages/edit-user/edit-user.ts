@@ -52,7 +52,7 @@ export class EditUserPage {
   public idiom: string = '';
   public project: string;
   public dateToShow: string;
-  public showQRCode: boolean = true;
+  public showQRCode: boolean = false;
   public showQRCodeBox: boolean = false;
 
   @ViewChild('angularCropper') public angularCropper: AngularCropperjsComponent;
@@ -270,7 +270,7 @@ export class EditUserPage {
         ead
         know-house
       */
-      if (value == 'marketing-house' || value == 'ead' || value == 'know-house' || value == 'hkt369') this.showQRCode = false;
+      if (value == 'edicom' || value == 'hkt369') this.showQRCode = true;
     });
     this.storage.get('clienteNome').then((valor) => {
       this.titleTesteira = this.idiom == '01' ? 'Olá '+valor : 'Hola '+valor ;

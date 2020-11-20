@@ -49,6 +49,8 @@ export class MyApp {
         //3 -> marketing-house
         //4 -> hkt369
         //5 -> know-house
+        //6 -> simples-trade
+        //7 -> r2m
         this.projectNumber = 2;
 
         switch(this.projectNumber){
@@ -80,6 +82,18 @@ export class MyApp {
             this.onesignalAppId='d29cd1d1-3a5b-4774-b768-a1026101ea0a';
             this.firebaseSenderId='823038736964';
             this.projectName = 'know-house';
+            storage.set('Idiom','01'); //português
+            break;
+          case 6:
+            this.onesignalAppId='d6e18971-f2cc-41d8-aed7-28384cb957e0';
+            this.firebaseSenderId='823038736964';
+            this.projectName = 'simples-trade';
+            storage.set('Idiom','01'); //português
+            break;
+          case 7:
+            this.onesignalAppId='a7bbe9ca-2e79-4f10-8f68-365da3e09fd5';
+            this.firebaseSenderId='613045008970';
+            this.projectName = 'r2m';
             storage.set('Idiom','01'); //português
             break;
         }
@@ -135,6 +149,14 @@ export class MyApp {
             }
             case 'know-house': {
               url = 'https://knowhouse.marketinghouse.com.br';
+              break;
+            }
+            case 'simples-trade': {
+              url = 'https://simplestrade.becinteligencia.com';
+              break;
+            }
+            case 'r2m': {
+              url = 'https://readytomarket.becinteligencia.com';
               break;
             }
           }
