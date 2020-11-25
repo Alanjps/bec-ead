@@ -694,7 +694,6 @@ var ListVideosPage = /** @class */ (function () {
             }
             else {
                 _this.storage.get('clienteCompanyId').then(function (companyId) {
-                    console.log("\n\nCOMPANY ID -> ", companyId);
                     _this.storage.get('clienteId').then(function (clienteId) {
                         _this.videos = [];
                         _this.http.getAll('/api/projects-ids', { company_id: companyId, user_id: clienteId, type: "DEFAULT" })
