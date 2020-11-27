@@ -51,7 +51,7 @@ export class MyApp {
         //5 -> know-house
         //6 -> simples-trade
         //7 -> r2m
-        this.projectNumber = 5;
+        this.projectNumber = 2;
 
         switch(this.projectNumber){
           case 1:

@@ -248,23 +248,23 @@ var map = {
 		12
 	],
 	"../pages/edit-user-v02/edit-user-v02.module": [
-		469,
+		468,
 		1
 	],
 	"../pages/edit-user/edit-user.module": [
-		468,
+		469,
 		0
 	],
 	"../pages/list-videos-v02/list-videos-v02.module": [
-		472,
+		471,
 		11
 	],
 	"../pages/list-videos-v03/list-videos-v03.module": [
-		473,
+		472,
 		10
 	],
 	"../pages/list-videos-v04/list-videos-v04.module": [
-		471,
+		473,
 		7
 	],
 	"../pages/list-videos/list-videos.module": [
@@ -292,11 +292,11 @@ var map = {
 		2
 	],
 	"../pages/register/register.module": [
-		466,
+		465,
 		3
 	],
 	"../pages/tabs/tabs.module": [
-		465,
+		466,
 		14
 	]
 };
@@ -740,11 +740,11 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__app_component__ = __webpack_require__(450);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_native_call_number_ngx__ = __webpack_require__(451);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_native_onesignal__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_ngx_qrcode2__ = __webpack_require__(348);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_ngx_qrcode2__ = __webpack_require__(347);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_ngx_pagination__ = __webpack_require__(452);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__angular_platform_browser_animations__ = __webpack_require__(453);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__ionic_native_image_picker_ngx__ = __webpack_require__(455);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_angular_cropperjs__ = __webpack_require__(347);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_angular_cropperjs__ = __webpack_require__(348);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_angular_cropperjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_22_angular_cropperjs__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__providers_pusher_service_pusher_service__ = __webpack_require__(349);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -808,15 +808,15 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/my-downloads/my-downloads.module#MyDownloadsPageModule', name: 'my-downloads', segment: 'my-downloads', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/notification/notification.module#NotificationPageModule', name: 'notification-page', segment: 'notification', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/recovery-password/recovery-password.module#RecoveryPasswordPageModule', name: 'recovey-password-page', segment: 'recovery-password', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'tab-page', segment: 'tabs', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'register-page', segment: 'register', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'tab-page', segment: 'tabs', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/chat/chat.module#ChatPageModule', name: 'chat-page', segment: 'chat', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/edit-user/edit-user.module#EditUserPageModule', name: 'edit-user-page', segment: 'edit-user', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/edit-user-v02/edit-user-v02.module#EditUserV02PageModule', name: 'edit-user-v02-page', segment: 'edit-user-v02', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/edit-user/edit-user.module#EditUserPageModule', name: 'edit-user-page', segment: 'edit-user', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'login-page', segment: 'login', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/list-videos-v04/list-videos-v04.module#ListVideosPageV04Module', name: 'list-videos-page-v04', segment: 'list-videos-v04', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/list-videos-v02/list-videos-v02.module#ListVideosV02PageModule', name: 'list-videos-v02-page', segment: 'list-videos-v02', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/list-videos-v03/list-videos-v03.module#ListVideosV03PageModule', name: 'list-videos-v03-page', segment: 'list-videos-v03', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/list-videos-v04/list-videos-v04.module#ListVideosPageV04Module', name: 'list-videos-page-v04', segment: 'list-videos-v04', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/list-videos/list-videos.module#ListVideosPageModule', name: 'list-videos-page', segment: 'list-videos', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/photo/photo.module#PhotoPageModule', name: 'photo-page', segment: 'photo', priority: 'low', defaultHistory: [] }
                     ]
@@ -1140,10 +1140,15 @@ webpackContext.id = 411;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
 var environment = {
-    //KNOW-HOUSE -----------------------------------
-    PUSHER_APP_ID: "1059211",
-    PUSHER_APP_KEY: "25af961ea9f2ef86b9aa",
-    PUSHER_APP_SECRET: "c6060d1a53114a8365da",
+    /*   //KNOW-HOUSE -----------------------------------
+      PUSHER_APP_ID: "1059211",
+      PUSHER_APP_KEY: "25af961ea9f2ef86b9aa",
+      PUSHER_APP_SECRET: "c6060d1a53114a8365da",
+      PUSHER_APP_CLUSTER: "us2", */
+    //EDICOM -----------------------------------
+    PUSHER_APP_ID: "1016195",
+    PUSHER_APP_KEY: "e9b4a92206140e9879bb",
+    PUSHER_APP_SECRET: "92444667633283b9fb77",
     PUSHER_APP_CLUSTER: "us2",
 };
 //# sourceMappingURL=environment.js.map
@@ -1244,7 +1249,7 @@ var MyApp = /** @class */ (function () {
             //5 -> know-house
             //6 -> simples-trade
             //7 -> r2m
-            _this.projectNumber = 5;
+            _this.projectNumber = 2;
             switch (_this.projectNumber) {
                 case 1:
                     _this.onesignalAppId = '946eb156-716e-4000-853f-18f41cc2b193';
