@@ -1,8 +1,8 @@
 <ion-content padding class="background">
   <div style="padding-top: 80px;">
     <!-- <h2 *ngIf="version == '01'">Meus Downloads</h2> -->
-    <p *ngIf="_attachments.length == 0 && idiom =='01'" style="color: white;">Nenhum conteúdo disponível.</p>
-    <p *ngIf="_attachments.length == 0 && idiom =='02'" style="color: white;">Ninguno contenido disponible.</p>
+    <p *ngIf="_attachments.length == 0 && idiom =='01'" style="color: white;">Você ainda não baixou conteúdo offline. Acesse o sistema e baixe seu conteúdo.</p>
+    <p *ngIf="_attachments.length == 0 && idiom =='02'" style="color: white;">Aún no ha descargado contenido sin conexión. Accede al sistema y descarga su contenido.</p>
     <ion-list>
       <button ion-item no-padding *ngFor="let attachment of _attachments; trackBy: attachment?.id"
         (click)="openContent(attachment)">

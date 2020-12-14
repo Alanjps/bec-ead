@@ -74,6 +74,13 @@ var HttpServiceProvider = /** @class */ (function () {
                     case 0: return [4 /*yield*/, new Promise(function (response, reject) {
                             _this.storage.get('Project').then(function (value) {
                                 switch (value) {
+                                    case 'localhost': {
+                                        _this.url = '/lch';
+                                        if (_this._platform.is("cordova")) {
+                                            _this.url = "http://ead.localhost";
+                                        }
+                                        break;
+                                    }
                                     case 'marketing-house': {
                                         _this.url = '/mkh';
                                         if (_this._platform.is("cordova")) {
@@ -244,15 +251,15 @@ var map = {
 		5
 	],
 	"../pages/chat/chat.module": [
-		467,
+		470,
 		12
 	],
 	"../pages/edit-user-v02/edit-user-v02.module": [
-		468,
+		467,
 		1
 	],
 	"../pages/edit-user/edit-user.module": [
-		469,
+		468,
 		0
 	],
 	"../pages/list-videos-v02/list-videos-v02.module": [
@@ -260,19 +267,19 @@ var map = {
 		11
 	],
 	"../pages/list-videos-v03/list-videos-v03.module": [
-		472,
+		474,
 		10
 	],
 	"../pages/list-videos-v04/list-videos-v04.module": [
-		473,
+		472,
 		7
 	],
 	"../pages/list-videos/list-videos.module": [
-		474,
+		473,
 		6
 	],
 	"../pages/login/login.module": [
-		470,
+		469,
 		4
 	],
 	"../pages/my-downloads/my-downloads.module": [
@@ -362,6 +369,13 @@ var AuthProvider = /** @class */ (function () {
         this.url = '/vcc';
         this.storage.get('Project').then(function (value) {
             switch (value) {
+                case 'localhost': {
+                    _this.url = '/lch';
+                    if (_this._platform.is("cordova")) {
+                        _this.url = "http://ead.localhost";
+                    }
+                    break;
+                }
                 case 'marketing-house': {
                     _this.url = '/mkh';
                     if (_this._platform.is("cordova")) {
@@ -435,7 +449,6 @@ var AuthProvider = /** @class */ (function () {
             .toPromise()
             .then(function (data) {
             if (data.id > 0) {
-                console.log("\n01 -> ", data.company_id);
                 _this.storage.set('clienteId', data.id);
                 _this.storage.set('clienteNome', data.nome);
                 _this.storage.set('clienteEmail', data.email);
@@ -468,7 +481,6 @@ var AuthProvider = /** @class */ (function () {
             .map(function (res) { return res.json(); })
             .toPromise()
             .then(function (data) {
-            console.log("\n02 -> " + _this.url + '/api/usuarios/primeiro-acesso  -> ', data);
             if (data.id > 0) {
                 _this.storage.set('clienteId', data.id);
                 _this.storage.set('clienteNome', data.nome);
@@ -660,7 +672,7 @@ var isCordovaAvailable = function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PusherServiceProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(124);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(412);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(432);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(38);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -800,8 +812,8 @@ var AppModule = /** @class */ (function () {
                 }, {
                     links: [
                         { loadChildren: '../components/download-modal/download-modal.module#DownloadModalModule', name: 'download-modal', segment: 'download-modal', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../components/file-modal/file-modal.module#FileModalModule', name: 'file-modal', segment: 'file-modal', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../components/list-videos-modal/list-videos-modal.module#ListVideosModalModule', name: 'list-videos-modal', segment: 'list-videos-modal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../components/file-modal/file-modal.module#FileModalModule', name: 'file-modal', segment: 'file-modal', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../components/photo-modal/photo-modal.module#PhotoModalModule', name: 'photo-modal', segment: 'photo-modal', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../components/quiz/quiz.module#QuizModule', name: 'quiz', segment: 'quiz', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../components/user-form/user-form.module#UserFormModule', name: 'user-form-modal', segment: 'user-form', priority: 'low', defaultHistory: [] },
@@ -810,14 +822,14 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/recovery-password/recovery-password.module#RecoveryPasswordPageModule', name: 'recovey-password-page', segment: 'recovery-password', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'register-page', segment: 'register', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'tab-page', segment: 'tabs', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/chat/chat.module#ChatPageModule', name: 'chat-page', segment: 'chat', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/edit-user-v02/edit-user-v02.module#EditUserV02PageModule', name: 'edit-user-v02-page', segment: 'edit-user-v02', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/edit-user/edit-user.module#EditUserPageModule', name: 'edit-user-page', segment: 'edit-user', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'login-page', segment: 'login', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/chat/chat.module#ChatPageModule', name: 'chat-page', segment: 'chat', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/list-videos-v02/list-videos-v02.module#ListVideosV02PageModule', name: 'list-videos-v02-page', segment: 'list-videos-v02', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/list-videos-v03/list-videos-v03.module#ListVideosV03PageModule', name: 'list-videos-v03-page', segment: 'list-videos-v03', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/list-videos-v04/list-videos-v04.module#ListVideosPageV04Module', name: 'list-videos-page-v04', segment: 'list-videos-v04', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/list-videos/list-videos.module#ListVideosPageModule', name: 'list-videos-page', segment: 'list-videos', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/list-videos-v03/list-videos-v03.module#ListVideosV03PageModule', name: 'list-videos-v03-page', segment: 'list-videos-v03', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/photo/photo.module#PhotoPageModule', name: 'photo-page', segment: 'photo', priority: 'low', defaultHistory: [] }
                     ]
                 }),
@@ -1134,21 +1146,16 @@ webpackContext.id = 411;
 
 /***/ }),
 
-/***/ 412:
+/***/ 432:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
 var environment = {
-    /*   //KNOW-HOUSE -----------------------------------
-      PUSHER_APP_ID: "1059211",
-      PUSHER_APP_KEY: "25af961ea9f2ef86b9aa",
-      PUSHER_APP_SECRET: "c6060d1a53114a8365da",
-      PUSHER_APP_CLUSTER: "us2", */
-    //EDICOM -----------------------------------
-    PUSHER_APP_ID: "1016195",
-    PUSHER_APP_KEY: "e9b4a92206140e9879bb",
-    PUSHER_APP_SECRET: "92444667633283b9fb77",
+    //KNOW-HOUSE -----------------------------------
+    PUSHER_APP_ID: "1059211",
+    PUSHER_APP_KEY: "25af961ea9f2ef86b9aa",
+    PUSHER_APP_SECRET: "c6060d1a53114a8365da",
     PUSHER_APP_CLUSTER: "us2",
 };
 //# sourceMappingURL=environment.js.map
@@ -1242,6 +1249,7 @@ var MyApp = /** @class */ (function () {
             //IDIOMA -----------------------------------------
             //storage.set('Idiom','01'); //português
             //storage.set('Idiom','02'); //espanhol
+            //0 -> localhost
             //1 -> ead
             //2 -> edicom
             //3 -> marketing-house
@@ -1249,8 +1257,14 @@ var MyApp = /** @class */ (function () {
             //5 -> know-house
             //6 -> simples-trade
             //7 -> r2m
-            _this.projectNumber = 2;
+            _this.projectNumber = 5;
             switch (_this.projectNumber) {
+                case 0:
+                    _this.onesignalAppId = '946eb156-716e-4000-853f-18f41cc2b193';
+                    _this.firebaseSenderId = '23981024898';
+                    _this.projectName = 'localhost';
+                    storage.set('Idiom', '01'); //português
+                    break;
                 case 1:
                     _this.onesignalAppId = '946eb156-716e-4000-853f-18f41cc2b193';
                     _this.firebaseSenderId = '23981024898';
@@ -1322,6 +1336,10 @@ var MyApp = /** @class */ (function () {
             storage.set('Project', _this.projectName).then(function (value) {
                 var url = '';
                 switch (value) {
+                    case 'localhost': {
+                        url = 'http://ead.localhost';
+                        break;
+                    }
                     case 'marketing-house': {
                         url = 'https://homolog.marketinghouse.com.br';
                         break;

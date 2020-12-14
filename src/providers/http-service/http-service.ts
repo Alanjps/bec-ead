@@ -23,6 +23,13 @@ export class HttpServiceProvider {
       this.storage.get('Project').then((value) => {
 
         switch(value){
+          case 'localhost': {
+            this.url = '/lch';
+            if(this._platform.is("cordova")){
+              this.url = "http://ead.localhost";
+            }
+            break;
+          }
           case 'marketing-house': {
             this.url = '/mkh';
             if(this._platform.is("cordova")){

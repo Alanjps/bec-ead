@@ -465,8 +465,6 @@ export class PhotoPage {
   }
 
   filterPics(category){
-
-    console.log("CATEGORIA -> ",category);
     let loading = this.loadingCtrl.create({
       content: 'Espere...'
     });

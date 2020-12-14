@@ -76,8 +76,12 @@ page-login {
                 color: #000 !important;
                 border-color: #FC5A16 !important;
             }
-            &--default{
+            &--default-white{
                 color: #FFF !important;
+                border-color: #000 !important;
+            }
+            &--default-black{
+                color: #000 !important;
                 border-color: #000 !important;
             }
         }

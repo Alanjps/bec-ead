@@ -227,9 +227,11 @@ export class ListVideosPage {
     vars.lesson_id = lesson.id;
     this.authService.request('/api/testes/isExist', vars).then((result) => {
       if (result) {
-        this.exibirBoxTeste = true;
         this.cleanTeste();
         this.fazerQuiz(lesson);
+        setTimeout(() => {
+          this.exibirBoxTeste = true;
+        }, 500);
       }
     });
   }

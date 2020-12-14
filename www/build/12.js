@@ -1,6 +1,6 @@
 webpackJsonp([12],{
 
-/***/ 467:
+/***/ 470:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChatPageModule", function() { return ChatPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chat__ = __webpack_require__(497);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chat__ = __webpack_require__(499);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_menu_sup_menu_sup_module__ = __webpack_require__(478);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -26,7 +26,7 @@ var ChatPageModule = /** @class */ (function () {
     ChatPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__chat__["a" /* ChatPage */],
+                __WEBPACK_IMPORTED_MODULE_2__chat__["a" /* ChatPage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__chat__["a" /* ChatPage */]),
@@ -191,7 +191,7 @@ var MenuSupComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 497:
+/***/ 499:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -303,6 +303,8 @@ var ChatPage = /** @class */ (function () {
         this.lastMessageId = null;
         this.iconProfile = '';
         this.iconDefaultMotivos = '';
+        this.recentsInf = [];
+        this.cont = 0;
         this.pendentChat = null;
         this.sendMessage = function (all, notification, isFile) {
             if (all === void 0) { all = false; }
@@ -311,53 +313,49 @@ var ChatPage = /** @class */ (function () {
                 var _this = this;
                 return __generator(this, function (_a) {
                     switch (_a.label) {
-                        case 0:
-                            console.log("\n\nisFile -> ", isFile);
-                            return [4 /*yield*/, new Promise(function (resolve, reject) {
-                                    var data = {};
-                                    _this.storage.get('clienteId').then(function (user_id) {
-                                        var mensagem = isFile ? _this.fileUpload : _this.newMessage && _this.newMessage.length > 0 ? _this.newMessage.trim() : "";
-                                        var destinatario_id = all == true ?
+                        case 0: return [4 /*yield*/, new Promise(function (resolve, reject) {
+                                var data = {};
+                                _this.storage.get('clienteId').then(function (user_id) {
+                                    var mensagem = isFile ? _this.fileUpload : _this.newMessage && _this.newMessage.length > 0 ? _this.newMessage.trim() : "";
+                                    var destinatario_id = all == true ?
+                                        null :
+                                        _this.selectedUserId == null ?
                                             null :
-                                            _this.selectedUserId == null ?
-                                                null :
-                                                _this.selectedUserId;
-                                        var project_id = _this.selectedProjectId == null ? null : _this.selectedProjectId;
-                                        if (mensagem.length > 0) {
-                                            data = {
-                                                mensagem: mensagem,
-                                                user_id: user_id,
-                                                notificacao: notification
-                                            };
-                                            _this.sendAll === true ? data['project_id'] = project_id : data['destinatario_id'] = destinatario_id;
-                                            _this.http.post('/mensagens/store', data)
-                                                .subscribe(function (result) {
-                                                if (_this.selectedUserId) {
-                                                    if (isFile != true) {
-                                                        var newMessageSend = {
-                                                            remetente: {
-                                                                id: user_id
-                                                            },
-                                                            notification: notification == false ? 0 : 1,
-                                                            type: null,
-                                                            mensagem_formatada: mensagem,
-                                                            created_at: __WEBPACK_IMPORTED_MODULE_5_moment___default()().locale('pt-br').format('lll'),
-                                                        };
-                                                        console.log("\n\nnewMessageSend -> ", user_id);
-                                                        console.log("\n\nuser_id -> ", user_id);
-                                                        _this.messages.push(newMessageSend);
-                                                        _this.scrollToBottom();
-                                                    }
-                                                    else {
-                                                        _this.getUserMessages(_this.selectedUserId);
-                                                    }
+                                            _this.selectedUserId;
+                                    var project_id = _this.selectedProjectId == null ? null : _this.selectedProjectId;
+                                    if (mensagem.length > 0) {
+                                        data = {
+                                            mensagem: mensagem,
+                                            user_id: user_id,
+                                            notificacao: notification
+                                        };
+                                        _this.sendAll === true ? data['project_id'] = project_id : data['destinatario_id'] = destinatario_id;
+                                        _this.http.post('/mensagens/store', data)
+                                            .subscribe(function (result) {
+                                            if (_this.selectedUserId) {
+                                                if (isFile != true) {
+                                                    var newMessageSend = {
+                                                        remetente: {
+                                                            id: user_id
+                                                        },
+                                                        notification: notification == false ? 0 : 1,
+                                                        type: null,
+                                                        mensagem_formatada: mensagem,
+                                                        created_at: __WEBPACK_IMPORTED_MODULE_5_moment___default()().locale('pt-br').format('lll'),
+                                                    };
+                                                    _this.messages.push(newMessageSend);
+                                                    _this.scrollToBottom();
                                                 }
-                                                resolve();
-                                            });
-                                            _this.newMessage = '';
-                                        }
-                                    });
-                                })];
+                                                else {
+                                                    _this.getUserMessages(_this.selectedUserId);
+                                                }
+                                            }
+                                            resolve();
+                                        });
+                                        _this.newMessage = '';
+                                    }
+                                });
+                            })];
                         case 1: return [2 /*return*/, _a.sent()];
                     }
                 });
@@ -412,6 +410,24 @@ var ChatPage = /** @class */ (function () {
             this.showMotivosPage();
         }
     }
+    ChatPage.prototype.doInfinite = function (infiniteScroll) {
+        var _this = this;
+        setTimeout(function () {
+            var intCont = 0;
+            for (var i = _this.cont; i < _this.recents.length; i++) {
+                if (intCont < 10) {
+                    _this.recentsInf.push(_this.recents[i]);
+                    _this.cont = _this.cont + 1;
+                }
+                else {
+                    break;
+                }
+                intCont++;
+            }
+            if (infiniteScroll)
+                infiniteScroll.complete();
+        }, 700);
+    };
     ChatPage.prototype.ionViewDidLoad = function () {
         var _this = this;
         this.storage.get('clienteId').then(function (valor) {
@@ -431,9 +447,16 @@ var ChatPage = /** @class */ (function () {
                         _this.messages.push(newMessageReceived);
                         _this.scrollToBottom();
                     }
+                    _this.http.getAll('/mensagens/mask-read-msg', { remetente: data.message.remetente_id, user_id: _this.userId }, 'get')
+                        .subscribe(function (result) {
+                    });
                 }
             });
         });
+    };
+    ChatPage.prototype.ngOnDestroy = function () {
+        var channel = this.pusher.init();
+        channel.unbind('App\\Events\\MessageSent');
     };
     ChatPage.prototype.openGallery = function (all) {
         var _this = this;
@@ -542,6 +565,7 @@ var ChatPage = /** @class */ (function () {
                         destacar: _this.pendentChat && _this.pendentChat.filter(function (p) { return recent.id == p.remetente_id; }).length > 0 ? true : false
                     };
                 });
+                _this.doInfinite();
                 loading.dismiss();
             });
         });
@@ -632,6 +656,7 @@ var ChatPage = /** @class */ (function () {
                 })
               },3000);
             },3000); */
+        this.ionViewDidLoad();
     };
     ChatPage.prototype.scrollToBottom = function () {
         setTimeout(function () {
@@ -687,6 +712,7 @@ var ChatPage = /** @class */ (function () {
     ChatPage.prototype.showRecentUsersPage = function () {
         this.showMotivosContainer = false;
         this.showRecentUserContainer = true;
+        this.ngOnDestroy();
     };
     ChatPage.prototype.showChatPage = function () {
         this.showChatContainer = true;
@@ -695,12 +721,14 @@ var ChatPage = /** @class */ (function () {
     ChatPage.prototype.cancelRecentUsers = function () {
         this.showRecentUserContainer = false;
         this.showMotivosContainer = true;
+        this.ngOnDestroy();
     };
     ChatPage.prototype.cancelChat = function () {
         this.getConversasAtivas();
         this.showChatContainer = false;
         this.showRecentUserContainer = true;
         clearInterval(this.lastMessageIdInterval);
+        this.ngOnDestroy();
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["n" /* Slides */]),
@@ -708,7 +736,7 @@ var ChatPage = /** @class */ (function () {
     ], ChatPage.prototype, "slides", void 0);
     ChatPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-chat',template:/*ion-inline-start:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\INTEGRADO\PROJETO\EAD\src\pages\chat\chat.html"*/'<ion-header [ngClass]="version == \'01\' ? \'principalHeader\' : version == \'02\' ? \'principalHeaderV02\' : \'principalHeader\'">\n\n  <img [ngClass]="version == \'01\' ? \'principal-icon\' : version == \'02\' ? \'principal-icon-v02\' : \'principal-icon\'"\n\n  src="{{ globalUrl + \'/storage/uploads/configs/logoHeader.png\' }}" />\n\n  \n\n  <img *ngIf="version == \'01\'" class="testeira-v01" \n\n  src="{{ globalUrl + \'/storage/uploads/configs/testeira1.png\' }}" >\n\n\n\n  <img *ngIf="version == \'02\'" class="testeira-v02" \n\n  src="{{ globalUrl + \'/storage/uploads/configs/testeira2.png\' }}" >\n\n\n\n  <div *ngIf="version == \'01\' || version == \'02\'">\n\n    <p [ngClass]="project == \'know-house\' ?  \'font-style know-house-title-color\' : \'\'">{{titleTesteira}}  {{complementTitle? \'| \' + complementTitle : \'\'}}</p>\n\n  </div>\n\n  <menu-sup [active]="true" ></menu-sup>\n\n</ion-header>\n\n\n\n<!-- <ion-content class="background margin-content" > -->\n\n\n\n  <ion-content *ngIf="showMotivosContainer" class="background" [ngClass]="version == \'01\' ? \'margin-content-l1\' : version == \'02\' ? \'margin-content-l2\' : \'margin-content-l1\'">\n\n    <ion-header padding>\n\n      <button [ngClass]="project == \'edicom\' ? \'button-edicom\' : project == \'know-house\' ? \'button-know-house\' : \'button-default\'" ion-button small (click)="cancelMotivos()">\n\n        <p *ngIf="idiom == \'01\'">Sair</p>\n\n        <p *ngIf="idiom == \'02\'">Salir</p>\n\n      </button>\n\n  \n\n      <button [ngClass]="project == \'edicom\' ? \'button-edicom\' : project == \'know-house\' ? \'button-know-house\' : \'button-default\'" ion-button small (click)="getConversasAtivas()">\n\n        <p *ngIf="idiom == \'01\'">Conversas Ativas</p>\n\n        <p *ngIf="idiom == \'02\'">Conversaciones Activas</p>\n\n      </button>\n\n    </ion-header>\n\n  \n\n    <ion-content padding>\n\n      <ion-card style="padding-top: 80px;" padding-top *ngIf="motivos && motivos.length > 0">\n\n        <ion-label *ngIf="idiom == \'01\'">Selecione um motivo.</ion-label>\n\n        <ion-label *ngIf="idiom == \'02\'">Seleccione una asitencia</ion-label>\n\n        <ion-list>\n\n          <ion-item *ngFor="let motivo of motivos" (click)="selectMotivo(motivo)">\n\n            <ion-avatar item-start>\n\n              <img src={{motivo.thumb}}>\n\n            </ion-avatar>\n\n            <ion-label>{{motivo.title}}</ion-label>\n\n          </ion-item>\n\n        </ion-list>\n\n      </ion-card>\n\n  \n\n      <ion-card  style="padding-top: 80px;" *ngIf="motivos && motivos.length <= 0">\n\n        <h1 *ngIf="idiom == \'01\'">Não há motivos cadastrados.</h1>\n\n        <h1 *ngIf="idiom == \'02\'">No hay razones registradas.</h1>\n\n      </ion-card>\n\n    </ion-content>\n\n  </ion-content>\n\n\n\n  <!---------------------------------------------------------------------------------->\n\n\n\n  <ion-content *ngIf="showRecentUserContainer" style="background-color: #ffffff;"  class="background" [ngClass]="version == \'01\' ? \'margin-content-l1\' : version == \'02\' ? \'margin-content-l2\' : \'margin-content-l1\'">\n\n    <ion-header padding style="position: relative;">\n\n      <button [ngClass]="project == \'edicom\' ? \'button-edicom\' : project == \'know-house\' ? \'button-know-house\' : \'button-default\'" ion-button small (click)="cancelMotivos()">\n\n        <p *ngIf="idiom == \'01\'">Sair</p>\n\n        <p *ngIf="idiom == \'02\'">Salir</p>\n\n      </button>\n\n      <button [ngClass]="project == \'edicom\' ? \'button-edicom\' : project == \'know-house\' ? \'button-know-house\' : \'button-default\'" ion-button small (click)="cancelRecentUsers()">\n\n        <p *ngIf="idiom == \'01\'">Voltar</p>\n\n        <p *ngIf="idiom == \'02\'">Volver</p>\n\n      </button>\n\n    </ion-header>\n\n  \n\n    <ion-content padding *ngIf="recents && recents.length > 0">\n\n      <p *ngIf="idiom == \'01\'">Abaixo a lista dos últimos usuários que você conversou</p>\n\n      <p *ngIf="idiom == \'02\'">Abajo el listado de los ultimos contactos hechos</p>\n\n      \n\n      <ion-list>\n\n        <ion-item href="#chat-anchor" *ngFor="let recent of recents" (click)="selectRecentUser(recent)" [ngClass]="recent.destacar == true ? \'bg-destaque\' : \'\'">              \n\n          <a href="#chat-anchor" style="text-decoration: none; display: flex; align-items: center;">\n\n            <ion-grid>\n\n              <ion-row>\n\n                <ion-col col-3>\n\n                  <ion-avatar item-start>\n\n                    <img src={{recent.thumb}}>\n\n                  </ion-avatar>\n\n                </ion-col>\n\n                <ion-col col-7 style="margin-top: auto; margin-bottom: auto;">\n\n                  <ion-row>\n\n                    <p *ngIf="recent.lido == true"> {{recent.nome}}</p>\n\n                    <p *ngIf="recent.lido == false"> <b>{{recent.nome}}</b></p>\n\n                  </ion-row>\n\n                  <ion-row>\n\n<!--                     \n\n                    <p *ngIf="recent.lido == true">{{recent.mensagem.substr(0,25)}}</p><p *ngIf="recent.lido == true && recent.mensagem.length > 25"> ...</p>\n\n                    <p *ngIf="recent.lido == false"><b>{{recent.mensagem.substr(0,25)}}</b></p><p *ngIf="recent.lido == false && recent.mensagem.length > 25"> <b>...</b></p>\n\n -->\n\n                  </ion-row>\n\n                </ion-col>\n\n              </ion-row>\n\n            </ion-grid>\n\n          </a>\n\n        </ion-item>\n\n      </ion-list>\n\n    </ion-content>\n\n  </ion-content>\n\n\n\n  <!---------------------------------------------------------------------------------->\n\n\n\n  <ion-content  *ngIf="showChatContainer"  style="background-color: #ffffff;" class="background" [ngClass]="version == \'01\' ? \'margin-content-l1\' : version == \'02\' ? \'margin-content-l2\' : \'margin-content-l1\'">\n\n    <ion-header padding *ngIf="showMessageAllBox == false" class="message-container" style="position: relative;">\n\n      <button [ngClass]="project == \'edicom\' ? \'button-edicom\' : project == \'know-house\' ? \'button-know-house\' : \'button-default\'" ion-button small (click)="cancelMotivos()">\n\n        <p *ngIf="idiom == \'01\'">Sair</p>\n\n        <p *ngIf="idiom == \'02\'">Salir</p>\n\n      </button>\n\n      <button [ngClass]="project == \'edicom\' ? \'button-edicom\' : project == \'know-house\' ? \'button-know-house\' : \'button-default\'" ion-button small (click)="cancelChat()">\n\n        <p *ngIf="idiom == \'01\'">Voltar</p>\n\n        <p *ngIf="idiom == \'02\'">Volver</p>\n\n      </button>\n\n    </ion-header>\n\n  \n\n    <ion-content padding *ngIf="showMessageAllBox == false" class="message-container" style="height: 90%;">\n\n      <ion-list>\n\n        <div id="chat-anchor"></div>\n\n        <div *ngIf="selectedUserId != null">\n\n          <p *ngIf="idiom == \'01\'" style="font-size: 1.4rem;">Você está falando com: {{selectedUser.nome}}</p>\n\n          <p *ngIf="idiom == \'02\'" style="font-size: 1.4rem;">Usted está hablando con: {{selectedUser.nome}}</p>\n\n        </div>\n\n        <div  id="cards">\n\n          <ion-card class="card-container">\n\n            <ion-card-content *ngFor="let message of messages">\n\n              <!-- receptivo -->\n\n              <ion-item *ngIf="userId !== message.remetente.id && (perfilType == 3 && message.notification == 0 || perfilType != 3)">\n\n                <ion-avatar item-start>\n\n                  <img src={{receptivo.thumb}}>\n\n                </ion-avatar>\n\n                <span *ngIf="message.notification == 1" class="circle_notification--receptive"><ion-icon name="ios-notifications-outline"></ion-icon></span>\n\n                <img *ngIf="message.type == \'file\'" src={{message.mensagem}} >\n\n                <h3 *ngIf="message.type != \'file\'" [innerHTML]="message.mensagem_formatada" class="message-receptive--default"></h3>\n\n                <h2 class="date">{{ message.created_at }}</h2>\n\n              </ion-item>\n\n  \n\n              <!-- ativo -->\n\n              <ion-item *ngIf="userId == message.remetente.id  && (perfilType == 3 && message.notification == 0 || perfilType != 3)">\n\n                <ion-avatar item-end>\n\n                  <img src={{ativo.thumb}}>\n\n                </ion-avatar>\n\n                <span *ngIf="message.notification == 1" class="circle_notification--active"><ion-icon name="ios-notifications-outline"></ion-icon></span>\n\n                <img *ngIf="message.type == \'file\'" src={{message.mensagem}} />\n\n                <h3 *ngIf="message.type != \'file\'" [innerHTML]="message.mensagem_formatada" [ngClass]="project == \'know-house\' ? \'message-active--know-house\' : \'message-active--default\'"></h3>\n\n                <h2 class="date">{{ message.created_at }}</h2>\n\n              </ion-item>\n\n            </ion-card-content>\n\n          </ion-card>\n\n        </div>\n\n      </ion-list>\n\n  \n\n      <ion-textarea [disabled]="selectedUserId == null" class="message-input"  *ngIf="idiom == \'01\'" rows="3" placeholder="Enviar nova mensagem" [(ngModel)]="newMessage" ></ion-textarea>\n\n      <ion-textarea [disabled]="selectedUserId == null" class="message-input"  *ngIf="idiom == \'02\'" rows="3" placeholder="Enviar nueva mensaje" [(ngModel)]="newMessage" ></ion-textarea>\n\n      \n\n      <button [ngClass]="project == \'edicom\' ? \'button-edicom\' : project == \'know-house\' ? \'button-know-house\' : \'button-default\'" [disabled]="selectedUserId == null" float-right ion-button icon-start (click)="sendMessage()"><ion-icon name="ios-text-outline"></ion-icon>Enviar</button>\n\n      <button [ngClass]="project == \'edicom\' ? \'button-edicom\' : project == \'know-house\' ? \'button-know-house\' : \'button-default\'" *ngIf="perfilType == 2" [disabled]="selectedUserId == null" float-right ion-button icon-start (click)="sendMessage(false, true)" style="margin-right: 10px;"><ion-icon name="ios-notifications-outline"></ion-icon>Notificar</button>     \n\n      <button [ngClass]="project == \'edicom\' ? \'button-edicom\' : project == \'know-house\' ? \'button-know-house\' : \'button-default\'" [disabled]="selectedUserId == null" float-right ion-button icon-start (click)="openGallery()" style="margin-right: 10px;"><ion-icon name="ios-document-outline"></ion-icon></button>     \n\n    </ion-content>\n\n  \n\n    <div *ngIf="showMessageAllBox == true">\n\n      <h2>Enviar Mensagem para todos do projeto {{ selectedProject[\'titulo\'] }}?</h2>\n\n  \n\n      <ion-textarea class="message-input" [(ngModel)]="newMessage" autofocus="true" rows="5" placeholder="Insira sua mensagem..."></ion-textarea>\n\n  \n\n      <button [ngClass]="project == \'edicom\' ? \'button-edicom\' : project == \'know-house\' ? \'button-know-house\' : \'button-default\'" ion-button float-right icon-start (click)="sendMessageAll()"><ion-icon name="ios-text-outline"></ion-icon>Enviar</button>\n\n      <button [ngClass]="project == \'edicom\' ? \'button-edicom\' : project == \'know-house\' ? \'button-know-house\' : \'button-default\'" float-right ion-button icon-start (click)="sendMessageAll(true, true)" style="margin-right: 10px;"><ion-icon name="ios-notifications-outline"></ion-icon>Notificar</button>     \n\n      <button [ngClass]="project == \'edicom\' ? \'button-edicom\' : project == \'know-house\' ? \'button-know-house\' : \'button-default\'" float-right ion-button icon-start (click)="openGallery(true)" style="margin-right: 10px;"><ion-icon name="ios-document-outline"></ion-icon></button>     \n\n      <button [ngClass]="project == \'edicom\' ? \'button-edicom\' : project == \'know-house\' ? \'button-know-house\' : \'button-default\'" ion-button float-right class="cancel-button" (click)="cancelMessageAll()">\n\n        <p *ngIf="idiom == \'01\'">Voltar</p>\n\n        <p *ngIf="idiom == \'02\'">Volver</p>\n\n      </button>\n\n  \n\n    </div>\n\n  </ion-content>\n\n\n\n<!-- </ion-content> -->\n\n\n\n\n\n'/*ion-inline-end:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\INTEGRADO\PROJETO\EAD\src\pages\chat\chat.html"*/,
+            selector: 'page-chat',template:/*ion-inline-start:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\INTEGRADO\PROJETO\EAD\src\pages\chat\chat.html"*/'<ion-header [ngClass]="version == \'01\' ? \'principalHeader\' : version == \'02\' ? \'principalHeaderV02\' : \'principalHeader\'">\n\n  <img [ngClass]="version == \'01\' ? \'principal-icon\' : version == \'02\' ? \'principal-icon-v02\' : \'principal-icon\'"\n\n  src="{{ globalUrl + \'/storage/uploads/configs/logoHeader.png\' }}" />\n\n  \n\n  <img *ngIf="version == \'01\'" class="testeira-v01" \n\n  src="{{ globalUrl + \'/storage/uploads/configs/testeira1.png\' }}" >\n\n\n\n  <img *ngIf="version == \'02\'" class="testeira-v02" \n\n  src="{{ globalUrl + \'/storage/uploads/configs/testeira2.png\' }}" >\n\n\n\n  <div *ngIf="version == \'01\' || version == \'02\'">\n\n    <p [ngClass]="project == \'know-house\' ?  \'font-style know-house-title-color\' : \'\'">{{titleTesteira}}  {{complementTitle? \'| \' + complementTitle : \'\'}}</p>\n\n  </div>\n\n  <menu-sup [active]="true" ></menu-sup>\n\n</ion-header>\n\n\n\n<!-- <ion-content class="background margin-content" > -->\n\n\n\n  <ion-content *ngIf="showMotivosContainer" class="background" [ngClass]="version == \'01\' ? \'margin-content-l1\' : version == \'02\' ? \'margin-content-l2\' : \'margin-content-l1\'">\n\n    <ion-header padding>\n\n      <button [ngClass]="project == \'edicom\' ? \'button-edicom\' : project == \'know-house\' ? \'button-know-house\' : \'button-default\'" ion-button small (click)="cancelMotivos()">\n\n        <p *ngIf="idiom == \'01\'">Sair</p>\n\n        <p *ngIf="idiom == \'02\'">Salir</p>\n\n      </button>\n\n  \n\n      <button [ngClass]="project == \'edicom\' ? \'button-edicom\' : project == \'know-house\' ? \'button-know-house\' : \'button-default\'" ion-button small (click)="getConversasAtivas()">\n\n        <p *ngIf="idiom == \'01\'">Conversas Ativas</p>\n\n        <p *ngIf="idiom == \'02\'">Conversaciones Activas</p>\n\n      </button>\n\n    </ion-header>\n\n  \n\n    <ion-content padding>\n\n      <ion-card style="padding-top: 80px;" padding-top *ngIf="motivos && motivos.length > 0">\n\n        <ion-label *ngIf="idiom == \'01\'">Selecione um motivo.</ion-label>\n\n        <ion-label *ngIf="idiom == \'02\'">Seleccione una asitencia</ion-label>\n\n        <ion-list>\n\n          <ion-item *ngFor="let motivo of motivos" (click)="selectMotivo(motivo)">\n\n            <ion-avatar item-start>\n\n              <img src={{motivo.thumb}}>\n\n            </ion-avatar>\n\n            <ion-label>{{motivo.title}}</ion-label>\n\n          </ion-item>\n\n        </ion-list>\n\n      </ion-card>\n\n  \n\n      <ion-card  style="padding-top: 80px;" *ngIf="motivos && motivos.length <= 0">\n\n        <h1 *ngIf="idiom == \'01\'">Não há motivos cadastrados.</h1>\n\n        <h1 *ngIf="idiom == \'02\'">No hay razones registradas.</h1>\n\n      </ion-card>\n\n    </ion-content>\n\n  </ion-content>\n\n\n\n  <!---------------------------------------------------------------------------------->\n\n\n\n  <ion-content *ngIf="showRecentUserContainer" style="background-color: #ffffff;"  class="background" [ngClass]="version == \'01\' ? \'margin-content-l1\' : version == \'02\' ? \'margin-content-l2\' : \'margin-content-l1\'">\n\n    <ion-header padding style="position: relative;">\n\n      <button [ngClass]="project == \'edicom\' ? \'button-edicom\' : project == \'know-house\' ? \'button-know-house\' : \'button-default\'" ion-button small (click)="cancelMotivos()">\n\n        <p *ngIf="idiom == \'01\'">Sair</p>\n\n        <p *ngIf="idiom == \'02\'">Salir</p>\n\n      </button>\n\n      <button [ngClass]="project == \'edicom\' ? \'button-edicom\' : project == \'know-house\' ? \'button-know-house\' : \'button-default\'" ion-button small (click)="cancelRecentUsers()">\n\n        <p *ngIf="idiom == \'01\'">Voltar</p>\n\n        <p *ngIf="idiom == \'02\'">Volver</p>\n\n      </button>\n\n    </ion-header>\n\n  \n\n    <ion-content padding *ngIf="recents && recents.length > 0">\n\n      <p *ngIf="idiom == \'01\'">Abaixo a lista dos últimos usuários que você conversou</p>\n\n      <p *ngIf="idiom == \'02\'">Abajo el listado de los ultimos contactos hechos</p>\n\n      \n\n      <ion-list>\n\n        <ion-item href="#chat-anchor" *ngFor="let recent of recentsInf" (click)="selectRecentUser(recent)" [ngClass]="recent.destacar == true ? \'bg-destaque\' : \'\'">              \n\n          <a href="#chat-anchor" style="text-decoration: none; display: flex; align-items: center;">\n\n            <ion-grid>\n\n              <ion-row>\n\n                <ion-col col-3>\n\n                  <ion-avatar item-start>\n\n                    <img src={{recent.thumb}}>\n\n                  </ion-avatar>\n\n                </ion-col>\n\n                <ion-col col-7 style="margin-top: auto; margin-bottom: auto;">\n\n                  <ion-row>\n\n                    <p *ngIf="recent.lido == true"> {{recent.nome}}</p>\n\n                    <p *ngIf="recent.lido == false"> <b>{{recent.nome}}</b></p>\n\n                  </ion-row>\n\n                  <ion-row>\n\n<!--                     \n\n                    <p *ngIf="recent.lido == true">{{recent.mensagem.substr(0,25)}}</p><p *ngIf="recent.lido == true && recent.mensagem.length > 25"> ...</p>\n\n                    <p *ngIf="recent.lido == false"><b>{{recent.mensagem.substr(0,25)}}</b></p><p *ngIf="recent.lido == false && recent.mensagem.length > 25"> <b>...</b></p>\n\n -->\n\n                  </ion-row>\n\n                </ion-col>\n\n              </ion-row>\n\n            </ion-grid>\n\n          </a>\n\n        </ion-item>\n\n      </ion-list>\n\n      \n\n      <ion-infinite-scroll (ionInfinite)="doInfinite($event)">\n\n        <ion-infinite-scroll-content></ion-infinite-scroll-content>\n\n      </ion-infinite-scroll>    \n\n    </ion-content>\n\n  </ion-content>\n\n\n\n  <!---------------------------------------------------------------------------------->\n\n\n\n  <ion-content  *ngIf="showChatContainer"  style="background-color: #ffffff;" class="background" [ngClass]="version == \'01\' ? \'margin-content-l1\' : version == \'02\' ? \'margin-content-l2\' : \'margin-content-l1\'">\n\n    <ion-header padding *ngIf="showMessageAllBox == false" class="message-container" style="position: relative;">\n\n      <button [ngClass]="project == \'edicom\' ? \'button-edicom\' : project == \'know-house\' ? \'button-know-house\' : \'button-default\'" ion-button small (click)="cancelMotivos()">\n\n        <p *ngIf="idiom == \'01\'">Sair</p>\n\n        <p *ngIf="idiom == \'02\'">Salir</p>\n\n      </button>\n\n      <button [ngClass]="project == \'edicom\' ? \'button-edicom\' : project == \'know-house\' ? \'button-know-house\' : \'button-default\'" ion-button small (click)="cancelChat()">\n\n        <p *ngIf="idiom == \'01\'">Voltar</p>\n\n        <p *ngIf="idiom == \'02\'">Volver</p>\n\n      </button>\n\n    </ion-header>\n\n  \n\n    <ion-content padding *ngIf="showMessageAllBox == false" class="message-container" style="height: 90%;">\n\n      <ion-list>\n\n        <div id="chat-anchor"></div>\n\n        <div *ngIf="selectedUserId != null">\n\n          <p *ngIf="idiom == \'01\'" style="font-size: 1.4rem;">Você está falando com: {{selectedUser.nome}}</p>\n\n          <p *ngIf="idiom == \'02\'" style="font-size: 1.4rem;">Usted está hablando con: {{selectedUser.nome}}</p>\n\n        </div>\n\n        <div  id="cards">\n\n          <ion-card class="card-container" style="height: 90%;">\n\n            <ion-card-content *ngFor="let message of messages">\n\n              <!-- receptivo -->\n\n              <ion-item *ngIf="userId !== message.remetente.id && (perfilType == 3 && message.notification == 0 || perfilType != 3)">\n\n                <ion-avatar item-start>\n\n                  <img src={{receptivo.thumb}}>\n\n                </ion-avatar>\n\n                <span *ngIf="message.notification == 1" class="circle_notification--receptive"><ion-icon name="ios-notifications-outline"></ion-icon></span>\n\n                <img *ngIf="message.type == \'file\'" src={{message.mensagem}} >\n\n                <h3 *ngIf="message.type != \'file\'" [innerHTML]="message.mensagem_formatada" class="message-receptive--default"></h3>\n\n                <h2 class="date">{{ message.created_at }}</h2>\n\n              </ion-item>\n\n  \n\n              <!-- ativo -->\n\n              <ion-item *ngIf="userId == message.remetente.id  && (perfilType == 3 && message.notification == 0 || perfilType != 3)">\n\n                <ion-avatar item-end>\n\n                  <img src={{ativo.thumb}}>\n\n                </ion-avatar>\n\n                <span *ngIf="message.notification == 1" class="circle_notification--active"><ion-icon name="ios-notifications-outline"></ion-icon></span>\n\n                <img *ngIf="message.type == \'file\'" src={{message.mensagem}} />\n\n                <h3 *ngIf="message.type != \'file\'" [innerHTML]="message.mensagem_formatada" [ngClass]="project == \'know-house\' ? \'message-active--know-house\' : \'message-active--default\'"></h3>\n\n                <h2 class="date">{{ message.created_at }}</h2>\n\n              </ion-item>\n\n            </ion-card-content>\n\n          </ion-card>\n\n        </div>\n\n      </ion-list>\n\n  \n\n      <ion-textarea [disabled]="selectedUserId == null" class="message-input"  *ngIf="idiom == \'01\'" rows="3" placeholder="Enviar nova mensagem" [(ngModel)]="newMessage" ></ion-textarea>\n\n      <ion-textarea [disabled]="selectedUserId == null" class="message-input"  *ngIf="idiom == \'02\'" rows="3" placeholder="Enviar nueva mensaje" [(ngModel)]="newMessage" ></ion-textarea>\n\n      \n\n      <button [ngClass]="project == \'edicom\' ? \'button-edicom\' : project == \'know-house\' ? \'button-know-house\' : \'button-default\'" [disabled]="selectedUserId == null" float-right ion-button icon-start (click)="sendMessage()"><ion-icon name="ios-text-outline"></ion-icon>Enviar</button>\n\n      <button [ngClass]="project == \'edicom\' ? \'button-edicom\' : project == \'know-house\' ? \'button-know-house\' : \'button-default\'" *ngIf="perfilType == 2" [disabled]="selectedUserId == null" float-right ion-button icon-start (click)="sendMessage(false, true)" style="margin-right: 10px;"><ion-icon name="ios-notifications-outline"></ion-icon>Notificar</button>     \n\n      <button [ngClass]="project == \'edicom\' ? \'button-edicom\' : project == \'know-house\' ? \'button-know-house\' : \'button-default\'" [disabled]="selectedUserId == null" float-right ion-button icon-start (click)="openGallery()" style="margin-right: 10px;"><ion-icon name="ios-document-outline"></ion-icon></button>     \n\n    </ion-content>\n\n  \n\n    <div *ngIf="showMessageAllBox == true">\n\n      <h2>Enviar Mensagem para todos do projeto {{ selectedProject[\'titulo\'] }}?</h2>\n\n  \n\n      <ion-textarea class="message-input" [(ngModel)]="newMessage" autofocus="true" rows="5" placeholder="Insira sua mensagem..."></ion-textarea>\n\n  \n\n      <button [ngClass]="project == \'edicom\' ? \'button-edicom\' : project == \'know-house\' ? \'button-know-house\' : \'button-default\'" ion-button float-right icon-start (click)="sendMessageAll()"><ion-icon name="ios-text-outline"></ion-icon>Enviar</button>\n\n      <button [ngClass]="project == \'edicom\' ? \'button-edicom\' : project == \'know-house\' ? \'button-know-house\' : \'button-default\'" float-right ion-button icon-start (click)="sendMessageAll(true, true)" style="margin-right: 10px;"><ion-icon name="ios-notifications-outline"></ion-icon>Notificar</button>     \n\n      <button [ngClass]="project == \'edicom\' ? \'button-edicom\' : project == \'know-house\' ? \'button-know-house\' : \'button-default\'" float-right ion-button icon-start (click)="openGallery(true)" style="margin-right: 10px;"><ion-icon name="ios-document-outline"></ion-icon></button>     \n\n      <button [ngClass]="project == \'edicom\' ? \'button-edicom\' : project == \'know-house\' ? \'button-know-house\' : \'button-default\'" ion-button float-right class="cancel-button" (click)="cancelMessageAll()">\n\n        <p *ngIf="idiom == \'01\'">Voltar</p>\n\n        <p *ngIf="idiom == \'02\'">Volver</p>\n\n      </button>\n\n  \n\n    </div>\n\n  </ion-content>\n\n\n\n<!-- </ion-content> -->\n\n\n\n\n\n'/*ion-inline-end:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\INTEGRADO\PROJETO\EAD\src\pages\chat\chat.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["k" /* NavParams */],

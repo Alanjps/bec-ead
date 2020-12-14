@@ -715,7 +715,6 @@ var PhotoPage = /** @class */ (function () {
     };
     PhotoPage.prototype.filterPics = function (category) {
         var _this = this;
-        console.log("CATEGORIA -> ", category);
         var loading = this.loadingCtrl.create({
             content: 'Espere...'
         });

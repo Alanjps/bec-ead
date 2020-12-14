@@ -383,7 +383,7 @@ var NotificationPage = /** @class */ (function () {
         setTimeout(function () {
             var intCont = 0;
             for (var i = _this.cont; i < _this.notifications.length; i++) {
-                if (intCont < 14) {
+                if (intCont < 6) {
                     _this.items.push(_this.notifications[i]);
                     _this.cont = _this.cont + 1;
                 }

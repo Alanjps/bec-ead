@@ -433,7 +433,6 @@ export class ListVideosV02Page {
                     return {...lesson, gotVideo, youtubeUrl}
                   });
                 }) */
-                console.log("\n\nPROJETOS -> ",data,"\n\n");
                 this.videos = data;
                 this.storage.set('AvailableDefaultProjects',data);
                 this.checkFinishedProjects();

@@ -69,7 +69,7 @@
       <p *ngIf="idiom == '02'">Abajo el listado de los ultimos contactos hechos</p>
       
       <ion-list>
-        <ion-item href="#chat-anchor" *ngFor="let recent of recents" (click)="selectRecentUser(recent)" [ngClass]="recent.destacar == true ? 'bg-destaque' : ''">              
+        <ion-item href="#chat-anchor" *ngFor="let recent of recentsInf" (click)="selectRecentUser(recent)" [ngClass]="recent.destacar == true ? 'bg-destaque' : ''">              
           <a href="#chat-anchor" style="text-decoration: none; display: flex; align-items: center;">
             <ion-grid>
               <ion-row>
@@ -95,6 +95,10 @@
           </a>
         </ion-item>
       </ion-list>
+      
+      <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+      </ion-infinite-scroll>    
     </ion-content>
   </ion-content>
 
@@ -120,7 +124,7 @@
           <p *ngIf="idiom == '02'" style="font-size: 1.4rem;">Usted está hablando con: {{selectedUser.nome}}</p>
         </div>
         <div  id="cards">
-          <ion-card class="card-container">
+          <ion-card class="card-container" style="height: 90%;">
             <ion-card-content *ngFor="let message of messages">
               <!-- receptivo -->
               <ion-item *ngIf="userId !== message.remetente.id && (perfilType == 3 && message.notification == 0 || perfilType != 3)">

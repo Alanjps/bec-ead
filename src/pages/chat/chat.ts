@@ -63,6 +63,8 @@ export class ChatPage {
   public lastMessageIdInterval: any;
   public iconProfile: string  = '';
   public iconDefaultMotivos: string = '';
+  public recentsInf : any = [];
+  public cont : number = 0;
 
   public pendentChat: any = null;
 
@@ -119,8 +121,25 @@ export class ChatPage {
 
   }
 
-  ionViewDidLoad(){
+  doInfinite(infiniteScroll?) {
+    setTimeout(() => {
+      let intCont = 0;
+      for (let i = this.cont; i < this.recents.length; i++) {
+        if (intCont < 10){ 
 
+          this.recentsInf.push( this.recents[i] );
+          this.cont = this.cont + 1;
+        }else{
+          break;
+        }
+        intCont ++;
+      }
+
+      if (infiniteScroll) infiniteScroll.complete();
+    }, 700);
+  }
+
+  ionViewDidLoad(){
     this.storage.get('clienteId').then((valor) => {
       const channel = this.pusher.init();
       channel.bind('App\\Events\\MessageSent', (data) => {
@@ -139,9 +158,18 @@ export class ChatPage {
             this.messages.push(newMessageReceived);
             this.scrollToBottom();
           }
+
+          this.http.getAll('/mensagens/mask-read-msg', { remetente : data.message.remetente_id, user_id: this.userId }, 'get')
+          .subscribe((result: any) => {
+          })
         }
       });
     });
+  }
+
+  ngOnDestroy(){
+    const channel = this.pusher.init();
+    channel.unbind('App\\Events\\MessageSent');
   }
 
   openGallery(all = false) {
@@ -257,6 +285,7 @@ export class ChatPage {
               destacar: this.pendentChat && this.pendentChat.filter((p)=>recent.id == p.remetente_id).length > 0 ? true : false
             }
           });
+          this.doInfinite();
           loading.dismiss();
         })
     });
@@ -336,8 +365,6 @@ export class ChatPage {
   }
   
   sendMessage = async (all = false, notification = false, isFile?) => {
-
-    console.log("\n\nisFile -> ",isFile);
     return await new Promise((resolve, reject) => {
       let data = {};
     
@@ -375,9 +402,6 @@ export class ChatPage {
                     mensagem_formatada: mensagem,
                     created_at: moment().locale('pt-br').format('lll'),
                   }
-
-                  console.log("\n\nnewMessageSend -> ",user_id);
-                  console.log("\n\nuser_id -> ",user_id);
 
                   this.messages.push(newMessageSend);
                   this.scrollToBottom();
@@ -428,6 +452,7 @@ export class ChatPage {
         })
       },3000);
     },3000); */
+    this.ionViewDidLoad();
   }
 
 
@@ -488,6 +513,7 @@ export class ChatPage {
   showRecentUsersPage(){
     this.showMotivosContainer = false;
     this.showRecentUserContainer = true;
+    this.ngOnDestroy();
   }
 
   showChatPage(){
@@ -498,6 +524,7 @@ export class ChatPage {
   cancelRecentUsers(){
     this.showRecentUserContainer = false;
     this.showMotivosContainer = true;
+    this.ngOnDestroy();
   }
 
   cancelChat(){
@@ -505,5 +532,7 @@ export class ChatPage {
     this.showChatContainer = false;
     this.showRecentUserContainer = true;
     clearInterval(this.lastMessageIdInterval);
+    this.ngOnDestroy();
+
   }
 }

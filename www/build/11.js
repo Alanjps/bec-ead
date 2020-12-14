@@ -733,7 +733,6 @@ var ListVideosV02Page = /** @class */ (function () {
                                             return {...lesson, gotVideo, youtubeUrl}
                                           });
                                         }) */
-                            console.log("\n\nPROJETOS -> ", data, "\n\n");
                             _this.videos = data;
                             _this.storage.set('AvailableDefaultProjects', data);
                             _this.checkFinishedProjects();

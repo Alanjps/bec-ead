@@ -44,6 +44,7 @@ export class MyApp {
         //storage.set('Idiom','01'); //português
         //storage.set('Idiom','02'); //espanhol
 
+        //0 -> localhost
         //1 -> ead
         //2 -> edicom
         //3 -> marketing-house
@@ -51,9 +52,15 @@ export class MyApp {
         //5 -> know-house
         //6 -> simples-trade
         //7 -> r2m
-        this.projectNumber = 2;
+        this.projectNumber = 5;
 
         switch(this.projectNumber){
+          case 0:
+            this.onesignalAppId='946eb156-716e-4000-853f-18f41cc2b193';
+            this.firebaseSenderId='23981024898';
+            this.projectName = 'localhost';
+            storage.set('Idiom','01'); //português
+            break;
           case 1:
             this.onesignalAppId='946eb156-716e-4000-853f-18f41cc2b193';
             this.firebaseSenderId='23981024898';
@@ -131,6 +138,10 @@ export class MyApp {
 
           let url = '';
           switch(value){
+            case 'localhost': {
+              url = 'http://ead.localhost';
+              break;
+            }
             case 'marketing-house': {
               url = 'https://homolog.marketinghouse.com.br';
               break;

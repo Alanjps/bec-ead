@@ -24,6 +24,13 @@ private url:string= '/vcc';
 
     this.storage.get('Project').then((value) => {
       switch(value){
+        case 'localhost': {
+          this.url = '/lch';
+          if(this._platform.is("cordova")){
+            this.url = "http://ead.localhost";
+          }
+          break;
+        }
         case 'marketing-house': {
           this.url = '/mkh';
           if(this._platform.is("cordova")){
@@ -105,7 +112,6 @@ private url:string= '/vcc';
       .toPromise()
       .then(data => {
           if(data.id > 0){
-              console.log("\n01 -> ",data.company_id);
               this.storage.set('clienteId', data.id);
               this.storage.set('clienteNome', data.nome);
               this.storage.set('clienteEmail', data.email);
@@ -144,8 +150,6 @@ private url:string= '/vcc';
       .map(res => res.json())
       .toPromise()
       .then(data => {
-        console.log("\n02 -> "+this.url+'/api/usuarios/primeiro-acesso  -> ',data);
-
           if(data.id > 0){
             this.storage.set('clienteId', data.id);
             this.storage.set('clienteNome', data.nome);

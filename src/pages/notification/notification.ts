@@ -61,7 +61,7 @@ export class NotificationPage {
     setTimeout(() => {
       let intCont = 0;
       for (let i = this.cont; i < this.notifications.length; i++) {
-        if (intCont < 14){ 
+        if (intCont < 6){ 
 
           this.items.push( this.notifications[i] );
           this.cont = this.cont + 1;

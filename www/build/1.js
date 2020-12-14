@@ -38,7 +38,7 @@ var DownloadModalModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 468:
+/***/ 467:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46,7 +46,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditUserV02PageModule", function() { return EditUserV02PageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_user_v02__ = __webpack_require__(498);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_user_v02__ = __webpack_require__(497);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_brmasker_ionic_3__ = __webpack_require__(480);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_qrcode2__ = __webpack_require__(347);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_menu_sup_menu_sup_module__ = __webpack_require__(478);
@@ -988,7 +988,7 @@ var DownloadModal = /** @class */ (function () {
     };
     DownloadModal = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
-            selector: 'page-download-modal',template:/*ion-inline-start:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\INTEGRADO\PROJETO\EAD\src\components\download-modal\download-modal.html"*/'<ion-content padding class="background">\n\n  <div style="padding-top: 80px;">\n\n    <!-- <h2 *ngIf="version == \'01\'">Meus Downloads</h2> -->\n\n    <p *ngIf="_attachments.length == 0 && idiom ==\'01\'" style="color: white;">Nenhum conteúdo disponível.</p>\n\n    <p *ngIf="_attachments.length == 0 && idiom ==\'02\'" style="color: white;">Ninguno contenido disponible.</p>\n\n    <ion-list>\n\n      <button ion-item no-padding *ngFor="let attachment of _attachments; trackBy: attachment?.id"\n\n        (click)="openContent(attachment)">\n\n        <ion-row>\n\n          <ion-col col-2 style="justify-content: center; display: flex; align-items: center;">\n\n            <ion-icon name="clipboard" *ngIf="!attachment.isVideo"></ion-icon>\n\n            <ion-icon name="play" *ngIf="attachment.isVideo"></ion-icon>\n\n          </ion-col>\n\n          <ion-col col-10><span class=titleContent>{{attachment.name}}</span></ion-col>\n\n        </ion-row>\n\n      </button>\n\n    </ion-list>\n\n\n\n    <div>\n\n      <button [ngClass]="project == \'edicom\' ? \'button-edicom\' : project == \'know-house\' ? \'button-know-house\' : \'button-default\'" *ngIf="idiom ==\'01\'" ion-button (click)="close()">Voltar</button>\n\n      <button [ngClass]="project == \'edicom\' ? \'button-edicom\' : project == \'know-house\' ? \'button-know-house\' : \'button-default\'" *ngIf="idiom ==\'02\'" ion-button (click)="close()">Volver</button>\n\n    </div>\n\n  </div>\n\n</ion-content>\n\n\n\n\n\n'/*ion-inline-end:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\INTEGRADO\PROJETO\EAD\src\components\download-modal\download-modal.html"*/,
+            selector: 'page-download-modal',template:/*ion-inline-start:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\INTEGRADO\PROJETO\EAD\src\components\download-modal\download-modal.html"*/'<ion-content padding class="background">\n\n  <div style="padding-top: 80px;">\n\n    <!-- <h2 *ngIf="version == \'01\'">Meus Downloads</h2> -->\n\n    <p *ngIf="_attachments.length == 0 && idiom ==\'01\'" style="color: white;">Você ainda não baixou conteúdo offline. Acesse o sistema e baixe seu conteúdo.</p>\n\n    <p *ngIf="_attachments.length == 0 && idiom ==\'02\'" style="color: white;">Aún no ha descargado contenido sin conexión. Accede al sistema y descarga su contenido.</p>\n\n    <ion-list>\n\n      <button ion-item no-padding *ngFor="let attachment of _attachments; trackBy: attachment?.id"\n\n        (click)="openContent(attachment)">\n\n        <ion-row>\n\n          <ion-col col-2 style="justify-content: center; display: flex; align-items: center;">\n\n            <ion-icon name="clipboard" *ngIf="!attachment.isVideo"></ion-icon>\n\n            <ion-icon name="play" *ngIf="attachment.isVideo"></ion-icon>\n\n          </ion-col>\n\n          <ion-col col-10><span class=titleContent>{{attachment.name}}</span></ion-col>\n\n        </ion-row>\n\n      </button>\n\n    </ion-list>\n\n\n\n    <div>\n\n      <button [ngClass]="project == \'edicom\' ? \'button-edicom\' : project == \'know-house\' ? \'button-know-house\' : \'button-default\'" *ngIf="idiom ==\'01\'" ion-button (click)="close()">Voltar</button>\n\n      <button [ngClass]="project == \'edicom\' ? \'button-edicom\' : project == \'know-house\' ? \'button-know-house\' : \'button-default\'" *ngIf="idiom ==\'02\'" ion-button (click)="close()">Volver</button>\n\n    </div>\n\n  </div>\n\n</ion-content>\n\n\n\n\n\n'/*ion-inline-end:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\INTEGRADO\PROJETO\EAD\src\components\download-modal\download-modal.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0_ionic_angular__["j" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["k" /* NavParams */],
@@ -1009,7 +1009,7 @@ var DownloadModal = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 498:
+/***/ 497:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

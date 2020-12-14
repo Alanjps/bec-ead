@@ -31,21 +31,21 @@
   <ion-list>
 
       <ion-item *ngIf="version == '01'" class="fieldElement">
-        <ion-label [ngClass]="project == 'know-house' ? 'label--know-house' : 'label--default'" floating>CPF/CNPJ</ion-label>
+        <ion-label [ngClass]="project == 'know-house' ? 'label--know-house' : project == 'r2m' ? 'label--default-black' : 'label--default-white'" floating>CPF/CNPJ</ion-label>
         <ion-input [ngClass]="project == 'know-house' ? 'label--know-house' : 'label--default'" type="text" autocomplete="off" [brmasker]="{person: true}" [(ngModel)]="credential.documento"></ion-input>
       </ion-item>
 
       <ion-item *ngIf="version == '02'"  class="fieldElement">
-        <ion-label [ngClass]="project == 'know-house' ? 'label--know-house' : 'label--default'" floating>E-MAIL</ion-label>
-        <ion-input [ngClass]="project == 'know-house' ? 'label--know-house' : 'label--default'" type="text" autocomplete="off" [(ngModel)]="credential.documento"></ion-input>
+        <ion-label [ngClass]="project == 'know-house' ? 'label--know-house' : project == 'r2m' ? 'label--default-black' : 'label--default-white'" floating>E-MAIL</ion-label>
+        <ion-input [ngClass]="project == 'know-house' ? 'label--know-house' : project == 'r2m' ? 'label--default-black' : 'label--default-white'" type="text" autocomplete="off" [(ngModel)]="credential.documento"></ion-input>
       </ion-item>
 
       <ion-item *ngIf="hide"  class="fieldElement">
-        <ion-label [ngClass]="project == 'know-house' ? 'label--know-house' : 'label--default'" floating>
+        <ion-label [ngClass]="project == 'know-house' ? 'label--know-house' : project == 'r2m' ? 'label--default-black' : 'label--default-white'" floating>
           <p *ngIf="idiom == '01'">SENHA</p>
           <p *ngIf="idiom == '02'">CONTRASEÑA</p> 
         </ion-label>
-        <ion-input [ngClass]="project == 'know-house' ? 'label--know-house' : 'label--default'" type="password" [(ngModel)]="credential.password"></ion-input>
+        <ion-input [ngClass]="project == 'know-house' ? 'label--know-house' : project == 'r2m' ? 'label--default-black' : 'label--default-white'" type="password" [(ngModel)]="credential.password"></ion-input>
       </ion-item>
 
     </ion-list>

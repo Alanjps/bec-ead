@@ -5,7 +5,7 @@ import { MenuSupModule } from '../../components/menu-sup/menu-sup.module'
 
 @NgModule({
   declarations: [
-    ChatPage,
+    ChatPage
   ],
   imports: [
     IonicPageModule.forChild(ChatPage),
