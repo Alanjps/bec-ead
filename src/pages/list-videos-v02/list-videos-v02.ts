@@ -434,6 +434,16 @@ export class ListVideosV02Page {
                   });
                 }) */
                 this.videos = data;
+                this.videos = this.videos.sort((a,b) => {
+                  if (a.titulo > b.titulo) {
+                    return 1;
+                  }
+                  if (a.titulo < b.titulo) {
+                    return -1;
+                  }
+                  // a must be equal to b
+                  return 0;
+                })
                 this.storage.set('AvailableDefaultProjects',data);
                 this.checkFinishedProjects();
               });

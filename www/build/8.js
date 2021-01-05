@@ -453,7 +453,7 @@ var PhotoPage = /** @class */ (function () {
             _this.storage.get('clienteId').then(function (clienteId) {
                 _this.http.getAll('/api/projeto/images', null).subscribe(function (data) {
                     _this.pics = data.length ? data.map(function (p) {
-                        return __assign({}, p, { created_at: _this.idiom == '02' ? __WEBPACK_IMPORTED_MODULE_7_moment___default()(p.created_at).locale('es').format('lll') : __WEBPACK_IMPORTED_MODULE_7_moment___default()(p.created_at).locale('pt-br').format('lll'), user: __assign({}, p.user, { thumb: p.user.thumb != null ? p.user.thumb : _this.iconUserProfile }), category: _this.categories ?
+                        return __assign({}, p, { created_at: _this.idiom == '02' ? __WEBPACK_IMPORTED_MODULE_7_moment___default()(p.created_at).locale('es').format('lll') : __WEBPACK_IMPORTED_MODULE_7_moment___default()(p.created_at).locale('pt-br').format('lll'), user: __assign({}, p.user, { thumb: p.user && p.user.thumb != null ? p.user.thumb : _this.iconUserProfile }), category: _this.categories ?
                                 _this.categories.filter(function (c) { return c.id == p.image_category_id; })[0]
                                 : null, uploaded_time: _this.idiom == '02' ? p.uploaded_time.replace('há', 'hace') : p.uploaded_time, liked: p.likes.length > 0 ?
                                 p.likes.filter(function (f) {

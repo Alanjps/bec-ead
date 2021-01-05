@@ -391,8 +391,7 @@ export class ListVideosPage {
 
             this.http.getAll('/api/projects-ids', { company_id: companyId, user_id: clienteId, type: "DEFAULT" })
             .subscribe(async (ids:any) => {
-              ids.map( async(id) => {
-              
+              ids.map( async(id) => {           
                 let loading = this.loadingCtrl.create({
                   content: 'Espere...'
                 });
@@ -400,7 +399,6 @@ export class ListVideosPage {
                 await new Promise((resolve, reject)=>{
                   this.http.getAll('/api/conteudos', { company_id: companyId, user_id: clienteId, type: "DEFAULT", project_id: id})
                   .subscribe((data:any) => {
-                    
                     data.forEach((element, index) => {
                         data[index].showAulas = false;
                         element.lessons.forEach(l => {
@@ -434,6 +432,17 @@ export class ListVideosPage {
                     resolve();
                   });
                 });
+                this.videos = this.videos.sort((a,b) => {
+                  if (a.titulo > b.titulo) {
+                    return 1;
+                  }
+                  if (a.titulo < b.titulo) {
+                    return -1;
+                  }
+                  // a must be equal to b
+                  return 0;
+                })
+
                 this.storage.set('AvailableDefaultProjects',this.videos)
                 loading.dismiss();
                 this.checkFinishedProjects();

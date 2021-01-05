@@ -180,7 +180,7 @@ export class PhotoPage {
             return{
               ...p,
               created_at: this.idiom == '02' ? moment(p.created_at).locale('es').format('lll') : moment(p.created_at).locale('pt-br').format('lll'),
-              user: {...p.user, thumb: p.user.thumb != null? p.user.thumb : this.iconUserProfile },
+              user: {...p.user, thumb: p.user && p.user.thumb != null? p.user.thumb : this.iconUserProfile },
               category: this.categories ? 
                 this.categories.filter((c) => c.id == p.image_category_id)[0] 
               : null,

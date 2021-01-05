@@ -267,15 +267,15 @@ var map = {
 		11
 	],
 	"../pages/list-videos-v03/list-videos-v03.module": [
-		474,
+		472,
 		10
 	],
 	"../pages/list-videos-v04/list-videos-v04.module": [
-		472,
+		473,
 		7
 	],
 	"../pages/list-videos/list-videos.module": [
-		473,
+		474,
 		6
 	],
 	"../pages/login/login.module": [
@@ -812,8 +812,8 @@ var AppModule = /** @class */ (function () {
                 }, {
                     links: [
                         { loadChildren: '../components/download-modal/download-modal.module#DownloadModalModule', name: 'download-modal', segment: 'download-modal', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../components/list-videos-modal/list-videos-modal.module#ListVideosModalModule', name: 'list-videos-modal', segment: 'list-videos-modal', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../components/file-modal/file-modal.module#FileModalModule', name: 'file-modal', segment: 'file-modal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../components/list-videos-modal/list-videos-modal.module#ListVideosModalModule', name: 'list-videos-modal', segment: 'list-videos-modal', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../components/photo-modal/photo-modal.module#PhotoModalModule', name: 'photo-modal', segment: 'photo-modal', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../components/quiz/quiz.module#QuizModule', name: 'quiz', segment: 'quiz', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../components/user-form/user-form.module#UserFormModule', name: 'user-form-modal', segment: 'user-form', priority: 'low', defaultHistory: [] },
@@ -827,9 +827,9 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'login-page', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/chat/chat.module#ChatPageModule', name: 'chat-page', segment: 'chat', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/list-videos-v02/list-videos-v02.module#ListVideosV02PageModule', name: 'list-videos-v02-page', segment: 'list-videos-v02', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/list-videos-v03/list-videos-v03.module#ListVideosV03PageModule', name: 'list-videos-v03-page', segment: 'list-videos-v03', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/list-videos-v04/list-videos-v04.module#ListVideosPageV04Module', name: 'list-videos-page-v04', segment: 'list-videos-v04', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/list-videos/list-videos.module#ListVideosPageModule', name: 'list-videos-page', segment: 'list-videos', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/list-videos-v03/list-videos-v03.module#ListVideosV03PageModule', name: 'list-videos-v03-page', segment: 'list-videos-v03', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/photo/photo.module#PhotoPageModule', name: 'photo-page', segment: 'photo', priority: 'low', defaultHistory: [] }
                     ]
                 }),
@@ -1152,10 +1152,25 @@ webpackContext.id = 411;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
 var environment = {
-    //KNOW-HOUSE -----------------------------------
-    PUSHER_APP_ID: "1059211",
-    PUSHER_APP_KEY: "25af961ea9f2ef86b9aa",
-    PUSHER_APP_SECRET: "c6060d1a53114a8365da",
+    /*   //KNOW-HOUSE -----------------------------------
+      PUSHER_APP_ID: "1059211",
+      PUSHER_APP_KEY: "25af961ea9f2ef86b9aa",
+      PUSHER_APP_SECRET: "c6060d1a53114a8365da",
+      PUSHER_APP_CLUSTER: "us2", */
+    /*   //EDICOM -----------------------------------
+      PUSHER_APP_ID: "1016195",
+        PUSHER_APP_KEY: "e9b4a92206140e9879bb",
+        PUSHER_APP_SECRET: "92444667633283b9fb77",
+      PUSHER_APP_CLUSTER: "us2", */
+    /*   //R2M -----------------------------------
+      PUSHER_APP_ID: "1114376",
+        PUSHER_APP_KEY: "fcc53e52875706a30801",
+        PUSHER_APP_SECRET: "742c5c14207ece897af8",
+      PUSHER_APP_CLUSTER: "us2", */
+    //SIMPLE TRAINING ------------------------
+    PUSHER_APP_ID: "1124925",
+    PUSHER_APP_KEY: "ae4e465cb80d72743dc8",
+    PUSHER_APP_SECRET: "580c135664656f851c52",
     PUSHER_APP_CLUSTER: "us2",
 };
 //# sourceMappingURL=environment.js.map
