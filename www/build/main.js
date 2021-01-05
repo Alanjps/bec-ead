@@ -243,11 +243,11 @@ var map = {
 		16
 	],
 	"../components/quiz/quiz.module": [
-		460,
+		461,
 		15
 	],
 	"../components/user-form/user-form.module": [
-		461,
+		460,
 		5
 	],
 	"../pages/chat/chat.module": [
@@ -295,15 +295,15 @@ var map = {
 		8
 	],
 	"../pages/recovery-password/recovery-password.module": [
-		464,
+		465,
 		2
 	],
 	"../pages/register/register.module": [
-		465,
+		466,
 		3
 	],
 	"../pages/tabs/tabs.module": [
-		466,
+		464,
 		14
 	]
 };
@@ -812,16 +812,16 @@ var AppModule = /** @class */ (function () {
                 }, {
                     links: [
                         { loadChildren: '../components/download-modal/download-modal.module#DownloadModalModule', name: 'download-modal', segment: 'download-modal', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../components/file-modal/file-modal.module#FileModalModule', name: 'file-modal', segment: 'file-modal', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../components/list-videos-modal/list-videos-modal.module#ListVideosModalModule', name: 'list-videos-modal', segment: 'list-videos-modal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../components/file-modal/file-modal.module#FileModalModule', name: 'file-modal', segment: 'file-modal', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../components/photo-modal/photo-modal.module#PhotoModalModule', name: 'photo-modal', segment: 'photo-modal', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../components/quiz/quiz.module#QuizModule', name: 'quiz', segment: 'quiz', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../components/user-form/user-form.module#UserFormModule', name: 'user-form-modal', segment: 'user-form', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../components/quiz/quiz.module#QuizModule', name: 'quiz', segment: 'quiz', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/my-downloads/my-downloads.module#MyDownloadsPageModule', name: 'my-downloads', segment: 'my-downloads', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/notification/notification.module#NotificationPageModule', name: 'notification-page', segment: 'notification', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'tab-page', segment: 'tabs', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/recovery-password/recovery-password.module#RecoveryPasswordPageModule', name: 'recovey-password-page', segment: 'recovery-password', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'register-page', segment: 'register', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'tab-page', segment: 'tabs', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/edit-user-v02/edit-user-v02.module#EditUserV02PageModule', name: 'edit-user-v02-page', segment: 'edit-user-v02', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/edit-user/edit-user.module#EditUserPageModule', name: 'edit-user-page', segment: 'edit-user', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'login-page', segment: 'login', priority: 'low', defaultHistory: [] },
@@ -1272,7 +1272,7 @@ var MyApp = /** @class */ (function () {
             //5 -> know-house
             //6 -> simples-trade
             //7 -> r2m
-            _this.projectNumber = 5;
+            _this.projectNumber = 2;
             switch (_this.projectNumber) {
                 case 0:
                     _this.onesignalAppId = '946eb156-716e-4000-853f-18f41cc2b193';
