@@ -52,6 +52,7 @@ export class MyApp {
         //5 -> know-house
         //6 -> simples-trade
         //7 -> r2m
+        //8 -> ava
         this.projectNumber = 2;
 
         switch(this.projectNumber){
@@ -101,6 +102,12 @@ export class MyApp {
             this.onesignalAppId='a7bbe9ca-2e79-4f10-8f68-365da3e09fd5';
             this.firebaseSenderId='613045008970';
             this.projectName = 'r2m';
+            storage.set('Idiom','01'); //português
+            break;
+          case 8:
+            this.onesignalAppId='6b8f443d-da09-4ccc-b629-f1e21476c6b2';
+            this.firebaseSenderId='575583616149';
+            this.projectName = 'ava';
             storage.set('Idiom','01'); //português
             break;
         }
@@ -168,6 +175,10 @@ export class MyApp {
             }
             case 'r2m': {
               url = 'https://readytomarket.becinteligencia.com';
+              break;
+            }
+            case 'ava': {
+              url = 'https://ava.insighttech.com.br';
               break;
             }
           }

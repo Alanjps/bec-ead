@@ -101,7 +101,8 @@ $colors: (
   $url-mrkhouse: "https://homolog.marketinghouse.com.br//storage//uploads//configs//";
   $url-descubre: "https://descubre.hkt369.com///storage//uploads//configs//";
   $url-simples-trade: "https://simplestrade.becinteligencia.com//storage//uploads//configs//";
-  $url-r2m: "https://readytomarket.becinteligencia.com///storage//uploads//configs//";
+  $url-r2m: "https://readytomarket.becinteligencia.com//storage//uploads//configs//";
+  $url-ava: "https://ava.insighttech.com.br//storage//uploads//configs//";
 
   ion-icon {
     //-------------------------------------------------------
@@ -467,6 +468,61 @@ $colors: (
         filter: none;
       }
     }
+
+    //-------------------------------------------------------
+    //AVA INSIGHTTECH -------------------------------------------------------
+    //-------------------------------------------------------
+
+    &[class*="tab-ava-"]{
+      width: 30px;
+      height: 30px;
+    }
+
+    &[class*="tab-ava-perfil"]{
+      content: url($url-ava+"internoApp1.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-ava-notificacao"]{
+      content: url($url-ava+"internoApp2.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-ava-agenda"]{
+      content: url($url-ava+"internoApp3.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-ava-foto"]{
+      content: url($url-ava+"internoApp4.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-ava-news"]{
+      content: url($url-ava+"internoApp5.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }    
   }
 }
 

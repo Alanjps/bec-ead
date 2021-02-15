@@ -49,7 +49,8 @@ menu-sup {
         $url-descubre: "https://descubre.hkt369.com//storage//uploads//configs//";
         $url-simples-trade: "https://simplestrade.becinteligencia.com//storage//uploads//configs//";
         $url-r2m: "https://readytomarket.becinteligencia.com//storage//uploads//configs//";
-        
+        $url-ava: "https://ava.insighttech.com.br//storage//uploads//configs//";
+
         &[class*="edicom-"] {
             width: 30px;
             height: 30px; 
@@ -150,6 +151,21 @@ menu-sup {
             }      
             &[class*="chat-active"] {
                 background: url($url-r2m+"iconeHeader.png") no-repeat 100% 100%;
+                background-size: contain;
+                filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+            }
+        }
+
+        &[class*="ava-"] {
+            width: 30px;
+            height: 30px; 
+            &[class*="chat"] {
+                background: url($url-ava+"iconeHeader.png") no-repeat 100% 100%;
+                background-size: contain;
+                filter: none;
+            }      
+            &[class*="chat-active"] {
+                background: url($url-ava+"iconeHeader.png") no-repeat 100% 100%;
                 background-size: contain;
                 filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
             }

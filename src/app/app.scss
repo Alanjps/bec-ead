@@ -228,6 +228,15 @@ div.action-sheet-sub-title {
             background-position: center;
         }
     }
+    &[class*="ava-"] {
+        $urlBG: "https://ava.insighttech.com.br//storage//uploads//configs/";
+        &[class*="custom-bg"] {
+            background: url($urlBG + "papelParede.png") no-repeat 100% 100%;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
 }
 
 ion-textarea{

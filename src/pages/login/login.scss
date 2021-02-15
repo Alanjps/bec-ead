@@ -55,6 +55,11 @@ page-login {
         background-repeat: no-repeat;
         background-position: center;
     }
+    &.background-ava{
+        background: #000 url("https://ava.insighttech.com.br/storage/uploads/configs/loginMobile.png");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
     #logo-header{
         max-width: 90%;
         border: 0;

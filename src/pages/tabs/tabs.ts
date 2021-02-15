@@ -155,6 +155,12 @@ export class TabsPage {
           firebaseSenderId = '613045008970';  
           break;
         }
+        case 'ava':{
+          onesignalAppId='6b8f443d-da09-4ccc-b629-f1e21476c6b2';
+          firebaseKey='AAAAhgN0_JU:APA91bEMiPSZM22P9MkPreN0zjwXbuz23N2wuSKifKN2or8Vt-YCzkYiGxC1p1SJA6OSCiTOaj3DKSLfgw_UcTU1J8ZSxqYzxcUAApNz3UjzTtrYSSNAhybm3NBzLOTSOBlqs4ks1Niz';
+          firebaseSenderId = '575583616149';  
+          break;
+        }
       }
       /*
         ANTIGO---------------------------------------------       

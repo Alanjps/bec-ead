@@ -37,6 +37,10 @@
     {
       "path": "/lch",
       "proxyUrl": "http://ead.localhost"
+    },
+    {
+      "path": "/ava",
+      "proxyUrl": "https://ava.insighttech.com.br"
     }
   ]
 }

@@ -145,7 +145,6 @@ export class ChatPage {
       channel.bind('App\\Events\\MessageSent', (data) => {
         if (data && data.message && data.message.remetente_id == this.selectedUserId){
           if (this.perfilType == 3 && data.message.notification == false){
-
             let newMessageReceived = {
               remetente:{
                 id: data.message.remetente_id
@@ -285,6 +284,7 @@ export class ChatPage {
               destacar: this.pendentChat && this.pendentChat.filter((p)=>recent.id == p.remetente_id).length > 0 ? true : false
             }
           });
+
           this.doInfinite();
           loading.dismiss();
         })

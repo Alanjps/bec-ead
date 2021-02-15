@@ -73,6 +73,13 @@ private url:string= '/vcc';
           }
           break;
         }
+        case 'ava': {
+          this.url = '/ava';
+          if(this._platform.is("cordova")){
+            this.url = "https://ava.insighttech.com.br/";
+          }
+          break;
+        }
         default:{
           this.url = '/vcc';
           if(this._platform.is("cordova")){

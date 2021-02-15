@@ -23,7 +23,8 @@ project == 'ead' ? 'content vcc-custom-bg' :
     project == 'hkt369' ? 'content hkt369-custom-bg' : 
       project == 'know-house' ? 'content knowh-custom-bg' :
         project == 'simples-trade' ? 'content strade-custom-bg' : 
-          project == 'r2m' ? 'content r2m-custom-bg' :''">
+          project == 'r2m' ? 'content r2m-custom-bg' :
+            project == 'ava' ? 'content ava-custom-bg' : ''">
   
   <ion-searchbar [ngClass]="project == 'know-house' ?  'font-style know-house' : ''" [(ngModel)]="terms" [showCancelButton]="shouldShowCancel" placeholder="O que está buscando?">
   </ion-searchbar>
