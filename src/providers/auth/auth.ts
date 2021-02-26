@@ -187,8 +187,6 @@ private url:string= '/vcc';
       .map(res => res.json())
       .toPromise()
       .then(data => {
-          console.log("\n03 -> ",data.company_id);
-
           data.nascimento = data.nascimento ? moment(data.nascimento.date).format('DD/MM/YYYY') : '';
           if(data.id > 0){
             this.storage.set('clienteId', data.id);

@@ -7,11 +7,7 @@ export var environment = {
 */
   
 //EDICOM -----------------------------------
-/*   PUSHER_APP_ID: "1016195",
-	PUSHER_APP_KEY: "e9b4a92206140e9879bb",
-	PUSHER_APP_SECRET: "92444667633283b9fb77",
-  PUSHER_APP_CLUSTER: "us2", */
-  
+ 
   PUSHER_APP_ID: "1156523",
 	PUSHER_APP_KEY: "7b8b5ea20f7a185be995",
 	PUSHER_APP_SECRET: "789567e75724f82b17dc",

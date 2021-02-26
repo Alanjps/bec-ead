@@ -139,12 +139,12 @@ export class ChatPage {
     }, 700);
   }
 
-  ionViewDidLoad(){
+  loadPusher(){
     this.storage.get('clienteId').then((valor) => {
       const channel = this.pusher.init();
       channel.bind('App\\Events\\MessageSent', (data) => {
         if (data && data.message && data.message.remetente_id == this.selectedUserId){
-          if (this.perfilType == 3 && data.message.notification == false){
+          if (/* this.perfilType == 3 && */ data.message.notification == false){
             let newMessageReceived = {
               remetente:{
                 id: data.message.remetente_id
@@ -229,6 +229,8 @@ export class ChatPage {
     this.storage.get('LayoutVersion').then((value) => {
       this.version = value;
     });
+
+    this.loadPusher();
 
   }
 
@@ -452,7 +454,7 @@ export class ChatPage {
         })
       },3000);
     },3000); */
-    this.ionViewDidLoad();
+    //this.loadPusher();
   }
 
 
