@@ -151,6 +151,7 @@ export class NotificationPage {
       
       this.http.getAll('/mensagens/getNotifications', { user_id: id, lido: false }, 'get')
         .subscribe(async (lido: any) => {
+          console.log("\nNOTIFICATIONS -> ",lido);
           
           let total = lido.length;
           this.totalNewNotification = total;
