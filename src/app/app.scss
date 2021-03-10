@@ -285,6 +285,15 @@ ion-item {
             }
         }
     }
+    &[class*="black"] {
+        font-family: "Radikal";
+        &[class*="-title"] {
+            text-transform: uppercase;
+            &[class*="-color"] {
+                color: #000;
+            }
+        }
+    }
 }
 
 

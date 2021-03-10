@@ -9,7 +9,7 @@
   src="{{ globalUrl + '/storage/uploads/configs/testeira2.png' }}" >
 
   <div *ngIf="version == '01' || version == '02'">
-    <p [ngClass]="project == 'know-house' ?  'font-style know-house-title-color' : ''">{{titleTesteira}}  {{complementTitle? '| ' + complementTitle : ''}}</p>
+    <p [ngClass]="project == 'know-house' ?  'font-style know-house-title-color' : project == 'ava' ?  'font-style black-title-color' : ''">{{titleTesteira}}  {{complementTitle? '| ' + complementTitle : ''}}</p>
   </div>
   <menu-sup [active]="true" ></menu-sup>
 </ion-header>

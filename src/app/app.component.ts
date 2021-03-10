@@ -53,7 +53,7 @@ export class MyApp {
         //6 -> simples-trade
         //7 -> r2m
         //8 -> ava
-        this.projectNumber = 1;
+        this.projectNumber = 8;
 
         switch(this.projectNumber){
           case 0:
