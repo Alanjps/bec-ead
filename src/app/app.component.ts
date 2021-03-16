@@ -45,7 +45,7 @@ export class MyApp {
         //storage.set('Idiom','02'); //espanhol
 
         //0 -> localhost
-        //1 -> ead
+        //1 -> ead (vcc)
         //2 -> edicom
         //3 -> marketing-house
         //4 -> hkt369
@@ -53,7 +53,7 @@ export class MyApp {
         //6 -> simples-trade
         //7 -> r2m
         //8 -> ava
-        this.projectNumber = 8;
+        this.projectNumber = 1;
 
         switch(this.projectNumber){
           case 0:

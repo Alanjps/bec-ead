@@ -130,6 +130,31 @@ export class PhotoPage {
     });
   }
 
+  ionViewDidEnter() {
+    this.storage.get("AppConfig").then((config) => {
+      if (config.internoApp4 && config.internoApp4['text']){
+        this.titleTesteira = config.internoApp4['text'];
+      }else{
+        this.titleTesteira = this.idiom == '01' ? 'Fotos' : 'Fotos';
+      }
+      
+    })
+    this.complementTitle = '';
+
+    this.storage.get('LayoutVersion').then((value) => {
+      this.version = value;
+    }); 
+    
+    this.items = [];
+    this.cont = 0;
+
+    setTimeout(()=>{
+      this.getPics();
+    },2000)
+
+  }
+
+
   getProject(){
     let loading = this.loadingCtrl.create({
       content: 'Espere...'
@@ -175,7 +200,7 @@ export class PhotoPage {
     loading.present();
     this.storage.get('clienteCompanyId').then((companyId) => {
       this.storage.get('clienteId').then((clienteId) => {
-        this.http.getAll('/api/projeto/images', null).subscribe((data:any) => {         
+        this.http.getAll('/api/projeto/images', {project_id: this.imageProject.id}).subscribe((data:any) => {
           this.pics = data.length ? data.map((p) => {
             return{
               ...p,
@@ -400,27 +425,6 @@ export class PhotoPage {
 
     let blob = new Blob(byteArrays, {type: contentType});
     return blob;
-  }
-  
-  ionViewDidEnter() {
-    this.storage.get("AppConfig").then((config) => {
-      if (config.internoApp4 && config.internoApp4['text']){
-        this.titleTesteira = config.internoApp4['text'];
-      }else{
-        this.titleTesteira = this.idiom == '01' ? 'Fotos' : 'Fotos';
-      }
-      
-    })
-    this.complementTitle = '';
-
-    this.storage.get('LayoutVersion').then((value) => {
-      this.version = value;
-    }); 
-    
-    this.items = [];
-    this.cont = 0;
-    this.getPics();
-
   }
 
   getDetails(){
