@@ -32,25 +32,25 @@
   <ion-list>
 
       <ion-item *ngIf="version == '01'" class="fieldElement">
-        <ion-label [ngClass]="project == 'know-house' ? 'label--know-house' : project == 'r2m' ? 'label--default-black' : project == 'ava' ? 'label--default-black'  : 'label--default-white'" floating>CPF/CNPJ</ion-label>
+        <ion-label [ngClass]="project == 'know-house' ? 'label--know-house' : project == 'r2m' ? 'label--default-black' : project == 'ava' ? 'label--default-black' : project == 'ead' ? 'label--default-black' : 'label--default-white'" floating>CPF/CNPJ</ion-label>
         <ion-input [ngClass]="project == 'know-house' ? 'label--know-house' : 'label--default'" type="text" autocomplete="off" [brmasker]="{person: true}" [(ngModel)]="credential.documento"></ion-input>
       </ion-item>
 
       <ion-item *ngIf="version == '02'"  class="fieldElement">
-        <ion-label [ngClass]="project == 'know-house' ? 'label--know-house' : project == 'r2m' ? 'label--default-black' : project == 'ava' ? 'label--default-black' : 'label--default-white'" floating>E-MAIL</ion-label>
-        <ion-input [ngClass]="project == 'know-house' ? 'label--know-house' : project == 'r2m' ? 'label--default-black' : project == 'ava' ? 'label--default-black' : 'label--default-white'" type="text" autocomplete="off" [(ngModel)]="credential.documento"></ion-input>
+        <ion-label [ngClass]="project == 'know-house' ? 'label--know-house' : project == 'r2m' ? 'label--default-black' : project == 'ava' ? 'label--default-black' : project == 'ead' ? 'label--default-black' : 'label--default-white'" floating>E-MAIL</ion-label>
+        <ion-input [ngClass]="project == 'know-house' ? 'label--know-house' : project == 'r2m' ? 'label--default-black' : project == 'ava' ? 'label--default-black' : project == 'ead' ? 'label--default-black' : 'label--default-white'" type="text" autocomplete="off" [(ngModel)]="credential.documento"></ion-input>
       </ion-item>
 
       <ion-item *ngIf="hide"  class="fieldElement">
-        <ion-label [ngClass]="project == 'know-house' ? 'label--know-house' : project == 'r2m' ? 'label--default-black' : project == 'ava' ? 'label--default-black' : 'label--default-white'" floating>
+        <ion-label [ngClass]="project == 'know-house' ? 'label--know-house' : project == 'r2m' ? 'label--default-black' : project == 'ava' ? 'label--default-black' : project == 'ead' ? 'label--default-black' : 'label--default-white'" floating>
           <p *ngIf="idiom == '01'">SENHA</p>
           <p *ngIf="idiom == '02'">CONTRASEÑA</p> 
         </ion-label>
-        <ion-input [ngClass]="project == 'know-house' ? 'label--know-house' : project == 'r2m' ? 'label--default-black' : project == 'ava' ? 'label--default-black' : 'label--default-white' " type="password" [(ngModel)]="credential.password"></ion-input>
+        <ion-input [ngClass]="project == 'know-house' ? 'label--know-house' : project == 'r2m' ? 'label--default-black' : project == 'ava' ? 'label--default-black' : project == 'ead' ? 'label--default-black' : 'label--default-white' " type="password" [(ngModel)]="credential.password"></ion-input>
       </ion-item>
 
     </ion-list>
-    <a *ngIf="hide" (click)="recoveryPassword()" [ngClass]="project == 'know-house' ? 'label--know-house recovery-link--know-house' : project == 'ava' ? 'label--know-house recovery-link--know-house' : 'label--default recovery-link--default'">
+    <a *ngIf="hide" (click)="recoveryPassword()" [ngClass]="project == 'know-house' ? 'label--know-house recovery-link--know-house' : project == 'ava' ? 'label--know-house recovery-link--know-house' : project == 'ead' ? 'label--know-house recovery-link--know-house' : 'label--default recovery-link--default'">
       <div style="margin-top: 20px; margin-bottom: 20px;" *ngIf="idiom == '01'">Esqueci minha senha</div>
       <div style="margin-top: 20px; margin-bottom: 20px;" *ngIf="idiom == '02'">He olvidado mi contraseña</div>
     </a>
@@ -61,21 +61,20 @@
     <ion-toggle [(ngModel)]="credential.lembrar"></ion-toggle>
   </ion-item>
 </ion-list>-->
-    <button [ngStyle]="{'background-color': project == 'edicom'? 'orange' : 'primary'}"  ion-button full icon-start [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'buttonMedium buttonLogin'" (click)="login()">
+    <button [ngStyle]="{'background-color': project == 'edicom'? 'orange' : 'primary'}"  ion-button full icon-start (click)="login()">
         <!--<ion-icon name="key"></ion-icon>-->
         <div *ngIf="idiom == '01'">Entrar</div>
         <div *ngIf="idiom == '02'">Iniciar sesión</div>
     </button>
 
 
-    <button *ngIf="project != 'edicom'" ion-button full icon-start [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'buttonMedium buttonLogin'" (click)="openPage('downloads')">
+    <button [ngStyle]="{'background-color': project == 'edicom'? 'orange' : 'primary'}" *ngIf="project != 'edicom'" ion-button full icon-start (click)="openPage('downloads')">
       <div *ngIf="idiom == '01'">Meus Downloads</div>
       <div *ngIf="idiom == '02'">Mis Archivos</div>
     </button>
 
 
-    <div class="version">v. 1.0.0</div>
-
+    <div><p [ngClass]="project == 'ead'? 'version--black' : 'version'">v. 1.0.0</p></div>
 
     <!--<a (click)="firstAccess()" class="recovery-link">É seu primeiro acesso? Clique aqui</a>
 

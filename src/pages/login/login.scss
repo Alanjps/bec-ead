@@ -146,6 +146,14 @@ page-login {
         float:right;
         margin-top:20px;
         margin-right:3px;
+        &--black{
+            color:#000 !important;
+            font-size: 13px;
+            font-style:italic;
+            float:right;
+            margin-top:20px;
+            margin-right:3px;
+        }
     }
 
     .background{
