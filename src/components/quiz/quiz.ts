@@ -4,6 +4,7 @@ import { FormBuilder } from '@angular/forms';
 import { AuthProvider } from '../../providers/auth/auth';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { Storage } from '@ionic/storage';
+import { environment as ENV } from '../../environments/environment';
 
 @IonicPage({
   name: 'quiz'
@@ -15,6 +16,7 @@ import { Storage } from '@ionic/storage';
 })
 export class QuizComponent {
 
+  public ENV = ENV;
   public galleryFile: boolean;
   public indexFile:any;
   public formulario: any = [];

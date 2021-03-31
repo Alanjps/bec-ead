@@ -9,6 +9,7 @@ import { FileTransfer, FileTransferError, FileTransferObject } from '@ionic-nati
 import { File, FileEntry } from '@ionic-native/file';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { FileOpener } from '@ionic-native/file-opener';
+import { environment as ENV } from '../../environments/environment';
 
 @IonicPage({
   name: 'list-videos-v02-page'
@@ -18,7 +19,8 @@ import { FileOpener } from '@ionic-native/file-opener';
   templateUrl: 'list-videos-v02.html',
 })
 export class ListVideosV02Page {
-
+  
+  public ENV = ENV;
   public videos: Array<any>;
   @ViewChild(Slides) slides: Slides;
   @ViewChild('videoPlayer') mVideoPlayer: any;

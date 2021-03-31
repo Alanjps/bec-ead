@@ -41,6 +41,10 @@
     {
       "path": "/ava",
       "proxyUrl": "https://ava.insighttech.com.br"
+    },
+    {
+      "path": "/tmc",
+      "proxyUrl": "https://tmc.becinteligencia.com"
     }
   ]
 }

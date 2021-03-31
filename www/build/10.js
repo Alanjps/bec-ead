@@ -1,16 +1,16 @@
 webpackJsonp([10],{
 
-/***/ 472:
+/***/ 471:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListVideosV03PageModule", function() { return ListVideosV03PageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListVideosV02PageModule", function() { return ListVideosV02PageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__list_videos_v03__ = __webpack_require__(501);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_menu_sup_menu_sup_module__ = __webpack_require__(478);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_expandable_expandable_module__ = __webpack_require__(483);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__list_videos_v02__ = __webpack_require__(500);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_menu_sup_menu_sup_module__ = __webpack_require__(475);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_expandable_expandable_module__ = __webpack_require__(482);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -22,35 +22,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ListVideosV03PageModule = /** @class */ (function () {
-    function ListVideosV03PageModule() {
+var ListVideosV02PageModule = /** @class */ (function () {
+    function ListVideosV02PageModule() {
     }
-    ListVideosV03PageModule = __decorate([
+    ListVideosV02PageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__list_videos_v03__["a" /* ListVideosV03Page */],
+                __WEBPACK_IMPORTED_MODULE_2__list_videos_v02__["a" /* ListVideosV02Page */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__list_videos_v03__["a" /* ListVideosV03Page */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__list_videos_v02__["a" /* ListVideosV02Page */]),
                 __WEBPACK_IMPORTED_MODULE_3__components_menu_sup_menu_sup_module__["a" /* MenuSupModule */],
                 __WEBPACK_IMPORTED_MODULE_4__components_expandable_expandable_module__["a" /* ExpandableModule */]
             ],
         })
-    ], ListVideosV03PageModule);
-    return ListVideosV03PageModule;
+    ], ListVideosV02PageModule);
+    return ListVideosV02PageModule;
 }());
 
-//# sourceMappingURL=list-videos-v03.module.js.map
+//# sourceMappingURL=list-videos-v02.module.js.map
 
 /***/ }),
 
-/***/ 478:
+/***/ 475:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuSupModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__menu_sup__ = __webpack_require__(479);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__menu_sup__ = __webpack_require__(476);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(46);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -78,7 +78,7 @@ var MenuSupModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 479:
+/***/ 476:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -86,8 +86,8 @@ var MenuSupModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__ = __webpack_require__(341);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_http_service_http_service__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__ = __webpack_require__(342);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_http_service_http_service__ = __webpack_require__(112);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -176,7 +176,7 @@ var MenuSupComponent = /** @class */ (function () {
     ], MenuSupComponent.prototype, "active", void 0);
     MenuSupComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'menu-sup',template:/*ion-inline-start:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\components\menu-sup\menu-sup.html"*/'<ion-badge *ngIf="pendentChat" color="danger" round [ngClass]="version == \'01\' ? \'top-badge badge-margin-v1\' : version == \'02\' ? \'top-badge badge-margin-v2\' : \'top-badge badge-margin-v1\'">!</ion-badge>\n\n<!-- <a *ngIf="version == \'01\' || version == \'02\' && active != true" (click)="redirectToChatPage()" [ngClass]="version == \'01\' ? \'menu-top menu-height-v1\' : version == \'02\' ? \'menu-top menu-height-v2\' : \'menu-top menu-height-v1\'"></a> -->\n\n<button *ngIf="(version == \'01\' || version == \'02\') && active != true" outline (click)="redirectToChatPage()" [ngClass]="version == \'01\' ? \'menu-top menu-height-v1\' : version == \'02\' ? \'menu-top menu-height-v2\' : \'menu-top menu-height-v1\'" ion-button icon-only>\n\n  <ion-icon *ngIf="project == \'ead\'" [ngClass]="active == true ? \'vcc-custom-chat-active\' : \'vcc-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'edicom\'" [ngClass]="active == true ? \'edicom-custom-chat-active\' : \'edicom-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'marketing-house\'" [ngClass]="active == true ? \'mrkhouse-custom-chat-active\' : \'mrkhouse-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'know-house\'" [ngClass]="active == true ? \'knowh-custom-chat-active\' : \'knowh-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'hkt369\'" [ngClass]="active == true ? \'hkt369-custom-chat-active\' : \'hkt369-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'simples-trade\'" [ngClass]="active == true ? \'strade-custom-chat-active\' : \'strade-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'r2m\'" [ngClass]="active == true ? \'r2m-custom-chat-active\' : \'r2m-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'ava\'" [ngClass]="active == true ? \'ava-custom-chat-active\' : \'ava-custom-chat\'"></ion-icon>\n\n</button>\n\n\n\n<button *ngIf="(version == \'01\' || version == \'02\')  && active == true" [disabled]="true" outline [ngClass]="version == \'01\' ? \'menu-top menu-height-v1\' : version == \'02\' ? \'menu-top menu-height-v2\' : \'menu-top menu-height-v1\'" ion-button icon-only>\n\n  <ion-icon *ngIf="project == \'ead\'" [ngClass]="active == true ? \'vcc-custom-chat-active\' : \'vcc-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'edicom\'" [ngClass]="active == true ? \'edicom-custom-chat-active\' : \'edicom-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'marketing-house\'" [ngClass]="active == true ? \'mrkhouse-custom-chat-active\' : \'mrkhouse-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'know-house\'" [ngClass]="active == true ? \'knowh-custom-chat-active\' : \'knowh-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'hkt369\'" [ngClass]="active == true ? \'hkt369-custom-chat-active\' : \'hkt369-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'simples-trade\'" [ngClass]="active == true ? \'strade-custom-chat-active\' : \'strade-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'r2m\'" [ngClass]="active == true ? \'r2m-custom-chat-active\' : \'r2m-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'ava\'" [ngClass]="active == true ? \'ava-custom-chat-active\' : \'ava-custom-chat\'"></ion-icon>\n\n</button>\n\n'/*ion-inline-end:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\components\menu-sup\menu-sup.html"*/
+            selector: 'menu-sup',template:/*ion-inline-start:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\components\menu-sup\menu-sup.html"*/'<ion-badge *ngIf="pendentChat" color="danger" round [ngClass]="version == \'01\' ? \'top-badge badge-margin-v1\' : version == \'02\' ? \'top-badge badge-margin-v2\' : \'top-badge badge-margin-v1\'">!</ion-badge>\n\n<!-- <a *ngIf="version == \'01\' || version == \'02\' && active != true" (click)="redirectToChatPage()" [ngClass]="version == \'01\' ? \'menu-top menu-height-v1\' : version == \'02\' ? \'menu-top menu-height-v2\' : \'menu-top menu-height-v1\'"></a> -->\n\n<button *ngIf="(version == \'01\' || version == \'02\') && active != true" outline (click)="redirectToChatPage()" [ngClass]="version == \'01\' ? \'menu-top menu-height-v1\' : version == \'02\' ? \'menu-top menu-height-v2\' : \'menu-top menu-height-v1\'" ion-button icon-only>\n\n  <ion-icon *ngIf="project == \'ead\'" [ngClass]="active == true ? \'vcc-custom-chat-active\' : \'vcc-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'edicom\'" [ngClass]="active == true ? \'edicom-custom-chat-active\' : \'edicom-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'marketing-house\'" [ngClass]="active == true ? \'mrkhouse-custom-chat-active\' : \'mrkhouse-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'know-house\'" [ngClass]="active == true ? \'knowh-custom-chat-active\' : \'knowh-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'hkt369\'" [ngClass]="active == true ? \'hkt369-custom-chat-active\' : \'hkt369-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'simples-trade\'" [ngClass]="active == true ? \'strade-custom-chat-active\' : \'strade-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'r2m\'" [ngClass]="active == true ? \'r2m-custom-chat-active\' : \'r2m-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'ava\'" [ngClass]="active == true ? \'ava-custom-chat-active\' : \'ava-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'tmc\'" [ngClass]="active == true ? \'tmc-custom-chat-active\' : \'tmc-custom-chat\'"></ion-icon>\n\n</button>\n\n\n\n<button *ngIf="(version == \'01\' || version == \'02\')  && active == true" [disabled]="true" outline [ngClass]="version == \'01\' ? \'menu-top menu-height-v1\' : version == \'02\' ? \'menu-top menu-height-v2\' : \'menu-top menu-height-v1\'" ion-button icon-only>\n\n  <ion-icon *ngIf="project == \'ead\'" [ngClass]="active == true ? \'vcc-custom-chat-active\' : \'vcc-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'edicom\'" [ngClass]="active == true ? \'edicom-custom-chat-active\' : \'edicom-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'marketing-house\'" [ngClass]="active == true ? \'mrkhouse-custom-chat-active\' : \'mrkhouse-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'know-house\'" [ngClass]="active == true ? \'knowh-custom-chat-active\' : \'knowh-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'hkt369\'" [ngClass]="active == true ? \'hkt369-custom-chat-active\' : \'hkt369-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'simples-trade\'" [ngClass]="active == true ? \'strade-custom-chat-active\' : \'strade-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'r2m\'" [ngClass]="active == true ? \'r2m-custom-chat-active\' : \'r2m-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'ava\'" [ngClass]="active == true ? \'ava-custom-chat-active\' : \'ava-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'tmc\'" [ngClass]="active == true ? \'tmc-custom-chat-active\' : \'tmc-custom-chat\'"></ion-icon>\n\n</button>\n\n'/*ion-inline-end:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\components\menu-sup\menu-sup.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */],
@@ -194,13 +194,13 @@ var MenuSupComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 483:
+/***/ 482:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExpandableModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__expandable__ = __webpack_require__(484);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__expandable__ = __webpack_require__(483);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(46);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -228,7 +228,7 @@ var ExpandableModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 484:
+/***/ 483:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -276,20 +276,21 @@ var ExpandableComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 501:
+/***/ 500:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListVideosV03Page; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListVideosV02Page; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__ = __webpack_require__(341);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_http_service_http_service__ = __webpack_require__(111);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_file_transfer__ = __webpack_require__(345);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_file__ = __webpack_require__(342);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__ = __webpack_require__(342);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_http_service_http_service__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_file_transfer__ = __webpack_require__(346);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_file__ = __webpack_require__(343);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_platform_browser__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_file_opener__ = __webpack_require__(343);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_file_opener__ = __webpack_require__(344);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__environments_environment__ = __webpack_require__(111);
 var __assign = (this && this.__assign) || Object.assign || function(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
         s = arguments[i];
@@ -352,8 +353,9 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 
 
 
-var ListVideosV03Page = /** @class */ (function () {
-    function ListVideosV03Page(navCtrl, navParams, dom, authService, http, loadingCtrl, storage, fileTransfer, appRef, _platform, file, toastCtrl, modalCtrl, fileOpener, actionSheetCtrl, alertCtrl) {
+
+var ListVideosV02Page = /** @class */ (function () {
+    function ListVideosV02Page(navCtrl, navParams, dom, authService, http, loadingCtrl, storage, fileTransfer, appRef, _platform, file, toastCtrl, modalCtrl, fileOpener, actionSheetCtrl, alertCtrl) {
         var _this = this;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
@@ -371,6 +373,7 @@ var ListVideosV03Page = /** @class */ (function () {
         this.fileOpener = fileOpener;
         this.actionSheetCtrl = actionSheetCtrl;
         this.alertCtrl = alertCtrl;
+        this.ENV = __WEBPACK_IMPORTED_MODULE_9__environments_environment__["a" /* environment */];
         this.expItems = [];
         this.titleTesteira = 'Mi agenda';
         this.complementTitle = '';
@@ -419,19 +422,19 @@ var ListVideosV03Page = /** @class */ (function () {
             }
         });
     }
-    ListVideosV03Page.prototype.ngOnInit = function () {
+    ListVideosV02Page.prototype.ngOnInit = function () {
         var _this = this;
         this.storage.get('Idiom').then(function (value) {
             _this.idiom = value;
         });
     };
-    ListVideosV03Page.prototype.presentModal = function (item) {
+    ListVideosV02Page.prototype.presentModal = function (item) {
         var videoModal = this.modalCtrl.create('list-videos-modal', item);
         /*     videoModal.onDidDismiss(data => {
             }); */
         videoModal.present();
     };
-    ListVideosV03Page.prototype.openQuiz = function (lesson) {
+    ListVideosV02Page.prototype.openQuiz = function (lesson) {
         var _this = this;
         var profileModal = this.modalCtrl.create('quiz', { lesson_id: lesson.id });
         profileModal.onDidDismiss(function (data) {
@@ -439,17 +442,17 @@ var ListVideosV03Page = /** @class */ (function () {
         });
         profileModal.present();
     };
-    ListVideosV03Page.prototype.sanitizer = function (vid) {
+    ListVideosV02Page.prototype.sanitizer = function (vid) {
         return this.dom.bypassSecurityTrustResourceUrl(vid);
     };
-    ListVideosV03Page.prototype.cleanTeste = function () {
+    ListVideosV02Page.prototype.cleanTeste = function () {
         this.fazerTeste = true;
         this.exibirNota = false;
         this.nota = null;
         this.hasCertificado = false;
         this.urlCertificado = '';
     };
-    ListVideosV03Page.prototype.fazerQuiz = function (lesson, showAlert) {
+    ListVideosV02Page.prototype.fazerQuiz = function (lesson, showAlert) {
         var _this = this;
         var lesson_id = lesson.id;
         var user_id = 0;
@@ -497,7 +500,7 @@ var ListVideosV03Page = /** @class */ (function () {
             });
         });
     };
-    ListVideosV03Page.prototype.showAlert = function () {
+    ListVideosV02Page.prototype.showAlert = function () {
         var alert = this.alertCtrl.create({
             title: this.alertTitle,
             subTitle: this.alertSubtitle,
@@ -505,7 +508,7 @@ var ListVideosV03Page = /** @class */ (function () {
         });
         alert.present();
     };
-    ListVideosV03Page.prototype.existeTeste = function (lesson) {
+    ListVideosV02Page.prototype.existeTeste = function (lesson) {
         var _this = this;
         this.exibirBoxTeste = false;
         var vars = {
@@ -520,7 +523,7 @@ var ListVideosV03Page = /** @class */ (function () {
             }
         });
     };
-    ListVideosV03Page.prototype.showCertificado = function (lesson) {
+    ListVideosV02Page.prototype.showCertificado = function (lesson) {
         this.videos = this.videos.map(function (projeto, idx) {
             if (lesson.projectId == projeto.id) {
                 var lesson_1;
@@ -534,7 +537,7 @@ var ListVideosV03Page = /** @class */ (function () {
             return projeto;
         });
     };
-    ListVideosV03Page.prototype.expandItem = function (item) {
+    ListVideosV02Page.prototype.expandItem = function (item) {
         this.videos.map(function (video) {
             video.lessons.map(function (listItem) {
                 if (item == listItem) {
@@ -549,10 +552,10 @@ var ListVideosV03Page = /** @class */ (function () {
         this.openVideo(item);
         this.existeTeste(item);
     };
-    ListVideosV03Page.prototype.hasAnyAditionalContent = function () {
+    ListVideosV02Page.prototype.hasAnyAditionalContent = function () {
         return this.attachments.some(function (a) { return !a.isVideo; });
     };
-    ListVideosV03Page.prototype.openVideo = function (lesson) {
+    ListVideosV02Page.prototype.openVideo = function (lesson) {
         var _this = this;
         this.attachments = [];
         this.storage.get(this._ATTACHMENT_STORAGE_KEY).then(function (attachments) {
@@ -604,7 +607,7 @@ var ListVideosV03Page = /** @class */ (function () {
             }
         });
     };
-    ListVideosV03Page.prototype.downloadContent = function ($attachment) {
+    ListVideosV02Page.prototype.downloadContent = function ($attachment) {
         var _this = this;
         $attachment.isDownloading = true;
         $attachment.downloadProgress = 0;
@@ -658,14 +661,19 @@ var ListVideosV03Page = /** @class */ (function () {
             toast.present();
         });
     };
-    ListVideosV03Page.prototype.ionViewDidEnter = function () {
+    ListVideosV02Page.prototype.ionViewDidEnter = function () {
         var _this = this;
         this.storage.get('Project').then(function (value) {
             _this.project = value;
+            /*PROJETOS:
+              marketing-house
+              edicom
+              vcc
+            */
         });
         this.storage.get("AppConfig").then(function (config) {
-            if (config.internoApp3 && config.internoApp5['text']) {
-                _this.titleTesteira = config.internoApp5['text'];
+            if (config.internoApp3 && config.internoApp3['text']) {
+                _this.titleTesteira = config.internoApp3['text'];
             }
             else {
                 _this.titleTesteira = _this.idiom == '01' ? 'Agenda' : 'Mi agenda';
@@ -675,74 +683,79 @@ var ListVideosV03Page = /** @class */ (function () {
         this.storage.get('LayoutVersion').then(function (value) {
             _this.version = value;
         });
-        var loading = this.loadingCtrl.create({
-            content: 'Espere...'
-        });
-        loading.present();
-        this.storage.get('clienteCompanyId').then(function (companyId) {
-            _this.storage.get('clienteId').then(function (clienteId) {
-                _this.http.getAll('/api/conteudos', { company_id: companyId, user_id: clienteId, type: "ICON5" })
-                    .subscribe(function (data) {
-                    loading.dismiss();
-                    data.forEach(function (element, index) {
-                        if (element.content_only != 1) {
-                            data[index].showAulas = false;
-                            element.lessons.forEach(function (l) {
-                                l['expanded'] = false;
+        this.storage.get('AvailableDefaultProjects')
+            .then(function (value) {
+            if (value != null && value.length > 0) {
+                _this.videos = value;
+            }
+            else {
+                _this.storage.get('clienteCompanyId').then(function (companyId) {
+                    _this.storage.get('clienteId').then(function (clienteId) {
+                        var loading = _this.loadingCtrl.create({
+                            content: 'Espere...'
+                        });
+                        loading.present();
+                        _this.http.getAll('/api/conteudos', { company_id: companyId, user_id: clienteId, type: "DEFAULT" })
+                            .subscribe(function (data) {
+                            loading.dismiss();
+                            data.forEach(function (element, index) {
+                                data[index].showAulas = false;
+                                element.lessons.forEach(function (l) {
+                                    l['expanded'] = false;
+                                });
                             });
-                        }
-                    });
-                    data.map(function (d, idx) {
-                        if (d.content_only != 1) {
-                            //let lessons = d.lessons.filter((l) => l && l.disponivel_em && new Date(l.disponivel_em) <= new Date() || !l.disponivel_em).sort((a,b) => {return a.order - b.order});
-                            data[idx].lessons = d.lessons.map(function (lesson) {
-                                var gotVideo = lesson.contents.filter(function (e) { return e.tipo == 'video'; }).length > 0 ? true : false;
-                                var youtubeUrl = "";
-                                if (gotVideo == false) {
-                                    lesson.contents.map(function (e) { if (e.path !== '' && e.tipo != 'appli') {
-                                        youtubeUrl = e.path;
-                                    } });
-                                }
-                                return __assign({}, lesson, { gotVideo: gotVideo, youtubeUrl: youtubeUrl, forCertificate: false, projectId: data[idx].id });
-                            });
-                            data[idx].lessons.push({
-                                titulo: "Certificado",
-                                forCertificate: true,
-                                gotCertified: false,
-                                expanded: false,
-                                contents: [],
-                                projectId: data[idx].id
-                            });
-                        }
-                    });
-                    /*             data.map((d,idx) => {
-                                  let lessons = d.lessons.sort((a,b) => {return a.order - b.order});
-                                  data[idx].lessons = lessons.map((lesson) => {
-                                    let gotVideo = lesson.contents.filter((e) => e.tipo == 'video').length > 0 ? true : false;
-                                    let youtubeUrl =  "";
+                            data.map(function (d, idx) {
+                                //let lessons = d.lessons.filter((l) => l && l.disponivel_em && new Date(l.disponivel_em) <= new Date() || !l.disponivel_em).sort((a,b) => {return a.order - b.order});
+                                data[idx].lessons = d.lessons.map(function (lesson) {
+                                    var gotVideo = lesson.contents.filter(function (e) { return e.tipo == 'video'; }).length > 0 ? true : false;
+                                    var youtubeUrl = "";
                                     if (gotVideo == false) {
-                                      lesson.contents.map((e) => {if (e.path !== '') {youtubeUrl = e.path}});
+                                        lesson.contents.map(function (e) { if (e.path !== '' && e.tipo != 'appli') {
+                                            youtubeUrl = e.path;
+                                        } });
                                     }
-                                    return {...lesson, gotVideo, youtubeUrl}
-                                  });
-                                }) */
-                    _this.videos = data;
-                    _this.videos = _this.videos.sort(function (a, b) {
-                        if (a.titulo > b.titulo) {
-                            return 1;
-                        }
-                        if (a.titulo < b.titulo) {
-                            return -1;
-                        }
-                        // a must be equal to b
-                        return 0;
+                                    return __assign({}, lesson, { gotVideo: gotVideo, youtubeUrl: youtubeUrl, forCertificate: false, projectId: data[idx].id });
+                                });
+                                data[idx].lessons.push({
+                                    titulo: "Certificado",
+                                    forCertificate: true,
+                                    gotCertified: false,
+                                    expanded: false,
+                                    contents: [],
+                                    projectId: data[idx].id
+                                });
+                            });
+                            /*             data.map((d,idx) => {
+                                          let lessons = d.lessons.sort((a,b) => {return a.order - b.order});
+                                          data[idx].lessons = lessons.map((lesson) => {
+                                            let gotVideo = lesson.contents.filter((e) => e.tipo == 'video').length > 0 ? true : false;
+                                            let youtubeUrl =  "";
+                                            if (gotVideo == false) {
+                                              lesson.contents.map((e) => {if (e.path !== '') {youtubeUrl = e.path}});
+                                            }
+                                            return {...lesson, gotVideo, youtubeUrl}
+                                          });
+                                        }) */
+                            _this.videos = data;
+                            _this.videos = _this.videos.sort(function (a, b) {
+                                if (a.titulo > b.titulo) {
+                                    return 1;
+                                }
+                                if (a.titulo < b.titulo) {
+                                    return -1;
+                                }
+                                // a must be equal to b
+                                return 0;
+                            });
+                            _this.storage.set('AvailableDefaultProjects', data);
+                            _this.checkFinishedProjects();
+                        });
                     });
-                    _this.checkFinishedProjects();
                 });
-            });
+            }
         });
     };
-    ListVideosV03Page.prototype.checkFinishedProjects = function () {
+    ListVideosV02Page.prototype.checkFinishedProjects = function () {
         var _this = this;
         if (this.videos.length > 0) {
             this.storage.get('clienteId').then(function (valor) { return __awaiter(_this, void 0, void 0, function () {
@@ -817,7 +830,7 @@ var ListVideosV03Page = /** @class */ (function () {
             }); });
         }
     };
-    ListVideosV03Page.prototype.makeSearch = function (event) {
+    ListVideosV02Page.prototype.makeSearch = function (event) {
         var _this = this;
         var val = event.target.value;
         this.http.getAll('/api/conteudos', { search: val })
@@ -828,7 +841,7 @@ var ListVideosV03Page = /** @class */ (function () {
             _this.videos = data;
         });
     };
-    ListVideosV03Page.prototype.presentLoadingDefault = function () {
+    ListVideosV02Page.prototype.presentLoadingDefault = function () {
         var loading = this.loadingCtrl.create({
             content: 'Espere...'
         });
@@ -837,13 +850,13 @@ var ListVideosV03Page = /** @class */ (function () {
             loading.dismiss();
         }, 3000);
     };
-    ListVideosV03Page.prototype.goToPrevSlide = function () {
+    ListVideosV02Page.prototype.goToPrevSlide = function () {
         this.slides.slidePrev();
     };
-    ListVideosV03Page.prototype.goToNextSlide = function () {
+    ListVideosV02Page.prototype.goToNextSlide = function () {
         this.slides.slideNext();
     };
-    ListVideosV03Page.prototype.openProject = function (projeto) {
+    ListVideosV02Page.prototype.openProject = function (projeto) {
         var _this = this;
         this.videos.forEach(function (item, index) {
             if (item.id == projeto.id) {
@@ -872,7 +885,7 @@ var ListVideosV03Page = /** @class */ (function () {
             });
         });
     };
-    ListVideosV03Page.prototype.showVideo = function (conteudo) {
+    ListVideosV02Page.prototype.showVideo = function (conteudo) {
         var _this = this;
         if (conteudo.url) {
             this.exibirEmbed = true;
@@ -893,15 +906,15 @@ var ListVideosV03Page = /** @class */ (function () {
             this.urlEmbed = conteudo.url;
         }
     };
-    ListVideosV03Page.prototype.cleanVideo = function () {
+    ListVideosV02Page.prototype.cleanVideo = function () {
         this.playVideo = false;
         this.exibirVideo = false;
         this.exibirEmbed = false;
     };
-    ListVideosV03Page.prototype.openChat = function () {
+    ListVideosV02Page.prototype.openChat = function () {
         this.navCtrl.push('chat-page');
     };
-    ListVideosV03Page.prototype.openContent = function ($attachment) {
+    ListVideosV02Page.prototype.openContent = function ($attachment) {
         var _this = this;
         var actions = [];
         if ($attachment.isVideo == false) {
@@ -931,7 +944,7 @@ var ListVideosV03Page = /** @class */ (function () {
             actionSheet.present();
         }
     };
-    ListVideosV03Page.prototype.selectAction = function ($attachment) {
+    ListVideosV02Page.prototype.selectAction = function ($attachment) {
         var _this = this;
         var actions = [];
         //if ($attachment.isVideo == false) {
@@ -968,7 +981,7 @@ var ListVideosV03Page = /** @class */ (function () {
         actionSheet.present();
         //}
     };
-    ListVideosV03Page.prototype.removeContent = function ($attachment) {
+    ListVideosV02Page.prototype.removeContent = function ($attachment) {
         var _this = this;
         $attachment.isDownloading = true;
         $attachment.downloadProgress = 0;
@@ -1005,14 +1018,14 @@ var ListVideosV03Page = /** @class */ (function () {
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* Slides */]),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* Slides */])
-    ], ListVideosV03Page.prototype, "slides", void 0);
+    ], ListVideosV02Page.prototype, "slides", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('videoPlayer'),
         __metadata("design:type", Object)
-    ], ListVideosV03Page.prototype, "mVideoPlayer", void 0);
-    ListVideosV03Page = __decorate([
+    ], ListVideosV02Page.prototype, "mVideoPlayer", void 0);
+    ListVideosV02Page = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-list-videos-v03',template:/*ion-inline-start:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\pages\list-videos-v03\list-videos-v03.html"*/'<ion-header [ngClass]="version == \'01\' ? \'principalHeader\' : version == \'02\' ? \'principalHeaderV02\' : \'principalHeader\'">\n\n  <div>\n\n    <img [ngClass]="version == \'01\' ? \'principal-icon\' : version == \'02\' ? \'principal-icon-v02\' : \'principal-icon\'"\n\n     src="{{ globalUrl + \'/storage/uploads/configs/logoHeader.png\' }}" />\n\n\n\n<!--     <img [ngClass]="version == \'01\' ? \'testeira\' : version == \'02\' ? \'testeira-v02\' : \'testeira\'" \n\n    src="{{ globalUrl + \'/storage/uploads/configs/testeira2.png\' }}" >\n\n -->\n\n    <img *ngIf="version == \'01\'" class="testeira-v01" \n\n    src="{{ globalUrl + \'/storage/uploads/configs/testeira1.png\' }}" >\n\n\n\n    <img *ngIf="version == \'02\'" class="testeira-v02" \n\n    src="{{ globalUrl + \'/storage/uploads/configs/testeira2.png\' }}" >\n\n    <!-- <img class=logo-header src="./assets/imgs/movera-logo.png" /> -->\n\n    <p [ngClass]="project == \'know-house\' ?  \'font-style know-house-title-color\' : project == \'ava\' ?  \'font-style black-title-color\' : \'\'">{{titleTesteira}}  {{complementTitle? \'| \' + complementTitle : \'\'}}</p>\n\n  </div>\n\n  <menu-sup></menu-sup>\n\n</ion-header>\n\n\n\n<ion-content [ngClass]="version == \'01\' ? \'margin-content-l1\' : version == \'02\' ? \'margin-content-l2\' : \'margin-content-l1\'" padding style="top: 20px; position: relative;" [ngClass]="project == \'marketing-house\' ? \'content mrkhouse-custom-bg\' : project == \'ead\' ? \'content vcc-custom-bg\' : project == \'edicom\' ? \'content edicom-custom-bg\' : \'\'">\n\n\n\n  <ion-list no-lines class="lessons-container" *ngIf="playVideo == false">\n\n    <ion-grid>\n\n      <ion-item *ngFor="let projeto of videos">       \n\n        \n\n        <div *ngIf="projeto.content_only == 1" (click)="presentModal(projeto.contents)">\n\n\n\n          <ion-row>\n\n            <ion-col col-4>          \n\n              <ion-thumbnail>\n\n                <img *ngIf="projeto.projectConcluded && projeto.projectConcluded == true" style="position: absolute; right: 0; top: 0; left: auto; bottom: auto; height: 60px !important;" src={{iconConcluido}}>\n\n                <img src="{{ projeto.thumb }}">\n\n              </ion-thumbnail></ion-col>\n\n            <ion-col col-8>\n\n              <h2 [ngClass]="project == \'know-house\' ?  \'font-style know-house-title\' : \'\'">{{ projeto.tituloApp? projeto.tituloApp : projeto.titulo }}</h2>\n\n              <p>{{ projeto.descricao }}</p>\n\n              <p style="font-size: 1rem;" *ngIf="idiom == \'01\' && projeto.content_only == 1 ">Clique aqui</p>\n\n              <p style="font-size: 1.3rem;" *ngIf="idiom == \'02\' && projeto.content_only == 1 && project == \'edicom\'" style="color: #49a6c9;">Haz clic aquí.</p>\n\n              <p style="font-size: 1.3rem;" *ngIf="idiom == \'02\' && projeto.content_only == 1 && project != \'edicom\'">Haz clic aquí.</p>\n\n            </ion-col>\n\n          </ion-row>\n\n        </div>\n\n        \n\n        \n\n        \n\n        <div *ngIf="projeto.content_only != 1" (click)="openProject(projeto)">\n\n          <ion-row>\n\n            <ion-col col-4>          \n\n              <ion-thumbnail>\n\n                <img *ngIf="projeto.projectConcluded && projeto.projectConcluded == true" style="position: absolute; right: 0; top: 0; left: auto; bottom: auto; height: 60px !important;" src={{iconConcluido}}>\n\n                <img src="{{ projeto.thumb }}">\n\n              </ion-thumbnail></ion-col>\n\n            <ion-col col-8>\n\n              <h2 [ngClass]="project == \'know-house\' ?  \'font-style know-house-title\' : \'\'">{{ projeto.tituloApp? projeto.tituloApp : projeto.titulo }}</h2>\n\n              <p>{{ projeto.descricao }}</p>\n\n              <p style="font-size: 1rem;" *ngIf="idiom == \'01\' && projeto.content_only == 1 ">Clique aqui</p>\n\n              <p style="font-size: 1rem;" *ngIf="idiom == \'02\' && projeto.content_only == 1 ">Haz clic aquí.</p>\n\n            </ion-col>\n\n          </ion-row>\n\n        </div>\n\n\n\n\n\n        <ion-list no-lines [ngClass]="projeto.showAulas ? \'listAulas show\' : \'listAulas\'">\n\n          <ion-item *ngFor="let item of projeto.lessons " [ngClass]="item.expanded == true ? \'expanded\' : \'\'" >\n\n            <button detail-none (click)="expandItem(item)" ion-item class="bg-transparent"\n\n            *ngIf="item.forCertificate == true &&  item.gotCertified == true || item.forCertificate == false">\n\n              <ion-buttons end>\n\n                <ion-item>\n\n                  <div col-9 style="display: inline-block; vertical-align: middle;">\n\n                    <h2 [ngClass]="project == \'know-house\' ?  \'font-style know-house\' : \'\'">{{ item.titulo }}</h2>\n\n                  </div>\n\n                  <div col-1 style="display: inline-block; vertical-align: middle;">\n\n                    <button ion-button clear item-end icon-only>\n\n                      <ion-icon *ngIf="item.expanded == false && project == \'know-house\'" name="md-arrow-dropright" style="color: #FC5A16; padding: 0 10px 0 0; vertical-align: middle;"></ion-icon>\n\n                      <ion-icon *ngIf="item.expanded == true && project == \'know-house\'" name="md-arrow-dropdown" style="color: #FC5A16; padding: 0 10px 0 0; vertical-align: middle;"></ion-icon>                    \n\n\n\n                      <ion-icon *ngIf="item.expanded == false && project != \'know-house\'" name="ios-arrow-forward" style="color: black; padding: 0 10px 0 0; vertical-align: middle;"></ion-icon>\n\n                      <ion-icon *ngIf="item.expanded == true && project != \'know-house\'" name="ios-arrow-down" style="color: black; padding: 0 10px 0 0; vertical-align: middle;"></ion-icon>                    \n\n                    </button>\n\n                  </div>\n\n                  <div col-1 style="display: inline-block; vertical-align: middle;">\n\n                    <ion-icon *ngIf="item.important == 1" name="ios-information-circle-outline" style="color: black; padding: 0 0 0 10px;"></ion-icon>\n\n                  </div>\n\n                </ion-item>\n\n              </ion-buttons>\n\n            </button>\n\n             <!-- <expandable [expanded]="item.expanded" (click)="openVideo(item, projeto)"> -->\n\n            <expandable [expanded]="item.expanded" [ngClass]="item.expanded == true ? \'expanded\' : \'\'" >\n\n              <div class=slideVideo style="overflow: auto;">\n\n<!--                 <div *ngFor= "let conteudo of item.contents" style="position: relative;">\n\n                  <div *ngIf="conteudo.tipo == \'video\'" style="margin-top: 20px;">\n\n                    <div style="position: relative;">\n\n                      <h2>{{ conteudo.nomeArquivo }}</h2>\n\n                      <img style="width: 100%; margin: auto; display: flex;" src={{item.thumb}}>\n\n                      <div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; display: flex; justify-content: center; align-items: center;">\n\n                        <img (click)="showVideo(conteudo)" style="width: 70px; margin: auto; display: flex;" src="./assets/imgs/icon-play.png">\n\n                      </div>\n\n                    </div>\n\n                    <p style="text-align: center;">clique no play para ver o vídeo.</p>\n\n                  </div>\n\n                </div> -->\n\n\n\n                <div *ngIf="item.contents.length > 0" style="position: relative;">\n\n\n\n                    <div *ngIf="item.gotVideo == true || item.youtubeUrl != \'\'" style="margin-top: 20px;">\n\n                      <div style="position: relative;">\n\n                        <img style="width: 100%; margin: auto; display: flex;" src={{item.thumb}}>\n\n                        <div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; display: flex; justify-content: center; align-items: center;">\n\n                          <img (click)="presentModal(item.contents)" style="width: 70px; margin: auto; display: flex;" src={{iconPlay}}>\n\n                        </div>\n\n                      </div>\n\n                      <p style="text-align: center;" *ngIf="idiom == \'01\'">Clique no play para executar o vídeo</p>\n\n                      <p style="text-align: center;" *ngIf="idiom == \'02\'">Haz a clic en el play para ver la película.</p>\n\n                    </div>\n\n                </div>\n\n\n\n                <div *ngIf="item.gotVideo == false && item.youtubeUrl == \'\' && item.thumb != \'https://edicom.becinteligencia.com/storage/\'" style="margin-top: 20px;">\n\n                  <div style="position: relative;">\n\n                    <img style="width: 100%; margin: auto; display: flex;" src={{item.thumb}}>\n\n                  </div>\n\n                </div>\n\n            \n\n                  <!-- <p style="white-space: normal; text-align: justify;">{{ item.previa }} </p> -->\n\n                <div [innerHTML]="item.descricao">{{ item.descricao }} </div>\n\n                <!-- <img *ngIf="item.thumb" src="{{ item.thumb }}" /> -->\n\n\n\n                <div *ngIf="exibirBoxTeste" id=boxQuiz>\n\n<!--                   <p *ngIf="!exibirNota && idiom == \'01\'">AVALIAÇÃO DO CURSO – clique para acessar o questionário.</p>\n\n                  <p *ngIf="!exibirNota && idiom == \'02\'">EVALUACIÓN DEL CURSO – haz clic para acceder la encuesta.</p> -->\n\n              \n\n                  <p *ngIf="exibirNota && idiom == \'01\'">Sua nota foi: <span>{{nota}}</span> de um total de {{notaMaxima}}.</p>\n\n                  <p *ngIf="exibirNota && idiom == \'02\'">Calificación fue: <span>{{nota}}</span> de un total de {{notaMaxima}}.</p>\n\n              \n\n                  <button *ngIf="fazerTeste" (click)=openQuiz(item) id=buttonQuiz ion-button full color="light" icon-start>\n\n                    <ion-icon name="md-bulb"></ion-icon>\n\n                    <p *ngIf="idiom == \'01\'">RESPONDER QUESTIONÁRIO</p>\n\n                    <p *ngIf="idiom == \'02\'">RESPONDER ENCUESTA</p>\n\n                  </button>\n\n              \n\n                  <button *ngIf="!fazerTeste" ion-button full color="light" icon-start>\n\n                    <ion-icon name="md-bulb"></ion-icon>\n\n                    <p *ngIf="idiom == \'01\'">QUESTIONÁRIO RESPONDIDO</p>\n\n                    <p *ngIf="idiom == \'02\'">ENCUESTA RESPONDIDO</p>\n\n                  </button>              \n\n                </div>\n\n\n\n                <ion-grid class=relatedContent>\n\n<!--                   <ion-row *ngIf="attachments?.length > 0">\n\n                    <ion-col col-12 class=titleHeaderContent>Contenido relacionado</ion-col>\n\n                  </ion-row> -->\n\n              \n\n                  <ion-row *ngFor="let attachment of attachments">\n\n                    <ion-col col-1 style="justify-content: center; display: flex; align-items: center;">\n\n                      <ion-icon name="clipboard" *ngIf="!attachment.isVideo && attachment.onlineUrl.indexOf(\'youtu\') == -1"></ion-icon>\n\n                      <ion-icon name="play" *ngIf="attachment.isVideo "></ion-icon>\n\n                      <ion-icon name="logo-youtube" *ngIf="attachment.onlineUrl != \'\' && attachment.onlineUrl.indexOf(\'youtu\') > 0"></ion-icon>\n\n                    </ion-col>\n\n                    <ion-col col-8><span class=titleContent>{{attachment.name}}</span></ion-col>\n\n                    <ion-col col-3 style="text-align: center;">\n\n                      <button ion-button color="secondary" *ngIf="!attachment.isOffline && !attachment.isDownloading && attachment.downloadPermission == 1" outline\n\n                        style="width: 100%; font-size: 1rem;" (click)="downloadContent(attachment)">\n\n                        <p *ngIf="idiom == \'01\'">BAIXAR</p>\n\n                        <p style="font-size: 0.8rem !important;" *ngIf="idiom == \'02\'">DESCARGAR</p>\n\n                      </button>\n\n                      <button ion-button color="danger" *ngIf="attachment.isOffline && !attachment.isDownloading && attachment.isVideo == false" outline\n\n                        style="width: 100%" (click)="selectAction(attachment)">\n\n                        <p>ABRIR</p>\n\n                      </button>\n\n\n\n                      <button ion-button outline style="width: 100%" *ngIf="attachment.isVideo == false && attachment.downloadPermission == 0" color="secondary">\n\n                        <a style="color: #666; text-decoration:none;" href="{{attachment.onlineUrl}}">ABRIR</a>\n\n                      </button>\n\n                      \n\n                      <button ion-button color="danger" *ngIf="attachment.isOffline && !attachment.isDownloading && attachment.isVideo" outline\n\n                        style="width: 100%" (click)="selectAction(attachment)">\n\n                        <p *ngIf="idiom == \'01\'">ABRIR</p>\n\n                        <p *ngIf="idiom == \'02\'">ABRIR</p> \n\n                      </button>\n\n                      <p *ngIf="attachment.isDownloading" style="margin: 0px; margin-top: 8px; padding: 0px;">\n\n                        {{ attachment.downloadProgress }}%\n\n                      </p>\n\n                      <p *ngIf="attachment.isDownloading" style="margin: 0px; padding: 0px; height: 20px;">\n\n                        <ion-spinner name="dots"></ion-spinner>\n\n                      </p>\n\n                    </ion-col>\n\n                  </ion-row>\n\n                </ion-grid>\n\n              </div>\n\n              <div style="padding: 15px" *ngIf="item.gotCertified">\n\n                <a style="margin-bottom:20px;" href="{{urlCertificado}}"  ion-button full\n\n                  large color="secondary" icon-start>\n\n                  <ion-icon name="md-school"></ion-icon>\n\n                  <p *ngIf="idiom == \'01\'">BAIXE SEU CERTIFICADO</p>\n\n                  <p *ngIf="idiom == \'02\'">DESCARGUE SU CERTIFICADO</p>\n\n                </a>\n\n              </div>\n\n            </expandable>\n\n          </ion-item>\n\n        </ion-list>\n\n\n\n      </ion-item>\n\n    </ion-grid>\n\n  </ion-list>\n\n  \n\n  <div *ngIf="playVideo">\n\n    <div *ngIf="exibirVideo">\n\n      <video #videoPlayer class="video-player" autoplay="true" controls controlsList="nodownload" style="max-width: 100%; max-height: 100%;"></video>\n\n    </div>\n\n    <iframe *ngIf="exibirEmbed" [src]="sanitizer(urlEmbed)" style="width:100%" frameborder="0" height="300" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n\n    <button ion-button float-right class="cancel-button" (click)="cleanVideo()">Voltar</button>\n\n  </div>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\pages\list-videos-v03\list-videos-v03.html"*/,
+            selector: 'page-list-videos-v02',template:/*ion-inline-start:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\pages\list-videos-v02\list-videos-v02.html"*/'<ion-header [ngClass]="version == \'01\' ? \'principalHeader\' : version == \'02\' ? \'principalHeaderV02\' : \'principalHeader\'">\n\n  <div>\n\n    <img [ngClass]="version == \'01\' ? \'principal-icon\' : version == \'02\' ? \'principal-icon-v02\' : \'principal-icon\'"\n\n     src="{{ globalUrl + \'/storage/uploads/configs/logoHeader.png\' }}" />\n\n\n\n    <img *ngIf="version == \'01\'" class="testeira-v01" \n\n    src="{{ globalUrl + \'/storage/uploads/configs/testeira1.png\' }}" >\n\n\n\n    <img *ngIf="version == \'02\'" class="testeira-v02" \n\n    src="{{ globalUrl + \'/storage/uploads/configs/testeira2.png\' }}" >\n\n\n\n    <p class="header-title header-title-{{ENV.HEADER_TEXT}}">{{titleTesteira}}  {{complementTitle? \'| \' + complementTitle : \'\'}}</p>\n\n  </div>\n\n  <menu-sup></menu-sup>\n\n</ion-header>\n\n\n\n<ion-content class="content {{ENV.PROJECT}}-custom-bg" [ngClass]="version == \'01\' ? \'margin-content-l1\' : version == \'02\' ? \'margin-content-l2\' : \'margin-content-l1\'" padding style="top: 20px; position: relative;">\n\n\n\n  <ion-list no-lines class="lessons-container" *ngIf="playVideo == false">\n\n    <ion-grid>\n\n      <ion-item *ngFor="let projeto of videos">\n\n        <div  (click)="openProject(projeto)">\n\n          <ion-row>\n\n            <ion-col col-4>          \n\n              <ion-thumbnail>\n\n                <img *ngIf="projeto.projectConcluded && projeto.projectConcluded == true" style="position: absolute; right: 0; top: 0; left: auto; bottom: auto; height: 60px !important;" src={{iconConcluido}}>\n\n                <img src="{{ projeto.thumb }}">\n\n              </ion-thumbnail></ion-col>\n\n            <ion-col col-8>\n\n              <h2 [ngClass]="project == \'know-house\' ?  \'font-style know-house-title\' : \'\'">{{ projeto.tituloApp? projeto.tituloApp : projeto.titulo }}</h2>\n\n              <p>{{ projeto.descricao }}</p>\n\n            </ion-col>\n\n          </ion-row>\n\n        </div>\n\n\n\n\n\n        <ion-list no-lines [ngClass]="projeto.showAulas ? \'listAulas show\' : \'listAulas\'">\n\n          <ion-item *ngFor="let item of projeto.lessons " [ngClass]="item.expanded == true ? \'expanded\' : \'\'" >\n\n            <button detail-none (click)="expandItem(item)" ion-item class="bg-transparent"\n\n            *ngIf="item.forCertificate == true &&  item.gotCertified == true || item.forCertificate == false">\n\n              <ion-buttons end>\n\n                <ion-item>\n\n                  <div col-9 style="display: inline-block; vertical-align: middle;">\n\n                    <h2 [ngClass]="project == \'know-house\' ?  \'font-style know-house\' : \'\'">{{ item.titulo }}</h2>\n\n                  </div>\n\n                  <div col-1 style="display: inline-block; vertical-align: middle;">\n\n                    <button ion-button clear item-end icon-only>\n\n                      <ion-icon *ngIf="item.expanded == false && project == \'know-house\'" name="md-arrow-dropright" style="color: #FC5A16; padding: 0 10px 0 0; vertical-align: middle;"></ion-icon>\n\n                      <ion-icon *ngIf="item.expanded == true && project == \'know-house\'" name="md-arrow-dropdown" style="color: #FC5A16; padding: 0 10px 0 0; vertical-align: middle;"></ion-icon>                    \n\n\n\n                      <ion-icon *ngIf="item.expanded == false && project != \'know-house\'" name="ios-arrow-forward" style="color: black; padding: 0 10px 0 0; vertical-align: middle;"></ion-icon>\n\n                      <ion-icon *ngIf="item.expanded == true && project != \'know-house\'" name="ios-arrow-down" style="color: black; padding: 0 10px 0 0; vertical-align: middle;"></ion-icon>                    \n\n                    </button>\n\n                  </div>\n\n                  <div col-1 style="display: inline-block; vertical-align: middle;">\n\n                    <ion-icon *ngIf="item.important == 1" name="ios-information-circle-outline" style="color: black; padding: 0 0 0 10px;"></ion-icon>\n\n                  </div>\n\n                </ion-item>\n\n              </ion-buttons>\n\n            </button>\n\n\n\n            <expandable [expanded]="item.expanded" [ngClass]="item.expanded == true ? \'expanded\' : \'\'" >\n\n              <div class=slideVideo style="overflow: auto;">\n\n\n\n                <div *ngIf="item.contents.length > 0" style="position: relative;">\n\n\n\n                    <div *ngIf="item.gotVideo == true || item.youtubeUrl != \'\'" style="margin-top: 20px;">\n\n                      <div style="position: relative;">\n\n                        <img style="width: 100%; margin: auto; display: flex;" src={{item.thumb}}>\n\n                        <div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; display: flex; justify-content: center; align-items: center;">\n\n                          <img (click)="presentModal(item.contents)" style="width: 70px; margin: auto; display: flex;" src={{iconPlay}}>\n\n                        </div>\n\n                      </div>\n\n                      <p style="text-align: center;" *ngIf="idiom == \'01\'">Clique no play para executar o vídeo</p>\n\n                      <p style="text-align: center;" *ngIf="idiom == \'02\'">Haz a clic en el play para ver la película.</p>\n\n                    </div>\n\n                </div>\n\n\n\n                <div *ngIf="item.gotVideo == false && item.youtubeUrl == \'\' && item.thumb != \'https://edicom.becinteligencia.com/storage/\'" style="margin-top: 20px;">\n\n                  <div style="position: relative;">\n\n                    <img style="width: 100%; margin: auto; display: flex;" src={{item.thumb}}>\n\n                  </div>\n\n                </div>\n\n            \n\n                <div [innerHTML]="item.descricao">{{ item.descricao }} </div>\n\n\n\n                <div *ngIf="exibirBoxTeste" id=boxQuiz>\n\n\n\n                  <p *ngIf="exibirNota && idiom == \'01\'">Sua nota foi: <span>{{nota}}</span> de um total de {{notaMaxima}}.</p>\n\n                  <p *ngIf="exibirNota && idiom == \'02\'">Calificación fue: <span>{{nota}}</span> de un total de {{notaMaxima}}.</p>\n\n              \n\n                  <button *ngIf="fazerTeste" (click)=openQuiz(item) id=buttonQuiz ion-button full color="light" icon-start>\n\n                    <ion-icon name="md-bulb"></ion-icon>\n\n                    <p *ngIf="idiom == \'01\'">RESPONDER QUESTIONÁRIO</p>\n\n                    <p *ngIf="idiom == \'02\'">RESPONDER ENCUESTA</p>\n\n                  </button>\n\n              \n\n                  <button *ngIf="!fazerTeste" ion-button full color="light" icon-start>\n\n                    <ion-icon name="md-bulb"></ion-icon>\n\n                    <p *ngIf="idiom == \'01\'">QUESTIONÁRIO RESPONDIDO</p>\n\n                    <p *ngIf="idiom == \'02\'">ENCUESTA RESPONDIDO</p>\n\n                  </button>              \n\n                </div>\n\n\n\n                <ion-grid class=relatedContent>\n\n              \n\n                  <ion-row *ngFor="let attachment of attachments">\n\n                    <ion-col col-1 style="justify-content: center; display: flex; align-items: center;">\n\n                      <ion-icon name="clipboard" *ngIf="!attachment.isVideo && attachment.onlineUrl.indexOf(\'youtu\') == -1"></ion-icon>\n\n                      <ion-icon name="play" *ngIf="attachment.isVideo "></ion-icon>\n\n                      <ion-icon name="logo-youtube" *ngIf="attachment.onlineUrl != \'\' && attachment.onlineUrl.indexOf(\'youtu\') > 0"></ion-icon>\n\n                    </ion-col>\n\n                    <ion-col col-8><span class=titleContent>{{attachment.name}}</span></ion-col>\n\n                    <ion-col col-3 style="text-align: center;">\n\n                      <button ion-button color="secondary" *ngIf="!attachment.isOffline && !attachment.isDownloading && attachment.downloadPermission == 1" outline\n\n                        style="width: 100%; font-size: 1rem;" (click)="downloadContent(attachment)">\n\n                        <p *ngIf="idiom == \'01\'">BAIXAR</p>\n\n                        <p style="font-size: 0.8rem !important;" *ngIf="idiom == \'02\'">DESCARGAR</p>\n\n                      </button>\n\n                      <button ion-button color="danger" *ngIf="attachment.isOffline && !attachment.isDownloading && attachment.isVideo == false" outline\n\n                        style="width: 100%" (click)="selectAction(attachment)">\n\n                        <p>ABRIR</p>\n\n                      </button>\n\n\n\n                      <button ion-button outline style="width: 100%" *ngIf="attachment.isVideo == false && attachment.downloadPermission == 0" color="secondary">\n\n                        <a style="color: #666; text-decoration:none;" href="{{attachment.onlineUrl}}">ABRIR</a>\n\n                      </button>\n\n                      \n\n                      <button ion-button color="danger" *ngIf="attachment.isOffline && !attachment.isDownloading && attachment.isVideo" outline\n\n                        style="width: 100%" (click)="selectAction(attachment)">\n\n                        <p *ngIf="idiom == \'01\'">ABRIR</p>\n\n                        <p *ngIf="idiom == \'02\'">ABRIR</p> \n\n                      </button>\n\n                      <p *ngIf="attachment.isDownloading" style="margin: 0px; margin-top: 8px; padding: 0px;">\n\n                        {{ attachment.downloadProgress }}%\n\n                      </p>\n\n                      <p *ngIf="attachment.isDownloading" style="margin: 0px; padding: 0px; height: 20px;">\n\n                        <ion-spinner name="dots"></ion-spinner>\n\n                      </p>\n\n                    </ion-col>\n\n                  </ion-row>\n\n                </ion-grid>\n\n              </div>\n\n              <div style="padding: 15px" *ngIf="item.gotCertified">\n\n                <a style="margin-bottom:20px;" href="{{urlCertificado}}"  ion-button full\n\n                  large color="secondary" icon-start>\n\n                  <ion-icon name="md-school"></ion-icon>\n\n                  <p *ngIf="idiom == \'01\'">BAIXE SEU CERTIFICADO</p>\n\n                  <p *ngIf="idiom == \'02\'">DESCARGUE SU CERTIFICADO</p>\n\n                </a>\n\n              </div>\n\n            </expandable>\n\n          </ion-item>\n\n        </ion-list>\n\n\n\n      </ion-item>\n\n    </ion-grid>\n\n  </ion-list>\n\n  \n\n  <div *ngIf="playVideo">\n\n    <div *ngIf="exibirVideo">\n\n      <video #videoPlayer class="video-player" autoplay="true" controls controlsList="nodownload" style="max-width: 100%; max-height: 100%;"></video>\n\n    </div>\n\n    <iframe *ngIf="exibirEmbed" [src]="sanitizer(urlEmbed)" style="width:100%" frameborder="0" height="300" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n\n    <button ion-button float-right class="cancel-button" (click)="cleanVideo()">Voltar</button>\n\n  </div>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\pages\list-videos-v02\list-videos-v02.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */],
@@ -1030,11 +1043,11 @@ var ListVideosV03Page = /** @class */ (function () {
             __WEBPACK_IMPORTED_MODULE_8__ionic_native_file_opener__["a" /* FileOpener */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]])
-    ], ListVideosV03Page);
-    return ListVideosV03Page;
+    ], ListVideosV02Page);
+    return ListVideosV02Page;
 }());
 
-//# sourceMappingURL=list-videos-v03.js.map
+//# sourceMappingURL=list-videos-v02.js.map
 
 /***/ })
 

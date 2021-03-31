@@ -3,21 +3,18 @@
     <img [ngClass]="version == '01' ? 'principal-icon' : version == '02' ? 'principal-icon-v02' : 'principal-icon'"
      src="{{ globalUrl + '/storage/uploads/configs/logoHeader.png' }}" />
 
-<!--     <img [ngClass]="version == '01' ? 'testeira' : version == '02' ? 'testeira-v02' : 'testeira'" 
-    src="{{ globalUrl + '/storage/uploads/configs/testeira2.png' }}" >
- -->
     <img *ngIf="version == '01'" class="testeira-v01" 
     src="{{ globalUrl + '/storage/uploads/configs/testeira1.png' }}" >
 
     <img *ngIf="version == '02'" class="testeira-v02" 
     src="{{ globalUrl + '/storage/uploads/configs/testeira2.png' }}" >
-    <!-- <img class=logo-header src="./assets/imgs/movera-logo.png" /> -->
-    <p [ngClass]="project == 'know-house' ?  'font-style know-house-title-color' : project == 'ava' ?  'font-style black-title-color' : ''">{{titleTesteira}}  {{complementTitle? '| ' + complementTitle : ''}}</p>
+
+    <p class="header-title header-title-{{ENV.HEADER_TEXT}}">{{titleTesteira}}  {{complementTitle? '| ' + complementTitle : ''}}</p>
   </div>
   <menu-sup></menu-sup>
 </ion-header>
 
-<ion-content [ngClass]="version == '01' ? 'margin-content-l1' : version == '02' ? 'margin-content-l2' : 'margin-content-l1'" padding style="top: 20px; position: relative;" [ngClass]="project == 'marketing-house' ? 'content mrkhouse-custom-bg' : project == 'ead' ? 'content vcc-custom-bg' : project == 'edicom' ? 'content edicom-custom-bg' : ''">
+<ion-content class="content {{ENV.PROJECT}}-custom-bg" padding style="top: 20px; position: relative;" [ngClass]="project == 'marketing-house' ? 'content mrkhouse-custom-bg' : project == 'ead' ? 'content vcc-custom-bg' : project == 'edicom' ? 'content edicom-custom-bg' : ''">
 
   <ion-list no-lines class="lessons-container" *ngIf="playVideo == false">
     <ion-grid>
@@ -84,21 +81,9 @@
                 </ion-item>
               </ion-buttons>
             </button>
-             <!-- <expandable [expanded]="item.expanded" (click)="openVideo(item, projeto)"> -->
+
             <expandable [expanded]="item.expanded" [ngClass]="item.expanded == true ? 'expanded' : ''" >
               <div class=slideVideo style="overflow: auto;">
-<!--                 <div *ngFor= "let conteudo of item.contents" style="position: relative;">
-                  <div *ngIf="conteudo.tipo == 'video'" style="margin-top: 20px;">
-                    <div style="position: relative;">
-                      <h2>{{ conteudo.nomeArquivo }}</h2>
-                      <img style="width: 100%; margin: auto; display: flex;" src={{item.thumb}}>
-                      <div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; display: flex; justify-content: center; align-items: center;">
-                        <img (click)="showVideo(conteudo)" style="width: 70px; margin: auto; display: flex;" src="./assets/imgs/icon-play.png">
-                      </div>
-                    </div>
-                    <p style="text-align: center;">clique no play para ver o vídeo.</p>
-                  </div>
-                </div> -->
 
                 <div *ngIf="item.contents.length > 0" style="position: relative;">
 
@@ -120,14 +105,10 @@
                   </div>
                 </div>
             
-                  <!-- <p style="white-space: normal; text-align: justify;">{{ item.previa }} </p> -->
                 <div [innerHTML]="item.descricao">{{ item.descricao }} </div>
-                <!-- <img *ngIf="item.thumb" src="{{ item.thumb }}" /> -->
 
                 <div *ngIf="exibirBoxTeste" id=boxQuiz>
-<!--                   <p *ngIf="!exibirNota && idiom == '01'">AVALIAÇÃO DO CURSO – clique para acessar o questionário.</p>
-                  <p *ngIf="!exibirNota && idiom == '02'">EVALUACIÓN DEL CURSO – haz clic para acceder la encuesta.</p> -->
-              
+
                   <p *ngIf="exibirNota && idiom == '01'">Sua nota foi: <span>{{nota}}</span> de um total de {{notaMaxima}}.</p>
                   <p *ngIf="exibirNota && idiom == '02'">Calificación fue: <span>{{nota}}</span> de un total de {{notaMaxima}}.</p>
               
@@ -145,10 +126,7 @@
                 </div>
 
                 <ion-grid class=relatedContent>
-<!--                   <ion-row *ngIf="attachments?.length > 0">
-                    <ion-col col-12 class=titleHeaderContent>Contenido relacionado</ion-col>
-                  </ion-row> -->
-              
+             
                   <ion-row *ngFor="let attachment of attachments">
                     <ion-col col-1 style="justify-content: center; display: flex; align-items: center;">
                       <ion-icon name="clipboard" *ngIf="!attachment.isVideo && attachment.onlineUrl.indexOf('youtu') == -1"></ion-icon>

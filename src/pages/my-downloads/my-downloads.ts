@@ -7,6 +7,8 @@ import { Storage } from '@ionic/storage';
 
 import { Loading } from 'ionic-angular';
 import { LoginPage } from '../login/login';
+import { environment as ENV } from '../../environments/environment';
+
 @IonicPage({
   name: 'my-downloads'
 })
@@ -24,6 +26,7 @@ export class MyDownloadsPage {
   public globalUrl: string = '';
   public idiom: string = '';
   public project: string;
+  public ENV = ENV;
 
   constructor(
     public navCtrl: NavController,

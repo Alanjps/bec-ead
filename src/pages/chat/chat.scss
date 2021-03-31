@@ -1,14 +1,7 @@
 .card-container {
-  //max-height: 400px;
-  //overflow-y: auto;
   min-height: 100px;
 
-  .name {
-    color: #747474;
-    font-size: 12px;
-  }
-
-  .date {
+  .date-style {
     color: #747474;
     display: block;
     font-size: 12px;
@@ -48,8 +41,6 @@
       width: 100%;
     }
   }
-
-
 }
 
 button[disabled]{
@@ -72,9 +63,6 @@ button[disabled]{
 }
 
 .message-container{
-  //margin-bottom: 1.6rem;
-  //overflow: auto;
-
   .button-md {
     margin: 0;
   }
@@ -96,45 +84,6 @@ button[disabled]{
   margin: 15px 0 15px;
 }
 
-.filter-container{
-  padding-left: 10px;
-  padding-bottom: 1.6rem;
-
-  .select-md {
-    padding: 10px 8px 10px 11px;
-    border: solid 0.2px;
-    margin-bottom: 1.6rem;
-  }
-
-  ion-select {
-    max-width: 100%;
-    background-color: white;
-  }
-  .button-inner,.item-cover{
-    height: auto;
-  }
-  .searchbar-md {
-    padding: 0px;
-  }
-  .button-md {
-    margin: 0 0.2rem 1.6rem 0;
-  }
-
-}
-
-.border-bottom{
-  border-bottom: solid 0.5px rgba(128, 128, 128, 0.37);
-  margin-bottom: 1.6rem;
-  height: 2px;
-}
-
-.selected-user{
-  text-decoration: none !important;
-  background-color: #6967ce !important;
-  p{
-    color: #fff !important;
-  }
-}
 
 #cards{
   max-height: 60vw;
@@ -193,11 +142,6 @@ button[disabled]{
   font-size: 14px;
 }
 
-.background{
-  //background-color: rgba(0, 0, 0, 0.555);
-  background-color: #fff;
-}
-
 .header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
   content: none !important;
 }
@@ -206,13 +150,11 @@ ion-app.md [padding] .scroll-content {
   padding-top: 0px;
 }
 
-/* .ion-content-container{
-  margin-top: 100px;
-}
-ion-header{
-  position: relative !important;
-} */
-
 .bg-destaque{
   background-color: #eeeeee !important;
+}
+
+.header-container{
+  margin-top: 16px;
+  margin-left: 10px;
 }

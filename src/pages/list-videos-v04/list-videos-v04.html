@@ -2,29 +2,19 @@
   <div>
     <img [ngClass]="version == '01' ? 'principal-icon' : version == '02' ? 'principal-icon-v02' : 'principal-icon'"
      src="{{ globalUrl + '/storage/uploads/configs/logoHeader.png' }}" />
-<!--     <img [ngClass]="version == '01' ? 'testeira' : version == '02' ? 'testeira-v02' : 'testeira'" 
-    src="{{ globalUrl + '/storage/uploads/configs/testeira2.png' }}" >
- -->
+
     <img *ngIf="version == '01'" class="testeira-v01" 
     src="{{ globalUrl + '/storage/uploads/configs/testeira1.png' }}" >
 
     <img *ngIf="version == '02'" class="testeira-v02" 
     src="{{ globalUrl + '/storage/uploads/configs/testeira2.png' }}" >
-    <!-- <img class=logo-header src="./assets/imgs/movera-logo.png" /> -->
-    <p [ngClass]="project == 'know-house' ?  'font-style know-house-title-color' : project == 'ava' ?  'font-style black-title-color' : ''">{{titleTesteira}}  {{complementTitle? '| ' + complementTitle : ''}}</p>
+    
+    <p class="header-title header-title-{{ENV.HEADER_TEXT}}">{{titleTesteira}}  {{complementTitle? '| ' + complementTitle : ''}}</p>
   </div>
   <menu-sup></menu-sup>
 </ion-header>
 
-<ion-content [ngClass]="version == '01' ? 'margin-content-l1' : version == '02' ? 'margin-content-l2' : 'margin-content-l1'" padding style="margin-top: 20px; position: relative;" 
-[ngClass]="project == 'marketing-house' ? 'content mrkhouse-custom-bg' : 
-project == 'ead' ? 'content vcc-custom-bg' : 
-  project == 'edicom' ? 'content edicom-custom-bg' : 
-    project == 'hkt369' ? 'content hkt369-custom-bg' : 
-      project == 'know-house' ? 'content knowh-custom-bg' :
-        project == 'simples-trade' ? 'content strade-custom-bg' : 
-          project == 'r2m' ? 'content r2m-custom-bg' :
-            project == 'ava' ? 'content ava-custom-bg' : ''">
+<ion-content class="content {{ENV.PROJECT}}-custom-bg" [ngClass]="version == '01' ? 'margin-content-l1' : version == '02' ? 'margin-content-l2' : 'margin-content-l1'" padding style="margin-top: 20px; position: relative;" >
   
   <ion-searchbar [ngClass]="project == 'know-house' ?  'font-style know-house' : ''" [(ngModel)]="terms" [showCancelButton]="shouldShowCancel" placeholder="O que está buscando?">
   </ion-searchbar>
@@ -37,7 +27,6 @@ project == 'ead' ? 'content vcc-custom-bg' :
             <ion-row>
               <ion-row>          
                 <ion-thumbnail style="position: relative;">
-                  <img *ngIf="projeto.projectConcluded && projeto.projectConcluded == true" style="position: absolute; right: 0; top: 0; left: auto; bottom: auto; height: 60px !important; width: auto;" src={{iconConcluido}}>
                   <img src="{{ projeto.thumb }}">
                 </ion-thumbnail>
               </ion-row>
@@ -69,127 +58,6 @@ project == 'ead' ? 'content vcc-custom-bg' :
           </ion-row>
         </div>
         
-        <ion-list no-lines [ngClass]="projeto.showAulas ? 'listAulas show' : 'listAulas'">
-          <ion-item *ngFor="let item of projeto.lessons " [ngClass]="item.expanded == true ? 'expanded' : ''" >
-            <button detail-none (click)="expandItem(item)" ion-item class="bg-transparent" 
-            *ngIf="item.forCertificate == true &&  item.gotCertified == true || item.forCertificate == false">
-              <ion-buttons end>
-                <ion-item>
-                  <div col-9 style="display: inline-block; vertical-align: middle;">
-                    <h2 [ngClass]="project == 'know-house' ?  'font-style know-house' : ''">{{ item.titulo }}</h2>
-                  </div>
-                  <div col-1 style="display: inline-block; vertical-align: middle;">
-                    <button ion-button clear item-end icon-only class="bg-transparent">
-                      <ion-icon *ngIf="item.expanded == false && project == 'know-house'" name="md-arrow-dropright" style="color: #FC5A16; padding: 0 10px 0 0; vertical-align: middle;"></ion-icon>
-                      <ion-icon *ngIf="item.expanded == true && project == 'know-house'" name="md-arrow-dropdown" style="color: #FC5A16; padding: 0 10px 0 0; vertical-align: middle;"></ion-icon>                    
-
-                      <ion-icon *ngIf="item.expanded == false && project != 'know-house'" name="ios-arrow-forward" style="color: black; padding: 0 10px 0 0; vertical-align: middle;"></ion-icon>
-                      <ion-icon *ngIf="item.expanded == true && project != 'know-house'" name="ios-arrow-down" style="color: black; padding: 0 10px 0 0; vertical-align: middle;"></ion-icon>                    
-                    </button>
-                  </div>
-                  <div col-1 style="display: inline-block; vertical-align: middle;">
-                    <ion-icon *ngIf="item.important == 1" name="ios-information-circle-outline" style="color: black; padding: 0 0 0 10px;"></ion-icon>
-                  </div>
-                </ion-item>
-              </ion-buttons>
-            </button>
-            <expandable [expanded]="item.expanded" [ngClass]="item.expanded == true ? 'expanded' : ''" >
-              <div class=slideVideo style="overflow: auto;">
-
-
-                <div *ngIf="item.contents.length > 0" style="position: relative;">
-
-                    <div *ngIf="item.gotVideo == true || item.youtubeUrl != ''" style="margin-top: 20px;">
-                      <div style="position: relative;">
-                        <img style="width: 100%; margin: auto; display: flex;" src={{item.thumb}}>
-                        <div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; display: flex; justify-content: center; align-items: center;">
-                          <img (click)="presentModal(item.contents)" style="width: 70px; margin: auto; display: flex;" src={{iconPlay}}>
-                        </div>
-                      </div>
-                      <p style="text-align: center;" *ngIf="idiom == '01'">Clique no play para executar o vídeo</p>
-                      <p style="text-align: center;" *ngIf="idiom == '02'">Haz a clic en el play para ver la película.</p>
-                    </div>
-                </div>
-
-                <div *ngIf="item.gotVideo == false && item.youtubeUrl == '' && item.thumb != 'https://edicom.becinteligencia.com/storage/'" style="margin-top: 20px;">
-                  <div style="position: relative;">
-                    <img style="width: 100%; margin: auto; display: flex;" src={{item.thumb}}>
-                  </div>
-                </div>
-            
-                <div [innerHTML]="item.descricao">{{ item.descricao }} </div>
-
-                <div *ngIf="exibirBoxTeste" id=boxQuiz>
-<!--                   <p *ngIf="!exibirNota && idiom == '01'">AVALIAÇÃO DO CURSO – clique para acessar o questionário.</p>
-                  <p *ngIf="!exibirNota && idiom == '02'">EVALUACIÓN DEL CURSO – haz clic para acceder la encuesta.</p> -->
-              
-                  <p *ngIf="exibirNota && idiom == '01'">Sua nota foi: <span>{{nota}}</span> de um total de {{notaMaxima}}.</p>
-                  <p *ngIf="exibirNota && idiom == '02'">Calificación fue: <span>{{nota}}</span> de un total de {{notaMaxima}}.</p>
-              
-                  <button *ngIf="fazerTeste" (click)=openQuiz(item) id=buttonQuiz ion-button full color="light" icon-start>
-                    <ion-icon name="md-bulb"></ion-icon>
-                    <p *ngIf="idiom == '01'">RESPONDER QUESTIONÁRIO</p>
-                    <p *ngIf="idiom == '02'">RESPONDER ENCUESTA</p>
-                  </button>
-              
-                  <button *ngIf="!fazerTeste" ion-button full color="light" icon-start>
-                    <ion-icon name="md-bulb"></ion-icon>
-                    <p *ngIf="idiom == '01'">QUESTIONÁRIO RESPONDIDO</p>
-                    <p *ngIf="idiom == '02'">ENCUESTA RESPONDIDO</p>
-                  </button>      
-              
-                </div>
-
-                <ion-grid class=relatedContent>
-              
-                  <ion-row *ngFor="let attachment of attachments">
-                    <ion-col col-1 style="justify-content: center; display: flex; align-items: center;">
-                      <ion-icon name="clipboard" *ngIf="!attachment.isVideo && attachment.onlineUrl.indexOf('youtu') == -1"></ion-icon>
-                      <ion-icon name="play" *ngIf="attachment.isVideo "></ion-icon>
-                      <ion-icon name="logo-youtube" *ngIf="attachment.onlineUrl != '' && attachment.onlineUrl.indexOf('youtu') > 0"></ion-icon>
-                    </ion-col>
-                    <ion-col col-8><span class=titleContent>{{attachment.name}}</span></ion-col>
-                    <ion-col col-3 style="text-align: center;">
-                      <button ion-button color="secondary" *ngIf="!attachment.isOffline && !attachment.isDownloading && attachment.downloadPermission == 1" outline
-                        style="width: 100%; font-size: 1rem;" (click)="downloadContent(attachment)">
-                        <p *ngIf="idiom == '01'">BAIXAR</p>
-                        <p style="font-size: 0.8rem !important;" *ngIf="idiom == '02'">DESCARGAR</p>
-                      </button>
-                      <button ion-button color="danger" *ngIf="attachment.isOffline && !attachment.isDownloading && attachment.isVideo == false" outline
-                        style="width: 100%" (click)="selectAction(attachment)">
-                        <p>ABRIR</p>
-                      </button>
-
-                      <button ion-button outline style="width: 100%" *ngIf="attachment.isVideo == false && attachment.downloadPermission == 0" color="secondary">
-                        <a style="color: #666; text-decoration:none;" href="{{attachment.onlineUrl}}">ABRIR</a>
-                      </button>
-                    
-                      <button ion-button color="danger" *ngIf="attachment.isOffline && !attachment.isDownloading && attachment.isVideo" outline
-                        style="width: 100%" (click)="selectAction(attachment)">
-                        <p *ngIf="idiom == '01'">ABRIR</p>
-                        <p *ngIf="idiom == '02'">ABRIR</p>                      
-                      </button>
-                      <p *ngIf="attachment.isDownloading" style="margin: 0px; margin-top: 8px; padding: 0px;">
-                        {{ attachment.downloadProgress }}%
-                      </p>
-                      <p *ngIf="attachment.isDownloading" style="margin: 0px; padding: 0px; height: 20px;">
-                        <ion-spinner name="dots"></ion-spinner>
-                      </p>
-                    </ion-col>
-                  </ion-row>
-                </ion-grid>
-              </div>
-              <div style="padding: 15px" *ngIf="item.gotCertified">
-                <a style="margin-bottom:20px;" href="{{urlCertificado}}"  ion-button full
-                  large color="secondary" icon-start>
-                  <ion-icon name="md-school"></ion-icon>
-                  <p *ngIf="idiom == '01'">BAIXE SEU CERTIFICADO</p>
-                  <p *ngIf="idiom == '02'">DESCARGUE SU CERTIFICADO</p>
-                </a>
-              </div>
-            </expandable>
-          </ion-item>
-        </ion-list>
       </ion-item>
     </ion-grid>
   </ion-list>

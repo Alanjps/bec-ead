@@ -103,6 +103,7 @@ $colors: (
   $url-simples-trade: "https://simplestrade.becinteligencia.com//storage//uploads//configs//";
   $url-r2m: "https://readytomarket.becinteligencia.com//storage//uploads//configs//";
   $url-ava: "https://ava.insighttech.com.br//storage//uploads//configs//";
+  $url-tmc: "https://tmc.becinteligencia.com///storage//uploads//configs//";
 
   ion-icon {
     //-------------------------------------------------------
@@ -522,7 +523,62 @@ $colors: (
       &[ng-reflect-is-active="false"]{
         filter: none;
       }
-    }    
+    }
+    
+    //-------------------------------------------------------
+    //TMC -------------------------------------------------------
+    //-------------------------------------------------------
+
+    &[class*="tab-tmc-"]{
+      width: 30px;
+      height: 30px;
+    }
+
+    &[class*="tab-tmc-perfil"]{
+      content: url($url-tmc+"internoApp1.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-tmc-notificacao"]{
+      content: url($url-tmc+"internoApp2.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-tmc-agenda"]{
+      content: url($url-tmc+"internoApp3.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-tmc-foto"]{
+      content: url($url-tmc+"internoApp4.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-tmc-news"]{
+      content: url($url-tmc+"internoApp5.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
   }
 }
 

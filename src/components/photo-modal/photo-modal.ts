@@ -1,6 +1,7 @@
 import { NavParams, Slides, ViewController, AlertController, IonicPage} from 'ionic-angular';
 import { Component, ViewChild } from '@angular/core';
 import { Storage } from '@ionic/storage';
+import { environment as ENV } from '../../environments/environment';
 
 @IonicPage({
   name: 'photo-modal'
@@ -12,6 +13,7 @@ import { Storage } from '@ionic/storage';
 })
 export class PhotoModalComponent {
 
+  public ENV = ENV;
   public videos: Array<any>;
   public photo: any;
   public categories: any;

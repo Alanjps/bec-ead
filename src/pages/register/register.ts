@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, ToastController, LoadingController
 import { LoginPage } from '../login/login';
 import { AuthProvider } from '../../providers/auth/auth';
 import { Storage } from '@ionic/storage';
+import { environment as ENV } from '../../environments/environment';
 
 @IonicPage({
   name: 'register-page'
@@ -19,6 +20,9 @@ export class RegisterPage {
   public background : string;
   public idiom: string = '';
   public project: string;
+  public ENV = ENV;
+  public globalUrl: string = '';
+  public version : string;
 
   public credential: any = {
     documento:'',
@@ -46,7 +50,9 @@ export class RegisterPage {
     public loadingCtrl : LoadingController,
     public storage: Storage
   ) {
-    
+    storage.get('GlobalUrl').then((value) => {
+      this.globalUrl = value;
+    })
   }
 
   /* OCULTA O CAMPO EMPRESA */
@@ -62,6 +68,10 @@ export class RegisterPage {
         edicom
         vcc
       */
+    });
+
+    this.storage.get('LayoutVersion').then((value) => {
+      this.version = value;
     });
   }
 

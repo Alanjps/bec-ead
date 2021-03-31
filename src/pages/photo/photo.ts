@@ -6,6 +6,7 @@ import { trigger, style, transition, animate } from '@angular/animations';
 import { Camera, CameraOptions } from "@ionic-native/camera";
 import { ModalController, ActionSheetController, LoadingController, MenuController } from "ionic-angular";
 import { DomSanitizer } from '@angular/platform-browser';
+import { environment as ENV } from '../../environments/environment';
 
 import moment from 'moment';
 
@@ -41,6 +42,7 @@ import moment from 'moment';
 })
 export class PhotoPage {
 
+  public ENV = ENV;
   public titleTesteira: string = 'Fotos';
   public complementTitle: string = '';
   public version : string;

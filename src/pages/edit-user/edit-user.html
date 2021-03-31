@@ -1,7 +1,4 @@
 <ion-header [ngClass]="version == '01' ? 'principalHeader' : version == '02' ? 'principalHeaderV02' : 'principalHeader'"  class=principalHeader>
-  <!-- <img class=logo-header src="./assets/imgs/movera-logo.png" /> -->
-  <!-- <img [ngClass]="version == '01' ? 'testeira' : version == '02' ? 'testeira-v02' : 'testeira'" 
-  src="{{ globalUrl + '/storage/uploads/configs/testeira1.png' }}" > -->
   <img [ngClass]="version == '01' ? 'principal-icon' : version == '02' ? 'principal-icon-v02' : 'principal-icon'"
      src="{{ globalUrl + '/storage/uploads/configs/logoHeader.png' }}" />
      
@@ -10,25 +7,17 @@
 
   <img *ngIf="version == '02'" class="testeira-v02" 
   src="{{ globalUrl + '/storage/uploads/configs/testeira2.png' }}" >
-  <p [ngClass]="project == 'know-house' ?  'font-style know-house-title-color' : project == 'ava' ?  'font-style black-title-color' : ''">{{titleTesteira}}  {{complementTitle? '| ' + complementTitle : ''}}</p>
+  <p class="header-title header-title-{{ENV.HEADER_TEXT}}">{{titleTesteira}}  {{complementTitle? '| ' + complementTitle : ''}}</p>
   <menu-sup></menu-sup>
 </ion-header>
 
-<ion-content id="body" [ngClass]="version == '01' ? 'margin-content-l1' : version == '02' ? 'margin-content-l2' : 'margin-content-l1'"
-[ngClass]="project == 'marketing-house' ? 'content mrkhouse-custom-bg' : 
-project == 'ead' ? 'content vcc-custom-bg' : 
-  project == 'edicom' ? 'content edicom-custom-bg' : 
-    project == 'hkt369' ? 'content hkt369-custom-bg' : 
-      project == 'know-house' ? 'content knowh-custom-bg' :
-        project == 'simples-trade' ? 'content strade-custom-bg' : 
-          project == 'r2m' ? 'content r2m-custom-bg' :
-            project == 'ava' ? 'content ava-custom-bg' : ''">
-  <!-- <h1 *ngIf="version == '01'">Meus Dados</h1> -->
+<ion-content id="body" class="content {{ENV.PROJECT}}-custom-bg" [ngClass]="version == '01' ? 'margin-content-l1' : version == '02' ? 'margin-content-l2' : 'margin-content-l1'">
+
   <ion-list style="margin: 0 !important; margin-bottom: 300px;">
     <div style="text-align: center;">
       
-        <button (click)="presentActionSheet()" *ngIf="fotoTmp" style="margin: 20px 0px;" ion-button [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" icon-only>
-          <ion-icon name="camera"></ion-icon>
+        <button (click)="presentActionSheet()" *ngIf="fotoTmp" style="margin: 20px 0px;" ion-button class="button-style button-style-{{ENV.PROJECT}}" icon-only>
+          <p><ion-icon name="camera"></ion-icon></p>
         </button>
         
         <button (click)="presentActionSheet()" *ngIf="!fotoTmp && !showCroppedImage" style="padding: 0px; width: 100%; background: transparent;">
@@ -126,7 +115,6 @@ project == 'ead' ? 'content vcc-custom-bg' :
         <div *ngIf="project != 'edicom'" style="white-space: nowrap;  height: 2.5rem;">
           <ion-label *ngIf="idiom =='01'" inline class="perfil perfil-title">Data de Nasc: </ion-label>
           <ion-label *ngIf="idiom =='02'" inline class="perfil perfil-title">Fecha de Nasc: </ion-label>
-<!--           <p class="perfil perfil-input" [brmasker]="{mask:'00/00/0000', len:10, type:'num'}">{{credential.nascimento}}</p> -->
            <p class="perfil perfil-input">{{credential.nascimento}}</p>
         </div>
 
@@ -145,30 +133,29 @@ project == 'ead' ? 'content vcc-custom-bg' :
       </ion-col>
     </ion-row>
   </ion-list>
-  <div style="padding-bottom: 100px;">
+  <div style="padding-bottom: 125px;">
     <ion-grid>
       <ion-row style="display: flex; flex-wrap: wrap;">
         <ion-col *ngIf="showQRCode">
-          <button full style="font-size: 1rem;" [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" ion-button icon-start (click)="showQRCodeBox = !showQRCodeBox">
-            <!-- <ion-icon name="barcode"></ion-icon> -->
+          <button full style="font-size: 1rem;" class="button-style button-style-{{ENV.PROJECT}}" ion-button icon-start (click)="showQRCodeBox = !showQRCodeBox">
              <p *ngIf="idiom =='01'">ID Digital</p>
             <p *ngIf="idiom =='02'">ID Digital</p>
           </button>
         </ion-col>      
         <ion-col style="flex-grow: 2;">
-          <button ion-button full icon-start [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" style="font-size: 1rem; margin-bottom: 10px;" (click)="showDownloads()">
+          <button ion-button full icon-start class="button-style button-style-{{ENV.PROJECT}}" (click)="showDownloads()">
             <p *ngIf="idiom =='01'">Meus Downloads</p>
             <p *ngIf="idiom =='02'">Mis Descargas</p>
           </button>
         </ion-col>
         <ion-col>
-          <button ion-button [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" full icon-start style="font-size: 1rem; margin-bottom: 10px;" (click)="edit()">
+          <button ion-button class="button-style button-style-{{ENV.PROJECT}}" full icon-start (click)="edit()">
             <p *ngIf="idiom =='01'">Editar</p>
             <p *ngIf="idiom =='02'">Editar</p>
           </button>
         </ion-col>
         <ion-col *ngIf="habilitaCampos">
-          <button ion-button full  [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" style="font-size: 1rem;" (click)="doLogout()">
+          <button ion-button full  class="button-style button-style-{{ENV.PROJECT}}" (click)="doLogout()">
             <p *ngIf="idiom =='01'">Sair</p>
             <p *ngIf="idiom =='02'">Salir</p>
           </button>
@@ -181,33 +168,11 @@ project == 'ead' ? 'content vcc-custom-bg' :
       <ngx-qrcode qrc-element-type="url" [qrc-value]="createdCode"></ngx-qrcode>
     </ion-card>
   </div>
-<!--   <ion-grid *ngIf="habilitaCampos">
-    <ion-row>
-      <ion-col col-4>
-        <button ion-button full color="secondary" [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" style="font-size: 1rem;" (click)="makeRegister()">
-          <p *ngIf="idiom =='01'">Salvar</p>
-          <p *ngIf="idiom =='02'">Guardar</p>
-        </button>
-      </ion-col>
-      <ion-col col-4>
-        <button ion-button full color="light" [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" style="font-size: 1rem;" (click)="goBack()">
-          <p *ngIf="idiom =='01'">Voltar</p>
-          <p *ngIf="idiom =='02'">Volver</p>
-        </button>
-      </ion-col>
-      <ion-col col-4>
-        <button ion-button full color="light" [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" style="font-size: 1rem;" (click)="doLogout()">
-          <p *ngIf="idiom =='01'">Sair</p>
-          <p *ngIf="idiom =='02'">Salir</p>
-        </button>
-      </ion-col>
-    </ion-row>
-  </ion-grid> -->
 
   <ion-grid *ngIf="!habilitaCampos">
     <ion-row>
       <ion-col col-12>
-        <button ion-button full color="secondary" [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" class="buttonMedium" (click)="makeRegister()">
+        <button ion-button full color="secondary" class="button-style button-style-{{ENV.PROJECT}}" class="buttonMedium" (click)="makeRegister()">
           <p *ngIf="idiom =='01'">Salvar</p>
           <p *ngIf="idiom =='02'">Guardar</p>
         </button>

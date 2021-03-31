@@ -14,6 +14,8 @@ import { environment as ENV } from '../../environments/environment' ;
 })
 export class LoginPage {
 
+  public ENV = ENV;
+
   private credential: any = {
     documento: '',
     password: '',
@@ -29,7 +31,7 @@ export class LoginPage {
   public oneSignalInfo: any;
   public idiom: string = '';
   public project: string = '';
-
+  
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,

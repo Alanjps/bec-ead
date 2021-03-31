@@ -1,13 +1,13 @@
 webpackJsonp([16],{
 
-/***/ 459:
+/***/ 458:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PhotoModalModule", function() { return PhotoModalModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListVideosModalModule", function() { return ListVideosModalModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__photo_modal__ = __webpack_require__(490);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__list_videos_modal__ = __webpack_require__(488);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(46);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -18,31 +18,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var PhotoModalModule = /** @class */ (function () {
-    function PhotoModalModule() {
+var ListVideosModalModule = /** @class */ (function () {
+    function ListVideosModalModule() {
     }
-    PhotoModalModule = __decorate([
+    ListVideosModalModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
-            declarations: [__WEBPACK_IMPORTED_MODULE_1__photo_modal__["a" /* PhotoModalComponent */]],
-            imports: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicModule */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_1__photo_modal__["a" /* PhotoModalComponent */])],
-            exports: [__WEBPACK_IMPORTED_MODULE_1__photo_modal__["a" /* PhotoModalComponent */]]
+            declarations: [__WEBPACK_IMPORTED_MODULE_1__list_videos_modal__["a" /* ListVideosModalComponent */]],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicModule */],
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_1__list_videos_modal__["a" /* ListVideosModalComponent */])
+            ],
+            exports: [__WEBPACK_IMPORTED_MODULE_1__list_videos_modal__["a" /* ListVideosModalComponent */]]
         })
-    ], PhotoModalModule);
-    return PhotoModalModule;
+    ], ListVideosModalModule);
+    return ListVideosModalModule;
 }());
 
-//# sourceMappingURL=photo-modal.module.js.map
+//# sourceMappingURL=list-videos-modal.module.js.map
 
 /***/ }),
 
-/***/ 490:
+/***/ 488:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PhotoModalComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListVideosModalComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(24);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -55,92 +58,118 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var PhotoModalComponent = /** @class */ (function () {
-    function PhotoModalComponent(navParams, viewCtrl, alertCtrl, storage) {
+var ListVideosModalComponent = /** @class */ (function () {
+    function ListVideosModalComponent(navCtrl, navParams, viewCtrl, dom, loadingCtrl) {
+        this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.viewCtrl = viewCtrl;
-        this.alertCtrl = alertCtrl;
-        this.storage = storage;
-        this.data = false;
-        this.selectedCategory = null;
-        this.contester = false;
-        this.contestEnabled = false;
-        this.idiom = '';
-        this.photo = navParams.data.photo;
-        this.categories = navParams.data.categories;
-        this.contestEnabled = navParams.data.contestEnabled;
-        this.userCategoriesInContest = navParams.data.userCategoriesInContest;
+        this.dom = dom;
+        this.loadingCtrl = loadingCtrl;
+        this.exibirEmbed = false;
+        this.exibirVideo = false;
+        this.exibirThumb = false;
+        this.playVideo = false;
+        this.showPrevious = false;
+        this.showNext = false;
+        this.selectIndex = 0;
+        this.contents = navParams.data;
+        this.getVideos(this.contents);
     }
-    PhotoModalComponent.prototype.ngOnInit = function () {
+    ListVideosModalComponent.prototype.getVideos = function (contents) {
         var _this = this;
-        this.storage.get('Idiom').then(function (value) {
-            _this.idiom = value;
+        //separa somente os videos e seleciona o primeiro conteúdo de vídeo disponível.
+        this.videos = [];
+        contents.forEach(function (element) {
+            if (element.tipo == 'video' || (element.url != null && element.tipo == "undefined"))
+                _this.videos.push(element);
         });
-    };
-    PhotoModalComponent.prototype.categoryChanged = function () {
-        this.contester = false;
-    };
-    PhotoModalComponent.prototype.signContest = function () {
-        var _this = this;
-        if (this.contester == true) {
-            this.contester = false;
-        }
-        else if (this.selectedCategory == null) {
-            var alertText = this.idiom == '01' ? 'Selecione uma categoria primeiramente.' : this.idiom == '02' ? 'Por favor, seleccione una categoría primero.' : '';
-            this.showAlert(alertText);
-        }
-        else {
-            var alreadyInContest = this.userCategoriesInContest.filter(function (ucc) {
-                return ucc.inContest == true && ucc.categoryId == _this.selectedCategory;
-            }).length > 0 ? true : false;
-            if (alreadyInContest == true) {
-                var alertText = this.idiom == '01' ? 'Você já possui 1 foto concorrendo nessa categoria.' : this.idiom == '02' ? 'Ya tienes 1 foto compitiendo en esa categoría' : '';
-                this.showAlert(alertText);
-                this.contester = false;
-            }
-            else {
-                this.contester = true;
+        if (this.videos.length > 0) {
+            this.showVideo(this.videos[0]);
+            this.selectIndex = 0;
+            if (this.videos.length > 1) {
+                this.showNext = true;
             }
         }
+        ;
     };
-    PhotoModalComponent.prototype.showAlert = function (subTitle) {
-        var alert = this.alertCtrl.create({
-            title: this.idiom == '01' ? 'Atenção!' : this.idiom == '02' ? '¡Atención!' : '',
-            subTitle: subTitle,
-            buttons: ['OK']
-        });
-        alert.present();
-    };
-    PhotoModalComponent.prototype.confirm = function () {
-        if (this.selectedCategory == null) {
-            var alertText = this.idiom == '01' ? 'Selecione uma categoria primeiramente.' : this.idiom == '02' ? 'Por favor, seleccione una categoría primero.' : '';
-            this.showAlert(alertText);
-        }
-        else {
-            var data = { sendFile: true, contest: this.contester, categoryId: this.selectedCategory };
-            this.viewCtrl.dismiss(data);
-        }
-    };
-    PhotoModalComponent.prototype.cancel = function () {
+    ListVideosModalComponent.prototype.dismiss = function () {
+        this.exibirEmbed = false;
+        this.exibirVideo = false;
+        this.playVideo = false;
         this.viewCtrl.dismiss();
+    };
+    ListVideosModalComponent.prototype.sanitizer = function (vid) {
+        return this.dom.bypassSecurityTrustResourceUrl(vid);
+    };
+    ListVideosModalComponent.prototype.showVideo = function (conteudo) {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            content: 'Espere...'
+        });
+        loading.present();
+        if (conteudo.url) {
+            this.exibirEmbed = true;
+            this.exibirVideo = false;
+        }
+        else if (conteudo.path) {
+            this.exibirEmbed = false;
+            this.exibirVideo = true;
+        }
+        this.playVideo = true;
+        if (this.exibirVideo == true) {
+            setTimeout(function () {
+                var video = _this.mVideoPlayer.nativeElement;
+                video.src = conteudo.path;
+                loading.dismiss();
+            }, 500);
+        }
+        else if (this.exibirEmbed == true) {
+            this.urlEmbed = this.sanitizer(conteudo.url);
+            loading.dismiss();
+        }
+    };
+    ListVideosModalComponent.prototype.selectNext = function () {
+        var nextIndex = this.selectIndex + 1;
+        if (this.videos.length - 1 >= nextIndex) {
+            this.selectIndex = nextIndex;
+            this.showVideo(this.videos[nextIndex]);
+            if (nextIndex == this.videos.length - 1)
+                this.showNext = false;
+            this.showPrevious = true;
+        }
+    };
+    ListVideosModalComponent.prototype.selectPrevious = function () {
+        var previousIndex = this.selectIndex - 1;
+        if (previousIndex >= 0) {
+            this.selectIndex = previousIndex;
+            this.showVideo(this.videos[previousIndex]);
+            if (previousIndex == 0)
+                this.showPrevious = false;
+            this.showNext = true;
+        }
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_0_ionic_angular__["n" /* Slides */]),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["n" /* Slides */])
-    ], PhotoModalComponent.prototype, "slides", void 0);
-    PhotoModalComponent = __decorate([
+    ], ListVideosModalComponent.prototype, "slides", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewChild"])('videoPlayer'),
+        __metadata("design:type", Object)
+    ], ListVideosModalComponent.prototype, "mVideoPlayer", void 0);
+    ListVideosModalComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
-            selector: 'photo-modal',template:/*ion-inline-start:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\components\photo-modal\photo-modal.html"*/'<ion-content padding>\n\n  <div style="text-align: center; padding: 0 10px 10px 10px;">\n\n    <img src={{photo}}>\n\n  </div>\n\n\n\n  <div *ngIf="contestEnabled == true" style="padding: 5px 0;">\n\n    <p *ngIf="idiom == \'01\'">Participar do concurso?</p>\n\n    <p *ngIf="idiom == \'02\'">¿Participa en el concurso?</p>\n\n    <button *ngIf="contester == false" ion-button color="light" (click)="signContest()" [ngClass]="contester == true ? contest-blue : contest-gray">\n\n      <ion-icon *ngIf="photo" name="md-trophy" style="padding-right: 10px;"></ion-icon> \n\n      <p *ngIf="idiom == \'01\'">Não</p>\n\n      <p *ngIf="idiom == \'02\'">No</p>\n\n    </button>\n\n    <button *ngIf="contester == true" ion-button (click)="signContest()" [ngClass]="contester == true ? contest-blue : contest-gray">\n\n      <ion-icon *ngIf="photo" name="md-trophy" style="padding-right: 10px;"></ion-icon>\n\n      <p *ngIf="idiom == \'01\'">Sim</p> \n\n      <p *ngIf="idiom == \'02\'">Si</p> \n\n    </button>\n\n  </div>\n\n\n\n  <ion-list radio-group [(ngModel)]="selectedCategory" (ionChange)="categoryChanged()">\n\n    <p *ngIf="idiom == \'01\'">Selecione uma das categorias:</p> \n\n    <p *ngIf="idiom == \'02\'">Seleccione una de las categorías:</p> \n\n    \n\n    <ion-item *ngFor="let category of categories">\n\n      <ion-avatar item-start>\n\n        <img src={{category.thumb}}>\n\n      </ion-avatar>\n\n      <ion-label>{{category.title}}</ion-label>\n\n      <ion-radio checked="false" [value]="category.id"></ion-radio>\n\n    </ion-item>\n\n  </ion-list>\n\n\n\n  <div>\n\n    <button [ngClass]="project == \'edicom\' ? \'button-edicom\' : project == \'know-house\' ? \'button-know-house\' : \'button-default\'" ion-button (click)="confirm()">Confirmar</button>\n\n    <button [ngClass]="project == \'edicom\' ? \'button-edicom\' : project == \'know-house\' ? \'button-know-house\' : \'button-default\'" ion-button (click)="cancel()">Cancelar</button>\n\n  </div>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\components\photo-modal\photo-modal.html"*/
+            selector: 'list-videos-modal',template:/*ion-inline-start:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\components\list-videos-modal\list-videos-modal.html"*/'<ion-content padding class="background">\n\n  <div *ngIf="playVideo" style="\n\n    height: 100%;\n\n    display: flex;\n\n    justify-content: center;\n\n    flex-direction: column;\n\n  ">\n\n    <div style="display: flex; justify-content: space-between; height: auto;">\n\n      <div>\n\n        <button ion-button icon-only round small *ngIf="showPrevious == true" (click)="selectPrevious()" style="\n\n        align-self: flex-start;\n\n        margin: 0 0 12px 0;\n\n        padding: 0;" >\n\n          <ion-icon name="md-arrow-back"></ion-icon>\n\n        </button>\n\n\n\n        <button ion-button icon-only round small *ngIf="showNext == true"  (click)="selectNext()" style="\n\n          align-self: flex-start;\n\n          margin: 0 0 12px 0;\n\n          padding-left: 0;" >\n\n          <ion-icon name="md-arrow-forward"></ion-icon>\n\n        </button>\n\n      </div>\n\n\n\n      <button  ion-button icon-only round small (click)="dismiss()" style="\n\n        align-self: flex-end;\n\n        margin: 0 0 12px 0;\n\n        padding: 0;" >\n\n        <ion-icon name="md-close"></ion-icon>\n\n      </button>\n\n    </div>\n\n\n\n    <div *ngIf="exibirVideo">\n\n      <video #videoPlayer class="video-player" autoplay="true" controls controlsList="nodownload" style="max-width: 100%; max-height: 100%;"></video>\n\n    </div>\n\n    \n\n    <div *ngIf="exibirEmbed && urlEmbed">\n\n      <iframe  [src]="urlEmbed" style="width:100%;" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n\n    </div>\n\n    \n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\components\list-videos-modal\list-videos-modal.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0_ionic_angular__["k" /* NavParams */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0_ionic_angular__["j" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["k" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["q" /* ViewController */],
-            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["b" /* AlertController */],
-            __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]])
-    ], PhotoModalComponent);
-    return PhotoModalComponent;
+            __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["c" /* DomSanitizer */],
+            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["g" /* LoadingController */]])
+    ], ListVideosModalComponent);
+    return ListVideosModalComponent;
 }());
 
-//# sourceMappingURL=photo-modal.js.map
+//# sourceMappingURL=list-videos-modal.js.map
 
 /***/ })
 

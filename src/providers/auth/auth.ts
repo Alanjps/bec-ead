@@ -80,6 +80,13 @@ private url:string= '/vcc';
           }
           break;
         }
+        case 'tmc': {
+          this.url = '/tmc';
+          if(this._platform.is("cordova")){
+            this.url = "https://tmc.becinteligencia.com";
+          }
+          break;
+        } 
         default:{
           this.url = '/vcc';
           if(this._platform.is("cordova")){

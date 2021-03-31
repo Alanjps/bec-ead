@@ -1,6 +1,5 @@
 <ion-content padding class="background">
   <div style="padding-top: 80px;">
-    <!-- <h2 *ngIf="version == '01'">Meus Downloads</h2> -->
     <p *ngIf="_attachments.length == 0 && idiom =='01'" style="color: white;">Você ainda não baixou conteúdo offline. Acesse o sistema e baixe seu conteúdo.</p>
     <p *ngIf="_attachments.length == 0 && idiom =='02'" style="color: white;">Aún no ha descargado contenido sin conexión. Accede al sistema y descarga su contenido.</p>
     <ion-list>
@@ -17,8 +16,8 @@
     </ion-list>
 
     <div>
-      <button [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" *ngIf="idiom =='01'" ion-button (click)="close()">Voltar</button>
-      <button [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" *ngIf="idiom =='02'" ion-button (click)="close()">Volver</button>
+      <button class="button-style button-style-{{ENV.PROJECT}}" *ngIf="idiom =='01'" ion-button (click)="close()"><p>Voltar</p></button>
+      <button class="button-style button-style-{{ENV.PROJECT}}" *ngIf="idiom =='02'" ion-button (click)="close()"><p>Volver</p></button>
     </div>
   </div>
 </ion-content>

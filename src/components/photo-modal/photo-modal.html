@@ -32,8 +32,12 @@
   </ion-list>
 
   <div>
-    <button [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" ion-button (click)="confirm()">Confirmar</button>
-    <button [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" ion-button (click)="cancel()">Cancelar</button>
+    <button class="button-style button-style-{{ENV.PROJECT}}" ion-button (click)="confirm()">
+      <p>Confirmar</p>
+    </button>
+    <button class="button-style button-cancel-style-{{ENV.PROJECT}}" ion-button (click)="cancel()">
+      <p>Cancelar</p>
+    </button>
   </div>
 
 </ion-content>

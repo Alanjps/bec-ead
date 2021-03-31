@@ -4,6 +4,7 @@ import { Attachment } from '../../models/attachment.model';
 import { File } from '@ionic-native/file';
 import { FileOpener } from '@ionic-native/file-opener';
 import { Storage } from '@ionic/storage';
+import { environment as ENV } from '../../environments/environment';
 
 @IonicPage({
   name: 'download-modal'
@@ -13,6 +14,7 @@ import { Storage } from '@ionic/storage';
   templateUrl: 'download-modal.html',
 })
 export class DownloadModal {
+  public ENV = ENV;
   private _attachments: Attachment[] = [];
   private readonly _ATTACHMENT_STORAGE_KEY: string = '__MOVERA_ATTACHMENT_STORAGE_KEY';
 

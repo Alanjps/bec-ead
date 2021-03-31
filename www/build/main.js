@@ -1,13 +1,83 @@
-webpackJsonp([20],{
+webpackJsonp([19],{
 
 /***/ 111:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
+var environment = {
+    //TEXT_COLOR_V1: 'text-default-black',  
+    //text-default-black
+    //text-default-white
+    //HEADER_TEXT: 'style-white', 
+    //style-white
+    //style-black
+    //style-orange
+    /*
+     //KNOW-HOUSE -----------------------------------
+      PROJECT: 'know-house',
+      TEXT_COLOR_V1: 'text-default-black',
+      HEADER_TEXT: 'style-orange',
+    
+      PUSHER_APP_ID: "1059211",
+      PUSHER_APP_KEY: "25af961ea9f2ef86b9aa",
+      PUSHER_APP_SECRET: "c6060d1a53114a8365da",
+      PUSHER_APP_CLUSTER: "us2",
+     */
+    /*
+    //EDICOM -----------------------------------
+      PROJECT: 'edicom',
+      TEXT_COLOR_V1: 'text-default-black',
+      HEADER_TEXT: 'style-orange',
+    
+      PUSHER_APP_ID: "1156523",
+        PUSHER_APP_KEY: "7b8b5ea20f7a185be995",
+        PUSHER_APP_SECRET: "789567e75724f82b17dc",
+      PUSHER_APP_CLUSTER: "us2",
+    */
+    /*
+    //R2M -----------------------------------
+      PROJECT: 'r2m',
+      TEXT_COLOR_V1: 'text-default-black',
+      HEADER_TEXT: 'style-white',
+    
+      PUSHER_APP_ID: "1114376",
+        PUSHER_APP_KEY: "fcc53e52875706a30801",
+        PUSHER_APP_SECRET: "742c5c14207ece897af8",
+      PUSHER_APP_CLUSTER: "us2",
+    */
+    /*
+    //SIMPLE TRAINING ------------------------
+      PROJECT: 'simples-trade',
+      TEXT_COLOR_V1: 'text-default-black',
+      HEADER_TEXT: 'style-white',
+    
+      PUSHER_APP_ID: "1124925",
+        PUSHER_APP_KEY: "ae4e465cb80d72743dc8",
+        PUSHER_APP_SECRET: "580c135664656f851c52",
+      PUSHER_APP_CLUSTER: "us2",
+     */
+    //VCC -----------------------------------
+    PROJECT: 'ead',
+    TEXT_COLOR_V1: 'text-default-black',
+    HEADER_TEXT: 'style-white',
+    PUSHER_APP_ID: "1165623",
+    PUSHER_APP_KEY: "458631d9d874e22b5c16",
+    PUSHER_APP_SECRET: "ceac567fed3ab7dd2dd1",
+    PUSHER_APP_CLUSTER: "us2",
+};
+//# sourceMappingURL=environment.js.map
+
+/***/ }),
+
+/***/ 112:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HttpServiceProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(170);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(171);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(38);
@@ -131,6 +201,13 @@ var HttpServiceProvider = /** @class */ (function () {
                                         }
                                         break;
                                     }
+                                    case 'tmc': {
+                                        _this.url = '/tmc';
+                                        if (_this._platform.is("cordova")) {
+                                            _this.url = "https://tmc.becinteligencia.com";
+                                        }
+                                        break;
+                                    }
                                     default: {
                                         _this.url = '/vcc';
                                         if (_this._platform.is("cordova")) {
@@ -212,7 +289,7 @@ var HttpServiceProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 123:
+/***/ 124:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -225,93 +302,89 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 123;
+webpackEmptyAsyncContext.id = 124;
 
 /***/ }),
 
-/***/ 169:
+/***/ 170:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../components/download-modal/download-modal.module": [
 		456,
-		19
+		18
 	],
 	"../components/file-modal/file-modal.module": [
 		457,
-		18
+		17
 	],
 	"../components/list-videos-modal/list-videos-modal.module": [
 		458,
-		17
+		16
 	],
 	"../components/photo-modal/photo-modal.module": [
 		459,
-		16
+		15
 	],
 	"../components/quiz/quiz.module": [
 		460,
-		15
+		14
 	],
 	"../components/user-form/user-form.module": [
 		461,
-		5
+		4
 	],
 	"../pages/chat/chat.module": [
 		470,
-		12
-	],
-	"../pages/edit-user-v02/edit-user-v02.module": [
-		466,
-		1
+		11
 	],
 	"../pages/edit-user/edit-user.module": [
-		467,
+		466,
 		0
 	],
 	"../pages/list-videos-v02/list-videos-v02.module": [
 		471,
-		11
+		10
 	],
 	"../pages/list-videos-v03/list-videos-v03.module": [
 		472,
-		10
+		9
 	],
 	"../pages/list-videos-v04/list-videos-v04.module": [
-		473,
-		7
+		467,
+		6
 	],
 	"../pages/list-videos/list-videos.module": [
-		474,
-		6
+		473,
+		5
 	],
 	"../pages/login/login.module": [
 		468,
-		4
+		3
 	],
 	"../pages/my-downloads/my-downloads.module": [
 		462,
-		13
+		12
 	],
 	"../pages/notification/notification.module": [
 		463,
-		9
+		8
 	],
 	"../pages/photo/photo.module": [
-		475,
-		8
+		474,
+		7
 	],
 	"../pages/recovery-password/recovery-password.module": [
 		464,
-		2
+		1
 	],
 	"../pages/register/register.module": [
 		465,
-		3
+		2
 	],
 	"../pages/tabs/tabs.module": [
 		469,
-		14
+		13
 	]
 };
 function webpackAsyncContext(req) {
@@ -325,12 +398,12 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 169;
+webpackAsyncContext.id = 170;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 341:
+/***/ 342:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -339,9 +412,9 @@ module.exports = webpackAsyncContext;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_storage__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(170);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(171);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_toPromise__ = __webpack_require__(409);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_toPromise__ = __webpack_require__(410);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_toPromise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_moment__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_moment__);
@@ -429,6 +502,13 @@ var AuthProvider = /** @class */ (function () {
                     _this.url = '/ava';
                     if (_this._platform.is("cordova")) {
                         _this.url = "https://ava.insighttech.com.br/";
+                    }
+                    break;
+                }
+                case 'tmc': {
+                    _this.url = '/tmc';
+                    if (_this._platform.is("cordova")) {
+                        _this.url = "https://tmc.becinteligencia.com";
                     }
                     break;
                 }
@@ -663,7 +743,7 @@ var AuthProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 346:
+/***/ 347:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -678,14 +758,14 @@ var isCordovaAvailable = function () {
 
 /***/ }),
 
-/***/ 349:
+/***/ 350:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PusherServiceProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(125);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(432);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(111);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(38);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -728,13 +808,13 @@ var PusherServiceProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 350:
+/***/ 351:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(351);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(371);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(352);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(372);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -742,36 +822,36 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 371:
+/***/ 372:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__(125);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_camera__ = __webpack_require__(344);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_file__ = __webpack_require__(342);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_file_opener__ = __webpack_require__(343);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_file_transfer__ = __webpack_require__(345);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__ = __webpack_require__(126);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_status_bar__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_camera__ = __webpack_require__(345);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_file__ = __webpack_require__(343);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_file_opener__ = __webpack_require__(344);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_file_transfer__ = __webpack_require__(346);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_status_bar__ = __webpack_require__(128);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_storage__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_ionic_angular__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_auth_auth__ = __webpack_require__(341);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_http_service_http_service__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_auth_auth__ = __webpack_require__(342);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_http_service_http_service__ = __webpack_require__(112);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__app_component__ = __webpack_require__(450);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_native_call_number_ngx__ = __webpack_require__(451);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_native_onesignal__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_ngx_qrcode2__ = __webpack_require__(347);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_ngx_qrcode2__ = __webpack_require__(349);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_ngx_pagination__ = __webpack_require__(452);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__angular_platform_browser_animations__ = __webpack_require__(453);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__ionic_native_image_picker_ngx__ = __webpack_require__(455);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_angular_cropperjs__ = __webpack_require__(348);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_angular_cropperjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_22_angular_cropperjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__providers_pusher_service_pusher_service__ = __webpack_require__(349);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__providers_pusher_service_pusher_service__ = __webpack_require__(350);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -834,14 +914,13 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/notification/notification.module#NotificationPageModule', name: 'notification-page', segment: 'notification', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/recovery-password/recovery-password.module#RecoveryPasswordPageModule', name: 'recovey-password-page', segment: 'recovery-password', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'register-page', segment: 'register', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/edit-user-v02/edit-user-v02.module#EditUserV02PageModule', name: 'edit-user-v02-page', segment: 'edit-user-v02', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/edit-user/edit-user.module#EditUserPageModule', name: 'edit-user-page', segment: 'edit-user', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/list-videos-v04/list-videos-v04.module#ListVideosPageV04Module', name: 'list-videos-page-v04', segment: 'list-videos-v04', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'login-page', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'tab-page', segment: 'tabs', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/chat/chat.module#ChatPageModule', name: 'chat-page', segment: 'chat', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/list-videos-v02/list-videos-v02.module#ListVideosV02PageModule', name: 'list-videos-v02-page', segment: 'list-videos-v02', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/list-videos-v03/list-videos-v03.module#ListVideosV03PageModule', name: 'list-videos-v03-page', segment: 'list-videos-v03', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/list-videos-v04/list-videos-v04.module#ListVideosPageV04Module', name: 'list-videos-page-v04', segment: 'list-videos-v04', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/list-videos/list-videos.module#ListVideosPageModule', name: 'list-videos-page', segment: 'list-videos', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/photo/photo.module#PhotoPageModule', name: 'photo-page', segment: 'photo', priority: 'low', defaultHistory: [] }
                     ]
@@ -882,264 +961,264 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 411:
+/***/ 412:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./af": 171,
-	"./af.js": 171,
-	"./ar": 172,
-	"./ar-dz": 173,
-	"./ar-dz.js": 173,
-	"./ar-kw": 174,
-	"./ar-kw.js": 174,
-	"./ar-ly": 175,
-	"./ar-ly.js": 175,
-	"./ar-ma": 176,
-	"./ar-ma.js": 176,
-	"./ar-sa": 177,
-	"./ar-sa.js": 177,
-	"./ar-tn": 178,
-	"./ar-tn.js": 178,
-	"./ar.js": 172,
-	"./az": 179,
-	"./az.js": 179,
-	"./be": 180,
-	"./be.js": 180,
-	"./bg": 181,
-	"./bg.js": 181,
-	"./bm": 182,
-	"./bm.js": 182,
-	"./bn": 183,
-	"./bn.js": 183,
-	"./bo": 184,
-	"./bo.js": 184,
-	"./br": 185,
-	"./br.js": 185,
-	"./bs": 186,
-	"./bs.js": 186,
-	"./ca": 187,
-	"./ca.js": 187,
-	"./cs": 188,
-	"./cs.js": 188,
-	"./cv": 189,
-	"./cv.js": 189,
-	"./cy": 190,
-	"./cy.js": 190,
-	"./da": 191,
-	"./da.js": 191,
-	"./de": 192,
-	"./de-at": 193,
-	"./de-at.js": 193,
-	"./de-ch": 194,
-	"./de-ch.js": 194,
-	"./de.js": 192,
-	"./dv": 195,
-	"./dv.js": 195,
-	"./el": 196,
-	"./el.js": 196,
-	"./en-SG": 197,
-	"./en-SG.js": 197,
-	"./en-au": 198,
-	"./en-au.js": 198,
-	"./en-ca": 199,
-	"./en-ca.js": 199,
-	"./en-gb": 200,
-	"./en-gb.js": 200,
-	"./en-ie": 201,
-	"./en-ie.js": 201,
-	"./en-il": 202,
-	"./en-il.js": 202,
-	"./en-nz": 203,
-	"./en-nz.js": 203,
-	"./eo": 204,
-	"./eo.js": 204,
-	"./es": 205,
-	"./es-do": 206,
-	"./es-do.js": 206,
-	"./es-us": 207,
-	"./es-us.js": 207,
-	"./es.js": 205,
-	"./et": 208,
-	"./et.js": 208,
-	"./eu": 209,
-	"./eu.js": 209,
-	"./fa": 210,
-	"./fa.js": 210,
-	"./fi": 211,
-	"./fi.js": 211,
-	"./fo": 212,
-	"./fo.js": 212,
-	"./fr": 213,
-	"./fr-ca": 214,
-	"./fr-ca.js": 214,
-	"./fr-ch": 215,
-	"./fr-ch.js": 215,
-	"./fr.js": 213,
-	"./fy": 216,
-	"./fy.js": 216,
-	"./ga": 217,
-	"./ga.js": 217,
-	"./gd": 218,
-	"./gd.js": 218,
-	"./gl": 219,
-	"./gl.js": 219,
-	"./gom-latn": 220,
-	"./gom-latn.js": 220,
-	"./gu": 221,
-	"./gu.js": 221,
-	"./he": 222,
-	"./he.js": 222,
-	"./hi": 223,
-	"./hi.js": 223,
-	"./hr": 224,
-	"./hr.js": 224,
-	"./hu": 225,
-	"./hu.js": 225,
-	"./hy-am": 226,
-	"./hy-am.js": 226,
-	"./id": 227,
-	"./id.js": 227,
-	"./is": 228,
-	"./is.js": 228,
-	"./it": 229,
-	"./it-ch": 230,
-	"./it-ch.js": 230,
-	"./it.js": 229,
-	"./ja": 231,
-	"./ja.js": 231,
-	"./jv": 232,
-	"./jv.js": 232,
-	"./ka": 233,
-	"./ka.js": 233,
-	"./kk": 234,
-	"./kk.js": 234,
-	"./km": 235,
-	"./km.js": 235,
-	"./kn": 236,
-	"./kn.js": 236,
-	"./ko": 237,
-	"./ko.js": 237,
-	"./ku": 238,
-	"./ku.js": 238,
-	"./ky": 239,
-	"./ky.js": 239,
-	"./lb": 240,
-	"./lb.js": 240,
-	"./lo": 241,
-	"./lo.js": 241,
-	"./lt": 242,
-	"./lt.js": 242,
-	"./lv": 243,
-	"./lv.js": 243,
-	"./me": 244,
-	"./me.js": 244,
-	"./mi": 245,
-	"./mi.js": 245,
-	"./mk": 246,
-	"./mk.js": 246,
-	"./ml": 247,
-	"./ml.js": 247,
-	"./mn": 248,
-	"./mn.js": 248,
-	"./mr": 249,
-	"./mr.js": 249,
-	"./ms": 250,
-	"./ms-my": 251,
-	"./ms-my.js": 251,
-	"./ms.js": 250,
-	"./mt": 252,
-	"./mt.js": 252,
-	"./my": 253,
-	"./my.js": 253,
-	"./nb": 254,
-	"./nb.js": 254,
-	"./ne": 255,
-	"./ne.js": 255,
-	"./nl": 256,
-	"./nl-be": 257,
-	"./nl-be.js": 257,
-	"./nl.js": 256,
-	"./nn": 258,
-	"./nn.js": 258,
-	"./pa-in": 259,
-	"./pa-in.js": 259,
-	"./pl": 260,
-	"./pl.js": 260,
-	"./pt": 261,
-	"./pt-br": 262,
-	"./pt-br.js": 262,
-	"./pt.js": 261,
-	"./ro": 263,
-	"./ro.js": 263,
-	"./ru": 264,
-	"./ru.js": 264,
-	"./sd": 265,
-	"./sd.js": 265,
-	"./se": 266,
-	"./se.js": 266,
-	"./si": 267,
-	"./si.js": 267,
-	"./sk": 268,
-	"./sk.js": 268,
-	"./sl": 269,
-	"./sl.js": 269,
-	"./sq": 270,
-	"./sq.js": 270,
-	"./sr": 271,
-	"./sr-cyrl": 272,
-	"./sr-cyrl.js": 272,
-	"./sr.js": 271,
-	"./ss": 273,
-	"./ss.js": 273,
-	"./sv": 274,
-	"./sv.js": 274,
-	"./sw": 275,
-	"./sw.js": 275,
-	"./ta": 276,
-	"./ta.js": 276,
-	"./te": 277,
-	"./te.js": 277,
-	"./tet": 278,
-	"./tet.js": 278,
-	"./tg": 279,
-	"./tg.js": 279,
-	"./th": 280,
-	"./th.js": 280,
-	"./tl-ph": 281,
-	"./tl-ph.js": 281,
-	"./tlh": 282,
-	"./tlh.js": 282,
-	"./tr": 283,
-	"./tr.js": 283,
-	"./tzl": 284,
-	"./tzl.js": 284,
-	"./tzm": 285,
-	"./tzm-latn": 286,
-	"./tzm-latn.js": 286,
-	"./tzm.js": 285,
-	"./ug-cn": 287,
-	"./ug-cn.js": 287,
-	"./uk": 288,
-	"./uk.js": 288,
-	"./ur": 289,
-	"./ur.js": 289,
-	"./uz": 290,
-	"./uz-latn": 291,
-	"./uz-latn.js": 291,
-	"./uz.js": 290,
-	"./vi": 292,
-	"./vi.js": 292,
-	"./x-pseudo": 293,
-	"./x-pseudo.js": 293,
-	"./yo": 294,
-	"./yo.js": 294,
-	"./zh-cn": 295,
-	"./zh-cn.js": 295,
-	"./zh-hk": 296,
-	"./zh-hk.js": 296,
-	"./zh-tw": 297,
-	"./zh-tw.js": 297
+	"./af": 172,
+	"./af.js": 172,
+	"./ar": 173,
+	"./ar-dz": 174,
+	"./ar-dz.js": 174,
+	"./ar-kw": 175,
+	"./ar-kw.js": 175,
+	"./ar-ly": 176,
+	"./ar-ly.js": 176,
+	"./ar-ma": 177,
+	"./ar-ma.js": 177,
+	"./ar-sa": 178,
+	"./ar-sa.js": 178,
+	"./ar-tn": 179,
+	"./ar-tn.js": 179,
+	"./ar.js": 173,
+	"./az": 180,
+	"./az.js": 180,
+	"./be": 181,
+	"./be.js": 181,
+	"./bg": 182,
+	"./bg.js": 182,
+	"./bm": 183,
+	"./bm.js": 183,
+	"./bn": 184,
+	"./bn.js": 184,
+	"./bo": 185,
+	"./bo.js": 185,
+	"./br": 186,
+	"./br.js": 186,
+	"./bs": 187,
+	"./bs.js": 187,
+	"./ca": 188,
+	"./ca.js": 188,
+	"./cs": 189,
+	"./cs.js": 189,
+	"./cv": 190,
+	"./cv.js": 190,
+	"./cy": 191,
+	"./cy.js": 191,
+	"./da": 192,
+	"./da.js": 192,
+	"./de": 193,
+	"./de-at": 194,
+	"./de-at.js": 194,
+	"./de-ch": 195,
+	"./de-ch.js": 195,
+	"./de.js": 193,
+	"./dv": 196,
+	"./dv.js": 196,
+	"./el": 197,
+	"./el.js": 197,
+	"./en-SG": 198,
+	"./en-SG.js": 198,
+	"./en-au": 199,
+	"./en-au.js": 199,
+	"./en-ca": 200,
+	"./en-ca.js": 200,
+	"./en-gb": 201,
+	"./en-gb.js": 201,
+	"./en-ie": 202,
+	"./en-ie.js": 202,
+	"./en-il": 203,
+	"./en-il.js": 203,
+	"./en-nz": 204,
+	"./en-nz.js": 204,
+	"./eo": 205,
+	"./eo.js": 205,
+	"./es": 206,
+	"./es-do": 207,
+	"./es-do.js": 207,
+	"./es-us": 208,
+	"./es-us.js": 208,
+	"./es.js": 206,
+	"./et": 209,
+	"./et.js": 209,
+	"./eu": 210,
+	"./eu.js": 210,
+	"./fa": 211,
+	"./fa.js": 211,
+	"./fi": 212,
+	"./fi.js": 212,
+	"./fo": 213,
+	"./fo.js": 213,
+	"./fr": 214,
+	"./fr-ca": 215,
+	"./fr-ca.js": 215,
+	"./fr-ch": 216,
+	"./fr-ch.js": 216,
+	"./fr.js": 214,
+	"./fy": 217,
+	"./fy.js": 217,
+	"./ga": 218,
+	"./ga.js": 218,
+	"./gd": 219,
+	"./gd.js": 219,
+	"./gl": 220,
+	"./gl.js": 220,
+	"./gom-latn": 221,
+	"./gom-latn.js": 221,
+	"./gu": 222,
+	"./gu.js": 222,
+	"./he": 223,
+	"./he.js": 223,
+	"./hi": 224,
+	"./hi.js": 224,
+	"./hr": 225,
+	"./hr.js": 225,
+	"./hu": 226,
+	"./hu.js": 226,
+	"./hy-am": 227,
+	"./hy-am.js": 227,
+	"./id": 228,
+	"./id.js": 228,
+	"./is": 229,
+	"./is.js": 229,
+	"./it": 230,
+	"./it-ch": 231,
+	"./it-ch.js": 231,
+	"./it.js": 230,
+	"./ja": 232,
+	"./ja.js": 232,
+	"./jv": 233,
+	"./jv.js": 233,
+	"./ka": 234,
+	"./ka.js": 234,
+	"./kk": 235,
+	"./kk.js": 235,
+	"./km": 236,
+	"./km.js": 236,
+	"./kn": 237,
+	"./kn.js": 237,
+	"./ko": 238,
+	"./ko.js": 238,
+	"./ku": 239,
+	"./ku.js": 239,
+	"./ky": 240,
+	"./ky.js": 240,
+	"./lb": 241,
+	"./lb.js": 241,
+	"./lo": 242,
+	"./lo.js": 242,
+	"./lt": 243,
+	"./lt.js": 243,
+	"./lv": 244,
+	"./lv.js": 244,
+	"./me": 245,
+	"./me.js": 245,
+	"./mi": 246,
+	"./mi.js": 246,
+	"./mk": 247,
+	"./mk.js": 247,
+	"./ml": 248,
+	"./ml.js": 248,
+	"./mn": 249,
+	"./mn.js": 249,
+	"./mr": 250,
+	"./mr.js": 250,
+	"./ms": 251,
+	"./ms-my": 252,
+	"./ms-my.js": 252,
+	"./ms.js": 251,
+	"./mt": 253,
+	"./mt.js": 253,
+	"./my": 254,
+	"./my.js": 254,
+	"./nb": 255,
+	"./nb.js": 255,
+	"./ne": 256,
+	"./ne.js": 256,
+	"./nl": 257,
+	"./nl-be": 258,
+	"./nl-be.js": 258,
+	"./nl.js": 257,
+	"./nn": 259,
+	"./nn.js": 259,
+	"./pa-in": 260,
+	"./pa-in.js": 260,
+	"./pl": 261,
+	"./pl.js": 261,
+	"./pt": 262,
+	"./pt-br": 263,
+	"./pt-br.js": 263,
+	"./pt.js": 262,
+	"./ro": 264,
+	"./ro.js": 264,
+	"./ru": 265,
+	"./ru.js": 265,
+	"./sd": 266,
+	"./sd.js": 266,
+	"./se": 267,
+	"./se.js": 267,
+	"./si": 268,
+	"./si.js": 268,
+	"./sk": 269,
+	"./sk.js": 269,
+	"./sl": 270,
+	"./sl.js": 270,
+	"./sq": 271,
+	"./sq.js": 271,
+	"./sr": 272,
+	"./sr-cyrl": 273,
+	"./sr-cyrl.js": 273,
+	"./sr.js": 272,
+	"./ss": 274,
+	"./ss.js": 274,
+	"./sv": 275,
+	"./sv.js": 275,
+	"./sw": 276,
+	"./sw.js": 276,
+	"./ta": 277,
+	"./ta.js": 277,
+	"./te": 278,
+	"./te.js": 278,
+	"./tet": 279,
+	"./tet.js": 279,
+	"./tg": 280,
+	"./tg.js": 280,
+	"./th": 281,
+	"./th.js": 281,
+	"./tl-ph": 282,
+	"./tl-ph.js": 282,
+	"./tlh": 283,
+	"./tlh.js": 283,
+	"./tr": 284,
+	"./tr.js": 284,
+	"./tzl": 285,
+	"./tzl.js": 285,
+	"./tzm": 286,
+	"./tzm-latn": 287,
+	"./tzm-latn.js": 287,
+	"./tzm.js": 286,
+	"./ug-cn": 288,
+	"./ug-cn.js": 288,
+	"./uk": 289,
+	"./uk.js": 289,
+	"./ur": 290,
+	"./ur.js": 290,
+	"./uz": 291,
+	"./uz-latn": 292,
+	"./uz-latn.js": 292,
+	"./uz.js": 291,
+	"./vi": 293,
+	"./vi.js": 293,
+	"./x-pseudo": 294,
+	"./x-pseudo.js": 294,
+	"./yo": 295,
+	"./yo.js": 295,
+	"./zh-cn": 296,
+	"./zh-cn.js": 296,
+	"./zh-hk": 297,
+	"./zh-hk.js": 297,
+	"./zh-tw": 298,
+	"./zh-tw.js": 298
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -1155,51 +1234,7 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 411;
-
-/***/ }),
-
-/***/ 432:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
-var environment = {
-    /*
-     //KNOW-HOUSE -----------------------------------
-      PUSHER_APP_ID: "1059211",
-      PUSHER_APP_KEY: "25af961ea9f2ef86b9aa",
-      PUSHER_APP_SECRET: "c6060d1a53114a8365da",
-      PUSHER_APP_CLUSTER: "us2",
-    */
-    /*
-    //EDICOM -----------------------------------
-      PUSHER_APP_ID: "1156523",
-        PUSHER_APP_KEY: "7b8b5ea20f7a185be995",
-        PUSHER_APP_SECRET: "789567e75724f82b17dc",
-      PUSHER_APP_CLUSTER: "us2",
-    */
-    /*
-    //R2M -----------------------------------
-      PUSHER_APP_ID: "1114376",
-        PUSHER_APP_KEY: "fcc53e52875706a30801",
-        PUSHER_APP_SECRET: "742c5c14207ece897af8",
-      PUSHER_APP_CLUSTER: "us2",
-    */
-    /*
-    //SIMPLE TRAINING ------------------------
-      PUSHER_APP_ID: "1124925",
-        PUSHER_APP_KEY: "ae4e465cb80d72743dc8",
-        PUSHER_APP_SECRET: "580c135664656f851c52",
-      PUSHER_APP_CLUSTER: "us2",
-     */
-    //VCC -----------------------------------
-    PUSHER_APP_ID: "1165623",
-    PUSHER_APP_KEY: "458631d9d874e22b5c16",
-    PUSHER_APP_SECRET: "ceac567fed3ab7dd2dd1",
-    PUSHER_APP_CLUSTER: "us2",
-};
-//# sourceMappingURL=environment.js.map
+webpackContext.id = 412;
 
 /***/ }),
 
@@ -1210,12 +1245,13 @@ var environment = {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(127);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_http_service_http_service__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_http_service_http_service__ = __webpack_require__(112);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_onesignal__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__common_is_cordova_available__ = __webpack_require__(346);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__common_is_cordova_available__ = __webpack_require__(347);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__environments_environment__ = __webpack_require__(111);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1268,6 +1304,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 
 
 
+
 var MyApp = /** @class */ (function () {
     function MyApp(storage, platform, statusBar, splashScreen, oneSignal, http) {
         var _this = this;
@@ -1277,6 +1314,7 @@ var MyApp = /** @class */ (function () {
         this.projectName = null;
         this.onesignalAppId = '';
         this.firebaseSenderId = '';
+        this.ENV = __WEBPACK_IMPORTED_MODULE_8__environments_environment__["a" /* environment */];
         this.clearStorage(storage);
         if (platform.is('android')) {
             storage.set('Platform', 'android');
@@ -1299,6 +1337,7 @@ var MyApp = /** @class */ (function () {
             //6 -> simples-trade
             //7 -> r2m
             //8 -> ava
+            //9 -> tmc
             _this.projectNumber = 1;
             switch (_this.projectNumber) {
                 case 0:
@@ -1306,6 +1345,7 @@ var MyApp = /** @class */ (function () {
                     _this.firebaseSenderId = '23981024898';
                     _this.projectName = 'localhost';
                     storage.set('Idiom', '01'); //português
+                    storage.set('TextColor', 'black'); //português
                     break;
                 case 1:
                     _this.onesignalAppId = '946eb156-716e-4000-853f-18f41cc2b193';
@@ -1355,6 +1395,12 @@ var MyApp = /** @class */ (function () {
                     _this.projectName = 'ava';
                     storage.set('Idiom', '01'); //português
                     break;
+                case 9:
+                    _this.onesignalAppId = 'c4a92409-ba2f-4001-bd59-af1b24ae58a1';
+                    _this.firebaseSenderId = '732312096020';
+                    _this.projectName = 'tmc';
+                    storage.set('Idiom', '02'); //espanhol
+                    break;
             }
             // OneSignal Code start:
             // Enable to debug issues:
@@ -1377,7 +1423,6 @@ var MyApp = /** @class */ (function () {
                 */
                 _this.oneSignal.startInit(_this.onesignalAppId, _this.firebaseSenderId);
                 _this.oneSignal.handleNotificationReceived().subscribe(function (jsonData) {
-                    console.log("\n\nNOTIFICAÇÃO RECEBIDA", jsonData);
                 });
                 _this.oneSignal.endInit();
             }
@@ -1418,6 +1463,10 @@ var MyApp = /** @class */ (function () {
                     }
                     case 'ava': {
                         url = 'https://ava.insighttech.com.br';
+                        break;
+                    }
+                    case 'tmc': {
+                        url = 'https://tmc.becinteligencia.com';
                         break;
                     }
                 }
@@ -1498,5 +1547,5 @@ var MyApp = /** @class */ (function () {
 
 /***/ })
 
-},[350]);
+},[351]);
 //# sourceMappingURL=main.js.map

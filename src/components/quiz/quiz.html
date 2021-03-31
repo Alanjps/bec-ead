@@ -1,9 +1,7 @@
 
 <ion-header [ngClass]="version == '01' ? 'principalHeader' : version == '02' ? 'principalHeaderV02' : 'principalHeader'">
   <div>
-<!--     <img [ngClass]="version == '01' ? 'testeira' : version == '02' ? 'testeira-v02' : 'testeira'" 
-    src="{{ globalUrl + '/storage/uploads/configs/testeira2.png' }}" >
- -->
+
     <img [ngClass]="version == '01' ? 'principal-icon' : version == '02' ? 'principal-icon-v02' : 'principal-icon'"
      src="{{ globalUrl + '/storage/uploads/configs/logoHeader.png' }}" />
 
@@ -54,12 +52,12 @@
       </ion-list>
     </div>
   
-    <button ion-button full [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" (click)="salva()">
+    <button ion-button full class="button-style button-style-{{ENV.PROJECT}}" (click)="salva()">
       <p *ngIf="idiom == '01'">SALVAR RESPOSTAS</p>
       <p *ngIf="idiom == '02'">GUARDAR RESPUESTA</p>
     </button>
-    <button ion-button full icon-start color="light" [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-cancel-know-house' : 'button-default'" (click)="fechar()">
-      CANCELAR
+    <button ion-button full icon-start color="light" class="button-style button-cancel-style-{{ENV.PROJECT}}" (click)="fechar()">
+      <p>CANCELAR</p>
     </button>
   
     <ion-select class="hidden" #selectFile interface="action-sheet" [(ngModel)]="this.galleryFile"

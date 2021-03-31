@@ -6,6 +6,7 @@ import { Storage } from '@ionic/storage';
 import { HttpServiceProvider } from '../providers/http-service/http-service';
 import { OneSignal } from '@ionic-native/onesignal';
 import { isCordovaAvailable } from '../common/is-cordova-available';
+import { environment as ENV } from '../environments/environment';
 
 @Component({
   templateUrl: 'app.html'
@@ -19,6 +20,7 @@ export class MyApp {
   projectName: string = null;
   onesignalAppId: string = '';
   firebaseSenderId: string = '';
+  public ENV = ENV;
 
   constructor(
     storage: Storage,
@@ -53,6 +55,7 @@ export class MyApp {
         //6 -> simples-trade
         //7 -> r2m
         //8 -> ava
+        //9 -> tmc
         this.projectNumber = 1;
 
         switch(this.projectNumber){
@@ -61,6 +64,7 @@ export class MyApp {
             this.firebaseSenderId='23981024898';
             this.projectName = 'localhost';
             storage.set('Idiom','01'); //português
+            storage.set('TextColor','black'); //português
             break;
           case 1:
             this.onesignalAppId='946eb156-716e-4000-853f-18f41cc2b193';
@@ -110,6 +114,12 @@ export class MyApp {
             this.projectName = 'ava';
             storage.set('Idiom','01'); //português
             break;
+          case 9:
+            this.onesignalAppId='c4a92409-ba2f-4001-bd59-af1b24ae58a1';
+            this.firebaseSenderId='732312096020';
+            this.projectName = 'tmc';
+            storage.set('Idiom','02'); //espanhol
+            break;
         }
 
         // OneSignal Code start:
@@ -135,7 +145,6 @@ export class MyApp {
 
           this.oneSignal.startInit(this.onesignalAppId , this.firebaseSenderId);
           this.oneSignal.handleNotificationReceived().subscribe((jsonData) => {
-            console.log("\n\nNOTIFICAÇÃO RECEBIDA",jsonData);
           });
           this.oneSignal.endInit();
 
@@ -179,6 +188,10 @@ export class MyApp {
             }
             case 'ava': {
               url = 'https://ava.insighttech.com.br';
+              break;
+            }
+            case 'tmc': {
+              url = 'https://tmc.becinteligencia.com';
               break;
             }
           }

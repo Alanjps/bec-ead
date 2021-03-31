@@ -2,31 +2,21 @@
   <div>
     <img [ngClass]="version == '01' ? 'principal-icon' : version == '02' ? 'principal-icon-v02' : 'principal-icon'"
      src="{{ globalUrl + '/storage/uploads/configs/logoHeader.png' }}" />
-<!--     <img [ngClass]="version == '01' ? 'testeira' : version == '02' ? 'testeira-v02' : 'testeira'" 
-    src="{{ globalUrl + '/storage/uploads/configs/testeira2.png' }}" >
- -->
+
     <img *ngIf="version == '01'" class="testeira-v01" 
     src="{{ globalUrl + '/storage/uploads/configs/testeira1.png' }}" >
 
     <img *ngIf="version == '02'" class="testeira-v02" 
     src="{{ globalUrl + '/storage/uploads/configs/testeira2.png' }}" >
-    <!-- <img class=logo-header src="./assets/imgs/movera-logo.png" /> -->
-    <p [ngClass]="project == 'know-house' ?  'font-style know-house-title-color' : project == 'ava' ?  'font-style black-title-color' : ''">{{titleTesteira}}  {{complementTitle? '| ' + complementTitle : ''}}</p>
+
+    <p class="header-title header-title-{{ENV.HEADER_TEXT}}">{{titleTesteira}}  {{complementTitle? '| ' + complementTitle : ''}}</p>
   </div>
   <menu-sup></menu-sup>
 </ion-header>
 
-<ion-content padding style="margin-top: 20px; position: relative;" [ngClass]="version == '01' ? 'margin-content-l1' : version == '02' ? 'margin-content-l2' : 'margin-content-l1'"
-[ngClass]="project == 'marketing-house' ? 'content mrkhouse-custom-bg' : 
-project == 'ead' ? 'content vcc-custom-bg' : 
-  project == 'edicom' ? 'content edicom-custom-bg' : 
-    project == 'hkt369' ? 'content hkt369-custom-bg' : 
-      project == 'know-house' ? 'content knowh-custom-bg' :
-        project == 'simples-trade' ? 'content strade-custom-bg' : 
-          project == 'r2m' ? 'content r2m-custom-bg' :
-            project == 'ava' ? 'content ava-custom-bg' : ''">
+<ion-content class="content {{ENV.PROJECT}}-custom-bg" padding style="margin-top: 20px; position: relative;" [ngClass]="version == '01' ? 'margin-content-l1' : version == '02' ? 'margin-content-l2' : 'margin-content-l1'">
   
-  <ion-searchbar [ngClass]="project == 'know-house' ?  'font-style know-house' : ''" [(ngModel)]="terms" [showCancelButton]="shouldShowCancel" placeholder="O que está buscando?">
+  <ion-searchbar [(ngModel)]="terms" [showCancelButton]="shouldShowCancel" placeholder="O que está buscando?">
   </ion-searchbar>
 
   <ion-list no-lines class="lessons-container" *ngIf="playVideo == false">
@@ -103,11 +93,6 @@ project == 'ead' ? 'content vcc-custom-bg' :
                 <div [innerHTML]="item.descricao">{{ item.descricao }} </div>
 
                 <div *ngIf="exibirBoxTeste" id=boxQuiz>
-                  <!-- <p *ngIf="!exibirNota">AVALIAÇÃO DO CURSO – clique para acessar o questionário.</p> -->
-              
-<!--                   <p *ngIf="!exibirNota && idiom == '01'">AVALIAÇÃO DO CURSO – clique para acessar o questionário.</p>
-                  <p *ngIf="!exibirNota && idiom == '02'">EVALUACIÓN DEL CURSO – haz clic para acceder la encuesta.</p> -->
-              
                   <p *ngIf="exibirNota && idiom == '01'">Sua nota foi: <span>{{nota}}</span> de um total de {{notaMaxima}}.</p>
                   <p *ngIf="exibirNota && idiom == '02'">Calificación fue: <span>{{nota}}</span> de un total de {{notaMaxima}}.</p>
               

@@ -8,6 +8,7 @@ import { HttpServiceProvider } from '../../providers/http-service/http-service';
 import { DatePipe } from '@angular/common';
 import moment from 'moment';
 import { AngularCropperjsComponent } from 'angular-cropperjs';
+import { environment as ENV } from '../../environments/environment' ;
 
 @IonicPage({
   name: 'edit-user-page'
@@ -33,6 +34,7 @@ export class EditUserPage {
     company_id:''
   };
 
+  public ENV = ENV;
   public habilitaCampos:boolean = true;
   public clienteThumb:string = "";
   public foto:string="";

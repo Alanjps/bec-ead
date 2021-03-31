@@ -3,7 +3,7 @@ import { NavController, NavParams, LoadingController, IonicPage } from 'ionic-an
 import { Storage } from '@ionic/storage';
 import { HttpServiceProvider } from '../../providers/http-service/http-service';
 import moment from 'moment';
-
+import { environment as ENV } from '../../environments/environment';
 
 @IonicPage({
   name: 'notification-page'
@@ -14,6 +14,7 @@ import moment from 'moment';
   templateUrl: 'notification.html',
 })
 export class NotificationPage {
+  public ENV = ENV;
   private notifications : any | null;
   public titleTesteira: string = '';
   public complementTitle: string = '';
@@ -151,8 +152,7 @@ export class NotificationPage {
       
       this.http.getAll('/mensagens/getNotifications', { user_id: id, lido: false }, 'get')
         .subscribe(async (lido: any) => {
-          console.log("\nNOTIFICATIONS -> ",lido);
-          
+         
           let total = lido.length;
           this.totalNewNotification = total;
 

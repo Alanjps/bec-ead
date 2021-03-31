@@ -18,7 +18,6 @@ export class TabsPage {
 
   tab1 : any = '';
   tab7 = 'notification-page';
-  /* tab8 = 'edit-user-v02-page'; */
   tab8 = 'edit-user-page';
   tab9 = 'photo-page';
   tab10 : any = '';
@@ -159,6 +158,12 @@ export class TabsPage {
           onesignalAppId='6b8f443d-da09-4ccc-b629-f1e21476c6b2';
           firebaseKey='AAAAhgN0_JU:APA91bEMiPSZM22P9MkPreN0zjwXbuz23N2wuSKifKN2or8Vt-YCzkYiGxC1p1SJA6OSCiTOaj3DKSLfgw_UcTU1J8ZSxqYzxcUAApNz3UjzTtrYSSNAhybm3NBzLOTSOBlqs4ks1Niz';
           firebaseSenderId = '575583616149';  
+          break;
+        }
+        case 'tmc':{
+          onesignalAppId='c4a92409-ba2f-4001-bd59-af1b24ae58a1';
+          firebaseKey='AAAAqoEzzRQ:APA91bGT0v5hAXduloaX57YR4XMSXnf3JVgM1ExmRAqP76jQkVilZR0DIRkv3Ninf9OlXsCUO-qPDpITPKtJpZHMBrjN_8OkD0WsO6Di041JTog_XpdCULtLE-Cj6fonzYaCDqIGbQxN';
+          firebaseSenderId = '732312096020';  
           break;
         }
       }

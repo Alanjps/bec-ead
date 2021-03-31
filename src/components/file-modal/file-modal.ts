@@ -1,6 +1,7 @@
 import { NavParams, Slides, ViewController, IonicPage} from 'ionic-angular';
 import { Component, ViewChild } from '@angular/core';
 import { Storage } from '@ionic/storage';
+import { environment as ENV } from '../../environments/environment';
 
 @IonicPage({
   name: 'file-modal'
@@ -11,6 +12,7 @@ import { Storage } from '@ionic/storage';
 })
 export class FileModalComponent {
 
+  public ENV = ENV;
   public videos: Array<any>;
   public file: any;
   public project: string = '';

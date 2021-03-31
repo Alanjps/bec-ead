@@ -4379,6 +4379,81 @@ ion-icon::before {
   filter: none;
 }
 
+:root ion-icon[class*="tab-tmc-"] {
+  width: 30px;
+  height: 30px;
+}
+
+:root ion-icon[class*="tab-tmc-perfil"] {
+  content: url("https://tmc.becinteligencia.com///storage//uploads//configs//internoApp1.svg") !important;
+}
+
+:root ion-icon[class*="tab-tmc-perfil"][ng-reflect-is-active="true"] {
+  -webkit-filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+  filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+}
+
+:root ion-icon[class*="tab-tmc-perfil"][ng-reflect-is-active="false"] {
+  -webkit-filter: none;
+  filter: none;
+}
+
+:root ion-icon[class*="tab-tmc-notificacao"] {
+  content: url("https://tmc.becinteligencia.com///storage//uploads//configs//internoApp2.svg") !important;
+}
+
+:root ion-icon[class*="tab-tmc-notificacao"][ng-reflect-is-active="true"] {
+  -webkit-filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+  filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+}
+
+:root ion-icon[class*="tab-tmc-notificacao"][ng-reflect-is-active="false"] {
+  -webkit-filter: none;
+  filter: none;
+}
+
+:root ion-icon[class*="tab-tmc-agenda"] {
+  content: url("https://tmc.becinteligencia.com///storage//uploads//configs//internoApp3.svg") !important;
+}
+
+:root ion-icon[class*="tab-tmc-agenda"][ng-reflect-is-active="true"] {
+  -webkit-filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+  filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+}
+
+:root ion-icon[class*="tab-tmc-agenda"][ng-reflect-is-active="false"] {
+  -webkit-filter: none;
+  filter: none;
+}
+
+:root ion-icon[class*="tab-tmc-foto"] {
+  content: url("https://tmc.becinteligencia.com///storage//uploads//configs//internoApp4.svg") !important;
+}
+
+:root ion-icon[class*="tab-tmc-foto"][ng-reflect-is-active="true"] {
+  -webkit-filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+  filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+}
+
+:root ion-icon[class*="tab-tmc-foto"][ng-reflect-is-active="false"] {
+  -webkit-filter: none;
+  filter: none;
+}
+
+:root ion-icon[class*="tab-tmc-news"] {
+  content: url("https://tmc.becinteligencia.com///storage//uploads//configs//internoApp5.svg") !important;
+}
+
+:root ion-icon[class*="tab-tmc-news"][ng-reflect-is-active="true"] {
+  -webkit-filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+  filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+}
+
+:root ion-icon[class*="tab-tmc-news"][ng-reflect-is-active="false"] {
+  -webkit-filter: none;
+  filter: none;
+}
+
 /*   :root {
 
     ion-icon {
@@ -26269,6 +26344,239 @@ ion-navbar.toolbar {
   src: url("../assets/fonts/Radikal/Radikal.eot?#iefix") format("embedded-opentype"), local("Radikal"), url("../assets/fonts/Radikal/Radikal.woff2") format("woff2"), url("../assets/fonts/Radikal/Radikal.woff") format("woff"), url("../assets/fonts/Radikal/Radikal.ttf") format("truetype"), url("../assets/fonts/Radikal/Radikal.svg#Radikal") format("svg");
 }
 
+.text-default-black {
+  color: #000 !important;
+}
+
+.text-default-white {
+  color: #FFF !important;
+}
+
+.button {
+  font-family: "Roboto";
+}
+
+.header-title {
+  height: 110px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: auto;
+  font-family: "Roboto";
+  text-transform: uppercase;
+}
+
+.header-title-style-orange {
+  font-family: "Radikal";
+  color: #fc5A16;
+}
+
+.header-title-style-white {
+  color: #FFF;
+}
+
+.header-title-style-black {
+  color: #000;
+}
+
+.body.background-ead {
+  background: #000 url("https://vcc.becinteligencia.com/storage/uploads/configs/loginMobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.body.background-edicom {
+  background: #000 url("https://edicom.becinteligencia.com/storage/uploads/configs/loginMobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.body.background-marketing-house {
+  background: #000 url("https://homolog.marketinghouse.com.br/storage/uploads/configs/loginMobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.body.background-hkt369 {
+  background: #000 url("https://descubre.hkt369.com/storage/uploads/configs/loginMobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.body.background-know-house {
+  background: #000 url("https://knowhouse.marketinghouse.com.br/storage/uploads/configs/loginMobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.body.background-simples-trade {
+  background: #000 url("https://simplestrade.becinteligencia.com/storage/uploads/configs/loginMobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.body.background-r2m {
+  background: #000 url("https://readytomarket.becinteligencia.com/storage/uploads/configs/loginMobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.body.background-ava {
+  background: #000 url("https://ava.insighttech.com.br/storage/uploads/configs/loginMobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.body.background-tmc {
+  background: #000 url("https://tmc.becinteligencia.com/storage/uploads/configs/loginMobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.content[class*="edicom-"][class*="custom-bg"] {
+  background: url("https://edicom.becinteligencia.com//storage//uploads//configs/papelParede.png") no-repeat 100% 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.content[class*="ead-"][class*="custom-bg"] {
+  background: url("https://vcc.becinteligencia.com//storage//uploads//configs/papelParede.png") no-repeat 100% 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.content[class*="marketing-house-"][class*="custom-bg"] {
+  background: url("https://homolog.marketinghouse.com.br//storage//uploads//configs/papelParede.png") no-repeat 100% 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.content[class*="hkt369-"][class*="custom-bg"] {
+  background: url("https://descubre.hkt369.com//storage//uploads//configs/papelParede.png") no-repeat 100% 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.content[class*="know-house-"][class*="custom-bg"] {
+  background: url("https://knowhouse.marketinghouse.com.br//storage//uploads//configs/papelParede.png") no-repeat 100% 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.content[class*="simples-trade-"][class*="custom-bg"] {
+  background: url("https://simplestrade.becinteligencia.com//storage//uploads//configs/papelParede.png") no-repeat 100% 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.content[class*="r2m-"][class*="custom-bg"] {
+  background: url("https://readytomarket.becinteligencia.com//storage//uploads//configs/papelParede.png") no-repeat 100% 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.content[class*="ava-"][class*="custom-bg"] {
+  background: url("https://ava.insighttech.com.br//storage//uploads//configs/papelParede.png") no-repeat 100% 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.content[class*="tmc-"][class*="custom-bg"] {
+  background: url("https://tmc.becinteligencia.com//storage//uploads//configs/papelParede.png") no-repeat 100% 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.button-style {
+  font-family: "Roboto" !important;
+  line-height: 15px;
+  padding: 0px 15px;
+  margin: 10px 5px;
+  background-color: #488aff;
+  color: #fff;
+  border-radius: 2px;
+  overflow: hidden;
+  height: 3.6rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: uppercase !important;
+  color: #fff;
+  background-color: #488aff;
+  -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1), color 300ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1), color 300ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1), background-color 300ms cubic-bezier(0.4, 0, 0.2, 1), color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1), background-color 300ms cubic-bezier(0.4, 0, 0.2, 1), color 300ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 0.4rem 0.2rem;
+  padding: 0 1.1em;
+  text-decoration: none;
+  text-align: center;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  text-overflow: ellipsis;
+  text-transform: none;
+  white-space: nowrap;
+  cursor: pointer;
+  vertical-align: top;
+  vertical-align: -webkit-baseline-middle;
+  -webkit-transition: background-color, opacity 100ms linear;
+  transition: background-color, opacity 100ms linear;
+  -webkit-font-kerning: none;
+  font-kerning: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  contain: content;
+  border: 0;
+  font-family: inherit;
+  font-style: inherit;
+  font-variant: inherit;
+  line-height: 1;
+  text-transform: none;
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+.button-style-edicom {
+  background-color: #49a6c9 !important;
+  color: #000;
+}
+
+.button-style-know-house {
+  background-color: #fc5A16;
+  color: #fff;
+  font-family: "Radikal";
+  border-radius: 14px;
+}
+
+.button-cancel-style-know-house {
+  background-color: #FFF !important;
+  color: #fc5A16;
+  font-family: "Radikal";
+  border-radius: 14px;
+  border-color: #fc5A16;
+  border: solid 2px;
+}
+
 .menuPrincipal {
   color: #000;
   font-weight: bold;
@@ -26290,20 +26598,6 @@ ion-navbar.toolbar {
   text-align: center;
 }
 
-.principalHeader p {
-  color: white;
-  height: 110px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: auto;
-}
-
 .principalHeader fixed-content {
   margin-top: 110px !important;
 }
@@ -26319,20 +26613,6 @@ ion-navbar.toolbar {
   padding-left: 111px;
   padding-right: 111px;
   text-align: center;
-}
-
-.principalHeaderV02 p {
-  color: white;
-  height: 80px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: auto;
 }
 
 .principalHeaderV02 fixed-content {
@@ -26360,26 +26640,6 @@ ion-navbar.toolbar {
   display: block;
   margin: auto;
   opacity: 0;
-}
-
-#navBarFooter {
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  width: 100%;
-  z-index: 9999;
-}
-
-#navBarFooter .segment-button {
-  height: auto !important;
-}
-
-#navBarFooter span {
-  display: block;
-  width: 100%;
-  line-height: 1;
-  margin-bottom: 11px;
-  margin-top: -6px;
 }
 
 .alert-md .alert-radio-label {
@@ -26425,62 +26685,6 @@ div.action-sheet-sub-title {
   border-radius: 50%;
 }
 
-.content[class*="edicom-"][class*="custom-bg"] {
-  background: url("https://edicom.becinteligencia.com//storage//uploads//configs/papelParede.png") no-repeat 100% 100%;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.content[class*="vcc-"][class*="custom-bg"] {
-  background: url("https://vcc.becinteligencia.com//storage//uploads//configs/papelParede.png") no-repeat 100% 100%;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.content[class*="mrkhouse-"][class*="custom-bg"] {
-  background: url("https://homolog.marketinghouse.com.br//storage//uploads//configs/papelParede.png") no-repeat 100% 100%;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.content[class*="hkt369-"][class*="custom-bg"] {
-  background: url("https://descubre.hkt369.com//storage//uploads//configs/papelParede.png") no-repeat 100% 100%;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.content[class*="knowh-"][class*="custom-bg"] {
-  background: url("https://knowhouse.marketinghouse.com.br//storage//uploads//configs/papelParede.png") no-repeat 100% 100%;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.content[class*="strade-"][class*="custom-bg"] {
-  background: url("https://simplestrade.becinteligencia.com//storage//uploads//configs/papelParede.png") no-repeat 100% 100%;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.content[class*="r2m-"][class*="custom-bg"] {
-  background: url("https://readytomarket.becinteligencia.com//storage//uploads//configs/papelParede.png") no-repeat 100% 100%;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.content[class*="ava-"][class*="custom-bg"] {
-  background: url("https://ava.insighttech.com.br//storage//uploads//configs/papelParede.png") no-repeat 100% 100%;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 ion-textarea {
   background-color: white;
 }
@@ -26491,52 +26695,6 @@ ion-item {
 
 .bg-transparent {
   background: transparent !important;
-}
-
-.button-edicom {
-  background-color: #49a6c9 !important;
-  color: #000;
-}
-
-.button-know-house {
-  color: #fff;
-  font-family: "Radikal";
-  border-radius: 14px;
-}
-
-.button-cancel-know-house {
-  color: #fc5A16;
-  font-family: "Radikal";
-  border-radius: 14px;
-  border-color: #fc5A16;
-  border: solid 2px;
-}
-
-/* .button-default{
-    background-color: #0082c9 !important;
-} */
-.font-style[class*="know-house"] {
-  font-family: "Radikal";
-}
-
-.font-style[class*="know-house"][class*="-title"] {
-  text-transform: uppercase;
-}
-
-.font-style[class*="know-house"][class*="-title"][class*="-color"] {
-  color: #fc5A16;
-}
-
-.font-style[class*="black"] {
-  font-family: "Radikal";
-}
-
-.font-style[class*="black"][class*="-title"] {
-  text-transform: uppercase;
-}
-
-.font-style[class*="black"][class*="-title"][class*="-color"] {
-  color: #000;
 }
 
 .header-md::before {
@@ -26560,7 +26718,7 @@ ion-item {
 }
 
 page-download-modal .background {
-  background-color: rgba(0, 0, 0, 0.555);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 expandable .expand-wrapper {
@@ -26783,6 +26941,25 @@ menu-sup ion-icon[class*="ava-"][class*="chat-active"] {
   filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
 }
 
+menu-sup ion-icon[class*="tmc-"] {
+  width: 30px;
+  height: 30px;
+}
+
+menu-sup ion-icon[class*="tmc-"][class*="chat"] {
+  background: url("https://tmc.becinteligencia.com//storage//uploads//configs//iconeHeader.png") no-repeat 100% 100%;
+  background-size: contain;
+  -webkit-filter: none;
+  filter: none;
+}
+
+menu-sup ion-icon[class*="tmc-"][class*="chat-active"] {
+  background: url("https://tmc.becinteligencia.com//storage//uploads//configs//iconeHeader.png") no-repeat 100% 100%;
+  background-size: contain;
+  -webkit-filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+  filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+}
+
 photo-modal .background {
   background-color: rgba(0, 0, 0, 0.555);
 }
@@ -26850,12 +27027,7 @@ quiz .buttonCancel {
   min-height: 100px;
 }
 
-.card-container .name {
-  color: #747474;
-  font-size: 12px;
-}
-
-.card-container .date {
+.card-container .date-style {
   color: #747474;
   display: block;
   font-size: 12px;
@@ -26929,49 +27101,6 @@ button[disabled] {
   margin: 15px 0 15px;
 }
 
-.filter-container {
-  padding-left: 10px;
-  padding-bottom: 1.6rem;
-}
-
-.filter-container .select-md {
-  padding: 10px 8px 10px 11px;
-  border: solid 0.2px;
-  margin-bottom: 1.6rem;
-}
-
-.filter-container ion-select {
-  max-width: 100%;
-  background-color: white;
-}
-
-.filter-container .button-inner, .filter-container .item-cover {
-  height: auto;
-}
-
-.filter-container .searchbar-md {
-  padding: 0px;
-}
-
-.filter-container .button-md {
-  margin: 0 0.2rem 1.6rem 0;
-}
-
-.border-bottom {
-  border-bottom: solid 0.5px rgba(128, 128, 128, 0.37);
-  margin-bottom: 1.6rem;
-  height: 2px;
-}
-
-.selected-user {
-  text-decoration: none !important;
-  background-color: #6967ce !important;
-}
-
-.selected-user p {
-  color: #fff !important;
-}
-
 #cards {
   max-height: 60vw;
   overflow-y: auto;
@@ -27043,10 +27172,6 @@ button[disabled] {
   font-size: 14px;
 }
 
-.background {
-  background-color: #fff;
-}
-
 .header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
   content: none !important;
 }
@@ -27055,14 +27180,13 @@ ion-app.md [padding] .scroll-content {
   padding-top: 0px;
 }
 
-/* .ion-content-container{
-  margin-top: 100px;
-}
-ion-header{
-  position: relative !important;
-} */
 .bg-destaque {
   background-color: #eeeeee !important;
+}
+
+.header-container {
+  margin-top: 16px;
+  margin-left: 10px;
 }
 
 page-edit-user .footerSpace {
@@ -27139,77 +27263,6 @@ page-edit-user #body .buttonLogout {
 .cropper-container {
   min-height: 360px;
   min-width: 420px;
-}
-
-page-edit-user .footerSpace {
-  display: block;
-  margin: auto;
-  margin-bottom: 80px;
-}
-
-page-edit-user #body .requiredInfo {
-  font-style: italic;
-}
-
-page-edit-user #body .fieldElement {
-  padding: 0px;
-}
-
-page-edit-user #body .fieldElement .label {
-  padding-left: 10px;
-}
-
-page-edit-user #body .recovery-link {
-  margin-top: 10px;
-  margin-bottom: 40px;
-  display: block;
-  color: #FFF;
-}
-
-page-edit-user #body .buttonLogin {
-  background: #4472c4;
-}
-
-page-edit-user #body .buttonMedium {
-  height: 50px;
-}
-
-page-edit-user #body .buttonLogout {
-  background: #FFA500;
-}
-
-.buttonPhoto {
-  position: absolute !important;
-  left: 28% !important;
-  bottom: 0 !important;
-  margin: 0 !important;
-  height: 30px;
-}
-
-.perfil-label {
-  font-size: 8px !important;
-}
-
-.perfil {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-size: 12px !important;
-  width: auto;
-}
-
-.perfil-title {
-  color: #203141 !important;
-  font-weight: 900;
-}
-
-.perfil-input {
-  color: #000000 !important;
-}
-
-.text-input-md {
-  margin: 6px 5px;
 }
 
 page-list-videos .footerSpace {
@@ -27814,173 +27867,18 @@ ion-item {
   }
 }
 
-page-login .body.background-ead {
-  background: #000 url("https://vcc.becinteligencia.com/storage/uploads/configs/loginMobile.png");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-page-login .body.background-edicom {
-  background: #000 url("https://edicom.becinteligencia.com/storage/uploads/configs/loginMobile.png");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-page-login .body.background-marketing-house {
-  background: #000 url("https://homolog.marketinghouse.com.br/storage/uploads/configs/loginMobile.png");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-page-login .body.background-hkt369 {
-  background: #000 url("https://descubre.hkt369.com/storage/uploads/configs/loginMobile.png");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-page-login .body.background-knowh {
-  background: #000 url("https://knowhouse.marketinghouse.com.br/storage/uploads/configs/loginMobile.png");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-page-login .body.background-strade {
-  background: #000 url("https://simplestrade.becinteligencia.com/storage/uploads/configs/loginMobile.png");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-page-login .body.background-r2m {
-  background: #000 url("https://readytomarket.becinteligencia.com/storage/uploads/configs/loginMobile.png");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-page-login .body.background-ava {
-  background: #000 url("https://ava.insighttech.com.br/storage/uploads/configs/loginMobile.png");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-page-login .body #logo-header {
-  max-width: 90%;
-  border: 0;
-  margin: auto;
-  text-align: center;
-  display: block;
-  margin-bottom: 30px;
-  padding-top: 50%;
-}
-
-page-login .body .fieldElement {
-  background: #FFF;
-  padding: 0px;
-  /*         ion-input{
-            color:#FFF;
-        }
-        .ion-input-marketing-house{
-            color:#5433a8 !important;
-        } */
-}
-
-page-login .body .fieldElement .label {
-  padding-left: 10px;
-}
-
-page-login .body .fieldElement .label--know-house {
-  color: #000 !important;
-  border-color: #FC5A16 !important;
-}
-
-page-login .body .fieldElement .label--default-white {
-  color: #FFF !important;
-  border-color: #000 !important;
-}
-
-page-login .body .fieldElement .label--default-black {
-  color: #000 !important;
-  border-color: #000 !important;
-}
-
-page-login .body .fieldElement .label-marketing-house {
-  color: #5433a8;
-}
-
-page-login .body .fieldElement.right .label {
-  text-align: right;
-}
-
-page-login .body .recovery-link {
-  margin-top: 20px;
-  margin-bottom: 25px;
-  display: block;
-}
-
-page-login .body .recovery-link--default {
-  color: #FFF !important;
-}
-
-page-login .body .recovery-link--know-house {
-  color: #000 !important;
-}
-
-page-login .body .recovery-link-marketing-house {
-  margin-top: 20px;
-  margin-bottom: 25px;
-  display: block;
-  color: #5433a8;
-}
-
-page-login .body .buttonLogin {
-  /* background:#C4C4C4; */
-  background: #223342;
-}
-
-page-login .body .buttonLogin-marketing-house {
-  background: #5433a8;
-}
-
-page-login .body .buttonMedium {
-  height: 50px;
-}
-
-page-login .body .version {
-  color: #FFF;
+page-login .body .version-text {
   font-size: 13px;
   font-style: italic;
   float: right;
   margin-top: 20px;
   margin-right: 3px;
-}
-
-page-login .body .version--black {
-  color: #000 !important;
-  font-size: 13px;
-  font-style: italic;
-  float: right;
-  margin-top: 20px;
-  margin-right: 3px;
-}
-
-page-login .body .background {
-  position: absolute;
-  height: 100%;
-  width: auto;
-  top: 0;
-  left: 0;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% auto;
-  z-index: -1;
 }
 
 page-login .scroll-content {
   padding: 0 16px !important;
 }
 
-/* .tabs-md .tabbar {
-  display: none !important;
-} */
 page-notification {
   /*     .segment-md {
           .segment-button {
@@ -28166,68 +28064,28 @@ page-register .body.background-knowh {
   background-size: auto 100%;
 }
 
-page-register .panel-fisica {
-  display: none;
+page-register .body.background-ava {
+  background: #000 url("https://ava.insighttech.com.br/storage/uploads/configs/loginMobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
 }
 
-page-register .panel-fisica.on {
-  display: block;
+page-register .body.background-tmc {
+  background: #000 url("https://tmc.becinteligencia.com/storage/uploads/configs/loginMobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
 }
 
-page-register .panel-juridica {
-  display: none;
+page-register .body.background-r2m {
+  background: #000 url("https://readytomarket.becinteligencia.com/storage/uploads/configs/loginMobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
 }
 
-page-register .panel-juridica.on {
-  display: block;
-}
-
-page-register #body {
-  background: #000;
-}
-
-page-register #body .fieldElement {
-  color: #FFF;
-  background: #000;
-  padding: 0px;
-}
-
-page-register #body .fieldElement .label {
-  color: #FFF;
-  padding-left: 10px;
-}
-
-page-register #body .recovery-link {
-  margin-top: 10px;
-  margin-bottom: 40px;
-  display: block;
-  color: #FFF;
-}
-
-page-register #body .buttonLogin {
-  background: #4472c4;
-}
-
-page-register #body .buttonMedium {
-  height: 50px;
-}
-
-page-register .fieldElement {
-  background: #FFF;
-  padding: 0px;
-  /* 
-      .label{
-          color:#FFF;
-          padding-left:10px;
-      } */
-}
-
-page-register .fieldElement ion-input {
-  color: #FFF;
-}
-
-page-register .requiredInfo {
-  color: #FFF !important;
+page-register .required-info {
   font-style: italic;
 }
 

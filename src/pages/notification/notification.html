@@ -8,10 +8,10 @@
   <img *ngIf="version == '02'" class="testeira-v02" 
   src="{{ globalUrl + '/storage/uploads/configs/testeira2.png' }}" >
 
-  <p [ngClass]="project == 'know-house' ?  'font-style know-house-title-color' : project == 'ava' ?  'font-style black-title-color' : ''">{{titleTesteira}}  {{complementTitle? '| ' + complementTitle : ''}}</p>
+  <p class="header-title header-title-{{ENV.HEADER_TEXT}}">{{titleTesteira}}  {{complementTitle? '| ' + complementTitle : ''}}</p>
   <menu-sup></menu-sup>
 </ion-header>
-  <ion-content [ngClass]="version == '01' ? 'margin-content-l1' : version == '02' ? 'margin-content-l2' : 'margin-content-l1'" [ngClass]="project == 'marketing-house' ? 'content mrkhouse-custom-bg' : project == 'ead' ? 'content vcc-custom-bg' : project == 'edicom' ? 'content edicom-custom-bg' : ''">
+  <ion-content class="content {{ENV.PROJECT}}-custom-bg" [ngClass]="version == '01' ? 'margin-content-l1' : version == '02' ? 'margin-content-l2' : 'margin-content-l1'">
       <ion-list padding>
         <ion-item *ngFor="let item of items">
           <ion-grid *ngIf="item.expanded == false" style="background-color: white;">
@@ -45,9 +45,5 @@
           
           </ion-infinite-scroll-content>
       </ion-infinite-scroll>      
-         
-      
-  
-      <!-- <pagination-controls (pageChange)="p = $event" previousLabel="Anterior" nextLabel="Próximo" autoHide="true"></pagination-controls> -->
-    
+             
 </ion-content>

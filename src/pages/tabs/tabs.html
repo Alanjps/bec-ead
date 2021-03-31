@@ -63,6 +63,18 @@
   <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-ava-news"></ion-tab>
 </ion-tabs>
 
+<ion-tabs #appTabs selectedIndex="2" *ngIf="project == 'tmc' && (version == '02' || version == '01') && renderRoot == true" [ngClass]="chatAtTop == true ? 'ion-tabs' : ''">
+  <ion-tab [root]="tab8" tabIcon="tab-tmc-perfil"></ion-tab>
+  <ion-tab [root]="tab7" tabIcon="tab-tmc-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>
+  <ion-tab [root]="tab1" tabIcon="tab-tmc-agenda" (ionSelect)="redirectToListPage()"></ion-tab>
+  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-tmc-foto"></ion-tab>
+  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-tmc-news"></ion-tab>
+</ion-tabs>
+
+
+
+<!-- LOCALHOST -->
+
 <ion-tabs #appTabs selectedIndex="2" *ngIf="project == 'localhost' && (version == '02' || version == '01') && renderRoot == true" [ngClass]="chatAtTop == true ? 'ion-tabs' : ''">
   <ion-tab [root]="tab8" tabIcon="tab-ava-perfil"></ion-tab>
   <ion-tab [root]="tab7" tabIcon="tab-ava-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>

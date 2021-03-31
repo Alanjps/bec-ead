@@ -7,6 +7,7 @@ import moment from 'moment';
 import { Camera, CameraOptions } from "@ionic-native/camera";
 import { v } from '@angular/core/src/render3';
 import { PusherServiceProvider } from '../../providers/pusher-service/pusher-service';
+import { environment as ENV } from '../../environments/environment' ;
 
 @IonicPage({
   name: 'chat-page'
@@ -16,6 +17,8 @@ import { PusherServiceProvider } from '../../providers/pusher-service/pusher-ser
   templateUrl: 'chat.html',
 })
 export class ChatPage {
+  public ENV = ENV;
+
   private projects : [any];
   private selectedProject : {} | null = null;
   private selectedProjectId : number | null = null;

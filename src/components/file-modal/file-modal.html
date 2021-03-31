@@ -3,7 +3,7 @@
     <img src={{file}}>
   </div>
   <div>
-    <button [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" ion-button (click)="confirm()">Confirmar</button>
-    <button [ngClass]="project == 'edicom' ? 'button-edicom' : project == 'know-house' ? 'button-know-house' : 'button-default'" ion-button (click)="cancel()">Cancelar</button>
+    <button class="button-style button-style-{{ENV.PROJECT}}" ion-button (click)="confirm()">Confirmar</button>
+    <button class="button-style button-style-{{ENV.PROJECT}}" ion-button (click)="cancel()">Cancelar</button>
   </div>
 </ion-content>

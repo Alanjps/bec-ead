@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, ToastController, LoadingController
 import { AuthProvider } from '../../providers/auth/auth';
 import {Storage} from '@ionic/storage';
 import { TabsPage } from '../tabs/tabs';
+import { environment as ENV } from '../../environments/environment';
 
 @IonicPage({
   name:'recovey-password-page'
@@ -13,6 +14,7 @@ import { TabsPage } from '../tabs/tabs';
 })
 export class RecoveryPasswordPage {
   
+  public ENV = ENV;
   private credential: any = {
     email:'',
     senha:'',
