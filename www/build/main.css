@@ -26717,6 +26717,14 @@ ion-item {
   padding-bottom: 110px;
 }
 
+.modal-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
 page-download-modal .background {
   background-color: rgba(0, 0, 0, 0.9);
 }

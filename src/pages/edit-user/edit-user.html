@@ -136,25 +136,25 @@
   <div style="padding-bottom: 125px;">
     <ion-grid>
       <ion-row style="display: flex; flex-wrap: wrap;">
-        <ion-col *ngIf="showQRCode">
+        <ion-col *ngIf="showQRCode" style="text-align: center;">
           <button full style="font-size: 1rem;" class="button-style button-style-{{ENV.PROJECT}}" ion-button icon-start (click)="showQRCodeBox = !showQRCodeBox">
              <p *ngIf="idiom =='01'">ID Digital</p>
             <p *ngIf="idiom =='02'">ID Digital</p>
           </button>
         </ion-col>      
-        <ion-col style="flex-grow: 2;">
+        <ion-col style="flex-grow: 2; text-align: center;">
           <button ion-button full icon-start class="button-style button-style-{{ENV.PROJECT}}" (click)="showDownloads()">
             <p *ngIf="idiom =='01'">Meus Downloads</p>
             <p *ngIf="idiom =='02'">Mis Descargas</p>
           </button>
         </ion-col>
-        <ion-col>
+        <ion-col style="text-align: center;">
           <button ion-button class="button-style button-style-{{ENV.PROJECT}}" full icon-start (click)="edit()">
             <p *ngIf="idiom =='01'">Editar</p>
             <p *ngIf="idiom =='02'">Editar</p>
           </button>
         </ion-col>
-        <ion-col *ngIf="habilitaCampos">
+        <ion-col *ngIf="habilitaCampos" style="text-align: center;">
           <button ion-button full  class="button-style button-style-{{ENV.PROJECT}}" (click)="doLogout()">
             <p *ngIf="idiom =='01'">Sair</p>
             <p *ngIf="idiom =='02'">Salir</p>
