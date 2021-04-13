@@ -1,0 +1,24 @@
+
+<ion-header [ngClass]="version == '01' ? 'principalHeader' : version == '02' ? 'principalHeaderV02' : 'principalHeader'">
+  <div>
+    <img [ngClass]="version == '01' ? 'principal-icon' : version == '02' ? 'principal-icon-v02' : 'principal-icon'"
+     src="{{ globalUrl + '/storage/uploads/configs/logoHeader.png' }}" />
+
+    <img *ngIf="version == '01'" class="testeira-v01" 
+    src="{{ globalUrl + '/storage/uploads/configs/testeira1.png' }}" >
+
+    <img *ngIf="version == '02'" class="testeira-v02" 
+    src="{{ globalUrl + '/storage/uploads/configs/testeira2.png' }}" >
+
+  </div>
+</ion-header>
+<ion-content style="background-color: #fff;" class="content {{ENV.PROJECT}}-custom-bg" [ngClass]="version == '01' ? 'margin-content-l1' : version == '02' ? 'margin-content-l2' : 'margin-content-l1'" padding>
+  
+  <div padding>
+    <button class="button-style button-style-{{ENV.PROJECT}}" *ngIf="idiom =='01'" ion-button (click)="confirm()"><p>Confirmar</p></button>
+    <button class="button-style button-style-{{ENV.PROJECT}}" *ngIf="credential.firstAccess == false &&  idiom =='01'" ion-button (click)="cancel()"><p>Voltar</p></button>
+
+    <button class="button-style button-style-{{ENV.PROJECT}}" *ngIf="idiom =='02'" ion-button (click)="confirm()"><p>Confirmar</p></button>
+    <button class="button-style button-style-{{ENV.PROJECT}}" *ngIf="credential.firstAccess == false && idiom =='02'" ion-button (click)="cancel()"><p>Volver</p></button>
+  </div>
+</ion-content>

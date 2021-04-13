@@ -1,13 +1,13 @@
 webpackJsonp([16],{
 
-/***/ 461:
+/***/ 462:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListVideosModalModule", function() { return ListVideosModalModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QuizModule", function() { return QuizModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__list_videos_modal__ = __webpack_require__(491);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__quiz__ = __webpack_require__(494);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(46);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -18,34 +18,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ListVideosModalModule = /** @class */ (function () {
-    function ListVideosModalModule() {
+var QuizModule = /** @class */ (function () {
+    function QuizModule() {
     }
-    ListVideosModalModule = __decorate([
+    QuizModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
-            declarations: [__WEBPACK_IMPORTED_MODULE_1__list_videos_modal__["a" /* ListVideosModalComponent */]],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicModule */],
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_1__list_videos_modal__["a" /* ListVideosModalComponent */])
-            ],
-            exports: [__WEBPACK_IMPORTED_MODULE_1__list_videos_modal__["a" /* ListVideosModalComponent */]]
+            declarations: [__WEBPACK_IMPORTED_MODULE_1__quiz__["a" /* QuizComponent */]],
+            imports: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicModule */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_1__quiz__["a" /* QuizComponent */])],
+            exports: [__WEBPACK_IMPORTED_MODULE_1__quiz__["a" /* QuizComponent */]]
         })
-    ], ListVideosModalModule);
-    return ListVideosModalModule;
+    ], QuizModule);
+    return QuizModule;
 }());
 
-//# sourceMappingURL=list-videos-modal.module.js.map
+//# sourceMappingURL=quiz.module.js.map
 
 /***/ }),
 
-/***/ 491:
+/***/ 494:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListVideosModalComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(24);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return QuizComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__ = __webpack_require__(342);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_camera__ = __webpack_require__(345);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_storage__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__environments_environment__ = __webpack_require__(111);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -55,121 +56,225 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
 
 
 
-var ListVideosModalComponent = /** @class */ (function () {
-    function ListVideosModalComponent(navCtrl, navParams, viewCtrl, dom, loadingCtrl) {
+
+
+
+
+var QuizComponent = /** @class */ (function () {
+    function QuizComponent(navCtrl, navParams, formBuilder, viewCtrl, toastCtrl, loadingCtrl, authService, storage, camera) {
+        var _this = this;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.formBuilder = formBuilder;
         this.viewCtrl = viewCtrl;
-        this.dom = dom;
+        this.toastCtrl = toastCtrl;
         this.loadingCtrl = loadingCtrl;
-        this.exibirEmbed = false;
-        this.exibirVideo = false;
-        this.exibirThumb = false;
-        this.playVideo = false;
-        this.showPrevious = false;
-        this.showNext = false;
-        this.selectIndex = 0;
-        this.contents = navParams.data;
-        this.getVideos(this.contents);
-    }
-    ListVideosModalComponent.prototype.getVideos = function (contents) {
-        var _this = this;
-        //separa somente os videos e seleciona o primeiro conteúdo de vídeo disponível.
-        this.videos = [];
-        contents.forEach(function (element) {
-            if (element.tipo == 'video' || (element.url != null && element.tipo == "undefined"))
-                _this.videos.push(element);
+        this.authService = authService;
+        this.storage = storage;
+        this.camera = camera;
+        this.ENV = __WEBPACK_IMPORTED_MODULE_6__environments_environment__["a" /* environment */];
+        this.formulario = [];
+        this.idiom = '';
+        this.globalUrl = '';
+        storage.get('GlobalUrl').then(function (value) {
+            _this.globalUrl = value;
         });
-        if (this.videos.length > 0) {
-            this.showVideo(this.videos[0]);
-            this.selectIndex = 0;
-            if (this.videos.length > 1) {
-                this.showNext = true;
-            }
-        }
-        ;
-    };
-    ListVideosModalComponent.prototype.dismiss = function () {
-        this.exibirEmbed = false;
-        this.exibirVideo = false;
-        this.playVideo = false;
-        this.viewCtrl.dismiss();
-    };
-    ListVideosModalComponent.prototype.sanitizer = function (vid) {
-        return this.dom.bypassSecurityTrustResourceUrl(vid);
-    };
-    ListVideosModalComponent.prototype.showVideo = function (conteudo) {
+        this.loadQuiz();
+    }
+    QuizComponent.prototype.loadQuiz = function () {
         var _this = this;
+        var vars = {
+            tipo: '',
+            lesson_id: ''
+        };
         var loading = this.loadingCtrl.create({
             content: 'Espere...'
         });
         loading.present();
-        if (conteudo.url) {
-            this.exibirEmbed = true;
-            this.exibirVideo = false;
-        }
-        else if (conteudo.path) {
-            this.exibirEmbed = false;
-            this.exibirVideo = true;
-        }
-        this.playVideo = true;
-        if (this.exibirVideo == true) {
-            setTimeout(function () {
-                var video = _this.mVideoPlayer.nativeElement;
-                video.src = conteudo.path;
-                loading.dismiss();
-            }, 500);
-        }
-        else if (this.exibirEmbed == true) {
-            this.urlEmbed = this.sanitizer(conteudo.url);
+        vars.lesson_id = this.navParams.get('lesson_id');
+        this.authService.request('/api/testes/get', vars).then(function (result) {
             loading.dismiss();
+            if (result) {
+                _this.formulario = result;
+            }
+            else {
+                _this.viewCtrl.dismiss();
+            }
+        });
+    };
+    QuizComponent.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        this.storage.get('LayoutVersion').then(function (value) {
+            _this.version = value;
+        });
+        this.storage.get('Idiom').then(function (value) {
+            _this.idiom = value;
+        });
+        this.storage.get('Project').then(function (value) {
+            _this.project = value;
+        });
+    };
+    QuizComponent.prototype.salva = function () {
+        var _this = this;
+        var mensagem = '';
+        var chave = 0;
+        this.formulario.forEach(function (element, key) {
+            if (element.respostas == '') {
+                chave = key + 1;
+                mensagem = 'Favor responder a questão ' + chave;
+            }
+        });
+        if (mensagem) {
+            var toast = this.toastCtrl.create({
+                message: mensagem,
+                duration: 3000,
+                position: 'top'
+            });
+            toast.present();
+        }
+        else {
+            var loading_1 = this.loadingCtrl.create({
+                content: 'Espere...'
+            });
+            loading_1.present();
+            var vars_1 = {
+                user_id: '',
+                teste: this.formulario
+            };
+            this.storage.get('clienteId').then(function (valor) {
+                vars_1.user_id = valor;
+                _this.authService.request('/api/testes/responder', vars_1).then(function (result) {
+                    loading_1.dismiss();
+                    if (result) {
+                        var toast = _this.toastCtrl.create({
+                            message: 'Resposta salva com sucesso!',
+                            duration: 3000,
+                            position: 'top'
+                        });
+                        toast.present();
+                        toast.onDidDismiss(function () {
+                            _this.fechar();
+                        });
+                    }
+                    else {
+                        _this.viewCtrl.dismiss();
+                    }
+                });
+            });
         }
     };
-    ListVideosModalComponent.prototype.selectNext = function () {
-        var nextIndex = this.selectIndex + 1;
-        if (this.videos.length - 1 >= nextIndex) {
-            this.selectIndex = nextIndex;
-            this.showVideo(this.videos[nextIndex]);
-            if (nextIndex == this.videos.length - 1)
-                this.showNext = false;
-            this.showPrevious = true;
-        }
+    QuizComponent.prototype.fechar = function () {
+        this.viewCtrl.dismiss();
     };
-    ListVideosModalComponent.prototype.selectPrevious = function () {
-        var previousIndex = this.selectIndex - 1;
-        if (previousIndex >= 0) {
-            this.selectIndex = previousIndex;
-            this.showVideo(this.videos[previousIndex]);
-            if (previousIndex == 0)
-                this.showPrevious = false;
-            this.showNext = true;
+    /****GALERIA E CAMERA */
+    QuizComponent.prototype.openCamera = function (index) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var options;
+            return __generator(this, function (_a) {
+                this.indexFile = index;
+                options = {
+                    quality: 10,
+                    destinationType: this.camera.DestinationType.DATA_URL,
+                    encodingType: this.camera.EncodingType.JPEG,
+                    mediaType: this.camera.MediaType.PICTURE,
+                    sourceType: this.camera.PictureSourceType.CAMERA,
+                    allowEdit: false
+                };
+                this.camera.getPicture(options).then(function (imageData) {
+                    _this.formulario[_this.indexFile].respostas = imageData;
+                    _this.fileUpload = "data:image/jpeg;base64," + imageData;
+                });
+                return [2 /*return*/];
+            });
+        });
+    };
+    QuizComponent.prototype.openSelect = function (index) {
+        this.indexFile = index;
+        this.selectFile.open();
+    };
+    QuizComponent.prototype.openGallery = function () {
+        var _this = this;
+        var options = {
+            quality: 100,
+            destinationType: this.camera.DestinationType.DATA_URL,
+            encodingType: this.camera.EncodingType.JPEG,
+            mediaType: this.camera.MediaType.PICTURE,
+            sourceType: this.camera.PictureSourceType.PHOTOLIBRARY
+        };
+        this.camera.getPicture(options).then(function (imageData) {
+            _this.formulario[_this.indexFile].respostas = "data:image/jpeg;base64," + imageData;
+            _this.fileUpload = "data:image/jpeg;base64," + imageData;
+        });
+    };
+    QuizComponent.prototype.openGaleryOrCamera = function () {
+        if (this.galleryFile) {
+            this.openGallery();
+        }
+        else {
+            this.openCamera(1);
         }
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_0_ionic_angular__["n" /* Slides */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["n" /* Slides */])
-    ], ListVideosModalComponent.prototype, "slides", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewChild"])('videoPlayer'),
-        __metadata("design:type", Object)
-    ], ListVideosModalComponent.prototype, "mVideoPlayer", void 0);
-    ListVideosModalComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
-            selector: 'list-videos-modal',template:/*ion-inline-start:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\components\list-videos-modal\list-videos-modal.html"*/'<ion-content padding class="background">\n\n  <div *ngIf="playVideo" style="\n\n    height: 100%;\n\n    display: flex;\n\n    justify-content: center;\n\n    flex-direction: column;\n\n  ">\n\n    <div style="display: flex; justify-content: space-between; height: auto;">\n\n      <div>\n\n        <button ion-button icon-only round small *ngIf="showPrevious == true" (click)="selectPrevious()" style="\n\n        align-self: flex-start;\n\n        margin: 0 0 12px 0;\n\n        padding: 0;" >\n\n          <ion-icon name="md-arrow-back"></ion-icon>\n\n        </button>\n\n\n\n        <button ion-button icon-only round small *ngIf="showNext == true"  (click)="selectNext()" style="\n\n          align-self: flex-start;\n\n          margin: 0 0 12px 0;\n\n          padding-left: 0;" >\n\n          <ion-icon name="md-arrow-forward"></ion-icon>\n\n        </button>\n\n      </div>\n\n\n\n      <button  ion-button icon-only round small (click)="dismiss()" style="\n\n        align-self: flex-end;\n\n        margin: 0 0 12px 0;\n\n        padding: 0;" >\n\n        <ion-icon name="md-close"></ion-icon>\n\n      </button>\n\n    </div>\n\n\n\n    <div *ngIf="exibirVideo">\n\n      <video #videoPlayer class="video-player" autoplay="true" controls controlsList="nodownload" style="max-width: 100%; max-height: 100%;"></video>\n\n    </div>\n\n    \n\n    <div *ngIf="exibirEmbed && urlEmbed">\n\n      <iframe  [src]="urlEmbed" style="width:100%;" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n\n    </div>\n\n    \n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\components\list-videos-modal\list-videos-modal.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('selectFile'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* Select */])
+    ], QuizComponent.prototype, "selectFile", void 0);
+    QuizComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'quiz',template:/*ion-inline-start:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\components\quiz\quiz.html"*/'\n\n<ion-header [ngClass]="version == \'01\' ? \'principalHeader\' : version == \'02\' ? \'principalHeaderV02\' : \'principalHeader\'">\n\n  <div>\n\n\n\n    <img [ngClass]="version == \'01\' ? \'principal-icon\' : version == \'02\' ? \'principal-icon-v02\' : \'principal-icon\'"\n\n     src="{{ globalUrl + \'/storage/uploads/configs/logoHeader.png\' }}" />\n\n\n\n    <img *ngIf="version == \'01\'" class="testeira-v01" \n\n    src="{{ globalUrl + \'/storage/uploads/configs/testeira1.png\' }}" >\n\n\n\n    <img *ngIf="version == \'02\'" class="testeira-v02" \n\n    src="{{ globalUrl + \'/storage/uploads/configs/testeira2.png\' }}" >\n\n    <!-- <img class=logo-header src="./assets/imgs/movera-logo.png" /> -->\n\n    <p [ngClass]="project == \'know-house\' ?  \'font-style know-house-title-color\' : project == \'ava\' ?  \'font-style black-title-color\' : \'\'">{{titleTesteira}}  {{complementTitle? \'| \' + complementTitle : \'\'}}</p>\n\n  </div>\n\n  \n\n</ion-header>\n\n<ion-content padding [ngClass]="version == \'01\' ? \'margin-content-l1\' : version == \'02\' ? \'margin-content-l2\' : \'margin-content-l1\'">\n\n  <div style="margin-bottom: 110px !important;">\n\n    <h2 *ngIf="idiom == \'01\'">Questionário</h2>\n\n    <h2 *ngIf="idiom == \'02\'">Cuestionario</h2>\n\n    \n\n    <div class=singleQuestao *ngFor="let questao of formulario; let i = index">\n\n      <ion-label >{{i+1}} - {{questao[\'questao\']}}</ion-label>\n\n      <ion-input  *ngIf="questao[\'tipo\'] == \'TEXT\'"  [(ngModel)]="questao[\'respostas\']" type="text" value="" ></ion-input>\n\n      <ion-input  *ngIf="questao[\'tipo\'] == \'NUMBER\'"[(ngModel)]="questao[\'respostas\']" type="number" value="" ></ion-input>\n\n  \n\n      <ion-list *ngIf="questao[\'tipo\'] == \'CHECK\'">\n\n        <ion-item *ngFor="let opcao of questao[\'alternativas\'];  let o = index">\n\n          <ion-label >{{opcao.texto}}</ion-label>\n\n          <ion-checkbox [(ngModel)]="questao[\'respostas\'][o]" ></ion-checkbox >\n\n        </ion-item>\n\n      </ion-list>\n\n  \n\n      <ion-list  *ngIf="questao[\'tipo\'] == \'RADIO\'" radio-group [(ngModel)]="questao[\'respostas\']">\n\n        <ion-item *ngFor="let opcao of questao[\'alternativas\'];  let e = index">\n\n          <ion-label>{{opcao.texto}}</ion-label>\n\n          <ion-radio  value="{{e}}"></ion-radio>\n\n        </ion-item>\n\n      </ion-list>\n\n  \n\n      <ion-list *ngIf="questao[\'tipo\'] == \'UPLOAD\'">\n\n        <div *ngIf="fileUpload" class="camera" (click)="openCamera(i)">\n\n          <img src={{fileUpload}} alt="Upload">\n\n        </div>\n\n        <div  class="camera empty" (click)="openCamera(i)">\n\n          <span *ngIf="!fileUpload && idiom == \'01\'">Clique para tirar a foto</span>\n\n          <span *ngIf="!fileUpload && idiom == \'02\'">Haz clic para tomar una foto</span>\n\n          <span *ngIf="fileUpload && idiom == \'01\'">Trocar foto</span>\n\n          <span *ngIf="fileUpload && idiom == \'02\'">Cambiar foto</span>\n\n        </div>\n\n      </ion-list>\n\n    </div>\n\n  \n\n    <button ion-button full class="button-style button-style-{{ENV.PROJECT}}" (click)="salva()">\n\n      <p *ngIf="idiom == \'01\'">SALVAR RESPOSTAS</p>\n\n      <p *ngIf="idiom == \'02\'">GUARDAR RESPUESTA</p>\n\n    </button>\n\n    <button ion-button full icon-start color="light" class="button-style button-cancel-style-{{ENV.PROJECT}}" (click)="fechar()">\n\n      <p>CANCELAR</p>\n\n    </button>\n\n  \n\n    <ion-select class="hidden" #selectFile interface="action-sheet" [(ngModel)]="this.galleryFile"\n\n      (ionChange)="openGaleryOrCamera()">\n\n      <ion-option *ngIf="idiom == \'01\'" [value]="false">Câmera</ion-option>\n\n      <ion-option *ngIf="idiom == \'02\'" [value]="false">Cámara</ion-option>\n\n      <ion-option *ngIf="idiom == \'01\'" [value]="true">Galeria</ion-option>\n\n      <ion-option *ngIf="idiom == \'02\'" [value]="true">Galería</ion-option>\n\n    </ion-select>\n\n  </div>\n\n  \n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\components\quiz\quiz.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0_ionic_angular__["j" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["k" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["q" /* ViewController */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["c" /* DomSanitizer */],
-            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["g" /* LoadingController */]])
-    ], ListVideosModalComponent);
-    return ListVideosModalComponent;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* ViewController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* ToastController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__["a" /* AuthProvider */],
+            __WEBPACK_IMPORTED_MODULE_5__ionic_storage__["b" /* Storage */],
+            __WEBPACK_IMPORTED_MODULE_4__ionic_native_camera__["a" /* Camera */]])
+    ], QuizComponent);
+    return QuizComponent;
 }());
 
-//# sourceMappingURL=list-videos-modal.js.map
+//# sourceMappingURL=quiz.js.map
 
 /***/ })
 

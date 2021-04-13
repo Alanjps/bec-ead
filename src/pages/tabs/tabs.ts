@@ -166,6 +166,18 @@ export class TabsPage {
           firebaseSenderId = '732312096020';  
           break;
         }
+        case 'hability':{
+          onesignalAppId='fb347a8c-b214-4754-934b-b60e6772fd47';
+          firebaseKey='AAAA19U5WlY:APA91bFfFyWmWJ7mz5oZn8Mj_pXFIjK82TTJCaC679XRZXdKCM3zLc36n7YJ1BwRACoa7Qx-JH2X76GANdVCHWrpkMmO271lBpUpOQDtb5kXtqPFRtdKpKAeVra4XCBC-_1_CuXAmHF3';
+          firebaseSenderId = '926995274326';  
+          break;
+        }
+        case 'full-promo':{
+          onesignalAppId='574a5c13-9a8e-46fb-85cf-3698d35cc750';
+          firebaseKey='AAAA-HsLbLA:APA91bE7dRADuz2EZ67knO3JqdBik6l99LOyM1I709WKFRVDCKqlYItxwln3B1S6s6JziLUvxGfDLfCVCOFZgYU0JuXwbHkuN2nxtX7CUUBHYQYKoHm3u0mP-drYb7UCyNgLb7Dr7gkA';
+          firebaseSenderId = '1067216235696';  
+          break;
+        }
       }
       /*
         ANTIGO---------------------------------------------       

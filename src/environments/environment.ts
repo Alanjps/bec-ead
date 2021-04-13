@@ -58,7 +58,7 @@ export var environment = {
   PUSHER_APP_CLUSTER: "us2", 
  */
 
-
+/* 
 //VCC -----------------------------------
   PROJECT: 'ead',
   TEXT_COLOR_V1: 'text-default-black',  
@@ -69,7 +69,7 @@ export var environment = {
   PUSHER_APP_SECRET: "ceac567fed3ab7dd2dd1",
   PUSHER_APP_CLUSTER: "us2",
 
-
+ */
 
 /*
 //MARKETING HOUSE ------------------------
@@ -95,7 +95,7 @@ export var environment = {
   PUSHER_APP_CLUSTER: "us2",
  */
 
-/* 
+/*  
 //TMC -----------------------------------
   PROJECT: 'tmc',
   TEXT_COLOR_V1: 'text-default-black',  
@@ -105,5 +105,31 @@ export var environment = {
   PUSHER_APP_KEY: "a56afa599a1032dfb9cc",
   PUSHER_APP_SECRET: "c779cd95649268404b03",
   PUSHER_APP_CLUSTER: "us2",
+
  */
+
+ 
+//HABILITY -----------------------------------
+PROJECT: 'hability',
+TEXT_COLOR_V1: 'text-default-black',  
+HEADER_TEXT: 'style-white', 
+
+PUSHER_APP_ID: "1184826",
+PUSHER_APP_KEY: "af39d43b0139720d5bcc",
+PUSHER_APP_SECRET: "537ed2e7f530b1b9715b",
+PUSHER_APP_CLUSTER: "us2",
+ 
+
+/* 
+//FULL PROMO -----------------------------------
+PROJECT: 'full-promo',
+TEXT_COLOR_V1: 'text-default-black',  
+HEADER_TEXT: 'style-white', 
+
+PUSHER_APP_ID: "1185839",
+PUSHER_APP_KEY: "fdabf8306298d76cf103",
+PUSHER_APP_SECRET: "8a03d797c5b7d22a129b",
+PUSHER_APP_CLUSTER: "us2",
+ */
+
 }

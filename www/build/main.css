@@ -4385,7 +4385,7 @@ ion-icon::before {
 }
 
 :root ion-icon[class*="tab-tmc-perfil"] {
-  content: url("https://tmc.becinteligencia.com///storage//uploads//configs//internoApp1.svg") !important;
+  content: url("https://tmc.becinteligencia.com//storage//uploads//configs//internoApp1.svg") !important;
 }
 
 :root ion-icon[class*="tab-tmc-perfil"][ng-reflect-is-active="true"] {
@@ -4399,7 +4399,7 @@ ion-icon::before {
 }
 
 :root ion-icon[class*="tab-tmc-notificacao"] {
-  content: url("https://tmc.becinteligencia.com///storage//uploads//configs//internoApp2.svg") !important;
+  content: url("https://tmc.becinteligencia.com//storage//uploads//configs//internoApp2.svg") !important;
 }
 
 :root ion-icon[class*="tab-tmc-notificacao"][ng-reflect-is-active="true"] {
@@ -4413,7 +4413,7 @@ ion-icon::before {
 }
 
 :root ion-icon[class*="tab-tmc-agenda"] {
-  content: url("https://tmc.becinteligencia.com///storage//uploads//configs//internoApp3.svg") !important;
+  content: url("https://tmc.becinteligencia.com//storage//uploads//configs//internoApp3.svg") !important;
 }
 
 :root ion-icon[class*="tab-tmc-agenda"][ng-reflect-is-active="true"] {
@@ -4427,7 +4427,7 @@ ion-icon::before {
 }
 
 :root ion-icon[class*="tab-tmc-foto"] {
-  content: url("https://tmc.becinteligencia.com///storage//uploads//configs//internoApp4.svg") !important;
+  content: url("https://tmc.becinteligencia.com//storage//uploads//configs//internoApp4.svg") !important;
 }
 
 :root ion-icon[class*="tab-tmc-foto"][ng-reflect-is-active="true"] {
@@ -4441,7 +4441,7 @@ ion-icon::before {
 }
 
 :root ion-icon[class*="tab-tmc-news"] {
-  content: url("https://tmc.becinteligencia.com///storage//uploads//configs//internoApp5.svg") !important;
+  content: url("https://tmc.becinteligencia.com//storage//uploads//configs//internoApp5.svg") !important;
 }
 
 :root ion-icon[class*="tab-tmc-news"][ng-reflect-is-active="true"] {
@@ -4450,6 +4450,156 @@ ion-icon::before {
 }
 
 :root ion-icon[class*="tab-tmc-news"][ng-reflect-is-active="false"] {
+  -webkit-filter: none;
+  filter: none;
+}
+
+:root ion-icon[class*="tab-hability-"] {
+  width: 30px;
+  height: 30px;
+}
+
+:root ion-icon[class*="tab-hability-perfil"] {
+  content: url("https://hability.becinteligencia.com//storage//uploads//configs//internoApp1.svg") !important;
+}
+
+:root ion-icon[class*="tab-hability-perfil"][ng-reflect-is-active="true"] {
+  -webkit-filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+  filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+}
+
+:root ion-icon[class*="tab-hability-perfil"][ng-reflect-is-active="false"] {
+  -webkit-filter: none;
+  filter: none;
+}
+
+:root ion-icon[class*="tab-hability-notificacao"] {
+  content: url("https://hability.becinteligencia.com//storage//uploads//configs//internoApp2.svg") !important;
+}
+
+:root ion-icon[class*="tab-hability-notificacao"][ng-reflect-is-active="true"] {
+  -webkit-filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+  filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+}
+
+:root ion-icon[class*="tab-hability-notificacao"][ng-reflect-is-active="false"] {
+  -webkit-filter: none;
+  filter: none;
+}
+
+:root ion-icon[class*="tab-hability-agenda"] {
+  content: url("https://hability.becinteligencia.com//storage//uploads//configs//internoApp3.svg") !important;
+}
+
+:root ion-icon[class*="tab-hability-agenda"][ng-reflect-is-active="true"] {
+  -webkit-filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+  filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+}
+
+:root ion-icon[class*="tab-hability-agenda"][ng-reflect-is-active="false"] {
+  -webkit-filter: none;
+  filter: none;
+}
+
+:root ion-icon[class*="tab-hability-foto"] {
+  content: url("https://hability.becinteligencia.com//storage//uploads//configs//internoApp4.svg") !important;
+}
+
+:root ion-icon[class*="tab-hability-foto"][ng-reflect-is-active="true"] {
+  -webkit-filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+  filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+}
+
+:root ion-icon[class*="tab-hability-foto"][ng-reflect-is-active="false"] {
+  -webkit-filter: none;
+  filter: none;
+}
+
+:root ion-icon[class*="tab-hability-news"] {
+  content: url("https://hability.becinteligencia.com//storage//uploads//configs//internoApp5.svg") !important;
+}
+
+:root ion-icon[class*="tab-hability-news"][ng-reflect-is-active="true"] {
+  -webkit-filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+  filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+}
+
+:root ion-icon[class*="tab-hability-news"][ng-reflect-is-active="false"] {
+  -webkit-filter: none;
+  filter: none;
+}
+
+:root ion-icon[class*="tab-full-promo-"] {
+  width: 30px;
+  height: 30px;
+}
+
+:root ion-icon[class*="tab-full-promo-perfil"] {
+  content: url("https://homolog.fullpromo.com.br//storage//uploads//configs//internoApp1.svg") !important;
+}
+
+:root ion-icon[class*="tab-full-promo-perfil"][ng-reflect-is-active="true"] {
+  -webkit-filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+  filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+}
+
+:root ion-icon[class*="tab-full-promo-perfil"][ng-reflect-is-active="false"] {
+  -webkit-filter: none;
+  filter: none;
+}
+
+:root ion-icon[class*="tab-full-promo-notificacao"] {
+  content: url("https://homolog.fullpromo.com.br//storage//uploads//configs//internoApp2.svg") !important;
+}
+
+:root ion-icon[class*="tab-full-promo-notificacao"][ng-reflect-is-active="true"] {
+  -webkit-filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+  filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+}
+
+:root ion-icon[class*="tab-full-promo-notificacao"][ng-reflect-is-active="false"] {
+  -webkit-filter: none;
+  filter: none;
+}
+
+:root ion-icon[class*="tab-full-promo-agenda"] {
+  content: url("https://homolog.fullpromo.com.br//storage//uploads//configs//internoApp3.svg") !important;
+}
+
+:root ion-icon[class*="tab-full-promo-agenda"][ng-reflect-is-active="true"] {
+  -webkit-filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+  filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+}
+
+:root ion-icon[class*="tab-full-promo-agenda"][ng-reflect-is-active="false"] {
+  -webkit-filter: none;
+  filter: none;
+}
+
+:root ion-icon[class*="tab-full-promo-foto"] {
+  content: url("https://homolog.fullpromo.com.br//storage//uploads//configs//internoApp4.svg") !important;
+}
+
+:root ion-icon[class*="tab-full-promo-foto"][ng-reflect-is-active="true"] {
+  -webkit-filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+  filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+}
+
+:root ion-icon[class*="tab-full-promo-foto"][ng-reflect-is-active="false"] {
+  -webkit-filter: none;
+  filter: none;
+}
+
+:root ion-icon[class*="tab-full-promo-news"] {
+  content: url("https://homolog.fullpromo.com.br//storage//uploads//configs//internoApp5.svg") !important;
+}
+
+:root ion-icon[class*="tab-full-promo-news"][ng-reflect-is-active="true"] {
+  -webkit-filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+  filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+}
+
+:root ion-icon[class*="tab-full-promo-news"][ng-reflect-is-active="false"] {
   -webkit-filter: none;
   filter: none;
 }
@@ -26438,6 +26588,18 @@ ion-navbar.toolbar {
   background-position: center;
 }
 
+.body.background-hability {
+  background: #000 url("https://hability.becinteligencia.com/storage/uploads/configs/loginMobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.body.background-full-promo {
+  background: #000 url("https://homolog.fullpromo.com.br/storage/uploads/configs/loginMobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .content[class*="edicom-"][class*="custom-bg"] {
   background: url("https://edicom.becinteligencia.com//storage//uploads//configs/papelParede.png") no-repeat 100% 100%;
   background-size: 100% 100%;
@@ -26496,6 +26658,20 @@ ion-navbar.toolbar {
 
 .content[class*="tmc-"][class*="custom-bg"] {
   background: url("https://tmc.becinteligencia.com//storage//uploads//configs/papelParede.png") no-repeat 100% 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.content[class*="hability-"][class*="custom-bg"] {
+  background: url("https://hability.becinteligencia.com///storage//uploads//configs/papelParede.png") no-repeat 100% 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.content[class*="full-promo-"][class*="custom-bg"] {
+  background: url("https://homolog.fullpromo.com.br//storage//uploads//configs/papelParede.png") no-repeat 100% 100%;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -26968,6 +27144,44 @@ menu-sup ion-icon[class*="tmc-"][class*="chat-active"] {
   filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
 }
 
+menu-sup ion-icon[class*="hability-"] {
+  width: 30px;
+  height: 30px;
+}
+
+menu-sup ion-icon[class*="hability-"][class*="chat"] {
+  background: url("https://hability.becinteligencia.com//storage//uploads//configs//iconeHeader.png") no-repeat 100% 100%;
+  background-size: contain;
+  -webkit-filter: none;
+  filter: none;
+}
+
+menu-sup ion-icon[class*="hability-"][class*="chat-active"] {
+  background: url("https://hability.becinteligencia.com//storage//uploads//configs//iconeHeader.png") no-repeat 100% 100%;
+  background-size: contain;
+  -webkit-filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+  filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+}
+
+menu-sup ion-icon[class*="full-promo-"] {
+  width: 30px;
+  height: 30px;
+}
+
+menu-sup ion-icon[class*="full-promo-"][class*="chat"] {
+  background: url("https://homolog.fullpromo.com.br//storage//uploads//configs//iconeHeader.png") no-repeat 100% 100%;
+  background-size: contain;
+  -webkit-filter: none;
+  filter: none;
+}
+
+menu-sup ion-icon[class*="full-promo-"][class*="chat-active"] {
+  background: url("https://homolog.fullpromo.com.br//storage//uploads//configs//iconeHeader.png") no-repeat 100% 100%;
+  background-size: contain;
+  -webkit-filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+  filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+}
+
 photo-modal .background {
   background-color: rgba(0, 0, 0, 0.555);
 }
@@ -27271,6 +27485,77 @@ page-edit-user #body .buttonLogout {
 .cropper-container {
   min-height: 360px;
   min-width: 420px;
+}
+
+page-edit-user .footerSpace {
+  display: block;
+  margin: auto;
+  margin-bottom: 80px;
+}
+
+page-edit-user #body .requiredInfo {
+  font-style: italic;
+}
+
+page-edit-user #body .fieldElement {
+  padding: 0px;
+}
+
+page-edit-user #body .fieldElement .label {
+  padding-left: 10px;
+}
+
+page-edit-user #body .recovery-link {
+  margin-top: 10px;
+  margin-bottom: 40px;
+  display: block;
+  color: #FFF;
+}
+
+page-edit-user #body .buttonLogin {
+  background: #4472c4;
+}
+
+page-edit-user #body .buttonMedium {
+  height: 50px;
+}
+
+page-edit-user #body .buttonLogout {
+  background: #FFA500;
+}
+
+.buttonPhoto {
+  position: absolute !important;
+  left: 28% !important;
+  bottom: 0 !important;
+  margin: 0 !important;
+  height: 30px;
+}
+
+.perfil-label {
+  font-size: 8px !important;
+}
+
+.perfil {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 12px !important;
+  width: auto;
+}
+
+.perfil-title {
+  color: #203141 !important;
+  font-weight: 900;
+}
+
+.perfil-input {
+  color: #000000 !important;
+}
+
+.text-input-md {
+  margin: 6px 5px;
 }
 
 page-list-videos .footerSpace {
@@ -28088,6 +28373,20 @@ page-register .body.background-tmc {
 
 page-register .body.background-r2m {
   background: #000 url("https://readytomarket.becinteligencia.com/storage/uploads/configs/loginMobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+}
+
+page-register .body.background-hability {
+  background: #000 url("https://hability.becinteligencia.com//storage/uploads/configs/loginMobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+}
+
+page-register .body.background-full-promo {
+  background: #000 url("https://homolog.fullpromo.com.br//storage/uploads/configs/loginMobile.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto 100%;

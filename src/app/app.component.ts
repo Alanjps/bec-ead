@@ -46,17 +46,19 @@ export class MyApp {
         //storage.set('Idiom','01'); //português
         //storage.set('Idiom','02'); //espanhol
 
-        //0 -> localhost
-        //1 -> ead (vcc)
-        //2 -> edicom
-        //3 -> marketing-house
-        //4 -> hkt369
-        //5 -> know-house
-        //6 -> simples-trade
-        //7 -> r2m
-        //8 -> ava
-        //9 -> tmc
-        this.projectNumber = 1;
+        //0  -> localhost
+        //1  -> ead (vcc)
+        //2  -> edicom
+        //3  -> marketing-house
+        //4  -> hkt369
+        //5  -> know-house
+        //6  -> simples-trade
+        //7  -> r2m
+        //8  -> ava
+        //9  -> tmc
+        //10 -> hability
+        //11 -> full-promo
+        this.projectNumber = 10;
 
         switch(this.projectNumber){
           case 0:
@@ -119,6 +121,18 @@ export class MyApp {
             this.firebaseSenderId='732312096020';
             this.projectName = 'tmc';
             storage.set('Idiom','02'); //espanhol
+            break;
+          case 10:
+            this.onesignalAppId='fb347a8c-b214-4754-934b-b60e6772fd47';
+            this.firebaseSenderId='926995274326';
+            this.projectName = 'hability';
+            storage.set('Idiom','02'); //espanhol
+            break;
+          case 11:
+            this.onesignalAppId='574a5c13-9a8e-46fb-85cf-3698d35cc750';
+            this.firebaseSenderId='1067216235696';
+            this.projectName = 'full-promo';
+            storage.set('Idiom','01'); //português
             break;
         }
 
@@ -192,6 +206,14 @@ export class MyApp {
             }
             case 'tmc': {
               url = 'https://tmc.becinteligencia.com';
+              break;
+            }
+            case 'hability': {
+              url = 'https://hability.becinteligencia.com';
+              break;
+            }
+            case 'full-promo': {
+              url = 'https://homolog.fullpromo.com.br/';
               break;
             }
           }

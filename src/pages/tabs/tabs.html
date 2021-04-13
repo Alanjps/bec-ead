@@ -71,7 +71,21 @@
   <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-tmc-news"></ion-tab>
 </ion-tabs>
 
+<ion-tabs #appTabs selectedIndex="2" *ngIf="project == 'hability' && (version == '02' || version == '01') && renderRoot == true" [ngClass]="chatAtTop == true ? 'ion-tabs' : ''">
+  <ion-tab [root]="tab8" tabIcon="tab-hability-perfil"></ion-tab>
+  <ion-tab [root]="tab7" tabIcon="tab-hability-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>
+  <ion-tab [root]="tab1" tabIcon="tab-hability-agenda" (ionSelect)="redirectToListPage()"></ion-tab>
+  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-hability-foto"></ion-tab>
+  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-hability-news"></ion-tab>
+</ion-tabs>
 
+<ion-tabs #appTabs selectedIndex="2" *ngIf="project == 'full-promo' && (version == '02' || version == '01') && renderRoot == true" [ngClass]="chatAtTop == true ? 'ion-tabs' : ''">
+  <ion-tab [root]="tab8" tabIcon="tab-full-promo-perfil"></ion-tab>
+  <ion-tab [root]="tab7" tabIcon="tab-full-promo-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>
+  <ion-tab [root]="tab1" tabIcon="tab-full-promo-agenda" (ionSelect)="redirectToListPage()"></ion-tab>
+  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-full-promo-foto"></ion-tab>
+  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-full-promo-news"></ion-tab>
+</ion-tabs>
 
 <!-- LOCALHOST -->
 

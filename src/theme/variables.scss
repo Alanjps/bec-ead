@@ -103,7 +103,9 @@ $colors: (
   $url-simples-trade: "https://simplestrade.becinteligencia.com//storage//uploads//configs//";
   $url-r2m: "https://readytomarket.becinteligencia.com//storage//uploads//configs//";
   $url-ava: "https://ava.insighttech.com.br//storage//uploads//configs//";
-  $url-tmc: "https://tmc.becinteligencia.com///storage//uploads//configs//";
+  $url-tmc: "https://tmc.becinteligencia.com//storage//uploads//configs//";
+  $url-hability: "https://hability.becinteligencia.com//storage//uploads//configs//";
+  $url-full-promo: "https://homolog.fullpromo.com.br//storage//uploads//configs//";
 
   ion-icon {
     //-------------------------------------------------------
@@ -579,6 +581,117 @@ $colors: (
         filter: none;
       }
     }
+
+    //-------------------------------------------------------
+    //HABILITY -------------------------------------------------------
+    //-------------------------------------------------------
+
+    &[class*="tab-hability-"]{
+      width: 30px;
+      height: 30px;
+    }
+
+    &[class*="tab-hability-perfil"]{
+      content: url($url-hability+"internoApp1.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-hability-notificacao"]{
+      content: url($url-hability+"internoApp2.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-hability-agenda"]{
+      content: url($url-hability+"internoApp3.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-hability-foto"]{
+      content: url($url-hability+"internoApp4.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-hability-news"]{
+      content: url($url-hability+"internoApp5.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }   
+    
+    
+    //-------------------------------------------------------
+    //FULL PROMO -------------------------------------------------------
+    //-------------------------------------------------------
+
+    &[class*="tab-full-promo-"]{
+      width: 30px;
+      height: 30px;
+    }
+
+    &[class*="tab-full-promo-perfil"]{
+      content: url($url-full-promo+"internoApp1.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-full-promo-notificacao"]{
+      content: url($url-full-promo+"internoApp2.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-full-promo-agenda"]{
+      content: url($url-full-promo+"internoApp3.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-full-promo-foto"]{
+      content: url($url-full-promo+"internoApp4.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-full-promo-news"]{
+      content: url($url-full-promo+"internoApp5.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }    
   }
 }
 

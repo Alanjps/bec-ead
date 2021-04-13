@@ -1,4 +1,4 @@
-webpackJsonp([19],{
+webpackJsonp([21],{
 
 /***/ 111:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -57,13 +57,59 @@ var environment = {
         PUSHER_APP_SECRET: "580c135664656f851c52",
       PUSHER_APP_CLUSTER: "us2",
      */
+    /*
     //VCC -----------------------------------
-    PROJECT: 'ead',
+      PROJECT: 'ead',
+      TEXT_COLOR_V1: 'text-default-black',
+      HEADER_TEXT: 'style-white',
+    
+      PUSHER_APP_ID: "1165623",
+      PUSHER_APP_KEY: "458631d9d874e22b5c16",
+      PUSHER_APP_SECRET: "ceac567fed3ab7dd2dd1",
+      PUSHER_APP_CLUSTER: "us2",
+    
+     */
+    /*
+    //MARKETING HOUSE ------------------------
+      PROJECT: 'marketing-house',
+      TEXT_COLOR_V1: 'text-default-black',
+      HEADER_TEXT: 'style-white',
+    
+      PUSHER_APP_ID: "1013347",
+        PUSHER_APP_KEY: "a07dbeffcd3bb9fbeec8",
+        PUSHER_APP_SECRET: "d79be4f05a84dbe4086e",
+      PUSHER_APP_CLUSTER: "us2",
+    */
+    /*
+    //AVA -----------------------------------
+      PROJECT: 'ava',
+      TEXT_COLOR_V1: 'text-default-black',
+      HEADER_TEXT: 'style-white',
+    
+      PUSHER_APP_ID: "1153011",
+      PUSHER_APP_KEY: "2bc8091771030f954bbb",
+      PUSHER_APP_SECRET: "9c95e3d149cf07c995e2",
+      PUSHER_APP_CLUSTER: "us2",
+     */
+    /*
+    //TMC -----------------------------------
+      PROJECT: 'tmc',
+      TEXT_COLOR_V1: 'text-default-black',
+      HEADER_TEXT: 'style-white',
+    
+      PUSHER_APP_ID: "1175755",
+      PUSHER_APP_KEY: "a56afa599a1032dfb9cc",
+      PUSHER_APP_SECRET: "c779cd95649268404b03",
+      PUSHER_APP_CLUSTER: "us2",
+    
+     */
+    //HABILITY -----------------------------------
+    PROJECT: 'hability',
     TEXT_COLOR_V1: 'text-default-black',
     HEADER_TEXT: 'style-white',
-    PUSHER_APP_ID: "1165623",
-    PUSHER_APP_KEY: "458631d9d874e22b5c16",
-    PUSHER_APP_SECRET: "ceac567fed3ab7dd2dd1",
+    PUSHER_APP_ID: "1184826",
+    PUSHER_APP_KEY: "af39d43b0139720d5bcc",
+    PUSHER_APP_SECRET: "537ed2e7f530b1b9715b",
     PUSHER_APP_CLUSTER: "us2",
 };
 //# sourceMappingURL=environment.js.map
@@ -208,6 +254,20 @@ var HttpServiceProvider = /** @class */ (function () {
                                         }
                                         break;
                                     }
+                                    case 'hability': {
+                                        _this.url = '/hability';
+                                        if (_this._platform.is("cordova")) {
+                                            _this.url = "https://hability.becinteligencia.com";
+                                        }
+                                        break;
+                                    }
+                                    case 'full-promo': {
+                                        _this.url = '/full-promo';
+                                        if (_this._platform.is("cordova")) {
+                                            _this.url = "https://homolog.fullpromo.com.br";
+                                        }
+                                        break;
+                                    }
                                     default: {
                                         _this.url = '/vcc';
                                         if (_this._platform.is("cordova")) {
@@ -312,79 +372,87 @@ webpackEmptyAsyncContext.id = 124;
 var map = {
 	"../components/download-modal/download-modal.module": [
 		456,
-		18
+		20
 	],
 	"../components/file-modal/file-modal.module": [
 		457,
-		17
+		19
+	],
+	"../components/holerite/holerite.module": [
+		458,
+		6
 	],
 	"../components/list-videos-modal/list-videos-modal.module": [
-		461,
-		16
+		459,
+		18
 	],
 	"../components/photo-modal/photo-modal.module": [
-		458,
-		15
+		460,
+		17
 	],
 	"../components/quiz/quiz.module": [
-		459,
-		14
+		462,
+		16
 	],
 	"../components/user-form/user-form.module": [
-		460,
-		4
+		461,
+		5
 	],
 	"../pages/chat/chat.module": [
-		470,
-		11
+		472,
+		13
+	],
+	"../pages/edit-user-v02/edit-user-v02.module": [
+		467,
+		1
 	],
 	"../pages/edit-user/edit-user.module": [
-		467,
+		468,
 		0
 	],
 	"../pages/list-videos-v02/list-videos-v02.module": [
-		471,
-		10
-	],
-	"../pages/list-videos-v03/list-videos-v03.module": [
-		472,
-		9
-	],
-	"../pages/list-videos-v04/list-videos-v04.module": [
-		466,
-		6
-	],
-	"../pages/list-videos/list-videos.module": [
 		473,
-		5
-	],
-	"../pages/login/login.module": [
-		468,
-		3
-	],
-	"../pages/my-downloads/my-downloads.module": [
-		462,
 		12
 	],
-	"../pages/notification/notification.module": [
-		463,
+	"../pages/list-videos-v03/list-videos-v03.module": [
+		474,
+		11
+	],
+	"../pages/list-videos-v04/list-videos-v04.module": [
+		469,
 		8
 	],
-	"../pages/photo/photo.module": [
-		474,
+	"../pages/list-videos/list-videos.module": [
+		475,
 		7
 	],
-	"../pages/recovery-password/recovery-password.module": [
+	"../pages/login/login.module": [
+		470,
+		4
+	],
+	"../pages/my-downloads/my-downloads.module": [
+		463,
+		14
+	],
+	"../pages/notification/notification.module": [
 		464,
-		1
+		10
+	],
+	"../pages/photo/photo.module": [
+		476,
+		9
+	],
+	"../pages/recovery-password/recovery-password.module": [
+		466,
+		2
 	],
 	"../pages/register/register.module": [
 		465,
-		2
+		3
 	],
 	"../pages/tabs/tabs.module": [
-		469,
-		13
+		471,
+		15
 	]
 };
 function webpackAsyncContext(req) {
@@ -509,6 +577,20 @@ var AuthProvider = /** @class */ (function () {
                     _this.url = '/tmc';
                     if (_this._platform.is("cordova")) {
                         _this.url = "https://tmc.becinteligencia.com";
+                    }
+                    break;
+                }
+                case 'hability': {
+                    _this.url = '/hability';
+                    if (_this._platform.is("cordova")) {
+                        _this.url = "https://hability.becinteligencia.com";
+                    }
+                    break;
+                }
+                case 'full-promo': {
+                    _this.url = '/full-promo';
+                    if (_this._platform.is("cordova")) {
+                        _this.url = "https://homolog.fullpromo.com.br";
                     }
                     break;
                 }
@@ -845,11 +927,11 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__app_component__ = __webpack_require__(450);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_native_call_number_ngx__ = __webpack_require__(451);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_native_onesignal__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_ngx_qrcode2__ = __webpack_require__(349);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_ngx_qrcode2__ = __webpack_require__(348);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_ngx_pagination__ = __webpack_require__(452);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__angular_platform_browser_animations__ = __webpack_require__(453);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__ionic_native_image_picker_ngx__ = __webpack_require__(455);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_angular_cropperjs__ = __webpack_require__(348);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_angular_cropperjs__ = __webpack_require__(349);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_angular_cropperjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_22_angular_cropperjs__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__providers_pusher_service_pusher_service__ = __webpack_require__(350);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -905,17 +987,19 @@ var AppModule = /** @class */ (function () {
                 }, {
                     links: [
                         { loadChildren: '../components/download-modal/download-modal.module#DownloadModalModule', name: 'download-modal', segment: 'download-modal', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../components/photo-modal/photo-modal.module#PhotoModalModule', name: 'photo-modal', segment: 'photo-modal', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../components/quiz/quiz.module#QuizModule', name: 'quiz', segment: 'quiz', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../components/user-form/user-form.module#UserFormModule', name: 'user-form-modal', segment: 'user-form', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../components/file-modal/file-modal.module#FileModalModule', name: 'file-modal', segment: 'file-modal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../components/holerite/holerite.module#HoleriteModule', name: 'holerite-modal', segment: 'holerite', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../components/list-videos-modal/list-videos-modal.module#ListVideosModalModule', name: 'list-videos-modal', segment: 'list-videos-modal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../components/photo-modal/photo-modal.module#PhotoModalModule', name: 'photo-modal', segment: 'photo-modal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../components/user-form/user-form.module#UserFormModule', name: 'user-form-modal', segment: 'user-form', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../components/quiz/quiz.module#QuizModule', name: 'quiz', segment: 'quiz', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/my-downloads/my-downloads.module#MyDownloadsPageModule', name: 'my-downloads', segment: 'my-downloads', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/notification/notification.module#NotificationPageModule', name: 'notification-page', segment: 'notification', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/recovery-password/recovery-password.module#RecoveryPasswordPageModule', name: 'recovey-password-page', segment: 'recovery-password', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'register-page', segment: 'register', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/list-videos-v04/list-videos-v04.module#ListVideosPageV04Module', name: 'list-videos-page-v04', segment: 'list-videos-v04', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/recovery-password/recovery-password.module#RecoveryPasswordPageModule', name: 'recovey-password-page', segment: 'recovery-password', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/edit-user-v02/edit-user-v02.module#EditUserV02PageModule', name: 'edit-user-v02-page', segment: 'edit-user-v02', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/edit-user/edit-user.module#EditUserPageModule', name: 'edit-user-page', segment: 'edit-user', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/list-videos-v04/list-videos-v04.module#ListVideosPageV04Module', name: 'list-videos-page-v04', segment: 'list-videos-v04', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'login-page', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'tab-page', segment: 'tabs', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/chat/chat.module#ChatPageModule', name: 'chat-page', segment: 'chat', priority: 'low', defaultHistory: [] },
@@ -1328,17 +1412,19 @@ var MyApp = /** @class */ (function () {
             //IDIOMA -----------------------------------------
             //storage.set('Idiom','01'); //português
             //storage.set('Idiom','02'); //espanhol
-            //0 -> localhost
-            //1 -> ead (vcc)
-            //2 -> edicom
-            //3 -> marketing-house
-            //4 -> hkt369
-            //5 -> know-house
-            //6 -> simples-trade
-            //7 -> r2m
-            //8 -> ava
-            //9 -> tmc
-            _this.projectNumber = 1;
+            //0  -> localhost
+            //1  -> ead (vcc)
+            //2  -> edicom
+            //3  -> marketing-house
+            //4  -> hkt369
+            //5  -> know-house
+            //6  -> simples-trade
+            //7  -> r2m
+            //8  -> ava
+            //9  -> tmc
+            //10 -> hability
+            //11 -> full-promo
+            _this.projectNumber = 10;
             switch (_this.projectNumber) {
                 case 0:
                     _this.onesignalAppId = '946eb156-716e-4000-853f-18f41cc2b193';
@@ -1400,6 +1486,18 @@ var MyApp = /** @class */ (function () {
                     _this.firebaseSenderId = '732312096020';
                     _this.projectName = 'tmc';
                     storage.set('Idiom', '02'); //espanhol
+                    break;
+                case 10:
+                    _this.onesignalAppId = 'fb347a8c-b214-4754-934b-b60e6772fd47';
+                    _this.firebaseSenderId = '926995274326';
+                    _this.projectName = 'hability';
+                    storage.set('Idiom', '02'); //espanhol
+                    break;
+                case 11:
+                    _this.onesignalAppId = '574a5c13-9a8e-46fb-85cf-3698d35cc750';
+                    _this.firebaseSenderId = '1067216235696';
+                    _this.projectName = 'full-promo';
+                    storage.set('Idiom', '01'); //português
                     break;
             }
             // OneSignal Code start:
@@ -1467,6 +1565,14 @@ var MyApp = /** @class */ (function () {
                     }
                     case 'tmc': {
                         url = 'https://tmc.becinteligencia.com';
+                        break;
+                    }
+                    case 'hability': {
+                        url = 'https://hability.becinteligencia.com';
+                        break;
+                    }
+                    case 'full-promo': {
+                        url = 'https://homolog.fullpromo.com.br/';
                         break;
                     }
                 }

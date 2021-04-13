@@ -95,6 +95,16 @@
         background-repeat: no-repeat;
         background-position: center;
     }
+    &.background-hability{
+        background: #000 url("https://hability.becinteligencia.com/storage/uploads/configs/loginMobile.png");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &.background-full-promo{
+        background: #000 url("https://homolog.fullpromo.com.br/storage/uploads/configs/loginMobile.png");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 }
 
 //background das páginas
@@ -175,6 +185,24 @@
     }
     &[class*="tmc-"] {
         $urlBG: "https://tmc.becinteligencia.com//storage//uploads//configs/";
+        &[class*="custom-bg"] {
+            background: url($urlBG + "papelParede.png") no-repeat 100% 100%;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &[class*="hability-"] {
+        $urlBG: "https://hability.becinteligencia.com///storage//uploads//configs/";
+        &[class*="custom-bg"] {
+            background: url($urlBG + "papelParede.png") no-repeat 100% 100%;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &[class*="full-promo-"] {
+        $urlBG: "https://homolog.fullpromo.com.br//storage//uploads//configs/";
         &[class*="custom-bg"] {
             background: url($urlBG + "papelParede.png") no-repeat 100% 100%;
             background-size: 100% 100%;

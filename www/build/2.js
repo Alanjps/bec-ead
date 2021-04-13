@@ -1,15 +1,15 @@
 webpackJsonp([2],{
 
-/***/ 465:
+/***/ 466:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegisterPageModule", function() { return RegisterPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RecoveryPasswordPageModule", function() { return RecoveryPasswordPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__register__ = __webpack_require__(495);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_brmasker_ionic_3__ = __webpack_require__(479);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__recovery_password__ = __webpack_require__(498);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_brmasker_ionic_3__ = __webpack_require__(481);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,24 +20,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var RegisterPageModule = /** @class */ (function () {
-    function RegisterPageModule() {
+var RecoveryPasswordPageModule = /** @class */ (function () {
+    function RecoveryPasswordPageModule() {
     }
-    RegisterPageModule = __decorate([
+    RecoveryPasswordPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__register__["a" /* RegisterPage */],
+                __WEBPACK_IMPORTED_MODULE_2__recovery_password__["a" /* RecoveryPasswordPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__register__["a" /* RegisterPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__recovery_password__["a" /* RecoveryPasswordPage */]),
                 __WEBPACK_IMPORTED_MODULE_3_brmasker_ionic_3__["a" /* BrMaskerModule */]
             ],
         })
-    ], RegisterPageModule);
-    return RegisterPageModule;
+    ], RecoveryPasswordPageModule);
+    return RecoveryPasswordPageModule;
 }());
 
-//# sourceMappingURL=register.module.js.map
+//# sourceMappingURL=recovery-password.module.js.map
 
 /***/ }),
 
@@ -564,13 +564,13 @@ BrMaskerIonicServices3.ctorParameters = function () { return []; };
 
 /***/ }),
 
-/***/ 479:
+/***/ 481:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_module__ = __webpack_require__(480);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_module__ = __webpack_require__(482);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__app_module__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__directives__ = __webpack_require__(481);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__directives__ = __webpack_require__(483);
 /* unused harmony namespace reexport */
 
 
@@ -578,7 +578,7 @@ BrMaskerIonicServices3.ctorParameters = function () { return []; };
 
 /***/ }),
 
-/***/ 480:
+/***/ 482:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -622,7 +622,7 @@ BrMaskerModule.ctorParameters = function () { return []; };
 
 /***/ }),
 
-/***/ 481:
+/***/ 483:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -636,16 +636,17 @@ BrMaskerModule.ctorParameters = function () { return []; };
 
 /***/ }),
 
-/***/ 484:
+/***/ 489:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__ = __webpack_require__(342);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__environments_environment__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_onesignal__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_is_cordova_available__ = __webpack_require__(347);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_http_service_http_service__ = __webpack_require__(112);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -660,282 +661,241 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var LoginPage = /** @class */ (function () {
-    function LoginPage(navCtrl, navParams, authService, toastCtrl, loadingCtrl, storage, modalCtrl) {
-        var _this = this;
+
+var TabsPage = /** @class */ (function () {
+    function TabsPage(navCtrl, navParams, storage, oneSignal, http) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.authService = authService;
-        this.toastCtrl = toastCtrl;
-        this.loadingCtrl = loadingCtrl;
         this.storage = storage;
-        this.modalCtrl = modalCtrl;
-        this.ENV = __WEBPACK_IMPORTED_MODULE_4__environments_environment__["a" /* environment */];
-        this.credential = {
-            documento: '',
-            password: '',
-            isDevice: '1',
-            lembrar: false
-        };
-        this.lembrar = 'nao';
-        this.globalUrl = '';
-        this.idiom = '';
-        this.project = '';
-        /* OCULTA O CAMPO SENHA */
-        this.hide = true;
-        this.authService.logout();
-        this.hide = false;
-        if (this.navParams.get('logout')) {
-            this.navCtrl.push('login-page');
-            this.authService.logoutSave();
-        }
-        storage.get('GlobalUrl').then(function (value) {
-            _this.globalUrl = value;
-        });
-        this.storage.get('clienteSaveDocumento').then(function (valorDoc) {
-            if (valorDoc) {
-                var loading_1 = _this.loadingCtrl.create({
-                    content: 'Espere...'
-                });
-                loading_1.present();
-                _this.storage.get('clienteSavePassword').then(function (valorPass) {
-                    if (valorPass) {
-                        _this.credential.documento = valorDoc;
-                        _this.credential.password = valorPass;
-                        _this.authService.login(_this.credential).then(function (result) {
-                            if (result) {
-                                loading_1.dismiss();
-                                _this.navCtrl.push('tab-page');
-                            }
-                            else {
-                                loading_1.dismiss();
-                            }
-                        });
-                    }
-                    else {
-                        loading_1.dismiss();
-                    }
-                });
-            }
-        });
+        this.oneSignal = oneSignal;
+        this.http = http;
+        this.tab1 = '';
+        this.tab7 = 'notification-page';
+        this.tab8 = 'edit-user-page';
+        this.tab9 = 'photo-page';
+        this.tab10 = '';
+        this.showTab5 = true;
+        this.showTabSair = true;
+        this.renderRoot = false;
+        this.chatAtTop = true;
+        this.notificationEnabled = false;
+        this.version = '01';
+        this.totalNotification = null;
+        this.showTab04 = false;
+        this.showTab05 = false;
+        this.goToDeafultPage();
     }
-    LoginPage.prototype.ngOnInit = function () {
+    TabsPage_1 = TabsPage;
+    TabsPage.prototype.goToDeafultPage = function () {
         var _this = this;
         this.storage.get('LayoutVersion').then(function (value) {
-            _this.version = value;
-        });
-        this.storage.get('Project').then(function (value) {
-            _this.background = value;
-            _this.project = value;
-        });
-        this.storage.get('Idiom').then(function (value) {
-            _this.idiom = value;
-        });
-    };
-    LoginPage.prototype.ngIfCtrl = function () {
-        this.hide = !this.hide;
-    };
-    LoginPage.prototype.openPage = function (page) {
-        if (page == 'downloads') {
-            var fileModal = this.modalCtrl.create('download-modal');
-            fileModal.present();
-        }
-    };
-    LoginPage.prototype.login = function () {
-        //14 CPF
-        // 18 CNPJ
-        var _this = this;
-        this.prosseguir = false;
-        if (this.version == '01') {
-            if (this.credential.documento.length == 14) {
-                //CPF
-                if (this.ValidaCPF(this.credential.documento)) {
-                    this.prosseguir = true;
+            _this.chatAtTop = false;
+            switch (value) {
+                case '02': {
+                    _this.version = '02';
+                    _this.tab1 = 'list-videos-v02-page';
+                    _this.tab10 = 'list-videos-v03-page';
+                    _this.chatAtTop = true;
+                    _this.notificationEnabled = true;
+                    break;
+                }
+                default: {
+                    _this.version = '01';
+                    _this.tab1 = 'list-videos-page';
+                    _this.tab10 = 'list-videos-page-v04';
+                    _this.chatAtTop = true;
+                    _this.notificationEnabled = false;
                 }
             }
-            else if (this.credential.documento.length == 18) {
-                //CNPJ
-                this.prosseguir = true;
-            }
-        }
-        else {
-            if (this.credential.documento.length > 0)
-                this.prosseguir = true;
-        }
-        if (this.prosseguir) {
-            this.authService.logout();
-            var loading_2 = this.loadingCtrl.create({
-                content: 'Espere...'
-            });
-            loading_2.present();
-            if (this.hide) {
-                // SE JÁ ESTIVER SENDO EXIBIDO, SIGNIFICA QUE O USUÁRIO JÁ INSERIOU O CPF E O SISTEMA IDENTIFICOU QUE NÃO É PRIMEIRO ACESSO NEM CADASTRO
-                // ENTÃO TENTA FAZER O LOGIN
-                this.authService.login(this.credential).then(function (result) {
-                    loading_2.dismiss();
-                    if (result) {
-                        _this.navCtrl.push('tab-page');
-                    }
-                    else {
-                        var toast = _this.toastCtrl.create({
-                            message: _this.idiom == '02' ? 'Correo o Contraseña inválidos' : 'CPF e/ou Senha inválidos',
-                            duration: 6000,
-                            position: 'top'
+            _this.storage.get('clienteCompanyId').then(function (companyId) {
+                _this.storage.get('clienteId').then(function (clienteId) {
+                    _this.http.getAll('/api/conteudos', { company_id: companyId, user_id: clienteId, type: "ICON4" })
+                        .subscribe(function (data) {
+                        if (data.length > 0)
+                            _this.showTab04 = true;
+                        _this.http.getAll('/api/conteudos', { company_id: companyId, user_id: clienteId, type: "ICON5" })
+                            .subscribe(function (data) {
+                            if (data.length > 0)
+                                _this.showTab05 = true;
+                            _this.getTotalNotifications(true);
+                            setTimeout(function () {
+                                setInterval(function () {
+                                    _this.getTotalNotifications();
+                                }, 5000);
+                            }, 5000);
+                            _this.renderRoot = true;
                         });
-                        toast.present();
-                    }
+                    });
                 });
-            }
-            else {
-                this.authService.firstAcess(this.credential).then(function (result) {
-                    loading_2.dismiss();
-                    if (result) {
-                        _this.storage.get('clienteFirst').then(function (valor) {
-                            if (valor != '1') {
-                                /**NÃO É O PRIMEIRO ACESSO, ENTÃO HABILITA O CAMPO SENHA */
-                                var toast = _this.toastCtrl.create({
-                                    message: _this.idiom == '02' ? 'Por favor, entrar con tu contraseña' : 'Favor entrar com sua senha de acesso',
-                                    duration: 2000,
-                                    position: 'top'
-                                });
-                                toast.present();
-                                _this.ngIfCtrl();
-                            }
-                            else {
-                                /**PRIMEIRO ACESSO, ENTÃO LEVA PARA A TELA DE PREENCHER OS DADOS */
-                                var toast = _this.toastCtrl.create({
-                                    message: _this.idiom == '02' ? 'Bienvenido, ponga tus datos para acesar la palicación' : 'Seja bem vindo(a)! Preencha seus dados para acesso',
-                                    duration: 2000,
-                                    position: 'top'
-                                });
-                                toast.onDidDismiss(function () {
-                                    _this.navCtrl.setRoot('edit-user-v02-page', { first: 'true' });
-                                });
-                                toast.present();
-                            }
-                        });
-                    }
-                    else {
-                        /** LEVA PARA A TELA DE CADASTRO */
-                        /**NÃO É O PRIMEIRO ACESSO, ENTÃO HABILITA O CAMPO SENHA */
-                        var toast = _this.toastCtrl.create({
-                            message: _this.project == 'edicom' ? 'Correo electrónico no registrado' : _this.idiom == '02' ? 'Haga tu registro' : 'Para acesso, faça seu cadastro',
-                            duration: 2000,
-                            position: 'top'
-                        });
-                        if (_this.project != 'edicom') {
-                            toast.onDidDismiss(function () {
-                                _this.navCtrl.setRoot('register-page', { documento: _this.credential.documento });
-                            });
-                        }
-                        toast.present();
-                    }
-                });
-            }
-        }
-        else {
-            var toast = this.toastCtrl.create({
-                message: 'CPF/CNPJ inválido',
-                duration: 2000,
-                position: 'top'
             });
-            toast.present();
-        }
+        });
     };
-    LoginPage.prototype.recoveryPassword = function () {
-        this.navCtrl.push('recovey-password-page');
+    TabsPage.prototype.getTotalNotifications = function (goToNotification) {
+        var _this = this;
+        if (goToNotification === void 0) { goToNotification = false; }
+        this.storage.get('clienteId').then(function (id) {
+            _this.http.getAll('/mensagens/getNotifications', { lido: false, user_id: id }, 'get')
+                .subscribe(function (data) {
+                _this.totalNotification = data.length > 0 ? data.length : null;
+                if (data.length > 0 && goToNotification == true) {
+                    _this.appTabs.select(1, { animate: true });
+                }
+            });
+        });
     };
-    LoginPage.prototype.ValidaCPF = function (cpf) {
-        cpf = cpf.replace('.', '').replace('.', '').replace('-', '');
-        ;
-        if (cpf == null) {
-            return false;
-        }
-        if (cpf.length != 11) {
-            return false;
-        }
-        if ((cpf == '00000000000') || (cpf == '11111111111') || (cpf == '22222222222') || (cpf == '33333333333') || (cpf == '44444444444') || (cpf == '55555555555') || (cpf == '66666666666') || (cpf == '77777777777') || (cpf == '88888888888') || (cpf == '99999999999')) {
-            return false;
-        }
-        var numero = 0;
-        var caracter = '';
-        var numeros = '0123456789';
-        var j = 10;
-        var somatorio = 0;
-        var resto = 0;
-        var digito1 = 0;
-        var digito2 = 0;
-        var cpfAux = '';
-        cpfAux = cpf.substring(0, 9);
-        for (var i = 0; i < 9; i++) {
-            caracter = cpfAux.charAt(i);
-            if (numeros.search(caracter) == -1) {
-                return false;
+    TabsPage.prototype.checkOneSignal = function () {
+        var _this = this;
+        if (Object(__WEBPACK_IMPORTED_MODULE_4__common_is_cordova_available__["a" /* isCordovaAvailable */])()) {
+            //this.storage.get('Project').then((project)=>{
+            //this.project = project;
+            var firebaseKey = '';
+            var firebaseSenderId = '';
+            var onesignalAppId = '';
+            switch (this.project) {
+                case 'marketing-house': {
+                    onesignalAppId = '883bb93e-4053-43f0-865c-a5d52ca89a80';
+                    firebaseKey = 'AAAA6zTPRhs:APA91bFAjdg13h1oQ_3LDNBbRd03TbWEkMTSpbXMc1lz4sToQ9VjcX4LYF5mC0Kh31aLfdMVISXnK4FTZV23hbiZqoFDFPpmXqF2Ijynuql5rlSGmyA-Ojy6e4Qu_ANDMR0LiByu9BkS';
+                    firebaseSenderId = '1010203313691';
+                    break;
+                }
+                case 'edicom': {
+                    onesignalAppId = 'c3765e9e-79b4-4dbc-b3ad-a31396017591';
+                    firebaseKey = 'AAAA5JZ5Y9U:APA91bHSACC_j1IijWyCoCpCojFln7TtQK14oNcUIi_PxXjvciAFR4L6xgYcuJpMFxR33pVrRg49Gw646jQmrKmvYe9X570IRZNVn-pu9pm3Ok0z39bd0r9T1W8geO5HJ56pF6tqF6GB';
+                    firebaseSenderId = '981777081301';
+                    break;
+                }
+                case 'ead': {
+                    onesignalAppId = '946eb156-716e-4000-853f-18f41cc2b193';
+                    //firebaseKey='AAAAHNSgMm4:APA91bFf84ZghEqCHXgqBNV5tC076OmSYnqUurpu4wDKW6WNjyLbJ3TXNxn6iIpPBT6gskXroMG45lB13l4ZhfLsw9rYzhKWv10wb-iMc2OjKCJkFYdHz3Crsk3TPQ9oh7DGDLFicLsj';
+                    firebaseKey = 'AAAABZVhZoI:APA91bFUtPdBDTVN-NHZc7Wk53Tn9wZiz1qjHTVKtyssQfur2F1t509yEe95CMOf6M0mkdQZYXBp6xBEhozI8J274GU6JHmLBSGrFWIAUxFk4w4Le3UdrjdvzdQyptkULVkuHPBohGND';
+                    firebaseSenderId = '23981024898';
+                    break;
+                }
+                case 'hkt369': {
+                    onesignalAppId = 'abf814a3-a2bb-4ae4-9a63-422d37394e64';
+                    firebaseKey = 'AAAAtys66f8:APA91bGBdecST10j3dG5AbL8-dRt0uMgYcS_zGutn-md8ZTi_0A-D-PLlXdoY0E5Akuwo9DUaWMxbv6vCXpHePJ2M4UeneYVlrUcuHUFIsXmiLbx4xXGZyMuLw0AsUCWM4IP3j7YdcsG';
+                    firebaseSenderId = '786704296447';
+                    break;
+                }
+                case 'know-house': {
+                    onesignalAppId = 'd29cd1d1-3a5b-4774-b768-a1026101ea0a';
+                    firebaseKey = 'AAAAv6DuekQ:APA91bEWy0U4-HL8f12hbNMEvDKQ1LMr8eA1gP-0gy4Y319eUpljpqwjNrQBrCoCXcl-IWHshA-I__MNi9WeKQfEUVSNDd_sTWI2AkmnAwXjHgUFsFaiyAYbUUyCYUYldoB8vgzLI7Cn';
+                    firebaseSenderId = '823038736964';
+                    break;
+                }
+                case 'simples-trade': {
+                    onesignalAppId = 'd6e18971-f2cc-41d8-aed7-28384cb957e0';
+                    firebaseKey = 'AAAAsWwKIKs:APA91bGvbUnOUFFYPGEY_rUolZNcgDnhjy1eBuEHM4nWnbpg03Ie8ky09eISCfqh2WmDt9ZnSBrsQebOFb85LPckqOQnMoDYA4RNmQZ5PqulyeAaMT2nqGfksSvU8QFqQR7sY7vTV2ix';
+                    firebaseSenderId = '762021814443';
+                    break;
+                }
+                case 'r2m': {
+                    onesignalAppId = 'a7bbe9ca-2e79-4f10-8f68-365da3e09fd5';
+                    firebaseKey = 'AAAAjrxUeko:APA91bEwsLDPKZJkIAnBNMcxrsxEYrGgi49TF7Pg37DQwpvwX9QtWgGojRzSiePJpLwt-qWe08onYfdsqjeUTxeFTz8aYDwS95uoI5ruThJGtz2r9kLxcBAXwzwNavPVHDTOYEw0DmUW';
+                    firebaseSenderId = '613045008970';
+                    break;
+                }
+                case 'ava': {
+                    onesignalAppId = '6b8f443d-da09-4ccc-b629-f1e21476c6b2';
+                    firebaseKey = 'AAAAhgN0_JU:APA91bEMiPSZM22P9MkPreN0zjwXbuz23N2wuSKifKN2or8Vt-YCzkYiGxC1p1SJA6OSCiTOaj3DKSLfgw_UcTU1J8ZSxqYzxcUAApNz3UjzTtrYSSNAhybm3NBzLOTSOBlqs4ks1Niz';
+                    firebaseSenderId = '575583616149';
+                    break;
+                }
+                case 'tmc': {
+                    onesignalAppId = 'c4a92409-ba2f-4001-bd59-af1b24ae58a1';
+                    firebaseKey = 'AAAAqoEzzRQ:APA91bGT0v5hAXduloaX57YR4XMSXnf3JVgM1ExmRAqP76jQkVilZR0DIRkv3Ninf9OlXsCUO-qPDpITPKtJpZHMBrjN_8OkD0WsO6Di041JTog_XpdCULtLE-Cj6fonzYaCDqIGbQxN';
+                    firebaseSenderId = '732312096020';
+                    break;
+                }
+                case 'hability': {
+                    onesignalAppId = 'fb347a8c-b214-4754-934b-b60e6772fd47';
+                    firebaseKey = 'AAAA19U5WlY:APA91bFfFyWmWJ7mz5oZn8Mj_pXFIjK82TTJCaC679XRZXdKCM3zLc36n7YJ1BwRACoa7Qx-JH2X76GANdVCHWrpkMmO271lBpUpOQDtb5kXtqPFRtdKpKAeVra4XCBC-_1_CuXAmHF3';
+                    firebaseSenderId = '926995274326';
+                    break;
+                }
+                case 'full-promo': {
+                    onesignalAppId = '574a5c13-9a8e-46fb-85cf-3698d35cc750';
+                    firebaseKey = 'AAAA-HsLbLA:APA91bE7dRADuz2EZ67knO3JqdBik6l99LOyM1I709WKFRVDCKqlYItxwln3B1S6s6JziLUvxGfDLfCVCOFZgYU0JuXwbHkuN2nxtX7CUUBHYQYKoHm3u0mP-drYb7UCyNgLb7Dr7gkA';
+                    firebaseSenderId = '1067216235696';
+                    break;
+                }
             }
-            numero = Number(caracter);
-            somatorio = somatorio + (numero * j);
-            j--;
-        }
-        resto = somatorio % 11;
-        digito1 = 11 - resto;
-        if (digito1 > 9) {
-            digito1 = 0;
-        }
-        j = 11;
-        somatorio = 0;
-        cpfAux = cpfAux + digito1;
-        for (var i = 0; i < 10; i++) {
-            caracter = cpfAux.charAt(i);
-            numero = Number(caracter);
-            somatorio = somatorio + (numero * j);
-            j--;
-        }
-        resto = somatorio % 11;
-        digito2 = 11 - resto;
-        if (digito2 > 9) {
-            digito2 = 0;
-        }
-        cpfAux = cpfAux + digito2;
-        if (cpf != cpfAux) {
-            return false;
-        }
-        else {
-            return true;
+            /*
+              ANTIGO---------------------------------------------
+              this.oneSignal.startInit(
+              'AAAAHNSgMm4:APA91bFf84ZghEqCHXgqBNV5tC076OmSYnqUurpu4wDKW6WNjyLbJ3TXNxn6iIpPBT6gskXroMG45lB13l4ZhfLsw9rYzhKWv10wb-iMc2OjKCJkFYdHz3Crsk3TPQ9oh7DGDLFicLsj',
+              '123826352750'
+            ); */
+            this.oneSignal.startInit(onesignalAppId, firebaseSenderId);
+            this.oneSignal.getIds().then(function (state) {
+                //FAZ O ENVIO DO DEVICE ID PRA WEB
+                //id, email, type, device_id
+                _this.storage.get('clienteId').then(function (clienteId) {
+                    _this.storage.get('clienteEmail').then(function (clienteEmail) {
+                        var parametros = {
+                            id: clienteId,
+                            email: clienteEmail,
+                            device_id: state.userId,
+                            type: 'android'
+                        };
+                        _this.http.post('/api/usuarios/set-device', parametros)
+                            .subscribe(function (data) {
+                        });
+                    });
+                });
+                //});
+            }).catch(function (error) { console.log('error no GET IDS', error); });
+            this.oneSignal.endInit();
         }
     };
-    LoginPage.prototype.selectIdiom = function (id) {
-        this.idiom = id;
-        this.storage.set('idiom', id);
+    TabsPage.prototype.ionViewWillEnter = function () {
+        var _this = this;
+        this.storage.get('Project').then(function (project) {
+            _this.project = project;
+            _this.checkOneSignal();
+        });
     };
-    LoginPage = __decorate([
+    TabsPage.prototype.redirectToListPage = function () {
+        if (this.navCtrl.getActive().component !== TabsPage_1) {
+            this.appTabs.select(2, { animate: true });
+            this.navCtrl.setRoot('tab-page', { logout: true });
+        }
+    };
+    TabsPage.prototype.doLogout = function () {
+        this.navCtrl.setRoot('login-page', { logout: true });
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('appTabs'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* Tabs */])
+    ], TabsPage.prototype, "appTabs", void 0);
+    TabsPage = TabsPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-login',template:/*ion-inline-start:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\pages\login\login.html"*/'\n\n<ion-content class="body background-{{ENV.PROJECT}}" padding>\n\n\n\n  <div class="min-height"></div>\n\n\n\n  <ion-list>\n\n\n\n      <ion-item *ngIf="idiom == \'01\'" class="fieldElement">\n\n        <ion-label class="{{ENV.TEXT_COLOR_V1}}" floating>CPF/CNPJ</ion-label>\n\n        <ion-input class="{{ENV.TEXT_COLOR_V1}}" type="text" autocomplete="off" [brmasker]="{person: true}" [(ngModel)]="credential.documento"></ion-input>\n\n      </ion-item>\n\n\n\n      <ion-item *ngIf="idiom == \'02\'"  class="fieldElement">\n\n        <ion-label class="{{ENV.TEXT_COLOR_V1}}" floating>E-MAIL</ion-label>\n\n        <ion-input class="{{ENV.TEXT_COLOR_V1}}" type="text" autocomplete="off" [(ngModel)]="credential.documento"></ion-input>\n\n      </ion-item>\n\n\n\n      <ion-item *ngIf="hide"  class="fieldElement" style="margin-top: 12px;">\n\n        <ion-label *ngIf="idiom == \'01\'" class="{{ENV.TEXT_COLOR_V1}}" floating>SENHA</ion-label>\n\n        <ion-label *ngIf="idiom == \'02\'" class="{{ENV.TEXT_COLOR_V1}}" floating>CONTRASEÑA</ion-label>\n\n        <ion-input class="{{ENV.TEXT_COLOR_V1}}" type="password" [(ngModel)]="credential.password"></ion-input>\n\n      </ion-item>\n\n\n\n    </ion-list>\n\n    <a *ngIf="hide" class="{{ENV.TEXT_COLOR_V1}}" (click)="recoveryPassword()" >\n\n      <div style="margin-top: 20px; margin-bottom: 20px;" *ngIf="idiom == \'01\'">Esqueci minha senha</div>\n\n      <div style="margin-top: 20px; margin-bottom: 20px;" *ngIf="idiom == \'02\'">He olvidado mi contraseña</div>\n\n    </a>\n\n\n\n    <button class="button-style button-style-{{ENV.PROJECT}} disable-hover button button-md button-default button-default-md button-full button-full-md" ion-button full icon-start (click)="login()">\n\n      <p *ngIf="idiom == \'01\'">Entrar</p>\n\n      <p *ngIf="idiom == \'02\'">Iniciar sesión</p>\n\n    </button>\n\n\n\n    <button class="button-style button-style-{{ENV.PROJECT}} disable-hover button button-md button-default button-default-md button-full button-full-md" *ngIf="project != \'edicom\'" ion-button full icon-start (click)="openPage(\'downloads\')">\n\n      <p *ngIf="idiom == \'01\'">Meus Downloads</p>\n\n      <p *ngIf="idiom == \'02\'">Mis Archivos</p>\n\n    </button>\n\n\n\n    <div><p class="{{ENV.TEXT_COLOR_V1}} version-text" >v. 1.0.0</p></div>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\pages\login\login.html"*/,
+            selector: 'page-tabs',template:/*ion-inline-start:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\pages\tabs\tabs.html"*/'<ion-tabs #appTabs selectedIndex="2" *ngIf="project == \'marketing-house\' && (version == \'02\' || version == \'01\') && renderRoot == true" [ngClass]="chatAtTop == true ? \'ion-tabs\' : \'\'">\n\n  <ion-tab [root]="tab8" tabIcon="tab-mrkhouse-perfil"></ion-tab>\n\n  <ion-tab [root]="tab7" tabIcon="tab-mrkhouse-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>\n\n  <ion-tab [root]="tab1" tabIcon="tab-mrkhouse-agenda" (ionSelect)="redirectToListPage()"></ion-tab>\n\n  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-mrkhouse-foto"></ion-tab>\n\n  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-mrkhouse-news"></ion-tab>\n\n</ion-tabs>\n\n\n\n<ion-tabs #appTabs selectedIndex="2" *ngIf="project == \'edicom\' && (version == \'02\' || version == \'01\') && renderRoot == true" [ngClass]="chatAtTop == true ? \'ion-tabs\' : \'\'">\n\n  <ion-tab [root]="tab8" tabIcon="tab-edicom-perfil"></ion-tab>\n\n  <ion-tab [root]="tab7" tabIcon="tab-edicom-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>\n\n  <ion-tab [root]="tab1" tabIcon="tab-edicom-agenda" (ionSelect)="redirectToListPage()"></ion-tab>\n\n  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-edicom-foto"></ion-tab>\n\n  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-edicom-news"></ion-tab>\n\n</ion-tabs>\n\n \n\n\n\n<ion-tabs #appTabs selectedIndex="2" *ngIf="project == \'ead\' && (version == \'02\' || version == \'01\') && renderRoot == true" [ngClass]="chatAtTop == true ? \'ion-tabs\' : \'\'">\n\n  <ion-tab [root]="tab8" tabIcon="tab-vcc-perfil"></ion-tab>\n\n  <ion-tab [root]="tab7" tabIcon="tab-vcc-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>\n\n  <ion-tab [root]="tab1" tabIcon="tab-vcc-agenda" (ionSelect)="redirectToListPage()"></ion-tab>\n\n  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-vcc-foto"></ion-tab>\n\n  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-vcc-news"></ion-tab>\n\n</ion-tabs>\n\n\n\n<ion-tabs #appTabs selectedIndex="2" *ngIf="project == \'hkt369\' && (version == \'02\' || version == \'01\') && renderRoot == true" [ngClass]="chatAtTop == true ? \'ion-tabs\' : \'\'">\n\n  <ion-tab [root]="tab8" tabIcon="tab-hkt369-perfil"></ion-tab>\n\n  <ion-tab [root]="tab7" tabIcon="tab-hkt369-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>\n\n  <ion-tab [root]="tab1" tabIcon="tab-hkt369-agenda" (ionSelect)="redirectToListPage()"></ion-tab>\n\n  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-hkt369-foto"></ion-tab>\n\n  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-hkt369-news"></ion-tab>\n\n</ion-tabs>\n\n\n\n<ion-tabs #appTabs selectedIndex="2" *ngIf="project == \'know-house\' && (version == \'02\' || version == \'01\') && renderRoot == true" [ngClass]="chatAtTop == true ? \'ion-tabs\' : \'\'">\n\n  <ion-tab [root]="tab8" tabIcon="tab-knowh-perfil"></ion-tab>\n\n  <ion-tab [root]="tab7" tabIcon="tab-knowh-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>\n\n  <ion-tab [root]="tab1" tabIcon="tab-knowh-agenda" (ionSelect)="redirectToListPage()"></ion-tab>\n\n  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-knowh-foto"></ion-tab>\n\n  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-knowh-news"></ion-tab>\n\n</ion-tabs>\n\n\n\n<ion-tabs #appTabs selectedIndex="2" *ngIf="project == \'simples-trade\' && (version == \'02\' || version == \'01\') && renderRoot == true" [ngClass]="chatAtTop == true ? \'ion-tabs\' : \'\'">\n\n  <ion-tab [root]="tab8" tabIcon="tab-strade-perfil"></ion-tab>\n\n  <ion-tab [root]="tab7" tabIcon="tab-strade-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>\n\n  <ion-tab [root]="tab1" tabIcon="tab-strade-agenda" (ionSelect)="redirectToListPage()"></ion-tab>\n\n  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-strade-foto"></ion-tab>\n\n  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-strade-news"></ion-tab>\n\n</ion-tabs>\n\n\n\n<ion-tabs #appTabs selectedIndex="2" *ngIf="project == \'r2m\' && (version == \'02\' || version == \'01\') && renderRoot == true" [ngClass]="chatAtTop == true ? \'ion-tabs\' : \'\'">\n\n  <ion-tab [root]="tab8" tabIcon="tab-r2m-perfil"></ion-tab>\n\n  <ion-tab [root]="tab7" tabIcon="tab-r2m-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>\n\n  <ion-tab [root]="tab1" tabIcon="tab-r2m-agenda" (ionSelect)="redirectToListPage()"></ion-tab>\n\n  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-r2m-foto"></ion-tab>\n\n  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-r2m-news"></ion-tab>\n\n</ion-tabs>\n\n\n\n<ion-tabs #appTabs selectedIndex="2" *ngIf="project == \'ava\' && (version == \'02\' || version == \'01\') && renderRoot == true" [ngClass]="chatAtTop == true ? \'ion-tabs\' : \'\'">\n\n  <ion-tab [root]="tab8" tabIcon="tab-ava-perfil"></ion-tab>\n\n  <ion-tab [root]="tab7" tabIcon="tab-ava-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>\n\n  <ion-tab [root]="tab1" tabIcon="tab-ava-agenda" (ionSelect)="redirectToListPage()"></ion-tab>\n\n  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-ava-foto"></ion-tab>\n\n  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-ava-news"></ion-tab>\n\n</ion-tabs>\n\n\n\n<ion-tabs #appTabs selectedIndex="2" *ngIf="project == \'tmc\' && (version == \'02\' || version == \'01\') && renderRoot == true" [ngClass]="chatAtTop == true ? \'ion-tabs\' : \'\'">\n\n  <ion-tab [root]="tab8" tabIcon="tab-tmc-perfil"></ion-tab>\n\n  <ion-tab [root]="tab7" tabIcon="tab-tmc-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>\n\n  <ion-tab [root]="tab1" tabIcon="tab-tmc-agenda" (ionSelect)="redirectToListPage()"></ion-tab>\n\n  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-tmc-foto"></ion-tab>\n\n  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-tmc-news"></ion-tab>\n\n</ion-tabs>\n\n\n\n<ion-tabs #appTabs selectedIndex="2" *ngIf="project == \'hability\' && (version == \'02\' || version == \'01\') && renderRoot == true" [ngClass]="chatAtTop == true ? \'ion-tabs\' : \'\'">\n\n  <ion-tab [root]="tab8" tabIcon="tab-hability-perfil"></ion-tab>\n\n  <ion-tab [root]="tab7" tabIcon="tab-hability-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>\n\n  <ion-tab [root]="tab1" tabIcon="tab-hability-agenda" (ionSelect)="redirectToListPage()"></ion-tab>\n\n  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-hability-foto"></ion-tab>\n\n  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-hability-news"></ion-tab>\n\n</ion-tabs>\n\n\n\n<ion-tabs #appTabs selectedIndex="2" *ngIf="project == \'full-promo\' && (version == \'02\' || version == \'01\') && renderRoot == true" [ngClass]="chatAtTop == true ? \'ion-tabs\' : \'\'">\n\n  <ion-tab [root]="tab8" tabIcon="tab-full-promo-perfil"></ion-tab>\n\n  <ion-tab [root]="tab7" tabIcon="tab-full-promo-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>\n\n  <ion-tab [root]="tab1" tabIcon="tab-full-promo-agenda" (ionSelect)="redirectToListPage()"></ion-tab>\n\n  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-full-promo-foto"></ion-tab>\n\n  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-full-promo-news"></ion-tab>\n\n</ion-tabs>\n\n\n\n<!-- LOCALHOST -->\n\n\n\n<ion-tabs #appTabs selectedIndex="2" *ngIf="project == \'localhost\' && (version == \'02\' || version == \'01\') && renderRoot == true" [ngClass]="chatAtTop == true ? \'ion-tabs\' : \'\'">\n\n  <ion-tab [root]="tab8" tabIcon="tab-ava-perfil"></ion-tab>\n\n  <ion-tab [root]="tab7" tabIcon="tab-ava-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>\n\n  <ion-tab [root]="tab1" tabIcon="tab-ava-agenda" (ionSelect)="redirectToListPage()"></ion-tab>\n\n  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-ava-foto"></ion-tab>\n\n  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-ava-news"></ion-tab>\n\n</ion-tabs>'/*ion-inline-end:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\pages\tabs\tabs.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__["a" /* AuthProvider */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* ToastController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */],
             __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */]])
-    ], LoginPage);
-    return LoginPage;
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_onesignal__["a" /* OneSignal */],
+            __WEBPACK_IMPORTED_MODULE_5__providers_http_service_http_service__["a" /* HttpServiceProvider */]])
+    ], TabsPage);
+    return TabsPage;
+    var TabsPage_1;
 }());
 
-//# sourceMappingURL=login.js.map
+//# sourceMappingURL=tabs.js.map
 
 /***/ }),
 
-/***/ 495:
+/***/ 498:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RecoveryPasswordPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login__ = __webpack_require__(484);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__ = __webpack_require__(342);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth__ = __webpack_require__(342);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__tabs_tabs__ = __webpack_require__(489);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__environments_environment__ = __webpack_require__(111);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -952,8 +912,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var RegisterPage = /** @class */ (function () {
-    function RegisterPage(navCtrl, navParams, authService, toastCtrl, loadingCtrl, storage) {
+var RecoveryPasswordPage = /** @class */ (function () {
+    function RecoveryPasswordPage(navCtrl, navParams, authService, toastCtrl, loadingCtrl, storage) {
         var _this = this;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
@@ -961,36 +921,19 @@ var RegisterPage = /** @class */ (function () {
         this.toastCtrl = toastCtrl;
         this.loadingCtrl = loadingCtrl;
         this.storage = storage;
-        this.tipoPessoa = "1"; // padrão PF
-        this.hide = false;
-        this.idiom = '';
         this.ENV = __WEBPACK_IMPORTED_MODULE_5__environments_environment__["a" /* environment */];
-        this.globalUrl = '';
         this.credential = {
-            documento: '',
-            password: '',
-            nome: '',
             email: '',
-            nascimento: '',
-            whatsapp: '',
-            aceite: false,
-            company_id: '1',
-            profile_id: '3' //VALOR FIXO, 3  = USUARIO
+            senha: '',
+            nascimento: ''
         };
-        this.event = {
-            month: '1990-02-19',
-            timeStarts: '07:43',
-            timeEnds: '1990-02-20'
-        };
+        this.idiom = '';
+        this.globalUrl = '';
         storage.get('GlobalUrl').then(function (value) {
             _this.globalUrl = value;
         });
     }
-    /* OCULTA O CAMPO EMPRESA */
-    RegisterPage.prototype.ngIfCtrl = function () {
-        this.hide = !this.hide;
-    };
-    RegisterPage.prototype.ngOnInit = function () {
+    RecoveryPasswordPage.prototype.ngOnInit = function () {
         var _this = this;
         this.storage.get('Project').then(function (value) {
             _this.project = value;
@@ -1003,42 +946,22 @@ var RegisterPage = /** @class */ (function () {
         this.storage.get('LayoutVersion').then(function (value) {
             _this.version = value;
         });
-    };
-    RegisterPage.prototype.ionViewWillEnter = function () {
-        var _this = this;
-        this.storage.get('Project').then(function (value) {
-            _this.background = value;
-        });
         this.storage.get('Idiom').then(function (value) {
             _this.idiom = value;
-            if (value == '01')
-                _this.credential.documento = _this.navParams.get('documento');
-            else if (value == '02')
-                _this.credential.email = _this.navParams.get('documento');
         });
     };
-    RegisterPage.prototype.goBack = function () {
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__login_login__["a" /* LoginPage */]);
+    RecoveryPasswordPage.prototype.cancelar = function () {
+        this.navCtrl.push('login-page');
     };
-    RegisterPage.prototype.makeRegister = function () {
+    RecoveryPasswordPage.prototype.resetPassword = function () {
         var _this = this;
         var mensagemRetorno = '';
-        if (!this.credential.nome)
-            mensagemRetorno = this.idiom == '01' ? 'Favor preencher o campo nome' : this.idiom == '02' ? 'Por favor completa el campo nombre' : '';
-        else if (this.credential.documento.length != 18 && this.credential.documento.length != 14)
-            mensagemRetorno = this.idiom == '01' ? 'Favor preencher o campo CPF/CNPJ' : this.idiom == '02' ? 'Por favor completa el campo documento' : '';
-        else if (!this.credential.email)
-            mensagemRetorno = this.idiom == '01' ? 'Favor preencher o campo e-mail' : this.idiom == '02' ? 'Por favor completa el campo correo' : '';
-        else if (!this.ValidaCPF(this.credential.documento) && this.credential.documento.length == 14)
-            mensagemRetorno = this.idiom == '01' ? 'CPF Inválido' : this.idiom == '02' ? 'Documento inválido' : '';
-        else if (!this.credential.whatsapp)
-            mensagemRetorno = this.idiom == '01' ? 'Favor preencher o campo Whatsapp' : this.idiom == '02' ? 'Por favor completa el campo teléfono' : '';
-        else if (!this.credential.nascimento && this.project != "edicom")
-            mensagemRetorno = this.idiom == '01' ? 'Favor preencher o campo data de nascimento' : this.idiom == '02' ? 'Por favor completa el campo fecha de nacimiento' : '';
-        else if (!this.credential.password)
-            mensagemRetorno = this.idiom == '01' ? 'Favor preencher o campo senha' : this.idiom == '02' ? 'Por favor completa el campo de contraseña' : '';
-        else if (!this.credential.aceite)
-            mensagemRetorno = this.idiom == '01' ? 'Para efetuar o cadastro você deve aceitar os termos e políticas de privacidade' : this.idiom == '02' ? 'Para registrarse debe aceptar los términos y políticas de privacidad' : '';
+        if (!this.credential.email)
+            mensagemRetorno = 'Favor preencher o campo e-mail';
+        else if (!this.credential.nascimento)
+            mensagemRetorno = 'Favor preencher o campo Data de nascimento';
+        else if (!this.credential.senha)
+            mensagemRetorno = 'Favor preencher o campo senha';
         if (mensagemRetorno != '') {
             var toast = this.toastCtrl.create({
                 message: mensagemRetorno,
@@ -1052,103 +975,37 @@ var RegisterPage = /** @class */ (function () {
                 content: 'Espere...'
             });
             loading_1.present();
-            this.authService.register(this.credential).then(function (result) {
+            this.authService.recoveryPassword(this.credential).then(function (result) {
                 loading_1.dismiss();
                 if (result) {
-                    if (result.status != 0) {
-                        var toast = _this.toastCtrl.create({
-                            message: _this.idiom == '01' ? 'Cadastro realizado com sucesso!' : _this.idiom == '02' ? '¡Registro exitoso!' : '',
-                            duration: 6000,
-                            position: 'top'
-                        });
-                        _this.navCtrl.push('tab-page');
-                    }
-                    else {
-                        var toast = _this.toastCtrl.create({
-                            message: result.msg,
-                            duration: 6000,
-                            position: 'top'
-                        });
-                        toast.present();
-                    }
+                    _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__tabs_tabs__["a" /* TabsPage */]);
+                }
+                else {
+                    var toast = _this.toastCtrl.create({
+                        message: 'Dados inválidos. Favor confirmar.',
+                        duration: 6000,
+                        position: 'top'
+                    });
+                    toast.present();
                 }
             });
-            loading_1.dismiss();
         }
     };
-    RegisterPage.prototype.ValidaCPF = function (cpf) {
-        cpf = cpf.replace('.', '').replace('.', '').replace('-', '');
-        ;
-        if (cpf == null) {
-            return false;
-        }
-        if (cpf.length != 11) {
-            return false;
-        }
-        if ((cpf == '00000000000') || (cpf == '11111111111') || (cpf == '22222222222') || (cpf == '33333333333') || (cpf == '44444444444') || (cpf == '55555555555') || (cpf == '66666666666') || (cpf == '77777777777') || (cpf == '88888888888') || (cpf == '99999999999')) {
-            return false;
-        }
-        var numero = 0;
-        var caracter = '';
-        var numeros = '0123456789';
-        var j = 10;
-        var somatorio = 0;
-        var resto = 0;
-        var digito1 = 0;
-        var digito2 = 0;
-        var cpfAux = '';
-        cpfAux = cpf.substring(0, 9);
-        for (var i = 0; i < 9; i++) {
-            caracter = cpfAux.charAt(i);
-            if (numeros.search(caracter) == -1) {
-                return false;
-            }
-            numero = Number(caracter);
-            somatorio = somatorio + (numero * j);
-            j--;
-        }
-        resto = somatorio % 11;
-        digito1 = 11 - resto;
-        if (digito1 > 9) {
-            digito1 = 0;
-        }
-        j = 11;
-        somatorio = 0;
-        cpfAux = cpfAux + digito1;
-        for (var i = 0; i < 10; i++) {
-            caracter = cpfAux.charAt(i);
-            numero = Number(caracter);
-            somatorio = somatorio + (numero * j);
-            j--;
-        }
-        resto = somatorio % 11;
-        digito2 = 11 - resto;
-        if (digito2 > 9) {
-            digito2 = 0;
-        }
-        cpfAux = cpfAux + digito2;
-        if (cpf != cpfAux) {
-            return false;
-        }
-        else {
-            return true;
-        }
-    };
-    RegisterPage = __decorate([
+    RecoveryPasswordPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-register',template:/*ion-inline-start:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\pages\register\register.html"*/'\n\n<ion-header [ngClass]="version == \'01\' ? \'principalHeader\' : version == \'02\' ? \'principalHeaderV02\' : \'principalHeader\'">\n\n  <img [ngClass]="version == \'01\' ? \'principal-icon\' : version == \'02\' ? \'principal-icon-v02\' : \'principal-icon\'"\n\n  src="{{ globalUrl + \'/storage/uploads/configs/logoHeader.png\' }}" />\n\n  \n\n  <img *ngIf="version == \'01\'" class="testeira-v01" \n\n  src="{{ globalUrl + \'/storage/uploads/configs/testeira1.png\' }}" >\n\n\n\n  <img *ngIf="version == \'02\'" class="testeira-v02" \n\n  src="{{ globalUrl + \'/storage/uploads/configs/testeira2.png\' }}" >\n\n  \n\n</ion-header>\n\n<ion-content padding class="content {{ENV.PROJECT}}-custom-bg" [ngClass]="version == \'01\' ? \'margin-content-l1\' : version == \'02\' ? \'margin-content-l2\' : \'margin-content-l1\'">\n\n\n\n  <ion-list style="margin-top: 20%;">\n\n    <ion-item class="fieldElement">\n\n      <ion-label class="{{ENV.TEXT_COLOR_V1}}" floating *ngIf="idiom == \'01\'">Nome *</ion-label>\n\n      <ion-label class="{{ENV.TEXT_COLOR_V1}}" floating *ngIf="idiom == \'02\'">Nombre *</ion-label>\n\n      <ion-input class="{{ENV.TEXT_COLOR_V1}}" type="text" [(ngModel)]="credential.nome"></ion-input>\n\n    </ion-item>\n\n\n\n    <ion-item class="fieldElement">\n\n      <ion-label class="{{ENV.TEXT_COLOR_V1}}" floating>CPF *</ion-label>\n\n      <ion-input class="{{ENV.TEXT_COLOR_V1}}" type="text" [(ngModel)]="credential.documento" [brmasker]="{person: true}"></ion-input>\n\n    </ion-item>\n\n\n\n    <ion-item class="fieldElement" *ngIf="hide">\n\n      <ion-label class="{{ENV.TEXT_COLOR_V1}}" floating *ngIf="idiom == \'01\'">Nome da Empresa *</ion-label>\n\n      <ion-label class="{{ENV.TEXT_COLOR_V1}}" floating *ngIf="idiom == \'02\'">Nombre de la empresa *</ion-label>\n\n      <ion-input class="{{ENV.TEXT_COLOR_V1}}" type="text" [(ngModel)]="credential.empresa"></ion-input>\n\n    </ion-item>\n\n\n\n    <ion-item class="fieldElement">\n\n      <ion-label class="{{ENV.TEXT_COLOR_V1}}" floating>Whatsapp *</ion-label>\n\n      <ion-input class="{{ENV.TEXT_COLOR_V1}}" type="text"  [(ngModel)]="credential.whatsapp" [brmasker]="{mask:\'(00) 00000-0000\', len:15, type:\'num\'}"></ion-input>\n\n    </ion-item>\n\n\n\n    <ion-item class="fieldElement" *ngIf="project != \'edicom\'">\n\n      <ion-label class="{{ENV.TEXT_COLOR_V1}}" floating *ngIf="idiom == \'01\'">Data de Nascimento *</ion-label>\n\n      <ion-label class="{{ENV.TEXT_COLOR_V1}}" floating *ngIf="idiom == \'02\'">Fecha de Nacimiento *</ion-label>\n\n      <ion-input class="{{ENV.TEXT_COLOR_V1}}" type="text"  [(ngModel)]="credential.nascimento" [brmasker]="{mask:\'00/00/0000\', len:10, type:\'num\'}"></ion-input>\n\n    </ion-item>\n\n\n\n    <ion-item class="fieldElement">\n\n      <ion-label class="{{ENV.TEXT_COLOR_V1}}" floating *ngIf="idiom == \'01\'">E-mail *</ion-label>\n\n      <ion-label class="{{ENV.TEXT_COLOR_V1}}" floating *ngIf="idiom == \'02\'">Correo *</ion-label>\n\n      <ion-input class="{{ENV.TEXT_COLOR_V1}}" type="text" [(ngModel)]="credential.email"></ion-input>\n\n    </ion-item>\n\n\n\n    <ion-item class="fieldElement">\n\n      <ion-label class="{{ENV.TEXT_COLOR_V1}}" floating *ngIf="idiom == \'01\'">Senha *</ion-label>\n\n      <ion-label class="{{ENV.TEXT_COLOR_V1}}" floating *ngIf="idiom == \'02\'">Contraseña *</ion-label>\n\n      <ion-input class="{{ENV.TEXT_COLOR_V1}}" type="password" [(ngModel)]="credential.password"></ion-input>\n\n    </ion-item>\n\n\n\n    <ion-item class="fieldElement">\n\n      <ion-checkbox [(ngModel)]="credential.aceite"></ion-checkbox>\n\n      <ion-label class="{{ENV.TEXT_COLOR_V1}}" *ngIf="idiom == \'01\'">Aceito os <a href="https://becinteligencia.com/politica-de-privacidade" target=_blank>termos e políticas de privacidade</a>.</ion-label>\n\n      <ion-label class="{{ENV.TEXT_COLOR_V1}}" *ngIf="idiom == \'02\'">Acepto los <a href="https://becinteligencia.com/politica-de-privacidade" target=_blank>términos y políticas de privacidad</a>.</ion-label>\n\n    </ion-item>\n\n  </ion-list>\n\n\n\n  <p class="required-info {{ENV.TEXT_COLOR_V1}}" *ngIf="idiom == \'01\'">* Campos obrigatórios</p>\n\n  <p class="required-info {{ENV.TEXT_COLOR_V1}}" *ngIf="idiom == \'02\'">* Campos obligatórios</p>\n\n  <ion-grid style="margin-bottom: 110px;">\n\n    <ion-row>\n\n      <ion-col col-6>\n\n        <button ion-button full color="secondary"  class="buttonMedium" (click)="makeRegister()" >\n\n          <p *ngIf="idiom == \'01\'">Cadastrar</p>\n\n          <p *ngIf="idiom == \'02\'">Registrar</p>\n\n        </button>\n\n    </ion-col>\n\n      <ion-col col-6>\n\n        <button ion-button full  class="buttonMedium"  color="light" (click)="goBack()" >\n\n          <p>Cancelar</p>\n\n        </button>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\pages\register\register.html"*/,
+            selector: 'page-recovery-password',template:/*ion-inline-start:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\pages\recovery-password\recovery-password.html"*/'\n\n<ion-header [ngClass]="version == \'01\' ? \'principalHeader\' : version == \'02\' ? \'principalHeaderV02\' : \'principalHeader\'">\n\n  <img [ngClass]="version == \'01\' ? \'principal-icon\' : version == \'02\' ? \'principal-icon-v02\' : \'principal-icon\'"\n\n  src="{{ globalUrl + \'/storage/uploads/configs/logoHeader.png\' }}" />\n\n  \n\n  <img *ngIf="version == \'01\'" class="testeira-v01" \n\n  src="{{ globalUrl + \'/storage/uploads/configs/testeira1.png\' }}" >\n\n\n\n  <img *ngIf="version == \'02\'" class="testeira-v02" \n\n  src="{{ globalUrl + \'/storage/uploads/configs/testeira2.png\' }}" >\n\n  \n\n\n\n</ion-header>\n\n<ion-content  class="content {{ENV.PROJECT}}-custom-bg" [ngClass]="version == \'01\' ? \'margin-content-l1\' : version == \'02\' ? \'margin-content-l2\' : \'margin-content-l1\'" padding >\n\n \n\n  <h1 style="text-align:center; color:#FFF; font-weight: 100;">Recuperar Senha</h1>\n\n  <p *ngIf="idiom == \'01\'">Informe seu e-mail de cadastro e data de nascimento para resetar sua senha.</p>\n\n  <p *ngIf="idiom == \'02\'">Informe tu correo electrónico registrado y fecha de nascimiento para el reset de tu contraseña.</p>\n\n\n\n  <ion-list>\n\n\n\n    <ion-item class="fieldElement">\n\n      <ion-label *ngIf="idiom == \'01\'" class="label" floating>E-MAIL</ion-label>\n\n      <ion-label *ngIf="idiom == \'02\'" class="label" floating>CORREO ELECTRÓNICO</ion-label>\n\n      <ion-input type="email" autocomplete="off"  [(ngModel)]="credential.email" ></ion-input>\n\n    </ion-item>\n\n    <ion-item class="fieldElement">\n\n      <ion-label *ngIf="idiom == \'01\'" class="label" floating>DATA DE NASCIMENTO</ion-label>\n\n      <ion-label *ngIf="idiom == \'02\'" class="label" floating>FECHA DE NASCIMIENTO</ion-label>\n\n      <ion-input type="text" autocomplete="off"  [(ngModel)]="credential.nascimento" [brmasker]="{mask:\'00/00/0000\', len:10, type:\'num\'}"></ion-input>\n\n    </ion-item>\n\n    \n\n    <ion-item class="fieldElement">\n\n      <ion-label *ngIf="idiom == \'01\'" class="label" floating>NOVA SENHA</ion-label>\n\n      <ion-label *ngIf="idiom == \'02\'" class="label" floating>NUEVA CONTRASEÑA</ion-label>\n\n      <ion-input type="password" [(ngModel)]="credential.senha"></ion-input>\n\n    </ion-item> \n\n    \n\n  </ion-list>\n\n\n\n  <button ion-button full icon-start  class="button-style button-style-{{ENV.PROJECT}}"  (click)="resetPassword()">\n\n    <p *ngIf="idiom == \'01\'">Resetar</p>\n\n    <p *ngIf="idiom == \'02\'">Reset</p>\n\n  </button> \n\n  <button ion-button full icon-start  class="button-style button-style-{{ENV.PROJECT}}"  (click)="cancelar()">\n\n    <p *ngIf="idiom == \'01\'">Voltar</p>\n\n    <p *ngIf="idiom == \'02\'">Volver</p>\n\n  </button> \n\n</ion-content>\n\n  '/*ion-inline-end:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\pages\recovery-password\recovery-password.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__["a" /* AuthProvider */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth__["a" /* AuthProvider */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* ToastController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */],
-            __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */]])
-    ], RegisterPage);
-    return RegisterPage;
+            __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */]])
+    ], RecoveryPasswordPage);
+    return RecoveryPasswordPage;
 }());
 
-//# sourceMappingURL=register.js.map
+//# sourceMappingURL=recovery-password.js.map
 
 /***/ })
 

@@ -154,6 +154,12 @@
             <p *ngIf="idiom =='02'">Editar</p>
           </button>
         </ion-col>
+        <ion-col *ngIf="project == 'full-promo'" style="flex-grow: 2; text-align: center;">
+          <button ion-button full icon-start class="button-style button-style-{{ENV.PROJECT}}" (click)="openHolerite()">
+            <p *ngIf="idiom =='01'">Meus Holerites</p>
+            <p *ngIf="idiom =='02'">Mis Holerites</p>
+          </button>
+        </ion-col>
         <ion-col *ngIf="habilitaCampos" style="text-align: center;">
           <button ion-button full  class="button-style button-style-{{ENV.PROJECT}}" (click)="doLogout()">
             <p *ngIf="idiom =='01'">Sair</p>

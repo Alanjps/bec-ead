@@ -45,6 +45,14 @@
     {
       "path": "/tmc",
       "proxyUrl": "https://tmc.becinteligencia.com"
+    },
+    {
+      "path": "/hability",
+      "proxyUrl": "https://hability.becinteligencia.com"
+    },
+    {
+      "path": "/full-promo",
+      "proxyUrl": "https://homolog.fullpromo.com.br"
     }
   ]
 }

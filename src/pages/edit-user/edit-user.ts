@@ -210,6 +210,25 @@ export class EditUserPage {
     userModal.present();
   }
 
+  openHolerite(){
+
+    let holeriteModal = this.modalCtrl.create('holerite-modal',this.credential);
+    holeriteModal.onDidDismiss(data => {
+      /* if (data){
+        let loading = this.loadingCtrl.create({
+          content: 'Espere...'
+        });
+        loading.present();
+        this.makeRegister();
+        this.storage.set('first', false);
+        if (this.credential.firstAccess == true)
+          this.navCtrl.push('tab-page');
+        loading.dismiss();
+      } */
+    });
+    holeriteModal.present();
+  }
+
   presentActionSheet() {
     const actionSheet = this.actionSheetCtrl.create({
       title: this.idiom == '01' ? 'Selecione a opção' : 'Seleccione una opción',

@@ -86,6 +86,20 @@ private url:string= '/vcc';
             this.url = "https://tmc.becinteligencia.com";
           }
           break;
+        }
+        case 'hability': {
+          this.url = '/hability';
+          if(this._platform.is("cordova")){
+            this.url = "https://hability.becinteligencia.com";
+          }
+          break;
+        } 
+        case 'full-promo': {
+          this.url = '/full-promo';
+          if(this._platform.is("cordova")){
+            this.url = "https://homolog.fullpromo.com.br";
+          }
+          break;
         } 
         default:{
           this.url = '/vcc';

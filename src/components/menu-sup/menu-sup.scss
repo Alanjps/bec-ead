@@ -51,6 +51,8 @@ menu-sup {
         $url-r2m: "https://readytomarket.becinteligencia.com//storage//uploads//configs//";
         $url-ava: "https://ava.insighttech.com.br//storage//uploads//configs//";
         $url-tmc: "https://tmc.becinteligencia.com//storage//uploads//configs//";
+        $url-hability: "https://hability.becinteligencia.com//storage//uploads//configs//";
+        $url-full-promo: "https://homolog.fullpromo.com.br//storage//uploads//configs//";
 
         &[class*="edicom-"] {
             width: 30px;
@@ -182,6 +184,36 @@ menu-sup {
             }      
             &[class*="chat-active"] {
                 background: url($url-tmc+"iconeHeader.png") no-repeat 100% 100%;
+                background-size: contain;
+                filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+            }
+        }
+
+        &[class*="hability-"] {
+            width: 30px;
+            height: 30px; 
+            &[class*="chat"] {
+                background: url($url-hability+"iconeHeader.png") no-repeat 100% 100%;
+                background-size: contain;
+                filter: none;
+            }      
+            &[class*="chat-active"] {
+                background: url($url-hability+"iconeHeader.png") no-repeat 100% 100%;
+                background-size: contain;
+                filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+            }
+        }
+
+        &[class*="full-promo-"] {
+            width: 30px;
+            height: 30px; 
+            &[class*="chat"] {
+                background: url($url-full-promo+"iconeHeader.png") no-repeat 100% 100%;
+                background-size: contain;
+                filter: none;
+            }      
+            &[class*="chat-active"] {
+                background: url($url-full-promo+"iconeHeader.png") no-repeat 100% 100%;
                 background-size: contain;
                 filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
             }
