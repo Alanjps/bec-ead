@@ -55,7 +55,7 @@
     </ion-item>
   
   </ion-card>
-  <div padding>
+  <div padding class="grid-style">
     <button class="button-style button-style-{{ENV.PROJECT}}" *ngIf="idiom =='01'" ion-button (click)="confirm()"><p>Confirmar</p></button>
     <button class="button-style button-style-{{ENV.PROJECT}}" *ngIf="credential.firstAccess == false &&  idiom =='01'" ion-button (click)="cancel()"><p>Voltar</p></button>
 

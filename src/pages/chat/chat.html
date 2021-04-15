@@ -15,16 +15,23 @@
 </ion-header>
 
 <ion-content *ngIf="showMotivosContainer" style="background-color: #ffffff;" [ngClass]="version == '01' ? 'margin-content-l1' : version == '02' ? 'margin-content-l2' : 'margin-content-l1'">
-  <ion-header class="header-container">
-    <button class="button-style button-style-{{ENV.PROJECT}}" ion-button small (click)="cancelMotivos()">
-      <p *ngIf="idiom == '01'">Sair</p>
-      <p *ngIf="idiom == '02'">Salir</p>
-    </button>
-
-    <button class="button-style button-style-{{ENV.PROJECT}}" ion-button small (click)="getConversasAtivas()">
-      <p *ngIf="idiom == '01'">Conversas Ativas</p>
-      <p *ngIf="idiom == '02'">Conversaciones Activas</p>
-    </button>
+  <ion-header>
+    <ion-grid class="grid-style">
+      <ion-row>
+        <ion-col style="width: 40%;">
+          <button class="button-style button-style-{{ENV.PROJECT}}" ion-button small (click)="cancelMotivos()">
+            <p *ngIf="idiom == '01'">Sair</p>
+            <p *ngIf="idiom == '02'">Salir</p>
+          </button>
+        </ion-col>
+        <ion-col style="width: 60%;">
+          <button class="button-style button-style-{{ENV.PROJECT}}" ion-button small (click)="getConversasAtivas()">
+            <p *ngIf="idiom == '01'">Conversas Ativas</p>
+            <p *ngIf="idiom == '02'">Conversaciones Activas</p>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-header>
 
   <ion-content padding>
@@ -51,15 +58,23 @@
 <!---------------------------------------------------------------------------------->
 
 <ion-content *ngIf="showRecentUserContainer" style="background-color: #ffffff;"  class="background" [ngClass]="version == '01' ? 'margin-content-l1' : version == '02' ? 'margin-content-l2' : 'margin-content-l1'">
-  <ion-header class="header-container" style="position: relative;">
-    <button class="button-style button-style-{{ENV.PROJECT}}" ion-button small (click)="cancelMotivos()">
-      <p *ngIf="idiom == '01'">Sair</p>
-      <p *ngIf="idiom == '02'">Salir</p>
-    </button>
-    <button class="button-style button-style-{{ENV.PROJECT}}" ion-button small (click)="cancelRecentUsers()">
-      <p *ngIf="idiom == '01'">Voltar</p>
-      <p *ngIf="idiom == '02'">Volver</p>
-    </button>
+  <ion-header style="position: relative;">
+    <ion-grid class="grid-style">
+      <ion-row>
+        <ion-col style="width: 50%;">
+          <button class="button-style button-style-{{ENV.PROJECT}}" ion-button small (click)="cancelMotivos()">
+            <p *ngIf="idiom == '01'">Sair</p>
+            <p *ngIf="idiom == '02'">Salir</p>
+          </button>
+        </ion-col>
+        <ion-col style="width: 50%;">
+          <button class="button-style button-style-{{ENV.PROJECT}}" ion-button small (click)="cancelRecentUsers()">
+            <p *ngIf="idiom == '01'">Voltar</p>
+            <p *ngIf="idiom == '02'">Volver</p>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-header>
 
   <ion-content padding *ngIf="recents && recents.length > 0">
@@ -97,15 +112,24 @@
 <!---------------------------------------------------------------------------------->
 
 <ion-content  *ngIf="showChatContainer"  style="background-color: #ffffff;" class="background" [ngClass]="version == '01' ? 'margin-content-l1' : version == '02' ? 'margin-content-l2' : 'margin-content-l1'">
-  <ion-header class="header-container" *ngIf="showMessageAllBox == false" style="position: relative;">
-    <button class="button-style button-style-{{ENV.PROJECT}}" ion-button small (click)="cancelMotivos()">
-      <p *ngIf="idiom == '01'">Sair</p>
-      <p *ngIf="idiom == '02'">Salir</p>
-    </button>
-    <button class="button-style button-style-{{ENV.PROJECT}}" ion-button small (click)="cancelChat()">
-      <p *ngIf="idiom == '01'">Voltar</p>
-      <p *ngIf="idiom == '02'">Volver</p>
-    </button>
+ 
+  <ion-header  *ngIf="showMessageAllBox == false" style="position: relative;">
+    <ion-grid class="grid-style">
+      <ion-row>
+        <ion-col style="width: 50%;">
+          <button class="button-style button-style-{{ENV.PROJECT}}" ion-button small (click)="cancelMotivos()">
+            <p *ngIf="idiom == '01'">Sair</p>
+            <p *ngIf="idiom == '02'">Salir</p>
+          </button>
+        </ion-col>
+        <ion-col style="width: 50%;">
+          <button class="button-style button-style-{{ENV.PROJECT}}" ion-button small (click)="cancelChat()">
+            <p *ngIf="idiom == '01'">Voltar</p>
+            <p *ngIf="idiom == '02'">Volver</p>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-header>
 
   <ion-content padding *ngIf="showMessageAllBox == false" class="message-container" style="height: 90%;">
@@ -147,21 +171,30 @@
     <ion-textarea [disabled]="selectedUserId == null" class="message-input"  *ngIf="idiom == '01'" rows="3" placeholder="Enviar nova mensagem" [(ngModel)]="newMessage" ></ion-textarea>
     <ion-textarea [disabled]="selectedUserId == null" class="message-input"  *ngIf="idiom == '02'" rows="3" placeholder="Enviar nueva mensaje" [(ngModel)]="newMessage" ></ion-textarea>
     
-    <button class="button-style button-style-{{ENV.PROJECT}}" [disabled]="selectedUserId == null" float-right ion-button small icon-start (click)="sendMessage()">
-      <ion-icon name="ios-text-outline"></ion-icon>
-      <p>Enviar</p>
-    </button>
 
-    <button class="button-style button-style-{{ENV.PROJECT}}" *ngIf="perfilType == 2" [disabled]="selectedUserId == null" float-right ion-button small icon-start (click)="sendMessage(false, true)" style="margin-right: 10px;">
-      <ion-icon name="ios-notifications-outline"></ion-icon>
-      <p>Notificar</p>
-    </button>    
+    <ion-grid class="grid-style">
+      <ion-row>
+        <ion-col style="width: 33%;">
+          <button class="button-style button-style-{{ENV.PROJECT}}" [disabled]="selectedUserId == null" float-right ion-button small icon-start (click)="sendMessage()">
+            <ion-icon name="ios-text-outline"></ion-icon>
+            <p>Enviar</p>
+          </button>
+        </ion-col>
+        <ion-col style="width: 33%;">
+          <button class="button-style button-style-{{ENV.PROJECT}}" *ngIf="perfilType == 2" [disabled]="selectedUserId == null" float-right ion-button small icon-start (click)="sendMessage(false, true)">
+            <ion-icon name="ios-notifications-outline"></ion-icon>
+            <p>Notificar</p>
+          </button> 
+        </ion-col>
+        <ion-col style="width: 33%;">
+          <button class="button-style button-style-{{ENV.PROJECT}}" [disabled]="selectedUserId == null" float-right ion-button small icon-start (click)="openGallery()">
+            <p><ion-icon name="ios-document-outline"></ion-icon></p>
+          </button> 
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
-    <button class="button-style button-style-{{ENV.PROJECT}}" [disabled]="selectedUserId == null" float-right ion-button small icon-start (click)="openGallery()" style="margin-right: 10px;">
-      <p>
-      <ion-icon name="ios-document-outline"></ion-icon>
-      </p>
-    </button>     
+    
   </ion-content>
 
   <div *ngIf="showMessageAllBox == true">

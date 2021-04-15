@@ -114,7 +114,8 @@ export class LoginPage {
     // 18 CNPJ
 
     this.prosseguir = false;
-    if (this.version == '01'){
+
+    if (this.idiom == '01'){
       if (this.credential.documento.length == 14) {
         //CPF
         if (this.ValidaCPF(this.credential.documento)) {
@@ -206,7 +207,7 @@ export class LoginPage {
     } else {
 
       let toast = this.toastCtrl.create({
-        message: 'CPF/CNPJ inválido',
+        message: this.idiom == '01' ? 'CPF/CNPJ inválido' : 'Email inválido',
         duration: 2000,
         position: 'top'
       });

@@ -24,7 +24,7 @@
           <img [src]="DomSanitizer.bypassSecurityTrustUrl(clienteThumb)" alt=""
           style="max-width: 360px;
             margin: auto;
-            width: 100%;
+            max-width: 400px;
             max-height: 360px;">
         </button>
 
@@ -134,15 +134,15 @@
     </ion-row>
   </ion-list>
   <div style="padding-bottom: 125px;">
-    <ion-grid>
+    <ion-grid class="grid-style">
       <ion-row style="display: flex; flex-wrap: wrap;">
         <ion-col *ngIf="showQRCode" style="text-align: center;">
-          <button full style="font-size: 1rem;" class="button-style button-style-{{ENV.PROJECT}}" ion-button icon-start (click)="showQRCodeBox = !showQRCodeBox">
+          <button full class="button-style button-style-{{ENV.PROJECT}}" ion-button icon-start (click)="showQRCodeBox = !showQRCodeBox">
              <p *ngIf="idiom =='01'">ID Digital</p>
             <p *ngIf="idiom =='02'">ID Digital</p>
           </button>
         </ion-col>      
-        <ion-col style="flex-grow: 2; text-align: center;">
+        <ion-col style="text-align: center;">
           <button ion-button full icon-start class="button-style button-style-{{ENV.PROJECT}}" (click)="showDownloads()">
             <p *ngIf="idiom =='01'">Meus Downloads</p>
             <p *ngIf="idiom =='02'">Mis Descargas</p>

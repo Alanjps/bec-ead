@@ -221,7 +221,7 @@
     margin: 10px 5px;
     background-color: #488aff;
     color: #fff;
-
+    width: 100%;
 
     border-radius: 2px;
     overflow: hidden;
@@ -299,6 +299,16 @@
     }
 }
 
+
+// GRID --------------------------------------
+
+.grid-style{
+    max-width: 400px;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
 
 .menuPrincipal{
     color:#000;
