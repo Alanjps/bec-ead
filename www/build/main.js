@@ -1,1 +1,1578 @@
-webpackJsonp([21],{125:function(e,t,o){"use strict";o.d(t,"a",function(){return l});o(4);var a=o(65),r=(o(58),o(207)),n=(o.n(r),o(394)),s=(o.n(n),o(1)),i=o.n(s),l=(o(50),function(){function e(e,t,o,a,r){var n=this;this.http=e,this.storage=t,this.toastCtrl=o,this._platform=a,this.oneSignal=r,this.msg="Favor fazer o login",this.url="/vcc",this.storage.get("Project").then(function(e){switch(e){case"localhost":n.url="/lch",n._platform.is("cordova")&&(n.url="http://ead.localhost");break;case"marketing-house":n.url="/mkh",n._platform.is("cordova")&&(n.url="https://homolog.marketinghouse.com.br");break;case"edicom":n.url="/edc",n._platform.is("cordova")&&(n.url="https://edicom.becinteligencia.com");break;case"hkt369":n.url="/hkt369",n._platform.is("cordova")&&(n.url="https://descubre.hkt369.com");break;case"know-house":n.url="/knowh",n._platform.is("cordova")&&(n.url="https://knowhouse.marketinghouse.com.br");break;case"simples-trade":n.url="/strade",n._platform.is("cordova")&&(n.url="https://simplestrade.becinteligencia.com");break;case"r2m":n.url="/r2m",n._platform.is("cordova")&&(n.url="https://readytomarket.becinteligencia.com");break;case"ava":n.url="/ava",n._platform.is("cordova")&&(n.url="https://ava.insighttech.com.br/");break;case"tmc":n.url="/tmc",n._platform.is("cordova")&&(n.url="https://tmc.becinteligencia.com");break;case"hability":n.url="/hability",n._platform.is("cordova")&&(n.url="https://hability.becinteligencia.com");break;case"full-promo":n.url="/full-promo",n._platform.is("cordova")&&(n.url="https://homolog.fullpromo.com.br");break;default:n.url="/vcc",n._platform.is("cordova")&&(n.url="https://vcc.becinteligencia.com")}})}return e.prototype.request=function(e,t){var o=new a.d;o.append("Content-Type","application/json");var r=new a.g({headers:o});return this.http.post(this.url+e,t,r).map(function(e){return e.json()}).toPromise().then(function(e){return e})},e.prototype.login=function(e){var t=this,o=new a.d;o.append("Content-Type","application/json");var r=new a.g({headers:o});return this.http.post(this.url+"/api/usuarios/logar",e,r).map(function(e){return e.json()}).toPromise().then(function(o){return o.id>0&&(t.storage.set("clienteId",o.id),t.storage.set("clienteNome",o.nome),t.storage.set("clienteEmail",o.email),t.storage.set("clienteWhatsapp",o.whatsapp),t.storage.set("clienteDocumento",o.documento),t.storage.set("clienteProfileId",o.profile_id),t.storage.set("clienteEmpresa",o.empresa),t.storage.set("clienteNascimento",o.nascimento),t.storage.set("clienteThumb",o.thumb),t.storage.set("clienteCompanyId",o.company_id),t.storage.set("clienteSavePassword",e.password),t.storage.set("clienteSaveDocumento",o.documento),!0)})},e.prototype.firstAcess=function(e){var t=this,o=new a.d;o.append("Content-Type","application/json");var r=new a.g({headers:o});return this.http.post(this.url+"/api/usuarios/primeiro-acesso",e,r).map(function(e){return e.json()}).toPromise().then(function(e){return e.id>0&&(t.storage.set("clienteId",e.id),t.storage.set("clienteNome",e.nome),t.storage.set("clienteEmail",e.email),t.storage.set("clienteWhatsapp",e.whatsapp),t.storage.set("clienteDocumento",e.documento),t.storage.set("clienteProfileId",e.profile_id),t.storage.set("clienteEmpresa",e.empresa),t.storage.set("clienteNascimento",e.nascimento),t.storage.set("clienteThumb",e.thumb),t.storage.set("clienteCompanyId",e.company_id),t.storage.set("clienteFirst",e.first),!0)})},e.prototype.register=function(e){var t=this,o=new a.d;o.append("Content-Type","application/json");var r=new a.g({headers:o});return this.http.post(this.url+"/api/usuarios/cadastrar",e,r).map(function(e){return e.json()}).toPromise().then(function(e){return e.nascimento=e.nascimento?i()(e.nascimento.date).format("DD/MM/YYYY"):"",e.id>0?(t.storage.set("clienteId",e.id),t.storage.set("clienteNome",e.nome),t.storage.set("clienteEmail",e.email),t.storage.set("clienteWhatsapp",e.whatsapp),t.storage.set("clienteDocumento",e.documento),t.storage.set("clienteProfileId",e.profile_id),t.storage.set("clienteEmpresa",e.empresa),t.storage.set("clienteNascimento",e.nascimento),t.storage.set("clienteThumb",e.thumb),t.storage.set("clienteCompanyId",e.company_id),e):e})},e.prototype.recoveryPassword=function(e){var t=this,o=new a.d;o.append("Content-Type","application/json");var r=new a.g({headers:o});return this.http.post(this.url+"/api/usuarios/reset-senha",e,r).map(function(e){return e.json()}).toPromise().then(function(e){return e.id>0&&(t.storage.set("clienteId",e.id),t.storage.set("clienteNome",e.nome),t.storage.set("clienteEmail",e.email),t.storage.set("clienteWhatsapp",e.whatsapp),t.storage.set("clienteDocumento",e.documento),t.storage.set("clienteProfileId",e.profile_id),t.storage.set("clienteEmpresa",e.empresa),t.storage.set("clienteNascimento",e.nascimento),t.storage.set("clienteThumb",e.thumb),t.storage.set("clienteCompanyId",e.company_id),t.storage.set("clienteFirst",e.first),!0)})},e.prototype.getJob=function(){var e=new a.d;e.append("Content-Type","application/json");var t=new a.g({headers:e});return this.http.post(this.url+"/api/usuarios/ocupacoes",t).map(function(e){return e.json()}).toPromise().then(function(e){return e})},e.prototype.userIsLogged=function(){var e=this;return this.storage.get("clienteId").then(function(t){if(t)return!0;return e.toastCtrl.create({message:e.msg,duration:3e3}).present(),!0})},e.prototype.logout=function(){var e=this;this.storage.get("clienteId").then(function(t){e.storage.get("clienteEmail").then(function(o){e.oneSignal.getIds().then(function(a){e.http.post(e.url+"/api/usuarios/remove-device",{id:t,email:o,device_id:a.userId,type:"android"}).subscribe(function(e){})}).catch(function(){console.log("Erro ao obter os dados do Onesignal")}),e.storage.remove("clientId"),e.storage.remove("clienteNome"),e.storage.remove("clienteEmail"),e.storage.remove("clienteWhatsapp"),e.storage.remove("clienteDocumento"),e.storage.remove("clienteProfileId"),e.storage.remove("clienteEmpresa"),e.storage.remove("clienteNascimento"),e.storage.remove("clienteThumb"),e.storage.remove("clienteCompanyId"),e.storage.remove("clienteId")})})},e.prototype.logoutSave=function(){this.storage.remove("clienteSavePassword"),this.storage.remove("clienteSaveDocumento")},e}())},126:function(e,t,o){"use strict";o.d(t,"a",function(){return a});var a={PROJECT:"edicom",TEXT_COLOR_V1:"text-default-white",HEADER_TEXT:"style-white",PUSHER_APP_ID:"1156523",PUSHER_APP_KEY:"7b8b5ea20f7a185be995",PUSHER_APP_SECRET:"789567e75724f82b17dc",PUSHER_APP_CLUSTER:"us2"}},153:function(e,t,o){"use strict";o.d(t,"a",function(){return r});o(4);var a=o(126),r=function(){function e(e,t){var o=this;this.http=e,this.storage=t,this.storage.get("clienteId").then(function(e){var t=new Pusher(a.a.PUSHER_APP_KEY,{cluster:a.a.PUSHER_APP_CLUSTER,encrypted:!0});o.channel=t.subscribe("chat."+e)})}return e.prototype.init=function(){return this.channel},e}()},165:function(e,t){function o(e){return Promise.resolve().then(function(){throw new Error("Cannot find module '"+e+"'.")})}o.keys=function(){return[]},o.resolve=o,e.exports=o,o.id=165},189:function(e,t,o){function a(e){var t=r[e];return t?o.e(t[1]).then(function(){return o(t[0])}):Promise.reject(new Error("Cannot find module '"+e+"'."))}var r={"../components/download-modal/download-modal.module.ngfactory":[418,15],"../components/file-modal/file-modal.module.ngfactory":[419,14],"../components/holerite/holerite.module.ngfactory":[420,13],"../components/list-videos-modal/list-videos-modal.module.ngfactory":[421,20],"../components/photo-modal/photo-modal.module.ngfactory":[422,19],"../components/quiz/quiz.module.ngfactory":[423,16],"../components/user-form/user-form.module.ngfactory":[424,12],"../pages/chat/chat.module.ngfactory":[435,11],"../pages/edit-user-v02/edit-user-v02.module.ngfactory":[429,1],"../pages/edit-user/edit-user.module.ngfactory":[430,0],"../pages/list-videos-v02/list-videos-v02.module.ngfactory":[436,6],"../pages/list-videos-v03/list-videos-v03.module.ngfactory":[431,10],"../pages/list-videos-v04/list-videos-v04.module.ngfactory":[432,7],"../pages/list-videos/list-videos.module.ngfactory":[437,2],"../pages/login/login.module.ngfactory":[433,9],"../pages/my-downloads/my-downloads.module.ngfactory":[425,17],"../pages/notification/notification.module.ngfactory":[426,4],"../pages/photo/photo.module.ngfactory":[438,3],"../pages/recovery-password/recovery-password.module.ngfactory":[427,8],"../pages/register/register.module.ngfactory":[428,5],"../pages/tabs/tabs.module.ngfactory":[434,18]};a.keys=function(){return Object.keys(r)},a.id=189,e.exports=a},357:function(e,t,o){"use strict";o.d(t,"a",function(){return a});var a=function(){return!!window.cordova}},358:function(e,t,o){"use strict";function a(e){return n["ɵvid"](0,[(e()(),n["ɵeld"](0,0,null,null,2,"ion-nav",[],null,null,null,V.b,V.a)),n["ɵprd"](6144,null,Z.a,null,[q.a]),n["ɵdid"](2,4374528,null,0,q.a,[[2,J.a],[2,G.a],K.a,W.a,B.a,n.ElementRef,n.NgZone,n.Renderer,n.ComponentFactoryResolver,X.l,Y.a,[2,Q.a],$.a,n.ErrorHandler],{root:[0,"root"]},null),(e()(),n["ɵted"](-1,null,["\n"]))],function(e,t){e(t,2,0,t.component.rootPage)},null)}Object.defineProperty(t,"__esModule",{value:!0});var r=o(23),n=o(0),s=(o(4),o(13)),i=o(98),l=o(65),c=o(134),d=o(128),m=o(129),u=o(137),p=o(66),g=o(67),f=o(34),h=(o(58),o(125)),b=o(59),y=o(50),v=o(357),j=o(126),w=this&&this.__awaiter||function(e,t,o,a){return new(o||(o=Promise))(function(r,n){function s(e){try{l(a.next(e))}catch(e){n(e)}}function i(e){try{l(a.throw(e))}catch(e){n(e)}}function l(e){e.done?r(e.value):new o(function(t){t(e.value)}).then(s,i)}l((a=a.apply(e,t||[])).next())})},k=this&&this.__generator||function(e,t){function o(o){return function(s){return function(o){if(a)throw new TypeError("Generator is already executing.");for(;i;)try{if(a=1,r&&(n=r[2&o[0]?"return":o[0]?"throw":"next"])&&!(n=n.call(r,o[1])).done)return n;switch(r=0,n&&(o=[0,n.value]),o[0]){case 0:case 1:n=o;break;case 4:return i.label++,{value:o[1],done:!1};case 5:i.label++,r=o[1],o=[0];continue;case 7:o=i.ops.pop(),i.trys.pop();continue;default:if(n=i.trys,!(n=n.length>0&&n[n.length-1])&&(6===o[0]||2===o[0])){i=0;continue}if(3===o[0]&&(!n||o[1]>n[0]&&o[1]<n[3])){i.label=o[1];break}if(6===o[0]&&i.label<n[1]){i.label=n[1],n=o;break}if(n&&i.label<n[2]){i.label=n[2],i.ops.push(o);break}n[2]&&i.ops.pop(),i.trys.pop();continue}o=t.call(e,i)}catch(e){o=[6,e],r=0}finally{a=n=0}if(5&o[0])throw o[1];return{value:o[0]?o[1]:void 0,done:!0}}([o,s])}}var a,r,n,s,i={label:0,sent:function(){if(1&n[0])throw n[1];return n[1]},trys:[],ops:[]};return s={next:o(0),throw:o(1),return:o(2)},"function"==typeof Symbol&&(s[Symbol.iterator]=function(){return this}),s},I=function(){function e(e,t,o,a,r,n){var s=this;this.oneSignal=r,this.rootPage="",this.projectNumber=null,this.projectName=null,this.onesignalAppId="",this.firebaseSenderId="",this.ENV=j.a,this.clearStorage(e),t.is("android")?e.set("Platform","android"):t.is("ios")&&e.set("Platform","ios"),t.ready().then(function(){switch(o.styleDefault(),a.hide(),s.projectNumber=2,s.projectNumber){case 0:s.onesignalAppId="946eb156-716e-4000-853f-18f41cc2b193",s.firebaseSenderId="23981024898",s.projectName="localhost",e.set("Idiom","01"),e.set("TextColor","black");break;case 1:s.onesignalAppId="946eb156-716e-4000-853f-18f41cc2b193",s.firebaseSenderId="23981024898",s.projectName="ead",e.set("Idiom","02");break;case 2:s.onesignalAppId="c3765e9e-79b4-4dbc-b3ad-a31396017591",s.firebaseSenderId="981777081301",s.projectName="edicom",e.set("Idiom","02");break;case 3:s.onesignalAppId="883bb93e-4053-43f0-865c-a5d52ca89a80",s.firebaseSenderId="1010203313691",s.projectName="marketing-house",e.set("Idiom","01");break;case 4:s.onesignalAppId="abf814a3-a2bb-4ae4-9a63-422d37394e64",s.firebaseSenderId="786704296447",s.projectName="hkt369",e.set("Idiom","02");break;case 5:s.onesignalAppId="d29cd1d1-3a5b-4774-b768-a1026101ea0a",s.firebaseSenderId="823038736964",s.projectName="know-house",e.set("Idiom","01");break;case 6:s.onesignalAppId="d6e18971-f2cc-41d8-aed7-28384cb957e0",s.firebaseSenderId="823038736964",s.projectName="simples-trade",e.set("Idiom","01");break;case 7:s.onesignalAppId="a7bbe9ca-2e79-4f10-8f68-365da3e09fd5",s.firebaseSenderId="613045008970",s.projectName="r2m",e.set("Idiom","01");break;case 8:s.onesignalAppId="6b8f443d-da09-4ccc-b629-f1e21476c6b2",s.firebaseSenderId="575583616149",s.projectName="ava",e.set("Idiom","01");break;case 9:s.onesignalAppId="c4a92409-ba2f-4001-bd59-af1b24ae58a1",s.firebaseSenderId="732312096020",s.projectName="tmc",e.set("Idiom","02");break;case 10:s.onesignalAppId="fb347a8c-b214-4754-934b-b60e6772fd47",s.firebaseSenderId="926995274326",s.projectName="hability",e.set("Idiom","02");break;case 11:s.onesignalAppId="574a5c13-9a8e-46fb-85cf-3698d35cc750",s.firebaseSenderId="1067216235696",s.projectName="full-promo",e.set("Idiom","01")}Object(v.a)()&&(s.oneSignal.startInit(s.onesignalAppId,s.firebaseSenderId),s.oneSignal.handleNotificationReceived().subscribe(function(e){}),s.oneSignal.endInit()),e.set("Project",s.projectName).then(function(r){var i="";switch(r){case"localhost":i="http://ead.localhost";break;case"marketing-house":i="https://homolog.marketinghouse.com.br";break;case"edicom":i="https://edicom.becinteligencia.com";break;case"ead":i="https://vcc.becinteligencia.com";break;case"hkt369":i="https://descubre.hkt369.com";break;case"know-house":i="https://knowhouse.marketinghouse.com.br";break;case"simples-trade":i="https://simplestrade.becinteligencia.com";break;case"r2m":i="https://readytomarket.becinteligencia.com";break;case"ava":i="https://ava.insighttech.com.br";break;case"tmc":i="https://tmc.becinteligencia.com";break;case"hability":i="https://hability.becinteligencia.com";break;case"full-promo":i="https://homolog.fullpromo.com.br/"}e.set("GlobalUrl",i).then(function(r){return w(s,void 0,void 0,function(){var r=this;return k(this,function(s){switch(s.label){case 0:return 0,[4,new Promise(function(t,o){return w(r,void 0,void 0,function(){return k(this,function(o){switch(o.label){case 0:return[4,n.getAppVersion().then(function(o){e.set("AppConfig",o),e.set("LayoutVersion",1==o.version?"01":"02"),t()})];case 1:return[2,o.sent()]}})})})];case 1:return s.sent(),e.get("LayoutVersion").then(function(e){r.rootPage="login-page",t.ready().then(function(){o.styleDefault(),a.hide()})}),[2]}})})})})})}return e.prototype.clearStorage=function(e){["AvailableDefaultProjects"].map(function(t){e.remove(t)})},e}(),P=o(340),N=o(138),C=o(341),_=o(342),E=o(344),S=o(141),A=o(153),M=function(){return function(){}}(),T=o(53),F=o(345),D=o(346),R=o(347),H=o(348),z=o(349),L=o(350),O=o(351),U=o(352),x=o(353),V=o(417),Z=o(35),q=o(57),J=o(6),G=o(21),K=o(9),W=o(2),B=o(5),X=o(8),Y=o(27),Q=o(15),$=o(10),ee=n["ɵcrt"]({encapsulation:2,styles:[],data:{}}),te=n["ɵccf"]("ng-component",I,function(e){return n["ɵvid"](0,[(e()(),n["ɵeld"](0,0,null,null,1,"ng-component",[],null,null,null,a,ee)),n["ɵdid"](1,49152,null,0,I,[f.b,B.a,g.a,p.a,y.a,b.a],null,null)],null,null)},{},{},[]),oe=o(108),ae=o(343),re=o(18),ne=o(91),se=o(84),ie=o(85),le=o(107),ce=o(16),de=o(33),me=o(39),ue=o(81),pe=o(127),ge=o(55),fe=o(40),he=o(82),be=o(72),ye=o(114),ve=o(110),je=o(80),we=o(339),ke=o(109),Ie=o(28),Pe=o(106),Ne=o(111),Ce=n["ɵcmf"](M,[T.b],function(e){return n["ɵmod"]([n["ɵmpd"](512,n.ComponentFactoryResolver,n["ɵCodegenComponentFactoryResolver"],[[8,[F.a,D.a,R.a,H.a,z.a,L.a,O.a,U.a,x.a,te]],[3,n.ComponentFactoryResolver],n.NgModuleRef]),n["ɵmpd"](5120,n.LOCALE_ID,n["ɵq"],[[3,n.LOCALE_ID]]),n["ɵmpd"](4608,s.NgLocalization,s.NgLocaleLocalization,[n.LOCALE_ID,[2,s["ɵa"]]]),n["ɵmpd"](5120,n.APP_ID,n["ɵi"],[]),n["ɵmpd"](5120,n.IterableDiffers,n["ɵn"],[]),n["ɵmpd"](5120,n.KeyValueDiffers,n["ɵo"],[]),n["ɵmpd"](4608,r.c,r.q,[s.DOCUMENT]),n["ɵmpd"](6144,n.Sanitizer,null,[r.c]),n["ɵmpd"](4608,r.f,oe.a,[]),n["ɵmpd"](5120,r.d,function(e,t,o,a,n){return[new r.k(e,t),new r.o(o),new r.n(a,n)]},[s.DOCUMENT,n.NgZone,s.DOCUMENT,s.DOCUMENT,r.f]),n["ɵmpd"](4608,r.e,r.e,[r.d,n.NgZone]),n["ɵmpd"](135680,r.m,r.m,[s.DOCUMENT]),n["ɵmpd"](4608,r.l,r.l,[r.e,r.m]),n["ɵmpd"](5120,ae.a,_.d,[]),n["ɵmpd"](5120,ae.c,_.e,[]),n["ɵmpd"](4608,ae.b,_.c,[ae.a,ae.c]),n["ɵmpd"](5120,n.RendererFactory2,_.f,[r.l,ae.b,n.NgZone]),n["ɵmpd"](6144,r.p,null,[r.m]),n["ɵmpd"](4608,n.Testability,n.Testability,[n.NgZone]),n["ɵmpd"](4608,r.h,r.h,[s.DOCUMENT]),n["ɵmpd"](4608,r.i,r.i,[s.DOCUMENT]),n["ɵmpd"](4608,re.k,re.k,[]),n["ɵmpd"](4608,re.c,re.c,[]),n["ɵmpd"](4608,l.c,l.c,[]),n["ɵmpd"](4608,l.h,l.b,[]),n["ɵmpd"](5120,l.j,l.k,[]),n["ɵmpd"](4608,l.i,l.i,[l.c,l.h,l.j]),n["ɵmpd"](4608,l.g,l.a,[]),n["ɵmpd"](5120,l.e,l.l,[l.i,l.g]),n["ɵmpd"](4608,i.h,i.n,[s.DOCUMENT,n.PLATFORM_ID,i.l]),n["ɵmpd"](4608,i.o,i.o,[i.h,i.m]),n["ɵmpd"](5120,i.a,function(e){return[e]},[i.o]),n["ɵmpd"](4608,i.k,i.k,[]),n["ɵmpd"](6144,i.i,null,[i.k]),n["ɵmpd"](4608,i.g,i.g,[i.i]),n["ɵmpd"](6144,i.b,null,[i.g]),n["ɵmpd"](4608,i.f,i.j,[i.b,n.Injector]),n["ɵmpd"](4608,i.c,i.c,[i.f]),n["ɵmpd"](4608,C.b,C.b,[]),n["ɵmpd"](4608,ne.b,_.b,[n.RendererFactory2,r.b]),n["ɵmpd"](4608,se.a,se.a,[K.a,W.a]),n["ɵmpd"](4608,ie.a,ie.a,[K.a,W.a]),n["ɵmpd"](4608,le.a,le.a,[]),n["ɵmpd"](4608,ce.a,ce.a,[]),n["ɵmpd"](4608,de.a,de.a,[B.a]),n["ɵmpd"](4608,me.a,me.a,[W.a,B.a,n.NgZone,$.a]),n["ɵmpd"](4608,ue.a,ue.a,[K.a,W.a]),n["ɵmpd"](5120,s.LocationStrategy,pe.c,[s.PlatformLocation,[2,s.APP_BASE_HREF],W.a]),n["ɵmpd"](4608,s.Location,s.Location,[s.LocationStrategy]),n["ɵmpd"](5120,ge.b,ge.d,[K.a,ge.a]),n["ɵmpd"](5120,Q.a,Q.b,[K.a,ge.b,s.Location,fe.b,n.ComponentFactoryResolver]),n["ɵmpd"](4608,he.a,he.a,[K.a,W.a,Q.a]),n["ɵmpd"](4608,be.a,be.a,[K.a,W.a]),n["ɵmpd"](4608,ye.a,ye.a,[K.a,W.a,Q.a]),n["ɵmpd"](4608,ve.a,ve.a,[W.a,B.a,$.a,K.a,X.l]),n["ɵmpd"](4608,je.a,je.a,[K.a,W.a]),n["ɵmpd"](4608,Y.a,Y.a,[B.a,W.a]),n["ɵmpd"](5120,f.b,f.d,[f.c]),n["ɵmpd"](4608,g.a,g.a,[]),n["ɵmpd"](4608,p.a,p.a,[]),n["ɵmpd"](4608,y.a,y.a,[]),n["ɵmpd"](4608,h.a,h.a,[l.e,f.b,je.a,B.a,y.a]),n["ɵmpd"](4608,b.a,b.a,[l.e,B.a,f.b]),n["ɵmpd"](4608,c.a,c.a,[]),n["ɵmpd"](4608,s.DatePipe,s.DatePipe,[n.LOCALE_ID]),n["ɵmpd"](4608,d.a,d.a,[]),n["ɵmpd"](4608,u.a,u.a,[]),n["ɵmpd"](4608,m.a,m.a,[]),n["ɵmpd"](4608,P.a,P.a,[]),n["ɵmpd"](4608,E.a,E.a,[]),n["ɵmpd"](4608,A.a,A.a,[i.c,f.b]),n["ɵmpd"](512,s.CommonModule,s.CommonModule,[]),n["ɵmpd"](512,n.ErrorHandler,we.a,[]),n["ɵmpd"](256,W.b,{autocomplete:"off",cancelText:"Cancelar",okText:"OK",monthNames:["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubto","Novembro","Dezembro"],monthShortNames:["JAN","FEV","MAR","ABR","MAI","JUN","JUL","AGO","SET","OUT","NOV","DEZ"],dayNames:["Domingo","Segunda-feira","Terça-feira","Quarta-feira","Quinta-feira","Sexta-feira","Sabado"],dayShortNames:["DOM","SEG","TER","QUA","QUI","SEX","SAB"],tabsHideOnSubPages:!0,mode:"md"},[]),n["ɵmpd"](1024,ke.a,ke.b,[]),n["ɵmpd"](1024,B.a,B.b,[r.b,ke.a,n.NgZone]),n["ɵmpd"](1024,W.a,W.c,[W.b,B.a]),n["ɵmpd"](512,$.a,$.a,[B.a]),n["ɵmpd"](512,Ie.a,Ie.a,[]),n["ɵmpd"](512,K.a,K.a,[W.a,B.a,[2,Ie.a]]),n["ɵmpd"](512,X.l,X.l,[K.a]),n["ɵmpd"](256,ge.a,{links:[{loadChildren:"../components/download-modal/download-modal.module.ngfactory#DownloadModalModuleNgFactory",name:"download-modal",segment:"download-modal",priority:"low",defaultHistory:[]},{loadChildren:"../components/file-modal/file-modal.module.ngfactory#FileModalModuleNgFactory",name:"file-modal",segment:"file-modal",priority:"low",defaultHistory:[]},{loadChildren:"../components/holerite/holerite.module.ngfactory#HoleriteModuleNgFactory",name:"holerite-modal",segment:"holerite",priority:"low",defaultHistory:[]},{loadChildren:"../components/list-videos-modal/list-videos-modal.module.ngfactory#ListVideosModalModuleNgFactory",name:"list-videos-modal",segment:"list-videos-modal",priority:"low",defaultHistory:[]},{loadChildren:"../components/photo-modal/photo-modal.module.ngfactory#PhotoModalModuleNgFactory",name:"photo-modal",segment:"photo-modal",priority:"low",defaultHistory:[]},{loadChildren:"../components/quiz/quiz.module.ngfactory#QuizModuleNgFactory",name:"quiz",segment:"quiz",priority:"low",defaultHistory:[]},{loadChildren:"../components/user-form/user-form.module.ngfactory#UserFormModuleNgFactory",name:"user-form-modal",segment:"user-form",priority:"low",defaultHistory:[]},{loadChildren:"../pages/my-downloads/my-downloads.module.ngfactory#MyDownloadsPageModuleNgFactory",name:"my-downloads",segment:"my-downloads",priority:"low",defaultHistory:[]},{loadChildren:"../pages/notification/notification.module.ngfactory#NotificationPageModuleNgFactory",name:"notification-page",segment:"notification",priority:"low",defaultHistory:[]},{loadChildren:"../pages/recovery-password/recovery-password.module.ngfactory#RecoveryPasswordPageModuleNgFactory",name:"recovey-password-page",segment:"recovery-password",priority:"low",defaultHistory:[]},{loadChildren:"../pages/register/register.module.ngfactory#RegisterPageModuleNgFactory",name:"register-page",segment:"register",priority:"low",defaultHistory:[]},{loadChildren:"../pages/edit-user-v02/edit-user-v02.module.ngfactory#EditUserV02PageModuleNgFactory",name:"edit-user-v02-page",segment:"edit-user-v02",priority:"low",defaultHistory:[]},{loadChildren:"../pages/edit-user/edit-user.module.ngfactory#EditUserPageModuleNgFactory",name:"edit-user-page",segment:"edit-user",priority:"low",defaultHistory:[]},{loadChildren:"../pages/list-videos-v03/list-videos-v03.module.ngfactory#ListVideosV03PageModuleNgFactory",name:"list-videos-v03-page",segment:"list-videos-v03",priority:"low",defaultHistory:[]},{loadChildren:"../pages/list-videos-v04/list-videos-v04.module.ngfactory#ListVideosPageV04ModuleNgFactory",name:"list-videos-page-v04",segment:"list-videos-v04",priority:"low",defaultHistory:[]},{loadChildren:"../pages/login/login.module.ngfactory#LoginPageModuleNgFactory",name:"login-page",segment:"login",priority:"low",defaultHistory:[]},{loadChildren:"../pages/tabs/tabs.module.ngfactory#TabsPageModuleNgFactory",name:"tab-page",segment:"tabs",priority:"low",defaultHistory:[]},{loadChildren:"../pages/chat/chat.module.ngfactory#ChatPageModuleNgFactory",name:"chat-page",segment:"chat",priority:"low",defaultHistory:[]},{loadChildren:"../pages/list-videos-v02/list-videos-v02.module.ngfactory#ListVideosV02PageModuleNgFactory",name:"list-videos-v02-page",segment:"list-videos-v02",priority:"low",defaultHistory:[]},{loadChildren:"../pages/list-videos/list-videos.module.ngfactory#ListVideosPageModuleNgFactory",name:"list-videos-page",segment:"list-videos",priority:"low",defaultHistory:[]},{loadChildren:"../pages/photo/photo.module.ngfactory#PhotoPageModuleNgFactory",name:"photo-page",segment:"photo",priority:"low",defaultHistory:[]}]},[]),n["ɵmpd"](512,n.Compiler,n.Compiler,[]),n["ɵmpd"](512,Pe.a,Pe.a,[n.Compiler]),n["ɵmpd"](1024,fe.b,fe.c,[Pe.a,n.Injector]),n["ɵmpd"](1024,n.APP_INITIALIZER,function(e,t,o,a,n,s,i,l,c,d,m,u,p){return[r.s(e),Ne.a(t),le.b(o,a),ve.b(n,s,i,l,c),fe.d(d,m,u,p)]},[[2,n.NgProbeToken],W.a,B.a,$.a,W.a,B.a,$.a,K.a,X.l,W.a,ge.a,fe.b,n.NgZone]),n["ɵmpd"](512,n.ApplicationInitStatus,n.ApplicationInitStatus,[[2,n.APP_INITIALIZER]]),n["ɵmpd"](131584,n.ApplicationRef,n.ApplicationRef,[n.NgZone,n["ɵConsole"],n.Injector,n.ErrorHandler,n.ComponentFactoryResolver,n.ApplicationInitStatus]),n["ɵmpd"](512,n.ApplicationModule,n.ApplicationModule,[n.ApplicationRef]),n["ɵmpd"](512,r.a,r.a,[[3,r.a]]),n["ɵmpd"](512,re.j,re.j,[]),n["ɵmpd"](512,re.d,re.d,[]),n["ɵmpd"](512,re.i,re.i,[]),n["ɵmpd"](512,pe.a,pe.a,[]),n["ɵmpd"](512,f.a,f.a,[]),n["ɵmpd"](512,l.f,l.f,[]),n["ɵmpd"](512,i.e,i.e,[]),n["ɵmpd"](512,i.d,i.d,[]),n["ɵmpd"](512,N.b,N.b,[]),n["ɵmpd"](512,C.a,C.a,[]),n["ɵmpd"](512,_.a,_.a,[]),n["ɵmpd"](512,S.AngularCropperjsModule,S.AngularCropperjsModule,[]),n["ɵmpd"](512,M,M,[]),n["ɵmpd"](256,i.l,"XSRF-TOKEN",[]),n["ɵmpd"](256,i.m,"X-XSRF-TOKEN",[]),n["ɵmpd"](256,T.a,I,[]),n["ɵmpd"](256,s.APP_BASE_HREF,"/",[]),n["ɵmpd"](256,f.c,{name:"__moveraDB"},[])])});Object(n.enableProdMode)(),Object(r.j)().bootstrapModuleFactory(Ce)},396:function(e,t,o){function a(e){return o(r(e))}function r(e){var t=n[e];if(!(t+1))throw new Error("Cannot find module '"+e+"'.");return t}var n={"./af":208,"./af.js":208,"./ar":209,"./ar-dz":210,"./ar-dz.js":210,"./ar-kw":211,"./ar-kw.js":211,"./ar-ly":212,"./ar-ly.js":212,"./ar-ma":213,"./ar-ma.js":213,"./ar-sa":214,"./ar-sa.js":214,"./ar-tn":215,"./ar-tn.js":215,"./ar.js":209,"./az":216,"./az.js":216,"./be":217,"./be.js":217,"./bg":218,"./bg.js":218,"./bm":219,"./bm.js":219,"./bn":220,"./bn.js":220,"./bo":221,"./bo.js":221,"./br":222,"./br.js":222,"./bs":223,"./bs.js":223,"./ca":224,"./ca.js":224,"./cs":225,"./cs.js":225,"./cv":226,"./cv.js":226,"./cy":227,"./cy.js":227,"./da":228,"./da.js":228,"./de":229,"./de-at":230,"./de-at.js":230,"./de-ch":231,"./de-ch.js":231,"./de.js":229,"./dv":232,"./dv.js":232,"./el":233,"./el.js":233,"./en-SG":234,"./en-SG.js":234,"./en-au":235,"./en-au.js":235,"./en-ca":236,"./en-ca.js":236,"./en-gb":237,"./en-gb.js":237,"./en-ie":238,"./en-ie.js":238,"./en-il":239,"./en-il.js":239,"./en-nz":240,"./en-nz.js":240,"./eo":241,"./eo.js":241,"./es":242,"./es-do":243,"./es-do.js":243,"./es-us":244,"./es-us.js":244,"./es.js":242,"./et":245,"./et.js":245,"./eu":246,"./eu.js":246,"./fa":247,"./fa.js":247,"./fi":248,"./fi.js":248,"./fo":249,"./fo.js":249,"./fr":250,"./fr-ca":251,"./fr-ca.js":251,"./fr-ch":252,"./fr-ch.js":252,"./fr.js":250,"./fy":253,"./fy.js":253,"./ga":254,"./ga.js":254,"./gd":255,"./gd.js":255,"./gl":256,"./gl.js":256,"./gom-latn":257,"./gom-latn.js":257,"./gu":258,"./gu.js":258,"./he":259,"./he.js":259,"./hi":260,"./hi.js":260,"./hr":261,"./hr.js":261,"./hu":262,"./hu.js":262,"./hy-am":263,"./hy-am.js":263,"./id":264,"./id.js":264,"./is":265,"./is.js":265,"./it":266,"./it-ch":267,"./it-ch.js":267,"./it.js":266,"./ja":268,"./ja.js":268,"./jv":269,"./jv.js":269,"./ka":270,"./ka.js":270,"./kk":271,"./kk.js":271,"./km":272,"./km.js":272,"./kn":273,"./kn.js":273,"./ko":274,"./ko.js":274,"./ku":275,"./ku.js":275,"./ky":276,"./ky.js":276,"./lb":277,"./lb.js":277,"./lo":278,"./lo.js":278,"./lt":279,"./lt.js":279,"./lv":280,"./lv.js":280,"./me":281,"./me.js":281,"./mi":282,"./mi.js":282,"./mk":283,"./mk.js":283,"./ml":284,"./ml.js":284,"./mn":285,"./mn.js":285,"./mr":286,"./mr.js":286,"./ms":287,"./ms-my":288,"./ms-my.js":288,"./ms.js":287,"./mt":289,"./mt.js":289,"./my":290,"./my.js":290,"./nb":291,"./nb.js":291,"./ne":292,"./ne.js":292,"./nl":293,"./nl-be":294,"./nl-be.js":294,"./nl.js":293,"./nn":295,"./nn.js":295,"./pa-in":296,"./pa-in.js":296,"./pl":297,"./pl.js":297,"./pt":298,"./pt-br":299,"./pt-br.js":299,"./pt.js":298,"./ro":300,"./ro.js":300,"./ru":301,"./ru.js":301,"./sd":302,"./sd.js":302,"./se":303,"./se.js":303,"./si":304,"./si.js":304,"./sk":305,"./sk.js":305,"./sl":306,"./sl.js":306,"./sq":307,"./sq.js":307,"./sr":308,"./sr-cyrl":309,"./sr-cyrl.js":309,"./sr.js":308,"./ss":310,"./ss.js":310,"./sv":311,"./sv.js":311,"./sw":312,"./sw.js":312,"./ta":313,"./ta.js":313,"./te":314,"./te.js":314,"./tet":315,"./tet.js":315,"./tg":316,"./tg.js":316,"./th":317,"./th.js":317,"./tl-ph":318,"./tl-ph.js":318,"./tlh":319,"./tlh.js":319,"./tr":320,"./tr.js":320,"./tzl":321,"./tzl.js":321,"./tzm":322,"./tzm-latn":323,"./tzm-latn.js":323,"./tzm.js":322,"./ug-cn":324,"./ug-cn.js":324,"./uk":325,"./uk.js":325,"./ur":326,"./ur.js":326,"./uz":327,"./uz-latn":328,"./uz-latn.js":328,"./uz.js":327,"./vi":329,"./vi.js":329,"./x-pseudo":330,"./x-pseudo.js":330,"./yo":331,"./yo.js":331,"./zh-cn":332,"./zh-cn.js":332,"./zh-hk":333,"./zh-hk.js":333,"./zh-tw":334,"./zh-tw.js":334};a.keys=function(){return Object.keys(n)},a.resolve=r,e.exports=a,a.id=396},59:function(e,t,o){"use strict";o.d(t,"a",function(){return i});o(4);var a=o(65),r=o(207),n=(o.n(r),o(58),this&&this.__awaiter||function(e,t,o,a){return new(o||(o=Promise))(function(r,n){function s(e){try{l(a.next(e))}catch(e){n(e)}}function i(e){try{l(a.throw(e))}catch(e){n(e)}}function l(e){e.done?r(e.value):new o(function(t){t(e.value)}).then(s,i)}l((a=a.apply(e,t||[])).next())})}),s=this&&this.__generator||function(e,t){function o(o){return function(s){return function(o){if(a)throw new TypeError("Generator is already executing.");for(;i;)try{if(a=1,r&&(n=r[2&o[0]?"return":o[0]?"throw":"next"])&&!(n=n.call(r,o[1])).done)return n;switch(r=0,n&&(o=[0,n.value]),o[0]){case 0:case 1:n=o;break;case 4:return i.label++,{value:o[1],done:!1};case 5:i.label++,r=o[1],o=[0];continue;case 7:o=i.ops.pop(),i.trys.pop();continue;default:if(n=i.trys,!(n=n.length>0&&n[n.length-1])&&(6===o[0]||2===o[0])){i=0;continue}if(3===o[0]&&(!n||o[1]>n[0]&&o[1]<n[3])){i.label=o[1];break}if(6===o[0]&&i.label<n[1]){i.label=n[1],n=o;break}if(n&&i.label<n[2]){i.label=n[2],i.ops.push(o);break}n[2]&&i.ops.pop(),i.trys.pop();continue}o=t.call(e,i)}catch(e){o=[6,e],r=0}finally{a=n=0}if(5&o[0])throw o[1];return{value:o[0]?o[1]:void 0,done:!0}}([o,s])}}var a,r,n,s,i={label:0,sent:function(){if(1&n[0])throw n[1];return n[1]},trys:[],ops:[]};return s={next:o(0),throw:o(1),return:o(2)},"function"==typeof Symbol&&(s[Symbol.iterator]=function(){return this}),s},i=function(){function e(e,t,o){var r=this;this.http=e,this._platform=t,this.storage=o,this.url="",this.getUrl=function(){return n(r,void 0,void 0,function(){var e=this;return s(this,function(t){switch(t.label){case 0:return[4,new Promise(function(t,o){e.storage.get("Project").then(function(o){switch(o){case"localhost":e.url="/lch",e._platform.is("cordova")&&(e.url="http://ead.localhost");break;case"marketing-house":e.url="/mkh",e._platform.is("cordova")&&(e.url="https://homolog.marketinghouse.com.br");break;case"edicom":e.url="/edc",e._platform.is("cordova")&&(e.url="https://edicom.becinteligencia.com");break;case"hkt369":e.url="/hkt369",e._platform.is("cordova")&&(e.url="https://descubre.hkt369.com");break;case"know-house":e.url="/knowh",e._platform.is("cordova")&&(e.url="https://knowhouse.marketinghouse.com.br");break;case"simples-trade":e.url="/strade",e._platform.is("cordova")&&(e.url="https://simplestrade.becinteligencia.com");break;case"r2m":e.url="/r2m",e._platform.is("cordova")&&(e.url="https://readytomarket.becinteligencia.com");break;case"ava":e.url="/ava",e._platform.is("cordova")&&(e.url="https://ava.insighttech.com.br");break;case"tmc":e.url="/tmc",e._platform.is("cordova")&&(e.url="https://tmc.becinteligencia.com");break;case"hability":e.url="/hability",e._platform.is("cordova")&&(e.url="https://hability.becinteligencia.com");break;case"full-promo":e.url="/full-promo",e._platform.is("cordova")&&(e.url="https://homolog.fullpromo.com.br");break;default:e.url="/vcc",e._platform.is("cordova")&&(e.url="https://vcc.becinteligencia.com")}t(e.url)})})];case 1:return[2,t.sent()]}})})},this.getAppVersion=function(){return n(r,void 0,void 0,function(){var e,t=this;return s(this,function(o){switch(o.label){case 0:return[4,this.getUrl()];case 1:return e=o.sent(),[4,new Promise(function(o,r){var n=new a.d;n.append("Content-Type","application/json");var s=new a.g({headers:n});t.http.get(e+"/confsapp",s).subscribe(function(e){return o(e.json())})})];case 2:return[2,o.sent()]}})})},this.getUrl()}return e.prototype.getAll=function(e,t,o){var r=new a.d;if(!o){var n=new a.g({headers:r});return this.http.post(this.url+e,t,n).map(function(e){return e.json()})}if("get"==o){n=new a.g({headers:r,params:t});return this.http.get(this.url+e,n).map(function(e){return e.json()})}if("put"==o){n=new a.g({headers:r,params:t});return this.http.put(this.url+e,t,n).map(function(e){return e.json()})}},e.prototype.post=function(e,t,o){var r=new a.d;o?"form-data"==o&&r.append("enctype","multipart/form-data; boundary=----WebKitFormBoundaryuL67FWkv1CA"):r.append("Content-Type","application/json");var n=new a.g({headers:r});return this.http.post(this.url+e,t,n)},e}()}},[358]);
+webpackJsonp([21],{
+
+/***/ 111:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
+var environment = {
+    //TEXT_COLOR_V1: 'text-default-black',  
+    //text-default-black
+    //text-default-white
+    //HEADER_TEXT: 'style-white', 
+    //style-white
+    //style-black
+    //style-orange
+    /*
+     //KNOW-HOUSE -----------------------------------
+      PROJECT: 'know-house',
+      TEXT_COLOR_V1: 'text-default-black',
+      HEADER_TEXT: 'style-orange',
+    
+      PUSHER_APP_ID: "1059211",
+      PUSHER_APP_KEY: "25af961ea9f2ef86b9aa",
+      PUSHER_APP_SECRET: "c6060d1a53114a8365da",
+      PUSHER_APP_CLUSTER: "us2",
+     */
+    //EDICOM -----------------------------------
+    PROJECT: 'edicom',
+    TEXT_COLOR_V1: 'text-default-white',
+    HEADER_TEXT: 'style-white',
+    PUSHER_APP_ID: "1156523",
+    PUSHER_APP_KEY: "7b8b5ea20f7a185be995",
+    PUSHER_APP_SECRET: "789567e75724f82b17dc",
+    PUSHER_APP_CLUSTER: "us2",
+};
+//# sourceMappingURL=environment.js.map
+
+/***/ }),
+
+/***/ 112:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HttpServiceProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(171);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(38);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+
+
+var HttpServiceProvider = /** @class */ (function () {
+    function HttpServiceProvider(http, _platform, storage) {
+        var _this = this;
+        this.http = http;
+        this._platform = _platform;
+        this.storage = storage;
+        this.url = '';
+        this.getUrl = function () { return __awaiter(_this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, new Promise(function (response, reject) {
+                            _this.storage.get('Project').then(function (value) {
+                                switch (value) {
+                                    case 'localhost': {
+                                        _this.url = '/lch';
+                                        if (_this._platform.is("cordova")) {
+                                            _this.url = "http://ead.localhost";
+                                        }
+                                        break;
+                                    }
+                                    case 'marketing-house': {
+                                        _this.url = '/mkh';
+                                        if (_this._platform.is("cordova")) {
+                                            _this.url = "https://homolog.marketinghouse.com.br";
+                                        }
+                                        break;
+                                    }
+                                    case 'edicom': {
+                                        _this.url = '/edc';
+                                        if (_this._platform.is("cordova")) {
+                                            _this.url = "https://edicom.becinteligencia.com";
+                                            //this.url = "https://homolog.marketinghouse.com.br";
+                                        }
+                                        break;
+                                    }
+                                    case 'hkt369': {
+                                        _this.url = '/hkt369';
+                                        if (_this._platform.is("cordova")) {
+                                            _this.url = "https://descubre.hkt369.com";
+                                        }
+                                        break;
+                                    }
+                                    case 'know-house': {
+                                        _this.url = '/knowh';
+                                        if (_this._platform.is("cordova")) {
+                                            _this.url = "https://knowhouse.marketinghouse.com.br";
+                                        }
+                                        break;
+                                    }
+                                    case 'simples-trade': {
+                                        _this.url = '/strade';
+                                        if (_this._platform.is("cordova")) {
+                                            _this.url = "https://simplestrade.becinteligencia.com";
+                                        }
+                                        break;
+                                    }
+                                    case 'r2m': {
+                                        _this.url = '/r2m';
+                                        if (_this._platform.is("cordova")) {
+                                            _this.url = "https://readytomarket.becinteligencia.com";
+                                        }
+                                        break;
+                                    }
+                                    case 'ava': {
+                                        _this.url = '/ava';
+                                        if (_this._platform.is("cordova")) {
+                                            _this.url = "https://ava.insighttech.com.br";
+                                        }
+                                        break;
+                                    }
+                                    case 'tmc': {
+                                        _this.url = '/tmc';
+                                        if (_this._platform.is("cordova")) {
+                                            _this.url = "https://tmc.becinteligencia.com";
+                                        }
+                                        break;
+                                    }
+                                    case 'hability': {
+                                        _this.url = '/hability';
+                                        if (_this._platform.is("cordova")) {
+                                            _this.url = "https://hability.becinteligencia.com";
+                                        }
+                                        break;
+                                    }
+                                    case 'full-promo': {
+                                        _this.url = '/full-promo';
+                                        if (_this._platform.is("cordova")) {
+                                            _this.url = "https://homolog.fullpromo.com.br";
+                                        }
+                                        break;
+                                    }
+                                    default: {
+                                        _this.url = '/vcc';
+                                        if (_this._platform.is("cordova")) {
+                                            _this.url = "https://vcc.becinteligencia.com";
+                                            //this.url = "https://homolog.marketinghouse.com.br";
+                                        }
+                                    }
+                                }
+                                response(_this.url);
+                            });
+                        })];
+                    case 1: return [2 /*return*/, _a.sent()];
+                }
+            });
+        }); };
+        this.getAppVersion = function () { return __awaiter(_this, void 0, void 0, function () {
+            var _this = this;
+            var url;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.getUrl()];
+                    case 1:
+                        url = _a.sent();
+                        return [4 /*yield*/, new Promise(function (response, reject) {
+                                var headers = new __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Headers */]();
+                                headers.append('Content-Type', 'application/json');
+                                var options = new __WEBPACK_IMPORTED_MODULE_0__angular_http__["d" /* RequestOptions */]({ headers: headers });
+                                _this.http.get(url + '/confsapp', options).subscribe(function (res) { return response(res.json()); });
+                            })];
+                    case 2: return [2 /*return*/, _a.sent()];
+                }
+            });
+        }); };
+        this.getUrl();
+    }
+    HttpServiceProvider.prototype.getAll = function (endpoint, variables, type) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Headers */]();
+        if (!type) {
+            var options = new __WEBPACK_IMPORTED_MODULE_0__angular_http__["d" /* RequestOptions */]({ headers: headers });
+            return this.http.post(this.url + endpoint, variables, options)
+                .map(function (res) { return res.json(); });
+        }
+        else if (type == 'get') {
+            var options = new __WEBPACK_IMPORTED_MODULE_0__angular_http__["d" /* RequestOptions */]({ headers: headers, params: variables });
+            return this.http.get(this.url + endpoint, options)
+                .map(function (res) { return res.json(); });
+        }
+        else if (type == "put") {
+            var options = new __WEBPACK_IMPORTED_MODULE_0__angular_http__["d" /* RequestOptions */]({ headers: headers, params: variables });
+            return this.http.put(this.url + endpoint, variables, options)
+                .map(function (res) { return res.json(); });
+        }
+        /*return this.http.get(this.url+endpoint)
+        .map(res => {
+          return res.json();
+        })*/
+    };
+    HttpServiceProvider.prototype.post = function (endpoint, variables, type) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Headers */]();
+        if (!type) {
+            headers.append('Content-Type', 'application/json');
+        }
+        else if (type == "form-data") {
+            headers.append('enctype', 'multipart/form-data; boundary=----WebKitFormBoundaryuL67FWkv1CA');
+        }
+        var options = new __WEBPACK_IMPORTED_MODULE_0__angular_http__["d" /* RequestOptions */]({ headers: headers });
+        return this.http.post(this.url + endpoint, variables, options);
+    };
+    HttpServiceProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */],
+            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["l" /* Platform */],
+            __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */]])
+    ], HttpServiceProvider);
+    return HttpServiceProvider;
+}());
+
+//# sourceMappingURL=http-service.js.map
+
+/***/ }),
+
+/***/ 124:
+/***/ (function(module, exports) {
+
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncatched exception popping up in devtools
+	return Promise.resolve().then(function() {
+		throw new Error("Cannot find module '" + req + "'.");
+	});
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = 124;
+
+/***/ }),
+
+/***/ 170:
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"../components/download-modal/download-modal.module": [
+		456,
+		20
+	],
+	"../components/file-modal/file-modal.module": [
+		457,
+		19
+	],
+	"../components/holerite/holerite.module": [
+		458,
+		6
+	],
+	"../components/list-videos-modal/list-videos-modal.module": [
+		459,
+		18
+	],
+	"../components/photo-modal/photo-modal.module": [
+		460,
+		17
+	],
+	"../components/quiz/quiz.module": [
+		461,
+		16
+	],
+	"../components/user-form/user-form.module": [
+		462,
+		5
+	],
+	"../pages/chat/chat.module": [
+		473,
+		13
+	],
+	"../pages/edit-user-v02/edit-user-v02.module": [
+		467,
+		1
+	],
+	"../pages/edit-user/edit-user.module": [
+		468,
+		0
+	],
+	"../pages/list-videos-v02/list-videos-v02.module": [
+		474,
+		12
+	],
+	"../pages/list-videos-v03/list-videos-v03.module": [
+		469,
+		11
+	],
+	"../pages/list-videos-v04/list-videos-v04.module": [
+		470,
+		8
+	],
+	"../pages/list-videos/list-videos.module": [
+		475,
+		7
+	],
+	"../pages/login/login.module": [
+		471,
+		4
+	],
+	"../pages/my-downloads/my-downloads.module": [
+		463,
+		14
+	],
+	"../pages/notification/notification.module": [
+		464,
+		10
+	],
+	"../pages/photo/photo.module": [
+		476,
+		9
+	],
+	"../pages/recovery-password/recovery-password.module": [
+		465,
+		2
+	],
+	"../pages/register/register.module": [
+		466,
+		3
+	],
+	"../pages/tabs/tabs.module": [
+		472,
+		15
+	]
+};
+function webpackAsyncContext(req) {
+	var ids = map[req];
+	if(!ids)
+		return Promise.reject(new Error("Cannot find module '" + req + "'."));
+	return __webpack_require__.e(ids[1]).then(function() {
+		return __webpack_require__(ids[0]);
+	});
+};
+webpackAsyncContext.keys = function webpackAsyncContextKeys() {
+	return Object.keys(map);
+};
+webpackAsyncContext.id = 170;
+module.exports = webpackAsyncContext;
+
+/***/ }),
+
+/***/ 342:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_storage__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(171);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_toPromise__ = __webpack_require__(410);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_toPromise__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_moment__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_moment__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_onesignal__ = __webpack_require__(56);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+var AuthProvider = /** @class */ (function () {
+    //private url:string= '/edc';
+    function AuthProvider(http, storage, toastCtrl, _platform, oneSignal) {
+        var _this = this;
+        this.http = http;
+        this.storage = storage;
+        this.toastCtrl = toastCtrl;
+        this._platform = _platform;
+        this.oneSignal = oneSignal;
+        this.msg = "Favor fazer o login";
+        this.url = '/vcc';
+        this.storage.get('Project').then(function (value) {
+            switch (value) {
+                case 'localhost': {
+                    _this.url = '/lch';
+                    if (_this._platform.is("cordova")) {
+                        _this.url = "http://ead.localhost";
+                    }
+                    break;
+                }
+                case 'marketing-house': {
+                    _this.url = '/mkh';
+                    if (_this._platform.is("cordova")) {
+                        _this.url = "https://homolog.marketinghouse.com.br";
+                    }
+                    break;
+                }
+                case 'edicom': {
+                    _this.url = '/edc';
+                    if (_this._platform.is("cordova")) {
+                        _this.url = "https://edicom.becinteligencia.com";
+                    }
+                    break;
+                }
+                case 'hkt369': {
+                    _this.url = '/hkt369';
+                    if (_this._platform.is("cordova")) {
+                        _this.url = "https://descubre.hkt369.com";
+                    }
+                    break;
+                }
+                case 'know-house': {
+                    _this.url = '/knowh';
+                    if (_this._platform.is("cordova")) {
+                        _this.url = "https://knowhouse.marketinghouse.com.br";
+                    }
+                    break;
+                }
+                case 'simples-trade': {
+                    _this.url = '/strade';
+                    if (_this._platform.is("cordova")) {
+                        _this.url = "https://simplestrade.becinteligencia.com";
+                    }
+                    break;
+                }
+                case 'r2m': {
+                    _this.url = '/r2m';
+                    if (_this._platform.is("cordova")) {
+                        _this.url = "https://readytomarket.becinteligencia.com";
+                    }
+                    break;
+                }
+                case 'ava': {
+                    _this.url = '/ava';
+                    if (_this._platform.is("cordova")) {
+                        _this.url = "https://ava.insighttech.com.br/";
+                    }
+                    break;
+                }
+                case 'tmc': {
+                    _this.url = '/tmc';
+                    if (_this._platform.is("cordova")) {
+                        _this.url = "https://tmc.becinteligencia.com";
+                    }
+                    break;
+                }
+                case 'hability': {
+                    _this.url = '/hability';
+                    if (_this._platform.is("cordova")) {
+                        _this.url = "https://hability.becinteligencia.com";
+                    }
+                    break;
+                }
+                case 'full-promo': {
+                    _this.url = '/full-promo';
+                    if (_this._platform.is("cordova")) {
+                        _this.url = "https://homolog.fullpromo.com.br";
+                    }
+                    break;
+                }
+                default: {
+                    _this.url = '/vcc';
+                    if (_this._platform.is("cordova")) {
+                        _this.url = "https://vcc.becinteligencia.com";
+                    }
+                }
+            }
+        });
+    }
+    AuthProvider.prototype.request = function (url, vars) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Headers */]();
+        headers.append('Content-Type', 'application/json');
+        var options = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* RequestOptions */]({ headers: headers });
+        //'/api/usuarios/cadastrar'
+        return this.http.post(this.url + url, vars, options)
+            .map(function (res) { return res.json(); })
+            .toPromise()
+            .then(function (data) {
+            return data;
+        });
+    };
+    AuthProvider.prototype.login = function (credentials) {
+        var _this = this;
+        var headers = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Headers */]();
+        headers.append('Content-Type', 'application/json');
+        var options = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* RequestOptions */]({ headers: headers });
+        return this.http.post(this.url + '/api/usuarios/logar', credentials, options)
+            .map(function (res) { return res.json(); })
+            .toPromise()
+            .then(function (data) {
+            if (data.id > 0) {
+                _this.storage.set('clienteId', data.id);
+                _this.storage.set('clienteNome', data.nome);
+                _this.storage.set('clienteEmail', data.email);
+                _this.storage.set('clienteWhatsapp', data.whatsapp);
+                _this.storage.set('clienteDocumento', data.documento);
+                _this.storage.set('clienteProfileId', data.profile_id);
+                _this.storage.set('clienteEmpresa', data.empresa);
+                _this.storage.set('clienteNascimento', data.nascimento);
+                _this.storage.set('clienteThumb', data.thumb);
+                _this.storage.set('clienteCompanyId', data.company_id);
+                //if(credentials.lembrar){
+                //CLIENTE MARCOU PARA LEMBRAR DE FICAR LOGADO
+                //2. REGRA ALTERADA, AGORA O SISTEMA SEMPRE VAI LEMBRAR O ACESSO
+                _this.storage.set('clienteSavePassword', credentials.password);
+                _this.storage.set('clienteSaveDocumento', data.documento);
+                //}
+                return true;
+            }
+            else {
+                return false;
+            }
+        });
+    };
+    AuthProvider.prototype.firstAcess = function (credentials) {
+        var _this = this;
+        var headers = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Headers */]();
+        headers.append('Content-Type', 'application/json');
+        var options = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* RequestOptions */]({ headers: headers });
+        return this.http.post(this.url + '/api/usuarios/primeiro-acesso', credentials, options)
+            .map(function (res) { return res.json(); })
+            .toPromise()
+            .then(function (data) {
+            if (data.id > 0) {
+                _this.storage.set('clienteId', data.id);
+                _this.storage.set('clienteNome', data.nome);
+                _this.storage.set('clienteEmail', data.email);
+                _this.storage.set('clienteWhatsapp', data.whatsapp);
+                _this.storage.set('clienteDocumento', data.documento);
+                _this.storage.set('clienteProfileId', data.profile_id);
+                _this.storage.set('clienteEmpresa', data.empresa);
+                _this.storage.set('clienteNascimento', data.nascimento);
+                _this.storage.set('clienteThumb', data.thumb);
+                _this.storage.set('clienteCompanyId', data.company_id);
+                _this.storage.set('clienteFirst', data.first);
+                return true;
+            }
+            else {
+                return false;
+            }
+        });
+    };
+    AuthProvider.prototype.register = function (credentials) {
+        var _this = this;
+        var headers = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Headers */]();
+        headers.append('Content-Type', 'application/json');
+        //headers.append('Content-Type', 'multipart/form-data');
+        var options = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* RequestOptions */]({ headers: headers });
+        return this.http.post(this.url + '/api/usuarios/cadastrar', credentials, options)
+            .map(function (res) { return res.json(); })
+            .toPromise()
+            .then(function (data) {
+            data.nascimento = data.nascimento ? __WEBPACK_IMPORTED_MODULE_6_moment___default()(data.nascimento.date).format('DD/MM/YYYY') : '';
+            if (data.id > 0) {
+                _this.storage.set('clienteId', data.id);
+                _this.storage.set('clienteNome', data.nome);
+                _this.storage.set('clienteEmail', data.email);
+                _this.storage.set('clienteWhatsapp', data.whatsapp);
+                _this.storage.set('clienteDocumento', data.documento);
+                _this.storage.set('clienteProfileId', data.profile_id);
+                _this.storage.set('clienteEmpresa', data.empresa);
+                _this.storage.set('clienteNascimento', data.nascimento);
+                _this.storage.set('clienteThumb', data.thumb);
+                _this.storage.set('clienteCompanyId', data.company_id);
+                return data;
+            }
+            else {
+                //return false;
+                return data;
+            }
+        });
+    };
+    AuthProvider.prototype.recoveryPassword = function (credentials) {
+        var _this = this;
+        var headers = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Headers */]();
+        headers.append('Content-Type', 'application/json');
+        var options = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* RequestOptions */]({ headers: headers });
+        return this.http.post(this.url + '/api/usuarios/reset-senha', credentials, options)
+            .map(function (res) { return res.json(); })
+            .toPromise()
+            .then(function (data) {
+            //return data;
+            if (data.id > 0) {
+                _this.storage.set('clienteId', data.id);
+                _this.storage.set('clienteNome', data.nome);
+                _this.storage.set('clienteEmail', data.email);
+                _this.storage.set('clienteWhatsapp', data.whatsapp);
+                _this.storage.set('clienteDocumento', data.documento);
+                _this.storage.set('clienteProfileId', data.profile_id);
+                _this.storage.set('clienteEmpresa', data.empresa);
+                _this.storage.set('clienteNascimento', data.nascimento);
+                _this.storage.set('clienteThumb', data.thumb);
+                _this.storage.set('clienteCompanyId', data.company_id);
+                _this.storage.set('clienteFirst', data.first);
+                return true;
+            }
+            else {
+                return false;
+            }
+        });
+        //ALTERADO 21/09. APARTIR DE AGORA O USUÁRIO RESETA NO PROPRIO APP
+        /*let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+    
+    
+        let options = new RequestOptions({ headers : headers});
+    
+         return this.http.post(this.url+'/api/usuarios/recover', credentials, options)
+          .map(res => res.json())
+          .toPromise()
+          .then(data => {
+            return data;
+          });*/
+    };
+    AuthProvider.prototype.getJob = function () {
+        var headers = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Headers */]();
+        headers.append('Content-Type', 'application/json');
+        var options = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* RequestOptions */]({ headers: headers });
+        return this.http.post(this.url + '/api/usuarios/ocupacoes', options)
+            .map(function (res) { return res.json(); })
+            .toPromise()
+            .then(function (data) {
+            return data;
+        });
+    };
+    AuthProvider.prototype.userIsLogged = function () {
+        var _this = this;
+        return this.storage.get('clienteId').then(function (val) {
+            if (val) {
+                return true;
+            }
+            else {
+                var toast = _this.toastCtrl.create({
+                    message: _this.msg,
+                    duration: 3000
+                });
+                toast.present();
+                return true; //MUDAR PARA FALSE
+            }
+        });
+    };
+    AuthProvider.prototype.logout = function () {
+        var _this = this;
+        this.storage.get('clienteId').then(function (clienteId) {
+            _this.storage.get('clienteEmail').then(function (clienteEmail) {
+                _this.oneSignal.getIds().then(function (state) {
+                    //REMOVE O DEVICE ID DA WEB
+                    //id, email, type, device_id
+                    var parametros = {
+                        id: clienteId,
+                        email: clienteEmail,
+                        device_id: state.userId,
+                        type: 'android'
+                    };
+                    _this.http.post(_this.url + '/api/usuarios/remove-device', parametros)
+                        .subscribe(function (data) {
+                    });
+                }).catch(function () { console.log("Erro ao obter os dados do Onesignal"); });
+                _this.storage.remove('clientId');
+                _this.storage.remove('clienteNome');
+                _this.storage.remove('clienteEmail');
+                _this.storage.remove('clienteWhatsapp');
+                _this.storage.remove('clienteDocumento');
+                _this.storage.remove('clienteProfileId');
+                _this.storage.remove('clienteEmpresa');
+                _this.storage.remove('clienteNascimento');
+                _this.storage.remove('clienteThumb');
+                _this.storage.remove('clienteCompanyId');
+                _this.storage.remove('clienteId');
+            });
+        });
+    };
+    AuthProvider.prototype.logoutSave = function () {
+        this.storage.remove('clienteSavePassword');
+        this.storage.remove('clienteSaveDocumento');
+    };
+    AuthProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */],
+            __WEBPACK_IMPORTED_MODULE_1__ionic_storage__["b" /* Storage */],
+            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["p" /* ToastController */],
+            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["l" /* Platform */],
+            __WEBPACK_IMPORTED_MODULE_7__ionic_native_onesignal__["a" /* OneSignal */]])
+    ], AuthProvider);
+    return AuthProvider;
+}());
+
+//# sourceMappingURL=auth.js.map
+
+/***/ }),
+
+/***/ 347:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return isCordovaAvailable; });
+var isCordovaAvailable = function () {
+    if (!window.cordova) {
+        return false;
+    }
+    return true;
+};
+//# sourceMappingURL=is-cordova-available.js.map
+
+/***/ }),
+
+/***/ 350:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PusherServiceProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(38);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var PusherServiceProvider = /** @class */ (function () {
+    function PusherServiceProvider(http, storage) {
+        var _this = this;
+        this.http = http;
+        this.storage = storage;
+        this.storage.get('clienteId').then(function (valor) {
+            var pusher = new Pusher(__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].PUSHER_APP_KEY, {
+                cluster: __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].PUSHER_APP_CLUSTER,
+                encrypted: true,
+            });
+            _this.channel = pusher.subscribe("chat." + valor);
+        });
+    }
+    PusherServiceProvider.prototype.init = function () {
+        return this.channel;
+    };
+    PusherServiceProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */],
+            __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */]])
+    ], PusherServiceProvider);
+    return PusherServiceProvider;
+}());
+
+//# sourceMappingURL=pusher-service.js.map
+
+/***/ }),
+
+/***/ 351:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(352);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(372);
+
+
+Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
+//# sourceMappingURL=main.js.map
+
+/***/ }),
+
+/***/ 372:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_camera__ = __webpack_require__(345);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_file__ = __webpack_require__(343);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_file_opener__ = __webpack_require__(344);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_file_transfer__ = __webpack_require__(346);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_status_bar__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_storage__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_ionic_angular__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_auth_auth__ = __webpack_require__(342);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_http_service_http_service__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__app_component__ = __webpack_require__(450);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_native_call_number_ngx__ = __webpack_require__(451);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_native_onesignal__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_ngx_qrcode2__ = __webpack_require__(348);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_ngx_pagination__ = __webpack_require__(452);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__angular_platform_browser_animations__ = __webpack_require__(453);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__ionic_native_image_picker_ngx__ = __webpack_require__(455);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_angular_cropperjs__ = __webpack_require__(349);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_angular_cropperjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_22_angular_cropperjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__providers_pusher_service_pusher_service__ = __webpack_require__(350);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var AppModule = /** @class */ (function () {
+    function AppModule() {
+    }
+    AppModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_15__app_component__["a" /* MyApp */]
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_12_ionic_angular__["e" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_15__app_component__["a" /* MyApp */], {
+                    autocomplete: 'off',
+                    cancelText: 'Cancelar',
+                    okText: 'OK',
+                    monthNames: ['Janeiro', 'Fevereiro', 'Mar\u00e7o', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubto', 'Novembro', 'Dezembro'],
+                    monthShortNames: ['JAN', 'FEV', 'MAR', 'ABR', 'MAI', 'JUN', 'JUL', 'AGO', 'SET', 'OUT', 'NOV', 'DEZ'],
+                    dayNames: ['Domingo', 'Segunda-feira', 'Ter\u00e7a-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sabado'],
+                    dayShortNames: ['DOM', 'SEG', 'TER', 'QUA', 'QUI', 'SEX', 'SAB'],
+                    tabsHideOnSubPages: true,
+                    mode: 'md'
+                }, {
+                    links: [
+                        { loadChildren: '../components/download-modal/download-modal.module#DownloadModalModule', name: 'download-modal', segment: 'download-modal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../components/file-modal/file-modal.module#FileModalModule', name: 'file-modal', segment: 'file-modal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../components/holerite/holerite.module#HoleriteModule', name: 'holerite-modal', segment: 'holerite', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../components/list-videos-modal/list-videos-modal.module#ListVideosModalModule', name: 'list-videos-modal', segment: 'list-videos-modal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../components/photo-modal/photo-modal.module#PhotoModalModule', name: 'photo-modal', segment: 'photo-modal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../components/quiz/quiz.module#QuizModule', name: 'quiz', segment: 'quiz', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../components/user-form/user-form.module#UserFormModule', name: 'user-form-modal', segment: 'user-form', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/my-downloads/my-downloads.module#MyDownloadsPageModule', name: 'my-downloads', segment: 'my-downloads', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/notification/notification.module#NotificationPageModule', name: 'notification-page', segment: 'notification', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/recovery-password/recovery-password.module#RecoveryPasswordPageModule', name: 'recovey-password-page', segment: 'recovery-password', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'register-page', segment: 'register', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/edit-user-v02/edit-user-v02.module#EditUserV02PageModule', name: 'edit-user-v02-page', segment: 'edit-user-v02', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/edit-user/edit-user.module#EditUserPageModule', name: 'edit-user-page', segment: 'edit-user', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/list-videos-v03/list-videos-v03.module#ListVideosV03PageModule', name: 'list-videos-v03-page', segment: 'list-videos-v03', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/list-videos-v04/list-videos-v04.module#ListVideosPageV04Module', name: 'list-videos-page-v04', segment: 'list-videos-v04', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'login-page', segment: 'login', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'tab-page', segment: 'tabs', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/chat/chat.module#ChatPageModule', name: 'chat-page', segment: 'chat', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/list-videos-v02/list-videos-v02.module#ListVideosV02PageModule', name: 'list-videos-v02-page', segment: 'list-videos-v02', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/list-videos/list-videos.module#ListVideosPageModule', name: 'list-videos-page', segment: 'list-videos', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/photo/photo.module#PhotoPageModule', name: 'photo-page', segment: 'photo', priority: 'low', defaultHistory: [] }
+                    ]
+                }),
+                __WEBPACK_IMPORTED_MODULE_11__ionic_storage__["a" /* IonicStorageModule */].forRoot({ name: '__moveraDB' }),
+                __WEBPACK_IMPORTED_MODULE_3__angular_http__["c" /* HttpModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_18_ngx_qrcode2__["a" /* NgxQRCodeModule */],
+                __WEBPACK_IMPORTED_MODULE_19_ngx_pagination__["a" /* NgxPaginationModule */],
+                __WEBPACK_IMPORTED_MODULE_20__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+                __WEBPACK_IMPORTED_MODULE_22_angular_cropperjs__["AngularCropperjsModule"]
+            ],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_12_ionic_angular__["c" /* IonicApp */]],
+            entryComponents: [],
+            providers: [
+                __WEBPACK_IMPORTED_MODULE_10__ionic_native_status_bar__["a" /* StatusBar */],
+                __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__["a" /* SplashScreen */],
+                { provide: __WEBPACK_IMPORTED_MODULE_2__angular_core__["ErrorHandler"], useClass: __WEBPACK_IMPORTED_MODULE_12_ionic_angular__["d" /* IonicErrorHandler */] },
+                __WEBPACK_IMPORTED_MODULE_13__providers_auth_auth__["a" /* AuthProvider */],
+                __WEBPACK_IMPORTED_MODULE_14__providers_http_service_http_service__["a" /* HttpServiceProvider */],
+                __WEBPACK_IMPORTED_MODULE_5__ionic_native_camera__["a" /* Camera */],
+                __WEBPACK_IMPORTED_MODULE_0__angular_common__["DatePipe"],
+                __WEBPACK_IMPORTED_MODULE_6__ionic_native_file__["a" /* File */],
+                __WEBPACK_IMPORTED_MODULE_8__ionic_native_file_transfer__["a" /* FileTransfer */],
+                __WEBPACK_IMPORTED_MODULE_7__ionic_native_file_opener__["a" /* FileOpener */],
+                __WEBPACK_IMPORTED_MODULE_16__ionic_native_call_number_ngx__["a" /* CallNumber */],
+                __WEBPACK_IMPORTED_MODULE_17__ionic_native_onesignal__["a" /* OneSignal */],
+                __WEBPACK_IMPORTED_MODULE_21__ionic_native_image_picker_ngx__["a" /* ImagePicker */],
+                __WEBPACK_IMPORTED_MODULE_23__providers_pusher_service_pusher_service__["a" /* PusherServiceProvider */]
+            ],
+            exports: []
+        })
+    ], AppModule);
+    return AppModule;
+}());
+
+//# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ 412:
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./af": 172,
+	"./af.js": 172,
+	"./ar": 173,
+	"./ar-dz": 174,
+	"./ar-dz.js": 174,
+	"./ar-kw": 175,
+	"./ar-kw.js": 175,
+	"./ar-ly": 176,
+	"./ar-ly.js": 176,
+	"./ar-ma": 177,
+	"./ar-ma.js": 177,
+	"./ar-sa": 178,
+	"./ar-sa.js": 178,
+	"./ar-tn": 179,
+	"./ar-tn.js": 179,
+	"./ar.js": 173,
+	"./az": 180,
+	"./az.js": 180,
+	"./be": 181,
+	"./be.js": 181,
+	"./bg": 182,
+	"./bg.js": 182,
+	"./bm": 183,
+	"./bm.js": 183,
+	"./bn": 184,
+	"./bn.js": 184,
+	"./bo": 185,
+	"./bo.js": 185,
+	"./br": 186,
+	"./br.js": 186,
+	"./bs": 187,
+	"./bs.js": 187,
+	"./ca": 188,
+	"./ca.js": 188,
+	"./cs": 189,
+	"./cs.js": 189,
+	"./cv": 190,
+	"./cv.js": 190,
+	"./cy": 191,
+	"./cy.js": 191,
+	"./da": 192,
+	"./da.js": 192,
+	"./de": 193,
+	"./de-at": 194,
+	"./de-at.js": 194,
+	"./de-ch": 195,
+	"./de-ch.js": 195,
+	"./de.js": 193,
+	"./dv": 196,
+	"./dv.js": 196,
+	"./el": 197,
+	"./el.js": 197,
+	"./en-SG": 198,
+	"./en-SG.js": 198,
+	"./en-au": 199,
+	"./en-au.js": 199,
+	"./en-ca": 200,
+	"./en-ca.js": 200,
+	"./en-gb": 201,
+	"./en-gb.js": 201,
+	"./en-ie": 202,
+	"./en-ie.js": 202,
+	"./en-il": 203,
+	"./en-il.js": 203,
+	"./en-nz": 204,
+	"./en-nz.js": 204,
+	"./eo": 205,
+	"./eo.js": 205,
+	"./es": 206,
+	"./es-do": 207,
+	"./es-do.js": 207,
+	"./es-us": 208,
+	"./es-us.js": 208,
+	"./es.js": 206,
+	"./et": 209,
+	"./et.js": 209,
+	"./eu": 210,
+	"./eu.js": 210,
+	"./fa": 211,
+	"./fa.js": 211,
+	"./fi": 212,
+	"./fi.js": 212,
+	"./fo": 213,
+	"./fo.js": 213,
+	"./fr": 214,
+	"./fr-ca": 215,
+	"./fr-ca.js": 215,
+	"./fr-ch": 216,
+	"./fr-ch.js": 216,
+	"./fr.js": 214,
+	"./fy": 217,
+	"./fy.js": 217,
+	"./ga": 218,
+	"./ga.js": 218,
+	"./gd": 219,
+	"./gd.js": 219,
+	"./gl": 220,
+	"./gl.js": 220,
+	"./gom-latn": 221,
+	"./gom-latn.js": 221,
+	"./gu": 222,
+	"./gu.js": 222,
+	"./he": 223,
+	"./he.js": 223,
+	"./hi": 224,
+	"./hi.js": 224,
+	"./hr": 225,
+	"./hr.js": 225,
+	"./hu": 226,
+	"./hu.js": 226,
+	"./hy-am": 227,
+	"./hy-am.js": 227,
+	"./id": 228,
+	"./id.js": 228,
+	"./is": 229,
+	"./is.js": 229,
+	"./it": 230,
+	"./it-ch": 231,
+	"./it-ch.js": 231,
+	"./it.js": 230,
+	"./ja": 232,
+	"./ja.js": 232,
+	"./jv": 233,
+	"./jv.js": 233,
+	"./ka": 234,
+	"./ka.js": 234,
+	"./kk": 235,
+	"./kk.js": 235,
+	"./km": 236,
+	"./km.js": 236,
+	"./kn": 237,
+	"./kn.js": 237,
+	"./ko": 238,
+	"./ko.js": 238,
+	"./ku": 239,
+	"./ku.js": 239,
+	"./ky": 240,
+	"./ky.js": 240,
+	"./lb": 241,
+	"./lb.js": 241,
+	"./lo": 242,
+	"./lo.js": 242,
+	"./lt": 243,
+	"./lt.js": 243,
+	"./lv": 244,
+	"./lv.js": 244,
+	"./me": 245,
+	"./me.js": 245,
+	"./mi": 246,
+	"./mi.js": 246,
+	"./mk": 247,
+	"./mk.js": 247,
+	"./ml": 248,
+	"./ml.js": 248,
+	"./mn": 249,
+	"./mn.js": 249,
+	"./mr": 250,
+	"./mr.js": 250,
+	"./ms": 251,
+	"./ms-my": 252,
+	"./ms-my.js": 252,
+	"./ms.js": 251,
+	"./mt": 253,
+	"./mt.js": 253,
+	"./my": 254,
+	"./my.js": 254,
+	"./nb": 255,
+	"./nb.js": 255,
+	"./ne": 256,
+	"./ne.js": 256,
+	"./nl": 257,
+	"./nl-be": 258,
+	"./nl-be.js": 258,
+	"./nl.js": 257,
+	"./nn": 259,
+	"./nn.js": 259,
+	"./pa-in": 260,
+	"./pa-in.js": 260,
+	"./pl": 261,
+	"./pl.js": 261,
+	"./pt": 262,
+	"./pt-br": 263,
+	"./pt-br.js": 263,
+	"./pt.js": 262,
+	"./ro": 264,
+	"./ro.js": 264,
+	"./ru": 265,
+	"./ru.js": 265,
+	"./sd": 266,
+	"./sd.js": 266,
+	"./se": 267,
+	"./se.js": 267,
+	"./si": 268,
+	"./si.js": 268,
+	"./sk": 269,
+	"./sk.js": 269,
+	"./sl": 270,
+	"./sl.js": 270,
+	"./sq": 271,
+	"./sq.js": 271,
+	"./sr": 272,
+	"./sr-cyrl": 273,
+	"./sr-cyrl.js": 273,
+	"./sr.js": 272,
+	"./ss": 274,
+	"./ss.js": 274,
+	"./sv": 275,
+	"./sv.js": 275,
+	"./sw": 276,
+	"./sw.js": 276,
+	"./ta": 277,
+	"./ta.js": 277,
+	"./te": 278,
+	"./te.js": 278,
+	"./tet": 279,
+	"./tet.js": 279,
+	"./tg": 280,
+	"./tg.js": 280,
+	"./th": 281,
+	"./th.js": 281,
+	"./tl-ph": 282,
+	"./tl-ph.js": 282,
+	"./tlh": 283,
+	"./tlh.js": 283,
+	"./tr": 284,
+	"./tr.js": 284,
+	"./tzl": 285,
+	"./tzl.js": 285,
+	"./tzm": 286,
+	"./tzm-latn": 287,
+	"./tzm-latn.js": 287,
+	"./tzm.js": 286,
+	"./ug-cn": 288,
+	"./ug-cn.js": 288,
+	"./uk": 289,
+	"./uk.js": 289,
+	"./ur": 290,
+	"./ur.js": 290,
+	"./uz": 291,
+	"./uz-latn": 292,
+	"./uz-latn.js": 292,
+	"./uz.js": 291,
+	"./vi": 293,
+	"./vi.js": 293,
+	"./x-pseudo": 294,
+	"./x-pseudo.js": 294,
+	"./yo": 295,
+	"./yo.js": 295,
+	"./zh-cn": 296,
+	"./zh-cn.js": 296,
+	"./zh-hk": 297,
+	"./zh-hk.js": 297,
+	"./zh-tw": 298,
+	"./zh-tw.js": 298
+};
+function webpackContext(req) {
+	return __webpack_require__(webpackContextResolve(req));
+};
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) // check for number or string
+		throw new Error("Cannot find module '" + req + "'.");
+	return id;
+};
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 412;
+
+/***/ }),
+
+/***/ 450:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_http_service_http_service__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_onesignal__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__common_is_cordova_available__ = __webpack_require__(347);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__environments_environment__ = __webpack_require__(111);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+
+
+
+
+
+
+var MyApp = /** @class */ (function () {
+    function MyApp(storage, platform, statusBar, splashScreen, oneSignal, http) {
+        var _this = this;
+        this.oneSignal = oneSignal;
+        this.rootPage = '';
+        this.projectNumber = null;
+        this.projectName = null;
+        this.onesignalAppId = '';
+        this.firebaseSenderId = '';
+        this.ENV = __WEBPACK_IMPORTED_MODULE_8__environments_environment__["a" /* environment */];
+        this.clearStorage(storage);
+        if (platform.is('android')) {
+            storage.set('Platform', 'android');
+        }
+        else if (platform.is('ios')) {
+            storage.set('Platform', 'ios');
+        }
+        platform.ready().then(function () {
+            statusBar.styleDefault();
+            splashScreen.hide();
+            //IDIOMA -----------------------------------------
+            //storage.set('Idiom','01'); //português
+            //storage.set('Idiom','02'); //espanhol
+            //0  -> localhost
+            //1  -> ead (vcc)
+            //2  -> edicom
+            //3  -> marketing-house
+            //4  -> hkt369
+            //5  -> know-house
+            //6  -> simples-trade
+            //7  -> r2m
+            //8  -> ava
+            //9  -> tmc
+            //10 -> hability
+            //11 -> full-promo
+            _this.projectNumber = 2;
+            switch (_this.projectNumber) {
+                case 0:
+                    _this.onesignalAppId = '946eb156-716e-4000-853f-18f41cc2b193';
+                    _this.firebaseSenderId = '23981024898';
+                    _this.projectName = 'localhost';
+                    storage.set('Idiom', '01'); //português
+                    storage.set('TextColor', 'black'); //português
+                    break;
+                case 1:
+                    _this.onesignalAppId = '946eb156-716e-4000-853f-18f41cc2b193';
+                    _this.firebaseSenderId = '23981024898';
+                    _this.projectName = 'ead';
+                    storage.set('Idiom', '02'); //português
+                    break;
+                case 2:
+                    _this.onesignalAppId = 'c3765e9e-79b4-4dbc-b3ad-a31396017591';
+                    _this.firebaseSenderId = '981777081301';
+                    _this.projectName = 'edicom';
+                    storage.set('Idiom', '02'); //espanhol
+                    break;
+                case 3:
+                    _this.onesignalAppId = '883bb93e-4053-43f0-865c-a5d52ca89a80';
+                    _this.firebaseSenderId = '1010203313691';
+                    _this.projectName = 'marketing-house';
+                    storage.set('Idiom', '01'); //português
+                    break;
+                case 4:
+                    _this.onesignalAppId = 'abf814a3-a2bb-4ae4-9a63-422d37394e64';
+                    _this.firebaseSenderId = '786704296447';
+                    _this.projectName = 'hkt369';
+                    storage.set('Idiom', '02'); //espanhol
+                    break;
+                case 5:
+                    _this.onesignalAppId = 'd29cd1d1-3a5b-4774-b768-a1026101ea0a';
+                    _this.firebaseSenderId = '823038736964';
+                    _this.projectName = 'know-house';
+                    storage.set('Idiom', '01'); //português
+                    break;
+                case 6:
+                    _this.onesignalAppId = 'd6e18971-f2cc-41d8-aed7-28384cb957e0';
+                    _this.firebaseSenderId = '823038736964';
+                    _this.projectName = 'simples-trade';
+                    storage.set('Idiom', '01'); //português
+                    break;
+                case 7:
+                    _this.onesignalAppId = 'a7bbe9ca-2e79-4f10-8f68-365da3e09fd5';
+                    _this.firebaseSenderId = '613045008970';
+                    _this.projectName = 'r2m';
+                    storage.set('Idiom', '01'); //português
+                    break;
+                case 8:
+                    _this.onesignalAppId = '6b8f443d-da09-4ccc-b629-f1e21476c6b2';
+                    _this.firebaseSenderId = '575583616149';
+                    _this.projectName = 'ava';
+                    storage.set('Idiom', '01'); //português
+                    break;
+                case 9:
+                    _this.onesignalAppId = 'c4a92409-ba2f-4001-bd59-af1b24ae58a1';
+                    _this.firebaseSenderId = '732312096020';
+                    _this.projectName = 'tmc';
+                    storage.set('Idiom', '02'); //espanhol
+                    break;
+                case 10:
+                    _this.onesignalAppId = 'fb347a8c-b214-4754-934b-b60e6772fd47';
+                    _this.firebaseSenderId = '926995274326';
+                    _this.projectName = 'hability';
+                    storage.set('Idiom', '02'); //espanhol
+                    break;
+                case 11:
+                    _this.onesignalAppId = '574a5c13-9a8e-46fb-85cf-3698d35cc750';
+                    _this.firebaseSenderId = '1067216235696';
+                    _this.projectName = 'full-promo';
+                    storage.set('Idiom', '01'); //português
+                    break;
+            }
+            // OneSignal Code start:
+            // Enable to debug issues:
+            // The following options are available with increasingly more information: 
+            // 0 = NONE, 1 = FATAL, 2 = ERROR, 3 = WARN, 4 = INFO, 5 = DEBUG, 6 = VERBOSE
+            // window["plugins"].OneSignal.setLogLevel({logLevel: 6, visualLevel: 6});
+            // window["plugins"].OneSignal.setLogLevel({logLevel: 6, visualLevel: 0});
+            if (Object(__WEBPACK_IMPORTED_MODULE_7__common_is_cordova_available__["a" /* isCordovaAvailable */])()) {
+                /*
+                var notificationOpenedCallback = function(jsonData) {
+                  console.log("\n\nENTROU PUSH ----------------------------------\n");
+                  console.log(jsonData);
+                  console.log("\n----------------------------------\n\n");
+                };
+      
+                window["plugins"].OneSignal
+                  .startInit(this.onesignalAppId, this.firebaseSenderId)
+                  .handleNotificationOpened(notificationOpenedCallback)
+                  .endInit();
+                */
+                _this.oneSignal.startInit(_this.onesignalAppId, _this.firebaseSenderId);
+                _this.oneSignal.handleNotificationReceived().subscribe(function (jsonData) {
+                });
+                _this.oneSignal.endInit();
+            }
+            storage.set('Project', _this.projectName).then(function (value) {
+                var url = '';
+                switch (value) {
+                    case 'localhost': {
+                        url = 'http://ead.localhost';
+                        break;
+                    }
+                    case 'marketing-house': {
+                        url = 'https://homolog.marketinghouse.com.br';
+                        break;
+                    }
+                    case 'edicom': {
+                        url = 'https://edicom.becinteligencia.com';
+                        break;
+                    }
+                    case 'ead': {
+                        url = 'https://vcc.becinteligencia.com';
+                        break;
+                    }
+                    case 'hkt369': {
+                        url = 'https://descubre.hkt369.com';
+                        break;
+                    }
+                    case 'know-house': {
+                        url = 'https://knowhouse.marketinghouse.com.br';
+                        break;
+                    }
+                    case 'simples-trade': {
+                        url = 'https://simplestrade.becinteligencia.com';
+                        break;
+                    }
+                    case 'r2m': {
+                        url = 'https://readytomarket.becinteligencia.com';
+                        break;
+                    }
+                    case 'ava': {
+                        url = 'https://ava.insighttech.com.br';
+                        break;
+                    }
+                    case 'tmc': {
+                        url = 'https://tmc.becinteligencia.com';
+                        break;
+                    }
+                    case 'hability': {
+                        url = 'https://hability.becinteligencia.com';
+                        break;
+                    }
+                    case 'full-promo': {
+                        url = 'https://homolog.fullpromo.com.br/';
+                        break;
+                    }
+                }
+                storage.set('GlobalUrl', url).then(function (urlBase) { return __awaiter(_this, void 0, void 0, function () {
+                    var _this = this;
+                    var version;
+                    return __generator(this, function (_a) {
+                        switch (_a.label) {
+                            case 0:
+                                version = 0;
+                                //BUG DA REQUISICAO
+                                //ERROR Error: Uncaught (in promise): SyntaxError: Unexpected end of JSON input
+                                //SyntaxError: Unexpected end of JSON input
+                                //at JSON.parse (<anonymous>)
+                                return [4 /*yield*/, new Promise(function (response, reject) { return __awaiter(_this, void 0, void 0, function () {
+                                        return __generator(this, function (_a) {
+                                            switch (_a.label) {
+                                                case 0: return [4 /*yield*/, http.getAppVersion().then(function (res) {
+                                                        storage.set('AppConfig', res);
+                                                        version = res.version;
+                                                        if (version == 1) {
+                                                            storage.set('LayoutVersion', '01');
+                                                        }
+                                                        else if (version == 2) {
+                                                            storage.set('LayoutVersion', '02');
+                                                        }
+                                                        else {
+                                                            storage.set('LayoutVersion', '02');
+                                                        }
+                                                        response();
+                                                    })];
+                                                case 1: return [2 /*return*/, _a.sent()];
+                                            }
+                                        });
+                                    }); })];
+                            case 1:
+                                //BUG DA REQUISICAO
+                                //ERROR Error: Uncaught (in promise): SyntaxError: Unexpected end of JSON input
+                                //SyntaxError: Unexpected end of JSON input
+                                //at JSON.parse (<anonymous>)
+                                _a.sent();
+                                storage.get('LayoutVersion').then(function (value) {
+                                    _this.rootPage = 'login-page';
+                                    platform.ready().then(function () {
+                                        statusBar.styleDefault();
+                                        splashScreen.hide();
+                                    });
+                                });
+                                return [2 /*return*/];
+                        }
+                    });
+                }); });
+            });
+        });
+    }
+    MyApp.prototype.clearStorage = function (storage) {
+        var vars = [
+            'AvailableDefaultProjects'
+        ];
+        vars.map(function (v) {
+            storage.remove(v);
+        });
+    };
+    MyApp = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\app\app.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */],
+            __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
+            __WEBPACK_IMPORTED_MODULE_6__ionic_native_onesignal__["a" /* OneSignal */],
+            __WEBPACK_IMPORTED_MODULE_5__providers_http_service_http_service__["a" /* HttpServiceProvider */]])
+    ], MyApp);
+    return MyApp;
+}());
+
+//# sourceMappingURL=app.component.js.map
+
+/***/ })
+
+},[351]);
+//# sourceMappingURL=main.js.map

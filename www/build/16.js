@@ -1,1 +1,282 @@
-webpackJsonp([16],{423:function(l,n,e){"use strict";function u(l){return V["ɵvid"](0,[(l()(),V["ɵeld"](0,0,null,null,1,"div",[["class","select-placeholder select-text"]],null,null,null,null,null)),(l()(),V["ɵted"](1,null,["",""]))],null,function(l,n){l(n,1,0,n.component.placeholder)})}function t(l){return V["ɵvid"](0,[(l()(),V["ɵeld"](0,0,null,null,1,"div",[["class","select-text"]],null,null,null,null,null)),(l()(),V["ɵted"](1,null,["",""]))],null,function(l,n){var e=n.component;l(n,1,0,e.selectedText||e._text)})}function i(l){return V["ɵvid"](0,[(l()(),V["ɵand"](16777216,null,null,1,null,u)),V["ɵdid"](1,16384,null,0,fl.NgIf,[V.ViewContainerRef,V.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),V["ɵand"](16777216,null,null,1,null,t)),V["ɵdid"](3,16384,null,0,fl.NgIf,[V.ViewContainerRef,V.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),V["ɵeld"](4,0,null,null,1,"div",[["class","select-icon"]],null,null,null,null,null)),(l()(),V["ɵeld"](5,0,null,null,0,"div",[["class","select-icon-inner"]],null,null,null,null,null)),(l()(),V["ɵeld"](6,0,null,null,1,"button",[["aria-haspopup","true"],["class","item-cover"],["ion-button","item-cover"],["type","button"]],[[8,"id",0],[1,"aria-labelledby",0],[1,"aria-disabled",0]],null,null,yl.b,yl.a)),V["ɵdid"](7,1097728,null,0,xl.a,[[8,"item-cover"],Y.a,V.ElementRef,V.Renderer],null,null)],function(l,n){var e=n.component;l(n,1,0,!e._text);l(n,3,0,e._text)},function(l,n){var e=n.component;l(n,6,0,e.id,e._labelId,e._disabled)})}function a(l){return V["ɵvid"](0,[(l()(),V["ɵeld"](0,0,null,null,0,"img",[["class","testeira-v01"]],[[8,"src",4]],null,null,null,null))],null,function(l,n){l(n,0,0,V["ɵinlineInterpolate"](1,"",n.component.globalUrl+"/storage/uploads/configs/testeira1.png",""))})}function o(l){return V["ɵvid"](0,[(l()(),V["ɵeld"](0,0,null,null,0,"img",[["class","testeira-v02"]],[[8,"src",4]],null,null,null,null))],null,function(l,n){l(n,0,0,V["ɵinlineInterpolate"](1,"",n.component.globalUrl+"/storage/uploads/configs/testeira2.png",""))})}function d(l){return V["ɵvid"](0,[(l()(),V["ɵeld"](0,0,null,null,1,"h2",[],null,null,null,null,null)),(l()(),V["ɵted"](-1,null,["Questionário"]))],null,null)}function r(l){return V["ɵvid"](0,[(l()(),V["ɵeld"](0,0,null,null,1,"h2",[],null,null,null,null,null)),(l()(),V["ɵted"](-1,null,["Cuestionario"]))],null,null)}function s(l){return V["ɵvid"](0,[(l()(),V["ɵeld"](0,0,null,null,4,"ion-input",[["type","text"],["value",""]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,n,e){var u=!0;if("ngModelChange"===n){u=!1!==(l.parent.context.$implicit.respostas=e)&&u}return u},Q.b,Q.a)),V["ɵdid"](1,671744,null,0,D.h,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),V["ɵprd"](2048,null,D.f,null,[D.h]),V["ɵdid"](3,16384,null,0,D.g,[D.f],null,null),V["ɵdid"](4,5423104,null,0,X.a,[Y.a,Z.a,W.a,ll.a,V.ElementRef,V.Renderer,[2,nl.a],[2,el.a],[2,D.f],ul.a],{value:[0,"value"],type:[1,"type"]},null)],function(l,n){l(n,1,0,n.parent.context.$implicit.respostas);l(n,4,0,"","text")},function(l,n){l(n,0,0,V["ɵnov"](n,3).ngClassUntouched,V["ɵnov"](n,3).ngClassTouched,V["ɵnov"](n,3).ngClassPristine,V["ɵnov"](n,3).ngClassDirty,V["ɵnov"](n,3).ngClassValid,V["ɵnov"](n,3).ngClassInvalid,V["ɵnov"](n,3).ngClassPending)})}function c(l){return V["ɵvid"](0,[(l()(),V["ɵeld"](0,0,null,null,4,"ion-input",[["type","number"],["value",""]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,n,e){var u=!0;if("ngModelChange"===n){u=!1!==(l.parent.context.$implicit.respostas=e)&&u}return u},Q.b,Q.a)),V["ɵdid"](1,671744,null,0,D.h,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),V["ɵprd"](2048,null,D.f,null,[D.h]),V["ɵdid"](3,16384,null,0,D.g,[D.f],null,null),V["ɵdid"](4,5423104,null,0,X.a,[Y.a,Z.a,W.a,ll.a,V.ElementRef,V.Renderer,[2,nl.a],[2,el.a],[2,D.f],ul.a],{value:[0,"value"],type:[1,"type"]},null)],function(l,n){l(n,1,0,n.parent.context.$implicit.respostas);l(n,4,0,"","number")},function(l,n){l(n,0,0,V["ɵnov"](n,3).ngClassUntouched,V["ɵnov"](n,3).ngClassTouched,V["ɵnov"](n,3).ngClassPristine,V["ɵnov"](n,3).ngClassDirty,V["ɵnov"](n,3).ngClassValid,V["ɵnov"](n,3).ngClassInvalid,V["ɵnov"](n,3).ngClassPending)})}function f(l){return V["ɵvid"](0,[(l()(),V["ɵeld"](0,0,null,null,17,"ion-item",[["class","item item-block"]],null,null,null,tl.b,tl.a)),V["ɵdid"](1,1097728,null,3,el.a,[W.a,Y.a,V.ElementRef,V.Renderer,[2,il.a]],null,null),V["ɵqud"](335544320,2,{contentLabel:0}),V["ɵqud"](603979776,3,{_buttons:1}),V["ɵqud"](603979776,4,{_icons:1}),V["ɵdid"](5,16384,null,0,al.a,[],null,null),(l()(),V["ɵted"](-1,2,["\n          "])),(l()(),V["ɵeld"](7,0,null,1,2,"ion-label",[],null,null,null,null,null)),V["ɵdid"](8,16384,[[2,4]],0,ol.a,[Y.a,V.ElementRef,V.Renderer,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),V["ɵted"](9,null,["",""])),(l()(),V["ɵted"](-1,2,["\n          "])),(l()(),V["ɵeld"](11,0,null,0,5,"ion-checkbox",[],[[2,"checkbox-disabled",null],[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==V["ɵnov"](l,12)._click(e)&&u}if("ngModelChange"===n){u=!1!==(l.parent.parent.context.$implicit.respostas[l.context.index]=e)&&u}return u},dl.b,dl.a)),V["ɵdid"](12,1228800,null,0,rl.a,[Y.a,W.a,[2,el.a],V.ElementRef,V.Renderer],null,null),V["ɵprd"](1024,null,D.e,function(l){return[l]},[rl.a]),V["ɵdid"](14,671744,null,0,D.h,[[8,null],[8,null],[8,null],[2,D.e]],{model:[0,"model"]},{update:"ngModelChange"}),V["ɵprd"](2048,null,D.f,null,[D.h]),V["ɵdid"](16,16384,null,0,D.g,[D.f],null,null),(l()(),V["ɵted"](-1,2,["\n        "]))],function(l,n){l(n,14,0,n.parent.parent.context.$implicit.respostas[n.context.index])},function(l,n){l(n,9,0,n.context.$implicit.texto);l(n,11,0,V["ɵnov"](n,12)._disabled,V["ɵnov"](n,16).ngClassUntouched,V["ɵnov"](n,16).ngClassTouched,V["ɵnov"](n,16).ngClassPristine,V["ɵnov"](n,16).ngClassDirty,V["ɵnov"](n,16).ngClassValid,V["ɵnov"](n,16).ngClassInvalid,V["ɵnov"](n,16).ngClassPending)})}function p(l){return V["ɵvid"](0,[(l()(),V["ɵeld"](0,0,null,null,5,"ion-list",[],null,null,null,null,null)),V["ɵdid"](1,16384,null,0,sl.a,[Y.a,V.ElementRef,V.Renderer,Z.a,cl.l,ul.a],null,null),(l()(),V["ɵted"](-1,null,["\n        "])),(l()(),V["ɵand"](16777216,null,null,1,null,f)),V["ɵdid"](4,802816,null,0,fl.NgForOf,[V.ViewContainerRef,V.TemplateRef,V.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),V["ɵted"](-1,null,["\n      "]))],function(l,n){l(n,4,0,n.parent.context.$implicit.alternativas)},null)}function g(l){return V["ɵvid"](0,[(l()(),V["ɵeld"](0,0,null,null,13,"ion-item",[["class","item item-block"]],null,null,null,tl.b,tl.a)),V["ɵdid"](1,1097728,null,3,el.a,[W.a,Y.a,V.ElementRef,V.Renderer,[2,il.a]],null,null),V["ɵqud"](335544320,6,{contentLabel:0}),V["ɵqud"](603979776,7,{_buttons:1}),V["ɵqud"](603979776,8,{_icons:1}),V["ɵdid"](5,16384,null,0,al.a,[],null,null),(l()(),V["ɵted"](-1,2,["\n          "])),(l()(),V["ɵeld"](7,0,null,1,2,"ion-label",[],null,null,null,null,null)),V["ɵdid"](8,16384,[[6,4]],0,ol.a,[Y.a,V.ElementRef,V.Renderer,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),V["ɵted"](9,null,["",""])),(l()(),V["ɵted"](-1,2,["\n          "])),(l()(),V["ɵeld"](11,0,null,4,1,"ion-radio",[],[[2,"radio-disabled",null]],[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==V["ɵnov"](l,12)._click(e)&&u}return u},pl.b,pl.a)),V["ɵdid"](12,245760,null,0,gl.a,[W.a,Y.a,V.ElementRef,V.Renderer,[2,el.a],[2,ml.a]],{value:[0,"value"]},null),(l()(),V["ɵted"](-1,2,["\n        "]))],function(l,n){l(n,12,0,V["ɵinlineInterpolate"](1,"",n.context.index,""))},function(l,n){l(n,9,0,n.context.$implicit.texto);l(n,11,0,V["ɵnov"](n,12)._disabled)})}function m(l){return V["ɵvid"](0,[(l()(),V["ɵeld"](0,0,null,null,11,"ion-list",[["radio-group",""],["role","radiogroup"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,n,e){var u=!0;if("ngModelChange"===n){u=!1!==(l.parent.context.$implicit.respostas=e)&&u}return u},null,null)),V["ɵdid"](1,1064960,null,1,ml.a,[V.Renderer,V.ElementRef,V.ChangeDetectorRef],null,null),V["ɵqud"](335544320,5,{_header:0}),V["ɵprd"](1024,null,D.e,function(l){return[l]},[ml.a]),V["ɵdid"](4,671744,null,0,D.h,[[8,null],[8,null],[8,null],[2,D.e]],{model:[0,"model"]},{update:"ngModelChange"}),V["ɵprd"](2048,null,D.f,null,[D.h]),V["ɵdid"](6,16384,null,0,D.g,[D.f],null,null),V["ɵdid"](7,16384,null,0,sl.a,[Y.a,V.ElementRef,V.Renderer,Z.a,cl.l,ul.a],null,null),(l()(),V["ɵted"](-1,null,["\n        "])),(l()(),V["ɵand"](16777216,null,null,1,null,g)),V["ɵdid"](10,802816,null,0,fl.NgForOf,[V.ViewContainerRef,V.TemplateRef,V.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),V["ɵted"](-1,null,["\n      "]))],function(l,n){l(n,4,0,n.parent.context.$implicit.respostas);l(n,10,0,n.parent.context.$implicit.alternativas)},function(l,n){l(n,0,0,V["ɵnov"](n,6).ngClassUntouched,V["ɵnov"](n,6).ngClassTouched,V["ɵnov"](n,6).ngClassPristine,V["ɵnov"](n,6).ngClassDirty,V["ɵnov"](n,6).ngClassValid,V["ɵnov"](n,6).ngClassInvalid,V["ɵnov"](n,6).ngClassPending)})}function v(l){return V["ɵvid"](0,[(l()(),V["ɵeld"](0,0,null,null,3,"div",[["class","camera"]],null,[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==l.component.openCamera(l.parent.parent.context.index)&&u}return u},null,null)),(l()(),V["ɵted"](-1,null,["\n          "])),(l()(),V["ɵeld"](2,0,null,null,0,"img",[["alt","Upload"]],[[8,"src",4]],null,null,null,null)),(l()(),V["ɵted"](-1,null,["\n        "]))],null,function(l,n){l(n,2,0,V["ɵinlineInterpolate"](1,"",n.component.fileUpload,""))})}function h(l){return V["ɵvid"](0,[(l()(),V["ɵeld"](0,0,null,null,1,"span",[],null,null,null,null,null)),(l()(),V["ɵted"](-1,null,["Clique para tirar a foto"]))],null,null)}function C(l){return V["ɵvid"](0,[(l()(),V["ɵeld"](0,0,null,null,1,"span",[],null,null,null,null,null)),(l()(),V["ɵted"](-1,null,["Haz clic para tomar una foto"]))],null,null)}function R(l){return V["ɵvid"](0,[(l()(),V["ɵeld"](0,0,null,null,1,"span",[],null,null,null,null,null)),(l()(),V["ɵted"](-1,null,["Trocar foto"]))],null,null)}function b(l){return V["ɵvid"](0,[(l()(),V["ɵeld"](0,0,null,null,1,"span",[],null,null,null,null,null)),(l()(),V["ɵted"](-1,null,["Cambiar foto"]))],null,null)}function I(l){return V["ɵvid"](0,[(l()(),V["ɵeld"](0,0,null,null,20,"ion-list",[],null,null,null,null,null)),V["ɵdid"](1,16384,null,0,sl.a,[Y.a,V.ElementRef,V.Renderer,Z.a,cl.l,ul.a],null,null),(l()(),V["ɵted"](-1,null,["\n        "])),(l()(),V["ɵand"](16777216,null,null,1,null,v)),V["ɵdid"](4,16384,null,0,fl.NgIf,[V.ViewContainerRef,V.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),V["ɵted"](-1,null,["\n        "])),(l()(),V["ɵeld"](6,0,null,null,13,"div",[["class","camera empty"]],null,[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==l.component.openCamera(l.parent.context.index)&&u}return u},null,null)),(l()(),V["ɵted"](-1,null,["\n          "])),(l()(),V["ɵand"](16777216,null,null,1,null,h)),V["ɵdid"](9,16384,null,0,fl.NgIf,[V.ViewContainerRef,V.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),V["ɵted"](-1,null,["\n          "])),(l()(),V["ɵand"](16777216,null,null,1,null,C)),V["ɵdid"](12,16384,null,0,fl.NgIf,[V.ViewContainerRef,V.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),V["ɵted"](-1,null,["\n          "])),(l()(),V["ɵand"](16777216,null,null,1,null,R)),V["ɵdid"](15,16384,null,0,fl.NgIf,[V.ViewContainerRef,V.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),V["ɵted"](-1,null,["\n          "])),(l()(),V["ɵand"](16777216,null,null,1,null,b)),V["ɵdid"](18,16384,null,0,fl.NgIf,[V.ViewContainerRef,V.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),V["ɵted"](-1,null,["\n        "])),(l()(),V["ɵted"](-1,null,["\n      "]))],function(l,n){var e=n.component;l(n,4,0,e.fileUpload);l(n,9,0,!e.fileUpload&&"01"==e.idiom);l(n,12,0,!e.fileUpload&&"02"==e.idiom);l(n,15,0,e.fileUpload&&"01"==e.idiom);l(n,18,0,e.fileUpload&&"02"==e.idiom)},null)}function y(l){return V["ɵvid"](0,[(l()(),V["ɵeld"](0,0,null,null,20,"div",[["class","singleQuestao"]],null,null,null,null,null)),(l()(),V["ɵted"](-1,null,["\n      "])),(l()(),V["ɵeld"](2,0,null,null,2,"ion-label",[],null,null,null,null,null)),V["ɵdid"](3,16384,null,0,ol.a,[Y.a,V.ElementRef,V.Renderer,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),V["ɵted"](4,null,[""," - ",""])),(l()(),V["ɵted"](-1,null,["\n      "])),(l()(),V["ɵand"](16777216,null,null,1,null,s)),V["ɵdid"](7,16384,null,0,fl.NgIf,[V.ViewContainerRef,V.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),V["ɵted"](-1,null,["\n      "])),(l()(),V["ɵand"](16777216,null,null,1,null,c)),V["ɵdid"](10,16384,null,0,fl.NgIf,[V.ViewContainerRef,V.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),V["ɵted"](-1,null,["\n  \n      "])),(l()(),V["ɵand"](16777216,null,null,1,null,p)),V["ɵdid"](13,16384,null,0,fl.NgIf,[V.ViewContainerRef,V.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),V["ɵted"](-1,null,["\n  \n      "])),(l()(),V["ɵand"](16777216,null,null,1,null,m)),V["ɵdid"](16,16384,null,0,fl.NgIf,[V.ViewContainerRef,V.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),V["ɵted"](-1,null,["\n  \n      "])),(l()(),V["ɵand"](16777216,null,null,1,null,I)),V["ɵdid"](19,16384,null,0,fl.NgIf,[V.ViewContainerRef,V.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),V["ɵted"](-1,null,["\n    "]))],function(l,n){l(n,7,0,"TEXT"==n.context.$implicit.tipo);l(n,10,0,"NUMBER"==n.context.$implicit.tipo);l(n,13,0,"CHECK"==n.context.$implicit.tipo);l(n,16,0,"RADIO"==n.context.$implicit.tipo);l(n,19,0,"UPLOAD"==n.context.$implicit.tipo)},function(l,n){l(n,4,0,n.context.index+1,n.context.$implicit.questao)})}function x(l){return V["ɵvid"](0,[(l()(),V["ɵeld"](0,0,null,null,1,"p",[],null,null,null,null,null)),(l()(),V["ɵted"](-1,null,["SALVAR RESPOSTAS"]))],null,null)}function T(l){return V["ɵvid"](0,[(l()(),V["ɵeld"](0,0,null,null,1,"p",[],null,null,null,null,null)),(l()(),V["ɵted"](-1,null,["GUARDAR RESPUESTA"]))],null,null)}function w(l){return V["ɵvid"](0,[(l()(),V["ɵeld"](0,0,null,null,2,"ion-option",[],null,null,null,null,null)),V["ɵdid"](1,16384,[[9,4]],0,vl.a,[V.ElementRef],{value:[0,"value"]},null),(l()(),V["ɵted"](-1,null,["Câmera"]))],function(l,n){l(n,1,0,!1)},null)}function E(l){return V["ɵvid"](0,[(l()(),V["ɵeld"](0,0,null,null,2,"ion-option",[],null,null,null,null,null)),V["ɵdid"](1,16384,[[9,4]],0,vl.a,[V.ElementRef],{value:[0,"value"]},null),(l()(),V["ɵted"](-1,null,["Cámara"]))],function(l,n){l(n,1,0,!1)},null)}function _(l){return V["ɵvid"](0,[(l()(),V["ɵeld"](0,0,null,null,2,"ion-option",[],null,null,null,null,null)),V["ɵdid"](1,16384,[[9,4]],0,vl.a,[V.ElementRef],{value:[0,"value"]},null),(l()(),V["ɵted"](-1,null,["Galeria"]))],function(l,n){l(n,1,0,!0)},null)}function k(l){return V["ɵvid"](0,[(l()(),V["ɵeld"](0,0,null,null,2,"ion-option",[],null,null,null,null,null)),V["ɵdid"](1,16384,[[9,4]],0,vl.a,[V.ElementRef],{value:[0,"value"]},null),(l()(),V["ɵted"](-1,null,["Galería"]))],function(l,n){l(n,1,0,!0)},null)}function N(l){return V["ɵvid"](0,[V["ɵqud"](402653184,1,{selectFile:0}),(l()(),V["ɵted"](-1,null,["\n"])),(l()(),V["ɵeld"](2,0,null,null,20,"ion-header",[],null,null,null,null,null)),V["ɵdid"](3,278528,null,0,fl.NgClass,[V.IterableDiffers,V.KeyValueDiffers,V.ElementRef,V.Renderer2],{ngClass:[0,"ngClass"]},null),V["ɵdid"](4,16384,null,0,hl.a,[Y.a,V.ElementRef,V.Renderer,[2,Cl.a]],null,null),(l()(),V["ɵted"](-1,null,["\n  "])),(l()(),V["ɵeld"](6,0,null,null,15,"div",[],null,null,null,null,null)),(l()(),V["ɵted"](-1,null,["\n\n    "])),(l()(),V["ɵeld"](8,0,null,null,1,"img",[],[[8,"src",4]],null,null,null,null)),V["ɵdid"](9,278528,null,0,fl.NgClass,[V.IterableDiffers,V.KeyValueDiffers,V.ElementRef,V.Renderer2],{ngClass:[0,"ngClass"]},null),(l()(),V["ɵted"](-1,null,["\n\n    "])),(l()(),V["ɵand"](16777216,null,null,1,null,a)),V["ɵdid"](12,16384,null,0,fl.NgIf,[V.ViewContainerRef,V.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),V["ɵted"](-1,null,["\n\n    "])),(l()(),V["ɵand"](16777216,null,null,1,null,o)),V["ɵdid"](15,16384,null,0,fl.NgIf,[V.ViewContainerRef,V.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),V["ɵted"](-1,null,["\n    "])),(l()(),V["ɵted"](-1,null,["\n    "])),(l()(),V["ɵeld"](18,0,null,null,2,"p",[],null,null,null,null,null)),V["ɵdid"](19,278528,null,0,fl.NgClass,[V.IterableDiffers,V.KeyValueDiffers,V.ElementRef,V.Renderer2],{ngClass:[0,"ngClass"]},null),(l()(),V["ɵted"](20,null,["","  ",""])),(l()(),V["ɵted"](-1,null,["\n  "])),(l()(),V["ɵted"](-1,null,["\n  \n"])),(l()(),V["ɵted"](-1,null,["\n"])),(l()(),V["ɵeld"](24,0,null,null,53,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,Rl.b,Rl.a)),V["ɵdid"](25,278528,null,0,fl.NgClass,[V.IterableDiffers,V.KeyValueDiffers,V.ElementRef,V.Renderer2],{ngClass:[0,"ngClass"]},null),V["ɵdid"](26,4374528,null,0,nl.a,[Y.a,Z.a,ul.a,V.ElementRef,V.Renderer,ll.a,bl.a,V.NgZone,[2,Cl.a],[2,Il.a]],null,null),(l()(),V["ɵted"](-1,1,["\n  "])),(l()(),V["ɵeld"](28,0,null,1,48,"div",[["style","margin-bottom: 110px !important;"]],null,null,null,null,null)),(l()(),V["ɵted"](-1,null,["\n    "])),(l()(),V["ɵand"](16777216,null,null,1,null,d)),V["ɵdid"](31,16384,null,0,fl.NgIf,[V.ViewContainerRef,V.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),V["ɵted"](-1,null,["\n    "])),(l()(),V["ɵand"](16777216,null,null,1,null,r)),V["ɵdid"](34,16384,null,0,fl.NgIf,[V.ViewContainerRef,V.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),V["ɵted"](-1,null,["\n    \n    "])),(l()(),V["ɵand"](16777216,null,null,1,null,y)),V["ɵdid"](37,802816,null,0,fl.NgForOf,[V.ViewContainerRef,V.TemplateRef,V.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),V["ɵted"](-1,null,["\n  \n    "])),(l()(),V["ɵeld"](39,0,null,null,8,"button",[["full",""],["ion-button",""]],[[8,"className",0]],[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==l.component.salva()&&u}return u},yl.b,yl.a)),V["ɵdid"](40,1097728,null,0,xl.a,[[8,""],Y.a,V.ElementRef,V.Renderer],{full:[0,"full"]},null),(l()(),V["ɵted"](-1,0,["\n      "])),(l()(),V["ɵand"](16777216,null,0,1,null,x)),V["ɵdid"](43,16384,null,0,fl.NgIf,[V.ViewContainerRef,V.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),V["ɵted"](-1,0,["\n      "])),(l()(),V["ɵand"](16777216,null,0,1,null,T)),V["ɵdid"](46,16384,null,0,fl.NgIf,[V.ViewContainerRef,V.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),V["ɵted"](-1,0,["\n    "])),(l()(),V["ɵted"](-1,null,["\n    "])),(l()(),V["ɵeld"](49,0,null,null,5,"button",[["color","light"],["full",""],["icon-start",""],["ion-button",""]],[[8,"className",0]],[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==l.component.fechar()&&u}return u},yl.b,yl.a)),V["ɵdid"](50,1097728,null,0,xl.a,[[8,""],Y.a,V.ElementRef,V.Renderer],{color:[0,"color"],full:[1,"full"]},null),(l()(),V["ɵted"](-1,0,["\n      "])),(l()(),V["ɵeld"](52,0,null,0,1,"p",[],null,null,null,null,null)),(l()(),V["ɵted"](-1,null,["CANCELAR"])),(l()(),V["ɵted"](-1,0,["\n    "])),(l()(),V["ɵted"](-1,null,["\n  \n    "])),(l()(),V["ɵeld"](56,0,null,null,19,"ion-select",[["class","hidden"],["interface","action-sheet"]],[[2,"select-disabled",null],[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"ionChange"],[null,"click"],[null,"keyup.space"]],function(l,n,e){var u=!0,t=l.component;if("click"===n){u=!1!==V["ɵnov"](l,57)._click(e)&&u}if("keyup.space"===n){u=!1!==V["ɵnov"](l,57)._keyup()&&u}if("ngModelChange"===n){u=!1!==(t.galleryFile=e)&&u}if("ionChange"===n){u=!1!==t.openGaleryOrCamera()&&u}return u},i,El)),V["ɵdid"](57,1228800,[[1,4],["selectFile",4]],1,Tl.a,[ll.a,W.a,Y.a,V.ElementRef,V.Renderer,[2,el.a],wl.a],{interface:[0,"interface"]},{ionChange:"ionChange"}),V["ɵqud"](603979776,9,{options:1}),V["ɵprd"](1024,null,D.e,function(l){return[l]},[Tl.a]),V["ɵdid"](60,671744,null,0,D.h,[[8,null],[8,null],[8,null],[2,D.e]],{model:[0,"model"]},{update:"ngModelChange"}),V["ɵprd"](2048,null,D.f,null,[D.h]),V["ɵdid"](62,16384,null,0,D.g,[D.f],null,null),(l()(),V["ɵted"](-1,null,["\n      "])),(l()(),V["ɵand"](16777216,null,null,1,null,w)),V["ɵdid"](65,16384,null,0,fl.NgIf,[V.ViewContainerRef,V.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),V["ɵted"](-1,null,["\n      "])),(l()(),V["ɵand"](16777216,null,null,1,null,E)),V["ɵdid"](68,16384,null,0,fl.NgIf,[V.ViewContainerRef,V.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),V["ɵted"](-1,null,["\n      "])),(l()(),V["ɵand"](16777216,null,null,1,null,_)),V["ɵdid"](71,16384,null,0,fl.NgIf,[V.ViewContainerRef,V.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),V["ɵted"](-1,null,["\n      "])),(l()(),V["ɵand"](16777216,null,null,1,null,k)),V["ɵdid"](74,16384,null,0,fl.NgIf,[V.ViewContainerRef,V.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),V["ɵted"](-1,null,["\n    "])),(l()(),V["ɵted"](-1,null,["\n  "])),(l()(),V["ɵted"](-1,1,["\n  \n\n"])),(l()(),V["ɵted"](-1,null,["\n"]))],function(l,n){var e=n.component;l(n,3,0,"01"==e.version?"principalHeader":"02"==e.version?"principalHeaderV02":"principalHeader");l(n,9,0,"01"==e.version?"principal-icon":"02"==e.version?"principal-icon-v02":"principal-icon");l(n,12,0,"01"==e.version);l(n,15,0,"02"==e.version);l(n,19,0,"know-house"==e.project?"font-style know-house-title-color":"ava"==e.project?"font-style black-title-color":"");l(n,25,0,"01"==e.version?"margin-content-l1":"02"==e.version?"margin-content-l2":"margin-content-l1");l(n,31,0,"01"==e.idiom);l(n,34,0,"02"==e.idiom);l(n,37,0,e.formulario);l(n,40,0,"");l(n,43,0,"01"==e.idiom);l(n,46,0,"02"==e.idiom);l(n,50,0,"light","");l(n,57,0,"action-sheet");l(n,60,0,e.galleryFile);l(n,65,0,"01"==e.idiom);l(n,68,0,"02"==e.idiom);l(n,71,0,"01"==e.idiom);l(n,74,0,"02"==e.idiom)},function(l,n){var e=n.component;l(n,8,0,V["ɵinlineInterpolate"](1,"",e.globalUrl+"/storage/uploads/configs/logoHeader.png",""));l(n,20,0,e.titleTesteira,e.complementTitle?"| "+e.complementTitle:"");l(n,24,0,V["ɵnov"](n,26).statusbarPadding,V["ɵnov"](n,26)._hasRefresher);l(n,39,0,V["ɵinlineInterpolate"](1,"button-style button-style-",e.ENV.PROJECT,""));l(n,49,0,V["ɵinlineInterpolate"](1,"button-style button-cancel-style-",e.ENV.PROJECT,""));l(n,56,0,V["ɵnov"](n,57)._disabled,V["ɵnov"](n,62).ngClassUntouched,V["ɵnov"](n,62).ngClassTouched,V["ɵnov"](n,62).ngClassPristine,V["ɵnov"](n,62).ngClassDirty,V["ɵnov"](n,62).ngClassValid,V["ɵnov"](n,62).ngClassInvalid,V["ɵnov"](n,62).ngClassPending)})}Object.defineProperty(n,"__esModule",{value:!0});var V=e(0),D=(e(4),e(58),e(18)),P=e(125),U=e(134),F=e(34),M=e(126),O=this&&this.__awaiter||function(l,n,e,u){return new(e||(e=Promise))(function(t,i){function a(l){try{d(u.next(l))}catch(l){i(l)}}function o(l){try{d(u.throw(l))}catch(l){i(l)}}function d(l){l.done?t(l.value):new e(function(n){n(l.value)}).then(a,o)}d((u=u.apply(l,n||[])).next())})},q=this&&this.__generator||function(l,n){function e(e){return function(a){return function(e){if(u)throw new TypeError("Generator is already executing.");for(;o;)try{if(u=1,t&&(i=t[2&e[0]?"return":e[0]?"throw":"next"])&&!(i=i.call(t,e[1])).done)return i;switch(t=0,i&&(e=[0,i.value]),e[0]){case 0:case 1:i=e;break;case 4:return o.label++,{value:e[1],done:!1};case 5:o.label++,t=e[1],e=[0];continue;case 7:e=o.ops.pop(),o.trys.pop();continue;default:if(i=o.trys,!(i=i.length>0&&i[i.length-1])&&(6===e[0]||2===e[0])){o=0;continue}if(3===e[0]&&(!i||e[1]>i[0]&&e[1]<i[3])){o.label=e[1];break}if(6===e[0]&&o.label<i[1]){o.label=i[1],i=e;break}if(i&&o.label<i[2]){o.label=i[2],o.ops.push(e);break}i[2]&&o.ops.pop(),o.trys.pop();continue}e=n.call(l,o)}catch(l){e=[6,l],t=0}finally{u=i=0}if(5&e[0])throw e[1];return{value:e[0]?e[1]:void 0,done:!0}}([e,a])}}var u,t,i,a,o={label:0,sent:function(){if(1&i[0])throw i[1];return i[1]},trys:[],ops:[]};return a={next:e(0),throw:e(1),return:e(2)},"function"==typeof Symbol&&(a[Symbol.iterator]=function(){return this}),a},A=function(){function l(l,n,e,u,t,i,a,o,d){var r=this;this.navCtrl=l,this.navParams=n,this.formBuilder=e,this.viewCtrl=u,this.toastCtrl=t,this.loadingCtrl=i,this.authService=a,this.storage=o,this.camera=d,this.ENV=M.a,this.formulario=[],this.idiom="",this.globalUrl="",o.get("GlobalUrl").then(function(l){r.globalUrl=l}),this.loadQuiz()}return l.prototype.loadQuiz=function(){var l=this,n={tipo:"",lesson_id:""},e=this.loadingCtrl.create({content:"Espere..."});e.present(),n.lesson_id=this.navParams.get("lesson_id"),this.authService.request("/api/testes/get",n).then(function(n){e.dismiss(),n?l.formulario=n:l.viewCtrl.dismiss()})},l.prototype.ionViewDidLoad=function(){var l=this;this.storage.get("LayoutVersion").then(function(n){l.version=n}),this.storage.get("Idiom").then(function(n){l.idiom=n}),this.storage.get("Project").then(function(n){l.project=n})},l.prototype.salva=function(){var l=this,n="";if(this.formulario.forEach(function(l,e){""==l.respostas&&(n="Favor responder a questão "+(e+1))}),n){this.toastCtrl.create({message:n,duration:3e3,position:"top"}).present()}else{var e=this.loadingCtrl.create({content:"Espere..."});e.present();var u={user_id:"",teste:this.formulario};this.storage.get("clienteId").then(function(n){u.user_id=n,l.authService.request("/api/testes/responder",u).then(function(n){if(e.dismiss(),n){var u=l.toastCtrl.create({message:"Resposta salva com sucesso!",duration:3e3,position:"top"});u.present(),u.onDidDismiss(function(){l.fechar()})}else l.viewCtrl.dismiss()})})}},l.prototype.fechar=function(){this.viewCtrl.dismiss()},l.prototype.openCamera=function(l){return O(this,void 0,void 0,function(){var n,e=this;return q(this,function(u){return this.indexFile=l,n={quality:10,destinationType:this.camera.DestinationType.DATA_URL,encodingType:this.camera.EncodingType.JPEG,mediaType:this.camera.MediaType.PICTURE,sourceType:this.camera.PictureSourceType.CAMERA,allowEdit:!1},this.camera.getPicture(n).then(function(l){e.formulario[e.indexFile].respostas=l,e.fileUpload="data:image/jpeg;base64,"+l}),[2]})})},l.prototype.openSelect=function(l){this.indexFile=l,this.selectFile.open()},l.prototype.openGallery=function(){var l=this;this.camera.getPicture({quality:100,destinationType:this.camera.DestinationType.DATA_URL,encodingType:this.camera.EncodingType.JPEG,mediaType:this.camera.MediaType.PICTURE,sourceType:this.camera.PictureSourceType.PHOTOLIBRARY}).then(function(n){l.formulario[l.indexFile].respostas="data:image/jpeg;base64,"+n,l.fileUpload="data:image/jpeg;base64,"+n})},l.prototype.openGaleryOrCamera=function(){this.galleryFile?this.openGallery():this.openCamera(1)},l}(),$=function(){return function(){}}(),S=e(345),L=e(346),G=e(347),j=e(348),K=e(349),z=e(350),H=e(351),B=e(352),J=e(353),Q=e(449),X=e(133),Y=e(2),Z=e(5),W=e(16),ll=e(9),nl=e(22),el=e(19),ul=e(10),tl=e(354),il=e(47),al=e(83),ol=e(48),dl=e(460),rl=e(142),sl=e(60),cl=e(8),fl=e(13),pl=e(356),gl=e(64),ml=e(51),vl=e(89),hl=e(130),Cl=e(6),Rl=e(439),bl=e(39),Il=e(21),yl=e(45),xl=e(20),Tl=e(149),wl=e(15),El=V["ɵcrt"]({encapsulation:2,styles:[],data:{}}),_l=e(11),kl=e(80),Nl=e(81),Vl=V["ɵcrt"]({encapsulation:2,styles:[],data:{}}),Dl=V["ɵccf"]("quiz",A,function(l){return V["ɵvid"](0,[(l()(),V["ɵeld"](0,0,null,null,1,"quiz",[],null,null,null,N,Vl)),V["ɵdid"](1,49152,null,0,A,[Il.a,_l.a,D.c,Cl.a,kl.a,Nl.a,P.a,F.b,U.a],null,null)],null,null)},{},{},[]),Pl=e(127),Ul=e(40);e.d(n,"QuizModuleNgFactory",function(){return Fl});var Fl=V["ɵcmf"]($,[],function(l){return V["ɵmod"]([V["ɵmpd"](512,V.ComponentFactoryResolver,V["ɵCodegenComponentFactoryResolver"],[[8,[S.a,L.a,G.a,j.a,K.a,z.a,H.a,B.a,J.a,Dl]],[3,V.ComponentFactoryResolver],V.NgModuleRef]),V["ɵmpd"](4608,fl.NgLocalization,fl.NgLocaleLocalization,[V.LOCALE_ID,[2,fl["ɵa"]]]),V["ɵmpd"](4608,D.k,D.k,[]),V["ɵmpd"](4608,D.c,D.c,[]),V["ɵmpd"](512,fl.CommonModule,fl.CommonModule,[]),V["ɵmpd"](512,D.j,D.j,[]),V["ɵmpd"](512,D.d,D.d,[]),V["ɵmpd"](512,D.i,D.i,[]),V["ɵmpd"](512,Pl.a,Pl.a,[]),V["ɵmpd"](512,Pl.b,Pl.b,[]),V["ɵmpd"](512,$,$,[]),V["ɵmpd"](256,Ul.a,A,[])])})},439:function(l,n,e){"use strict";function u(l){return t["ɵvid"](2,[t["ɵqud"](402653184,1,{_fixedContent:0}),t["ɵqud"](402653184,2,{_scrollContent:0}),(l()(),t["ɵeld"](2,0,[[1,0],["fixedContent",1]],null,1,"div",[["class","fixed-content"]],null,null,null,null,null)),t["ɵncd"](null,0),(l()(),t["ɵeld"](4,0,[[2,0],["scrollContent",1]],null,1,"div",[["class","scroll-content"]],null,null,null,null,null)),t["ɵncd"](null,1),t["ɵncd"](null,2)],null,null)}e.d(n,"a",function(){return i}),n.b=u;var t=e(0),i=(e(2),e(5),e(10),e(39),e(6),e(21),t["ɵcrt"]({encapsulation:2,styles:[],data:{}}))},449:function(l,n,e){"use strict";function u(l){return d["ɵvid"](0,[(l()(),d["ɵeld"](0,0,[[1,0],["textInput",1]],null,1,"input",[["class","text-input"],["dir","auto"]],[[8,"type",0],[1,"aria-labelledby",0],[1,"min",0],[1,"max",0],[1,"step",0],[1,"autocomplete",0],[1,"autocorrect",0],[8,"placeholder",0],[8,"disabled",0],[8,"readOnly",0]],[[null,"input"],[null,"blur"],[null,"focus"],[null,"keydown"]],function(l,n,e){var u=!0,t=l.component;if("input"===n){u=!1!==t.onInput(e)&&u}if("blur"===n){u=!1!==t.onBlur(e)&&u}if("focus"===n){u=!1!==t.onFocus(e)&&u}if("keydown"===n){u=!1!==t.onKeydown(e)&&u}return u},null,null)),d["ɵdid"](1,278528,null,0,r.NgClass,[d.IterableDiffers,d.KeyValueDiffers,d.ElementRef,d.Renderer2],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null)],function(l,n){l(n,1,0,"text-input","text-input-"+n.component._mode)},function(l,n){var e=n.component;l(n,0,0,e._type,e._labelId,e.min,e.max,e.step,e.autocomplete,e.autocorrect,e.placeholder,e._disabled,e._readonly)})}function t(l){return d["ɵvid"](0,[(l()(),d["ɵeld"](0,0,[[1,0],["textInput",1]],null,1,"textarea",[["class","text-input"]],[[1,"aria-labelledby",0],[1,"autocomplete",0],[1,"autocorrect",0],[8,"placeholder",0],[8,"disabled",0],[8,"readOnly",0]],[[null,"input"],[null,"blur"],[null,"focus"],[null,"keydown"]],function(l,n,e){var u=!0,t=l.component;if("input"===n){u=!1!==t.onInput(e)&&u}if("blur"===n){u=!1!==t.onBlur(e)&&u}if("focus"===n){u=!1!==t.onFocus(e)&&u}if("keydown"===n){u=!1!==t.onKeydown(e)&&u}return u},null,null)),d["ɵdid"](1,278528,null,0,r.NgClass,[d.IterableDiffers,d.KeyValueDiffers,d.ElementRef,d.Renderer2],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null)],function(l,n){l(n,1,0,"text-input","text-input-"+n.component._mode)},function(l,n){var e=n.component;l(n,0,0,e._labelId,e.autocomplete,e.autocorrect,e.placeholder,e._disabled,e._readonly)})}function i(l){return d["ɵvid"](0,[(l()(),d["ɵeld"](0,0,null,null,1,"button",[["class","text-input-clear-icon"],["clear",""],["ion-button",""],["tabindex","-1"],["type","button"]],null,[[null,"click"],[null,"mousedown"]],function(l,n,e){var u=!0,t=l.component;if("click"===n){u=!1!==t.clearTextInput(e)&&u}if("mousedown"===n){u=!1!==t.clearTextInput(e)&&u}return u},s.b,s.a)),d["ɵdid"](1,1097728,null,0,c.a,[[8,""],f.a,d.ElementRef,d.Renderer],{clear:[0,"clear"]},null)],function(l,n){l(n,1,0,"")},null)}function a(l){return d["ɵvid"](0,[(l()(),d["ɵeld"](0,0,null,null,0,"div",[["class","input-cover"]],null,[[null,"touchstart"],[null,"touchend"],[null,"mousedown"],[null,"mouseup"]],function(l,n,e){var u=!0,t=l.component;if("touchstart"===n){u=!1!==t._pointerStart(e)&&u}if("touchend"===n){u=!1!==t._pointerEnd(e)&&u}if("mousedown"===n){u=!1!==t._pointerStart(e)&&u}if("mouseup"===n){u=!1!==t._pointerEnd(e)&&u}return u},null,null))],null,null)}function o(l){return d["ɵvid"](2,[d["ɵqud"](671088640,1,{_native:0}),(l()(),d["ɵand"](16777216,null,null,1,null,u)),d["ɵdid"](2,16384,null,0,r.NgIf,[d.ViewContainerRef,d.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),d["ɵand"](16777216,null,null,1,null,t)),d["ɵdid"](4,16384,null,0,r.NgIf,[d.ViewContainerRef,d.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),d["ɵand"](16777216,null,null,1,null,i)),d["ɵdid"](6,16384,null,0,r.NgIf,[d.ViewContainerRef,d.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),d["ɵand"](16777216,null,null,1,null,a)),d["ɵdid"](8,16384,null,0,r.NgIf,[d.ViewContainerRef,d.TemplateRef],{ngIf:[0,"ngIf"]},null)],function(l,n){var e=n.component;l(n,2,0,!e._isTextarea);l(n,4,0,e._isTextarea);l(n,6,0,e._clearInput);l(n,8,0,e._useAssist)},null)}e.d(n,"a",function(){return p}),n.b=o;var d=e(0),r=e(13),s=e(45),c=e(20),f=e(2),p=(e(5),e(16),e(10),d["ɵcrt"]({encapsulation:2,styles:[],data:{}}))},460:function(l,n,e){"use strict";function u(l){return t["ɵvid"](0,[(l()(),t["ɵeld"](0,0,null,null,1,"div",[["class","checkbox-icon"]],[[2,"checkbox-checked",null]],null,null,null,null)),(l()(),t["ɵeld"](1,0,null,null,0,"div",[["class","checkbox-inner"]],null,null,null,null,null)),(l()(),t["ɵeld"](2,0,null,null,2,"button",[["class","item-cover"],["ion-button","item-cover"],["role","checkbox"],["type","button"]],[[8,"id",0],[1,"aria-checked",0],[1,"aria-labelledby",0],[1,"aria-disabled",0]],null,null,i.b,i.a)),t["ɵdid"](3,1097728,null,0,a.a,[[8,"item-cover"],o.a,t.ElementRef,t.Renderer],null,null),(l()(),t["ɵted"](-1,0,[" "]))],null,function(l,n){var e=n.component;l(n,0,0,e._value);l(n,2,0,e.id,e._value,e._labelId,e._disabled)})}e.d(n,"a",function(){return d}),n.b=u;var t=e(0),i=e(45),a=e(20),o=e(2),d=(e(16),t["ɵcrt"]({encapsulation:2,styles:[],data:{}}))}});
+webpackJsonp([16],{
+
+/***/ 461:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QuizModule", function() { return QuizModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__quiz__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(46);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var QuizModule = /** @class */ (function () {
+    function QuizModule() {
+    }
+    QuizModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [__WEBPACK_IMPORTED_MODULE_1__quiz__["a" /* QuizComponent */]],
+            imports: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicModule */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_1__quiz__["a" /* QuizComponent */])],
+            exports: [__WEBPACK_IMPORTED_MODULE_1__quiz__["a" /* QuizComponent */]]
+        })
+    ], QuizModule);
+    return QuizModule;
+}());
+
+//# sourceMappingURL=quiz.module.js.map
+
+/***/ }),
+
+/***/ 493:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return QuizComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__ = __webpack_require__(342);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_camera__ = __webpack_require__(345);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_storage__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__environments_environment__ = __webpack_require__(111);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+
+
+
+
+var QuizComponent = /** @class */ (function () {
+    function QuizComponent(navCtrl, navParams, formBuilder, viewCtrl, toastCtrl, loadingCtrl, authService, storage, camera) {
+        var _this = this;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.formBuilder = formBuilder;
+        this.viewCtrl = viewCtrl;
+        this.toastCtrl = toastCtrl;
+        this.loadingCtrl = loadingCtrl;
+        this.authService = authService;
+        this.storage = storage;
+        this.camera = camera;
+        this.ENV = __WEBPACK_IMPORTED_MODULE_6__environments_environment__["a" /* environment */];
+        this.formulario = [];
+        this.idiom = '';
+        this.globalUrl = '';
+        storage.get('GlobalUrl').then(function (value) {
+            _this.globalUrl = value;
+        });
+        this.loadQuiz();
+    }
+    QuizComponent.prototype.loadQuiz = function () {
+        var _this = this;
+        var vars = {
+            tipo: '',
+            lesson_id: ''
+        };
+        var loading = this.loadingCtrl.create({
+            content: 'Espere...'
+        });
+        loading.present();
+        vars.lesson_id = this.navParams.get('lesson_id');
+        this.authService.request('/api/testes/get', vars).then(function (result) {
+            loading.dismiss();
+            if (result) {
+                _this.formulario = result;
+            }
+            else {
+                _this.viewCtrl.dismiss();
+            }
+        });
+    };
+    QuizComponent.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        this.storage.get('LayoutVersion').then(function (value) {
+            _this.version = value;
+        });
+        this.storage.get('Idiom').then(function (value) {
+            _this.idiom = value;
+        });
+        this.storage.get('Project').then(function (value) {
+            _this.project = value;
+        });
+    };
+    QuizComponent.prototype.salva = function () {
+        var _this = this;
+        var mensagem = '';
+        var chave = 0;
+        this.formulario.forEach(function (element, key) {
+            if (element.respostas == '') {
+                chave = key + 1;
+                mensagem = 'Favor responder a questão ' + chave;
+            }
+        });
+        if (mensagem) {
+            var toast = this.toastCtrl.create({
+                message: mensagem,
+                duration: 3000,
+                position: 'top'
+            });
+            toast.present();
+        }
+        else {
+            var loading_1 = this.loadingCtrl.create({
+                content: 'Espere...'
+            });
+            loading_1.present();
+            var vars_1 = {
+                user_id: '',
+                teste: this.formulario
+            };
+            this.storage.get('clienteId').then(function (valor) {
+                vars_1.user_id = valor;
+                _this.authService.request('/api/testes/responder', vars_1).then(function (result) {
+                    loading_1.dismiss();
+                    if (result) {
+                        var toast = _this.toastCtrl.create({
+                            message: 'Resposta salva com sucesso!',
+                            duration: 3000,
+                            position: 'top'
+                        });
+                        toast.present();
+                        toast.onDidDismiss(function () {
+                            _this.fechar();
+                        });
+                    }
+                    else {
+                        _this.viewCtrl.dismiss();
+                    }
+                });
+            });
+        }
+    };
+    QuizComponent.prototype.fechar = function () {
+        this.viewCtrl.dismiss();
+    };
+    /****GALERIA E CAMERA */
+    QuizComponent.prototype.openCamera = function (index) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var options;
+            return __generator(this, function (_a) {
+                this.indexFile = index;
+                options = {
+                    quality: 10,
+                    destinationType: this.camera.DestinationType.DATA_URL,
+                    encodingType: this.camera.EncodingType.JPEG,
+                    mediaType: this.camera.MediaType.PICTURE,
+                    sourceType: this.camera.PictureSourceType.CAMERA,
+                    allowEdit: false
+                };
+                this.camera.getPicture(options).then(function (imageData) {
+                    _this.formulario[_this.indexFile].respostas = imageData;
+                    _this.fileUpload = "data:image/jpeg;base64," + imageData;
+                });
+                return [2 /*return*/];
+            });
+        });
+    };
+    QuizComponent.prototype.openSelect = function (index) {
+        this.indexFile = index;
+        this.selectFile.open();
+    };
+    QuizComponent.prototype.openGallery = function () {
+        var _this = this;
+        var options = {
+            quality: 100,
+            destinationType: this.camera.DestinationType.DATA_URL,
+            encodingType: this.camera.EncodingType.JPEG,
+            mediaType: this.camera.MediaType.PICTURE,
+            sourceType: this.camera.PictureSourceType.PHOTOLIBRARY
+        };
+        this.camera.getPicture(options).then(function (imageData) {
+            _this.formulario[_this.indexFile].respostas = "data:image/jpeg;base64," + imageData;
+            _this.fileUpload = "data:image/jpeg;base64," + imageData;
+        });
+    };
+    QuizComponent.prototype.openGaleryOrCamera = function () {
+        if (this.galleryFile) {
+            this.openGallery();
+        }
+        else {
+            this.openCamera(1);
+        }
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('selectFile'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* Select */])
+    ], QuizComponent.prototype, "selectFile", void 0);
+    QuizComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'quiz',template:/*ion-inline-start:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\components\quiz\quiz.html"*/'\n\n<ion-header [ngClass]="version == \'01\' ? \'principalHeader\' : version == \'02\' ? \'principalHeaderV02\' : \'principalHeader\'">\n\n  <div>\n\n\n\n    <img [ngClass]="version == \'01\' ? \'principal-icon\' : version == \'02\' ? \'principal-icon-v02\' : \'principal-icon\'"\n\n     src="{{ globalUrl + \'/storage/uploads/configs/logoHeader.png\' }}" />\n\n\n\n    <img *ngIf="version == \'01\'" class="testeira-v01" \n\n    src="{{ globalUrl + \'/storage/uploads/configs/testeira1.png\' }}" >\n\n\n\n    <img *ngIf="version == \'02\'" class="testeira-v02" \n\n    src="{{ globalUrl + \'/storage/uploads/configs/testeira2.png\' }}" >\n\n    <!-- <img class=logo-header src="./assets/imgs/movera-logo.png" /> -->\n\n    <p [ngClass]="project == \'know-house\' ?  \'font-style know-house-title-color\' : project == \'ava\' ?  \'font-style black-title-color\' : \'\'">{{titleTesteira}}  {{complementTitle? \'| \' + complementTitle : \'\'}}</p>\n\n  </div>\n\n  \n\n</ion-header>\n\n<ion-content padding [ngClass]="version == \'01\' ? \'margin-content-l1\' : version == \'02\' ? \'margin-content-l2\' : \'margin-content-l1\'">\n\n  <div style="margin-bottom: 110px !important;">\n\n    <h2 *ngIf="idiom == \'01\'">Questionário</h2>\n\n    <h2 *ngIf="idiom == \'02\'">Cuestionario</h2>\n\n    \n\n    <div class=singleQuestao *ngFor="let questao of formulario; let i = index">\n\n      <ion-label >{{i+1}} - {{questao[\'questao\']}}</ion-label>\n\n      <ion-input  *ngIf="questao[\'tipo\'] == \'TEXT\'"  [(ngModel)]="questao[\'respostas\']" type="text" value="" ></ion-input>\n\n      <ion-input  *ngIf="questao[\'tipo\'] == \'NUMBER\'"[(ngModel)]="questao[\'respostas\']" type="number" value="" ></ion-input>\n\n  \n\n      <ion-list *ngIf="questao[\'tipo\'] == \'CHECK\'">\n\n        <ion-item *ngFor="let opcao of questao[\'alternativas\'];  let o = index">\n\n          <ion-label >{{opcao.texto}}</ion-label>\n\n          <ion-checkbox [(ngModel)]="questao[\'respostas\'][o]" ></ion-checkbox >\n\n        </ion-item>\n\n      </ion-list>\n\n  \n\n      <ion-list  *ngIf="questao[\'tipo\'] == \'RADIO\'" radio-group [(ngModel)]="questao[\'respostas\']">\n\n        <ion-item *ngFor="let opcao of questao[\'alternativas\'];  let e = index">\n\n          <ion-label>{{opcao.texto}}</ion-label>\n\n          <ion-radio  value="{{e}}"></ion-radio>\n\n        </ion-item>\n\n      </ion-list>\n\n  \n\n      <ion-list *ngIf="questao[\'tipo\'] == \'UPLOAD\'">\n\n        <div *ngIf="fileUpload" class="camera" (click)="openCamera(i)">\n\n          <img src={{fileUpload}} alt="Upload">\n\n        </div>\n\n        <div  class="camera empty" (click)="openCamera(i)">\n\n          <span *ngIf="!fileUpload && idiom == \'01\'">Clique para tirar a foto</span>\n\n          <span *ngIf="!fileUpload && idiom == \'02\'">Haz clic para tomar una foto</span>\n\n          <span *ngIf="fileUpload && idiom == \'01\'">Trocar foto</span>\n\n          <span *ngIf="fileUpload && idiom == \'02\'">Cambiar foto</span>\n\n        </div>\n\n      </ion-list>\n\n    </div>\n\n  \n\n    <button ion-button full class="button-style button-style-{{ENV.PROJECT}}" (click)="salva()">\n\n      <p *ngIf="idiom == \'01\'">SALVAR RESPOSTAS</p>\n\n      <p *ngIf="idiom == \'02\'">GUARDAR RESPUESTA</p>\n\n    </button>\n\n    <button ion-button full icon-start color="light" class="button-style button-cancel-style-{{ENV.PROJECT}}" (click)="fechar()">\n\n      <p>CANCELAR</p>\n\n    </button>\n\n  \n\n    <ion-select class="hidden" #selectFile interface="action-sheet" [(ngModel)]="this.galleryFile"\n\n      (ionChange)="openGaleryOrCamera()">\n\n      <ion-option *ngIf="idiom == \'01\'" [value]="false">Câmera</ion-option>\n\n      <ion-option *ngIf="idiom == \'02\'" [value]="false">Cámara</ion-option>\n\n      <ion-option *ngIf="idiom == \'01\'" [value]="true">Galeria</ion-option>\n\n      <ion-option *ngIf="idiom == \'02\'" [value]="true">Galería</ion-option>\n\n    </ion-select>\n\n  </div>\n\n  \n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\components\quiz\quiz.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* ViewController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* ToastController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__["a" /* AuthProvider */],
+            __WEBPACK_IMPORTED_MODULE_5__ionic_storage__["b" /* Storage */],
+            __WEBPACK_IMPORTED_MODULE_4__ionic_native_camera__["a" /* Camera */]])
+    ], QuizComponent);
+    return QuizComponent;
+}());
+
+//# sourceMappingURL=quiz.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=16.js.map

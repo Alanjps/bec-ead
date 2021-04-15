@@ -1,1 +1,741 @@
-webpackJsonp([5],{428:function(n,l,e){"use strict";function t(n){return E["ɵvid"](0,[(n()(),E["ɵeld"](0,0,null,null,0,"img",[["class","testeira-v01"]],[[8,"src",4]],null,null,null,null))],null,function(n,l){n(l,0,0,E["ɵinlineInterpolate"](1,"",l.component.globalUrl+"/storage/uploads/configs/testeira1.png",""))})}function u(n){return E["ɵvid"](0,[(n()(),E["ɵeld"](0,0,null,null,0,"img",[["class","testeira-v02"]],[[8,"src",4]],null,null,null,null))],null,function(n,l){n(l,0,0,E["ɵinlineInterpolate"](1,"",l.component.globalUrl+"/storage/uploads/configs/testeira2.png",""))})}function i(n){return E["ɵvid"](0,[(n()(),E["ɵeld"](0,0,null,null,2,"ion-label",[["floating",""]],[[8,"className",0]],null,null,null,null)),E["ɵdid"](1,16384,[[1,4]],0,q.a,[X.a,E.ElementRef,E.Renderer,[8,""],[8,null],[8,null],[8,null]],null,null),(n()(),E["ɵted"](-1,null,["Nome *"]))],null,function(n,l){n(l,0,0,E["ɵinlineInterpolate"](1,"",l.component.ENV.TEXT_COLOR_V1,""))})}function a(n){return E["ɵvid"](0,[(n()(),E["ɵeld"](0,0,null,null,2,"ion-label",[["floating",""]],[[8,"className",0]],null,null,null,null)),E["ɵdid"](1,16384,[[1,4]],0,q.a,[X.a,E.ElementRef,E.Renderer,[8,""],[8,null],[8,null],[8,null]],null,null),(n()(),E["ɵted"](-1,null,["Nombre *"]))],null,function(n,l){n(l,0,0,E["ɵinlineInterpolate"](1,"",l.component.ENV.TEXT_COLOR_V1,""))})}function r(n){return E["ɵvid"](0,[(n()(),E["ɵeld"](0,0,null,null,2,"ion-label",[["floating",""]],[[8,"className",0]],null,null,null,null)),E["ɵdid"](1,16384,[[7,4]],0,q.a,[X.a,E.ElementRef,E.Renderer,[8,""],[8,null],[8,null],[8,null]],null,null),(n()(),E["ɵted"](-1,null,["Nome da Empresa *"]))],null,function(n,l){n(l,0,0,E["ɵinlineInterpolate"](1,"",l.component.ENV.TEXT_COLOR_V1,""))})}function o(n){return E["ɵvid"](0,[(n()(),E["ɵeld"](0,0,null,null,2,"ion-label",[["floating",""]],[[8,"className",0]],null,null,null,null)),E["ɵdid"](1,16384,[[7,4]],0,q.a,[X.a,E.ElementRef,E.Renderer,[8,""],[8,null],[8,null],[8,null]],null,null),(n()(),E["ɵted"](-1,null,["Nombre de la empresa *"]))],null,function(n,l){n(l,0,0,E["ɵinlineInterpolate"](1,"",l.component.ENV.TEXT_COLOR_V1,""))})}function d(n){return E["ɵvid"](0,[(n()(),E["ɵeld"](0,0,null,null,18,"ion-item",[["class","fieldElement item item-block"]],null,null,null,j.b,j.a)),E["ɵdid"](1,1097728,null,3,B.a,[U.a,X.a,E.ElementRef,E.Renderer,[2,K.a]],null,null),E["ɵqud"](603979776,7,{contentLabel:0}),E["ɵqud"](603979776,8,{_buttons:1}),E["ɵqud"](603979776,9,{_icons:1}),E["ɵdid"](5,16384,null,0,H.a,[],null,null),(n()(),E["ɵted"](-1,2,["\n      "])),(n()(),E["ɵand"](16777216,null,1,1,null,r)),E["ɵdid"](8,16384,null,0,J.NgIf,[E.ViewContainerRef,E.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),E["ɵted"](-1,2,["\n      "])),(n()(),E["ɵand"](16777216,null,1,1,null,o)),E["ɵdid"](11,16384,null,0,J.NgIf,[E.ViewContainerRef,E.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),E["ɵted"](-1,2,["\n      "])),(n()(),E["ɵeld"](13,0,null,3,4,"ion-input",[["type","text"]],[[8,"className",0],[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(n,l,e){var t=!0;if("ngModelChange"===l){t=!1!==(n.component.credential.empresa=e)&&t}return t},z.b,z.a)),E["ɵdid"](14,671744,null,0,W.h,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),E["ɵprd"](2048,null,W.f,null,[W.h]),E["ɵdid"](16,16384,null,0,W.g,[W.f],null,null),E["ɵdid"](17,5423104,null,0,G.a,[X.a,Z.a,U.a,Q.a,E.ElementRef,E.Renderer,[2,Y.a],[2,B.a],[2,W.f],nn.a],{type:[0,"type"]},null),(n()(),E["ɵted"](-1,2,["\n    "]))],function(n,l){var e=l.component;n(l,8,0,"01"==e.idiom);n(l,11,0,"02"==e.idiom);n(l,14,0,e.credential.empresa);n(l,17,0,"text")},function(n,l){n(l,13,0,E["ɵinlineInterpolate"](1,"",l.component.ENV.TEXT_COLOR_V1,""),E["ɵnov"](l,16).ngClassUntouched,E["ɵnov"](l,16).ngClassTouched,E["ɵnov"](l,16).ngClassPristine,E["ɵnov"](l,16).ngClassDirty,E["ɵnov"](l,16).ngClassValid,E["ɵnov"](l,16).ngClassInvalid,E["ɵnov"](l,16).ngClassPending)})}function s(n){return E["ɵvid"](0,[(n()(),E["ɵeld"](0,0,null,null,2,"ion-label",[["floating",""]],[[8,"className",0]],null,null,null,null)),E["ɵdid"](1,16384,[[13,4]],0,q.a,[X.a,E.ElementRef,E.Renderer,[8,""],[8,null],[8,null],[8,null]],null,null),(n()(),E["ɵted"](-1,null,["Data de Nascimento *"]))],null,function(n,l){n(l,0,0,E["ɵinlineInterpolate"](1,"",l.component.ENV.TEXT_COLOR_V1,""))})}function c(n){return E["ɵvid"](0,[(n()(),E["ɵeld"](0,0,null,null,2,"ion-label",[["floating",""]],[[8,"className",0]],null,null,null,null)),E["ɵdid"](1,16384,[[13,4]],0,q.a,[X.a,E.ElementRef,E.Renderer,[8,""],[8,null],[8,null],[8,null]],null,null),(n()(),E["ɵted"](-1,null,["Fecha de Nacimiento *"]))],null,function(n,l){n(l,0,0,E["ɵinlineInterpolate"](1,"",l.component.ENV.TEXT_COLOR_V1,""))})}function p(n){return E["ɵvid"](0,[(n()(),E["ɵeld"](0,0,null,null,22,"ion-item",[["class","fieldElement item item-block"]],null,null,null,j.b,j.a)),E["ɵdid"](1,1097728,null,3,B.a,[U.a,X.a,E.ElementRef,E.Renderer,[2,K.a]],null,null),E["ɵqud"](603979776,13,{contentLabel:0}),E["ɵqud"](603979776,14,{_buttons:1}),E["ɵqud"](603979776,15,{_icons:1}),E["ɵdid"](5,16384,null,0,H.a,[],null,null),(n()(),E["ɵted"](-1,2,["\n      "])),(n()(),E["ɵand"](16777216,null,1,1,null,s)),E["ɵdid"](8,16384,null,0,J.NgIf,[E.ViewContainerRef,E.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),E["ɵted"](-1,2,["\n      "])),(n()(),E["ɵand"](16777216,null,1,1,null,c)),E["ɵdid"](11,16384,null,0,J.NgIf,[E.ViewContainerRef,E.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),E["ɵted"](-1,2,["\n      "])),(n()(),E["ɵeld"](13,0,null,3,8,"ion-input",[["type","text"]],[[8,"className",0],[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"keyup"],[null,"ionBlur"],[null,"ionFocus"]],function(n,l,e){var t=!0,u=n.component;if("keyup"===l){t=!1!==E["ɵnov"](n,14).inputKeyup(e)&&t}if("ionBlur"===l){t=!1!==E["ɵnov"](n,14).inputOnblur(e)&&t}if("ionFocus"===l){t=!1!==E["ɵnov"](n,14).inputFocus(e)&&t}if("ngModelChange"===l){t=!1!==(u.credential.nascimento=e)&&t}return t},z.b,z.a)),E["ɵdid"](14,81920,null,0,ln.a,[E.Renderer,E.ElementRef],{brmasker:[0,"brmasker"]},null),E["ɵpod"](15,{mask:0,len:1,type:2}),E["ɵprd"](1024,null,W.e,function(n){return[n]},[ln.a]),E["ɵdid"](17,671744,null,0,W.h,[[8,null],[8,null],[8,null],[2,W.e]],{model:[0,"model"]},{update:"ngModelChange"}),E["ɵprd"](2048,null,W.f,null,[W.h]),E["ɵdid"](19,16384,null,0,W.g,[W.f],null,null),E["ɵdid"](20,5423104,null,0,G.a,[X.a,Z.a,U.a,Q.a,E.ElementRef,E.Renderer,[2,Y.a],[2,B.a],[2,W.f],nn.a],{type:[0,"type"]},{ionFocus:"ionFocus",ionBlur:"ionBlur"}),E["ɵdid"](21,81920,null,0,en.a,[],null,null),(n()(),E["ɵted"](-1,2,["\n    "]))],function(n,l){var e=l.component;n(l,8,0,"01"==e.idiom);n(l,11,0,"02"==e.idiom);n(l,14,0,n(l,15,0,"00/00/0000",10,"num"));n(l,17,0,e.credential.nascimento);n(l,20,0,"text"),n(l,21,0)},function(n,l){n(l,13,0,E["ɵinlineInterpolate"](1,"",l.component.ENV.TEXT_COLOR_V1,""),E["ɵnov"](l,19).ngClassUntouched,E["ɵnov"](l,19).ngClassTouched,E["ɵnov"](l,19).ngClassPristine,E["ɵnov"](l,19).ngClassDirty,E["ɵnov"](l,19).ngClassValid,E["ɵnov"](l,19).ngClassInvalid,E["ɵnov"](l,19).ngClassPending)})}function m(n){return E["ɵvid"](0,[(n()(),E["ɵeld"](0,0,null,null,2,"ion-label",[["floating",""]],[[8,"className",0]],null,null,null,null)),E["ɵdid"](1,16384,[[16,4]],0,q.a,[X.a,E.ElementRef,E.Renderer,[8,""],[8,null],[8,null],[8,null]],null,null),(n()(),E["ɵted"](-1,null,["E-mail *"]))],null,function(n,l){n(l,0,0,E["ɵinlineInterpolate"](1,"",l.component.ENV.TEXT_COLOR_V1,""))})}function g(n){return E["ɵvid"](0,[(n()(),E["ɵeld"](0,0,null,null,2,"ion-label",[["floating",""]],[[8,"className",0]],null,null,null,null)),E["ɵdid"](1,16384,[[16,4]],0,q.a,[X.a,E.ElementRef,E.Renderer,[8,""],[8,null],[8,null],[8,null]],null,null),(n()(),E["ɵted"](-1,null,["Correo *"]))],null,function(n,l){n(l,0,0,E["ɵinlineInterpolate"](1,"",l.component.ENV.TEXT_COLOR_V1,""))})}function f(n){return E["ɵvid"](0,[(n()(),E["ɵeld"](0,0,null,null,2,"ion-label",[["floating",""]],[[8,"className",0]],null,null,null,null)),E["ɵdid"](1,16384,[[19,4]],0,q.a,[X.a,E.ElementRef,E.Renderer,[8,""],[8,null],[8,null],[8,null]],null,null),(n()(),E["ɵted"](-1,null,["Senha *"]))],null,function(n,l){n(l,0,0,E["ɵinlineInterpolate"](1,"",l.component.ENV.TEXT_COLOR_V1,""))})}function h(n){return E["ɵvid"](0,[(n()(),E["ɵeld"](0,0,null,null,2,"ion-label",[["floating",""]],[[8,"className",0]],null,null,null,null)),E["ɵdid"](1,16384,[[19,4]],0,q.a,[X.a,E.ElementRef,E.Renderer,[8,""],[8,null],[8,null],[8,null]],null,null),(n()(),E["ɵted"](-1,null,["Contraseña *"]))],null,function(n,l){n(l,0,0,E["ɵinlineInterpolate"](1,"",l.component.ENV.TEXT_COLOR_V1,""))})}function v(n){return E["ɵvid"](0,[(n()(),E["ɵeld"](0,0,null,null,5,"ion-label",[],[[8,"className",0]],null,null,null,null)),E["ɵdid"](1,16384,[[22,4]],0,q.a,[X.a,E.ElementRef,E.Renderer,[8,null],[8,null],[8,null],[8,null]],null,null),(n()(),E["ɵted"](-1,null,["Aceito os "])),(n()(),E["ɵeld"](3,0,null,null,1,"a",[["href","https://becinteligencia.com/politica-de-privacidade"],["target","_blank"]],null,null,null,null,null)),(n()(),E["ɵted"](-1,null,["termos e políticas de privacidade"])),(n()(),E["ɵted"](-1,null,["."]))],null,function(n,l){n(l,0,0,E["ɵinlineInterpolate"](1,"",l.component.ENV.TEXT_COLOR_V1,""))})}function C(n){return E["ɵvid"](0,[(n()(),E["ɵeld"](0,0,null,null,5,"ion-label",[],[[8,"className",0]],null,null,null,null)),E["ɵdid"](1,16384,[[22,4]],0,q.a,[X.a,E.ElementRef,E.Renderer,[8,null],[8,null],[8,null],[8,null]],null,null),(n()(),E["ɵted"](-1,null,["Acepto los "])),(n()(),E["ɵeld"](3,0,null,null,1,"a",[["href","https://becinteligencia.com/politica-de-privacidade"],["target","_blank"]],null,null,null,null,null)),(n()(),E["ɵted"](-1,null,["términos y políticas de privacidad"])),(n()(),E["ɵted"](-1,null,["."]))],null,function(n,l){n(l,0,0,E["ɵinlineInterpolate"](1,"",l.component.ENV.TEXT_COLOR_V1,""))})}function b(n){return E["ɵvid"](0,[(n()(),E["ɵeld"](0,0,null,null,1,"p",[],[[8,"className",0]],null,null,null,null)),(n()(),E["ɵted"](-1,null,["* Campos obrigatórios"]))],null,function(n,l){n(l,0,0,E["ɵinlineInterpolate"](1,"required-info ",l.component.ENV.TEXT_COLOR_V1,""))})}function R(n){return E["ɵvid"](0,[(n()(),E["ɵeld"](0,0,null,null,1,"p",[],[[8,"className",0]],null,null,null,null)),(n()(),E["ɵted"](-1,null,["* Campos obligatórios"]))],null,function(n,l){n(l,0,0,E["ɵinlineInterpolate"](1,"required-info ",l.component.ENV.TEXT_COLOR_V1,""))})}function y(n){return E["ɵvid"](0,[(n()(),E["ɵeld"](0,0,null,null,1,"p",[],null,null,null,null,null)),(n()(),E["ɵted"](-1,null,["Cadastrar"]))],null,null)}function k(n){return E["ɵvid"](0,[(n()(),E["ɵeld"](0,0,null,null,1,"p",[],null,null,null,null,null)),(n()(),E["ɵted"](-1,null,["Registrar"]))],null,null)}function I(n){return E["ɵvid"](0,[(n()(),E["ɵted"](-1,null,["\n"])),(n()(),E["ɵeld"](1,0,null,null,12,"ion-header",[],null,null,null,null,null)),E["ɵdid"](2,278528,null,0,J.NgClass,[E.IterableDiffers,E.KeyValueDiffers,E.ElementRef,E.Renderer2],{ngClass:[0,"ngClass"]},null),E["ɵdid"](3,16384,null,0,tn.a,[X.a,E.ElementRef,E.Renderer,[2,un.a]],null,null),(n()(),E["ɵted"](-1,null,["\n  "])),(n()(),E["ɵeld"](5,0,null,null,1,"img",[],[[8,"src",4]],null,null,null,null)),E["ɵdid"](6,278528,null,0,J.NgClass,[E.IterableDiffers,E.KeyValueDiffers,E.ElementRef,E.Renderer2],{ngClass:[0,"ngClass"]},null),(n()(),E["ɵted"](-1,null,["\n  \n  "])),(n()(),E["ɵand"](16777216,null,null,1,null,t)),E["ɵdid"](9,16384,null,0,J.NgIf,[E.ViewContainerRef,E.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),E["ɵted"](-1,null,["\n\n  "])),(n()(),E["ɵand"](16777216,null,null,1,null,u)),E["ɵdid"](12,16384,null,0,J.NgIf,[E.ViewContainerRef,E.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),E["ɵted"](-1,null,["\n  \n"])),(n()(),E["ɵted"](-1,null,["\n"])),(n()(),E["ɵeld"](15,0,null,null,177,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,an.b,an.a)),E["ɵdid"](16,278528,null,0,J.NgClass,[E.IterableDiffers,E.KeyValueDiffers,E.ElementRef,E.Renderer2],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),E["ɵdid"](17,4374528,null,0,Y.a,[X.a,Z.a,nn.a,E.ElementRef,E.Renderer,Q.a,rn.a,E.NgZone,[2,un.a],[2,on.a]],null,null),(n()(),E["ɵted"](-1,1,["\n\n  "])),(n()(),E["ɵeld"](19,0,null,1,133,"ion-list",[["style","margin-top: 20%;"]],null,null,null,null,null)),E["ɵdid"](20,16384,null,0,dn.a,[X.a,E.ElementRef,E.Renderer,Z.a,sn.l,nn.a],null,null),(n()(),E["ɵted"](-1,null,["\n    "])),(n()(),E["ɵeld"](22,0,null,null,18,"ion-item",[["class","fieldElement item item-block"]],null,null,null,j.b,j.a)),E["ɵdid"](23,1097728,null,3,B.a,[U.a,X.a,E.ElementRef,E.Renderer,[2,K.a]],null,null),E["ɵqud"](603979776,1,{contentLabel:0}),E["ɵqud"](603979776,2,{_buttons:1}),E["ɵqud"](603979776,3,{_icons:1}),E["ɵdid"](27,16384,null,0,H.a,[],null,null),(n()(),E["ɵted"](-1,2,["\n      "])),(n()(),E["ɵand"](16777216,null,1,1,null,i)),E["ɵdid"](30,16384,null,0,J.NgIf,[E.ViewContainerRef,E.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),E["ɵted"](-1,2,["\n      "])),(n()(),E["ɵand"](16777216,null,1,1,null,a)),E["ɵdid"](33,16384,null,0,J.NgIf,[E.ViewContainerRef,E.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),E["ɵted"](-1,2,["\n      "])),(n()(),E["ɵeld"](35,0,null,3,4,"ion-input",[["type","text"]],[[8,"className",0],[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(n,l,e){var t=!0;if("ngModelChange"===l){t=!1!==(n.component.credential.nome=e)&&t}return t},z.b,z.a)),E["ɵdid"](36,671744,null,0,W.h,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),E["ɵprd"](2048,null,W.f,null,[W.h]),E["ɵdid"](38,16384,null,0,W.g,[W.f],null,null),E["ɵdid"](39,5423104,null,0,G.a,[X.a,Z.a,U.a,Q.a,E.ElementRef,E.Renderer,[2,Y.a],[2,B.a],[2,W.f],nn.a],{type:[0,"type"]},null),(n()(),E["ɵted"](-1,2,["\n    "])),(n()(),E["ɵted"](-1,null,["\n\n    "])),(n()(),E["ɵeld"](42,0,null,null,20,"ion-item",[["class","fieldElement item item-block"]],null,null,null,j.b,j.a)),E["ɵdid"](43,1097728,null,3,B.a,[U.a,X.a,E.ElementRef,E.Renderer,[2,K.a]],null,null),E["ɵqud"](335544320,4,{contentLabel:0}),E["ɵqud"](603979776,5,{_buttons:1}),E["ɵqud"](603979776,6,{_icons:1}),E["ɵdid"](47,16384,null,0,H.a,[],null,null),(n()(),E["ɵted"](-1,2,["\n      "])),(n()(),E["ɵeld"](49,0,null,1,2,"ion-label",[["floating",""]],[[8,"className",0]],null,null,null,null)),E["ɵdid"](50,16384,[[4,4]],0,q.a,[X.a,E.ElementRef,E.Renderer,[8,""],[8,null],[8,null],[8,null]],null,null),(n()(),E["ɵted"](-1,null,["CPF *"])),(n()(),E["ɵted"](-1,2,["\n      "])),(n()(),E["ɵeld"](53,0,null,3,8,"ion-input",[["type","text"]],[[8,"className",0],[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"keyup"],[null,"ionBlur"],[null,"ionFocus"]],function(n,l,e){var t=!0,u=n.component;if("keyup"===l){t=!1!==E["ɵnov"](n,54).inputKeyup(e)&&t}if("ionBlur"===l){t=!1!==E["ɵnov"](n,54).inputOnblur(e)&&t}if("ionFocus"===l){t=!1!==E["ɵnov"](n,54).inputFocus(e)&&t}if("ngModelChange"===l){t=!1!==(u.credential.documento=e)&&t}return t},z.b,z.a)),E["ɵdid"](54,81920,null,0,ln.a,[E.Renderer,E.ElementRef],{brmasker:[0,"brmasker"]},null),E["ɵpod"](55,{person:0}),E["ɵprd"](1024,null,W.e,function(n){return[n]},[ln.a]),E["ɵdid"](57,671744,null,0,W.h,[[8,null],[8,null],[8,null],[2,W.e]],{model:[0,"model"]},{update:"ngModelChange"}),E["ɵprd"](2048,null,W.f,null,[W.h]),E["ɵdid"](59,16384,null,0,W.g,[W.f],null,null),E["ɵdid"](60,5423104,null,0,G.a,[X.a,Z.a,U.a,Q.a,E.ElementRef,E.Renderer,[2,Y.a],[2,B.a],[2,W.f],nn.a],{type:[0,"type"]},{ionFocus:"ionFocus",ionBlur:"ionBlur"}),E["ɵdid"](61,81920,null,0,en.a,[],null,null),(n()(),E["ɵted"](-1,2,["\n    "])),(n()(),E["ɵted"](-1,null,["\n\n    "])),(n()(),E["ɵand"](16777216,null,null,1,null,d)),E["ɵdid"](65,16384,null,0,J.NgIf,[E.ViewContainerRef,E.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),E["ɵted"](-1,null,["\n\n    "])),(n()(),E["ɵeld"](67,0,null,null,20,"ion-item",[["class","fieldElement item item-block"]],null,null,null,j.b,j.a)),E["ɵdid"](68,1097728,null,3,B.a,[U.a,X.a,E.ElementRef,E.Renderer,[2,K.a]],null,null),E["ɵqud"](335544320,10,{contentLabel:0}),E["ɵqud"](603979776,11,{_buttons:1}),E["ɵqud"](603979776,12,{_icons:1}),E["ɵdid"](72,16384,null,0,H.a,[],null,null),(n()(),E["ɵted"](-1,2,["\n      "])),(n()(),E["ɵeld"](74,0,null,1,2,"ion-label",[["floating",""]],[[8,"className",0]],null,null,null,null)),E["ɵdid"](75,16384,[[10,4]],0,q.a,[X.a,E.ElementRef,E.Renderer,[8,""],[8,null],[8,null],[8,null]],null,null),(n()(),E["ɵted"](-1,null,["Whatsapp *"])),(n()(),E["ɵted"](-1,2,["\n      "])),(n()(),E["ɵeld"](78,0,null,3,8,"ion-input",[["type","text"]],[[8,"className",0],[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"keyup"],[null,"ionBlur"],[null,"ionFocus"]],function(n,l,e){var t=!0,u=n.component;if("keyup"===l){t=!1!==E["ɵnov"](n,79).inputKeyup(e)&&t}if("ionBlur"===l){t=!1!==E["ɵnov"](n,79).inputOnblur(e)&&t}if("ionFocus"===l){t=!1!==E["ɵnov"](n,79).inputFocus(e)&&t}if("ngModelChange"===l){t=!1!==(u.credential.whatsapp=e)&&t}return t},z.b,z.a)),E["ɵdid"](79,81920,null,0,ln.a,[E.Renderer,E.ElementRef],{brmasker:[0,"brmasker"]},null),E["ɵpod"](80,{mask:0,len:1,type:2}),E["ɵprd"](1024,null,W.e,function(n){return[n]},[ln.a]),E["ɵdid"](82,671744,null,0,W.h,[[8,null],[8,null],[8,null],[2,W.e]],{model:[0,"model"]},{update:"ngModelChange"}),E["ɵprd"](2048,null,W.f,null,[W.h]),E["ɵdid"](84,16384,null,0,W.g,[W.f],null,null),E["ɵdid"](85,5423104,null,0,G.a,[X.a,Z.a,U.a,Q.a,E.ElementRef,E.Renderer,[2,Y.a],[2,B.a],[2,W.f],nn.a],{type:[0,"type"]},{ionFocus:"ionFocus",ionBlur:"ionBlur"}),E["ɵdid"](86,81920,null,0,en.a,[],null,null),(n()(),E["ɵted"](-1,2,["\n    "])),(n()(),E["ɵted"](-1,null,["\n\n    "])),(n()(),E["ɵand"](16777216,null,null,1,null,p)),E["ɵdid"](90,16384,null,0,J.NgIf,[E.ViewContainerRef,E.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),E["ɵted"](-1,null,["\n\n    "])),(n()(),E["ɵeld"](92,0,null,null,18,"ion-item",[["class","fieldElement item item-block"]],null,null,null,j.b,j.a)),E["ɵdid"](93,1097728,null,3,B.a,[U.a,X.a,E.ElementRef,E.Renderer,[2,K.a]],null,null),E["ɵqud"](603979776,16,{contentLabel:0}),E["ɵqud"](603979776,17,{_buttons:1}),E["ɵqud"](603979776,18,{_icons:1}),E["ɵdid"](97,16384,null,0,H.a,[],null,null),(n()(),E["ɵted"](-1,2,["\n      "])),(n()(),E["ɵand"](16777216,null,1,1,null,m)),E["ɵdid"](100,16384,null,0,J.NgIf,[E.ViewContainerRef,E.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),E["ɵted"](-1,2,["\n      "])),(n()(),E["ɵand"](16777216,null,1,1,null,g)),E["ɵdid"](103,16384,null,0,J.NgIf,[E.ViewContainerRef,E.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),E["ɵted"](-1,2,["\n      "])),(n()(),E["ɵeld"](105,0,null,3,4,"ion-input",[["type","text"]],[[8,"className",0],[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(n,l,e){var t=!0;if("ngModelChange"===l){t=!1!==(n.component.credential.email=e)&&t}return t},z.b,z.a)),E["ɵdid"](106,671744,null,0,W.h,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),E["ɵprd"](2048,null,W.f,null,[W.h]),E["ɵdid"](108,16384,null,0,W.g,[W.f],null,null),E["ɵdid"](109,5423104,null,0,G.a,[X.a,Z.a,U.a,Q.a,E.ElementRef,E.Renderer,[2,Y.a],[2,B.a],[2,W.f],nn.a],{type:[0,"type"]},null),(n()(),E["ɵted"](-1,2,["\n    "])),(n()(),E["ɵted"](-1,null,["\n\n    "])),(n()(),E["ɵeld"](112,0,null,null,18,"ion-item",[["class","fieldElement item item-block"]],null,null,null,j.b,j.a)),E["ɵdid"](113,1097728,null,3,B.a,[U.a,X.a,E.ElementRef,E.Renderer,[2,K.a]],null,null),E["ɵqud"](603979776,19,{contentLabel:0}),E["ɵqud"](603979776,20,{_buttons:1}),E["ɵqud"](603979776,21,{_icons:1}),E["ɵdid"](117,16384,null,0,H.a,[],null,null),(n()(),E["ɵted"](-1,2,["\n      "])),(n()(),E["ɵand"](16777216,null,1,1,null,f)),E["ɵdid"](120,16384,null,0,J.NgIf,[E.ViewContainerRef,E.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),E["ɵted"](-1,2,["\n      "])),(n()(),E["ɵand"](16777216,null,1,1,null,h)),E["ɵdid"](123,16384,null,0,J.NgIf,[E.ViewContainerRef,E.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),E["ɵted"](-1,2,["\n      "])),(n()(),E["ɵeld"](125,0,null,3,4,"ion-input",[["type","password"]],[[8,"className",0],[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(n,l,e){var t=!0;if("ngModelChange"===l){t=!1!==(n.component.credential.password=e)&&t}return t},z.b,z.a)),E["ɵdid"](126,671744,null,0,W.h,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),E["ɵprd"](2048,null,W.f,null,[W.h]),E["ɵdid"](128,16384,null,0,W.g,[W.f],null,null),E["ɵdid"](129,5423104,null,0,G.a,[X.a,Z.a,U.a,Q.a,E.ElementRef,E.Renderer,[2,Y.a],[2,B.a],[2,W.f],nn.a],{type:[0,"type"]},null),(n()(),E["ɵted"](-1,2,["\n    "])),(n()(),E["ɵted"](-1,null,["\n\n    "])),(n()(),E["ɵeld"](132,0,null,null,19,"ion-item",[["class","fieldElement item item-block"]],null,null,null,j.b,j.a)),E["ɵdid"](133,1097728,null,3,B.a,[U.a,X.a,E.ElementRef,E.Renderer,[2,K.a]],null,null),E["ɵqud"](603979776,22,{contentLabel:0}),E["ɵqud"](603979776,23,{_buttons:1}),E["ɵqud"](603979776,24,{_icons:1}),E["ɵdid"](137,16384,null,0,H.a,[],null,null),(n()(),E["ɵted"](-1,2,["\n      "])),(n()(),E["ɵeld"](139,0,null,0,5,"ion-checkbox",[],[[2,"checkbox-disabled",null],[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"click"]],function(n,l,e){var t=!0,u=n.component;if("click"===l){t=!1!==E["ɵnov"](n,140)._click(e)&&t}if("ngModelChange"===l){t=!1!==(u.credential.aceite=e)&&t}return t},cn.b,cn.a)),E["ɵdid"](140,1228800,null,0,pn.a,[X.a,U.a,[2,B.a],E.ElementRef,E.Renderer],null,null),E["ɵprd"](1024,null,W.e,function(n){return[n]},[pn.a]),E["ɵdid"](142,671744,null,0,W.h,[[8,null],[8,null],[8,null],[2,W.e]],{model:[0,"model"]},{update:"ngModelChange"}),E["ɵprd"](2048,null,W.f,null,[W.h]),E["ɵdid"](144,16384,null,0,W.g,[W.f],null,null),(n()(),E["ɵted"](-1,2,["\n      "])),(n()(),E["ɵand"](16777216,null,1,1,null,v)),E["ɵdid"](147,16384,null,0,J.NgIf,[E.ViewContainerRef,E.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),E["ɵted"](-1,2,["\n      "])),(n()(),E["ɵand"](16777216,null,1,1,null,C)),E["ɵdid"](150,16384,null,0,J.NgIf,[E.ViewContainerRef,E.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),E["ɵted"](-1,2,["\n    "])),(n()(),E["ɵted"](-1,null,["\n  "])),(n()(),E["ɵted"](-1,1,["\n\n  "])),(n()(),E["ɵand"](16777216,null,1,1,null,b)),E["ɵdid"](155,16384,null,0,J.NgIf,[E.ViewContainerRef,E.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),E["ɵted"](-1,1,["\n  "])),(n()(),E["ɵand"](16777216,null,1,1,null,R)),E["ɵdid"](158,16384,null,0,J.NgIf,[E.ViewContainerRef,E.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),E["ɵted"](-1,1,["\n  "])),(n()(),E["ɵeld"](160,0,null,1,31,"ion-grid",[["class","grid"],["style","margin-bottom: 110px;"]],null,null,null,null,null)),E["ɵdid"](161,16384,null,0,mn.a,[],null,null),(n()(),E["ɵted"](-1,null,["\n    "])),(n()(),E["ɵeld"](163,0,null,null,27,"ion-row",[["class","row"]],null,null,null,null,null)),E["ɵdid"](164,16384,null,0,gn.a,[],null,null),(n()(),E["ɵted"](-1,null,["\n      "])),(n()(),E["ɵeld"](166,0,null,null,12,"ion-col",[["class","col"],["col-6",""]],null,null,null,null,null)),E["ɵdid"](167,16384,null,0,fn.a,[],null,null),(n()(),E["ɵted"](-1,null,["\n        "])),(n()(),E["ɵeld"](169,0,null,null,8,"button",[["class","buttonMedium"],["color","secondary"],["full",""],["ion-button",""]],null,[[null,"click"]],function(n,l,e){var t=!0;if("click"===l){t=!1!==n.component.makeRegister()&&t}return t},hn.b,hn.a)),E["ɵdid"](170,1097728,null,0,vn.a,[[8,""],X.a,E.ElementRef,E.Renderer],{color:[0,"color"],full:[1,"full"]},null),(n()(),E["ɵted"](-1,0,["\n          "])),(n()(),E["ɵand"](16777216,null,0,1,null,y)),E["ɵdid"](173,16384,null,0,J.NgIf,[E.ViewContainerRef,E.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),E["ɵted"](-1,0,["\n          "])),(n()(),E["ɵand"](16777216,null,0,1,null,k)),E["ɵdid"](176,16384,null,0,J.NgIf,[E.ViewContainerRef,E.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),E["ɵted"](-1,0,["\n        "])),(n()(),E["ɵted"](-1,null,["\n    "])),(n()(),E["ɵted"](-1,null,["\n      "])),(n()(),E["ɵeld"](180,0,null,null,9,"ion-col",[["class","col"],["col-6",""]],null,null,null,null,null)),E["ɵdid"](181,16384,null,0,fn.a,[],null,null),(n()(),E["ɵted"](-1,null,["\n        "])),(n()(),E["ɵeld"](183,0,null,null,5,"button",[["class","buttonMedium"],["color","light"],["full",""],["ion-button",""]],null,[[null,"click"]],function(n,l,e){var t=!0;if("click"===l){t=!1!==n.component.goBack()&&t}return t},hn.b,hn.a)),E["ɵdid"](184,1097728,null,0,vn.a,[[8,""],X.a,E.ElementRef,E.Renderer],{color:[0,"color"],full:[1,"full"]},null),(n()(),E["ɵted"](-1,0,["\n          "])),(n()(),E["ɵeld"](186,0,null,0,1,"p",[],null,null,null,null,null)),(n()(),E["ɵted"](-1,null,["Cancelar"])),(n()(),E["ɵted"](-1,0,["\n        "])),(n()(),E["ɵted"](-1,null,["\n      "])),(n()(),E["ɵted"](-1,null,["\n    "])),(n()(),E["ɵted"](-1,null,["\n  "])),(n()(),E["ɵted"](-1,1,["\n"])),(n()(),E["ɵted"](-1,null,["\n"]))],function(n,l){var e=l.component;n(l,2,0,"01"==e.version?"principalHeader":"02"==e.version?"principalHeaderV02":"principalHeader");n(l,6,0,"01"==e.version?"principal-icon":"02"==e.version?"principal-icon-v02":"principal-icon");n(l,9,0,"01"==e.version);n(l,12,0,"02"==e.version);n(l,16,0,E["ɵinlineInterpolate"](1,"content ",e.ENV.PROJECT,"-custom-bg"),"01"==e.version?"margin-content-l1":"02"==e.version?"margin-content-l2":"margin-content-l1");n(l,30,0,"01"==e.idiom);n(l,33,0,"02"==e.idiom);n(l,36,0,e.credential.nome);n(l,39,0,"text");n(l,54,0,n(l,55,0,!0));n(l,57,0,e.credential.documento);n(l,60,0,"text"),n(l,61,0);n(l,65,0,e.hide);n(l,79,0,n(l,80,0,"(00) 00000-0000",15,"num"));n(l,82,0,e.credential.whatsapp);n(l,85,0,"text"),n(l,86,0);n(l,90,0,"edicom"!=e.project);n(l,100,0,"01"==e.idiom);n(l,103,0,"02"==e.idiom);n(l,106,0,e.credential.email);n(l,109,0,"text");n(l,120,0,"01"==e.idiom);n(l,123,0,"02"==e.idiom);n(l,126,0,e.credential.password);n(l,129,0,"password");n(l,142,0,e.credential.aceite);n(l,147,0,"01"==e.idiom);n(l,150,0,"02"==e.idiom);n(l,155,0,"01"==e.idiom);n(l,158,0,"02"==e.idiom);n(l,170,0,"secondary","");n(l,173,0,"01"==e.idiom);n(l,176,0,"02"==e.idiom);n(l,184,0,"light","")},function(n,l){var e=l.component;n(l,5,0,E["ɵinlineInterpolate"](1,"",e.globalUrl+"/storage/uploads/configs/logoHeader.png",""));n(l,15,0,E["ɵnov"](l,17).statusbarPadding,E["ɵnov"](l,17)._hasRefresher);n(l,35,0,E["ɵinlineInterpolate"](1,"",e.ENV.TEXT_COLOR_V1,""),E["ɵnov"](l,38).ngClassUntouched,E["ɵnov"](l,38).ngClassTouched,E["ɵnov"](l,38).ngClassPristine,E["ɵnov"](l,38).ngClassDirty,E["ɵnov"](l,38).ngClassValid,E["ɵnov"](l,38).ngClassInvalid,E["ɵnov"](l,38).ngClassPending);n(l,49,0,E["ɵinlineInterpolate"](1,"",e.ENV.TEXT_COLOR_V1,""));n(l,53,0,E["ɵinlineInterpolate"](1,"",e.ENV.TEXT_COLOR_V1,""),E["ɵnov"](l,59).ngClassUntouched,E["ɵnov"](l,59).ngClassTouched,E["ɵnov"](l,59).ngClassPristine,E["ɵnov"](l,59).ngClassDirty,E["ɵnov"](l,59).ngClassValid,E["ɵnov"](l,59).ngClassInvalid,E["ɵnov"](l,59).ngClassPending);n(l,74,0,E["ɵinlineInterpolate"](1,"",e.ENV.TEXT_COLOR_V1,""));n(l,78,0,E["ɵinlineInterpolate"](1,"",e.ENV.TEXT_COLOR_V1,""),E["ɵnov"](l,84).ngClassUntouched,E["ɵnov"](l,84).ngClassTouched,E["ɵnov"](l,84).ngClassPristine,E["ɵnov"](l,84).ngClassDirty,E["ɵnov"](l,84).ngClassValid,E["ɵnov"](l,84).ngClassInvalid,E["ɵnov"](l,84).ngClassPending);n(l,105,0,E["ɵinlineInterpolate"](1,"",e.ENV.TEXT_COLOR_V1,""),E["ɵnov"](l,108).ngClassUntouched,E["ɵnov"](l,108).ngClassTouched,E["ɵnov"](l,108).ngClassPristine,E["ɵnov"](l,108).ngClassDirty,E["ɵnov"](l,108).ngClassValid,E["ɵnov"](l,108).ngClassInvalid,E["ɵnov"](l,108).ngClassPending);n(l,125,0,E["ɵinlineInterpolate"](1,"",e.ENV.TEXT_COLOR_V1,""),E["ɵnov"](l,128).ngClassUntouched,E["ɵnov"](l,128).ngClassTouched,E["ɵnov"](l,128).ngClassPristine,E["ɵnov"](l,128).ngClassDirty,E["ɵnov"](l,128).ngClassValid,E["ɵnov"](l,128).ngClassInvalid,E["ɵnov"](l,128).ngClassPending);n(l,139,0,E["ɵnov"](l,140)._disabled,E["ɵnov"](l,144).ngClassUntouched,E["ɵnov"](l,144).ngClassTouched,E["ɵnov"](l,144).ngClassPristine,E["ɵnov"](l,144).ngClassDirty,E["ɵnov"](l,144).ngClassValid,E["ɵnov"](l,144).ngClassInvalid,E["ɵnov"](l,144).ngClassPending)})}Object.defineProperty(l,"__esModule",{value:!0});var E=e(0),V=(e(4),e(58),e(452)),N=e(125),_=e(34),$=e(126),w=function(){function n(n,l,e,t,u,i){var a=this;this.navCtrl=n,this.navParams=l,this.authService=e,this.toastCtrl=t,this.loadingCtrl=u,this.storage=i,this.tipoPessoa="1",this.hide=!1,this.idiom="",this.ENV=$.a,this.globalUrl="",this.credential={documento:"",password:"",nome:"",email:"",nascimento:"",whatsapp:"",aceite:!1,company_id:"1",profile_id:"3"},this.event={month:"1990-02-19",timeStarts:"07:43",timeEnds:"1990-02-20"},i.get("GlobalUrl").then(function(n){a.globalUrl=n})}return n.prototype.ngIfCtrl=function(){this.hide=!this.hide},n.prototype.ngOnInit=function(){var n=this;this.storage.get("Project").then(function(l){n.project=l}),this.storage.get("LayoutVersion").then(function(l){n.version=l})},n.prototype.ionViewWillEnter=function(){var n=this;this.storage.get("Project").then(function(l){n.background=l}),this.storage.get("Idiom").then(function(l){n.idiom=l,"01"==l?n.credential.documento=n.navParams.get("documento"):"02"==l&&(n.credential.email=n.navParams.get("documento"))})},n.prototype.goBack=function(){this.navCtrl.setRoot(V.a)},n.prototype.makeRegister=function(){var n=this,l="";if(this.credential.nome?18!=this.credential.documento.length&&14!=this.credential.documento.length?l="01"==this.idiom?"Favor preencher o campo CPF/CNPJ":"02"==this.idiom?"Por favor completa el campo documento":"":this.credential.email?this.ValidaCPF(this.credential.documento)||14!=this.credential.documento.length?this.credential.whatsapp?this.credential.nascimento||"edicom"==this.project?this.credential.password?this.credential.aceite||(l="01"==this.idiom?"Para efetuar o cadastro você deve aceitar os termos e políticas de privacidade":"02"==this.idiom?"Para registrarse debe aceptar los términos y políticas de privacidad":""):l="01"==this.idiom?"Favor preencher o campo senha":"02"==this.idiom?"Por favor completa el campo de contraseña":"":l="01"==this.idiom?"Favor preencher o campo data de nascimento":"02"==this.idiom?"Por favor completa el campo fecha de nacimiento":"":l="01"==this.idiom?"Favor preencher o campo Whatsapp":"02"==this.idiom?"Por favor completa el campo teléfono":"":l="01"==this.idiom?"CPF Inválido":"02"==this.idiom?"Documento inválido":"":l="01"==this.idiom?"Favor preencher o campo e-mail":"02"==this.idiom?"Por favor completa el campo correo":"":l="01"==this.idiom?"Favor preencher o campo nome":"02"==this.idiom?"Por favor completa el campo nombre":"",""!=l){this.toastCtrl.create({message:l,duration:6e3,position:"top"}).present()}else{var e=this.loadingCtrl.create({content:"Espere..."});e.present(),this.authService.register(this.credential).then(function(l){if(e.dismiss(),l)if(0!=l.status){n.toastCtrl.create({message:"01"==n.idiom?"Cadastro realizado com sucesso!":"02"==n.idiom?"¡Registro exitoso!":"",duration:6e3,position:"top"});n.navCtrl.push("tab-page")}else{n.toastCtrl.create({message:l.msg,duration:6e3,position:"top"}).present()}}),e.dismiss()}},n.prototype.ValidaCPF=function(n){if(null==(n=n.replace(".","").replace(".","").replace("-","")))return!1;if(11!=n.length)return!1;if("00000000000"==n||"11111111111"==n||"22222222222"==n||"33333333333"==n||"44444444444"==n||"55555555555"==n||"66666666666"==n||"77777777777"==n||"88888888888"==n||"99999999999"==n)return!1;var l="",e=10,t=0,u=0,i=0,a=0,r="";r=n.substring(0,9);for(var o=0;o<9;o++){if(l=r.charAt(o),-1=="0123456789".search(l))return!1;t+=Number(l)*e,e--}(i=11-(u=t%11))>9&&(i=0),e=11,t=0,r+=i;for(o=0;o<10;o++)l=r.charAt(o),t+=Number(l)*e,e--;return u=t%11,(a=11-u)>9&&(a=0),r+=a,n==r},n}(),T=(e(448),function(){return function(){}}()),P=e(345),A=e(346),O=e(347),D=e(348),M=e(349),x=e(350),F=e(351),L=e(352),S=e(353),q=e(48),X=e(2),j=e(354),B=e(19),U=e(16),K=e(47),H=e(83),J=e(13),z=e(449),W=e(18),G=e(133),Z=e(5),Q=e(9),Y=e(22),nn=e(10),ln=e(442),en=e(441),tn=e(130),un=e(6),an=e(439),rn=e(39),on=e(21),dn=e(60),sn=e(8),cn=e(460),pn=e(142),mn=e(136),gn=e(132),fn=e(131),hn=e(45),vn=e(20),Cn=e(11),bn=e(80),Rn=e(81),yn=E["ɵcrt"]({encapsulation:2,styles:[],data:{}}),kn=E["ɵccf"]("page-register",w,function(n){return E["ɵvid"](0,[(n()(),E["ɵeld"](0,0,null,null,1,"page-register",[],null,null,null,I,yn)),E["ɵdid"](1,114688,null,0,w,[on.a,Cn.a,N.a,bn.a,Rn.a,_.b],null,null)],function(n,l){n(l,1,0)},null)},{},{},[]),In=e(127),En=e(444),Vn=e(40);e.d(l,"RegisterPageModuleNgFactory",function(){return Nn});var Nn=E["ɵcmf"](T,[],function(n){return E["ɵmod"]([E["ɵmpd"](512,E.ComponentFactoryResolver,E["ɵCodegenComponentFactoryResolver"],[[8,[P.a,A.a,O.a,D.a,M.a,x.a,F.a,L.a,S.a,kn]],[3,E.ComponentFactoryResolver],E.NgModuleRef]),E["ɵmpd"](4608,J.NgLocalization,J.NgLocaleLocalization,[E.LOCALE_ID,[2,J["ɵa"]]]),E["ɵmpd"](4608,W.k,W.k,[]),E["ɵmpd"](4608,W.c,W.c,[]),E["ɵmpd"](4608,en.a,en.a,[]),E["ɵmpd"](512,J.CommonModule,J.CommonModule,[]),E["ɵmpd"](512,W.j,W.j,[]),E["ɵmpd"](512,W.d,W.d,[]),E["ɵmpd"](512,W.i,W.i,[]),E["ɵmpd"](512,In.a,In.a,[]),E["ɵmpd"](512,In.b,In.b,[]),E["ɵmpd"](512,En.a,En.a,[]),E["ɵmpd"](512,T,T,[]),E["ɵmpd"](256,Vn.a,w,[])])})},439:function(n,l,e){"use strict";function t(n){return u["ɵvid"](2,[u["ɵqud"](402653184,1,{_fixedContent:0}),u["ɵqud"](402653184,2,{_scrollContent:0}),(n()(),u["ɵeld"](2,0,[[1,0],["fixedContent",1]],null,1,"div",[["class","fixed-content"]],null,null,null,null,null)),u["ɵncd"](null,0),(n()(),u["ɵeld"](4,0,[[2,0],["scrollContent",1]],null,1,"div",[["class","scroll-content"]],null,null,null,null,null)),u["ɵncd"](null,1),u["ɵncd"](null,2)],null,null)}e.d(l,"a",function(){return i}),l.b=t;var u=e(0),i=(e(2),e(5),e(10),e(39),e(6),e(21),u["ɵcrt"]({encapsulation:2,styles:[],data:{}}))},441:function(n,l,e){"use strict";e.d(l,"a",function(){return u});var t=function(){return function(){this.type="alfa",this.decimal=2,this.decimalCaracter=",",this.userCaracters=!1,this.numberAndTousand=!1}}(),u=function(){function n(){this.brmasker=new t}return n.prototype.ngOnInit=function(){this.brmasker.type||(this.brmasker.type="all"),this.brmasker.decimal||(this.brmasker.decimal=2),this.brmasker.decimalCaracter||(this.brmasker.decimalCaracter=",")},n.prototype.writeCreateValue=function(n,l){return void 0===l&&(l=new t),n&&l.phone?n.replace(/^(?:(?:\+|00)?(55)\s?)?(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4}))$/gi,"$1 ($2) $3-$4"):n&&l.money?this.writeValueMoney(n,l):n&&l.person?this.writeValuePerson(n):n&&l.percent?this.writeValuePercent(n):n&&l.numberAndTousand?this.writeValueNumberAndThousand(n):n&&l.userCaracters?this.writeValueusingSpecialCharacters(n):n&&l.mask?(this.brmasker.mask=l.mask,l.len&&(this.brmasker.len=l.len),this.onInput(n)):n},n.prototype.writeValuePercent=function(n){return n.replace(/\D/gi,""),n.replace(/%/gi,""),n.replace(/([0-9]{0})$/gi,"%$1")},n.prototype.writeValuePerson=function(n){return n.length<=11?n.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/gi,"$1.$2.$3-$4"):n.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/gi,"$1.$2.$3/$4-$5")},n.prototype.writeValueMoney=function(n,l){return void 0===l&&(l=new t),this.moneyMask(n,l)},n.prototype.writeValueNumberAndThousand=function(n,l){return void 0===l&&(l=new t),this.thousand(n)},n.prototype.writeValueusingSpecialCharacters=function(n,l){return void 0===l&&(l=new t),this.usingSpecialCharacters(n,l.mask,l.len)},n.prototype.moneyMask=function(n,l){var e=l.decimal||this.brmasker.decimal;return(n=n.replace(/\D/gi,"").replace(new RegExp("([0-9]{"+e+"})$","g"),l.decimalCaracter+"$1")).length===e+1?"0"+n:n.length>e+2&&"0"===n.charAt(0)?n.substr(1):(l.thousand&&n.length>Number(4)+Number(l.decimal)&&(n=n.replace(new RegExp("([0-9]{3})"+l.decimalCaracter+"([0-9]{"+l.decimal+"}$)","g"),l.thousand+"$1"+l.decimalCaracter+"$2")),l.thousand&&n.length>Number(8)+Number(l.decimal)&&(n=n.replace(new RegExp("([0-9]{3})"+l.thousand+"([0-9]{3})"+l.decimalCaracter+"([0-9]{"+l.decimal+"}$)","g"),l.thousand+"$1"+l.thousand+"$2"+l.decimalCaracter+"$3")),n)},n.prototype.onInput=function(n){return this.formatField(n,this.brmasker.mask,this.brmasker.len)},n.prototype.thousand=function(n){var l=n.replace(/\D/gi,"");return l=l.toString().split("").reverse().join("").match(/\d{1,3}/g).join(""+(this.brmasker.thousand||".")).split("").reverse().join("")},n.prototype.usingSpecialCharacters=function(n,l,e){e||(e=99999999999);for(var t=n.toString().replace(/\-|\.|\,| /gi,""),u=0,i="",a=t.length,r=0;r<a;r++)r<e&&("-"===l.charAt(r)||"."===l.charAt(r)||","===l.charAt(r)?(i+=l.charAt(r),a++):(i+=t.charAt(u),u++));return i},n.prototype.formatField=function(n,l,e){e||(e=99999999999);for(var t=n.toString().replace(/\-|\.|\/|\(|\)|\,|\*|\+|\@|\#|\$|\&|\%|\:| /gi,""),u=0,i="",a=t.length,r=0;r<a;r++)r<e&&("-"===l.charAt(r)||"."===l.charAt(r)||"/"===l.charAt(r)||"("===l.charAt(r)||")"===l.charAt(r)||" "===l.charAt(r)||","===l.charAt(r)||"*"===l.charAt(r)||"+"===l.charAt(r)||"@"===l.charAt(r)||"#"===l.charAt(r)||":"===l.charAt(r)||"$"===l.charAt(r)||"&"===l.charAt(r)||"%"===l.charAt(r)?(i+=l.charAt(r),a++):(i+=t.charAt(u),u++));return i},n}()},442:function(n,l,e){"use strict";e.d(l,"a",function(){return u});var t=function(){return function(){this.type="alfa",this.decimal=2,this.decimalCaracter=",",this.userCaracters=!1,this.numberAndTousand=!1}}(),u=function(){function n(n,l){this._renderer=n,this._elementRef=l,this.brmasker=new t}return n.prototype.inputKeyup=function(n){var l=this.returnValue(n.target.value);this.writeValue(l),n.target.value=l},n.prototype.inputOnblur=function(n){var l=this.returnValue(n.value);this.writeValue(l),n.value=l},n.prototype.inputFocus=function(n){var l=this.returnValue(n.value);this.writeValue(l),n.value=l},n.prototype.ngOnInit=function(){this.brmasker.type||(this.brmasker.type="all"),this.brmasker.decimal||(this.brmasker.decimal=2),this.brmasker.decimalCaracter||(this.brmasker.decimalCaracter=",")},n.prototype.writeValue=function(n){this._renderer.setElementProperty(this._elementRef.nativeElement,"value",n)},n.prototype.registerOnChange=function(n){},n.prototype.registerOnTouched=function(n){},n.prototype.setDisabledState=function(n){this._renderer.setElementAttribute(this._elementRef.nativeElement,"disabled",n?"true":"false")},n.prototype.writeCreateValue=function(n,l){return void 0===l&&(l=new t),n&&l.phone?n.replace(/^(?:(?:\+|00)?(55)\s?)?(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4}))$/gi,"$1 ($2) $3-$4"):n&&l.money?this.writeValueMoney(n,l):n&&l.person?this.writeValuePerson(n):n&&l.percent?this.writeValuePercent(n):n&&l.mask?(this.brmasker.mask=l.mask,l.len&&(this.brmasker.len=l.len),this.onInput(n)):n},n.prototype.writeValuePercent=function(n){return n.replace(/\D/gi,""),n.replace(/%/gi,""),n.replace(/([0-9]{0})$/gi,"%$1")},n.prototype.writeValuePerson=function(n){return n.length<=11?n.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/gi,"$1.$2.$3-$4"):n.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/gi,"$1.$2.$3/$4-$5")},n.prototype.writeValueMoney=function(n,l){return void 0===l&&(l=new t),this.moneyMask(n,l)},n.prototype.returnValue=function(n){if(this.brmasker.mask||(this.brmasker.mask=""),n){var l=n;return"alfa"==this.brmasker.type&&(l=l.replace(/\d/gi,"")),"num"==this.brmasker.type&&(l=l.replace(/\D/gi,"")),this.brmasker.money?this.moneyMask(this.onInput(l),this.brmasker):this.brmasker.phone?this.phoneMask(l):this.brmasker.phoneNotDDD?this.phoneNotDDDMask(l):this.brmasker.person?this.peapollMask(l):this.brmasker.percent?this.percentMask(l):this.brmasker.numberAndTousand?this.thousand(l):this.brmasker.userCaracters?this.usingSpecialCharacters(l,this.brmasker.mask,this.brmasker.len):this.onInput(l)}return""},n.prototype.percentMask=function(n){var l=n;return l=l.replace(/\D/gi,""),l=l.replace(/%/gi,""),l=l.replace(/([0-9]{0})$/gi,"%$1")},n.prototype.phoneMask=function(n){var l=n;return l.length>14?(this.brmasker.len=15,this.brmasker.mask="(99) 99999-9999",l=(l=(l=(l=l.replace(/\D/gi,"")).replace(/(\d{2})(\d)/gi,"$1 $2")).replace(/(\d{5})(\d)/gi,"$1-$2")).replace(/(\d{4})(\d)/gi,"$1$2")):(this.brmasker.len=14,this.brmasker.mask="(99) 9999-9999",l=(l=(l=(l=l.replace(/\D/gi,"")).replace(/(\d{2})(\d)/gi,"$1 $2")).replace(/(\d{4})(\d)/gi,"$1-$2")).replace(/(\d{4})(\d)/gi,"$1$2")),this.onInput(l)},n.prototype.phoneNotDDDMask=function(n){var l=n;return l.length>9?(this.brmasker.len=10,this.brmasker.mask="99999-9999",l=(l=(l=l.replace(/\D/gi,"")).replace(/(\d{5})(\d)/gi,"$1-$2")).replace(/(\d{4})(\d)/gi,"$1$2")):(this.brmasker.len=9,this.brmasker.mask="9999-9999",l=(l=(l=l.replace(/\D/gi,"")).replace(/(\d{4})(\d)/gi,"$1-$2")).replace(/(\d{4})(\d)/gi,"$1$2")),this.onInput(l)},n.prototype.peapollMask=function(n){var l=n;return l.length>14?(this.brmasker.len=18,this.brmasker.mask="99.999.999/9999-99",l=(l=(l=(l=(l=(l=l.replace(/\D/gi,"")).replace(/(\d{2})(\d)/gi,"$1.$2")).replace(/(\d{3})(\d)/gi,"$1.$2")).replace(/(\d{3})(\d)/gi,"$1/$2")).replace(/(\d{4})(\d{1,4})$/gi,"$1-$2")).replace(/(\d{2})(\d{1,2})$/gi,"$1$2")):(this.brmasker.len=14,this.brmasker.mask="999.999.999-99",l=(l=(l=(l=l.replace(/\D/gi,"")).replace(/(\d{3})(\d)/gi,"$1.$2")).replace(/(\d{3})(\d)/gi,"$1.$2")).replace(/(\d{3})(\d{1,2})$/gi,"$1-$2")),this.onInput(l)},n.prototype.moneyMask=function(n,l){var e=l.decimal||this.brmasker.decimal;return(n=n.replace(/\D/gi,"").replace(new RegExp("([0-9]{"+e+"})$","g"),l.decimalCaracter+"$1")).length===e+1?"0"+n:n.length>e+2&&"0"===n.charAt(0)?n.substr(1):(l.thousand&&n.length>Number(4)+Number(l.decimal)&&(n=n.replace(new RegExp("([0-9]{3})"+l.decimalCaracter+"([0-9]{"+l.decimal+"}$)","g"),l.thousand+"$1"+l.decimalCaracter+"$2")),l.thousand&&n.length>Number(8)+Number(l.decimal)&&(n=n.replace(new RegExp("([0-9]{3})"+l.thousand+"([0-9]{3})"+l.decimalCaracter+"([0-9]{"+l.decimal+"}$)","g"),l.thousand+"$1"+l.thousand+"$2"+l.decimalCaracter+"$3")),n)},n.prototype.onInput=function(n){return this.formatField(n,this.brmasker.mask,this.brmasker.len)},n.prototype.thousand=function(n){var l=n.replace(/\D/gi,""),e=l.toString().split("").reverse().join("").match(/\d{1,3}/g);return e?e.join(""+(this.brmasker.thousand||".")).split("").reverse().join(""):l},n.prototype.usingSpecialCharacters=function(n,l,e){e||(e=99999999999);for(var t=n.toString().replace(/\-|\.|\,| /gi,""),u=0,i="",a=t.length,r=0;r<a;r++)r<e&&("-"===l.charAt(r)||"."===l.charAt(r)||","===l.charAt(r)?(i+=l.charAt(r),a++):(i+=t.charAt(u),u++));return i},n.prototype.formatField=function(n,l,e){e||(e=99999999999);for(var t=n.toString().replace(/\-|\.|\/|\(|\)|\,|\*|\+|\@|\#|\$|\&|\%|\:| /gi,""),u=0,i="",a=t.length,r=0;r<a;r++)r<e&&("-"===l.charAt(r)||"."===l.charAt(r)||"/"===l.charAt(r)||"("===l.charAt(r)||")"===l.charAt(r)||" "===l.charAt(r)||","===l.charAt(r)||"*"===l.charAt(r)||"+"===l.charAt(r)||"@"===l.charAt(r)||"#"===l.charAt(r)||":"===l.charAt(r)||"$"===l.charAt(r)||"&"===l.charAt(r)||"%"===l.charAt(r)?(i+=l.charAt(r),a++):(i+=t.charAt(u),u++));return i},n}()},444:function(n,l,e){"use strict";e.d(l,"a",function(){return t});e(442),e(441);var t=function(){return function(){}}()},448:function(n,l,e){"use strict";var t=e(444),u=e(442),i=e(441);e.d(l,!1,function(){return t.a}),e.d(l,!1,function(){}),e.d(l,!1,function(){return u.a}),e.d(l,!1,function(){}),e.d(l,!1,function(){return i.a})},449:function(n,l,e){"use strict";function t(n){return o["ɵvid"](0,[(n()(),o["ɵeld"](0,0,[[1,0],["textInput",1]],null,1,"input",[["class","text-input"],["dir","auto"]],[[8,"type",0],[1,"aria-labelledby",0],[1,"min",0],[1,"max",0],[1,"step",0],[1,"autocomplete",0],[1,"autocorrect",0],[8,"placeholder",0],[8,"disabled",0],[8,"readOnly",0]],[[null,"input"],[null,"blur"],[null,"focus"],[null,"keydown"]],function(n,l,e){var t=!0,u=n.component;if("input"===l){t=!1!==u.onInput(e)&&t}if("blur"===l){t=!1!==u.onBlur(e)&&t}if("focus"===l){t=!1!==u.onFocus(e)&&t}if("keydown"===l){t=!1!==u.onKeydown(e)&&t}return t},null,null)),o["ɵdid"](1,278528,null,0,d.NgClass,[o.IterableDiffers,o.KeyValueDiffers,o.ElementRef,o.Renderer2],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null)],function(n,l){n(l,1,0,"text-input","text-input-"+l.component._mode)},function(n,l){var e=l.component;n(l,0,0,e._type,e._labelId,e.min,e.max,e.step,e.autocomplete,e.autocorrect,e.placeholder,e._disabled,e._readonly)})}function u(n){return o["ɵvid"](0,[(n()(),o["ɵeld"](0,0,[[1,0],["textInput",1]],null,1,"textarea",[["class","text-input"]],[[1,"aria-labelledby",0],[1,"autocomplete",0],[1,"autocorrect",0],[8,"placeholder",0],[8,"disabled",0],[8,"readOnly",0]],[[null,"input"],[null,"blur"],[null,"focus"],[null,"keydown"]],function(n,l,e){var t=!0,u=n.component;if("input"===l){t=!1!==u.onInput(e)&&t}if("blur"===l){t=!1!==u.onBlur(e)&&t}if("focus"===l){t=!1!==u.onFocus(e)&&t}if("keydown"===l){t=!1!==u.onKeydown(e)&&t}return t},null,null)),o["ɵdid"](1,278528,null,0,d.NgClass,[o.IterableDiffers,o.KeyValueDiffers,o.ElementRef,o.Renderer2],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null)],function(n,l){n(l,1,0,"text-input","text-input-"+l.component._mode)},function(n,l){var e=l.component;n(l,0,0,e._labelId,e.autocomplete,e.autocorrect,e.placeholder,e._disabled,e._readonly)})}function i(n){return o["ɵvid"](0,[(n()(),o["ɵeld"](0,0,null,null,1,"button",[["class","text-input-clear-icon"],["clear",""],["ion-button",""],["tabindex","-1"],["type","button"]],null,[[null,"click"],[null,"mousedown"]],function(n,l,e){var t=!0,u=n.component;if("click"===l){t=!1!==u.clearTextInput(e)&&t}if("mousedown"===l){t=!1!==u.clearTextInput(e)&&t}return t},s.b,s.a)),o["ɵdid"](1,1097728,null,0,c.a,[[8,""],p.a,o.ElementRef,o.Renderer],{clear:[0,"clear"]},null)],function(n,l){n(l,1,0,"")},null)}function a(n){return o["ɵvid"](0,[(n()(),o["ɵeld"](0,0,null,null,0,"div",[["class","input-cover"]],null,[[null,"touchstart"],[null,"touchend"],[null,"mousedown"],[null,"mouseup"]],function(n,l,e){var t=!0,u=n.component;if("touchstart"===l){t=!1!==u._pointerStart(e)&&t}if("touchend"===l){t=!1!==u._pointerEnd(e)&&t}if("mousedown"===l){t=!1!==u._pointerStart(e)&&t}if("mouseup"===l){t=!1!==u._pointerEnd(e)&&t}return t},null,null))],null,null)}function r(n){return o["ɵvid"](2,[o["ɵqud"](671088640,1,{_native:0}),(n()(),o["ɵand"](16777216,null,null,1,null,t)),o["ɵdid"](2,16384,null,0,d.NgIf,[o.ViewContainerRef,o.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),o["ɵand"](16777216,null,null,1,null,u)),o["ɵdid"](4,16384,null,0,d.NgIf,[o.ViewContainerRef,o.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),o["ɵand"](16777216,null,null,1,null,i)),o["ɵdid"](6,16384,null,0,d.NgIf,[o.ViewContainerRef,o.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),o["ɵand"](16777216,null,null,1,null,a)),o["ɵdid"](8,16384,null,0,d.NgIf,[o.ViewContainerRef,o.TemplateRef],{ngIf:[0,"ngIf"]},null)],function(n,l){var e=l.component;n(l,2,0,!e._isTextarea);n(l,4,0,e._isTextarea);n(l,6,0,e._clearInput);n(l,8,0,e._useAssist)},null)}e.d(l,"a",function(){return m}),l.b=r;var o=e(0),d=e(13),s=e(45),c=e(20),p=e(2),m=(e(5),e(16),e(10),o["ɵcrt"]({encapsulation:2,styles:[],data:{}}))},452:function(n,l,e){"use strict";e.d(l,"a",function(){return u});e(4),e(58),e(125);var t=e(126),u=function(){function n(n,l,e,u,i,a,r){var o=this;this.navCtrl=n,this.navParams=l,this.authService=e,this.toastCtrl=u,this.loadingCtrl=i,this.storage=a,this.modalCtrl=r,this.ENV=t.a,this.credential={documento:"",password:"",isDevice:"1",lembrar:!1},this.lembrar="nao",this.globalUrl="",this.idiom="",this.project="",this.hide=!0,this.authService.logout(),this.hide=!1,this.navParams.get("logout")&&(this.navCtrl.push("login-page"),this.authService.logoutSave()),a.get("GlobalUrl").then(function(n){o.globalUrl=n}),this.storage.get("clienteSaveDocumento").then(function(n){if(n){var l=o.loadingCtrl.create({content:"Espere..."});l.present(),o.storage.get("clienteSavePassword").then(function(e){e?(o.credential.documento=n,o.credential.password=e,o.authService.login(o.credential).then(function(n){n?(l.dismiss(),o.navCtrl.push("tab-page")):l.dismiss()})):l.dismiss()})}})}return n.prototype.ngOnInit=function(){var n=this;this.storage.get("LayoutVersion").then(function(l){n.version=l}),this.storage.get("Project").then(function(l){n.background=l,n.project=l}),this.storage.get("Idiom").then(function(l){n.idiom=l})},n.prototype.ngIfCtrl=function(){this.hide=!this.hide},n.prototype.openPage=function(n){if("downloads"==n){this.modalCtrl.create("download-modal").present()}},n.prototype.login=function(){var n=this;if(this.prosseguir=!1,"01"==this.idiom?14==this.credential.documento.length?this.ValidaCPF(this.credential.documento)&&(this.prosseguir=!0):18==this.credential.documento.length&&(this.prosseguir=!0):this.credential.documento.length>0&&(this.prosseguir=!0),this.prosseguir){this.authService.logout();var l=this.loadingCtrl.create({content:"Espere..."});l.present(),this.hide?this.authService.login(this.credential).then(function(e){if(l.dismiss(),e)n.navCtrl.push("tab-page");else{n.toastCtrl.create({message:"02"==n.idiom?"Correo o Contraseña inválidos":"CPF e/ou Senha inválidos",duration:6e3,position:"top"}).present()}}):this.authService.firstAcess(this.credential).then(function(e){if(l.dismiss(),e)n.storage.get("clienteFirst").then(function(l){if("1"!=l){(e=n.toastCtrl.create({message:"02"==n.idiom?"Por favor, entrar con tu contraseña":"Favor entrar com sua senha de acesso",duration:2e3,position:"top"})).present(),n.ngIfCtrl()}else{var e;(e=n.toastCtrl.create({message:"02"==n.idiom?"Bienvenido, ponga tus datos para acesar la palicación":"Seja bem vindo(a)! Preencha seus dados para acesso",duration:2e3,position:"top"})).onDidDismiss(function(){n.navCtrl.setRoot("edit-user-v02-page",{first:"true"})}),e.present()}});else{var t=n.toastCtrl.create({message:"edicom"==n.project?"Correo electrónico no registrado":"02"==n.idiom?"Haga tu registro":"Para acesso, faça seu cadastro",duration:2e3,position:"top"});"edicom"!=n.project&&t.onDidDismiss(function(){n.navCtrl.setRoot("register-page",{documento:n.credential.documento})}),t.present()}})}else{this.toastCtrl.create({message:"01"==this.idiom?"CPF/CNPJ inválido":"Email inválido",duration:2e3,position:"top"}).present()}},n.prototype.recoveryPassword=function(){this.navCtrl.push("recovey-password-page")},n.prototype.ValidaCPF=function(n){if(null==(n=n.replace(".","").replace(".","").replace("-","")))return!1;if(11!=n.length)return!1;if("00000000000"==n||"11111111111"==n||"22222222222"==n||"33333333333"==n||"44444444444"==n||"55555555555"==n||"66666666666"==n||"77777777777"==n||"88888888888"==n||"99999999999"==n)return!1;var l="",e=10,t=0,u=0,i=0,a=0,r="";r=n.substring(0,9);for(var o=0;o<9;o++){if(l=r.charAt(o),-1=="0123456789".search(l))return!1;t+=Number(l)*e,e--}(i=11-(u=t%11))>9&&(i=0),e=11,t=0,r+=i;for(o=0;o<10;o++)l=r.charAt(o),t+=Number(l)*e,e--;return u=t%11,(a=11-u)>9&&(a=0),r+=a,n==r},n.prototype.selectIdiom=function(n){this.idiom=n,this.storage.set("idiom",n)},n}()},460:function(n,l,e){"use strict";function t(n){return u["ɵvid"](0,[(n()(),u["ɵeld"](0,0,null,null,1,"div",[["class","checkbox-icon"]],[[2,"checkbox-checked",null]],null,null,null,null)),(n()(),u["ɵeld"](1,0,null,null,0,"div",[["class","checkbox-inner"]],null,null,null,null,null)),(n()(),u["ɵeld"](2,0,null,null,2,"button",[["class","item-cover"],["ion-button","item-cover"],["role","checkbox"],["type","button"]],[[8,"id",0],[1,"aria-checked",0],[1,"aria-labelledby",0],[1,"aria-disabled",0]],null,null,i.b,i.a)),u["ɵdid"](3,1097728,null,0,a.a,[[8,"item-cover"],r.a,u.ElementRef,u.Renderer],null,null),(n()(),u["ɵted"](-1,0,[" "]))],null,function(n,l){var e=l.component;n(l,0,0,e._value);n(l,2,0,e.id,e._value,e._labelId,e._disabled)})}e.d(l,"a",function(){return o}),l.b=t;var u=e(0),i=e(45),a=e(20),r=e(2),o=(e(16),u["ɵcrt"]({encapsulation:2,styles:[],data:{}}))}});
+webpackJsonp([5],{
+
+/***/ 462:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserFormModule", function() { return UserFormModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__user_form__ = __webpack_require__(494);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_brmasker_ionic_3__ = __webpack_require__(481);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var UserFormModule = /** @class */ (function () {
+    function UserFormModule() {
+    }
+    UserFormModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [__WEBPACK_IMPORTED_MODULE_1__user_form__["a" /* UserFormComponent */]],
+            imports: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicModule */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_1__user_form__["a" /* UserFormComponent */]), __WEBPACK_IMPORTED_MODULE_3_brmasker_ionic_3__["a" /* BrMaskerModule */]],
+            exports: [__WEBPACK_IMPORTED_MODULE_1__user_form__["a" /* UserFormComponent */]]
+        })
+    ], UserFormModule);
+    return UserFormModule;
+}());
+
+//# sourceMappingURL=user-form.module.js.map
+
+/***/ }),
+
+/***/ 477:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export BrMaskModel */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BrMaskerIonic3; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(17);
+
+
+var BrMaskModel = (function () {
+    function BrMaskModel() {
+        this.type = 'alfa';
+        this.decimal = 2;
+        this.decimalCaracter = ",";
+        this.userCaracters = false;
+        this.numberAndTousand = false;
+    }
+    return BrMaskModel;
+}());
+
+var BrMaskerIonic3 = (function () {
+    function BrMaskerIonic3(_renderer, _elementRef) {
+        this._renderer = _renderer;
+        this._elementRef = _elementRef;
+        this.brmasker = new BrMaskModel();
+    }
+    BrMaskerIonic3.prototype.inputKeyup = function (event) {
+        var value = this.returnValue(event.target.value);
+        this.writeValue(value);
+        event.target.value = value;
+    };
+    BrMaskerIonic3.prototype.inputOnblur = function (event) {
+        var value = this.returnValue(event.value);
+        this.writeValue(value);
+        event.value = value;
+    };
+    BrMaskerIonic3.prototype.inputFocus = function (event) {
+        var value = this.returnValue(event.value);
+        this.writeValue(value);
+        event.value = value;
+    };
+    BrMaskerIonic3.prototype.ngOnInit = function () {
+        if (!this.brmasker.type) {
+            this.brmasker.type = 'all';
+        }
+        if (!this.brmasker.decimal) {
+            this.brmasker.decimal = 2;
+        }
+        if (!this.brmasker.decimalCaracter) {
+            this.brmasker.decimalCaracter = ',';
+        }
+    };
+    BrMaskerIonic3.prototype.writeValue = function (fn) {
+        this._renderer.setElementProperty(this._elementRef.nativeElement, 'value', fn);
+    };
+    BrMaskerIonic3.prototype.registerOnChange = function (fn) {
+        return;
+    };
+    BrMaskerIonic3.prototype.registerOnTouched = function (fn) {
+        return;
+    };
+    BrMaskerIonic3.prototype.setDisabledState = function (isDisabled) {
+        if (isDisabled) {
+            this._renderer.setElementAttribute(this._elementRef.nativeElement, 'disabled', 'true');
+        }
+        else {
+            this._renderer.setElementAttribute(this._elementRef.nativeElement, 'disabled', 'false');
+        }
+    };
+    BrMaskerIonic3.prototype.writeCreateValue = function (value, config) {
+        if (config === void 0) { config = new BrMaskModel(); }
+        if (value && config.phone) {
+            return value.replace(/^(?:(?:\+|00)?(55)\s?)?(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4}))$/gi, '$1 ($2) $3-$4');
+        }
+        if (value && config.money) {
+            return this.writeValueMoney(value, config);
+        }
+        if (value && config.person) {
+            return this.writeValuePerson(value);
+        }
+        if (value && config.percent) {
+            return this.writeValuePercent(value);
+        }
+        if (value && config.mask) {
+            this.brmasker.mask = config.mask;
+            if (config.len) {
+                this.brmasker.len = config.len;
+            }
+            return this.onInput(value);
+        }
+        return value;
+    };
+    BrMaskerIonic3.prototype.writeValuePercent = function (value) {
+        value.replace(/\D/gi, '');
+        value.replace(/%/gi, '');
+        return value.replace(/([0-9]{0})$/gi, '%$1');
+    };
+    BrMaskerIonic3.prototype.writeValuePerson = function (value) {
+        if (value.length <= 11) {
+            return value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/gi, '\$1.\$2.\$3\-\$4');
+        }
+        else {
+            return value.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/gi, '\$1.\$2.\$3\/\$4\-\$5');
+        }
+    };
+    BrMaskerIonic3.prototype.writeValueMoney = function (value, config) {
+        if (config === void 0) { config = new BrMaskModel(); }
+        return this.moneyMask(value, config);
+    };
+    BrMaskerIonic3.prototype.returnValue = function (value) {
+        if (!this.brmasker.mask) {
+            this.brmasker.mask = '';
+        }
+        if (value) {
+            var v = value;
+            if (this.brmasker.type == 'alfa') {
+                v = v.replace(/\d/gi, '');
+            }
+            if (this.brmasker.type == 'num') {
+                v = v.replace(/\D/gi, '');
+            }
+            if (this.brmasker.money) {
+                return this.moneyMask(this.onInput(v), this.brmasker);
+            }
+            if (this.brmasker.phone) {
+                return this.phoneMask(v);
+            }
+            if (this.brmasker.phoneNotDDD) {
+                return this.phoneNotDDDMask(v);
+            }
+            if (this.brmasker.person) {
+                return this.peapollMask(v);
+            }
+            if (this.brmasker.percent) {
+                return this.percentMask(v);
+            }
+            if (this.brmasker.numberAndTousand) {
+                return this.thousand(v);
+            }
+            if (this.brmasker.userCaracters) {
+                return this.usingSpecialCharacters(v, this.brmasker.mask, this.brmasker.len);
+            }
+            return this.onInput(v);
+        }
+        else {
+            return '';
+        }
+    };
+    BrMaskerIonic3.prototype.percentMask = function (v) {
+        var tmp = v;
+        tmp = tmp.replace(/\D/gi, '');
+        tmp = tmp.replace(/%/gi, '');
+        tmp = tmp.replace(/([0-9]{0})$/gi, '%$1');
+        return tmp;
+    };
+    BrMaskerIonic3.prototype.phoneMask = function (v) {
+        var n = v;
+        if (n.length > 14) {
+            this.brmasker.len = 15;
+            this.brmasker.mask = '(99) 99999-9999';
+            n = n.replace(/\D/gi, '');
+            n = n.replace(/(\d{2})(\d)/gi, '$1 $2');
+            n = n.replace(/(\d{5})(\d)/gi, '$1-$2');
+            n = n.replace(/(\d{4})(\d)/gi, '$1$2');
+        }
+        else {
+            this.brmasker.len = 14;
+            this.brmasker.mask = '(99) 9999-9999';
+            n = n.replace(/\D/gi, '');
+            n = n.replace(/(\d{2})(\d)/gi, '$1 $2');
+            n = n.replace(/(\d{4})(\d)/gi, '$1-$2');
+            n = n.replace(/(\d{4})(\d)/gi, '$1$2');
+        }
+        return this.onInput(n);
+    };
+    BrMaskerIonic3.prototype.phoneNotDDDMask = function (v) {
+        var n = v;
+        if (n.length > 9) {
+            this.brmasker.len = 10;
+            this.brmasker.mask = '99999-9999';
+            n = n.replace(/\D/gi, '');
+            n = n.replace(/(\d{5})(\d)/gi, '$1-$2');
+            n = n.replace(/(\d{4})(\d)/gi, '$1$2');
+        }
+        else {
+            this.brmasker.len = 9;
+            this.brmasker.mask = '9999-9999';
+            n = n.replace(/\D/gi, '');
+            n = n.replace(/(\d{4})(\d)/gi, '$1-$2');
+            n = n.replace(/(\d{4})(\d)/gi, '$1$2');
+        }
+        return this.onInput(n);
+    };
+    BrMaskerIonic3.prototype.peapollMask = function (v) {
+        var n = v;
+        if (n.length > 14) {
+            this.brmasker.len = 18;
+            this.brmasker.mask = '99.999.999/9999-99';
+            n = n.replace(/\D/gi, '');
+            n = n.replace(/(\d{2})(\d)/gi, '$1.$2');
+            n = n.replace(/(\d{3})(\d)/gi, '$1.$2');
+            n = n.replace(/(\d{3})(\d)/gi, '$1/$2');
+            n = n.replace(/(\d{4})(\d{1,4})$/gi, '$1-$2');
+            n = n.replace(/(\d{2})(\d{1,2})$/gi, '$1$2');
+        }
+        else {
+            this.brmasker.len = 14;
+            this.brmasker.mask = '999.999.999-99';
+            n = n.replace(/\D/gi, '');
+            n = n.replace(/(\d{3})(\d)/gi, '$1.$2');
+            n = n.replace(/(\d{3})(\d)/gi, '$1.$2');
+            n = n.replace(/(\d{3})(\d{1,2})$/gi, '$1-$2');
+        }
+        return this.onInput(n);
+    };
+    BrMaskerIonic3.prototype.moneyMask = function (value, config) {
+        var decimal = config.decimal || this.brmasker.decimal;
+        value = value
+            .replace(/\D/gi, '')
+            .replace(new RegExp("([0-9]{" + decimal + "})$", "g"), config.decimalCaracter + '$1');
+        if (value.length === decimal + 1) {
+            return "0" + value; // leading 0 so we're not left with something weird like ",50"
+        }
+        else if (value.length > decimal + 2 && value.charAt(0) === '0') {
+            return value.substr(1); // remove leading 0 when we don't need it anymore
+        }
+        if (config.thousand && value.length > (Number(4) + Number(config.decimal))) {
+            value = value.replace(new RegExp("([0-9]{3})" + config.decimalCaracter + "([0-9]{" + config.decimal + "}$)", "g"), config.thousand + "$1" + config.decimalCaracter + "$2");
+        }
+        if (config.thousand && value.length > (Number(8) + Number(config.decimal))) {
+            value = value.replace(new RegExp("([0-9]{3})" + config.thousand + "([0-9]{3})" + config.decimalCaracter + "([0-9]{" + config.decimal + "}$)", "g"), config.thousand + "$1" + config.thousand + "$2" + config.decimalCaracter + "$3");
+        }
+        return value;
+    };
+    BrMaskerIonic3.prototype.onInput = function (value) {
+        var ret = this.formatField(value, this.brmasker.mask, this.brmasker.len);
+        return ret;
+        // if (ret) {
+        //   this.element.nativeElement.value = ret;
+        // }
+    };
+    BrMaskerIonic3.prototype.thousand = function (value) {
+        var val = value.replace(/\D/gi, '');
+        var reverse = val.toString().split('').reverse().join('');
+        var thousands = reverse.match(/\d{1,3}/g);
+        if (thousands) {
+            return thousands.join("" + (this.brmasker.thousand || '.')).split('').reverse().join('');
+        }
+        return val;
+    };
+    BrMaskerIonic3.prototype.usingSpecialCharacters = function (campo, Mascara, tamanho) {
+        if (!tamanho) {
+            tamanho = 99999999999;
+        }
+        var boleanoMascara;
+        var exp = /\-|\.|\,| /gi;
+        var campoSoNumeros = campo.toString().replace(exp, '');
+        var posicaoCampo = 0;
+        var NovoValorCampo = '';
+        var TamanhoMascara = campoSoNumeros.length;
+        for (var i = 0; i < TamanhoMascara; i++) {
+            if (i < tamanho) {
+                boleanoMascara = ((Mascara.charAt(i) === '-') || (Mascara.charAt(i) === '.') || (Mascara.charAt(i) === ','));
+                if (boleanoMascara) {
+                    NovoValorCampo += Mascara.charAt(i);
+                    TamanhoMascara++;
+                }
+                else {
+                    NovoValorCampo += campoSoNumeros.charAt(posicaoCampo);
+                    posicaoCampo++;
+                }
+            }
+        }
+        return NovoValorCampo;
+    };
+    BrMaskerIonic3.prototype.formatField = function (campo, Mascara, tamanho) {
+        if (!tamanho) {
+            tamanho = 99999999999;
+        }
+        var boleanoMascara;
+        var exp = /\-|\.|\/|\(|\)|\,|\*|\+|\@|\#|\$|\&|\%|\:| /gi;
+        var campoSoNumeros = campo.toString().replace(exp, '');
+        var posicaoCampo = 0;
+        var NovoValorCampo = '';
+        var TamanhoMascara = campoSoNumeros.length;
+        for (var i = 0; i < TamanhoMascara; i++) {
+            if (i < tamanho) {
+                boleanoMascara = ((Mascara.charAt(i) === '-') || (Mascara.charAt(i) === '.') || (Mascara.charAt(i) === '/'));
+                boleanoMascara = boleanoMascara || ((Mascara.charAt(i) === '(') || (Mascara.charAt(i) === ')') || (Mascara.charAt(i) === ' '));
+                boleanoMascara = boleanoMascara || ((Mascara.charAt(i) === ',') || (Mascara.charAt(i) === '*') || (Mascara.charAt(i) === '+'));
+                boleanoMascara = boleanoMascara || ((Mascara.charAt(i) === '@') || (Mascara.charAt(i) === '#') || (Mascara.charAt(i) === ':'));
+                boleanoMascara = boleanoMascara || ((Mascara.charAt(i) === '$') || (Mascara.charAt(i) === '&') || (Mascara.charAt(i) === '%'));
+                if (boleanoMascara) {
+                    NovoValorCampo += Mascara.charAt(i);
+                    TamanhoMascara++;
+                }
+                else {
+                    NovoValorCampo += campoSoNumeros.charAt(posicaoCampo);
+                    posicaoCampo++;
+                }
+            }
+        }
+        return NovoValorCampo;
+    };
+    return BrMaskerIonic3;
+}());
+
+BrMaskerIonic3.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{
+                selector: '[brmasker]',
+                providers: [
+                    {
+                        provide: __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* NG_VALUE_ACCESSOR */],
+                        useExisting: BrMaskerIonic3,
+                        multi: true
+                    }
+                ]
+            },] },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+];
+/** @nocollapse */
+BrMaskerIonic3.ctorParameters = function () { return [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Renderer"], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"], },
+]; };
+BrMaskerIonic3.propDecorators = {
+    'brmasker': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    'inputKeyup': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"], args: ['keyup', ['$event'],] },],
+    'inputOnblur': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"], args: ['ionBlur', ['$event'],] },],
+    'inputFocus': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"], args: ['ionFocus', ['$event'],] },],
+};
+//# sourceMappingURL=brmasker-ionic-3.js.map
+
+/***/ }),
+
+/***/ 478:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export BrMaskServicesModel */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BrMaskerIonicServices3; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+
+var BrMaskServicesModel = (function () {
+    function BrMaskServicesModel() {
+        this.type = 'alfa';
+        this.decimal = 2;
+        this.decimalCaracter = ",";
+        this.userCaracters = false;
+        this.numberAndTousand = false;
+    }
+    return BrMaskServicesModel;
+}());
+
+var BrMaskerIonicServices3 = (function () {
+    function BrMaskerIonicServices3() {
+        this.brmasker = new BrMaskServicesModel();
+    }
+    BrMaskerIonicServices3.prototype.ngOnInit = function () {
+        if (!this.brmasker.type) {
+            this.brmasker.type = 'all';
+        }
+        if (!this.brmasker.decimal) {
+            this.brmasker.decimal = 2;
+        }
+        if (!this.brmasker.decimalCaracter) {
+            this.brmasker.decimalCaracter = ',';
+        }
+    };
+    BrMaskerIonicServices3.prototype.writeCreateValue = function (value, config) {
+        if (config === void 0) { config = new BrMaskServicesModel(); }
+        if (value && config.phone) {
+            return value.replace(/^(?:(?:\+|00)?(55)\s?)?(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4}))$/gi, '$1 ($2) $3-$4');
+        }
+        if (value && config.money) {
+            return this.writeValueMoney(value, config);
+        }
+        if (value && config.person) {
+            return this.writeValuePerson(value);
+        }
+        if (value && config.percent) {
+            return this.writeValuePercent(value);
+        }
+        if (value && config.numberAndTousand) {
+            return this.writeValueNumberAndThousand(value);
+        }
+        if (value && config.userCaracters) {
+            return this.writeValueusingSpecialCharacters(value);
+        }
+        if (value && config.mask) {
+            this.brmasker.mask = config.mask;
+            if (config.len) {
+                this.brmasker.len = config.len;
+            }
+            return this.onInput(value);
+        }
+        return value;
+    };
+    BrMaskerIonicServices3.prototype.writeValuePercent = function (value) {
+        value.replace(/\D/gi, '');
+        value.replace(/%/gi, '');
+        return value.replace(/([0-9]{0})$/gi, '%$1');
+    };
+    BrMaskerIonicServices3.prototype.writeValuePerson = function (value) {
+        if (value.length <= 11) {
+            return value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/gi, '\$1.\$2.\$3\-\$4');
+        }
+        else {
+            return value.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/gi, '\$1.\$2.\$3\/\$4\-\$5');
+        }
+    };
+    BrMaskerIonicServices3.prototype.writeValueMoney = function (value, config) {
+        if (config === void 0) { config = new BrMaskServicesModel(); }
+        return this.moneyMask(value, config);
+    };
+    BrMaskerIonicServices3.prototype.writeValueNumberAndThousand = function (value, config) {
+        if (config === void 0) { config = new BrMaskServicesModel(); }
+        return this.thousand(value);
+    };
+    BrMaskerIonicServices3.prototype.writeValueusingSpecialCharacters = function (value, config) {
+        if (config === void 0) { config = new BrMaskServicesModel(); }
+        return this.usingSpecialCharacters(value, config.mask, config.len);
+    };
+    BrMaskerIonicServices3.prototype.moneyMask = function (value, config) {
+        var decimal = config.decimal || this.brmasker.decimal;
+        value = value
+            .replace(/\D/gi, '')
+            .replace(new RegExp("([0-9]{" + decimal + "})$", "g"), config.decimalCaracter + '$1');
+        if (value.length === decimal + 1) {
+            return "0" + value; // leading 0 so we're not left with something weird like ",50"
+        }
+        else if (value.length > decimal + 2 && value.charAt(0) === '0') {
+            return value.substr(1); // remove leading 0 when we don't need it anymore
+        }
+        if (config.thousand && value.length > (Number(4) + Number(config.decimal))) {
+            value = value.replace(new RegExp("([0-9]{3})" + config.decimalCaracter + "([0-9]{" + config.decimal + "}$)", "g"), config.thousand + "$1" + config.decimalCaracter + "$2");
+        }
+        if (config.thousand && value.length > (Number(8) + Number(config.decimal))) {
+            value = value.replace(new RegExp("([0-9]{3})" + config.thousand + "([0-9]{3})" + config.decimalCaracter + "([0-9]{" + config.decimal + "}$)", "g"), config.thousand + "$1" + config.thousand + "$2" + config.decimalCaracter + "$3");
+        }
+        return value;
+    };
+    BrMaskerIonicServices3.prototype.onInput = function (value) {
+        var ret = this.formatField(value, this.brmasker.mask, this.brmasker.len);
+        return ret;
+    };
+    BrMaskerIonicServices3.prototype.thousand = function (value) {
+        var val = value.replace(/\D/gi, '');
+        var reverse = val.toString().split('').reverse().join('');
+        var thousands = reverse.match(/\d{1,3}/g);
+        val = thousands.join("" + (this.brmasker.thousand || '.')).split('').reverse().join('');
+        return val;
+    };
+    BrMaskerIonicServices3.prototype.usingSpecialCharacters = function (campo, Mascara, tamanho) {
+        if (!tamanho) {
+            tamanho = 99999999999;
+        }
+        var boleanoMascara;
+        var exp = /\-|\.|\,| /gi;
+        var campoSoNumeros = campo.toString().replace(exp, '');
+        var posicaoCampo = 0;
+        var NovoValorCampo = '';
+        var TamanhoMascara = campoSoNumeros.length;
+        for (var i = 0; i < TamanhoMascara; i++) {
+            if (i < tamanho) {
+                boleanoMascara = ((Mascara.charAt(i) === '-') || (Mascara.charAt(i) === '.') || (Mascara.charAt(i) === ','));
+                if (boleanoMascara) {
+                    NovoValorCampo += Mascara.charAt(i);
+                    TamanhoMascara++;
+                }
+                else {
+                    NovoValorCampo += campoSoNumeros.charAt(posicaoCampo);
+                    posicaoCampo++;
+                }
+            }
+        }
+        return NovoValorCampo;
+    };
+    BrMaskerIonicServices3.prototype.formatField = function (campo, Mascara, tamanho) {
+        if (!tamanho) {
+            tamanho = 99999999999;
+        }
+        var boleanoMascara;
+        var exp = /\-|\.|\/|\(|\)|\,|\*|\+|\@|\#|\$|\&|\%|\:| /gi;
+        var campoSoNumeros = campo.toString().replace(exp, '');
+        var posicaoCampo = 0;
+        var NovoValorCampo = '';
+        var TamanhoMascara = campoSoNumeros.length;
+        for (var i = 0; i < TamanhoMascara; i++) {
+            if (i < tamanho) {
+                boleanoMascara = ((Mascara.charAt(i) === '-') || (Mascara.charAt(i) === '.') || (Mascara.charAt(i) === '/'));
+                boleanoMascara = boleanoMascara || ((Mascara.charAt(i) === '(') || (Mascara.charAt(i) === ')') || (Mascara.charAt(i) === ' '));
+                boleanoMascara = boleanoMascara || ((Mascara.charAt(i) === ',') || (Mascara.charAt(i) === '*') || (Mascara.charAt(i) === '+'));
+                boleanoMascara = boleanoMascara || ((Mascara.charAt(i) === '@') || (Mascara.charAt(i) === '#') || (Mascara.charAt(i) === ':'));
+                boleanoMascara = boleanoMascara || ((Mascara.charAt(i) === '$') || (Mascara.charAt(i) === '&') || (Mascara.charAt(i) === '%'));
+                if (boleanoMascara) {
+                    NovoValorCampo += Mascara.charAt(i);
+                    TamanhoMascara++;
+                }
+                else {
+                    NovoValorCampo += campoSoNumeros.charAt(posicaoCampo);
+                    posicaoCampo++;
+                }
+            }
+        }
+        return NovoValorCampo;
+    };
+    return BrMaskerIonicServices3;
+}());
+
+BrMaskerIonicServices3.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{
+                selector: '[brmasker]',
+            },] },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+];
+/** @nocollapse */
+BrMaskerIonicServices3.ctorParameters = function () { return []; };
+//# sourceMappingURL=brmasker-ionic-services.js.map
+
+/***/ }),
+
+/***/ 481:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_module__ = __webpack_require__(482);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__app_module__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__directives__ = __webpack_require__(483);
+/* unused harmony namespace reexport */
+
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ 482:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BrMaskerModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__directives_brmasker_ionic_3__ = __webpack_require__(477);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_brmasker_ionic_services__ = __webpack_require__(478);
+
+
+
+
+var BrMaskerModule = (function () {
+    function BrMaskerModule() {
+    }
+    return BrMaskerModule;
+}());
+
+BrMaskerModule.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"], args: [{
+                declarations: [
+                    __WEBPACK_IMPORTED_MODULE_2__directives_brmasker_ionic_3__["a" /* BrMaskerIonic3 */],
+                    __WEBPACK_IMPORTED_MODULE_3__directives_brmasker_ionic_services__["a" /* BrMaskerIonicServices3 */]
+                ],
+                exports: [
+                    __WEBPACK_IMPORTED_MODULE_2__directives_brmasker_ionic_3__["a" /* BrMaskerIonic3 */],
+                    __WEBPACK_IMPORTED_MODULE_3__directives_brmasker_ionic_services__["a" /* BrMaskerIonicServices3 */]
+                ],
+                imports: [
+                    __WEBPACK_IMPORTED_MODULE_0__angular_common__["CommonModule"]
+                ],
+                schemas: [
+                    __WEBPACK_IMPORTED_MODULE_1__angular_core__["CUSTOM_ELEMENTS_SCHEMA"]
+                ],
+                providers: [__WEBPACK_IMPORTED_MODULE_3__directives_brmasker_ionic_services__["a" /* BrMaskerIonicServices3 */]]
+            },] },
+];
+/** @nocollapse */
+BrMaskerModule.ctorParameters = function () { return []; };
+//# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ 483:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__brmasker_ionic_3__ = __webpack_require__(477);
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__brmasker_ionic_services__ = __webpack_require__(478);
+/* unused harmony namespace reexport */
+
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ 494:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserFormComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(111);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var UserFormComponent = /** @class */ (function () {
+    function UserFormComponent(navParams, storage, viewCtrl, toastCtrl) {
+        var _this = this;
+        this.navParams = navParams;
+        this.storage = storage;
+        this.viewCtrl = viewCtrl;
+        this.toastCtrl = toastCtrl;
+        this.ENV = __WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */];
+        this.globalUrl = '';
+        this.credential = navParams.data;
+        if (this.credential.password)
+            this.password2 = this.credential.password;
+        storage.get('GlobalUrl').then(function (value) {
+            _this.globalUrl = value;
+        });
+    }
+    UserFormComponent.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        this.storage.get('Project').then(function (value) {
+            _this.project = value;
+            /*PROJETOS:
+              marketing-house
+              edicom
+              vcc
+            */
+        });
+        this.storage.get('LayoutVersion').then(function (value) {
+            _this.version = value;
+        });
+    };
+    UserFormComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.storage.get('Idiom').then(function (value) {
+            _this.idiom = value;
+        });
+    };
+    UserFormComponent.prototype.confirm = function () {
+        var mensagemRetorno = '';
+        if (!this.credential.nome)
+            mensagemRetorno = 'Favor preencher o campo nome';
+        else if (!this.credential.whatsapp)
+            mensagemRetorno = 'Favor preencher o campo Telefone';
+        else if (!this.credential.nascimento && this.project != "edicom")
+            mensagemRetorno = 'Favor preencher o campo Data de nascimento';
+        else if (!this.credential.email)
+            mensagemRetorno = 'Favor preencher o campo e-mail';
+        else if (!this.credential.password)
+            mensagemRetorno = 'Favor preencher o campo senha';
+        else if (!this.password2)
+            mensagemRetorno = 'Favor preencher o campo de confirmação de senha';
+        else if (this.password2 != this.credential.password)
+            mensagemRetorno = 'Senha e senha de confirmação precisam ser iguais';
+        if (mensagemRetorno != '') {
+            var toast = this.toastCtrl.create({
+                message: mensagemRetorno,
+                duration: 3000,
+                position: 'top'
+            });
+            toast.present();
+        }
+        else {
+            this.viewCtrl.dismiss(this.credential);
+        }
+    };
+    UserFormComponent.prototype.cancel = function () {
+        this.viewCtrl.dismiss();
+    };
+    UserFormComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'user-form',template:/*ion-inline-start:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\components\user-form\user-form.html"*/'\n\n<ion-header [ngClass]="version == \'01\' ? \'principalHeader\' : version == \'02\' ? \'principalHeaderV02\' : \'principalHeader\'">\n\n  <div>\n\n    <img [ngClass]="version == \'01\' ? \'principal-icon\' : version == \'02\' ? \'principal-icon-v02\' : \'principal-icon\'"\n\n     src="{{ globalUrl + \'/storage/uploads/configs/logoHeader.png\' }}" />\n\n\n\n    <img *ngIf="version == \'01\'" class="testeira-v01" \n\n    src="{{ globalUrl + \'/storage/uploads/configs/testeira1.png\' }}" >\n\n\n\n    <img *ngIf="version == \'02\'" class="testeira-v02" \n\n    src="{{ globalUrl + \'/storage/uploads/configs/testeira2.png\' }}" >\n\n\n\n  </div>\n\n</ion-header>\n\n<ion-content style="background-color: #fff;" class="content {{ENV.PROJECT}}-custom-bg" [ngClass]="version == \'01\' ? \'margin-content-l1\' : version == \'02\' ? \'margin-content-l2\' : \'margin-content-l1\'" padding>\n\n  <ion-card padding>\n\n    <ion-item>\n\n      <ion-label *ngIf="idiom ==\'01\'" floating>Nome *</ion-label>\n\n      <ion-label *ngIf="idiom ==\'02\'" floating>Nombre *</ion-label>\n\n      <ion-input type="text" [(ngModel)]="credential.nome"></ion-input>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label *ngIf="idiom ==\'01\'" floating>Tel *</ion-label>\n\n      <ion-label *ngIf="idiom ==\'02\'" floating>Mobile *</ion-label>\n\n      <ion-input type="text" [brmasker]="{mask:\'(00) 00000-0000\', len:15, type:\'num\'}" [(ngModel)]="credential.whatsapp"></ion-input>\n\n    </ion-item>\n\n\n\n    <ion-item *ngIf="project != \'edicom\'">\n\n      <ion-label *ngIf="idiom ==\'01\'" floating>Data de Nasc *</ion-label>\n\n      <ion-label *ngIf="idiom ==\'02\'" floating>Fecha de Nasc *</ion-label>\n\n      <ion-input type="text" [brmasker]="{mask:\'00/00/0000\', len:10, type:\'num\'}" [(ngModel)]="credential.nascimento"></ion-input>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label *ngIf="idiom ==\'01\'" floating>E-mail *</ion-label>\n\n      <ion-label *ngIf="idiom ==\'02\'" floating>Correo *</ion-label>\n\n      <ion-input type="email" [(ngModel)]="credential.email"></ion-input>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label  *ngIf="habilitaCampos && idiom ==\'01\'" floating>Senha **</ion-label>\n\n      <ion-label  *ngIf="!habilitaCampos && idiom ==\'01\'" floating>Senha *</ion-label>\n\n      <ion-label  *ngIf="habilitaCampos && idiom ==\'02\'" floating>Contraseña **</ion-label>\n\n      <ion-label  *ngIf="!habilitaCampos && idiom ==\'02\'" floating>Contraseña *</ion-label>\n\n      <ion-input type="password" [(ngModel)]="credential.password"></ion-input>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label  *ngIf="habilitaCampos && idiom ==\'01\'" floating>Confirmar Senha **</ion-label>\n\n      <ion-label  *ngIf="!habilitaCampos && idiom ==\'01\'" floating>Confirmar Senha *</ion-label>\n\n      <ion-label  *ngIf="habilitaCampos && idiom ==\'02\'" floating>Confirmar Contraseña **</ion-label>\n\n      <ion-label  *ngIf="!habilitaCampos && idiom ==\'02\'" floating>Confirmar Contraseña *</ion-label>\n\n      <ion-input type="password" [(ngModel)]="password2"></ion-input>\n\n    </ion-item>\n\n  \n\n  </ion-card>\n\n  <div padding class="grid-style">\n\n    <button class="button-style button-style-{{ENV.PROJECT}}" *ngIf="idiom ==\'01\'" ion-button (click)="confirm()"><p>Confirmar</p></button>\n\n    <button class="button-style button-style-{{ENV.PROJECT}}" *ngIf="credential.firstAccess == false &&  idiom ==\'01\'" ion-button (click)="cancel()"><p>Voltar</p></button>\n\n\n\n    <button class="button-style button-style-{{ENV.PROJECT}}" *ngIf="idiom ==\'02\'" ion-button (click)="confirm()"><p>Confirmar</p></button>\n\n    <button class="button-style button-style-{{ENV.PROJECT}}" *ngIf="credential.firstAccess == false && idiom ==\'02\'" ion-button (click)="cancel()"><p>Volver</p></button>\n\n  </div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\components\user-form\user-form.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* ViewController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* ToastController */]])
+    ], UserFormComponent);
+    return UserFormComponent;
+}());
+
+//# sourceMappingURL=user-form.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=5.js.map
