@@ -1,15 +1,15 @@
 webpackJsonp([6],{
 
-/***/ 458:
+/***/ 855:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HoleriteModule", function() { return HoleriteModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__holerite__ = __webpack_require__(490);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_brmasker_ionic_3__ = __webpack_require__(481);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__holerite__ = __webpack_require__(887);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_brmasker_ionic_3__ = __webpack_require__(878);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -37,14 +37,14 @@ var HoleriteModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 477:
+/***/ 874:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export BrMaskModel */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BrMaskerIonic3; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(27);
 
 
 var BrMaskModel = (function () {
@@ -373,13 +373,13 @@ BrMaskerIonic3.propDecorators = {
 
 /***/ }),
 
-/***/ 478:
+/***/ 875:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export BrMaskServicesModel */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BrMaskerIonicServices3; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 
 var BrMaskServicesModel = (function () {
     function BrMaskServicesModel() {
@@ -560,13 +560,13 @@ BrMaskerIonicServices3.ctorParameters = function () { return []; };
 
 /***/ }),
 
-/***/ 481:
+/***/ 878:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_module__ = __webpack_require__(482);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_module__ = __webpack_require__(879);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__app_module__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__directives__ = __webpack_require__(483);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__directives__ = __webpack_require__(880);
 /* unused harmony namespace reexport */
 
 
@@ -574,15 +574,15 @@ BrMaskerIonicServices3.ctorParameters = function () { return []; };
 
 /***/ }),
 
-/***/ 482:
+/***/ 879:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BrMaskerModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__directives_brmasker_ionic_3__ = __webpack_require__(477);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_brmasker_ionic_services__ = __webpack_require__(478);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__directives_brmasker_ionic_3__ = __webpack_require__(874);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_brmasker_ionic_services__ = __webpack_require__(875);
 
 
 
@@ -618,13 +618,13 @@ BrMaskerModule.ctorParameters = function () { return []; };
 
 /***/ }),
 
-/***/ 483:
+/***/ 880:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__brmasker_ionic_3__ = __webpack_require__(477);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__brmasker_ionic_3__ = __webpack_require__(874);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__brmasker_ionic_services__ = __webpack_require__(478);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__brmasker_ionic_services__ = __webpack_require__(875);
 /* unused harmony namespace reexport */
 
 
@@ -632,16 +632,28 @@ BrMaskerModule.ctorParameters = function () { return []; };
 
 /***/ }),
 
-/***/ 490:
+/***/ 887:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HoleriteComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(111);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_http_service_http_service__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_moment__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__environments_environment__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_http_service_http_service__ = __webpack_require__(161);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_in_app_browser_ngx__ = __webpack_require__(496);
+var __assign = (this && this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -651,19 +663,76 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
 
 
 
 
 
 var HoleriteComponent = /** @class */ (function () {
-    function HoleriteComponent(navParams, storage, viewCtrl, toastCtrl, httpService) {
+    function HoleriteComponent(navParams, storage, viewCtrl, toastCtrl, httpService, loadingCtrl, dom, iab) {
+        var _this = this;
         this.navParams = navParams;
         this.storage = storage;
         this.viewCtrl = viewCtrl;
         this.toastCtrl = toastCtrl;
         this.httpService = httpService;
-        this.ENV = __WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */];
+        this.loadingCtrl = loadingCtrl;
+        this.dom = dom;
+        this.iab = iab;
+        this.ENV = __WEBPACK_IMPORTED_MODULE_4__environments_environment__["a" /* environment */];
+        this.selectedDate = __WEBPACK_IMPORTED_MODULE_3_moment___default()().format('YYYY');
+        this.holerites = [];
+        this.holeriteURL = '';
+        this.getHolerite = function (id) { return __awaiter(_this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, new Promise(function (resolve, reject) {
+                        _this.httpService.getAll("/api/holerite/get-url/" + id, {}, 'get').subscribe(function (result) {
+                            if (result.success) {
+                                resolve(result.url);
+                            }
+                        });
+                    })];
+            });
+        }); };
         this.credential = navParams.data;
     }
     HoleriteComponent.prototype.ionViewDidLoad = function () {
@@ -679,9 +748,50 @@ var HoleriteComponent = /** @class */ (function () {
         this.storage.get('LayoutVersion').then(function (value) {
             _this.version = value;
         });
-        this.httpService.getAll('/api/holerite/get-url/1', {}, 'get').subscribe(function (result) {
-            console.log("RESULTADO -> ", result);
+        this.listarHolerites();
+    };
+    HoleriteComponent.prototype.openHolerite = function (link) {
+        var browser = this.iab.create(link, '_system');
+    };
+    HoleriteComponent.prototype.limparFiltro = function () {
+        this.selectedDate = null;
+        this.selectedDate = __WEBPACK_IMPORTED_MODULE_3_moment___default()().format("YYYY");
+        this.listarHolerites();
+    };
+    HoleriteComponent.prototype.listarHolerites = function () {
+        var _this = this;
+        this.storage.get('clienteId').then(function (user_id) {
+            var data = {
+                user_id: user_id,
+                year: _this.selectedDate,
+            };
+            _this.holerites = [];
+            var loading = _this.loadingCtrl.create({
+                content: 'Espere...'
+            });
+            loading.present();
+            _this.httpService.getAll('/api/holerite/listar', data, 'get').subscribe(function (result) {
+                result.forEach(function (val) { return __awaiter(_this, void 0, void 0, function () {
+                    var _a, _b, _c, _d;
+                    return __generator(this, function (_e) {
+                        switch (_e.label) {
+                            case 0:
+                                _b = (_a = this.holerites).push;
+                                _c = [{}, val];
+                                _d = { mes: __WEBPACK_IMPORTED_MODULE_3_moment___default()(val.date).locale('pt-br').format('MMM'), ano: __WEBPACK_IMPORTED_MODULE_3_moment___default()(val.date).format('YYYY') };
+                                return [4 /*yield*/, this.getHolerite(val.id)];
+                            case 1:
+                                _b.apply(_a, [__assign.apply(void 0, _c.concat([(_d.urlLink = _e.sent(), _d)]))]);
+                                return [2 /*return*/];
+                        }
+                    });
+                }); });
+                loading.dismiss();
+            });
         });
+    };
+    HoleriteComponent.prototype.visualizarHolerite = function (id) {
+        this.getHolerite(id);
     };
     HoleriteComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -695,15 +805,21 @@ var HoleriteComponent = /** @class */ (function () {
     HoleriteComponent.prototype.cancel = function () {
         this.viewCtrl.dismiss();
     };
+    HoleriteComponent.prototype.sanitizer = function (url) {
+        return this.dom.bypassSecurityTrustResourceUrl(url);
+    };
     HoleriteComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'holerite',template:/*ion-inline-start:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\components\holerite\holerite.html"*/'\n\n<ion-header [ngClass]="version == \'01\' ? \'principalHeader\' : version == \'02\' ? \'principalHeaderV02\' : \'principalHeader\'">\n\n  <div>\n\n    <img [ngClass]="version == \'01\' ? \'principal-icon\' : version == \'02\' ? \'principal-icon-v02\' : \'principal-icon\'"\n\n     src="{{ globalUrl + \'/storage/uploads/configs/logoHeader.png\' }}" />\n\n\n\n    <img *ngIf="version == \'01\'" class="testeira-v01" \n\n    src="{{ globalUrl + \'/storage/uploads/configs/testeira1.png\' }}" >\n\n\n\n    <img *ngIf="version == \'02\'" class="testeira-v02" \n\n    src="{{ globalUrl + \'/storage/uploads/configs/testeira2.png\' }}" >\n\n\n\n  </div>\n\n</ion-header>\n\n<ion-content style="background-color: #fff;" class="content {{ENV.PROJECT}}-custom-bg" [ngClass]="version == \'01\' ? \'margin-content-l1\' : version == \'02\' ? \'margin-content-l2\' : \'margin-content-l1\'" padding>\n\n  \n\n  <div padding>\n\n    <button class="button-style button-style-{{ENV.PROJECT}}" *ngIf="idiom ==\'01\'" ion-button (click)="confirm()"><p>Confirmar</p></button>\n\n    <button class="button-style button-style-{{ENV.PROJECT}}" *ngIf="credential.firstAccess == false &&  idiom ==\'01\'" ion-button (click)="cancel()"><p>Voltar</p></button>\n\n\n\n    <button class="button-style button-style-{{ENV.PROJECT}}" *ngIf="idiom ==\'02\'" ion-button (click)="confirm()"><p>Confirmar</p></button>\n\n    <button class="button-style button-style-{{ENV.PROJECT}}" *ngIf="credential.firstAccess == false && idiom ==\'02\'" ion-button (click)="cancel()"><p>Volver</p></button>\n\n  </div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\components\holerite\holerite.html"*/
+            selector: 'holerite',template:/*ion-inline-start:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\components\holerite\holerite.html"*/'\n\n<ion-header [ngClass]="version == \'01\' ? \'principalHeader\' : version == \'02\' ? \'principalHeaderV02\' : \'principalHeader\'">\n\n  <div>\n\n    <img [ngClass]="version == \'01\' ? \'principal-icon\' : version == \'02\' ? \'principal-icon-v02\' : \'principal-icon\'"\n\n     src="{{ globalUrl + \'/storage/uploads/configs/logoHeader.png\' }}" />\n\n\n\n    <img *ngIf="version == \'01\'" class="testeira-v01" \n\n    src="{{ globalUrl + \'/storage/uploads/configs/testeira1.png\' }}" >\n\n\n\n    <img *ngIf="version == \'02\'" class="testeira-v02" \n\n    src="{{ globalUrl + \'/storage/uploads/configs/testeira2.png\' }}" >\n\n\n\n  </div>\n\n</ion-header>\n\n<ion-content style="background-color: #fff;" class="content {{ENV.PROJECT}}-custom-bg" [ngClass]="version == \'01\' ? \'margin-content-l1\' : version == \'02\' ? \'margin-content-l2\' : \'margin-content-l1\'" padding>\n\n  \n\n  <ion-list>\n\n    <ion-grid class="grid-style">\n\n      <ion-row>\n\n        <h5>Filtrar por data:</h5>\n\n      </ion-row>\n\n      <ion-row>\n\n        <ion-col style="width: 40%;">\n\n          <ion-item>\n\n            <ion-label floating>Ano</ion-label>\n\n            <ion-datetime displayFormat="YYYY" [(ngModel)]="selectedDate"></ion-datetime>\n\n          </ion-item>\n\n        </ion-col>\n\n        <ion-col style="width: 20%;">\n\n          <div padding  style="width: auto;">\n\n            <button class="button-style button-style-{{ENV.PROJECT}}"  ion-button icon-only (click)="listarHolerites()"><ion-icon name="ios-search"></ion-icon></button>\n\n          </div>\n\n        </ion-col>\n\n        <ion-col style="width: 20%;">\n\n          <div padding style="width: auto;">\n\n            <button class="button-style button-style-{{ENV.PROJECT}}"  ion-button (click)="limparFiltro()">limpar</button>\n\n          </div>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n    \n\n\n\n  </ion-list>\n\n    \n\n  <ion-list *ngIf="holerites.length > 0">\n\n    <ion-grid class="grid-style" style="text-align: center;">\n\n      <ion-row>\n\n        <ion-col style="width: 40%;"><b>Ano</b></ion-col>\n\n        <ion-col style="width: 40%;"><b>Mês</b></ion-col>\n\n        <ion-col style="width: 20%;"><b>Ver</b></ion-col>\n\n      </ion-row>\n\n\n\n      <ion-row *ngFor="let holerite of holerites" style="line-height: 50px;">\n\n        <ion-col style="width: 40%;">\n\n          {{holerite.ano}}\n\n        </ion-col>\n\n        <ion-col style="width: 40%;">\n\n          {{holerite.mes}}\n\n        </ion-col>\n\n        <ion-col style="width: 20%;">\n\n          <button  style="width: auto;" ion-button (click)="openHolerite(holerite.urlLink)"><ion-icon name="eye"></ion-icon></button>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n      \n\n  </ion-list>\n\n\n\n  <iframe *ngIf="holeriteURL != \'\'" data-tap-disabled="true" [src]="sanitizer(holeriteURL)"></iframe>\n\n\n\n  <div padding class="grid-style">\n\n    <button class="button-style button-style-{{ENV.PROJECT}}" *ngIf="idiom ==\'01\'" ion-button (click)="confirm()"><p>Voltar</p></button>\n\n    <button class="button-style button-style-{{ENV.PROJECT}}" *ngIf="idiom ==\'02\'" ion-button (click)="confirm()"><p>Volver</p></button>\n\n  </div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\alanj\Desktop\ALAN\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\components\holerite\holerite.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* ViewController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* ToastController */],
-            __WEBPACK_IMPORTED_MODULE_4__providers_http_service_http_service__["a" /* HttpServiceProvider */]])
+            __WEBPACK_IMPORTED_MODULE_5__providers_http_service_http_service__["a" /* HttpServiceProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */],
+            __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__["c" /* DomSanitizer */],
+            __WEBPACK_IMPORTED_MODULE_7__ionic_native_in_app_browser_ngx__["a" /* InAppBrowser */]])
     ], HoleriteComponent);
     return HoleriteComponent;
 }());

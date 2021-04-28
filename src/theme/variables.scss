@@ -106,6 +106,7 @@ $colors: (
   $url-tmc: "https://tmc.becinteligencia.com//storage//uploads//configs//";
   $url-hability: "https://hability.becinteligencia.com//storage//uploads//configs//";
   $url-full-promo: "https://homolog.fullpromo.com.br//storage//uploads//configs//";
+  $url-sehc: "https://sehc.becinteligencia.com//storage//uploads//configs//";
 
   ion-icon {
     //-------------------------------------------------------
@@ -685,6 +686,61 @@ $colors: (
     }
     &[class*="tab-full-promo-news"]{
       content: url($url-full-promo+"internoApp5.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }    
+    
+    //-------------------------------------------------------
+    //SEHC -------------------------------------------------------
+    //-------------------------------------------------------
+
+    &[class*="tab-sehc-"]{
+      width: 30px;
+      height: 30px;
+    }
+
+    &[class*="tab-sehc-perfil"]{
+      content: url($url-sehc+"internoApp1.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-sehc-notificacao"]{
+      content: url($url-sehc+"internoApp2.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-sehc-agenda"]{
+      content: url($url-sehc+"internoApp3.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-sehc-foto"]{
+      content: url($url-sehc+"internoApp4.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-sehc-news"]{
+      content: url($url-sehc+"internoApp5.svg") !important;
       &[ng-reflect-is-active="true"]{
         filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
       }

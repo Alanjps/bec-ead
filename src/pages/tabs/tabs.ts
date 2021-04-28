@@ -178,6 +178,12 @@ export class TabsPage {
           firebaseSenderId = '1067216235696';  
           break;
         }
+        case 'sehc':{
+          onesignalAppId='41ad100c-898c-4a9f-99d9-277244f36858';
+          firebaseKey='AAAAJQrYkQs:APA91bEoNaXdvAmr3avjoKujIMeWSUAcWAOqSPN2XZblWGZzih7xZbaaA7BX9PDEuDHwRdnr5fZTCMqiertxoyAb6hfzFFHp9X4GVk1DDf0b0aaQmAeSaCT6CUsHK2-Bce2mRiZQztxz';
+          firebaseSenderId = '159095755019';  
+          break;
+        }
       }
       /*
         ANTIGO---------------------------------------------       

@@ -53,6 +53,10 @@
     {
       "path": "/full-promo",
       "proxyUrl": "https://homolog.fullpromo.com.br"
+    },
+    {
+      "path": "/sehc",
+      "proxyUrl": "https://sehc.becinteligencia.com/"
     }
   ]
 }

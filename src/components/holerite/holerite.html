@@ -14,11 +14,61 @@
 </ion-header>
 <ion-content style="background-color: #fff;" class="content {{ENV.PROJECT}}-custom-bg" [ngClass]="version == '01' ? 'margin-content-l1' : version == '02' ? 'margin-content-l2' : 'margin-content-l1'" padding>
   
-  <div padding>
-    <button class="button-style button-style-{{ENV.PROJECT}}" *ngIf="idiom =='01'" ion-button (click)="confirm()"><p>Confirmar</p></button>
-    <button class="button-style button-style-{{ENV.PROJECT}}" *ngIf="credential.firstAccess == false &&  idiom =='01'" ion-button (click)="cancel()"><p>Voltar</p></button>
+  <ion-list>
+    <ion-grid class="grid-style">
+      <ion-row>
+        <h5>Filtrar por data:</h5>
+      </ion-row>
+      <ion-row>
+        <ion-col style="width: 40%;">
+          <ion-item>
+            <ion-label floating>Ano</ion-label>
+            <ion-datetime displayFormat="YYYY" [(ngModel)]="selectedDate"></ion-datetime>
+          </ion-item>
+        </ion-col>
+        <ion-col style="width: 20%;">
+          <div padding  style="width: auto;">
+            <button class="button-style button-style-{{ENV.PROJECT}}"  ion-button icon-only (click)="listarHolerites()"><ion-icon name="ios-search"></ion-icon></button>
+          </div>
+        </ion-col>
+        <ion-col style="width: 20%;">
+          <div padding style="width: auto;">
+            <button class="button-style button-style-{{ENV.PROJECT}}"  ion-button (click)="limparFiltro()">limpar</button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
 
-    <button class="button-style button-style-{{ENV.PROJECT}}" *ngIf="idiom =='02'" ion-button (click)="confirm()"><p>Confirmar</p></button>
-    <button class="button-style button-style-{{ENV.PROJECT}}" *ngIf="credential.firstAccess == false && idiom =='02'" ion-button (click)="cancel()"><p>Volver</p></button>
+  </ion-list>
+    
+  <ion-list *ngIf="holerites.length > 0">
+    <ion-grid class="grid-style" style="text-align: center;">
+      <ion-row>
+        <ion-col style="width: 40%;"><b>Ano</b></ion-col>
+        <ion-col style="width: 40%;"><b>Mês</b></ion-col>
+        <ion-col style="width: 20%;"><b>Ver</b></ion-col>
+      </ion-row>
+
+      <ion-row *ngFor="let holerite of holerites" style="line-height: 50px;">
+        <ion-col style="width: 40%;">
+          {{holerite.ano}}
+        </ion-col>
+        <ion-col style="width: 40%;">
+          {{holerite.mes}}
+        </ion-col>
+        <ion-col style="width: 20%;">
+          <button  style="width: auto;" ion-button (click)="openHolerite(holerite.urlLink)"><ion-icon name="eye"></ion-icon></button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+      
+  </ion-list>
+
+  <iframe *ngIf="holeriteURL != ''" data-tap-disabled="true" [src]="sanitizer(holeriteURL)"></iframe>
+
+  <div padding class="grid-style">
+    <button class="button-style button-style-{{ENV.PROJECT}}" *ngIf="idiom =='01'" ion-button (click)="confirm()"><p>Voltar</p></button>
+    <button class="button-style button-style-{{ENV.PROJECT}}" *ngIf="idiom =='02'" ion-button (click)="confirm()"><p>Volver</p></button>
   </div>
 </ion-content>

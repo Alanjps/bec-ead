@@ -101,6 +101,13 @@ export class HttpServiceProvider {
             }
             break;
           }
+          case 'sehc': {
+            this.url = '/sehc';
+            if(this._platform.is("cordova")){
+              this.url = "https://sehc.becinteligencia.com/";
+            }
+            break;
+          }
           default:{
             this.url = '/vcc';
             if(this._platform.is("cordova")){

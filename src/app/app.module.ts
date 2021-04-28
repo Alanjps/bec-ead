@@ -22,6 +22,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ImagePicker } from '@ionic-native/image-picker/ngx';
 import { AngularCropperjsModule } from 'angular-cropperjs';
 import { PusherServiceProvider } from '../providers/pusher-service/pusher-service';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { PusherServiceProvider } from '../providers/pusher-service/pusher-servic
     CallNumber,
     OneSignal,
     ImagePicker,
-    PusherServiceProvider
+    PusherServiceProvider,
+    InAppBrowser
   ],
   exports:[
   ]

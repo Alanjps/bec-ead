@@ -4604,6 +4604,81 @@ ion-icon::before {
   filter: none;
 }
 
+:root ion-icon[class*="tab-sehc-"] {
+  width: 30px;
+  height: 30px;
+}
+
+:root ion-icon[class*="tab-sehc-perfil"] {
+  content: url("https://sehc.becinteligencia.com//storage//uploads//configs//internoApp1.svg") !important;
+}
+
+:root ion-icon[class*="tab-sehc-perfil"][ng-reflect-is-active="true"] {
+  -webkit-filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+  filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+}
+
+:root ion-icon[class*="tab-sehc-perfil"][ng-reflect-is-active="false"] {
+  -webkit-filter: none;
+  filter: none;
+}
+
+:root ion-icon[class*="tab-sehc-notificacao"] {
+  content: url("https://sehc.becinteligencia.com//storage//uploads//configs//internoApp2.svg") !important;
+}
+
+:root ion-icon[class*="tab-sehc-notificacao"][ng-reflect-is-active="true"] {
+  -webkit-filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+  filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+}
+
+:root ion-icon[class*="tab-sehc-notificacao"][ng-reflect-is-active="false"] {
+  -webkit-filter: none;
+  filter: none;
+}
+
+:root ion-icon[class*="tab-sehc-agenda"] {
+  content: url("https://sehc.becinteligencia.com//storage//uploads//configs//internoApp3.svg") !important;
+}
+
+:root ion-icon[class*="tab-sehc-agenda"][ng-reflect-is-active="true"] {
+  -webkit-filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+  filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+}
+
+:root ion-icon[class*="tab-sehc-agenda"][ng-reflect-is-active="false"] {
+  -webkit-filter: none;
+  filter: none;
+}
+
+:root ion-icon[class*="tab-sehc-foto"] {
+  content: url("https://sehc.becinteligencia.com//storage//uploads//configs//internoApp4.svg") !important;
+}
+
+:root ion-icon[class*="tab-sehc-foto"][ng-reflect-is-active="true"] {
+  -webkit-filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+  filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+}
+
+:root ion-icon[class*="tab-sehc-foto"][ng-reflect-is-active="false"] {
+  -webkit-filter: none;
+  filter: none;
+}
+
+:root ion-icon[class*="tab-sehc-news"] {
+  content: url("https://sehc.becinteligencia.com//storage//uploads//configs//internoApp5.svg") !important;
+}
+
+:root ion-icon[class*="tab-sehc-news"][ng-reflect-is-active="true"] {
+  -webkit-filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+  filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+}
+
+:root ion-icon[class*="tab-sehc-news"][ng-reflect-is-active="false"] {
+  -webkit-filter: none;
+  filter: none;
+}
+
 /*   :root {
 
     ion-icon {
@@ -26600,6 +26675,12 @@ ion-navbar.toolbar {
   background-position: center;
 }
 
+.body.background-sehc {
+  background: #000 url("https://sehc.becinteligencia.com/storage/uploads/configs/loginMobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .content[class*="edicom-"][class*="custom-bg"] {
   background: url("https://edicom.becinteligencia.com//storage//uploads//configs/papelParede.png") no-repeat 100% 100%;
   background-size: 100% 100%;
@@ -26672,6 +26753,13 @@ ion-navbar.toolbar {
 
 .content[class*="full-promo-"][class*="custom-bg"] {
   background: url("https://homolog.fullpromo.com.br//storage//uploads//configs/papelParede.png") no-repeat 100% 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.content[class*="sehc-"][class*="custom-bg"] {
+  background: url("https://sehc.becinteligencia.com//storage//uploads//configs/papelParede.png") no-repeat 100% 100%;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -27186,6 +27274,25 @@ menu-sup ion-icon[class*="full-promo-"][class*="chat"] {
 
 menu-sup ion-icon[class*="full-promo-"][class*="chat-active"] {
   background: url("https://homolog.fullpromo.com.br//storage//uploads//configs//iconeHeader.png") no-repeat 100% 100%;
+  background-size: contain;
+  -webkit-filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+  filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+}
+
+menu-sup ion-icon[class*="sehc-"] {
+  width: 30px;
+  height: 30px;
+}
+
+menu-sup ion-icon[class*="sehc-"][class*="chat"] {
+  background: url("https://sehc.becinteligencia.com//storage//uploads//configs//iconeHeader.png") no-repeat 100% 100%;
+  background-size: contain;
+  -webkit-filter: none;
+  filter: none;
+}
+
+menu-sup ion-icon[class*="sehc-"][class*="chat-active"] {
+  background: url("https://sehc.becinteligencia.com//storage//uploads//configs//iconeHeader.png") no-repeat 100% 100%;
   background-size: contain;
   -webkit-filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
   filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
@@ -28396,6 +28503,13 @@ page-register .body.background-hability {
 
 page-register .body.background-full-promo {
   background: #000 url("https://homolog.fullpromo.com.br//storage/uploads/configs/loginMobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+}
+
+page-register .body.background-sehc {
+  background: #000 url("https://sehc.becinteligencia.com//storage/uploads/configs/loginMobile.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto 100%;

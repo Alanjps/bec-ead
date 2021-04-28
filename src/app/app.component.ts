@@ -58,6 +58,8 @@ export class MyApp {
         //9  -> tmc
         //10 -> hability
         //11 -> full-promo
+        //12 -> sehc
+        
         this.projectNumber = 2;
 
         switch(this.projectNumber){
@@ -133,6 +135,12 @@ export class MyApp {
             this.firebaseSenderId='1067216235696';
             this.projectName = 'full-promo';
             storage.set('Idiom','01'); //português
+            break;
+          case 12:
+            this.onesignalAppId='41ad100c-898c-4a9f-99d9-277244f36858';
+            this.firebaseSenderId='159095755019';
+            this.projectName = 'sehc';
+            storage.set('Idiom','02'); //português
             break;
         }
 
@@ -213,7 +221,11 @@ export class MyApp {
               break;
             }
             case 'full-promo': {
-              url = 'https://homolog.fullpromo.com.br/';
+              url = 'https://homolog.fullpromo.com.br';
+              break;
+            }
+            case 'sehc': {
+              url = 'https://sehc.becinteligencia.com';
               break;
             }
           }

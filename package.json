@@ -27,6 +27,7 @@
     "@ionic-native/file-opener": "^4.19.0",
     "@ionic-native/file-transfer": "^4.19.0",
     "@ionic-native/image-picker": "^5.24.0",
+    "@ionic-native/in-app-browser": "^5.32.1",
     "@ionic-native/ionic-webview": "^5.27.0",
     "@ionic-native/onesignal": "^4.20.0",
     "@ionic-native/qr-scanner": "^4.20.0",
@@ -45,6 +46,7 @@
     "cordova-plugin-file": "^6.0.2",
     "cordova-plugin-file-opener2": "^2.2.1",
     "cordova-plugin-file-transfer": "^1.7.1",
+    "cordova-plugin-inappbrowser": "^4.1.0",
     "cordova-plugin-ionic-keyboard": "^2.2.0",
     "cordova-plugin-qrscanner": "^3.0.1",
     "cordova-plugin-splashscreen": "^5.0.3",
@@ -103,7 +105,8 @@
         "PHOTO_LIBRARY_USAGE_DESCRIPTION": " "
       },
       "cordova-plugin-ionic-webview": {},
-      "onesignal-cordova-plugin": {}
+      "onesignal-cordova-plugin": {},
+      "cordova-plugin-inappbrowser": {}
     }
   }
 }
