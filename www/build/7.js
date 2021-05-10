@@ -512,6 +512,39 @@ var ListVideosPage = /** @class */ (function () {
             });
         });
     };
+    ListVideosPage.prototype.checaResultado = function (lesson, showAlert) {
+        var _this = this;
+        var lesson_id = lesson.id;
+        var user_id = 0;
+        this.storage.get('clienteId').then(function (valor) {
+            user_id = valor;
+            var vars = {
+                user_id: valor,
+                lesson_id: lesson.id
+            };
+            _this.authService.request('/api/testes/checa-resultado', vars).then(function (result) {
+                if (result) {
+                    _this.nota = result.pontuacao_final;
+                    _this.notaMaxima = result.test.maxPontos;
+                    if (result.is_aprovado == '1') {
+                        _this.checkFinishedProjects();
+                        _this.fazerTeste = false;
+                        //SE TEM CERRTIFICADO
+                        if (result.certificado && result.test.showCertificado == 1) {
+                            _this.hasCertificado = true;
+                            _this.urlCertificado = result.certificado['path'];
+                            _this.showCertificado(lesson);
+                        }
+                    }
+                    else {
+                        if (result.test.max_tentativas != 0 || result.totalTentativas >= result.test.max_tentativas) {
+                            _this.fazerTeste = false;
+                        }
+                    }
+                }
+            });
+        });
+    };
     ListVideosPage.prototype.showAlert = function () {
         var alert = this.alertCtrl.create({
             title: this.alertTitle,
@@ -544,7 +577,7 @@ var ListVideosPage = /** @class */ (function () {
         this.authService.request('/api/testes/isExist', vars).then(function (result) {
             if (result) {
                 _this.cleanTeste();
-                _this.fazerQuiz(lesson);
+                _this.checaResultado(lesson);
                 setTimeout(function () {
                     _this.exibirBoxTeste = true;
                 }, 500);
@@ -799,7 +832,7 @@ var ListVideosPage = /** @class */ (function () {
                                                         case 0:
                                                             if (!(lesson.forCertificate == false)) return [3 /*break*/, 2];
                                                             return [4 /*yield*/, new Promise(function (resolve, reject) {
-                                                                    _this.authService.request('/api/testes/resultado', { user_id: valor, lesson_id: lesson.id }).then(function (result) {
+                                                                    _this.authService.request('/api/testes/checa-resultado', { user_id: valor, lesson_id: lesson.id }).then(function (result) {
                                                                         if (result && result.is_aprovado == 0)
                                                                             projectConcluded = false;
                                                                         resolve();
@@ -894,7 +927,7 @@ var ListVideosPage = /** @class */ (function () {
             _this.storage.get('clienteId').then(function (valor) {
                 item.lessons.forEach(function (lesson, index2) {
                     if (lesson.forCertificate == false)
-                        _this.authService.request('/api/testes/resultado', { user_id: valor, lesson_id: lesson.id }).then(function (result) {
+                        _this.authService.request('/api/testes/checa-resultado', { user_id: valor, lesson_id: lesson.id }).then(function (result) {
                             if (result) {
                                 if (result.is_aprovado == '1') {
                                     if (result.certificado && result.test.showCertificado == 1) {

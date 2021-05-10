@@ -453,7 +453,7 @@ export class PhotoPage {
     let message = "";
     if (type == 1) 
       message = this.idiom == '01' ? "Você não pode curtir a própria imagem." : 
-      this.idiom == '02' ? "No puede le gusta a tu propia foto." : '';
+      this.idiom == '02' ? "No puedes votar a tu propia foto." : '';
     else if(type == 2) 
       message =  this.idiom == '01' ? "Não é possível descurtir uma imagem." : 
       this.idiom == '02' ? "No es posible desmarcar una foto." : '';

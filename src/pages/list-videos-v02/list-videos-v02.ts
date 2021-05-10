@@ -189,6 +189,40 @@ export class ListVideosV02Page {
 
   }
 
+  checaResultado(lesson, showAlert?) {
+    let lesson_id = lesson.id;
+    let user_id = 0;
+    this.storage.get('clienteId').then((valor) => {
+      user_id = valor;
+      let vars: any = {
+        user_id: valor,
+        lesson_id: lesson.id
+      };
+
+      this.authService.request('/api/testes/checa-resultado', vars).then((result) => {
+        if (result) {
+          this.nota = result.pontuacao_final;
+          this.notaMaxima = result.test.maxPontos;
+          if (result.is_aprovado == '1') {
+            this.checkFinishedProjects();
+            this.fazerTeste = false;
+
+            //SE TEM CERRTIFICADO
+            if (result.certificado && result.test.showCertificado == 1) {
+              this.hasCertificado = true;
+              this.urlCertificado = result.certificado['path'];
+              this.showCertificado(lesson);
+            }
+          }else{
+            if ( result.test.max_tentativas != 0 || result.totalTentativas >= result.test.max_tentativas){
+               this.fazerTeste = false;
+            }
+          }
+        }
+      });
+    });
+  }
+
   showAlert() {
     const alert = this.alertCtrl.create({
       title: this.alertTitle,
@@ -466,7 +500,7 @@ export class ListVideosV02Page {
           for(let lesson of projeto.lessons){
             if (lesson.forCertificate == false ){
               await new Promise((resolve,reject)=>{
-                this.authService.request('/api/testes/resultado', {user_id: valor, lesson_id: lesson.id}).then((result) => {
+                this.authService.request('/api/testes/checa-resultado', {user_id: valor, lesson_id: lesson.id}).then((result) => {
                   if (result && result.is_aprovado == 0)
                   projectConcluded = false;
                   resolve();
@@ -524,7 +558,7 @@ export class ListVideosV02Page {
       
       this.storage.get('clienteId').then((valor) => {
         item.lessons.forEach((lesson:any, index2) => {
-          if (lesson.forCertificate == false) this.authService.request('/api/testes/resultado', {user_id: valor, lesson_id: lesson.id}).then((result) => {
+          if (lesson.forCertificate == false) this.authService.request('/api/testes/checa-resultado', {user_id: valor, lesson_id: lesson.id}).then((result) => {
             if (result) {
               if (result.is_aprovado == '1') {
                 if (result.certificado && result.test.showCertificado == 1) {

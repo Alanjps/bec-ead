@@ -1376,7 +1376,7 @@ var MyApp = /** @class */ (function () {
                     _this.onesignalAppId = '946eb156-716e-4000-853f-18f41cc2b193';
                     _this.firebaseSenderId = '23981024898';
                     _this.projectName = 'ead';
-                    storage.set('Idiom', '02'); //português
+                    storage.set('Idiom', '01'); //português
                     break;
                 case 2:
                     _this.onesignalAppId = 'c3765e9e-79b4-4dbc-b3ad-a31396017591';
