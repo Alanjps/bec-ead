@@ -770,6 +770,7 @@ var ListVideosV02Page = /** @class */ (function () {
                                           });
                                         }) */
                             _this.videos = data;
+                            console.log("THIS.videos -> ", _this.videos);
                             _this.videos = _this.videos.sort(function (a, b) {
                                 if (a.titulo > b.titulo) {
                                     return 1;

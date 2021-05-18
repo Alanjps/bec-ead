@@ -26,8 +26,8 @@
       <ion-icon *ngIf="!expanded" style="font-size: 2em !important;" class="arrow-color" name="ios-arrow-down-outline"></ion-icon>
       <ion-icon *ngIf="expanded" style="font-size: 2em !important;" class="arrow-color" name="ios-arrow-up-outline"></ion-icon>
     </button>
-    <h2 *ngIf="!imageProject && idiom == '01'"> Não existe projeto.</h2>
-    <h2 *ngIf="!imageProject && idiom == '02'"> No tiene proyecto.</h2>
+    <h2 *ngIf="!imageProject && imageProject != null && idiom == '01'"> Não existe projeto.</h2>
+    <h2 *ngIf="!imageProject && imageProject != null && idiom == '02'"> No tiene proyecto.</h2>
   </div>
 
   

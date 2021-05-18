@@ -41,7 +41,6 @@ export class HttpServiceProvider {
             this.url = '/edc';
             if(this._platform.is("cordova")){
               this.url = "https://edicom.becinteligencia.com";
-              //this.url = "https://homolog.marketinghouse.com.br";
             }
             break;
           }
@@ -112,7 +111,6 @@ export class HttpServiceProvider {
             this.url = '/vcc';
             if(this._platform.is("cordova")){
               this.url = "https://vcc.becinteligencia.com";
-              //this.url = "https://homolog.marketinghouse.com.br";
             }
           }
         }

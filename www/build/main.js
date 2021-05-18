@@ -129,7 +129,6 @@ var HttpServiceProvider = /** @class */ (function () {
                                         _this.url = '/edc';
                                         if (_this._platform.is("cordova")) {
                                             _this.url = "https://edicom.becinteligencia.com";
-                                            //this.url = "https://homolog.marketinghouse.com.br";
                                         }
                                         break;
                                     }
@@ -200,7 +199,6 @@ var HttpServiceProvider = /** @class */ (function () {
                                         _this.url = '/vcc';
                                         if (_this._platform.is("cordova")) {
                                             _this.url = "https://vcc.becinteligencia.com";
-                                            //this.url = "https://homolog.marketinghouse.com.br";
                                         }
                                     }
                                 }
