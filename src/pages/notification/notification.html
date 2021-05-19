@@ -23,7 +23,7 @@
               <ion-col col-11>
                 <button  detail-none (click)="expandItem(item)" [ngClass]="item.lido == 1 ? 'read-notification' : 'notification'">
                   <h2>{{ item?.remetente.nome }}</h2>
-                  <p >{{ item?.mensagem_formatada.substr(0,40) }}...</p>
+                  <p [innerHTML]="item?.mensagem_formatada.substr(0,40)+'...'" class="message-receptive"></p>
                   <p>{{ item?.created_at }}</p>
                 </button>
               </ion-col>

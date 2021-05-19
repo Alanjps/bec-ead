@@ -318,6 +318,7 @@ export class PhotoPage {
 
       let photoModal = this.modalCtrl.create('photo-modal', {photo: this.fileUpload, categories: this.categories, contestEnabled: this.contestEnabled, userCategoriesInContest: this.userCategoriesInContest });
       photoModal.onDidDismiss(data => {
+          console.log("DATA -> ",data);
           if (data.sendFile){
             let loading = this.loadingCtrl.create({
               content: 'Espere...'
