@@ -582,6 +582,7 @@ var PhotoPage = /** @class */ (function () {
             _this.fileUpload = "data:image/jpeg;base64," + imageData;
             var photoModal = _this.modalCtrl.create('photo-modal', { photo: _this.fileUpload, categories: _this.categories, contestEnabled: _this.contestEnabled, userCategoriesInContest: _this.userCategoriesInContest });
             photoModal.onDidDismiss(function (data) {
+                console.log("DATA -> ", data);
                 if (data.sendFile) {
                     var loading = _this.loadingCtrl.create({
                         content: 'Espere...'
