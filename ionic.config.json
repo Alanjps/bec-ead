@@ -56,7 +56,11 @@
     },
     {
       "path": "/sehc",
-      "proxyUrl": "https://sehc.becinteligencia.com/"
+      "proxyUrl": "https://sehc.becinteligencia.com"
+    },
+    {
+      "path": "/club-learn",
+      "proxyUrl": "https://app.clublearn.com.br"
     }
   ]
 }

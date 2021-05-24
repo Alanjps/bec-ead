@@ -54,6 +54,7 @@ menu-sup {
         $url-hability: "https://hability.becinteligencia.com//storage//uploads//configs//";
         $url-full-promo: "https://homolog.fullpromo.com.br//storage//uploads//configs//";
         $url-sehc: "https://sehc.becinteligencia.com//storage//uploads//configs//";
+        $url-club-learn: "https://app.clublearn.com.br//storage//uploads//configs//";
 
         &[class*="edicom-"] {
             width: 30px;
@@ -230,6 +231,21 @@ menu-sup {
             }      
             &[class*="chat-active"] {
                 background: url($url-sehc+"iconeHeader.png") no-repeat 100% 100%;
+                background-size: contain;
+                filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+            }
+        }
+
+        &[class*="club-learn-"] {
+            width: 30px;
+            height: 30px; 
+            &[class*="chat"] {
+                background: url($url-club-learn+"iconeHeader.png") no-repeat 100% 100%;
+                background-size: contain;
+                filter: none;
+            }      
+            &[class*="chat-active"] {
+                background: url($url-club-learn+"iconeHeader.png") no-repeat 100% 100%;
                 background-size: contain;
                 filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
             }

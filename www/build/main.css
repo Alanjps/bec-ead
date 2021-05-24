@@ -4679,6 +4679,81 @@ ion-icon::before {
   filter: none;
 }
 
+:root ion-icon[class*="tab-club-learn-"] {
+  width: 30px;
+  height: 30px;
+}
+
+:root ion-icon[class*="tab-club-learn-perfil"] {
+  content: url("https://app.clublearn.com.br//storage//uploads//configs//internoApp1.svg") !important;
+}
+
+:root ion-icon[class*="tab-club-learn-perfil"][ng-reflect-is-active="true"] {
+  -webkit-filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+  filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+}
+
+:root ion-icon[class*="tab-club-learn-perfil"][ng-reflect-is-active="false"] {
+  -webkit-filter: none;
+  filter: none;
+}
+
+:root ion-icon[class*="tab-club-learn-notificacao"] {
+  content: url("https://app.clublearn.com.br//storage//uploads//configs//internoApp2.svg") !important;
+}
+
+:root ion-icon[class*="tab-club-learn-notificacao"][ng-reflect-is-active="true"] {
+  -webkit-filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+  filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+}
+
+:root ion-icon[class*="tab-club-learn-notificacao"][ng-reflect-is-active="false"] {
+  -webkit-filter: none;
+  filter: none;
+}
+
+:root ion-icon[class*="tab-club-learn-agenda"] {
+  content: url("https://app.clublearn.com.br//storage//uploads//configs//internoApp3.svg") !important;
+}
+
+:root ion-icon[class*="tab-club-learn-agenda"][ng-reflect-is-active="true"] {
+  -webkit-filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+  filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+}
+
+:root ion-icon[class*="tab-club-learn-agenda"][ng-reflect-is-active="false"] {
+  -webkit-filter: none;
+  filter: none;
+}
+
+:root ion-icon[class*="tab-club-learn-foto"] {
+  content: url("https://app.clublearn.com.br//storage//uploads//configs//internoApp4.svg") !important;
+}
+
+:root ion-icon[class*="tab-club-learn-foto"][ng-reflect-is-active="true"] {
+  -webkit-filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+  filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+}
+
+:root ion-icon[class*="tab-club-learn-foto"][ng-reflect-is-active="false"] {
+  -webkit-filter: none;
+  filter: none;
+}
+
+:root ion-icon[class*="tab-club-learn-news"] {
+  content: url("https://app.clublearn.com.br//storage//uploads//configs//internoApp5.svg") !important;
+}
+
+:root ion-icon[class*="tab-club-learn-news"][ng-reflect-is-active="true"] {
+  -webkit-filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+  filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+}
+
+:root ion-icon[class*="tab-club-learn-news"][ng-reflect-is-active="false"] {
+  -webkit-filter: none;
+  filter: none;
+}
+
 /*   :root {
 
     ion-icon {
@@ -26681,6 +26756,12 @@ ion-navbar.toolbar {
   background-position: center;
 }
 
+.body.background-club-learn {
+  background: #000 url("https://app.clublearn.com.br/storage/uploads/configs/loginMobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .content[class*="edicom-"][class*="custom-bg"] {
   background: url("https://edicom.becinteligencia.com//storage//uploads//configs/papelParede.png") no-repeat 100% 100%;
   background-size: 100% 100%;
@@ -26760,6 +26841,13 @@ ion-navbar.toolbar {
 
 .content[class*="sehc-"][class*="custom-bg"] {
   background: url("https://sehc.becinteligencia.com//storage//uploads//configs/papelParede.png") no-repeat 100% 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.content[class*="club-learn-"][class*="custom-bg"] {
+  background: url("https://app.clublearn.com.br//storage//uploads//configs/papelParede.png") no-repeat 100% 100%;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -27293,6 +27381,25 @@ menu-sup ion-icon[class*="sehc-"][class*="chat"] {
 
 menu-sup ion-icon[class*="sehc-"][class*="chat-active"] {
   background: url("https://sehc.becinteligencia.com//storage//uploads//configs//iconeHeader.png") no-repeat 100% 100%;
+  background-size: contain;
+  -webkit-filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+  filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+}
+
+menu-sup ion-icon[class*="club-learn-"] {
+  width: 30px;
+  height: 30px;
+}
+
+menu-sup ion-icon[class*="club-learn-"][class*="chat"] {
+  background: url("https://app.clublearn.com.br//storage//uploads//configs//iconeHeader.png") no-repeat 100% 100%;
+  background-size: contain;
+  -webkit-filter: none;
+  filter: none;
+}
+
+menu-sup ion-icon[class*="club-learn-"][class*="chat-active"] {
+  background: url("https://app.clublearn.com.br//storage//uploads//configs//iconeHeader.png") no-repeat 100% 100%;
   background-size: contain;
   -webkit-filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
   filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
@@ -28510,6 +28617,13 @@ page-register .body.background-full-promo {
 
 page-register .body.background-sehc {
   background: #000 url("https://sehc.becinteligencia.com//storage/uploads/configs/loginMobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+}
+
+page-register .body.background-club-learn {
+  background: #000 url("https://app.clublearn.com.br//storage/uploads/configs/loginMobile.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto 100%;

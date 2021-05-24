@@ -107,6 +107,7 @@ $colors: (
   $url-hability: "https://hability.becinteligencia.com//storage//uploads//configs//";
   $url-full-promo: "https://homolog.fullpromo.com.br//storage//uploads//configs//";
   $url-sehc: "https://sehc.becinteligencia.com//storage//uploads//configs//";
+  $url-club-learn: "https://app.clublearn.com.br//storage//uploads//configs//";
 
   ion-icon {
     //-------------------------------------------------------
@@ -741,6 +742,61 @@ $colors: (
     }
     &[class*="tab-sehc-news"]{
       content: url($url-sehc+"internoApp5.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }    
+    
+    //-------------------------------------------------------
+    //CLUB LEARN -------------------------------------------------------
+    //-------------------------------------------------------
+
+    &[class*="tab-club-learn-"]{
+      width: 30px;
+      height: 30px;
+    }
+
+    &[class*="tab-club-learn-perfil"]{
+      content: url($url-club-learn+"internoApp1.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-club-learn-notificacao"]{
+      content: url($url-club-learn+"internoApp2.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-club-learn-agenda"]{
+      content: url($url-club-learn+"internoApp3.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-club-learn-foto"]{
+      content: url($url-club-learn+"internoApp4.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-club-learn-news"]{
+      content: url($url-club-learn+"internoApp5.svg") !important;
       &[ng-reflect-is-active="true"]{
         filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
       }

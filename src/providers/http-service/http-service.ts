@@ -103,7 +103,14 @@ export class HttpServiceProvider {
           case 'sehc': {
             this.url = '/sehc';
             if(this._platform.is("cordova")){
-              this.url = "https://sehc.becinteligencia.com/";
+              this.url = "https://sehc.becinteligencia.com";
+            }
+            break;
+          }
+          case 'club-learn': {
+            this.url = '/sehc';
+            if(this._platform.is("cordova")){
+              this.url = "https://app.clublearn.com.br";
             }
             break;
           }

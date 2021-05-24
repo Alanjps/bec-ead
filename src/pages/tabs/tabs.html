@@ -95,6 +95,14 @@
   <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-sehc-news"></ion-tab>
 </ion-tabs>
 
+<ion-tabs #appTabs selectedIndex="2" *ngIf="project == 'club-learn' && (version == '02' || version == '01') && renderRoot == true" [ngClass]="chatAtTop == true ? 'ion-tabs' : ''">
+  <ion-tab [root]="tab8" tabIcon="tab-club-learn-perfil"></ion-tab>
+  <ion-tab [root]="tab7" tabIcon="tab-club-learn-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>
+  <ion-tab [root]="tab1" tabIcon="tab-club-learn-agenda" (ionSelect)="redirectToListPage()"></ion-tab>
+  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-club-learn-foto"></ion-tab>
+  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-club-learn-news"></ion-tab>
+</ion-tabs>
+
 <!-- LOCALHOST -->
 
 <ion-tabs #appTabs selectedIndex="2" *ngIf="project == 'localhost' && (version == '02' || version == '01') && renderRoot == true" [ngClass]="chatAtTop == true ? 'ion-tabs' : ''">

@@ -110,6 +110,11 @@
         background-repeat: no-repeat;
         background-position: center;
     }
+    &.background-club-learn{
+        background: #000 url("https://app.clublearn.com.br/storage/uploads/configs/loginMobile.png");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 }
 
 //background das páginas
@@ -217,6 +222,15 @@
     }
     &[class*="sehc-"] {
         $urlBG: "https://sehc.becinteligencia.com//storage//uploads//configs/";
+        &[class*="custom-bg"] {
+            background: url($urlBG + "papelParede.png") no-repeat 100% 100%;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &[class*="club-learn-"] {
+        $urlBG: "https://app.clublearn.com.br//storage//uploads//configs/";
         &[class*="custom-bg"] {
             background: url($urlBG + "papelParede.png") no-repeat 100% 100%;
             background-size: 100% 100%;

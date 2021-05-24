@@ -59,8 +59,9 @@ export class MyApp {
         //10 -> hability
         //11 -> full-promo
         //12 -> sehc
+        //13 -> club-learn
         
-        this.projectNumber = 2;
+        this.projectNumber = 13;
 
         switch(this.projectNumber){
           case 0:
@@ -140,7 +141,13 @@ export class MyApp {
             this.onesignalAppId='41ad100c-898c-4a9f-99d9-277244f36858';
             this.firebaseSenderId='159095755019';
             this.projectName = 'sehc';
-            storage.set('Idiom','02'); //português
+            storage.set('Idiom','02'); //espanhol
+            break;
+          case 13:
+            this.onesignalAppId='9844d205-8452-4e21-8128-45d424748be8';
+            this.firebaseSenderId='173961594534';
+            this.projectName = 'club-learn';
+            storage.set('Idiom','01'); //português
             break;
         }
 
@@ -226,6 +233,10 @@ export class MyApp {
             }
             case 'sehc': {
               url = 'https://sehc.becinteligencia.com';
+              break;
+            }
+            case 'club-learn': {
+              url = 'https://app.clublearn.com.br';
               break;
             }
           }
