@@ -137,8 +137,19 @@ var environment = {
     PUSHER_APP_SECRET: "cfc406609b91179a3e40",
     PUSHER_APP_CLUSTER: "us2",
      */
+    /*
     //CLUB LEARN -----------------------------------
     PROJECT: 'club-learn',
+    TEXT_COLOR_V1: 'text-default-black',
+    HEADER_TEXT: 'style-white',
+    
+    PUSHER_APP_ID: "1193372",
+    PUSHER_APP_KEY: "5a5d9d9d6e878a5a139e",
+    PUSHER_APP_SECRET: "cfc406609b91179a3e40",
+    PUSHER_APP_CLUSTER: "us2",
+     */
+    //LOCALHOST -----------------------------------
+    PROJECT: 'localhost',
     TEXT_COLOR_V1: 'text-default-black',
     HEADER_TEXT: 'style-white',
     PUSHER_APP_ID: "1193372",
@@ -227,7 +238,7 @@ var HttpServiceProvider = /** @class */ (function () {
                                     case 'localhost': {
                                         _this.url = '/lch';
                                         if (_this._platform.is("cordova")) {
-                                            _this.url = "http://ead.localhost";
+                                            _this.url = "http://192.168.0.11";
                                         }
                                         break;
                                     }
@@ -566,7 +577,7 @@ var AuthProvider = /** @class */ (function () {
                 case 'localhost': {
                     _this.url = '/lch';
                     if (_this._platform.is("cordova")) {
-                        _this.url = "http://ead.localhost";
+                        _this.url = "http://192.168.0.11";
                     }
                     break;
                 }
@@ -1489,13 +1500,13 @@ var MyApp = /** @class */ (function () {
             //11 -> full-promo
             //12 -> sehc
             //13 -> club-learn
-            _this.projectNumber = 13;
+            _this.projectNumber = 0;
             switch (_this.projectNumber) {
                 case 0:
                     _this.onesignalAppId = '946eb156-716e-4000-853f-18f41cc2b193';
                     _this.firebaseSenderId = '23981024898';
                     _this.projectName = 'localhost';
-                    storage.set('Idiom', '01'); //português
+                    storage.set('Idiom', '02'); //português
                     storage.set('TextColor', 'black'); //português
                     break;
                 case 1:
@@ -1605,7 +1616,7 @@ var MyApp = /** @class */ (function () {
                 var url = '';
                 switch (value) {
                     case 'localhost': {
-                        url = 'http://ead.localhost';
+                        url = 'http://192.168.0.11';
                         break;
                     }
                     case 'marketing-house': {

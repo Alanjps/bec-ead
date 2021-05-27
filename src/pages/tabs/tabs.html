@@ -106,9 +106,9 @@
 <!-- LOCALHOST -->
 
 <ion-tabs #appTabs selectedIndex="2" *ngIf="project == 'localhost' && (version == '02' || version == '01') && renderRoot == true" [ngClass]="chatAtTop == true ? 'ion-tabs' : ''">
-  <ion-tab [root]="tab8" tabIcon="tab-ava-perfil"></ion-tab>
-  <ion-tab [root]="tab7" tabIcon="tab-ava-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>
-  <ion-tab [root]="tab1" tabIcon="tab-ava-agenda" (ionSelect)="redirectToListPage()"></ion-tab>
-  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-ava-foto"></ion-tab>
-  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-ava-news"></ion-tab>
+  <ion-tab [root]="tab8" tabIcon="tab-localhost-perfil"></ion-tab>
+  <ion-tab [root]="tab7" tabIcon="tab-localhost-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>
+  <ion-tab [root]="tab1" tabIcon="tab-localhost-agenda" (ionSelect)="redirectToListPage()"></ion-tab>
+  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-localhost-foto"></ion-tab>
+  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-localhost-news"></ion-tab>
 </ion-tabs>

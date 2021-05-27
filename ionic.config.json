@@ -36,7 +36,7 @@
     },
     {
       "path": "/lch",
-      "proxyUrl": "http://ead.localhost"
+      "proxyUrl": "http://192.168.0.11"
     },
     {
       "path": "/ava",

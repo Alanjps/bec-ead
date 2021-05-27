@@ -115,6 +115,11 @@
         background-repeat: no-repeat;
         background-position: center;
     }
+    &.background-localhost{
+        background: #000 url("http://192.168.0.11/storage/uploads/configs/loginMobile.png");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 }
 
 //background das páginas
@@ -231,6 +236,15 @@
     }
     &[class*="club-learn-"] {
         $urlBG: "https://app.clublearn.com.br//storage//uploads//configs/";
+        &[class*="custom-bg"] {
+            background: url($urlBG + "papelParede.png") no-repeat 100% 100%;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &[class*="localhost-"] {
+        $urlBG: "http://192.168.0.11//storage//uploads//configs/";
         &[class*="custom-bg"] {
             background: url($urlBG + "papelParede.png") no-repeat 100% 100%;
             background-size: 100% 100%;

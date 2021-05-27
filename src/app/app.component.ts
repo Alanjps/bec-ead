@@ -61,14 +61,14 @@ export class MyApp {
         //12 -> sehc
         //13 -> club-learn
         
-        this.projectNumber = 13;
+        this.projectNumber = 0;
 
         switch(this.projectNumber){
           case 0:
             this.onesignalAppId='946eb156-716e-4000-853f-18f41cc2b193';
             this.firebaseSenderId='23981024898';
             this.projectName = 'localhost';
-            storage.set('Idiom','01'); //português
+            storage.set('Idiom','02'); //português
             storage.set('TextColor','black'); //português
             break;
           case 1:
@@ -184,7 +184,7 @@ export class MyApp {
           let url = '';
           switch(value){
             case 'localhost': {
-              url = 'http://ead.localhost';
+              url = 'http://192.168.0.11';
               break;
             }
             case 'marketing-house': {

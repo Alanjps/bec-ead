@@ -27,7 +27,7 @@ private url:string= '/vcc';
         case 'localhost': {
           this.url = '/lch';
           if(this._platform.is("cordova")){
-            this.url = "http://ead.localhost";
+            this.url = "http://192.168.0.11";
           }
           break;
         }

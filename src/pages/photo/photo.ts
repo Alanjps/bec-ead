@@ -186,6 +186,7 @@ export class PhotoPage {
 
             if (data.length > 0){
               this.imageProject = data[0];
+              console.log("\nPROJETO -> ",this.imageProject);
               this.categories = data[0].categories;
               this.contestEnabled = data[0].contest == 0 ? false : true;
             }

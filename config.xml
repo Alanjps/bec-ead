@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.becinteligencia.club-learn.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Club-Learn</name>
-    <description>Club-Learn</description>
+<widget id="com.becinteligencia.localhost.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Localhost</name>
+    <description>Localhost</description>
     <author email="contato@becinteligencia.com" href="http://becinteligencia.com/">BeC Inteligência</author>
     <content src="index.html" />
     <access origin="*" />
