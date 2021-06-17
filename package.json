@@ -63,6 +63,7 @@
     "mx.ferreyra.callnumber": "0.0.2",
     "ngx-pagination": "^5.0.0",
     "ngx-qrcode2": "0.0.9",
+    "node-sass": "^4.9.0",
     "onesignal-cordova-plugin": "^2.11.1",
     "pusher": "^4.0.1",
     "pusher-js": "^7.0.1",
@@ -74,8 +75,8 @@
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.1.11",
-    "typescript": "~2.6.2",
-    "cordova-plugin-ionic-webview": "^2.0.0"
+    "cordova-plugin-ionic-webview": "^2.0.0",
+    "typescript": "~2.6.2"
   },
   "description": "Movera Mais Project",
   "cordova": {

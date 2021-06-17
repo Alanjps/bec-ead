@@ -69,20 +69,35 @@
         <img [src]="pic.path">   
       </div>
          
-      <ion-card-content style="height: 60px;">
+      <ion-card-content>
         <ion-grid>
+<!--           <ion-row *ngIf="pic.observation && pic.observation.trim() != ''">
+            <p></p>
+          </ion-row> -->
+          <ion-card-title *ngIf="pic.observation && pic.observation.trim() != ''">
+            <p>{{pic.observation}}</p>
+          </ion-card-title>
           <ion-row>
-            <ion-col col-2>
-              <ion-item>
+            <ion-col col-2 >
+              <ion-item style="display: flex;">
                 <ion-avatar item-start>
                   <img *ngIf="pic.category" src={{pic.category.thumb}}>
                 </ion-avatar>
               </ion-item>
             </ion-col>
-            <ion-col col-8 style="display: flex; align-items: center;">
-              <ion-avatar item-start>
-                <ion-label *ngIf="pic.category" style="text-align: initial ! important;">{{pic.category.title}}</ion-label>
-              </ion-avatar>
+            <ion-col col-8 [ngClass]="pic.subcategories && pic.subcategories.length > 0 ? 'display-block' : 'display-flex'">
+              <ion-row>
+                <ion-avatar item-start>
+                  <ion-label *ngIf="pic.category" style="text-align: initial ! important; line-height: 20px;">{{pic.category.title}}</ion-label>
+                </ion-avatar>
+              </ion-row>
+              <ion-row *ngIf="pic.subcategories && pic.subcategories.length > 0">
+                <ion-col col-12>
+                  <ion-row *ngFor="let subcategory of pic.subcategories">
+                    <small style="text-align: initial ! important;">{{subcategory.title}}</small>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
             </ion-col>
             <ion-col *ngIf="pic.user_id != user_id" col-2 style="display: flex; align-items: center;">
                 <button *ngIf="pic.complained == false" ion-button clear round icon-only (click)="setComplaint(pic)">
@@ -96,7 +111,7 @@
               <button ion-button clear round icon-only (click)="disablePic(pic)">
                 <ion-icon name="ios-trash-outline"></ion-icon>
               </button>
-          </ion-col>            
+            </ion-col>            
           </ion-row>
         </ion-grid>
       </ion-card-content>

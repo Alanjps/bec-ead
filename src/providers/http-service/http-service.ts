@@ -141,7 +141,7 @@ export class HttpServiceProvider {
   getAll(endpoint, variables, type?){
     let headers = new Headers();
     if (!type){
-      let options = new RequestOptions({ headers : headers});
+      let options = new RequestOptions({ headers : headers });
       return this.http.post(this.url+endpoint, variables, options)
         .map(res => res.json());
 

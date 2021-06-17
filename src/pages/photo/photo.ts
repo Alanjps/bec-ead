@@ -53,6 +53,7 @@ export class PhotoPage {
   public picsOriginal = [];
   public fileUpload: any;
   public categories: any;
+  public subcategories: any;
   public imageProject: any;
   public contestEnabled: boolean = false;
   public items : any = [];
@@ -69,6 +70,7 @@ export class PhotoPage {
   public iconFiltroFoto: string = '';
   public iconAddFoto: string = '';
   public iconUserProfile: string = '';
+  public observation: string = '';
   
   constructor(
     public storage: Storage,
@@ -167,6 +169,7 @@ export class PhotoPage {
       this.storage.get('clienteId').then((clienteId) => {
         this.http.getAll('/api/conteudos', { company_id: companyId, user_id: clienteId, type: "ICON4" })
           .subscribe((data:any) => {
+            console.log("\nPROJETO -> ",data);
             data.forEach((element, index) => {
                 data[index].showAulas = false;
                 element.lessons.forEach(l => {
@@ -186,8 +189,9 @@ export class PhotoPage {
 
             if (data.length > 0){
               this.imageProject = data[0];
-              console.log("\nPROJETO -> ",this.imageProject);
               this.categories = data[0].categories;
+              this.subcategories = data[0].subcategories;
+              this.observation = data[0].observation;
               this.contestEnabled = data[0].contest == 0 ? false : true;
             }
             loading.dismiss();
@@ -205,6 +209,12 @@ export class PhotoPage {
       this.storage.get('clienteId').then((clienteId) => {
         this.http.getAll('/api/projeto/images', {project_id: this.imageProject.id}).subscribe((data:any) => {
           this.pics = data.length ? data.map((p) => {
+            let subcategoriesArray = [];
+            if (p.image_subcategory_id && this.subcategories && this.subcategories.length > 0  && p.image_subcategory_id.trim() != '[]'){
+              JSON.parse(p.image_subcategory_id).map((id) => {
+                subcategoriesArray.push(this.subcategories.filter((s) => s.id == id)[0]);
+              });
+            }
             return{
               ...p,
               created_at: this.idiom == '02' ? moment(p.created_at).locale('es').format('lll') : moment(p.created_at).locale('pt-br').format('lll'),
@@ -212,6 +222,7 @@ export class PhotoPage {
               category: this.categories ? 
                 this.categories.filter((c) => c.id == p.image_category_id)[0] 
               : null,
+              subcategories: subcategoriesArray.length > 0 ? subcategoriesArray : null,
               uploaded_time: this.idiom == '02' ? p.uploaded_time.replace('há','hace') : p.uploaded_time,
               liked: p.likes.length > 0 ? 
                 p.likes.filter((f)=>{
@@ -227,6 +238,7 @@ export class PhotoPage {
             }
           }) : null;
 
+          console.log("this.pics -> ",this.pics );
           this.picsOriginal = this.pics;
 
           //verifica em qual categoria o usuario ja esta concorrendo 
@@ -317,9 +329,9 @@ export class PhotoPage {
     this.camera.getPicture(options).then((imageData) => {
       this.fileUpload = "data:image/jpeg;base64," + imageData;
 
-      let photoModal = this.modalCtrl.create('photo-modal', {photo: this.fileUpload, categories: this.categories, contestEnabled: this.contestEnabled, userCategoriesInContest: this.userCategoriesInContest });
+      let photoModal = this.modalCtrl.create('photo-modal', {photo: this.fileUpload, categories: this.categories, subcategories: this.subcategories, observation: this.observation, contestEnabled: this.contestEnabled, userCategoriesInContest: this.userCategoriesInContest });
       photoModal.onDidDismiss(data => {
-          console.log("DATA -> ",data);
+          console.log("RETORNO -> ",data);
           if (data.sendFile){
             let loading = this.loadingCtrl.create({
               content: 'Espere...'
@@ -334,8 +346,12 @@ export class PhotoPage {
               formData.append('user_id', clienteId);
               formData.append('image_category_id', data.categoryId);
               formData.append('is_contest', data.contest == true ? '1' : '0');
+              formData.append('image_subcategory_id', JSON.stringify(data.subcategories));
+              formData.append('observation', data.observation);
 
+              console.log(formData);
               this.http.post('/api/projeto/upload',formData, "form-data").subscribe((result:any) => {
+                console.log("RESULT -> ",result);
                 this.items = [];
                 this.cont = 0;
                 this.getPics();
