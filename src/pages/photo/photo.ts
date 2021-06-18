@@ -169,7 +169,6 @@ export class PhotoPage {
       this.storage.get('clienteId').then((clienteId) => {
         this.http.getAll('/api/conteudos', { company_id: companyId, user_id: clienteId, type: "ICON4" })
           .subscribe((data:any) => {
-            console.log("\nPROJETO -> ",data);
             data.forEach((element, index) => {
                 data[index].showAulas = false;
                 element.lessons.forEach(l => {
@@ -238,7 +237,6 @@ export class PhotoPage {
             }
           }) : null;
 
-          console.log("this.pics -> ",this.pics );
           this.picsOriginal = this.pics;
 
           //verifica em qual categoria o usuario ja esta concorrendo 
@@ -331,7 +329,6 @@ export class PhotoPage {
 
       let photoModal = this.modalCtrl.create('photo-modal', {photo: this.fileUpload, categories: this.categories, subcategories: this.subcategories, observation: this.observation, contestEnabled: this.contestEnabled, userCategoriesInContest: this.userCategoriesInContest });
       photoModal.onDidDismiss(data => {
-          console.log("RETORNO -> ",data);
           if (data.sendFile){
             let loading = this.loadingCtrl.create({
               content: 'Espere...'
@@ -349,9 +346,7 @@ export class PhotoPage {
               formData.append('image_subcategory_id', JSON.stringify(data.subcategories));
               formData.append('observation', data.observation);
 
-              console.log(formData);
               this.http.post('/api/projeto/upload',formData, "form-data").subscribe((result:any) => {
-                console.log("RESULT -> ",result);
                 this.items = [];
                 this.cont = 0;
                 this.getPics();

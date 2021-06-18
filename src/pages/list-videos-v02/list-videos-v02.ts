@@ -470,7 +470,6 @@ export class ListVideosV02Page {
                   });
                 }) */
                 this.videos = data;
-                console.log("THIS.videos -> ",this.videos);
                 this.videos = this.videos.sort((a,b) => {
                   if (a.titulo > b.titulo) {
                     return 1;
