@@ -32,4 +32,17 @@ $RECYCLE.BIN/
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate
+www
+www/
+.www
 .www/
+platforms
+.platforms
+platforms/
+.platforms/
+
+plugins
+.plugins
+plugins/
+.plugins/
+
