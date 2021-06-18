@@ -1,1 +1,298 @@
-webpackJsonp([15],{815:function(n,l,e){"use strict";Object.defineProperty(l,"__esModule",{value:!0}),e.d(l,"DownloadModalModuleNgFactory",function(){return C});var t=e(2),u=e(848),i=e(492),o=e(493),a=e(494),d=e(495),r=e(496),c=e(497),s=e(498),f=e(499),m=e(500),p=e(851),h=e(19),g=e(27),v=e(176),R=e(53),b=e(847),C=t["ɵcmf"](u.a,[],function(n){return t["ɵmod"]([t["ɵmpd"](512,t.ComponentFactoryResolver,t["ɵCodegenComponentFactoryResolver"],[[8,[i.a,o.a,a.a,d.a,r.a,c.a,s.a,f.a,m.a,p.a]],[3,t.ComponentFactoryResolver],t.NgModuleRef]),t["ɵmpd"](4608,h.NgLocalization,h.NgLocaleLocalization,[t.LOCALE_ID,[2,h["ɵa"]]]),t["ɵmpd"](4608,g.m,g.m,[]),t["ɵmpd"](4608,g.c,g.c,[]),t["ɵmpd"](512,h.CommonModule,h.CommonModule,[]),t["ɵmpd"](512,g.l,g.l,[]),t["ɵmpd"](512,g.d,g.d,[]),t["ɵmpd"](512,g.k,g.k,[]),t["ɵmpd"](512,v.a,v.a,[]),t["ɵmpd"](512,v.b,v.b,[]),t["ɵmpd"](512,u.a,u.a,[]),t["ɵmpd"](256,R.a,b.a,[])])})},836:function(n,l,e){"use strict";function t(n){return u["ɵvid"](2,[u["ɵqud"](402653184,1,{_fixedContent:0}),u["ɵqud"](402653184,2,{_scrollContent:0}),(n()(),u["ɵeld"](2,0,[[1,0],["fixedContent",1]],null,1,"div",[["class","fixed-content"]],null,null,null,null,null)),u["ɵncd"](null,0),(n()(),u["ɵeld"](4,0,[[2,0],["scrollContent",1]],null,1,"div",[["class","scroll-content"]],null,null,null,null,null)),u["ɵncd"](null,1),u["ɵncd"](null,2)],null,null)}e.d(l,"a",function(){return i}),l.b=t;var u=e(2),i=(e(4),e(7),e(14),e(52),e(8),e(31),u["ɵcrt"]({encapsulation:2,styles:[],data:{}}))},847:function(n,l,e){"use strict";e.d(l,"a",function(){return u});e(0),e(80),e(177),e(178);var t=e(175),u=function(){function n(n,l,e,u,i,o,a,d,r,c,s){this.navCtrl=n,this.navParams=l,this.viewCtrl=e,this.loadingCtrl=u,this.storage=i,this.toastCtrl=o,this.actionSheetCtrl=a,this.file=d,this.appRef=r,this.fileOpener=c,this._platform=s,this.ENV=t.a,this._attachments=[],this._ATTACHMENT_STORAGE_KEY="__MOVERA_ATTACHMENT_STORAGE_KEY",this.idiom=""}return n.prototype.ngOnInit=function(){var n=this;this.storage.get("Project").then(function(l){n.project=l}),this.storage.get("Idiom").then(function(l){n.idiom=l})},n.prototype.close=function(){this.viewCtrl.dismiss()},n.prototype.ionViewDidEnter=function(){var n=this;this.storage.get(this._ATTACHMENT_STORAGE_KEY).then(function(l){l&&(n._attachments=l)}).catch(function(l){n.toastCtrl.create({message:"Houve um erro ao recuperar os itens baixados.",duration:6e3,position:"top"}).present()})},n.prototype.openContent=function(n){var l=this,e=[];e.push(n.isVideo?{icon:"play",text:"Assistir",handler:function(){var e=l._platform.is("android")?l.file.dataDirectory:l.file.documentsDirectory;l.fileOpener.open(""+e+n.offlineFileName,n.mimeType).then(function(){}).catch(function(n){l.toastCtrl.create({duration:6e3,position:"top",message:"01"==l.idiom?"Não foi possível abrir o arquivo.":"02"==l.idiom?"No es posible abrir el archivo.":""}).present()})}}:{icon:"glasses",text:"Ver",handler:function(){var e=l._platform.is("android")?l.file.dataDirectory:l.file.documentsDirectory;l.fileOpener.open(""+e+n.offlineFileName,n.mimeType).then(function(){}).catch(function(n){l.toastCtrl.create({duration:6e3,position:"top",message:"01"==l.idiom?"Não foi possível abrir o arquivo.":"02"==l.idiom?"No es posible abrir el archivo.":""}).present()})}}),e.push({icon:"trash",text:"Apagar",handler:function(){n.isDownloading=!0,n.downloadProgress=0;var e=l._platform.is("android")?l.file.dataDirectory:l.file.documentsDirectory;l.file.removeFile(e,n.offlineFileName).then(function(e){if(e.success)n.isDownloading=!1,n.downloadProgress=0,n.isOffline=!1,n.localUrl="",n.mimeType="",n.offlineFileName="",l.appRef.tick(),l._attachments=l._attachments.filter(function(l){return l.id!=n.id}),l.storage.set(l._ATTACHMENT_STORAGE_KEY,l._attachments).then(function(){l.toastCtrl.create({duration:6e3,position:"top",message:"O arquivo foi removido."}).present()});else{l.toastCtrl.create({duration:6e3,position:"top",message:"01"==l.idiom?"Não foi possível remover o arquivo.":"02"==l.idiom?"No se pudo eliminar el archivo.":""}).present()}})}});this.actionSheetCtrl.create({title:"O que deseja fazer?",subTitle:""+n.name,buttons:e}).present()},n}()},848:function(n,l,e){"use strict";e.d(l,"a",function(){return t});e(0),e(80);var t=function(){return function(){}}()},851:function(n,l,e){"use strict";function t(n){return s["ɵvid"](0,[(n()(),s["ɵeld"](0,0,null,null,1,"p",[["style","color: white;"]],null,null,null,null,null)),(n()(),s["ɵted"](-1,null,["Você ainda não baixou conteúdo offline. Acesse o sistema e baixe seu conteúdo."]))],null,null)}function u(n){return s["ɵvid"](0,[(n()(),s["ɵeld"](0,0,null,null,1,"p",[["style","color: white;"]],null,null,null,null,null)),(n()(),s["ɵted"](-1,null,["Aún no ha descargado contenido sin conexión. Accede al sistema y descarga su contenido."]))],null,null)}function i(n){return s["ɵvid"](0,[(n()(),s["ɵeld"](0,0,null,null,1,"ion-icon",[["name","clipboard"],["role","img"]],[[2,"hide",null]],null,null,null,null)),s["ɵdid"](1,147456,null,0,f.a,[m.a,s.ElementRef,s.Renderer],{name:[0,"name"]},null)],function(n,l){n(l,1,0,"clipboard")},function(n,l){n(l,0,0,s["ɵnov"](l,1)._hidden)})}function o(n){return s["ɵvid"](0,[(n()(),s["ɵeld"](0,0,null,null,1,"ion-icon",[["name","play"],["role","img"]],[[2,"hide",null]],null,null,null,null)),s["ɵdid"](1,147456,null,0,f.a,[m.a,s.ElementRef,s.Renderer],{name:[0,"name"]},null)],function(n,l){n(l,1,0,"play")},function(n,l){n(l,0,0,s["ɵnov"](l,1)._hidden)})}function a(n){return s["ɵvid"](0,[(n()(),s["ɵeld"](0,0,null,null,25,"button",[["class","item item-block"],["ion-item",""],["no-padding",""]],null,[[null,"click"]],function(n,l,e){var t=!0;if("click"===l){t=!1!==n.component.openContent(n.context.$implicit)&&t}return t},p.b,p.a)),s["ɵdid"](1,1097728,null,3,h.a,[g.a,m.a,s.ElementRef,s.Renderer,[2,v.a]],null,null),s["ɵqud"](335544320,1,{contentLabel:0}),s["ɵqud"](603979776,2,{_buttons:1}),s["ɵqud"](603979776,3,{_icons:1}),s["ɵdid"](5,16384,null,0,R.a,[],null,null),(n()(),s["ɵted"](-1,2,["\n        "])),(n()(),s["ɵeld"](7,0,null,2,17,"ion-row",[["class","row"]],null,null,null,null,null)),s["ɵdid"](8,16384,null,0,b.a,[],null,null),(n()(),s["ɵted"](-1,null,["\n          "])),(n()(),s["ɵeld"](10,0,null,null,8,"ion-col",[["class","col"],["col-2",""],["style","justify-content: center; display: flex; align-items: center;"]],null,null,null,null,null)),s["ɵdid"](11,16384,null,0,C.a,[],null,null),(n()(),s["ɵted"](-1,null,["\n            "])),(n()(),s["ɵand"](16777216,null,null,1,null,i)),s["ɵdid"](14,16384,null,0,y.NgIf,[s.ViewContainerRef,s.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),s["ɵted"](-1,null,["\n            "])),(n()(),s["ɵand"](16777216,null,null,1,null,o)),s["ɵdid"](17,16384,null,0,y.NgIf,[s.ViewContainerRef,s.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),s["ɵted"](-1,null,["\n          "])),(n()(),s["ɵted"](-1,null,["\n          "])),(n()(),s["ɵeld"](20,0,null,null,3,"ion-col",[["class","col"],["col-10",""]],null,null,null,null,null)),s["ɵdid"](21,16384,null,0,C.a,[],null,null),(n()(),s["ɵeld"](22,0,null,null,1,"span",[["class","titleContent"]],null,null,null,null,null)),(n()(),s["ɵted"](23,null,["",""])),(n()(),s["ɵted"](-1,null,["\n        "])),(n()(),s["ɵted"](-1,2,["\n      "]))],function(n,l){n(l,14,0,!l.context.$implicit.isVideo);n(l,17,0,l.context.$implicit.isVideo)},function(n,l){n(l,23,0,l.context.$implicit.name)})}function d(n){return s["ɵvid"](0,[(n()(),s["ɵeld"](0,0,null,null,3,"button",[["ion-button",""]],[[8,"className",0]],[[null,"click"]],function(n,l,e){var t=!0;if("click"===l){t=!1!==n.component.close()&&t}return t},_.b,_.a)),s["ɵdid"](1,1097728,null,0,N.a,[[8,""],m.a,s.ElementRef,s.Renderer],null,null),(n()(),s["ɵeld"](2,0,null,0,1,"p",[],null,null,null,null,null)),(n()(),s["ɵted"](-1,null,["Voltar"]))],null,function(n,l){n(l,0,0,s["ɵinlineInterpolate"](1,"button-style button-style-",l.component.ENV.PROJECT,""))})}function r(n){return s["ɵvid"](0,[(n()(),s["ɵeld"](0,0,null,null,3,"button",[["ion-button",""]],[[8,"className",0]],[[null,"click"]],function(n,l,e){var t=!0;if("click"===l){t=!1!==n.component.close()&&t}return t},_.b,_.a)),s["ɵdid"](1,1097728,null,0,N.a,[[8,""],m.a,s.ElementRef,s.Renderer],null,null),(n()(),s["ɵeld"](2,0,null,0,1,"p",[],null,null,null,null,null)),(n()(),s["ɵted"](-1,null,["Volver"]))],null,function(n,l){n(l,0,0,s["ɵinlineInterpolate"](1,"button-style button-style-",l.component.ENV.PROJECT,""))})}function c(n){return s["ɵvid"](0,[(n()(),s["ɵeld"](0,0,null,null,27,"ion-content",[["class","background"],["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,T.b,T.a)),s["ɵdid"](1,4374528,null,0,E.a,[m.a,I.a,w.a,s.ElementRef,s.Renderer,A.a,O.a,s.NgZone,[2,V.a],[2,x.a]],null,null),(n()(),s["ɵted"](-1,1,["\n  "])),(n()(),s["ɵeld"](3,0,null,1,23,"div",[["style","padding-top: 80px;"]],null,null,null,null,null)),(n()(),s["ɵted"](-1,null,["\n    "])),(n()(),s["ɵand"](16777216,null,null,1,null,t)),s["ɵdid"](6,16384,null,0,y.NgIf,[s.ViewContainerRef,s.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),s["ɵted"](-1,null,["\n    "])),(n()(),s["ɵand"](16777216,null,null,1,null,u)),s["ɵdid"](9,16384,null,0,y.NgIf,[s.ViewContainerRef,s.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),s["ɵted"](-1,null,["\n    "])),(n()(),s["ɵeld"](11,0,null,null,5,"ion-list",[],null,null,null,null,null)),s["ɵdid"](12,16384,null,0,k.a,[m.a,s.ElementRef,s.Renderer,I.a,F.l,w.a],null,null),(n()(),s["ɵted"](-1,null,["\n      "])),(n()(),s["ɵand"](16777216,null,null,1,null,a)),s["ɵdid"](15,802816,null,0,y.NgForOf,[s.ViewContainerRef,s.TemplateRef,s.IterableDiffers],{ngForOf:[0,"ngForOf"],ngForTrackBy:[1,"ngForTrackBy"]},null),(n()(),s["ɵted"](-1,null,["\n    "])),(n()(),s["ɵted"](-1,null,["\n\n    "])),(n()(),s["ɵeld"](18,0,null,null,7,"div",[["class","grid-style"]],null,null,null,null,null)),(n()(),s["ɵted"](-1,null,["\n      "])),(n()(),s["ɵand"](16777216,null,null,1,null,d)),s["ɵdid"](21,16384,null,0,y.NgIf,[s.ViewContainerRef,s.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),s["ɵted"](-1,null,["\n      "])),(n()(),s["ɵand"](16777216,null,null,1,null,r)),s["ɵdid"](24,16384,null,0,y.NgIf,[s.ViewContainerRef,s.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),s["ɵted"](-1,null,["\n    "])),(n()(),s["ɵted"](-1,null,["\n  "])),(n()(),s["ɵted"](-1,1,["\n"])),(n()(),s["ɵted"](-1,null,["\n\n\n"]))],function(n,l){var e=l.component;n(l,6,0,0==e._attachments.length&&"01"==e.idiom);n(l,9,0,0==e._attachments.length&&"02"==e.idiom);n(l,15,0,e._attachments,null==e.attachment?null:e.attachment.id);n(l,21,0,"01"==e.idiom);n(l,24,0,"02"==e.idiom)},function(n,l){n(l,0,0,s["ɵnov"](l,1).statusbarPadding,s["ɵnov"](l,1)._hasRefresher)})}e.d(l,"a",function(){return K});var s=e(2),f=e(57),m=e(4),p=e(501),h=e(28),g=e(25),v=e(58),R=e(118),b=e(180),C=e(179),y=e(19),_=e(56),N=e(29),T=e(836),E=e(34),I=e(7),w=e(14),A=e(13),O=e(52),V=e(8),x=e(31),k=e(82),F=e(12),D=e(847),M=e(17),q=e(115),P=e(46),L=e(116),S=e(119),j=e(177),H=e(178),G=s["ɵcrt"]({encapsulation:2,styles:[],data:{}}),K=s["ɵccf"]("page-download-modal",D.a,function(n){return s["ɵvid"](0,[(n()(),s["ɵeld"](0,0,null,null,1,"page-download-modal",[],null,null,null,c,G)),s["ɵdid"](1,114688,null,0,D.a,[x.a,M.a,V.a,q.a,P.b,L.a,S.a,j.a,s.ApplicationRef,H.a,I.a],null,null)],function(n,l){n(l,1,0)},null)},{},{},[])}});
+webpackJsonp([15],{
+
+/***/ 869:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabsPageModule", function() { return TabsPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs__ = __webpack_require__(886);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var TabsPageModule = /** @class */ (function () {
+    function TabsPageModule() {
+    }
+    TabsPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__tabs__["a" /* TabsPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__tabs__["a" /* TabsPage */]),
+            ],
+        })
+    ], TabsPageModule);
+    return TabsPageModule;
+}());
+
+//# sourceMappingURL=tabs.module.js.map
+
+/***/ }),
+
+/***/ 886:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_onesignal__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_is_cordova_available__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_http_service_http_service__ = __webpack_require__(161);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var TabsPage = /** @class */ (function () {
+    function TabsPage(navCtrl, navParams, storage, oneSignal, http) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.storage = storage;
+        this.oneSignal = oneSignal;
+        this.http = http;
+        this.tab1 = '';
+        this.tab7 = 'notification-page';
+        this.tab8 = 'edit-user-page';
+        this.tab9 = 'photo-page';
+        this.tab10 = '';
+        this.showTab5 = true;
+        this.showTabSair = true;
+        this.renderRoot = false;
+        this.chatAtTop = true;
+        this.notificationEnabled = false;
+        this.version = '01';
+        this.totalNotification = null;
+        this.showTab04 = false;
+        this.showTab05 = false;
+        this.goToDeafultPage();
+    }
+    TabsPage_1 = TabsPage;
+    TabsPage.prototype.goToDeafultPage = function () {
+        var _this = this;
+        this.storage.get('LayoutVersion').then(function (value) {
+            _this.chatAtTop = false;
+            switch (value) {
+                case '02': {
+                    _this.version = '02';
+                    _this.tab1 = 'list-videos-v02-page';
+                    _this.tab10 = 'list-videos-v03-page';
+                    _this.chatAtTop = true;
+                    _this.notificationEnabled = true;
+                    break;
+                }
+                default: {
+                    _this.version = '01';
+                    _this.tab1 = 'list-videos-page';
+                    _this.tab10 = 'list-videos-page-v04';
+                    _this.chatAtTop = true;
+                    _this.notificationEnabled = false;
+                }
+            }
+            _this.storage.get('clienteCompanyId').then(function (companyId) {
+                _this.storage.get('clienteId').then(function (clienteId) {
+                    _this.http.getAll('/api/conteudos', { company_id: companyId, user_id: clienteId, type: "ICON4" })
+                        .subscribe(function (data) {
+                        if (data.length > 0)
+                            _this.showTab04 = true;
+                        _this.http.getAll('/api/conteudos', { company_id: companyId, user_id: clienteId, type: "ICON5" })
+                            .subscribe(function (data) {
+                            if (data.length > 0)
+                                _this.showTab05 = true;
+                            _this.getTotalNotifications(true);
+                            setTimeout(function () {
+                                setInterval(function () {
+                                    _this.getTotalNotifications();
+                                }, 5000);
+                            }, 5000);
+                            _this.renderRoot = true;
+                        });
+                    });
+                });
+            });
+        });
+    };
+    TabsPage.prototype.getTotalNotifications = function (goToNotification) {
+        var _this = this;
+        if (goToNotification === void 0) { goToNotification = false; }
+        this.storage.get('clienteId').then(function (id) {
+            _this.http.getAll('/mensagens/getNotifications', { lido: false, user_id: id }, 'get')
+                .subscribe(function (data) {
+                _this.totalNotification = data.length > 0 ? data.length : null;
+                if (data.length > 0 && goToNotification == true) {
+                    _this.appTabs.select(1, { animate: true });
+                }
+            });
+        });
+    };
+    TabsPage.prototype.checkOneSignal = function () {
+        var _this = this;
+        if (Object(__WEBPACK_IMPORTED_MODULE_4__common_is_cordova_available__["a" /* isCordovaAvailable */])()) {
+            //this.storage.get('Project').then((project)=>{
+            //this.project = project;
+            var firebaseKey = '';
+            var firebaseSenderId = '';
+            var onesignalAppId = '';
+            switch (this.project) {
+                case 'marketing-house': {
+                    onesignalAppId = '883bb93e-4053-43f0-865c-a5d52ca89a80';
+                    firebaseKey = 'AAAA6zTPRhs:APA91bFAjdg13h1oQ_3LDNBbRd03TbWEkMTSpbXMc1lz4sToQ9VjcX4LYF5mC0Kh31aLfdMVISXnK4FTZV23hbiZqoFDFPpmXqF2Ijynuql5rlSGmyA-Ojy6e4Qu_ANDMR0LiByu9BkS';
+                    firebaseSenderId = '1010203313691';
+                    break;
+                }
+                case 'edicom': {
+                    onesignalAppId = 'c3765e9e-79b4-4dbc-b3ad-a31396017591';
+                    firebaseKey = 'AAAA5JZ5Y9U:APA91bHSACC_j1IijWyCoCpCojFln7TtQK14oNcUIi_PxXjvciAFR4L6xgYcuJpMFxR33pVrRg49Gw646jQmrKmvYe9X570IRZNVn-pu9pm3Ok0z39bd0r9T1W8geO5HJ56pF6tqF6GB';
+                    firebaseSenderId = '981777081301';
+                    break;
+                }
+                case 'ead': {
+                    onesignalAppId = '946eb156-716e-4000-853f-18f41cc2b193';
+                    //firebaseKey='AAAAHNSgMm4:APA91bFf84ZghEqCHXgqBNV5tC076OmSYnqUurpu4wDKW6WNjyLbJ3TXNxn6iIpPBT6gskXroMG45lB13l4ZhfLsw9rYzhKWv10wb-iMc2OjKCJkFYdHz3Crsk3TPQ9oh7DGDLFicLsj';
+                    firebaseKey = 'AAAABZVhZoI:APA91bFUtPdBDTVN-NHZc7Wk53Tn9wZiz1qjHTVKtyssQfur2F1t509yEe95CMOf6M0mkdQZYXBp6xBEhozI8J274GU6JHmLBSGrFWIAUxFk4w4Le3UdrjdvzdQyptkULVkuHPBohGND';
+                    firebaseSenderId = '23981024898';
+                    break;
+                }
+                case 'hkt369': {
+                    onesignalAppId = 'abf814a3-a2bb-4ae4-9a63-422d37394e64';
+                    firebaseKey = 'AAAAtys66f8:APA91bGBdecST10j3dG5AbL8-dRt0uMgYcS_zGutn-md8ZTi_0A-D-PLlXdoY0E5Akuwo9DUaWMxbv6vCXpHePJ2M4UeneYVlrUcuHUFIsXmiLbx4xXGZyMuLw0AsUCWM4IP3j7YdcsG';
+                    firebaseSenderId = '786704296447';
+                    break;
+                }
+                case 'know-house': {
+                    onesignalAppId = 'd29cd1d1-3a5b-4774-b768-a1026101ea0a';
+                    firebaseKey = 'AAAAv6DuekQ:APA91bEWy0U4-HL8f12hbNMEvDKQ1LMr8eA1gP-0gy4Y319eUpljpqwjNrQBrCoCXcl-IWHshA-I__MNi9WeKQfEUVSNDd_sTWI2AkmnAwXjHgUFsFaiyAYbUUyCYUYldoB8vgzLI7Cn';
+                    firebaseSenderId = '823038736964';
+                    break;
+                }
+                case 'simples-trade': {
+                    onesignalAppId = 'd6e18971-f2cc-41d8-aed7-28384cb957e0';
+                    firebaseKey = 'AAAAsWwKIKs:APA91bGvbUnOUFFYPGEY_rUolZNcgDnhjy1eBuEHM4nWnbpg03Ie8ky09eISCfqh2WmDt9ZnSBrsQebOFb85LPckqOQnMoDYA4RNmQZ5PqulyeAaMT2nqGfksSvU8QFqQR7sY7vTV2ix';
+                    firebaseSenderId = '762021814443';
+                    break;
+                }
+                case 'r2m': {
+                    onesignalAppId = 'a7bbe9ca-2e79-4f10-8f68-365da3e09fd5';
+                    firebaseKey = 'AAAAjrxUeko:APA91bEwsLDPKZJkIAnBNMcxrsxEYrGgi49TF7Pg37DQwpvwX9QtWgGojRzSiePJpLwt-qWe08onYfdsqjeUTxeFTz8aYDwS95uoI5ruThJGtz2r9kLxcBAXwzwNavPVHDTOYEw0DmUW';
+                    firebaseSenderId = '613045008970';
+                    break;
+                }
+                case 'ava': {
+                    onesignalAppId = '6b8f443d-da09-4ccc-b629-f1e21476c6b2';
+                    firebaseKey = 'AAAAhgN0_JU:APA91bEMiPSZM22P9MkPreN0zjwXbuz23N2wuSKifKN2or8Vt-YCzkYiGxC1p1SJA6OSCiTOaj3DKSLfgw_UcTU1J8ZSxqYzxcUAApNz3UjzTtrYSSNAhybm3NBzLOTSOBlqs4ks1Niz';
+                    firebaseSenderId = '575583616149';
+                    break;
+                }
+                case 'tmc': {
+                    onesignalAppId = 'c4a92409-ba2f-4001-bd59-af1b24ae58a1';
+                    firebaseKey = 'AAAAqoEzzRQ:APA91bGT0v5hAXduloaX57YR4XMSXnf3JVgM1ExmRAqP76jQkVilZR0DIRkv3Ninf9OlXsCUO-qPDpITPKtJpZHMBrjN_8OkD0WsO6Di041JTog_XpdCULtLE-Cj6fonzYaCDqIGbQxN';
+                    firebaseSenderId = '732312096020';
+                    break;
+                }
+                case 'hability': {
+                    onesignalAppId = 'fb347a8c-b214-4754-934b-b60e6772fd47';
+                    firebaseKey = 'AAAA19U5WlY:APA91bFfFyWmWJ7mz5oZn8Mj_pXFIjK82TTJCaC679XRZXdKCM3zLc36n7YJ1BwRACoa7Qx-JH2X76GANdVCHWrpkMmO271lBpUpOQDtb5kXtqPFRtdKpKAeVra4XCBC-_1_CuXAmHF3';
+                    firebaseSenderId = '926995274326';
+                    break;
+                }
+                case 'full-promo': {
+                    onesignalAppId = '574a5c13-9a8e-46fb-85cf-3698d35cc750';
+                    firebaseKey = 'AAAA-HsLbLA:APA91bE7dRADuz2EZ67knO3JqdBik6l99LOyM1I709WKFRVDCKqlYItxwln3B1S6s6JziLUvxGfDLfCVCOFZgYU0JuXwbHkuN2nxtX7CUUBHYQYKoHm3u0mP-drYb7UCyNgLb7Dr7gkA';
+                    firebaseSenderId = '1067216235696';
+                    break;
+                }
+                case 'sehc': {
+                    onesignalAppId = '41ad100c-898c-4a9f-99d9-277244f36858';
+                    firebaseKey = 'AAAAJQrYkQs:APA91bEoNaXdvAmr3avjoKujIMeWSUAcWAOqSPN2XZblWGZzih7xZbaaA7BX9PDEuDHwRdnr5fZTCMqiertxoyAb6hfzFFHp9X4GVk1DDf0b0aaQmAeSaCT6CUsHK2-Bce2mRiZQztxz';
+                    firebaseSenderId = '159095755019';
+                    break;
+                }
+            }
+            /*
+              ANTIGO---------------------------------------------
+              this.oneSignal.startInit(
+              'AAAAHNSgMm4:APA91bFf84ZghEqCHXgqBNV5tC076OmSYnqUurpu4wDKW6WNjyLbJ3TXNxn6iIpPBT6gskXroMG45lB13l4ZhfLsw9rYzhKWv10wb-iMc2OjKCJkFYdHz3Crsk3TPQ9oh7DGDLFicLsj',
+              '123826352750'
+            ); */
+            this.oneSignal.startInit(onesignalAppId, firebaseSenderId);
+            this.oneSignal.getIds().then(function (state) {
+                //FAZ O ENVIO DO DEVICE ID PRA WEB
+                //id, email, type, device_id
+                _this.storage.get('clienteId').then(function (clienteId) {
+                    _this.storage.get('clienteEmail').then(function (clienteEmail) {
+                        var parametros = {
+                            id: clienteId,
+                            email: clienteEmail,
+                            device_id: state.userId,
+                            type: 'android'
+                        };
+                        _this.http.post('/api/usuarios/set-device', parametros)
+                            .subscribe(function (data) {
+                        });
+                    });
+                });
+                //});
+            }).catch(function (error) { console.log('error no GET IDS', error); });
+            this.oneSignal.endInit();
+        }
+    };
+    TabsPage.prototype.ionViewWillEnter = function () {
+        var _this = this;
+        this.storage.get('Project').then(function (project) {
+            _this.project = project;
+            _this.checkOneSignal();
+        });
+    };
+    TabsPage.prototype.redirectToListPage = function () {
+        if (this.navCtrl.getActive().component !== TabsPage_1) {
+            this.appTabs.select(2, { animate: true });
+            this.navCtrl.setRoot('tab-page', { logout: true });
+        }
+    };
+    TabsPage.prototype.doLogout = function () {
+        this.navCtrl.setRoot('login-page', { logout: true });
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('appTabs'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* Tabs */])
+    ], TabsPage.prototype, "appTabs", void 0);
+    TabsPage = TabsPage_1 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-tabs',template:/*ion-inline-start:"C:\Users\Alan\Desktop\ALAN\TRABALHO\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\pages\tabs\tabs.html"*/'<ion-tabs #appTabs selectedIndex="2" *ngIf="project == \'marketing-house\' && (version == \'02\' || version == \'01\') && renderRoot == true" [ngClass]="chatAtTop == true ? \'ion-tabs\' : \'\'">\n\n  <ion-tab [root]="tab8" tabIcon="tab-mrkhouse-perfil"></ion-tab>\n\n  <ion-tab [root]="tab7" tabIcon="tab-mrkhouse-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>\n\n  <ion-tab [root]="tab1" tabIcon="tab-mrkhouse-agenda" (ionSelect)="redirectToListPage()"></ion-tab>\n\n  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-mrkhouse-foto"></ion-tab>\n\n  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-mrkhouse-news"></ion-tab>\n\n</ion-tabs>\n\n\n\n<ion-tabs #appTabs selectedIndex="2" *ngIf="project == \'edicom\' && (version == \'02\' || version == \'01\') && renderRoot == true" [ngClass]="chatAtTop == true ? \'ion-tabs\' : \'\'">\n\n  <ion-tab [root]="tab8" tabIcon="tab-edicom-perfil"></ion-tab>\n\n  <ion-tab [root]="tab7" tabIcon="tab-edicom-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>\n\n  <ion-tab [root]="tab1" tabIcon="tab-edicom-agenda" (ionSelect)="redirectToListPage()"></ion-tab>\n\n  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-edicom-foto"></ion-tab>\n\n  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-edicom-news"></ion-tab>\n\n</ion-tabs>\n\n \n\n\n\n<ion-tabs #appTabs selectedIndex="2" *ngIf="project == \'ead\' && (version == \'02\' || version == \'01\') && renderRoot == true" [ngClass]="chatAtTop == true ? \'ion-tabs\' : \'\'">\n\n  <ion-tab [root]="tab8" tabIcon="tab-vcc-perfil"></ion-tab>\n\n  <ion-tab [root]="tab7" tabIcon="tab-vcc-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>\n\n  <ion-tab [root]="tab1" tabIcon="tab-vcc-agenda" (ionSelect)="redirectToListPage()"></ion-tab>\n\n  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-vcc-foto"></ion-tab>\n\n  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-vcc-news"></ion-tab>\n\n</ion-tabs>\n\n\n\n<ion-tabs #appTabs selectedIndex="2" *ngIf="project == \'hkt369\' && (version == \'02\' || version == \'01\') && renderRoot == true" [ngClass]="chatAtTop == true ? \'ion-tabs\' : \'\'">\n\n  <ion-tab [root]="tab8" tabIcon="tab-hkt369-perfil"></ion-tab>\n\n  <ion-tab [root]="tab7" tabIcon="tab-hkt369-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>\n\n  <ion-tab [root]="tab1" tabIcon="tab-hkt369-agenda" (ionSelect)="redirectToListPage()"></ion-tab>\n\n  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-hkt369-foto"></ion-tab>\n\n  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-hkt369-news"></ion-tab>\n\n</ion-tabs>\n\n\n\n<ion-tabs #appTabs selectedIndex="2" *ngIf="project == \'know-house\' && (version == \'02\' || version == \'01\') && renderRoot == true" [ngClass]="chatAtTop == true ? \'ion-tabs\' : \'\'">\n\n  <ion-tab [root]="tab8" tabIcon="tab-knowh-perfil"></ion-tab>\n\n  <ion-tab [root]="tab7" tabIcon="tab-knowh-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>\n\n  <ion-tab [root]="tab1" tabIcon="tab-knowh-agenda" (ionSelect)="redirectToListPage()"></ion-tab>\n\n  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-knowh-foto"></ion-tab>\n\n  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-knowh-news"></ion-tab>\n\n</ion-tabs>\n\n\n\n<ion-tabs #appTabs selectedIndex="2" *ngIf="project == \'simples-trade\' && (version == \'02\' || version == \'01\') && renderRoot == true" [ngClass]="chatAtTop == true ? \'ion-tabs\' : \'\'">\n\n  <ion-tab [root]="tab8" tabIcon="tab-strade-perfil"></ion-tab>\n\n  <ion-tab [root]="tab7" tabIcon="tab-strade-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>\n\n  <ion-tab [root]="tab1" tabIcon="tab-strade-agenda" (ionSelect)="redirectToListPage()"></ion-tab>\n\n  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-strade-foto"></ion-tab>\n\n  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-strade-news"></ion-tab>\n\n</ion-tabs>\n\n\n\n<ion-tabs #appTabs selectedIndex="2" *ngIf="project == \'r2m\' && (version == \'02\' || version == \'01\') && renderRoot == true" [ngClass]="chatAtTop == true ? \'ion-tabs\' : \'\'">\n\n  <ion-tab [root]="tab8" tabIcon="tab-r2m-perfil"></ion-tab>\n\n  <ion-tab [root]="tab7" tabIcon="tab-r2m-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>\n\n  <ion-tab [root]="tab1" tabIcon="tab-r2m-agenda" (ionSelect)="redirectToListPage()"></ion-tab>\n\n  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-r2m-foto"></ion-tab>\n\n  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-r2m-news"></ion-tab>\n\n</ion-tabs>\n\n\n\n<ion-tabs #appTabs selectedIndex="2" *ngIf="project == \'ava\' && (version == \'02\' || version == \'01\') && renderRoot == true" [ngClass]="chatAtTop == true ? \'ion-tabs\' : \'\'">\n\n  <ion-tab [root]="tab8" tabIcon="tab-ava-perfil"></ion-tab>\n\n  <ion-tab [root]="tab7" tabIcon="tab-ava-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>\n\n  <ion-tab [root]="tab1" tabIcon="tab-ava-agenda" (ionSelect)="redirectToListPage()"></ion-tab>\n\n  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-ava-foto"></ion-tab>\n\n  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-ava-news"></ion-tab>\n\n</ion-tabs>\n\n\n\n<ion-tabs #appTabs selectedIndex="2" *ngIf="project == \'tmc\' && (version == \'02\' || version == \'01\') && renderRoot == true" [ngClass]="chatAtTop == true ? \'ion-tabs\' : \'\'">\n\n  <ion-tab [root]="tab8" tabIcon="tab-tmc-perfil"></ion-tab>\n\n  <ion-tab [root]="tab7" tabIcon="tab-tmc-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>\n\n  <ion-tab [root]="tab1" tabIcon="tab-tmc-agenda" (ionSelect)="redirectToListPage()"></ion-tab>\n\n  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-tmc-foto"></ion-tab>\n\n  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-tmc-news"></ion-tab>\n\n</ion-tabs>\n\n\n\n<ion-tabs #appTabs selectedIndex="2" *ngIf="project == \'hability\' && (version == \'02\' || version == \'01\') && renderRoot == true" [ngClass]="chatAtTop == true ? \'ion-tabs\' : \'\'">\n\n  <ion-tab [root]="tab8" tabIcon="tab-hability-perfil"></ion-tab>\n\n  <ion-tab [root]="tab7" tabIcon="tab-hability-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>\n\n  <ion-tab [root]="tab1" tabIcon="tab-hability-agenda" (ionSelect)="redirectToListPage()"></ion-tab>\n\n  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-hability-foto"></ion-tab>\n\n  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-hability-news"></ion-tab>\n\n</ion-tabs>\n\n\n\n<ion-tabs #appTabs selectedIndex="2" *ngIf="project == \'full-promo\' && (version == \'02\' || version == \'01\') && renderRoot == true" [ngClass]="chatAtTop == true ? \'ion-tabs\' : \'\'">\n\n  <ion-tab [root]="tab8" tabIcon="tab-full-promo-perfil"></ion-tab>\n\n  <ion-tab [root]="tab7" tabIcon="tab-full-promo-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>\n\n  <ion-tab [root]="tab1" tabIcon="tab-full-promo-agenda" (ionSelect)="redirectToListPage()"></ion-tab>\n\n  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-full-promo-foto"></ion-tab>\n\n  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-full-promo-news"></ion-tab>\n\n</ion-tabs>\n\n\n\n<ion-tabs #appTabs selectedIndex="2" *ngIf="project == \'sehc\' && (version == \'02\' || version == \'01\') && renderRoot == true" [ngClass]="chatAtTop == true ? \'ion-tabs\' : \'\'">\n\n  <ion-tab [root]="tab8" tabIcon="tab-sehc-perfil"></ion-tab>\n\n  <ion-tab [root]="tab7" tabIcon="tab-sehc-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>\n\n  <ion-tab [root]="tab1" tabIcon="tab-sehc-agenda" (ionSelect)="redirectToListPage()"></ion-tab>\n\n  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-sehc-foto"></ion-tab>\n\n  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-sehc-news"></ion-tab>\n\n</ion-tabs>\n\n\n\n<ion-tabs #appTabs selectedIndex="2" *ngIf="project == \'club-learn\' && (version == \'02\' || version == \'01\') && renderRoot == true" [ngClass]="chatAtTop == true ? \'ion-tabs\' : \'\'">\n\n  <ion-tab [root]="tab8" tabIcon="tab-club-learn-perfil"></ion-tab>\n\n  <ion-tab [root]="tab7" tabIcon="tab-club-learn-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>\n\n  <ion-tab [root]="tab1" tabIcon="tab-club-learn-agenda" (ionSelect)="redirectToListPage()"></ion-tab>\n\n  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-club-learn-foto"></ion-tab>\n\n  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-club-learn-news"></ion-tab>\n\n</ion-tabs>\n\n\n\n<!-- LOCALHOST -->\n\n\n\n<ion-tabs #appTabs selectedIndex="2" *ngIf="project == \'localhost\' && (version == \'02\' || version == \'01\') && renderRoot == true" [ngClass]="chatAtTop == true ? \'ion-tabs\' : \'\'">\n\n  <ion-tab [root]="tab8" tabIcon="tab-localhost-perfil"></ion-tab>\n\n  <ion-tab [root]="tab7" tabIcon="tab-localhost-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>\n\n  <ion-tab [root]="tab1" tabIcon="tab-localhost-agenda" (ionSelect)="redirectToListPage()"></ion-tab>\n\n  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-localhost-foto"></ion-tab>\n\n  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-localhost-news"></ion-tab>\n\n</ion-tabs>'/*ion-inline-end:"C:\Users\Alan\Desktop\ALAN\TRABALHO\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\pages\tabs\tabs.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */],
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_onesignal__["a" /* OneSignal */],
+            __WEBPACK_IMPORTED_MODULE_5__providers_http_service_http_service__["a" /* HttpServiceProvider */]])
+    ], TabsPage);
+    return TabsPage;
+    var TabsPage_1;
+}());
+
+//# sourceMappingURL=tabs.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=15.js.map

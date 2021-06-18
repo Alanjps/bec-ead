@@ -1,1 +1,764 @@
-webpackJsonp([13],{817:function(l,n,e){"use strict";function t(l){return f["ɵvid"](0,[(l()(),f["ɵeld"](0,0,null,null,1,"div",[["class","datetime-text datetime-placeholder"]],null,null,null,null,null)),(l()(),f["ɵted"](1,null,["",""]))],null,function(l,n){l(n,1,0,n.component.placeholder)})}function u(l){return f["ɵvid"](0,[(l()(),f["ɵeld"](0,0,null,null,1,"div",[["class","datetime-text"]],null,null,null,null,null)),(l()(),f["ɵted"](1,null,["",""]))],null,function(l,n){l(n,1,0,n.component._text)})}function r(l){return f["ɵvid"](0,[(l()(),f["ɵand"](16777216,null,null,1,null,t)),f["ɵdid"](1,16384,null,0,K.NgIf,[f.ViewContainerRef,f.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),f["ɵand"](16777216,null,null,1,null,u)),f["ɵdid"](3,16384,null,0,K.NgIf,[f.ViewContainerRef,f.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),f["ɵeld"](4,0,null,null,1,"button",[["aria-haspopup","true"],["class","item-cover"],["ion-button","item-cover"],["type","button"]],[[8,"id",0],[1,"aria-labelledby",0],[1,"aria-disabled",0]],null,null,S.b,S.a)),f["ɵdid"](5,1097728,null,0,F.a,[[8,"item-cover"],H.a,f.ElementRef,f.Renderer],null,null)],function(l,n){var e=n.component;l(n,1,0,!e._text);l(n,3,0,e._text)},function(l,n){var e=n.component;l(n,4,0,e.id,e._labelId,e._disabled)})}function i(l){return f["ɵvid"](0,[(l()(),f["ɵeld"](0,0,null,null,0,"img",[["class","testeira-v01"]],[[8,"src",4]],null,null,null,null))],null,function(l,n){l(n,0,0,f["ɵinlineInterpolate"](1,"",n.component.globalUrl+"/storage/uploads/configs/testeira1.png",""))})}function a(l){return f["ɵvid"](0,[(l()(),f["ɵeld"](0,0,null,null,0,"img",[["class","testeira-v02"]],[[8,"src",4]],null,null,null,null))],null,function(l,n){l(n,0,0,f["ɵinlineInterpolate"](1,"",n.component.globalUrl+"/storage/uploads/configs/testeira2.png",""))})}function o(l){return f["ɵvid"](0,[(l()(),f["ɵeld"](0,0,null,null,19,"ion-row",[["class","row"],["style","line-height: 50px;"]],null,null,null,null,null)),f["ɵdid"](1,16384,null,0,Y.a,[],null,null),(l()(),f["ɵted"](-1,null,["\n        "])),(l()(),f["ɵeld"](3,0,null,null,2,"ion-col",[["class","col"],["style","width: 40%;"]],null,null,null,null,null)),f["ɵdid"](4,16384,null,0,O.a,[],null,null),(l()(),f["ɵted"](5,null,["\n          ","\n        "])),(l()(),f["ɵted"](-1,null,["\n        "])),(l()(),f["ɵeld"](7,0,null,null,2,"ion-col",[["class","col"],["style","width: 40%;"]],null,null,null,null,null)),f["ɵdid"](8,16384,null,0,O.a,[],null,null),(l()(),f["ɵted"](9,null,["\n          ","\n        "])),(l()(),f["ɵted"](-1,null,["\n        "])),(l()(),f["ɵeld"](11,0,null,null,7,"ion-col",[["class","col"],["style","width: 20%;"]],null,null,null,null,null)),f["ɵdid"](12,16384,null,0,O.a,[],null,null),(l()(),f["ɵted"](-1,null,["\n          "])),(l()(),f["ɵeld"](14,0,null,null,3,"button",[["ion-button",""],["style","width: auto;"]],null,[[null,"click"]],function(l,n,e){var t=!0;if("click"===n){t=!1!==l.component.openHolerite(l.context.$implicit.urlLink)&&t}return t},S.b,S.a)),f["ɵdid"](15,1097728,null,0,F.a,[[8,""],H.a,f.ElementRef,f.Renderer],null,null),(l()(),f["ɵeld"](16,0,null,0,1,"ion-icon",[["name","eye"],["role","img"]],[[2,"hide",null]],null,null,null,null)),f["ɵdid"](17,147456,null,0,j.a,[H.a,f.ElementRef,f.Renderer],{name:[0,"name"]},null),(l()(),f["ɵted"](-1,null,["\n        "])),(l()(),f["ɵted"](-1,null,["\n      "]))],function(l,n){l(n,17,0,"eye")},function(l,n){l(n,5,0,n.context.$implicit.ano);l(n,9,0,n.context.$implicit.mes);l(n,16,0,f["ɵnov"](n,17)._hidden)})}function s(l){return f["ɵvid"](0,[(l()(),f["ɵeld"](0,0,null,null,28,"ion-list",[],null,null,null,null,null)),f["ɵdid"](1,16384,null,0,L.a,[H.a,f.ElementRef,f.Renderer,U.a,J.l,q.a],null,null),(l()(),f["ɵted"](-1,null,["\n    "])),(l()(),f["ɵeld"](3,0,null,null,24,"ion-grid",[["class","grid-style grid"],["style","text-align: center;"]],null,null,null,null,null)),f["ɵdid"](4,16384,null,0,z.a,[],null,null),(l()(),f["ɵted"](-1,null,["\n      "])),(l()(),f["ɵeld"](6,0,null,null,17,"ion-row",[["class","row"]],null,null,null,null,null)),f["ɵdid"](7,16384,null,0,Y.a,[],null,null),(l()(),f["ɵted"](-1,null,["\n        "])),(l()(),f["ɵeld"](9,0,null,null,3,"ion-col",[["class","col"],["style","width: 40%;"]],null,null,null,null,null)),f["ɵdid"](10,16384,null,0,O.a,[],null,null),(l()(),f["ɵeld"](11,0,null,null,1,"b",[],null,null,null,null,null)),(l()(),f["ɵted"](-1,null,["Ano"])),(l()(),f["ɵted"](-1,null,["\n        "])),(l()(),f["ɵeld"](14,0,null,null,3,"ion-col",[["class","col"],["style","width: 40%;"]],null,null,null,null,null)),f["ɵdid"](15,16384,null,0,O.a,[],null,null),(l()(),f["ɵeld"](16,0,null,null,1,"b",[],null,null,null,null,null)),(l()(),f["ɵted"](-1,null,["Mês"])),(l()(),f["ɵted"](-1,null,["\n        "])),(l()(),f["ɵeld"](19,0,null,null,3,"ion-col",[["class","col"],["style","width: 20%;"]],null,null,null,null,null)),f["ɵdid"](20,16384,null,0,O.a,[],null,null),(l()(),f["ɵeld"](21,0,null,null,1,"b",[],null,null,null,null,null)),(l()(),f["ɵted"](-1,null,["Ver"])),(l()(),f["ɵted"](-1,null,["\n      "])),(l()(),f["ɵted"](-1,null,["\n\n      "])),(l()(),f["ɵand"](16777216,null,null,1,null,o)),f["ɵdid"](26,802816,null,0,K.NgForOf,[f.ViewContainerRef,f.TemplateRef,f.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),f["ɵted"](-1,null,["\n    "])),(l()(),f["ɵted"](-1,null,["\n      \n  "]))],function(l,n){l(n,26,0,n.component.holerites)},null)}function d(l){return f["ɵvid"](0,[(l()(),f["ɵeld"](0,0,null,null,0,"iframe",[["data-tap-disabled","true"]],[[8,"src",5]],null,null,null,null))],null,function(l,n){var e=n.component;l(n,0,0,e.sanitizer(e.holeriteURL))})}function c(l){return f["ɵvid"](0,[(l()(),f["ɵeld"](0,0,null,null,3,"button",[["ion-button",""]],[[8,"className",0]],[[null,"click"]],function(l,n,e){var t=!0;if("click"===n){t=!1!==l.component.confirm()&&t}return t},S.b,S.a)),f["ɵdid"](1,1097728,null,0,F.a,[[8,""],H.a,f.ElementRef,f.Renderer],null,null),(l()(),f["ɵeld"](2,0,null,0,1,"p",[],null,null,null,null,null)),(l()(),f["ɵted"](-1,null,["Voltar"]))],null,function(l,n){l(n,0,0,f["ɵinlineInterpolate"](1,"button-style button-style-",n.component.ENV.PROJECT,""))})}function p(l){return f["ɵvid"](0,[(l()(),f["ɵeld"](0,0,null,null,3,"button",[["ion-button",""]],[[8,"className",0]],[[null,"click"]],function(l,n,e){var t=!0;if("click"===n){t=!1!==l.component.confirm()&&t}return t},S.b,S.a)),f["ɵdid"](1,1097728,null,0,F.a,[[8,""],H.a,f.ElementRef,f.Renderer],null,null),(l()(),f["ɵeld"](2,0,null,0,1,"p",[],null,null,null,null,null)),(l()(),f["ɵted"](-1,null,["Volver"]))],null,function(l,n){l(n,0,0,f["ɵinlineInterpolate"](1,"button-style button-style-",n.component.ENV.PROJECT,""))})}function h(l){return f["ɵvid"](0,[(l()(),f["ɵted"](-1,null,["\n"])),(l()(),f["ɵeld"](1,0,null,null,15,"ion-header",[],null,null,null,null,null)),f["ɵdid"](2,278528,null,0,K.NgClass,[f.IterableDiffers,f.KeyValueDiffers,f.ElementRef,f.Renderer2],{ngClass:[0,"ngClass"]},null),f["ɵdid"](3,16384,null,0,G.a,[H.a,f.ElementRef,f.Renderer,[2,Z.a]],null,null),(l()(),f["ɵted"](-1,null,["\n  "])),(l()(),f["ɵeld"](5,0,null,null,10,"div",[],null,null,null,null,null)),(l()(),f["ɵted"](-1,null,["\n    "])),(l()(),f["ɵeld"](7,0,null,null,1,"img",[],[[8,"src",4]],null,null,null,null)),f["ɵdid"](8,278528,null,0,K.NgClass,[f.IterableDiffers,f.KeyValueDiffers,f.ElementRef,f.Renderer2],{ngClass:[0,"ngClass"]},null),(l()(),f["ɵted"](-1,null,["\n\n    "])),(l()(),f["ɵand"](16777216,null,null,1,null,i)),f["ɵdid"](11,16384,null,0,K.NgIf,[f.ViewContainerRef,f.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),f["ɵted"](-1,null,["\n\n    "])),(l()(),f["ɵand"](16777216,null,null,1,null,a)),f["ɵdid"](14,16384,null,0,K.NgIf,[f.ViewContainerRef,f.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),f["ɵted"](-1,null,["\n\n  "])),(l()(),f["ɵted"](-1,null,["\n"])),(l()(),f["ɵted"](-1,null,["\n"])),(l()(),f["ɵeld"](18,0,null,null,83,"ion-content",[["padding",""],["style","background-color: #fff;"]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,B.b,B.a)),f["ɵdid"](19,278528,null,0,K.NgClass,[f.IterableDiffers,f.KeyValueDiffers,f.ElementRef,f.Renderer2],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),f["ɵdid"](20,4374528,null,0,Q.a,[H.a,U.a,q.a,f.ElementRef,f.Renderer,W.a,X.a,f.NgZone,[2,Z.a],[2,ll.a]],null,null),(l()(),f["ɵted"](-1,1,["\n  \n  "])),(l()(),f["ɵeld"](22,0,null,1,63,"ion-list",[],null,null,null,null,null)),f["ɵdid"](23,16384,null,0,L.a,[H.a,f.ElementRef,f.Renderer,U.a,J.l,q.a],null,null),(l()(),f["ɵted"](-1,null,["\n    "])),(l()(),f["ɵeld"](25,0,null,null,59,"ion-grid",[["class","grid-style grid"]],null,null,null,null,null)),f["ɵdid"](26,16384,null,0,z.a,[],null,null),(l()(),f["ɵted"](-1,null,["\n      "])),(l()(),f["ɵeld"](28,0,null,null,5,"ion-row",[["class","row"]],null,null,null,null,null)),f["ɵdid"](29,16384,null,0,Y.a,[],null,null),(l()(),f["ɵted"](-1,null,["\n        "])),(l()(),f["ɵeld"](31,0,null,null,1,"h5",[],null,null,null,null,null)),(l()(),f["ɵted"](-1,null,["Filtrar por data:"])),(l()(),f["ɵted"](-1,null,["\n      "])),(l()(),f["ɵted"](-1,null,["\n      "])),(l()(),f["ɵeld"](35,0,null,null,48,"ion-row",[["class","row"]],null,null,null,null,null)),f["ɵdid"](36,16384,null,0,Y.a,[],null,null),(l()(),f["ɵted"](-1,null,["\n        "])),(l()(),f["ɵeld"](38,0,null,null,21,"ion-col",[["class","col"],["style","width: 40%;"]],null,null,null,null,null)),f["ɵdid"](39,16384,null,0,O.a,[],null,null),(l()(),f["ɵted"](-1,null,["\n          "])),(l()(),f["ɵeld"](41,0,null,null,17,"ion-item",[["class","item item-block"]],null,null,null,nl.b,nl.a)),f["ɵdid"](42,1097728,null,3,el.a,[tl.a,H.a,f.ElementRef,f.Renderer,[2,ul.a]],null,null),f["ɵqud"](335544320,1,{contentLabel:0}),f["ɵqud"](603979776,2,{_buttons:1}),f["ɵqud"](603979776,3,{_icons:1}),f["ɵdid"](46,16384,null,0,rl.a,[],null,null),(l()(),f["ɵted"](-1,2,["\n            "])),(l()(),f["ɵeld"](48,0,null,1,2,"ion-label",[["floating",""]],null,null,null,null,null)),f["ɵdid"](49,16384,[[1,4]],0,il.a,[H.a,f.ElementRef,f.Renderer,[8,""],[8,null],[8,null],[8,null]],null,null),(l()(),f["ɵted"](-1,null,["Ano"])),(l()(),f["ɵted"](-1,2,["\n            "])),(l()(),f["ɵeld"](52,0,null,3,5,"ion-datetime",[["displayFormat","YYYY"]],[[2,"datetime-disabled",null],[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"click"],[null,"keyup.space"]],function(l,n,e){var t=!0,u=l.component;if("click"===n){t=!1!==f["ɵnov"](l,53)._click(e)&&t}if("keyup.space"===n){t=!1!==f["ɵnov"](l,53)._keyup()&&t}if("ngModelChange"===n){t=!1!==(u.selectedDate=e)&&t}return t},r,dl)),f["ɵdid"](53,1228800,null,0,ol.a,[tl.a,H.a,f.ElementRef,f.Renderer,[2,el.a],[2,sl.a]],{displayFormat:[0,"displayFormat"]},null),f["ɵprd"](1024,null,al.g,function(l){return[l]},[ol.a]),f["ɵdid"](55,671744,null,0,al.j,[[8,null],[8,null],[8,null],[2,al.g]],{model:[0,"model"]},{update:"ngModelChange"}),f["ɵprd"](2048,null,al.h,null,[al.j]),f["ɵdid"](57,16384,null,0,al.i,[al.h],null,null),(l()(),f["ɵted"](-1,2,["\n          "])),(l()(),f["ɵted"](-1,null,["\n        "])),(l()(),f["ɵted"](-1,null,["\n        "])),(l()(),f["ɵeld"](61,0,null,null,10,"ion-col",[["class","col"],["style","width: 20%;"]],null,null,null,null,null)),f["ɵdid"](62,16384,null,0,O.a,[],null,null),(l()(),f["ɵted"](-1,null,["\n          "])),(l()(),f["ɵeld"](64,0,null,null,6,"div",[["padding",""],["style","width: auto;"]],null,null,null,null,null)),(l()(),f["ɵted"](-1,null,["\n            "])),(l()(),f["ɵeld"](66,0,null,null,3,"button",[["icon-only",""],["ion-button",""]],[[8,"className",0]],[[null,"click"]],function(l,n,e){var t=!0;if("click"===n){t=!1!==l.component.listarHolerites()&&t}return t},S.b,S.a)),f["ɵdid"](67,1097728,null,0,F.a,[[8,""],H.a,f.ElementRef,f.Renderer],null,null),(l()(),f["ɵeld"](68,0,null,0,1,"ion-icon",[["name","ios-search"],["role","img"]],[[2,"hide",null]],null,null,null,null)),f["ɵdid"](69,147456,null,0,j.a,[H.a,f.ElementRef,f.Renderer],{name:[0,"name"]},null),(l()(),f["ɵted"](-1,null,["\n          "])),(l()(),f["ɵted"](-1,null,["\n        "])),(l()(),f["ɵted"](-1,null,["\n        "])),(l()(),f["ɵeld"](73,0,null,null,9,"ion-col",[["class","col"],["style","width: 20%;"]],null,null,null,null,null)),f["ɵdid"](74,16384,null,0,O.a,[],null,null),(l()(),f["ɵted"](-1,null,["\n          "])),(l()(),f["ɵeld"](76,0,null,null,5,"div",[["padding",""],["style","width: auto;"]],null,null,null,null,null)),(l()(),f["ɵted"](-1,null,["\n            "])),(l()(),f["ɵeld"](78,0,null,null,2,"button",[["ion-button",""]],[[8,"className",0]],[[null,"click"]],function(l,n,e){var t=!0;if("click"===n){t=!1!==l.component.limparFiltro()&&t}return t},S.b,S.a)),f["ɵdid"](79,1097728,null,0,F.a,[[8,""],H.a,f.ElementRef,f.Renderer],null,null),(l()(),f["ɵted"](-1,0,["limpar"])),(l()(),f["ɵted"](-1,null,["\n          "])),(l()(),f["ɵted"](-1,null,["\n        "])),(l()(),f["ɵted"](-1,null,["\n      "])),(l()(),f["ɵted"](-1,null,["\n    "])),(l()(),f["ɵted"](-1,null,["\n    \n\n  "])),(l()(),f["ɵted"](-1,1,["\n    \n  "])),(l()(),f["ɵand"](16777216,null,1,1,null,s)),f["ɵdid"](88,16384,null,0,K.NgIf,[f.ViewContainerRef,f.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),f["ɵted"](-1,1,["\n\n  "])),(l()(),f["ɵand"](16777216,null,1,1,null,d)),f["ɵdid"](91,16384,null,0,K.NgIf,[f.ViewContainerRef,f.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),f["ɵted"](-1,1,["\n\n  "])),(l()(),f["ɵeld"](93,0,null,1,7,"div",[["class","grid-style"],["padding",""]],null,null,null,null,null)),(l()(),f["ɵted"](-1,null,["\n    "])),(l()(),f["ɵand"](16777216,null,null,1,null,c)),f["ɵdid"](96,16384,null,0,K.NgIf,[f.ViewContainerRef,f.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),f["ɵted"](-1,null,["\n    "])),(l()(),f["ɵand"](16777216,null,null,1,null,p)),f["ɵdid"](99,16384,null,0,K.NgIf,[f.ViewContainerRef,f.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),f["ɵted"](-1,null,["\n  "])),(l()(),f["ɵted"](-1,1,["\n"]))],function(l,n){var e=n.component;l(n,2,0,"01"==e.version?"principalHeader":"02"==e.version?"principalHeaderV02":"principalHeader");l(n,8,0,"01"==e.version?"principal-icon":"02"==e.version?"principal-icon-v02":"principal-icon");l(n,11,0,"01"==e.version);l(n,14,0,"02"==e.version);l(n,19,0,f["ɵinlineInterpolate"](1,"content ",e.ENV.PROJECT,"-custom-bg"),"01"==e.version?"margin-content-l1":"02"==e.version?"margin-content-l2":"margin-content-l1");l(n,53,0,"YYYY");l(n,55,0,e.selectedDate);l(n,69,0,"ios-search");l(n,88,0,e.holerites.length>0);l(n,91,0,""!=e.holeriteURL);l(n,96,0,"01"==e.idiom);l(n,99,0,"02"==e.idiom)},function(l,n){var e=n.component;l(n,7,0,f["ɵinlineInterpolate"](1,"",e.globalUrl+"/storage/uploads/configs/logoHeader.png",""));l(n,18,0,f["ɵnov"](n,20).statusbarPadding,f["ɵnov"](n,20)._hasRefresher);l(n,52,0,f["ɵnov"](n,53)._disabled,f["ɵnov"](n,57).ngClassUntouched,f["ɵnov"](n,57).ngClassTouched,f["ɵnov"](n,57).ngClassPristine,f["ɵnov"](n,57).ngClassDirty,f["ɵnov"](n,57).ngClassValid,f["ɵnov"](n,57).ngClassInvalid,f["ɵnov"](n,57).ngClassPending);l(n,66,0,f["ɵinlineInterpolate"](1,"button-style button-style-",e.ENV.PROJECT,""));l(n,68,0,f["ɵnov"](n,69)._hidden);l(n,78,0,f["ɵinlineInterpolate"](1,"button-style button-style-",e.ENV.PROJECT,""))})}Object.defineProperty(n,"__esModule",{value:!0});var f=e(2),m=(e(0),e(80),e(46)),g=e(3),b=e.n(g),v=e(175),y=e(81),k=e(35),$=e(203),w=this&&this.__assign||Object.assign||function(l){for(var n,e=1,t=arguments.length;e<t;e++){n=arguments[e];for(var u in n)Object.prototype.hasOwnProperty.call(n,u)&&(l[u]=n[u])}return l},C=this&&this.__awaiter||function(l,n,e,t){return new(e||(e=Promise))(function(u,r){function i(l){try{o(t.next(l))}catch(l){r(l)}}function a(l){try{o(t.throw(l))}catch(l){r(l)}}function o(l){l.done?u(l.value):new e(function(n){n(l.value)}).then(i,a)}o((t=t.apply(l,n||[])).next())})},R=this&&this.__generator||function(l,n){function e(e){return function(i){return function(e){if(t)throw new TypeError("Generator is already executing.");for(;a;)try{if(t=1,u&&(r=u[2&e[0]?"return":e[0]?"throw":"next"])&&!(r=r.call(u,e[1])).done)return r;switch(u=0,r&&(e=[0,r.value]),e[0]){case 0:case 1:r=e;break;case 4:return a.label++,{value:e[1],done:!1};case 5:a.label++,u=e[1],e=[0];continue;case 7:e=a.ops.pop(),a.trys.pop();continue;default:if(r=a.trys,!(r=r.length>0&&r[r.length-1])&&(6===e[0]||2===e[0])){a=0;continue}if(3===e[0]&&(!r||e[1]>r[0]&&e[1]<r[3])){a.label=e[1];break}if(6===e[0]&&a.label<r[1]){a.label=r[1],r=e;break}if(r&&a.label<r[2]){a.label=r[2],a.ops.push(e);break}r[2]&&a.ops.pop(),a.trys.pop();continue}e=n.call(l,a)}catch(l){e=[6,l],u=0}finally{t=r=0}if(5&e[0])throw e[1];return{value:e[0]?e[1]:void 0,done:!0}}([e,i])}}var t,u,r,i,a={label:0,sent:function(){if(1&r[0])throw r[1];return r[1]},trys:[],ops:[]};return i={next:e(0),throw:e(1),return:e(2)},"function"==typeof Symbol&&(i[Symbol.iterator]=function(){return this}),i},A=function(){function l(l,n,e,t,u,r,i,a){var o=this;this.navParams=l,this.storage=n,this.viewCtrl=e,this.toastCtrl=t,this.httpService=u,this.loadingCtrl=r,this.dom=i,this.iab=a,this.ENV=v.a,this.selectedDate=b()().format("YYYY"),this.holerites=[],this.holeriteURL="",this.getHolerite=function(l){return C(o,void 0,void 0,function(){var n=this;return R(this,function(e){return[2,new Promise(function(e,t){n.httpService.getAll("/api/holerite/get-url/"+l,{},"get").subscribe(function(l){l.success&&e(l.url)})})]})})},this.credential=l.data}return l.prototype.ionViewDidLoad=function(){var l=this;this.storage.get("Project").then(function(n){l.project=n}),this.storage.get("LayoutVersion").then(function(n){l.version=n}),this.listarHolerites()},l.prototype.openHolerite=function(l){this.iab.create(l,"_system")},l.prototype.limparFiltro=function(){this.selectedDate=null,this.selectedDate=b()().format("YYYY"),this.listarHolerites()},l.prototype.listarHolerites=function(){var l=this;this.storage.get("clienteId").then(function(n){var e={user_id:n,year:l.selectedDate};l.holerites=[];var t=l.loadingCtrl.create({content:"Espere..."});t.present(),l.httpService.getAll("/api/holerite/listar",e,"get").subscribe(function(n){n.forEach(function(n){return C(l,void 0,void 0,function(){var l,e,t,u;return R(this,function(r){switch(r.label){case 0:return e=(l=this.holerites).push,t=[{},n],u={mes:b()(n.date).locale("pt-br").format("MMM"),ano:b()(n.date).format("YYYY")},[4,this.getHolerite(n.id)];case 1:return e.apply(l,[w.apply(void 0,t.concat([(u.urlLink=r.sent(),u)]))]),[2]}})})}),t.dismiss()})})},l.prototype.visualizarHolerite=function(l){this.getHolerite(l)},l.prototype.ngOnInit=function(){var l=this;this.storage.get("Idiom").then(function(n){l.idiom=n})},l.prototype.confirm=function(){this.viewCtrl.dismiss(this.credential)},l.prototype.cancel=function(){this.viewCtrl.dismiss()},l.prototype.sanitizer=function(l){return this.dom.bypassSecurityTrustResourceUrl(l)},l}(),I=(e(845),function(){return function(){}}()),V=e(492),E=e(493),D=e(494),N=e(495),_=e(496),M=e(497),x=e(498),T=e(499),P=e(500),Y=e(180),O=e(179),S=e(56),F=e(29),H=e(4),j=e(57),L=e(82),U=e(7),J=e(12),q=e(14),z=e(183),K=e(19),G=e(181),Z=e(8),B=e(836),Q=e(34),W=e(13),X=e(52),ll=e(31),nl=e(501),el=e(28),tl=e(25),ul=e(58),rl=e(118),il=e(59),al=e(27),ol=e(197),sl=e(85),dl=f["ɵcrt"]({encapsulation:2,styles:[],data:{}}),cl=e(17),pl=e(116),hl=e(115),fl=f["ɵcrt"]({encapsulation:2,styles:[],data:{}}),ml=f["ɵccf"]("holerite",A,function(l){return f["ɵvid"](0,[(l()(),f["ɵeld"](0,0,null,null,1,"holerite",[],null,null,null,h,fl)),f["ɵdid"](1,114688,null,0,A,[cl.a,m.b,Z.a,pl.a,y.a,hl.a,k.c,$.a],null,null)],function(l,n){l(n,1,0)},null)},{},{},[]),gl=e(838),bl=e(176),vl=e(841),yl=e(53);e.d(n,"HoleriteModuleNgFactory",function(){return kl});var kl=f["ɵcmf"](I,[],function(l){return f["ɵmod"]([f["ɵmpd"](512,f.ComponentFactoryResolver,f["ɵCodegenComponentFactoryResolver"],[[8,[V.a,E.a,D.a,N.a,_.a,M.a,x.a,T.a,P.a,ml]],[3,f.ComponentFactoryResolver],f.NgModuleRef]),f["ɵmpd"](4608,K.NgLocalization,K.NgLocaleLocalization,[f.LOCALE_ID,[2,K["ɵa"]]]),f["ɵmpd"](4608,al.m,al.m,[]),f["ɵmpd"](4608,al.c,al.c,[]),f["ɵmpd"](4608,gl.a,gl.a,[]),f["ɵmpd"](512,K.CommonModule,K.CommonModule,[]),f["ɵmpd"](512,al.l,al.l,[]),f["ɵmpd"](512,al.d,al.d,[]),f["ɵmpd"](512,al.k,al.k,[]),f["ɵmpd"](512,bl.a,bl.a,[]),f["ɵmpd"](512,bl.b,bl.b,[]),f["ɵmpd"](512,vl.a,vl.a,[]),f["ɵmpd"](512,I,I,[]),f["ɵmpd"](256,yl.a,A,[])])})},836:function(l,n,e){"use strict";function t(l){return u["ɵvid"](2,[u["ɵqud"](402653184,1,{_fixedContent:0}),u["ɵqud"](402653184,2,{_scrollContent:0}),(l()(),u["ɵeld"](2,0,[[1,0],["fixedContent",1]],null,1,"div",[["class","fixed-content"]],null,null,null,null,null)),u["ɵncd"](null,0),(l()(),u["ɵeld"](4,0,[[2,0],["scrollContent",1]],null,1,"div",[["class","scroll-content"]],null,null,null,null,null)),u["ɵncd"](null,1),u["ɵncd"](null,2)],null,null)}e.d(n,"a",function(){return r}),n.b=t;var u=e(2),r=(e(4),e(7),e(14),e(52),e(8),e(31),u["ɵcrt"]({encapsulation:2,styles:[],data:{}}))},838:function(l,n,e){"use strict";e.d(n,"a",function(){return u});var t=function(){return function(){this.type="alfa",this.decimal=2,this.decimalCaracter=",",this.userCaracters=!1,this.numberAndTousand=!1}}(),u=function(){function l(){this.brmasker=new t}return l.prototype.ngOnInit=function(){this.brmasker.type||(this.brmasker.type="all"),this.brmasker.decimal||(this.brmasker.decimal=2),this.brmasker.decimalCaracter||(this.brmasker.decimalCaracter=",")},l.prototype.writeCreateValue=function(l,n){return void 0===n&&(n=new t),l&&n.phone?l.replace(/^(?:(?:\+|00)?(55)\s?)?(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4}))$/gi,"$1 ($2) $3-$4"):l&&n.money?this.writeValueMoney(l,n):l&&n.person?this.writeValuePerson(l):l&&n.percent?this.writeValuePercent(l):l&&n.numberAndTousand?this.writeValueNumberAndThousand(l):l&&n.userCaracters?this.writeValueusingSpecialCharacters(l):l&&n.mask?(this.brmasker.mask=n.mask,n.len&&(this.brmasker.len=n.len),this.onInput(l)):l},l.prototype.writeValuePercent=function(l){return l.replace(/\D/gi,""),l.replace(/%/gi,""),l.replace(/([0-9]{0})$/gi,"%$1")},l.prototype.writeValuePerson=function(l){return l.length<=11?l.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/gi,"$1.$2.$3-$4"):l.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/gi,"$1.$2.$3/$4-$5")},l.prototype.writeValueMoney=function(l,n){return void 0===n&&(n=new t),this.moneyMask(l,n)},l.prototype.writeValueNumberAndThousand=function(l,n){return void 0===n&&(n=new t),this.thousand(l)},l.prototype.writeValueusingSpecialCharacters=function(l,n){return void 0===n&&(n=new t),this.usingSpecialCharacters(l,n.mask,n.len)},l.prototype.moneyMask=function(l,n){var e=n.decimal||this.brmasker.decimal;return(l=l.replace(/\D/gi,"").replace(new RegExp("([0-9]{"+e+"})$","g"),n.decimalCaracter+"$1")).length===e+1?"0"+l:l.length>e+2&&"0"===l.charAt(0)?l.substr(1):(n.thousand&&l.length>Number(4)+Number(n.decimal)&&(l=l.replace(new RegExp("([0-9]{3})"+n.decimalCaracter+"([0-9]{"+n.decimal+"}$)","g"),n.thousand+"$1"+n.decimalCaracter+"$2")),n.thousand&&l.length>Number(8)+Number(n.decimal)&&(l=l.replace(new RegExp("([0-9]{3})"+n.thousand+"([0-9]{3})"+n.decimalCaracter+"([0-9]{"+n.decimal+"}$)","g"),n.thousand+"$1"+n.thousand+"$2"+n.decimalCaracter+"$3")),l)},l.prototype.onInput=function(l){return this.formatField(l,this.brmasker.mask,this.brmasker.len)},l.prototype.thousand=function(l){var n=l.replace(/\D/gi,"");return n=n.toString().split("").reverse().join("").match(/\d{1,3}/g).join(""+(this.brmasker.thousand||".")).split("").reverse().join("")},l.prototype.usingSpecialCharacters=function(l,n,e){e||(e=99999999999);for(var t=l.toString().replace(/\-|\.|\,| /gi,""),u=0,r="",i=t.length,a=0;a<i;a++)a<e&&("-"===n.charAt(a)||"."===n.charAt(a)||","===n.charAt(a)?(r+=n.charAt(a),i++):(r+=t.charAt(u),u++));return r},l.prototype.formatField=function(l,n,e){e||(e=99999999999);for(var t=l.toString().replace(/\-|\.|\/|\(|\)|\,|\*|\+|\@|\#|\$|\&|\%|\:| /gi,""),u=0,r="",i=t.length,a=0;a<i;a++)a<e&&("-"===n.charAt(a)||"."===n.charAt(a)||"/"===n.charAt(a)||"("===n.charAt(a)||")"===n.charAt(a)||" "===n.charAt(a)||","===n.charAt(a)||"*"===n.charAt(a)||"+"===n.charAt(a)||"@"===n.charAt(a)||"#"===n.charAt(a)||":"===n.charAt(a)||"$"===n.charAt(a)||"&"===n.charAt(a)||"%"===n.charAt(a)?(r+=n.charAt(a),i++):(r+=t.charAt(u),u++));return r},l}()},839:function(l,n,e){"use strict";e.d(n,"a",function(){return u});var t=function(){return function(){this.type="alfa",this.decimal=2,this.decimalCaracter=",",this.userCaracters=!1,this.numberAndTousand=!1}}(),u=function(){function l(l,n){this._renderer=l,this._elementRef=n,this.brmasker=new t}return l.prototype.inputKeyup=function(l){var n=this.returnValue(l.target.value);this.writeValue(n),l.target.value=n},l.prototype.inputOnblur=function(l){var n=this.returnValue(l.value);this.writeValue(n),l.value=n},l.prototype.inputFocus=function(l){var n=this.returnValue(l.value);this.writeValue(n),l.value=n},l.prototype.ngOnInit=function(){this.brmasker.type||(this.brmasker.type="all"),this.brmasker.decimal||(this.brmasker.decimal=2),this.brmasker.decimalCaracter||(this.brmasker.decimalCaracter=",")},l.prototype.writeValue=function(l){this._renderer.setElementProperty(this._elementRef.nativeElement,"value",l)},l.prototype.registerOnChange=function(l){},l.prototype.registerOnTouched=function(l){},l.prototype.setDisabledState=function(l){this._renderer.setElementAttribute(this._elementRef.nativeElement,"disabled",l?"true":"false")},l.prototype.writeCreateValue=function(l,n){return void 0===n&&(n=new t),l&&n.phone?l.replace(/^(?:(?:\+|00)?(55)\s?)?(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4}))$/gi,"$1 ($2) $3-$4"):l&&n.money?this.writeValueMoney(l,n):l&&n.person?this.writeValuePerson(l):l&&n.percent?this.writeValuePercent(l):l&&n.mask?(this.brmasker.mask=n.mask,n.len&&(this.brmasker.len=n.len),this.onInput(l)):l},l.prototype.writeValuePercent=function(l){return l.replace(/\D/gi,""),l.replace(/%/gi,""),l.replace(/([0-9]{0})$/gi,"%$1")},l.prototype.writeValuePerson=function(l){return l.length<=11?l.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/gi,"$1.$2.$3-$4"):l.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/gi,"$1.$2.$3/$4-$5")},l.prototype.writeValueMoney=function(l,n){return void 0===n&&(n=new t),this.moneyMask(l,n)},l.prototype.returnValue=function(l){if(this.brmasker.mask||(this.brmasker.mask=""),l){var n=l;return"alfa"==this.brmasker.type&&(n=n.replace(/\d/gi,"")),"num"==this.brmasker.type&&(n=n.replace(/\D/gi,"")),this.brmasker.money?this.moneyMask(this.onInput(n),this.brmasker):this.brmasker.phone?this.phoneMask(n):this.brmasker.phoneNotDDD?this.phoneNotDDDMask(n):this.brmasker.person?this.peapollMask(n):this.brmasker.percent?this.percentMask(n):this.brmasker.numberAndTousand?this.thousand(n):this.brmasker.userCaracters?this.usingSpecialCharacters(n,this.brmasker.mask,this.brmasker.len):this.onInput(n)}return""},l.prototype.percentMask=function(l){var n=l;return n=n.replace(/\D/gi,""),n=n.replace(/%/gi,""),n=n.replace(/([0-9]{0})$/gi,"%$1")},l.prototype.phoneMask=function(l){var n=l;return n.length>14?(this.brmasker.len=15,this.brmasker.mask="(99) 99999-9999",n=(n=(n=(n=n.replace(/\D/gi,"")).replace(/(\d{2})(\d)/gi,"$1 $2")).replace(/(\d{5})(\d)/gi,"$1-$2")).replace(/(\d{4})(\d)/gi,"$1$2")):(this.brmasker.len=14,this.brmasker.mask="(99) 9999-9999",n=(n=(n=(n=n.replace(/\D/gi,"")).replace(/(\d{2})(\d)/gi,"$1 $2")).replace(/(\d{4})(\d)/gi,"$1-$2")).replace(/(\d{4})(\d)/gi,"$1$2")),this.onInput(n)},l.prototype.phoneNotDDDMask=function(l){var n=l;return n.length>9?(this.brmasker.len=10,this.brmasker.mask="99999-9999",n=(n=(n=n.replace(/\D/gi,"")).replace(/(\d{5})(\d)/gi,"$1-$2")).replace(/(\d{4})(\d)/gi,"$1$2")):(this.brmasker.len=9,this.brmasker.mask="9999-9999",n=(n=(n=n.replace(/\D/gi,"")).replace(/(\d{4})(\d)/gi,"$1-$2")).replace(/(\d{4})(\d)/gi,"$1$2")),this.onInput(n)},l.prototype.peapollMask=function(l){var n=l;return n.length>14?(this.brmasker.len=18,this.brmasker.mask="99.999.999/9999-99",n=(n=(n=(n=(n=(n=n.replace(/\D/gi,"")).replace(/(\d{2})(\d)/gi,"$1.$2")).replace(/(\d{3})(\d)/gi,"$1.$2")).replace(/(\d{3})(\d)/gi,"$1/$2")).replace(/(\d{4})(\d{1,4})$/gi,"$1-$2")).replace(/(\d{2})(\d{1,2})$/gi,"$1$2")):(this.brmasker.len=14,this.brmasker.mask="999.999.999-99",n=(n=(n=(n=n.replace(/\D/gi,"")).replace(/(\d{3})(\d)/gi,"$1.$2")).replace(/(\d{3})(\d)/gi,"$1.$2")).replace(/(\d{3})(\d{1,2})$/gi,"$1-$2")),this.onInput(n)},l.prototype.moneyMask=function(l,n){var e=n.decimal||this.brmasker.decimal;return(l=l.replace(/\D/gi,"").replace(new RegExp("([0-9]{"+e+"})$","g"),n.decimalCaracter+"$1")).length===e+1?"0"+l:l.length>e+2&&"0"===l.charAt(0)?l.substr(1):(n.thousand&&l.length>Number(4)+Number(n.decimal)&&(l=l.replace(new RegExp("([0-9]{3})"+n.decimalCaracter+"([0-9]{"+n.decimal+"}$)","g"),n.thousand+"$1"+n.decimalCaracter+"$2")),n.thousand&&l.length>Number(8)+Number(n.decimal)&&(l=l.replace(new RegExp("([0-9]{3})"+n.thousand+"([0-9]{3})"+n.decimalCaracter+"([0-9]{"+n.decimal+"}$)","g"),n.thousand+"$1"+n.thousand+"$2"+n.decimalCaracter+"$3")),l)},l.prototype.onInput=function(l){return this.formatField(l,this.brmasker.mask,this.brmasker.len)},l.prototype.thousand=function(l){var n=l.replace(/\D/gi,""),e=n.toString().split("").reverse().join("").match(/\d{1,3}/g);return e?e.join(""+(this.brmasker.thousand||".")).split("").reverse().join(""):n},l.prototype.usingSpecialCharacters=function(l,n,e){e||(e=99999999999);for(var t=l.toString().replace(/\-|\.|\,| /gi,""),u=0,r="",i=t.length,a=0;a<i;a++)a<e&&("-"===n.charAt(a)||"."===n.charAt(a)||","===n.charAt(a)?(r+=n.charAt(a),i++):(r+=t.charAt(u),u++));return r},l.prototype.formatField=function(l,n,e){e||(e=99999999999);for(var t=l.toString().replace(/\-|\.|\/|\(|\)|\,|\*|\+|\@|\#|\$|\&|\%|\:| /gi,""),u=0,r="",i=t.length,a=0;a<i;a++)a<e&&("-"===n.charAt(a)||"."===n.charAt(a)||"/"===n.charAt(a)||"("===n.charAt(a)||")"===n.charAt(a)||" "===n.charAt(a)||","===n.charAt(a)||"*"===n.charAt(a)||"+"===n.charAt(a)||"@"===n.charAt(a)||"#"===n.charAt(a)||":"===n.charAt(a)||"$"===n.charAt(a)||"&"===n.charAt(a)||"%"===n.charAt(a)?(r+=n.charAt(a),i++):(r+=t.charAt(u),u++));return r},l}()},841:function(l,n,e){"use strict";e.d(n,"a",function(){return t});e(839),e(838);var t=function(){return function(){}}()},845:function(l,n,e){"use strict";var t=e(841),u=e(839),r=e(838);e.d(n,!1,function(){return t.a}),e.d(n,!1,function(){}),e.d(n,!1,function(){return u.a}),e.d(n,!1,function(){}),e.d(n,!1,function(){return r.a})}});
+webpackJsonp([13],{
+
+/***/ 870:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChatPageModule", function() { return ChatPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chat__ = __webpack_require__(901);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_menu_sup_menu_sup_module__ = __webpack_require__(876);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var ChatPageModule = /** @class */ (function () {
+    function ChatPageModule() {
+    }
+    ChatPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__chat__["a" /* ChatPage */]
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__chat__["a" /* ChatPage */]),
+                __WEBPACK_IMPORTED_MODULE_3__components_menu_sup_menu_sup_module__["a" /* MenuSupModule */]
+            ],
+        })
+    ], ChatPageModule);
+    return ChatPageModule;
+}());
+
+//# sourceMappingURL=chat.module.js.map
+
+/***/ }),
+
+/***/ 876:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuSupModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__menu_sup__ = __webpack_require__(877);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(68);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var MenuSupModule = /** @class */ (function () {
+    function MenuSupModule() {
+    }
+    MenuSupModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [__WEBPACK_IMPORTED_MODULE_1__menu_sup__["a" /* MenuSupComponent */]],
+            imports: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicModule */]],
+            exports: [__WEBPACK_IMPORTED_MODULE_1__menu_sup__["a" /* MenuSupComponent */]]
+        })
+    ], MenuSupModule);
+    return MenuSupModule;
+}());
+
+//# sourceMappingURL=menu-sup.module.js.map
+
+/***/ }),
+
+/***/ 877:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuSupComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__ = __webpack_require__(488);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_http_service_http_service__ = __webpack_require__(161);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var MenuSupComponent = /** @class */ (function () {
+    function MenuSupComponent(navCtrl, navParams, authService, toastCtrl, loadingCtrl, storage, http, modalCtrl) {
+        var _this = this;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.authService = authService;
+        this.toastCtrl = toastCtrl;
+        this.loadingCtrl = loadingCtrl;
+        this.storage = storage;
+        this.http = http;
+        this.modalCtrl = modalCtrl;
+        this.pendentChat = null;
+        this.intervalHandle = null;
+        this.getUnreadChats();
+        if (this.intervalHandle != null)
+            clearInterval(this.intervalHandle);
+        this.intervalHandle = setInterval(function () {
+            _this.getUnreadChats();
+        }, 5000);
+    }
+    MenuSupComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.storage.get('Project').then(function (value) {
+            _this.project = value;
+            /*PROJETOS:
+              marketing-house
+              edicom
+              vcc
+            */
+        });
+        this.storage.get('LayoutVersion').then(function (value) {
+            _this.version = value;
+        });
+    };
+    MenuSupComponent.prototype.redirectToChatPage = function () {
+        var userModal = this.modalCtrl.create('chat-page', { pendentChat: this.pendentChat });
+        userModal.onDidDismiss(function (data) {
+            /* if (data){
+              let loading = this.loadingCtrl.create({
+                content: 'Espere...'
+              });
+              loading.present();
+              this.storage.set('first', false);
+              if (this.credential.firstAccess == true)
+                this.navCtrl.push('tab-page');
+              loading.dismiss();
+            } */
+        });
+        userModal.present();
+        /*     if (this.navCtrl.getActive().component !== ChatPage) {
+              this.navCtrl.setRoot('chat-page');
+            } */
+    };
+    MenuSupComponent.prototype.getUnreadChats = function () {
+        var _this = this;
+        this.storage.get('clienteId').then(function (id) {
+            _this.http.getAll('/mensagens/remetentes', { user_id: id }, 'get')
+                .subscribe(function (data) {
+                if (data && data.length > 0) {
+                    _this.pendentChat = data;
+                }
+                else {
+                    _this.pendentChat = null;
+                }
+                _this.storage.set('remetentes', data);
+            });
+        });
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Boolean)
+    ], MenuSupComponent.prototype, "active", void 0);
+    MenuSupComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'menu-sup',template:/*ion-inline-start:"C:\Users\Alan\Desktop\ALAN\TRABALHO\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\components\menu-sup\menu-sup.html"*/'<ion-badge *ngIf="pendentChat" color="danger" round [ngClass]="version == \'01\' ? \'top-badge badge-margin-v1\' : version == \'02\' ? \'top-badge badge-margin-v2\' : \'top-badge badge-margin-v1\'">!</ion-badge>\n\n<!-- <a *ngIf="version == \'01\' || version == \'02\' && active != true" (click)="redirectToChatPage()" [ngClass]="version == \'01\' ? \'menu-top menu-height-v1\' : version == \'02\' ? \'menu-top menu-height-v2\' : \'menu-top menu-height-v1\'"></a> -->\n\n<button *ngIf="(version == \'01\' || version == \'02\') && active != true" outline (click)="redirectToChatPage()" [ngClass]="version == \'01\' ? \'menu-top menu-height-v1\' : version == \'02\' ? \'menu-top menu-height-v2\' : \'menu-top menu-height-v1\'" ion-button icon-only>\n\n  <ion-icon *ngIf="project == \'ead\'" [ngClass]="active == true ? \'vcc-custom-chat-active\' : \'vcc-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'edicom\'" [ngClass]="active == true ? \'edicom-custom-chat-active\' : \'edicom-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'marketing-house\'" [ngClass]="active == true ? \'mrkhouse-custom-chat-active\' : \'mrkhouse-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'know-house\'" [ngClass]="active == true ? \'knowh-custom-chat-active\' : \'knowh-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'hkt369\'" [ngClass]="active == true ? \'hkt369-custom-chat-active\' : \'hkt369-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'simples-trade\'" [ngClass]="active == true ? \'strade-custom-chat-active\' : \'strade-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'r2m\'" [ngClass]="active == true ? \'r2m-custom-chat-active\' : \'r2m-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'ava\'" [ngClass]="active == true ? \'ava-custom-chat-active\' : \'ava-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'tmc\'" [ngClass]="active == true ? \'tmc-custom-chat-active\' : \'tmc-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'hability\'" [ngClass]="active == true ? \'hability-custom-chat-active\' : \'hability-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'full-promo\'" [ngClass]="active == true ? \'full-promo-custom-chat-active\' : \'full-promo-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'sehc\'" [ngClass]="active == true ? \'sehc-custom-chat-active\' : \'sehc-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'club-learn\'" [ngClass]="active == true ? \'club-learn-custom-chat-active\' : \'club-learn-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'localhost\'" [ngClass]="active == true ? \'localhost-custom-chat-active\' : \'localhost-custom-chat\'"></ion-icon>\n\n</button>\n\n\n\n<button *ngIf="(version == \'01\' || version == \'02\')  && active == true" [disabled]="true" outline [ngClass]="version == \'01\' ? \'menu-top menu-height-v1\' : version == \'02\' ? \'menu-top menu-height-v2\' : \'menu-top menu-height-v1\'" ion-button icon-only>\n\n  <ion-icon *ngIf="project == \'ead\'" [ngClass]="active == true ? \'vcc-custom-chat-active\' : \'vcc-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'edicom\'" [ngClass]="active == true ? \'edicom-custom-chat-active\' : \'edicom-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'marketing-house\'" [ngClass]="active == true ? \'mrkhouse-custom-chat-active\' : \'mrkhouse-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'know-house\'" [ngClass]="active == true ? \'knowh-custom-chat-active\' : \'knowh-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'hkt369\'" [ngClass]="active == true ? \'hkt369-custom-chat-active\' : \'hkt369-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'simples-trade\'" [ngClass]="active == true ? \'strade-custom-chat-active\' : \'strade-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'r2m\'" [ngClass]="active == true ? \'r2m-custom-chat-active\' : \'r2m-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'ava\'" [ngClass]="active == true ? \'ava-custom-chat-active\' : \'ava-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'tmc\'" [ngClass]="active == true ? \'tmc-custom-chat-active\' : \'tmc-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'hability\'" [ngClass]="active == true ? \'hability-custom-chat-active\' : \'hability-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'full-promo\'" [ngClass]="active == true ? \'full-promo-custom-chat-active\' : \'full-promo-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'sehc\'" [ngClass]="active == true ? \'sehc-custom-chat-active\' : \'sehc-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'club-learn\'" [ngClass]="active == true ? \'club-learn-custom-chat-active\' : \'club-learn-custom-chat\'"></ion-icon>\n\n  <ion-icon *ngIf="project == \'localhost\'" [ngClass]="active == true ? \'localhost-custom-chat-active\' : \'localhost-custom-chat\'"></ion-icon>\n\n</button>\n\n'/*ion-inline-end:"C:\Users\Alan\Desktop\ALAN\TRABALHO\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\components\menu-sup\menu-sup.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__["a" /* AuthProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* ToastController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */],
+            __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */],
+            __WEBPACK_IMPORTED_MODULE_4__providers_http_service_http_service__["a" /* HttpServiceProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */]])
+    ], MenuSupComponent);
+    return MenuSupComponent;
+}());
+
+//# sourceMappingURL=menu-sup.js.map
+
+/***/ }),
+
+/***/ 901:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChatPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_storage__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__ = __webpack_require__(488);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_http_service_http_service__ = __webpack_require__(161);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_moment__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_moment__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_camera__ = __webpack_require__(491);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_pusher_service_pusher_service__ = __webpack_require__(497);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__environments_environment__ = __webpack_require__(160);
+var __assign = (this && this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+
+
+
+
+
+
+var ChatPage = /** @class */ (function () {
+    function ChatPage(navCtrl, navParams, authService, http, loadingCtrl, storage, camera, modalCtrl, viewCtrl, pusher) {
+        var _this = this;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.authService = authService;
+        this.http = http;
+        this.loadingCtrl = loadingCtrl;
+        this.storage = storage;
+        this.camera = camera;
+        this.modalCtrl = modalCtrl;
+        this.viewCtrl = viewCtrl;
+        this.pusher = pusher;
+        this.ENV = __WEBPACK_IMPORTED_MODULE_8__environments_environment__["a" /* environment */];
+        this.selectedProject = null;
+        this.selectedProjectId = null;
+        this.selectedUser = null;
+        this.selectedUserId = null;
+        this.recents = [];
+        this.showMessageAllBox = false;
+        this.sendAll = false;
+        this.search = '';
+        this.recentUser = null;
+        this.firstAccess = true;
+        this.titleTesteira = '';
+        this.complementTitle = '';
+        this.globalUrl = '';
+        this.perfilType = 3;
+        this.idiom = '';
+        this.showContacts = false;
+        this.showChat = false;
+        this.motivos = [];
+        //---------------------------------------------------
+        this.showMotivosContainer = false;
+        this.showRecentUserContainer = false;
+        this.showChatContainer = false;
+        this.lastMessageId = null;
+        this.iconProfile = '';
+        this.iconDefaultMotivos = '';
+        this.recentsInf = [];
+        this.cont = 0;
+        this.pendentChat = null;
+        this.sendMessage = function (all, notification, isFile) {
+            if (all === void 0) { all = false; }
+            if (notification === void 0) { notification = false; }
+            return __awaiter(_this, void 0, void 0, function () {
+                var _this = this;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0: return [4 /*yield*/, new Promise(function (resolve, reject) {
+                                var data = {};
+                                _this.storage.get('clienteId').then(function (user_id) {
+                                    var mensagem = isFile ? _this.fileUpload : _this.newMessage && _this.newMessage.length > 0 ? _this.newMessage.trim() : "";
+                                    var destinatario_id = all == true ?
+                                        null :
+                                        _this.selectedUserId == null ?
+                                            null :
+                                            _this.selectedUserId;
+                                    var project_id = _this.selectedProjectId == null ? null : _this.selectedProjectId;
+                                    if (mensagem.length > 0) {
+                                        data = {
+                                            mensagem: mensagem,
+                                            user_id: user_id,
+                                            notificacao: notification
+                                        };
+                                        _this.sendAll === true ? data['project_id'] = project_id : data['destinatario_id'] = destinatario_id;
+                                        _this.http.post('/mensagens/store', data)
+                                            .subscribe(function (result) {
+                                            if (_this.selectedUserId) {
+                                                if (isFile != true) {
+                                                    var newMessageSend = {
+                                                        remetente: {
+                                                            id: user_id
+                                                        },
+                                                        notification: notification == false ? 0 : 1,
+                                                        type: null,
+                                                        mensagem_formatada: mensagem,
+                                                        created_at: __WEBPACK_IMPORTED_MODULE_5_moment___default()().locale('pt-br').format('lll'),
+                                                    };
+                                                    _this.messages.push(newMessageSend);
+                                                    _this.scrollToBottom();
+                                                }
+                                                else {
+                                                    _this.getUserMessages(_this.selectedUserId);
+                                                }
+                                            }
+                                            resolve();
+                                        });
+                                        _this.newMessage = '';
+                                    }
+                                });
+                            })];
+                        case 1: return [2 /*return*/, _a.sent()];
+                    }
+                });
+            });
+        };
+        this.sendMessageAll = function (all, notification, isFile) {
+            if (all === void 0) { all = false; }
+            if (notification === void 0) { notification = false; }
+            return __awaiter(_this, void 0, void 0, function () {
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0:
+                            this.sendAll = true;
+                            return [4 /*yield*/, this.sendMessage(all, notification, isFile)];
+                        case 1:
+                            _a.sent();
+                            this.sendAll = false;
+                            return [2 /*return*/];
+                    }
+                });
+            });
+        };
+        clearInterval(this.lastMessageIdInterval);
+        this.storage.get('Platform').then(function (value) {
+            switch (value) {
+                case 'android':
+                    _this.iconProfile = '../../assets/imgs/user-profile.png';
+                    _this.iconDefaultMotivos = '../../assets/imgs/default-motivo.png';
+                    break;
+                case 'ios':
+                    _this.iconProfile = './assets/imgs/user-profile.png';
+                    _this.iconDefaultMotivos = './assets/imgs/default-motivo.png';
+                    break;
+            }
+        });
+        storage.get('GlobalUrl').then(function (value) {
+            _this.globalUrl = value;
+        });
+        this.getMotivos();
+        this.pendentChat = navParams.get('pendentChat');
+        if (this.pendentChat) {
+            if (this.pendentChat.length > 1) {
+                this.getConversasAtivas();
+                this.showRecentUsersPage();
+            }
+            else {
+                this.getConversasAtivas();
+                this.goDirectlyToUserMessage(this.pendentChat[0]);
+            }
+        }
+        else {
+            this.showMotivosPage();
+        }
+    }
+    ChatPage.prototype.doInfinite = function (infiniteScroll) {
+        var _this = this;
+        setTimeout(function () {
+            var intCont = 0;
+            for (var i = _this.cont; i < _this.recents.length; i++) {
+                if (intCont < 10) {
+                    _this.recentsInf.push(_this.recents[i]);
+                    _this.cont = _this.cont + 1;
+                }
+                else {
+                    break;
+                }
+                intCont++;
+            }
+            if (infiniteScroll)
+                infiniteScroll.complete();
+        }, 700);
+    };
+    ChatPage.prototype.loadPusher = function () {
+        var _this = this;
+        this.storage.get('clienteId').then(function (valor) {
+            var channel = _this.pusher.init();
+            channel.bind('App\\Events\\MessageSent', function (data) {
+                if (data && data.message && data.message.remetente_id == _this.selectedUserId) {
+                    if (data.message.notification == false) {
+                        var newMessageReceived = {
+                            remetente: {
+                                id: data.message.remetente_id
+                            },
+                            notification: data.message.notification == false ? 0 : 1,
+                            type: data.message.mensagem.substring(0, 11) == 'data:image/' ? 'file' : null,
+                            mensagem_formatada: data.message.mensagem_formatada,
+                            created_at: __WEBPACK_IMPORTED_MODULE_5_moment___default()(data.message.created_at).locale('pt-br').format('lll'),
+                        };
+                        _this.messages.push(newMessageReceived);
+                        _this.scrollToBottom();
+                    }
+                    _this.http.getAll('/mensagens/mask-read-msg', { remetente: data.message.remetente_id, user_id: _this.userId }, 'get')
+                        .subscribe(function (result) {
+                    });
+                }
+            });
+        });
+    };
+    ChatPage.prototype.ngOnDestroy = function () {
+        var channel = this.pusher.init();
+        channel.unbind('App\\Events\\MessageSent');
+    };
+    ChatPage.prototype.openGallery = function (all) {
+        var _this = this;
+        if (all === void 0) { all = false; }
+        var options = {
+            quality: 100,
+            destinationType: this.camera.DestinationType.DATA_URL,
+            encodingType: this.camera.EncodingType.JPEG,
+            mediaType: this.camera.MediaType.PICTURE,
+            sourceType: this.camera.PictureSourceType.PHOTOLIBRARY
+        };
+        this.camera.getPicture(options).then(function (imageData) {
+            _this.fileUpload = "data:image/jpeg;base64," + imageData;
+            var fileModal = _this.modalCtrl.create('file-modal', { file: _this.fileUpload });
+            fileModal.onDidDismiss(function (data) {
+                if (data.sendFile == true) {
+                    if (all == true) {
+                        _this.sendMessageAll(all, false, true);
+                    }
+                    else {
+                        _this.sendMessage(all, false, true);
+                    }
+                }
+                else {
+                    _this.fileUpload = null;
+                }
+            });
+            fileModal.present();
+        });
+    };
+    ChatPage.prototype.cleanVariables = function (tipo) {
+        if (tipo == 0 || tipo == 1) {
+            this.users = null;
+            this.selectedUser = "";
+            this.selectedUserId = null;
+        }
+        else if (tipo == 0 || tipo == 2) {
+            this.selectedProject = null;
+        }
+        this.messages = null;
+        this.newMessage = null;
+    };
+    ChatPage.prototype.ionViewDidEnter = function () {
+        var _this = this;
+        this.storage.get('Project').then(function (value) {
+            _this.project = value;
+        });
+        this.storage.get('Idiom').then(function (value) {
+            _this.idiom = value;
+            _this.titleTesteira = _this.idiom == '01' ? 'Chat' : 'Asistencia';
+            _this.complementTitle = '';
+        });
+        this.storage.get('clienteProfileId').then(function (value) {
+            _this.perfilType = value;
+        });
+        this.storage.get('LayoutVersion').then(function (value) {
+            _this.version = value;
+        });
+        this.loadPusher();
+    };
+    ChatPage.prototype.ionViewDidLeave = function () {
+        this.firstAccess = true;
+        if (this.recents && this.recents.length > 0)
+            this.recentUser = this.recents[0]['id'];
+    };
+    ChatPage.prototype.getUsers = function () {
+        var _this = this;
+        this.cleanVariables(1);
+        this.storage.get('clienteId').then(function (valor) {
+            if (typeof valor != "undefined") {
+                _this.userId = valor;
+                var data = { user_id: _this.userId };
+                if (_this.selectedProjectId != null)
+                    data["project_id"] = _this.selectedProjectId;
+                _this.http.getAll('/mensagens/app/getUsuarios', data, 'get')
+                    .subscribe(function (users) {
+                    _this.users = users.map(function (u) {
+                        return {
+                            id: u.id,
+                            nome: u.nome,
+                            thumb: u.thumb ? u.thumb : '',
+                        };
+                    });
+                });
+            }
+        });
+    };
+    ChatPage.prototype.getRecentUsers = function () {
+        var _this = this;
+        this.storage.get('clienteId').then(function (id) {
+            _this.userId = id;
+            var loading = _this.loadingCtrl.create({
+                content: 'Espere...'
+            });
+            _this.recents = null;
+            loading.present();
+            _this.http.getAll('/mensagens/getData', { remetente: null, user_id: _this.userId }, 'get')
+                .subscribe(function (data) {
+                _this.recents = data.remetentes.map(function (r) {
+                    var recent = r['destinatario'].id == _this.userId ? r['remetente'] : r['destinatario'];
+                    return {
+                        id: recent.id,
+                        nome: recent.nome,
+                        thumb: recent.thumb ? recent.thumb : _this.iconProfile,
+                        lido: r.lido == 0 ? false : true,
+                        mensagem: r.mensagem_formatada,
+                        destacar: _this.pendentChat && _this.pendentChat.filter(function (p) { return recent.id == p.remetente_id; }).length > 0 ? true : false
+                    };
+                });
+                _this.doInfinite();
+                loading.dismiss();
+            });
+        });
+    };
+    ChatPage.prototype.getUserMessages = function (remetente, loop) {
+        var _this = this;
+        if (remetente === void 0) { remetente = null; }
+        this.storage.get('clienteId').then(function (id) {
+            _this.userId = id;
+            var loading = _this.loadingCtrl.create({
+                content: 'Espere...'
+            });
+            loading.present();
+            if (_this.pendentChat && _this.pendentChat.length > 0 && remetente) {
+                _this.pendentChat = _this.pendentChat.filter(function (p) { return p.remetente_id !== remetente; });
+            }
+            _this.http.getAll('/mensagens/getData', { remetente: remetente, user_id: _this.userId }, 'get')
+                .subscribe(function (data) {
+                var mensagem = '';
+                if (remetente != null) {
+                    _this.messages = data.mensagens.map(function (m) {
+                        return __assign({}, m, { type: m.mensagem.substring(0, 11) == 'data:image/' ? 'file' : null, created_at: __WEBPACK_IMPORTED_MODULE_5_moment___default()(m.created_at).locale('pt-br').format('lll') });
+                    });
+                    if (_this.perfilType == 3) {
+                        _this.messages = _this.messages.filter(function (d, idx) {
+                            return d.notification == 0;
+                        });
+                    }
+                    _this.lastMessageId = _this.messages[_this.messages.length - 1].id;
+                    mensagem = _this.messages[0];
+                    if (remetente && _this.messages.length > 0) {
+                        _this.ativo = mensagem['remetente'].id == _this.userId ? mensagem['remetente'] : mensagem['destinatario'];
+                        _this.receptivo = mensagem['remetente'].id == _this.userId ? mensagem['destinatario'] : mensagem['remetente'];
+                        _this.ativo['thumb'] = _this.ativo['thumb'] ? _this.ativo['thumb'] : _this.iconProfile;
+                        _this.receptivo['thumb'] = _this.receptivo['thumb'] ? _this.receptivo['thumb'] : _this.iconProfile;
+                    }
+                    _this.scrollToBottom();
+                }
+                loading.dismiss();
+            });
+        });
+    };
+    ChatPage.prototype.getLastMessageId = function (user_id, remetente_id) {
+        var _this = this;
+        this.http.getAll('/mensagens/last-message-id', { remetente_id: remetente_id, user_id: user_id }, 'get')
+            .subscribe(function (data) {
+            var lastId = data;
+            if (_this.lastMessageId != null && lastId > _this.lastMessageId) {
+                _this.lastMessageId = lastId;
+                _this.getUserMessages(remetente_id);
+            }
+        });
+    };
+    ChatPage.prototype.goDirectlyToUserMessage = function (userDirectly) {
+        var user = {
+            id: userDirectly.remetente_id,
+            nome: userDirectly.remetente.nome
+        };
+        this.selectRecentUser(user);
+    };
+    ChatPage.prototype.getConversasAtivas = function () {
+        this.getRecentUsers();
+        this.showMotivosContainer = false;
+        this.showRecentUserContainer = true;
+    };
+    ChatPage.prototype.cancelMessageAll = function () {
+        this.showMessageAllBox = false;
+        this.newMessage = null;
+        this.getConversasAtivas();
+        this.getRecentUsers();
+    };
+    ChatPage.prototype.selectRecentUser = function (user) {
+        this.selectedUserId = user.id;
+        this.selectedUser = user;
+        this.recentUser = user.id;
+        this.getUserMessages(user.id);
+        this.showChatContainer = true;
+        this.showRecentUserContainer = false;
+        this.lastMessageId = null;
+        /*     setTimeout(()=>{
+              this.lastMessageIdInterval = setInterval(()=>{
+                this.storage.get('clienteId').then((user_id) => {
+                  if (this.lastMessageId != null){
+                    this.storage.get('clienteId').then((user_id) => {
+                      this.getLastMessageId(user_id, this.selectedUserId);
+                    });
+                   }
+                })
+              },3000);
+            },3000); */
+        //this.loadPusher();
+    };
+    ChatPage.prototype.scrollToBottom = function () {
+        setTimeout(function () {
+            var objDiv = document.getElementById("cards");
+            if (objDiv)
+                objDiv.scrollTop = objDiv.scrollHeight;
+        }, 100);
+    };
+    ChatPage.prototype.cancelMotivos = function () {
+        this.showMotivosContainer = false;
+        this.viewCtrl.dismiss();
+    };
+    ChatPage.prototype.getMotivos = function () {
+        var _this = this;
+        this.showMotivosContainer = true;
+        var loading = this.loadingCtrl.create({
+            content: 'Espere...'
+        });
+        loading.present();
+        this.storage.get('clienteId').then(function (userId) {
+            _this.http.getAll('/api/get-motivos', { user_id: userId }, 'get')
+                .subscribe(function (data) {
+                _this.motivos = data.map(function (m) {
+                    return __assign({}, m, { thumb: m.thumb ? m.thumb : _this.iconDefaultMotivos });
+                });
+                loading.dismiss();
+            });
+        });
+    };
+    ChatPage.prototype.selectMotivo = function (motivo) {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            content: 'Espere...'
+        });
+        loading.present();
+        this.storage.get('clienteId').then(function (userId) {
+            _this.http.getAll('/api/send-motivo', { user_id: userId, motivo_id: motivo.id })
+                .subscribe(function (data) {
+                loading.dismiss();
+                _this.getRecentUsers();
+                if (motivo && motivo.curadores.length == 1) {
+                    _this.selectRecentUser(motivo.curadores[0]);
+                }
+                else {
+                    _this.showRecentUsersPage();
+                }
+            });
+        });
+    };
+    ChatPage.prototype.showMotivosPage = function () {
+        this.showMotivosContainer = true;
+    };
+    ChatPage.prototype.showRecentUsersPage = function () {
+        this.showMotivosContainer = false;
+        this.showRecentUserContainer = true;
+        this.ngOnDestroy();
+    };
+    ChatPage.prototype.showChatPage = function () {
+        this.showChatContainer = true;
+        this.showChat = true;
+    };
+    ChatPage.prototype.cancelRecentUsers = function () {
+        this.showRecentUserContainer = false;
+        this.showMotivosContainer = true;
+        this.ngOnDestroy();
+    };
+    ChatPage.prototype.cancelChat = function () {
+        this.getConversasAtivas();
+        this.showChatContainer = false;
+        this.showRecentUserContainer = true;
+        clearInterval(this.lastMessageIdInterval);
+        this.ngOnDestroy();
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["n" /* Slides */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["n" /* Slides */])
+    ], ChatPage.prototype, "slides", void 0);
+    ChatPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-chat',template:/*ion-inline-start:"C:\Users\Alan\Desktop\ALAN\TRABALHO\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\pages\chat\chat.html"*/'<ion-header [ngClass]="version == \'01\' ? \'principalHeader\' : version == \'02\' ? \'principalHeaderV02\' : \'principalHeader\'">\n\n  <img [ngClass]="version == \'01\' ? \'principal-icon\' : version == \'02\' ? \'principal-icon-v02\' : \'principal-icon\'"\n\n  src="{{ globalUrl + \'/storage/uploads/configs/logoHeader.png\' }}" />\n\n  \n\n  <img *ngIf="version == \'01\'" class="testeira-v01" \n\n  src="{{ globalUrl + \'/storage/uploads/configs/testeira1.png\' }}" >\n\n\n\n  <img *ngIf="version == \'02\'" class="testeira-v02" \n\n  src="{{ globalUrl + \'/storage/uploads/configs/testeira2.png\' }}" >\n\n\n\n  <div>\n\n    <p class="header-title header-title-{{ENV.HEADER_TEXT}}">{{titleTesteira}}  {{complementTitle? \'| \' + complementTitle : \'\'}}</p>\n\n  </div>\n\n  <menu-sup [active]="true" ></menu-sup>\n\n</ion-header>\n\n\n\n<ion-content *ngIf="showMotivosContainer" style="background-color: #ffffff;" [ngClass]="version == \'01\' ? \'margin-content-l1\' : version == \'02\' ? \'margin-content-l2\' : \'margin-content-l1\'">\n\n  <ion-header>\n\n    <ion-grid class="grid-style">\n\n      <ion-row>\n\n        <ion-col style="width: 40%;">\n\n          <button class="button-style button-style-{{ENV.PROJECT}}" ion-button small (click)="cancelMotivos()">\n\n            <p *ngIf="idiom == \'01\'">Sair</p>\n\n            <p *ngIf="idiom == \'02\'">Salir</p>\n\n          </button>\n\n        </ion-col>\n\n        <ion-col style="width: 60%;">\n\n          <button class="button-style button-style-{{ENV.PROJECT}}" ion-button small (click)="getConversasAtivas()">\n\n            <p *ngIf="idiom == \'01\'">Conversas Ativas</p>\n\n            <p *ngIf="idiom == \'02\'">Conversaciones Activas</p>\n\n          </button>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n  </ion-header>\n\n\n\n  <ion-content padding>\n\n    <ion-card style="padding-top: 80px;" padding-top *ngIf="motivos && motivos.length > 0">\n\n      <ion-label *ngIf="idiom == \'01\'">Selecione um motivo.</ion-label>\n\n      <ion-label *ngIf="idiom == \'02\'">Seleccione una asitencia</ion-label>\n\n      <ion-list>\n\n        <ion-item *ngFor="let motivo of motivos" (click)="selectMotivo(motivo)">\n\n          <ion-avatar item-start>\n\n            <img src={{motivo.thumb}}>\n\n          </ion-avatar>\n\n          <ion-label>{{motivo.title}}</ion-label>\n\n        </ion-item>\n\n      </ion-list>\n\n    </ion-card>\n\n\n\n    <ion-card  style="padding-top: 80px;" *ngIf="motivos && motivos.length <= 0">\n\n      <h1 *ngIf="idiom == \'01\'">Não há motivos cadastrados.</h1>\n\n      <h1 *ngIf="idiom == \'02\'">No hay razones registradas.</h1>\n\n    </ion-card>\n\n  </ion-content>\n\n</ion-content>\n\n\n\n<!---------------------------------------------------------------------------------->\n\n\n\n<ion-content *ngIf="showRecentUserContainer" style="background-color: #ffffff;"  class="background" [ngClass]="version == \'01\' ? \'margin-content-l1\' : version == \'02\' ? \'margin-content-l2\' : \'margin-content-l1\'">\n\n  <ion-header style="position: relative;">\n\n    <ion-grid class="grid-style">\n\n      <ion-row>\n\n        <ion-col style="width: 50%;">\n\n          <button class="button-style button-style-{{ENV.PROJECT}}" ion-button small (click)="cancelMotivos()">\n\n            <p *ngIf="idiom == \'01\'">Sair</p>\n\n            <p *ngIf="idiom == \'02\'">Salir</p>\n\n          </button>\n\n        </ion-col>\n\n        <ion-col style="width: 50%;">\n\n          <button class="button-style button-style-{{ENV.PROJECT}}" ion-button small (click)="cancelRecentUsers()">\n\n            <p *ngIf="idiom == \'01\'">Voltar</p>\n\n            <p *ngIf="idiom == \'02\'">Volver</p>\n\n          </button>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n  </ion-header>\n\n\n\n  <ion-content padding *ngIf="recents && recents.length > 0">\n\n    <p *ngIf="idiom == \'01\'">Abaixo a lista dos últimos usuários que você conversou</p>\n\n    <p *ngIf="idiom == \'02\'">Abajo el listado de los ultimos contactos hechos</p>\n\n    \n\n    <ion-list>\n\n      <ion-item href="#chat-anchor" *ngFor="let recent of recentsInf" (click)="selectRecentUser(recent)" [ngClass]="recent.destacar == true ? \'bg-destaque\' : \'\'">              \n\n        <a href="#chat-anchor" style="text-decoration: none; display: flex; align-items: center;">\n\n          <ion-grid>\n\n            <ion-row>\n\n              <ion-col col-3>\n\n                <ion-avatar item-start>\n\n                  <img src={{recent.thumb}}>\n\n                </ion-avatar>\n\n              </ion-col>\n\n              <ion-col col-7 style="margin-top: auto; margin-bottom: auto;">\n\n                <ion-row>\n\n                  <p *ngIf="recent.lido == true"> {{recent.nome}}</p>\n\n                  <p *ngIf="recent.lido == false"> <b>{{recent.nome}}</b></p>\n\n                </ion-row>\n\n              </ion-col>\n\n            </ion-row>\n\n          </ion-grid>\n\n        </a>\n\n      </ion-item>\n\n    </ion-list>\n\n    \n\n    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">\n\n      <ion-infinite-scroll-content></ion-infinite-scroll-content>\n\n    </ion-infinite-scroll>    \n\n  </ion-content>\n\n</ion-content>\n\n\n\n<!---------------------------------------------------------------------------------->\n\n\n\n<ion-content  *ngIf="showChatContainer"  style="background-color: #ffffff;" class="background" [ngClass]="version == \'01\' ? \'margin-content-l1\' : version == \'02\' ? \'margin-content-l2\' : \'margin-content-l1\'">\n\n \n\n  <ion-header  *ngIf="showMessageAllBox == false" style="position: relative;">\n\n    <ion-grid class="grid-style">\n\n      <ion-row>\n\n        <ion-col style="width: 50%;">\n\n          <button class="button-style button-style-{{ENV.PROJECT}}" ion-button small (click)="cancelMotivos()">\n\n            <p *ngIf="idiom == \'01\'">Sair</p>\n\n            <p *ngIf="idiom == \'02\'">Salir</p>\n\n          </button>\n\n        </ion-col>\n\n        <ion-col style="width: 50%;">\n\n          <button class="button-style button-style-{{ENV.PROJECT}}" ion-button small (click)="cancelChat()">\n\n            <p *ngIf="idiom == \'01\'">Voltar</p>\n\n            <p *ngIf="idiom == \'02\'">Volver</p>\n\n          </button>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n  </ion-header>\n\n\n\n  <ion-content padding *ngIf="showMessageAllBox == false" class="message-container" style="height: 90%;">\n\n    <ion-list>\n\n      <div id="chat-anchor"></div>\n\n      <div *ngIf="selectedUserId != null">\n\n        <p *ngIf="idiom == \'01\'" style="font-size: 1.4rem;">Você está falando com: {{selectedUser.nome}}</p>\n\n        <p *ngIf="idiom == \'02\'" style="font-size: 1.4rem;">Usted está hablando con: {{selectedUser.nome}}</p>\n\n      </div>\n\n      <div  id="cards">\n\n        <ion-card class="card-container" style="height: 90%;">\n\n          <ion-card-content *ngFor="let message of messages">\n\n            <!-- receptivo -->\n\n            <ion-item *ngIf="userId !== message.remetente.id && (perfilType == 3 && message.notification == 0 || perfilType != 3)">\n\n              <ion-avatar item-start>\n\n                <img src={{receptivo.thumb}}>\n\n              </ion-avatar>\n\n              <span *ngIf="message.notification == 1" class="circle_notification--receptive"><ion-icon name="ios-notifications-outline"></ion-icon></span>\n\n              <img *ngIf="message.type == \'file\'" src={{message.mensagem}} >\n\n              <h3 *ngIf="message.type != \'file\'" [innerHTML]="message.mensagem_formatada" class="message-receptive--default"></h3>\n\n              <h2 class="date-style">{{ message.created_at }}</h2>\n\n            </ion-item>\n\n\n\n            <!-- ativo -->\n\n            <ion-item *ngIf="userId == message.remetente.id  && (perfilType == 3 && message.notification == 0 || perfilType != 3)">\n\n              <ion-avatar item-end>\n\n                <img src={{ativo.thumb}}>\n\n              </ion-avatar>\n\n              <span *ngIf="message.notification == 1" class="circle_notification--active"><ion-icon name="ios-notifications-outline"></ion-icon></span>\n\n              <img *ngIf="message.type == \'file\'" src={{message.mensagem}} />\n\n              <h3 *ngIf="message.type != \'file\'" [innerHTML]="message.mensagem_formatada" [ngClass]="project == \'know-house\' ? \'message-active--know-house\' : \'message-active--default\'"></h3>\n\n              <h2 class="date-style">{{ message.created_at }}</h2>\n\n            </ion-item>\n\n          </ion-card-content>\n\n        </ion-card>\n\n      </div>\n\n    </ion-list>\n\n\n\n    <ion-textarea [disabled]="selectedUserId == null" class="message-input"  *ngIf="idiom == \'01\'" rows="3" placeholder="Enviar nova mensagem" [(ngModel)]="newMessage" ></ion-textarea>\n\n    <ion-textarea [disabled]="selectedUserId == null" class="message-input"  *ngIf="idiom == \'02\'" rows="3" placeholder="Enviar nueva mensaje" [(ngModel)]="newMessage" ></ion-textarea>\n\n    \n\n\n\n    <ion-grid class="grid-style">\n\n      <ion-row>\n\n        <ion-col style="width: 33%;">\n\n          <button class="button-style button-style-{{ENV.PROJECT}}" [disabled]="selectedUserId == null" float-right ion-button small icon-start (click)="sendMessage()">\n\n            <ion-icon name="ios-text-outline"></ion-icon>\n\n            <p>Enviar</p>\n\n          </button>\n\n        </ion-col>\n\n        <ion-col style="width: 33%;">\n\n          <button class="button-style button-style-{{ENV.PROJECT}}" *ngIf="perfilType == 2" [disabled]="selectedUserId == null" float-right ion-button small icon-start (click)="sendMessage(false, true)">\n\n            <ion-icon name="ios-notifications-outline"></ion-icon>\n\n            <p>Notificar</p>\n\n          </button> \n\n        </ion-col>\n\n        <ion-col style="width: 33%;">\n\n          <button class="button-style button-style-{{ENV.PROJECT}}" [disabled]="selectedUserId == null" float-right ion-button small icon-start (click)="openGallery()">\n\n            <p><ion-icon name="ios-document-outline"></ion-icon></p>\n\n          </button> \n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n\n\n    \n\n  </ion-content>\n\n\n\n  <div *ngIf="showMessageAllBox == true">\n\n    <h2>Enviar Mensagem para todos do projeto {{ selectedProject[\'titulo\'] }}?</h2>\n\n\n\n    <ion-textarea class="message-input" [(ngModel)]="newMessage" autofocus="true" rows="5" placeholder="Insira sua mensagem..."></ion-textarea>\n\n\n\n    <button class="button-style button-style-{{ENV.PROJECT}}" ion-button small float-right icon-start (click)="sendMessageAll()"><ion-icon name="ios-text-outline"></ion-icon>Enviar</button>\n\n    <button class="button-style button-style-{{ENV.PROJECT}}" float-right ion-button small icon-start (click)="sendMessageAll(true, true)" style="margin-right: 10px;"><ion-icon name="ios-notifications-outline"></ion-icon>Notificar</button>     \n\n    <button class="button-style button-style-{{ENV.PROJECT}}" float-right ion-button small icon-start (click)="openGallery(true)" style="margin-right: 10px;"><ion-icon name="ios-document-outline"></ion-icon></button>     \n\n    <button class="button-style button-style-{{ENV.PROJECT}}" ion-button small float-right class="cancel-button" (click)="cancelMessageAll()">\n\n      <p *ngIf="idiom == \'01\'">Voltar</p>\n\n      <p *ngIf="idiom == \'02\'">Volver</p>\n\n    </button>\n\n\n\n  </div>\n\n</ion-content>\n\n\n\n\n\n'/*ion-inline-end:"C:\Users\Alan\Desktop\ALAN\TRABALHO\VISION\PROJETOS\BEC\EAD\IONIC\PROJETO\EAD\src\pages\chat\chat.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["k" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__["a" /* AuthProvider */],
+            __WEBPACK_IMPORTED_MODULE_4__providers_http_service_http_service__["a" /* HttpServiceProvider */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* LoadingController */],
+            __WEBPACK_IMPORTED_MODULE_1__ionic_storage__["b" /* Storage */],
+            __WEBPACK_IMPORTED_MODULE_6__ionic_native_camera__["a" /* Camera */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* ModalController */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["q" /* ViewController */],
+            __WEBPACK_IMPORTED_MODULE_7__providers_pusher_service_pusher_service__["a" /* PusherServiceProvider */]])
+    ], ChatPage);
+    return ChatPage;
+}());
+
+//# sourceMappingURL=chat.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=13.js.map
