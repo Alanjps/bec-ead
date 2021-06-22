@@ -22,7 +22,7 @@ export var environment = {
   PUSHER_APP_CLUSTER: "us2", 
  */
   
-/* 
+
 //EDICOM -----------------------------------
   PROJECT: 'edicom',
   TEXT_COLOR_V1: 'text-default-white',  
@@ -32,7 +32,7 @@ export var environment = {
 	PUSHER_APP_KEY: "7b8b5ea20f7a185be995",
 	PUSHER_APP_SECRET: "789567e75724f82b17dc",
   PUSHER_APP_CLUSTER: "us2", 
- */
+
 
 /*   
 //R2M -----------------------------------
@@ -146,7 +146,7 @@ PUSHER_APP_CLUSTER: "us2",
  */
 
 
-
+/* 
 //CLUB LEARN -----------------------------------
 PROJECT: 'club-learn',
 TEXT_COLOR_V1: 'text-default-black',  
@@ -156,7 +156,7 @@ PUSHER_APP_ID: "1193372",
 PUSHER_APP_KEY: "5a5d9d9d6e878a5a139e",
 PUSHER_APP_SECRET: "cfc406609b91179a3e40",
 PUSHER_APP_CLUSTER: "us2",
-
+ */
 
 /* 
 //HKT-369 -----------------------------------
