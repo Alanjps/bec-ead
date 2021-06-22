@@ -108,7 +108,7 @@ export class HttpServiceProvider {
             break;
           }
           case 'club-learn': {
-            this.url = '/sehc';
+            this.url = '/club-learn';
             if(this._platform.is("cordova")){
               this.url = "https://app.clublearn.com.br";
             }

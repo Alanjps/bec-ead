@@ -184,6 +184,12 @@ export class TabsPage {
           firebaseSenderId = '159095755019';  
           break;
         }
+        case 'club-learn':{
+          onesignalAppId='9844d205-8452-4e21-8128-45d424748be8';
+          firebaseKey='AAAAKIDrRqY:APA91bHEBCtKLzrQQ-aBBKMR8nbwrBaGSOQr3vQF-UmdKW_4KH53ITrd8pYlrIDYSVeFxwTCECrJOniLR-AITnASsriO5Q_Y2AxSbvBiINK9JQcph5pRzIV2ceVGJo_aBqNJb4wJuY0O';
+          firebaseSenderId = '173961594534';  
+          break;
+        }
       }
       /*
         ANTIGO---------------------------------------------       
