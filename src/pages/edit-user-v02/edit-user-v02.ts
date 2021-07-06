@@ -54,6 +54,7 @@ export class EditUserV02Page {
   public dateToShow: string;
   public showQRCode: boolean = true;
   public ENV = ENV;
+  public clienteCompanyLogo: string = '/storage/uploads/configs/logoHeader.png';
 
   constructor(
     public navCtrl: NavController, 
@@ -230,6 +231,11 @@ export class EditUserV02Page {
         ead
         know-house
       */
+      if (value == 'full-promo'){
+        this.storage.get('clienteCompanyLogo').then((logo) => {
+          if(logo) this.clienteCompanyLogo = "/storage/"+logo;
+        });
+      }
      if (value == 'marketing-house' || value == 'ead' || value == 'know-house') this.showQRCode = false;
     });
     this.storage.get('clienteNome').then((valor) => {

@@ -62,7 +62,8 @@ export class ListVideosV02Page {
   public iconTryAgain: string = '';
   public iconPlay: string = '';
   public iconConcluido: string = '';
-
+  public clienteCompanyLogo: string = '/storage/uploads/configs/logoHeader.png';
+  
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
@@ -401,6 +402,11 @@ export class ListVideosV02Page {
         edicom
         vcc
       */
+      if (value == 'full-promo'){
+        this.storage.get('clienteCompanyLogo').then((logo) => {
+          if(logo) this.clienteCompanyLogo = "/storage/"+logo;
+        });
+      }
     });
     
     this.storage.get("AppConfig").then((config) => {

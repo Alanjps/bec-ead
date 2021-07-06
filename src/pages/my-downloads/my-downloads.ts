@@ -27,6 +27,7 @@ export class MyDownloadsPage {
   public idiom: string = '';
   public project: string;
   public ENV = ENV;
+  public clienteCompanyLogo: string = '/storage/uploads/configs/logoHeader.png';
 
   constructor(
     public navCtrl: NavController,
@@ -52,6 +53,11 @@ export class MyDownloadsPage {
         edicom
         vcc
       */
+      if (value == 'full-promo'){
+        this.storage.get('clienteCompanyLogo').then((logo) => {
+          if(logo) this.clienteCompanyLogo = "/storage/"+logo;
+        });
+      }
     });
 
     this.storage.get('Idiom').then((value) => {

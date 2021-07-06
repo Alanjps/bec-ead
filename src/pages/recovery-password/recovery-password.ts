@@ -24,6 +24,7 @@ export class RecoveryPasswordPage {
   public idiom: string = '';
   public version : string;
   public globalUrl: string = '';
+  public clienteCompanyLogo: string = '/storage/uploads/configs/logoHeader.png';
 
   constructor(
     public navCtrl: NavController, 
@@ -46,6 +47,11 @@ export class RecoveryPasswordPage {
         edicom
         vcc
       */
+      if (value == 'full-promo'){
+        this.storage.get('clienteCompanyLogo').then((logo) => {
+          if(logo) this.clienteCompanyLogo = "/storage/"+logo;
+        });
+      }
     });
 
     this.storage.get('LayoutVersion').then((value) => {

@@ -1,6 +1,6 @@
 <ion-header [ngClass]="version == '01' ? 'principalHeader' : version == '02' ? 'principalHeaderV02' : 'principalHeader'"  class=principalHeader>
   <img [ngClass]="version == '01' ? 'principal-icon' : version == '02' ? 'principal-icon-v02' : 'principal-icon'"
-     src="{{ globalUrl + '/storage/uploads/configs/logoHeader.png' }}" />
+     src="{{ globalUrl + clienteCompanyLogo }}" />
      
   <img *ngIf="version == '01'" class="testeira-v01" 
   src="{{ globalUrl + '/storage/uploads/configs/testeira1.png' }}" >
@@ -11,7 +11,19 @@
   <menu-sup></menu-sup>
 </ion-header>
 
-<ion-content id="body" class="content {{ENV.PROJECT}}-custom-bg" [ngClass]="version == '01' ? 'margin-content-l1' : version == '02' ? 'margin-content-l2' : 'margin-content-l1'">
+<ion-content id="body" class="content {{ENV.PROJECT}}-custom-bg" [ngClass]="
+project != 'full-promo' ?
+  version == '01' ? 
+    'margin-content-l1' : 
+      version == '02' ? 
+        'margin-content-l2' : 
+          'margin-content-l1'
+:
+  version == '01' ? 
+    'margin-content-l1 full-promo-bg' : 
+      version == '02' ? 
+        'margin-content-l2 full-promo-bg' : 
+          'margin-content-l1 full-promo-bg'">
 
   <ion-list style="margin: 0 !important; margin-bottom: 300px;">
     <div style="text-align: center;">
@@ -21,14 +33,14 @@
         </button>
         
         <button (click)="presentActionSheet()" *ngIf="!fotoTmp && !showCroppedImage" style="padding: 0px; width: 100%; background: transparent;">
-          <img [src]="DomSanitizer.bypassSecurityTrustUrl(clienteThumb)" alt=""
+          <img [ngClass]="project == 'full-promo' ? 'img-full-promo' : '' " [src]="DomSanitizer.bypassSecurityTrustUrl(clienteThumb)" alt=""
           style="max-width: 360px;
             margin: auto;
             max-width: 400px;
             max-height: 360px;">
         </button>
 
-        <div *ngIf="showCroppedImage">
+        <div *ngIf="showCroppedImage" style="background-color: #fff;">
           <ion-header>
             <ion-toolbar>
               <ion-buttons start>
@@ -101,33 +113,38 @@
     <ion-row>
       <ion-col col-12 text-center >
         <div style="white-space: nowrap;  height: 2.5rem;">
-          <ion-label *ngIf="idiom =='01'" inline class="perfil perfil-title">Nome: </ion-label>
-          <ion-label *ngIf="idiom =='02'" inline class="perfil perfil-title">Nombre: </ion-label>
-          <p class="perfil perfil-input">{{credential.nome}}</p>
+          <ion-label *ngIf="idiom =='01' && project != 'full-promo'" inline class="perfil perfil-title">Nome: </ion-label>
+          <ion-label *ngIf="idiom =='02' && project != 'full-promo'" inline class="perfil perfil-title">Nombre: </ion-label>
+          <p *ngIf="project != 'full-promo'" class="perfil perfil-input">{{credential.nome}}</p>
+          <h1 *ngIf="project == 'full-promo'" class="full-promo-text" style="line-height: 20px;">{{credential.nome}}</h1>
         </div>
 
         <div style="white-space: nowrap;  height: 2.5rem;">
-          <ion-label *ngIf="idiom =='01'" inline class="perfil perfil-title">Tel: </ion-label>
-          <ion-label *ngIf="idiom =='02'" inline class="perfil perfil-title">Tel: </ion-label>
-          <p class="perfil perfil-input" [brmasker]="{mask:'(00) 00000-0000', len:15, type:'num'}">{{credential.whatsapp}}</p>
+          <ion-label *ngIf="idiom =='01' && project != 'full-promo'" inline class="perfil perfil-title">Tel: </ion-label>
+          <ion-label *ngIf="idiom =='02' && project != 'full-promo'" inline class="perfil perfil-title">Tel: </ion-label>
+          <p *ngIf="project != 'full-promo'"  class="perfil perfil-input" [brmasker]="{mask:'(00) 00000-0000', len:15, type:'num'}">{{credential.whatsapp}}</p>
+          <p *ngIf="project == 'full-promo'"  class="full-promo-text" [brmasker]="{mask:'(00) 00000-0000', len:15, type:'num'}">{{credential.whatsapp}}</p>
         </div>
 
         <div *ngIf="project != 'edicom'" style="white-space: nowrap;  height: 2.5rem;">
-          <ion-label *ngIf="idiom =='01'" inline class="perfil perfil-title">Data de Nasc: </ion-label>
-          <ion-label *ngIf="idiom =='02'" inline class="perfil perfil-title">Fecha de Nasc: </ion-label>
-           <p class="perfil perfil-input">{{credential.nascimento}}</p>
+          <ion-label *ngIf="idiom =='01' && project != 'full-promo'" inline class="perfil perfil-title">Data de Nasc: </ion-label>
+          <ion-label *ngIf="idiom =='02' && project != 'full-promo'" inline class="perfil perfil-title">Fecha de Nasc: </ion-label>
+          <p *ngIf="project != 'full-promo'"  class="perfil perfil-input">{{credential.nascimento}}</p>
+          <p *ngIf="project == 'full-promo'"  class="full-promo-text">{{credential.nascimento}}</p>
         </div>
 
         <div style="white-space: nowrap;  height: 2.5rem;">
-          <ion-label *ngIf="idiom =='01'" inline class="perfil perfil-title">E-mail: </ion-label>
-          <ion-label *ngIf="idiom =='02'" inline class="perfil perfil-title">Correo: </ion-label>
-          <p class="perfil perfil-input">{{credential.email}}</p>
+          <ion-label *ngIf="idiom =='01' && project != 'full-promo'" inline class="perfil perfil-title">E-mail: </ion-label>
+          <ion-label *ngIf="idiom =='02' && project != 'full-promo'" inline class="perfil perfil-title">Correo: </ion-label>
+          <p *ngIf="project != 'full-promo'"  class="perfil perfil-input">{{credential.email}}</p>
+          <p *ngIf="project == 'full-promo'"  class="full-promo-text">{{credential.email}}</p>
         </div>
         
         <div *ngIf="additionalFields" padding-bottom>
           <div *ngFor="let field of additionalFields" style="white-space: nowrap;  height: 2.5rem;">
-            <ion-label inline class="perfil perfil-title">{{field.nome}}: </ion-label>
-            <p class="perfil perfil-input">{{field.descricao}}</p>
+            <ion-label *ngIf="project != 'full-promo'" inline class="perfil perfil-title">{{field.nome}}: </ion-label>
+            <p *ngIf="project != 'full-promo'"  class="perfil perfil-input">{{field.descricao}}</p>
+            <p *ngIf="project == 'full-promo'"  class="full-promo-text">{{field.descricao}}</p>
           </div>
         </div>
       </ion-col>
@@ -154,12 +171,12 @@
             <p *ngIf="idiom =='02'">Editar</p>
           </button>
         </ion-col>
-        <ion-col *ngIf="project == 'full-promo'" style="flex-grow: 2; text-align: center;">
+<!--         <ion-col *ngIf="project == 'full-promo'" style="flex-grow: 2; text-align: center;">
           <button ion-button full icon-start class="button-style button-style-{{ENV.PROJECT}}" (click)="openHolerite()">
             <p *ngIf="idiom =='01'">Meus Holerites</p>
             <p *ngIf="idiom =='02'">Mis Holerites</p>
           </button>
-        </ion-col>
+        </ion-col> -->
         <ion-col *ngIf="habilitaCampos" style="text-align: center;">
           <button ion-button full  class="button-style button-style-{{ENV.PROJECT}}" (click)="doLogout()">
             <p *ngIf="idiom =='01'">Sair</p>

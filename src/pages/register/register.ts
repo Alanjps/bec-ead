@@ -23,6 +23,7 @@ export class RegisterPage {
   public ENV = ENV;
   public globalUrl: string = '';
   public version : string;
+  public clienteCompanyLogo: string = '/storage/uploads/configs/logoHeader.png';
 
   public credential: any = {
     documento:'',
@@ -68,6 +69,11 @@ export class RegisterPage {
         edicom
         vcc
       */
+      if (value == 'full-promo'){
+        this.storage.get('clienteCompanyLogo').then((logo) => {
+          if(logo) this.clienteCompanyLogo = "/storage/"+logo;
+        });
+      }
     });
 
     this.storage.get('LayoutVersion').then((value) => {

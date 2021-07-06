@@ -70,6 +70,7 @@ export class ChatPage {
   public cont : number = 0;
 
   public pendentChat: any = null;
+  public clienteCompanyLogo: string = '/storage/uploads/configs/logoHeader.png';
 
   @ViewChild(Slides) slides: Slides;
 
@@ -216,6 +217,11 @@ export class ChatPage {
   ionViewDidEnter () {
     this.storage.get('Project').then((value)=>{
         this.project = value;
+        if (value == 'full-promo'){
+          this.storage.get('clienteCompanyLogo').then((logo) => {
+            if(logo) this.clienteCompanyLogo = "/storage/"+logo;
+          });
+        }
     });
 
     this.storage.get('Idiom').then((value) => {

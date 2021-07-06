@@ -71,6 +71,7 @@ export class PhotoPage {
   public iconAddFoto: string = '';
   public iconUserProfile: string = '';
   public observation: string = '';
+  public clienteCompanyLogo: string = '/storage/uploads/configs/logoHeader.png';
   
   constructor(
     public storage: Storage,
@@ -121,6 +122,11 @@ export class PhotoPage {
         edicom
         vcc
       */
+      if (value == 'full-promo'){
+        this.storage.get('clienteCompanyLogo').then((logo) => {
+          if(logo) this.clienteCompanyLogo = "/storage/"+logo;
+        });
+      }
     });
 
     this.getProject();
@@ -209,8 +215,8 @@ export class PhotoPage {
         this.http.getAll('/api/projeto/images', {project_id: this.imageProject.id}).subscribe((data:any) => {
           this.pics = data.length ? data.map((p) => {
             let subcategoriesArray = [];
-            if (p.image_subcategory_id && this.subcategories && this.subcategories.length > 0  && p.image_subcategory_id.trim() != '[]'){
-              JSON.parse(p.image_subcategory_id).map((id) => {
+            if (p.image_subcategory_id && this.subcategories && this.subcategories.length > 0  && p.image_subcategory_id != '[]'){
+                p.image_subcategory_id.map((id) => {
                 subcategoriesArray.push(this.subcategories.filter((s) => s.id == id)[0]);
               });
             }

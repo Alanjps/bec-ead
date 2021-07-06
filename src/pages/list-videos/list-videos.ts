@@ -1,7 +1,7 @@
 import { ApplicationRef, Component, ViewChild } from '@angular/core';
 import { AlertController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
-import { IonicPage, ModalController, LoadingController, NavController, NavParams, Slides, Platform, ToastController, ActionSheetButton, ActionSheet, ActionSheetController } from 'ionic-angular';
+import { IonicPage, ModalController, LoadingController, NavController, NavParams, Slides, Platform, ToastController, ActionSheetButton, ActionSheet, ActionSheetController, ViewController } from 'ionic-angular';
 import { AuthProvider } from '../../providers/auth/auth';
 import { HttpServiceProvider } from '../../providers/http-service/http-service';
 import { Attachment } from '../../models/attachment.model';
@@ -43,6 +43,8 @@ export class ListVideosPage {
   public playVideo: boolean = false;
 
   public globalUrl: string = '';
+  public clienteCompanyLogo: string = '/storage/uploads/configs/logoHeader.png';
+
   public version : string;
   public exibirNota: boolean = false;
   public nota: any;
@@ -78,7 +80,8 @@ export class ListVideosPage {
     public modalCtrl: ModalController,
     private fileOpener: FileOpener,
     private actionSheetCtrl: ActionSheetController,
-    public alertCtrl: AlertController  
+    public alertCtrl: AlertController,
+    public viewCtrl: ViewController
   ) {
     storage.get('GlobalUrl').then((value) => {
       this.globalUrl = value;
@@ -92,6 +95,11 @@ export class ListVideosPage {
         edicom
         vcc
       */
+      if (value == 'full-promo'){
+        this.storage.get('clienteCompanyLogo').then((logo) => {
+          if(logo) this.clienteCompanyLogo = "/storage/"+logo;
+        });
+      }
     });
 
     this.storage.get('Idiom').then((value) => {
@@ -707,6 +715,10 @@ export class ListVideosPage {
         toast.present();
       }
     })
+  }
+
+  confirm(){
+    this.viewCtrl.dismiss();
   }
 
 }

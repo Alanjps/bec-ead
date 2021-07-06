@@ -1,6 +1,6 @@
 <ion-header [ngClass]="version == '01' ? 'principalHeader' : version == '02' ? 'principalHeaderV02' : 'principalHeader'">
   <img [ngClass]="version == '01' ? 'principal-icon' : version == '02' ? 'principal-icon-v02' : 'principal-icon'"
-     src="{{ globalUrl + '/storage/uploads/configs/logoHeader.png' }}" />
+     src="{{ globalUrl + clienteCompanyLogo }}" />
      
   <img *ngIf="version == '01'" class="testeira-v01" 
   src="{{ globalUrl + '/storage/uploads/configs/testeira1.png' }}" >

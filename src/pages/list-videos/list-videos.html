@@ -1,7 +1,7 @@
 <ion-header [ngClass]="version == '01' ? 'principalHeader' : version == '02' ? 'principalHeaderV02' : 'principalHeader'">
   <div>
     <img [ngClass]="version == '01' ? 'principal-icon' : version == '02' ? 'principal-icon-v02' : 'principal-icon'"
-     src="{{ globalUrl + '/storage/uploads/configs/logoHeader.png' }}" />
+     src="{{ globalUrl + clienteCompanyLogo }}" />
 
     <img *ngIf="version == '01'" class="testeira-v01" 
     src="{{ globalUrl + '/storage/uploads/configs/testeira1.png' }}" >
@@ -162,8 +162,13 @@
         </ion-list>
       </ion-item>
     </ion-grid>
+    <div *ngIf="ENV.PROJECT == 'full-promo'" padding class="grid-style" >
+      <button class="button-style button-style-{{ENV.PROJECT}}" *ngIf="idiom =='01'" ion-button (click)="confirm()"><p>Voltar</p></button>
+      <button class="button-style button-style-{{ENV.PROJECT}}" *ngIf="idiom =='02'" ion-button (click)="confirm()"><p>Volver</p></button>
+    </div>
   </ion-list>
   
+
   <div *ngIf="playVideo">
     <div *ngIf="exibirVideo">
       <video #videoPlayer class="video-player" autoplay="true" controls controlsList="nodownload" style="max-width: 100%; max-height: 100%;"></video>

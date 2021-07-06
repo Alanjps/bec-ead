@@ -24,6 +24,9 @@ export class HoleriteComponent {
   public selectedDate : string = moment().format('YYYY');
   public holerites: any = [];
   public holeriteURL: string = '';
+  public clienteCompanyLogo: string = '/storage/uploads/configs/logoHeader.png';
+  public globalUrl: string = '';
+
 
   constructor(
     public navParams: NavParams,
@@ -37,6 +40,9 @@ export class HoleriteComponent {
   ) {
     this.credential = navParams.data;
 
+    storage.get('GlobalUrl').then((value) => {
+      this.globalUrl = value;
+    })
   }
 
   ionViewDidLoad() {
@@ -47,6 +53,11 @@ export class HoleriteComponent {
         edicom
         vcc
       */
+      if (value == 'full-promo'){
+        this.storage.get('clienteCompanyLogo').then((logo) => {
+          if(logo) this.clienteCompanyLogo = "/storage/"+logo;
+        });
+      }
     });
     this.storage.get('LayoutVersion').then((value) => {
       this.version = value;

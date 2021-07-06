@@ -79,7 +79,7 @@
   <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-hability-news"></ion-tab>
 </ion-tabs>
 
-<ion-tabs #appTabs selectedIndex="2" *ngIf="project == 'full-promo' && (version == '02' || version == '01') && renderRoot == true" [ngClass]="chatAtTop == true ? 'ion-tabs' : ''">
+<ion-tabs #appTabs color="primary" selectedIndex="2" *ngIf="project == 'full-promo' && (version == '02' || version == '01') && renderRoot == true" [ngClass]="chatAtTop == true ? 'ion-tabs' : ''">
   <ion-tab [root]="tab8" tabIcon="tab-full-promo-perfil"></ion-tab>
   <ion-tab [root]="tab7" tabIcon="tab-full-promo-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>
   <ion-tab [root]="tab1" tabIcon="tab-full-promo-agenda" (ionSelect)="redirectToListPage()"></ion-tab>

@@ -154,6 +154,7 @@ private url:string= '/vcc';
       .toPromise()
       .then(data => {
           if(data.id > 0){
+            console.log("USER -> ",data)
               this.storage.set('clienteId', data.id);
               this.storage.set('clienteNome', data.nome);
               this.storage.set('clienteEmail', data.email);
@@ -164,6 +165,7 @@ private url:string= '/vcc';
               this.storage.set('clienteNascimento', data.nascimento);
               this.storage.set('clienteThumb', data.thumb);
               this.storage.set('clienteCompanyId', data.company_id);
+              this.storage.set('clienteCompanyLogo', data.company ? data.company.logo : '');
 
               //if(credentials.lembrar){
                 //CLIENTE MARCOU PARA LEMBRAR DE FICAR LOGADO
@@ -204,6 +206,8 @@ private url:string= '/vcc';
             this.storage.set('clienteThumb', data.thumb);
             this.storage.set('clienteCompanyId', data.company_id);
             this.storage.set('clienteFirst', data.first);
+            this.storage.set('clienteCompanyLogo', data.company ? data.company.logo : '');
+
               return true;
           }else{
             return false;
@@ -234,6 +238,8 @@ private url:string= '/vcc';
             this.storage.set('clienteNascimento', data.nascimento);
             this.storage.set('clienteThumb', data.thumb);
             this.storage.set('clienteCompanyId', data.company_id);
+            this.storage.set('clienteCompanyLogo', data.company ? data.company.logo : '');
+
               return data;
           }else{
             //return false;
@@ -268,6 +274,8 @@ private url:string= '/vcc';
           this.storage.set('clienteThumb', data.thumb);
           this.storage.set('clienteCompanyId', data.company_id);
           this.storage.set('clienteFirst', data.first);
+          this.storage.set('clienteCompanyLogo', data.company ? data.company.logo : '');
+
             return true;
         }else{
           return false;
@@ -354,6 +362,8 @@ private url:string= '/vcc';
         this.storage.remove('clienteThumb');
         this.storage.remove('clienteCompanyId');
         this.storage.remove('clienteId');
+        this.storage.remove('clienteCompanyLogo');
+
       });
     });    
   }

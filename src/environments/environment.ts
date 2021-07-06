@@ -10,7 +10,7 @@ export var environment = {
     //style-orange
 
 
-/* 
+
  //KNOW-HOUSE -----------------------------------
   PROJECT: 'know-house',
   TEXT_COLOR_V1: 'text-default-black',  
@@ -20,9 +20,9 @@ export var environment = {
   PUSHER_APP_KEY: "25af961ea9f2ef86b9aa",
   PUSHER_APP_SECRET: "c6060d1a53114a8365da",
   PUSHER_APP_CLUSTER: "us2", 
- */
-  
 
+  
+/* 
 //EDICOM -----------------------------------
   PROJECT: 'edicom',
   TEXT_COLOR_V1: 'text-default-white',  
@@ -33,7 +33,7 @@ export var environment = {
 	PUSHER_APP_SECRET: "789567e75724f82b17dc",
   PUSHER_APP_CLUSTER: "us2", 
 
-
+ */
 /*   
 //R2M -----------------------------------
   PROJECT: 'r2m',
@@ -125,14 +125,14 @@ PUSHER_APP_CLUSTER: "us2",
 //FULL PROMO -----------------------------------
 PROJECT: 'full-promo',
 TEXT_COLOR_V1: 'text-default-black',  
-HEADER_TEXT: 'style-white', 
+HEADER_TEXT: 'style-white',
 
 PUSHER_APP_ID: "1185839",
 PUSHER_APP_KEY: "fdabf8306298d76cf103",
 PUSHER_APP_SECRET: "8a03d797c5b7d22a129b",
 PUSHER_APP_CLUSTER: "us2",
- */
 
+ */
 /* 
 //SEHC -----------------------------------
 PROJECT: 'sehc',

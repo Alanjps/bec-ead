@@ -46,24 +46,49 @@ export class TabsPage {
   goToDeafultPage(){
     this.storage.get('LayoutVersion').then((value)=> {
       this.chatAtTop = false;
-      switch(value){
-        case '02': {
-          this.version = '02';
-          this.tab1 = 'list-videos-v02-page';
-          this.tab10 = 'list-videos-v03-page';
-          this.chatAtTop = true;
-          this.notificationEnabled = true;
-          break;
-        }
-        default:{
-          this.version = '01';
-          this.tab1 = 'list-videos-page';
-          this.tab10 = 'list-videos-page-v04';
-          this.chatAtTop = true;
-          this.notificationEnabled = false;
-        }
-      }
 
+      this.storage.get('Project').then((project)=>{
+        this.project = project;
+
+        if (this.project == "full-promo"){
+          switch(value){
+            case '02': {
+              this.version = '02';
+              this.tab1 = 'full-promo-home-page';
+              this.tab10 = 'list-videos-v03-page';
+              this.chatAtTop = true;
+              this.notificationEnabled = true;
+              break;
+            }
+            default:{
+              this.version = '01';
+              this.tab1 = 'full-promo-home-page';
+              this.tab10 = 'list-videos-page-v04';
+              this.chatAtTop = true;
+              this.notificationEnabled = false;
+            }
+          } 
+
+        }else{
+          switch(value){
+            case '02': {
+              this.version = '02';
+              this.tab1 = 'list-videos-v02-page';
+              this.tab10 = 'list-videos-v03-page';
+              this.chatAtTop = true;
+              this.notificationEnabled = true;
+              break;
+            }
+            default:{
+              this.version = '01';
+              this.tab1 = 'list-videos-page';
+              this.tab10 = 'list-videos-page-v04';
+              this.chatAtTop = true;
+              this.notificationEnabled = false;
+            }
+          }
+        }
+      });
       this.storage.get('clienteCompanyId').then((companyId) => {
         this.storage.get('clienteId').then((clienteId) => {
           this.http.getAll('/api/conteudos', { company_id: companyId, user_id: clienteId, type: "ICON4" })

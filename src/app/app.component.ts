@@ -61,7 +61,7 @@ export class MyApp {
         //12 -> sehc
         //13 -> club-learn
         
-        this.projectNumber = 2;
+        this.projectNumber = 5;
 
         switch(this.projectNumber){
           case 0:

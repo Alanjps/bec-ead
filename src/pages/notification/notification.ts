@@ -31,6 +31,7 @@ export class NotificationPage {
 
   public totalNewNotification: number = 0;
   public interval: any;
+  public clienteCompanyLogo: string = '/storage/uploads/configs/logoHeader.png';
 
   constructor(
     public navCtrl: NavController, 
@@ -108,6 +109,11 @@ export class NotificationPage {
         edicom
         vcc
       */
+      if (value == 'full-promo'){
+        this.storage.get('clienteCompanyLogo').then((logo) => {
+          if(logo) this.clienteCompanyLogo = "/storage/"+logo;
+        });
+      }
     });
     this.storage.get('LayoutVersion').then((value) => {
       this.version = value;

@@ -67,6 +67,7 @@ export class EditUserPage {
   public scaleValY = 1;
   public showCroppedImage = false;
   public additionalFields = null;
+  public clienteCompanyLogo: string = '/storage/uploads/configs/logoHeader.png';
 
   constructor(
     public navCtrl: NavController, 
@@ -291,6 +292,11 @@ export class EditUserPage {
         ead
         know-house
       */
+      if (value == 'full-promo'){
+        this.storage.get('clienteCompanyLogo').then((logo) => {
+          if(logo) this.clienteCompanyLogo = "/storage/"+logo;
+        });
+      }
       if (value == 'edicom' || value == 'hkt369') this.showQRCode = true;
     });
     this.storage.get('clienteNome').then((valor) => {

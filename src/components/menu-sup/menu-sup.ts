@@ -17,6 +17,7 @@ export class MenuSupComponent {
   public pendentChat : any = null;
   public project: string;
   public intervalHandle: any = null;
+  public clienteCompanyLogo: string = '/storage/uploads/configs/logoHeader.png';
   
   constructor(
     public navCtrl: NavController, 
@@ -44,6 +45,11 @@ export class MenuSupComponent {
         edicom
         vcc
       */
+      if (value == 'full-promo'){
+        this.storage.get('clienteCompanyLogo').then((logo) => {
+          if(logo) this.clienteCompanyLogo = "/storage/"+logo;
+        });
+      }
     });
     this.storage.get('LayoutVersion').then((value) => {
       this.version = value;

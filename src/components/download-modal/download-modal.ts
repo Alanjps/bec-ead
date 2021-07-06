@@ -21,6 +21,7 @@ export class DownloadModal {
   public videos: Array<any>;
   public idiom: string = '';
   public project: string;
+  public clienteCompanyLogo: string = '/storage/uploads/configs/logoHeader.png';
 
   constructor(
     public navCtrl: NavController, 
@@ -40,6 +41,12 @@ export class DownloadModal {
   ngOnInit(){
     this.storage.get('Project').then((value)=>{
       this.project = value;
+
+      if (value == 'full-promo'){
+        this.storage.get('clienteCompanyLogo').then((logo) => {
+          if(logo) this.clienteCompanyLogo = "/storage/"+logo;
+        });
+      }
     });
 
     this.storage.get('Idiom').then((value) => {

@@ -20,6 +20,7 @@ export class UserFormComponent {
   public project: string;
   public version : string;
   public globalUrl: string = '';
+  public clienteCompanyLogo: string = '/storage/uploads/configs/logoHeader.png';
 
   constructor(
     public navParams: NavParams,
@@ -44,6 +45,11 @@ export class UserFormComponent {
         edicom
         vcc
       */
+      if (value == 'full-promo'){
+        this.storage.get('clienteCompanyLogo').then((logo) => {
+          if(logo) this.clienteCompanyLogo = "/storage/"+logo;
+        });
+      }
     });
     this.storage.get('LayoutVersion').then((value) => {
       this.version = value;

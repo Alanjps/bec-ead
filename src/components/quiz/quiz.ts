@@ -28,6 +28,7 @@ export class QuizComponent {
   public version : string;
   public globalUrl: string = '';
   public project;
+  public clienteCompanyLogo: string = '/storage/uploads/configs/logoHeader.png';
 
   constructor(    
     public navCtrl: NavController, 
@@ -81,6 +82,11 @@ export class QuizComponent {
     })
     this.storage.get('Project').then((value)=>{
       this.project = value;
+      if (value == 'full-promo'){
+        this.storage.get('clienteCompanyLogo').then((logo) => {
+          if(logo) this.clienteCompanyLogo = "/storage/"+logo;
+        });
+      }
     });
   }
 
