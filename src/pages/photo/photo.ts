@@ -214,10 +214,14 @@ export class PhotoPage {
       this.storage.get('clienteId').then((clienteId) => {
         this.http.getAll('/api/projeto/images', {project_id: this.imageProject.id}).subscribe((data:any) => {
           this.pics = data.length ? data.map((p) => {
+
+            const subId = typeof(p.image_subcategory_id) == "object" ? p.image_subcategory_id : JSON.parse(p.image_subcategory_id);
+
             let subcategoriesArray = [];
-            if (p.image_subcategory_id && this.subcategories && this.subcategories.length > 0  && p.image_subcategory_id != '[]'){
-                p.image_subcategory_id.map((id) => {
+            if (subId && this.subcategories && this.subcategories.length > 0  && subId != []){
+              subId.map((id) => {
                 subcategoriesArray.push(this.subcategories.filter((s) => s.id == id)[0]);
+                console.log("subcategoriesArray -> ",subcategoriesArray);
               });
             }
             return{

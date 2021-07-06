@@ -154,7 +154,6 @@ private url:string= '/vcc';
       .toPromise()
       .then(data => {
           if(data.id > 0){
-            console.log("USER -> ",data)
               this.storage.set('clienteId', data.id);
               this.storage.set('clienteNome', data.nome);
               this.storage.set('clienteEmail', data.email);
