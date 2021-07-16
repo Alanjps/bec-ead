@@ -101,7 +101,7 @@
         background-position: center;
     }
     &.background-full-promo{
-        background: #000 url("https://homolog.fullpromo.com.br/storage/uploads/configs/loginMobile.png");
+        background: #000 url("https://app.conectividaderh.com.br/storage/uploads/configs/loginMobile.png");
         background-repeat: no-repeat;
         background-position: center;
     }
@@ -217,7 +217,7 @@
         }
     }
     &[class*="full-promo-"] {
-        $urlBG: "https://homolog.fullpromo.com.br//storage//uploads//configs/";
+        $urlBG: "https://app.conectividaderh.com.br//storage//uploads//configs/";
         &[class*="custom-bg"] {
             background: url($urlBG + "papelParede.png") no-repeat 100% 100%;
             background-size: 100% 100%;
@@ -486,6 +486,7 @@ ion-item {
     //margin-top: 80px !important;
     //margin-top: 110px !important;
     margin-top: auto !important;
+    margin-bottom: 60px;
 }
 
 .margin-content-l1{

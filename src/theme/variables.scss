@@ -37,10 +37,10 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,  //DEFAULT
+  //primary:    #488aff,  //DEFAULT
   //primary:    #fc5A16,  //KNOW HOUSE -----------------
   //primary:    #49a6c9,  //EDICOM -----------------
-  //primary:    #434242,  //FULL PROMO -----------------
+  primary:    #434242,  //FULL PROMO -----------------
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #fff,
@@ -106,7 +106,7 @@ $colors: (
   $url-ava: "https://ava.insighttech.com.br//storage//uploads//configs//";
   $url-tmc: "https://tmc.becinteligencia.com//storage//uploads//configs//";
   $url-hability: "https://hability.becinteligencia.com//storage//uploads//configs//";
-  $url-full-promo: "https://homolog.fullpromo.com.br//storage//uploads//configs//";
+  $url-full-promo: "https://app.conectividaderh.com.br//storage//uploads//configs//";
   $url-sehc: "https://sehc.becinteligencia.com//storage//uploads//configs//";
   $url-club-learn: "https://app.clublearn.com.br//storage//uploads//configs//";
   $url-localhost: "http://192.168.0.11//storage//uploads//configs//";

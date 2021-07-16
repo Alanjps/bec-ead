@@ -96,7 +96,7 @@ export class HttpServiceProvider {
           case 'full-promo': {
             this.url = '/full-promo';
             if(this._platform.is("cordova")){
-              this.url = "https://homolog.fullpromo.com.br";
+              this.url = "https://app.conectividaderh.com.br";
             }
             break;
           }
