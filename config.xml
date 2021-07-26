@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.becinteligencia.sehc.app" version="1.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>HomeoEduca</name>
-    <description>HomeoEduca</description>
+<widget id="com.becinteligencia.know_house.app" version="1.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Know House</name>
+    <description>Know House</description>
     <author email="contato@becinteligencia.com" href="http://becinteligencia.com/">BeC Inteligência</author>
     <content src="index.html" />
     <access origin="*" />
