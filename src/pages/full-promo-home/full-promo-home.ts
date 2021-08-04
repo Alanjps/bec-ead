@@ -60,7 +60,6 @@ export class FullPromoHomePage {
   ) {
     storage.get('GlobalUrl').then((value) => {
       this.globalUrl = value;
-      console.log("value -> ",value);
     })
    
   }

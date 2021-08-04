@@ -69,6 +69,7 @@
     "pusher": "^4.0.1",
     "pusher-js": "^7.0.1",
     "resource": "0.8.1",
+    "run": "1.4.0",
     "rxjs": "5.5.11",
     "sw-toolbox": "3.6.0",
     "xcodebuild": "^1.0.2",

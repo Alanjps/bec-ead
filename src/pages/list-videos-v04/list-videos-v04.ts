@@ -86,6 +86,7 @@ export class ListVideosV04Page {
     storage.get('GlobalUrl').then((value) => {
       this.globalUrl = value;
     });
+    console.log("LIST VIDEOS 04 -------");
   }
   ngOnInit(){
     this.storage.get('Project').then((value)=>{
@@ -423,7 +424,7 @@ export class ListVideosV04Page {
       this.version = value;
     });
 
-    this.storage.get('AvailableICON5Projects')
+    this.storage.get('AvailableAba5Projects')
     .then((value)=>{
       if (value != null && value.length > 0){
         this.videos = value;
@@ -486,7 +487,7 @@ export class ListVideosV04Page {
                   return 0;
                 })
 
-                this.storage.set('AvailableDefaultProjects',this.videos)
+                this.storage.set('AvailableAba5Projects',this.videos)
                 loading.dismiss();
                 this.checkFinishedProjects();
               });

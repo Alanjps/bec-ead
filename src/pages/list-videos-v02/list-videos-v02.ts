@@ -105,6 +105,7 @@ export class ListVideosV02Page {
           break;
       }
     });
+    console.log("LIST VIDEOS 02-------");
   }
 
   ngOnInit(){

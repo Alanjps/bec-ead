@@ -68,7 +68,6 @@ export class PhotoModalComponent {
       });
       this.selectedSubcategoryArray = newArray;
     }
-    console.log(this.selectedSubcategoryArray);
    }
 
   signContest(){

@@ -124,6 +124,7 @@ export class ListVideosPage {
           break;
       }
     });
+    console.log("LIST VIDEOS -------");
   }
   
   presentModal(item) {
@@ -212,14 +213,15 @@ export class ListVideosPage {
         user_id: valor,
         lesson_id: lesson.id
       };
-
       this.authService.request('/api/testes/checa-resultado', vars).then((result) => {
         if (result) {
           this.nota = result.pontuacao_final;
           this.notaMaxima = result.test.maxPontos;
           if (result.is_aprovado == '1') {
             this.checkFinishedProjects();
-            this.fazerTeste = false;
+            //se for teste do tipo questionario, pode refazer o teste quantas vezes quiser.
+            console.log("isScoreable -> ",result.test.isScoreable)
+            this.fazerTeste = result.test.isScoreable === 0 ? true : false;
 
             //SE TEM CERRTIFICADO
             if (result.certificado && result.test.showCertificado == 1) {
@@ -229,7 +231,7 @@ export class ListVideosPage {
             }
           }else{
             if ( result.test.max_tentativas != 0 || result.totalTentativas >= result.test.max_tentativas){
-               this.fazerTeste = false;
+               this.fazerTeste = result.test.isScoreable === 0 ? true : false;
             }
           }
         }

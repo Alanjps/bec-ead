@@ -221,7 +221,6 @@ export class PhotoPage {
             if (subId && this.subcategories && this.subcategories.length > 0  && subId != []){
               subId.map((id) => {
                 subcategoriesArray.push(this.subcategories.filter((s) => s.id == id)[0]);
-                console.log("subcategoriesArray -> ",subcategoriesArray);
               });
             }
             return{

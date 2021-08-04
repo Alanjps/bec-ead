@@ -40,7 +40,6 @@ export class TabsPage {
      private oneSignal: OneSignal,
      public http: HttpServiceProvider
   ){
-    console.log(navParams);
     this.goToDeafultPage();
   }
 

@@ -86,6 +86,8 @@ export class ListVideosV03Page {
     storage.get('GlobalUrl').then((value) => {
       this.globalUrl = value;
     });
+
+    console.log("LIST VIDEOS 03 -------");
   }
 
   ngOnInit(){
