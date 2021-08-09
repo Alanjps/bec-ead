@@ -124,7 +124,6 @@ export class ListVideosPage {
           break;
       }
     });
-    console.log("LIST VIDEOS -------");
   }
   
   presentModal(item) {
@@ -174,7 +173,9 @@ export class ListVideosPage {
             this.alertTitle = "Parabéns!";
             this.alertSubtitle = "<p>Você passou no teste.</p><br/><img class=\"emoji\" src=\""+this.iconSuccess+"\" />";
             //ATINGIU E NÃO PRECISA MAIS FAZER O TESTE
-            this.fazerTeste = false;
+            //se for teste do tipo questionario, pode refazer o teste quantas vezes quiser.
+            this.fazerTeste = result.test.isScoreable === 0 ? true : false;
+
 
             //SE TEM CERRTIFICADO
             if (result.certificado && result.test.showCertificado == 1) {
@@ -189,7 +190,7 @@ export class ListVideosPage {
             }else{
               this.alertTitle = "Você não passou no teste.";
               this.alertSubtitle = "<p>Entre em contato com um curador, ele estará à disposição para ajudar!</p><br/><img class=\"emoji\" src=\""+this.iconFailure+"\" />";
-              this.fazerTeste = false;
+              this.fazerTeste = result.test.isScoreable === 0 ? true : false;
             }
           }
         } else {
@@ -220,7 +221,6 @@ export class ListVideosPage {
           if (result.is_aprovado == '1') {
             this.checkFinishedProjects();
             //se for teste do tipo questionario, pode refazer o teste quantas vezes quiser.
-            console.log("isScoreable -> ",result.test.isScoreable)
             this.fazerTeste = result.test.isScoreable === 0 ? true : false;
 
             //SE TEM CERRTIFICADO
@@ -404,6 +404,7 @@ export class ListVideosPage {
   }
 
   ionViewDidEnter(){
+    const type = this.navParams.data.type;
     this.storage.get('Project').then((value)=>{
       this.project = value;
       /*PROJETOS:
@@ -413,10 +414,19 @@ export class ListVideosPage {
       */
     });
     this.storage.get("AppConfig").then((config) => {
-      if (config.internoApp3 && config.internoApp3['text']){
-        this.titleTesteira = config.internoApp3['text'];
-      }else{
-        this.titleTesteira = this.idiom == '01' ? 'Agenda' : 'Mi agenda';
+      const type = this.navParams.data.type;
+      if(type == "DEFAULT"){
+        if (config.internoApp3 && config.internoApp3['text']){
+          this.titleTesteira = config.internoApp3['text'];
+        }else{
+          this.titleTesteira = this.idiom == '01' ? 'Agenda' : 'Mi agenda';
+        }
+      }else if(type == "ICON5"){
+        if (config.internoApp3 && config.internoApp5['text']){
+          this.titleTesteira = config.internoApp5['text'];
+        }else{
+          this.titleTesteira = this.idiom == '01' ? 'Agenda' : 'Mi agenda';
+        }
       }
     })
     this.complementTitle = '';
@@ -425,16 +435,14 @@ export class ListVideosPage {
       this.version = value;
     });
 
-    this.storage.get('AvailableDefaultProjects')
+    this.storage.get('AvailableProjects'+type)
     .then((value)=>{
-      if (value != null && value.length > 0){
-        this.videos = value;
-      }else{
+      if (value == null){
         this.storage.get('clienteCompanyId').then((companyId) => {
           this.storage.get('clienteId').then((clienteId) => {
             this.videos = [];
 
-            this.http.getAll('/api/projects-ids', { company_id: companyId, user_id: clienteId, type: "DEFAULT" })
+            this.http.getAll('/api/projects-ids', { company_id: companyId, user_id: clienteId, type })
             .subscribe(async (ids:any) => {
               ids.map( async(id) => {           
                 let loading = this.loadingCtrl.create({
@@ -442,8 +450,9 @@ export class ListVideosPage {
                 });
                 loading.present();
                 await new Promise((resolve, reject)=>{
-                  this.http.getAll('/api/conteudos', { company_id: companyId, user_id: clienteId, type: "DEFAULT", project_id: id})
+                  this.http.getAll('/api/conteudos', { company_id: companyId, user_id: clienteId, type, project_id: id})
                   .subscribe((data:any) => {
+
                     data.forEach((element, index) => {
                         data[index].showAulas = false;
                         element.lessons.forEach(l => {
@@ -488,7 +497,9 @@ export class ListVideosPage {
                   return 0;
                 })
 
-                this.storage.set('AvailableDefaultProjects',this.videos)
+                console.log("this.videos -> ",this.videos)
+
+                this.storage.set('AvailableProjects'+type, true)
                 loading.dismiss();
                 this.checkFinishedProjects();
               });

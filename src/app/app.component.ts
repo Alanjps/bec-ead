@@ -277,7 +277,8 @@ export class MyApp {
 
   clearStorage(storage){
     let vars = [
-      'AvailableDefaultProjects'
+      'AvailableProjectsDEFAULT',
+      'AvailableProjectsICON5'
     ];
     vars.map((v)=>{
       storage.remove(v);

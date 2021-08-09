@@ -16,11 +16,11 @@ export class TabsPage {
 
   @ViewChild('appTabs') appTabs: Tabs;
 
-  tab1 : any = '';
+  tab1 = 'list-videos-page';
   tab7 = 'notification-page';
   tab8 = 'edit-user-page';
   tab9 = 'photo-page';
-  tab10 : any = '';
+  tab10 = 'list-videos-page';
 
   public showTab5:boolean = true;
   public showTabSair:boolean = true;
@@ -32,7 +32,15 @@ export class TabsPage {
   public project: string;
   public showTab04: boolean = false;
   public showTab05: boolean = false;
+
+  param01 = {
+    type: "DEFAULT"
+  }
   
+  param02 = {
+    type: "ICON5"
+  }
+
   constructor(
     public navCtrl: NavController,
      public navParams: NavParams,
@@ -42,6 +50,7 @@ export class TabsPage {
   ){
     this.goToDeafultPage();
   }
+
 
   goToDeafultPage(){
     this.storage.get('LayoutVersion').then((value)=> {
@@ -55,7 +64,7 @@ export class TabsPage {
             case '02': {
               this.version = '02';
               this.tab1 = 'full-promo-home-page';
-              this.tab10 = 'list-videos-v03-page';
+              //this.tab10 = 'list-videos-v03-page';
               this.chatAtTop = true;
               this.notificationEnabled = true;
               break;
@@ -63,7 +72,7 @@ export class TabsPage {
             default:{
               this.version = '01';
               this.tab1 = 'full-promo-home-page';
-              this.tab10 = 'list-videos-page-v04';
+              //this.tab10 = 'list-videos-page-v04';
               this.chatAtTop = true;
               this.notificationEnabled = false;
             }
@@ -73,16 +82,16 @@ export class TabsPage {
           switch(value){
             case '02': {
               this.version = '02';
-              this.tab1 = 'list-videos-v02-page';
-              this.tab10 = 'list-videos-v03-page';
+              //this.tab1 = 'list-videos-v02-page';
+              //this.tab10 = 'list-videos-v03-page';
               this.chatAtTop = true;
               this.notificationEnabled = true;
               break;
             }
             default:{
               this.version = '01';
-              this.tab1 = 'list-videos-page';
-              this.tab10 = 'list-videos-page-v04';
+              //this.tab1 = 'list-videos-page';
+              //this.tab10 = 'list-videos-page-v04';
               this.chatAtTop = true;
               this.notificationEnabled = false;
             }

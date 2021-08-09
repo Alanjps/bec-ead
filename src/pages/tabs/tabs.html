@@ -31,12 +31,20 @@
   <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-hkt369-news"></ion-tab>
 </ion-tabs>
 
-<ion-tabs #appTabs selectedIndex="2" *ngIf="project == 'know-house' && (version == '02' || version == '01') && renderRoot == true" [ngClass]="chatAtTop == true ? 'ion-tabs' : ''">
+<!-- <ion-tabs #appTabs selectedIndex="2" *ngIf="project == 'know-house' && (version == '02' || version == '01') && renderRoot == true" [ngClass]="chatAtTop == true ? 'ion-tabs' : ''">
   <ion-tab [root]="tab8" tabIcon="tab-knowh-perfil"></ion-tab>
   <ion-tab [root]="tab7" tabIcon="tab-knowh-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>
   <ion-tab [root]="tab1" tabIcon="tab-knowh-agenda" (ionSelect)="redirectToListPage()"></ion-tab>
   <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-knowh-foto"></ion-tab>
   <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-knowh-news"></ion-tab>
+</ion-tabs> -->
+
+<ion-tabs #appTabs selectedIndex="2" *ngIf="project == 'know-house' && (version == '02' || version == '01') && renderRoot == true" [ngClass]="chatAtTop == true ? 'ion-tabs' : ''">
+  <ion-tab [root]="tab8" tabIcon="tab-knowh-perfil"></ion-tab>
+  <ion-tab [root]="tab7" tabIcon="tab-knowh-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger" [rootParams]="params2"></ion-tab>
+  <ion-tab [root]="tab1" tabIcon="tab-knowh-agenda" (ionSelect)="redirectToListPage()" [rootParams]="param01"></ion-tab>
+  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-knowh-foto" ></ion-tab>
+  <ion-tab *ngIf="showTab05 == true" [root]="tab1" tabIcon="tab-knowh-news" [rootParams]="param02"></ion-tab>
 </ion-tabs>
 
 <ion-tabs #appTabs selectedIndex="2" *ngIf="project == 'simples-trade' && (version == '02' || version == '01') && renderRoot == true" [ngClass]="chatAtTop == true ? 'ion-tabs' : ''">
