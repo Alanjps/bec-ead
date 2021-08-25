@@ -362,7 +362,6 @@ private url:string= '/vcc';
         this.storage.remove('clienteCompanyId');
         this.storage.remove('clienteId');
         this.storage.remove('clienteCompanyLogo');
-
       });
     });    
   }

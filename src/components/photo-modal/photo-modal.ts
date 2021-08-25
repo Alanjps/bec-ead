@@ -28,6 +28,8 @@ export class PhotoModalComponent {
   public selectedSubcategoryArray :any = [];
   public observation: string = '';
   public observationAnswer: string = '';
+  public contestPhotoLimit: number = 0;
+
   @ViewChild(Slides) slides: Slides;
 
   constructor(
@@ -47,6 +49,7 @@ export class PhotoModalComponent {
     this.contestEnabled = navParams.data.contestEnabled;
     this.userCategoriesInContest = navParams.data.userCategoriesInContest;
     this.observation = navParams.data.observation;
+    this.contestPhotoLimit = navParams.data.contestPhotoLimit;
   }
 
   ngOnInit(){
@@ -68,7 +71,6 @@ export class PhotoModalComponent {
       });
       this.selectedSubcategoryArray = newArray;
     }
-    console.log(this.selectedSubcategoryArray);
    }
 
   signContest(){
@@ -78,17 +80,21 @@ export class PhotoModalComponent {
       let alertText = this.idiom == '01' ? 'Selecione uma categoria primeiramente.' : this.idiom == '02' ? 'Por favor, seleccione una categoría primero.': '';
       this.showAlert(alertText)
     }else{
-      let alreadyInContest = false;
-      if (this.userCategoriesInContest){
-        alreadyInContest = this.userCategoriesInContest.filter((ucc) => {
-          return ucc.inContest == true && ucc.categoryId == this.selectedCategory
-        }).length > 0 ? true : false;
-      }
-      
-      if ( alreadyInContest == true){
-        let alertText = this.idiom == '01' ? 'Você já possui 1 foto concorrendo nessa categoria.' : this.idiom == '02' ? 'Ya tienes 1 foto compitiendo en esa categoría': '';
-        this.showAlert(alertText);
-        this.contester = false;
+      if (this.contestPhotoLimit > 0){
+        let photoLimitAchived = false;
+        if (this.userCategoriesInContest){
+          photoLimitAchived = this.userCategoriesInContest.filter((ucc) => {
+            return ucc.photoLimitAchived == true && ucc.categoryId == this.selectedCategory
+          }).length > 0 ? true : false;
+        }
+        
+        if ( photoLimitAchived == true){
+          let alertText = this.idiom == '01' ? `Você chegou ao limite de ${this.contestPhotoLimit} foto(s) de concurso para essa categoria.` : this.idiom == '02' ? `Has alcanzado el límite de ${this.contestPhotoLimit} fotografía(s) del concurso para esta categoría.`: '';
+          this.showAlert(alertText);
+          this.contester = false;
+        }else{
+          this.contester = true;
+        }
       }else{
         this.contester = true;
       }
