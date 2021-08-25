@@ -72,6 +72,8 @@ export class PhotoPage {
   public iconUserProfile: string = '';
   public observation: string = '';
   public clienteCompanyLogo: string = '/storage/uploads/configs/logoHeader.png';
+  public contestPhotoLimit: number = 1;
+  public enableContestPicRemoval: boolean = false;
   
   constructor(
     public storage: Storage,
@@ -197,7 +199,15 @@ export class PhotoPage {
               this.categories = data[0].categories;
               this.subcategories = data[0].subcategories;
               this.observation = data[0].observation;
-              this.contestEnabled = data[0].contest == 0 ? false : true;
+
+              //determina se o concuros está habilitado com base na data inicial e final do mesmo
+              this.contestEnabled = data[0].contest == 0 ? false : data[0].constest_enabled == 1 ? true : false;
+              this.contestPhotoLimit = data[0].photo_quantity >= 0 ? data[0].photo_quantity : 1;
+
+              //determina se o usuário pode remover uma foto de concurso. Se o mesmo já estiver desabilitado o usuário não poderá remover a foto, mesmo se no painel do administrador estiver marcado que o usuário pode apagar fotos de concurso. Pq isso só pode ser feito com o concurso ativo.
+              this.enableContestPicRemoval = this.contestEnabled == false ? false :
+                 data[0].can_remove_contest_photo ? data[0].can_remove_contest_photo == 1 ? true : false : false;
+
             }
             loading.dismiss();
           });
@@ -250,16 +260,17 @@ export class PhotoPage {
 
           //verifica em qual categoria o usuario ja esta concorrendo 
           this.userCategoriesInContest = this.pics && this.categories ? this.categories.map((c) => {
+            let total = this.pics.filter((p)=>{
+              return p.image_category_id == c.id && p.is_contest == 1 && p.user_id == clienteId
+            }).length;
             return {
               categoryId: c.id,
-              inContest: this.pics.filter((p)=>{
-                return p.image_category_id == c.id && p.is_contest == 1 && p.user_id == clienteId
-              }).length > 0 ? true : false
+              photoLimitAchived: total >= this.contestPhotoLimit ? true : false,
+              total
             }
           }) : null;
 
           loading.dismiss();
-
           if (this.pics)  this.doInfinite();
         });
       });
@@ -336,7 +347,7 @@ export class PhotoPage {
     this.camera.getPicture(options).then((imageData) => {
       this.fileUpload = "data:image/jpeg;base64," + imageData;
 
-      let photoModal = this.modalCtrl.create('photo-modal', {photo: this.fileUpload, categories: this.categories, subcategories: this.subcategories, observation: this.observation, contestEnabled: this.contestEnabled, userCategoriesInContest: this.userCategoriesInContest });
+      let photoModal = this.modalCtrl.create('photo-modal', {photo: this.fileUpload, categories: this.categories, subcategories: this.subcategories, observation: this.observation, contestEnabled: this.contestEnabled, userCategoriesInContest: this.userCategoriesInContest, contestPhotoLimit: this.contestPhotoLimit});
       photoModal.onDidDismiss(data => {
           if (data.sendFile){
             let loading = this.loadingCtrl.create({
@@ -372,8 +383,7 @@ export class PhotoPage {
   }
 
   disablePic(pic){
-
-    if(pic.is_contest == 1){
+    if(pic.is_contest == 1 && this.enableContestPicRemoval == false){
       let toast = this.toastCtrl.create({
         message: this.idiom == '01' ? "Não é possível remover uma imagem de concurso." : 
         this.idiom == '02' ? "No puedes eliminar una imagen del concurso." : '',
@@ -456,19 +466,29 @@ export class PhotoPage {
   }
 
   setLiked(pic){
-    this.storage.get('clienteId').then((clienteId) => {
-      this.http.post('/api/likes/save',{user_id:  clienteId, image_id: pic.id},'').subscribe((result:any) => {
-        this.pics = this.pics.map((p) => {
-          let total = p.total_likes + 1;
-          return p.id == pic.id? {...p, liked: true, total_likes: total} : p
-        });
-        this.picsOriginal = this.pics;
-        this.items = this.items.map((i) => {
-          let total = i.total_likes + 1;
-          return i.id == pic.id? {...i, liked: true, total_likes: total} : i
-        })
+    if(pic.is_contest == 1 && this.contestEnabled == false){
+      let toast = this.toastCtrl.create({
+        message: this.idiom == '01' ? "O concurso já foi finalizado ou ainda não se iniciou." : 
+        this.idiom == '02' ? "No se pudo eliminar la imagen." : '',
+        duration: 3000,
+        position: 'top'
       });
-    });
+      toast.present();
+    }else{
+      this.storage.get('clienteId').then((clienteId) => {
+        this.http.post('/api/likes/save',{user_id:  clienteId, image_id: pic.id},'').subscribe((result:any) => {
+          this.pics = this.pics.map((p) => {
+            let total = p.total_likes + 1;
+            return p.id == pic.id? {...p, liked: true, total_likes: total} : p
+          });
+          this.picsOriginal = this.pics;
+          this.items = this.items.map((i) => {
+            let total = i.total_likes + 1;
+            return i.id == pic.id? {...i, liked: true, total_likes: total} : i
+          })
+        });
+      });
+    }
   }
 
   alertMessage(type){

@@ -16,7 +16,6 @@ export class MyApp {
 
   public storage: Storage;
   rootPage:any = '';
-  projectNumber: number = null;
   projectName: string = null;
   onesignalAppId: string = '';
   firebaseSenderId: string = '';
@@ -61,93 +60,91 @@ export class MyApp {
         //12 -> sehc
         //13 -> club-learn
         
-        this.projectNumber = 5;
-
-        switch(this.projectNumber){
-          case 0:
-            this.onesignalAppId='946eb156-716e-4000-853f-18f41cc2b193';
-            this.firebaseSenderId='23981024898';
-            this.projectName = 'localhost';
-            storage.set('Idiom','02'); //português
-            storage.set('TextColor','black'); //português
-            break;
-          case 1:
+        switch(ENV.PROJECT){
+          case "ead":
             this.onesignalAppId='946eb156-716e-4000-853f-18f41cc2b193';
             this.firebaseSenderId='23981024898';
             this.projectName = 'ead';
             storage.set('Idiom','01'); //português
             break;
-          case 2:
+          case "edicom":
             this.onesignalAppId='c3765e9e-79b4-4dbc-b3ad-a31396017591';
             this.firebaseSenderId='981777081301';
             this.projectName = 'edicom';
             storage.set('Idiom','02'); //espanhol
             break;
-          case 3:
+          case 'marketing-house':
             this.onesignalAppId='883bb93e-4053-43f0-865c-a5d52ca89a80';
             this.firebaseSenderId='1010203313691';
             this.projectName = 'marketing-house';
             storage.set('Idiom','01'); //português
             break;
-          case 4:
+          case 'hkt369':
             this.onesignalAppId='abf814a3-a2bb-4ae4-9a63-422d37394e64';
             this.firebaseSenderId='786704296447';
             this.projectName = 'hkt369';
             storage.set('Idiom','02'); //espanhol
             break;
-          case 5:
+          case "know-house":
             this.onesignalAppId='d29cd1d1-3a5b-4774-b768-a1026101ea0a';
             this.firebaseSenderId='823038736964';
             this.projectName = 'know-house';
             storage.set('Idiom','01'); //português
             break;
-          case 6:
+          case "simples-trade":
             this.onesignalAppId='d6e18971-f2cc-41d8-aed7-28384cb957e0';
             this.firebaseSenderId='823038736964';
             this.projectName = 'simples-trade';
             storage.set('Idiom','01'); //português
             break;
-          case 7:
+          case "r2m":
             this.onesignalAppId='a7bbe9ca-2e79-4f10-8f68-365da3e09fd5';
             this.firebaseSenderId='613045008970';
             this.projectName = 'r2m';
             storage.set('Idiom','01'); //português
             break;
-          case 8:
+          case "ava":
             this.onesignalAppId='6b8f443d-da09-4ccc-b629-f1e21476c6b2';
             this.firebaseSenderId='575583616149';
             this.projectName = 'ava';
             storage.set('Idiom','01'); //português
             break;
-          case 9:
+          case "tmc":
             this.onesignalAppId='c4a92409-ba2f-4001-bd59-af1b24ae58a1';
             this.firebaseSenderId='732312096020';
             this.projectName = 'tmc';
             storage.set('Idiom','02'); //espanhol
             break;
-          case 10:
+          case "hability":
             this.onesignalAppId='fb347a8c-b214-4754-934b-b60e6772fd47';
             this.firebaseSenderId='926995274326';
             this.projectName = 'hability';
             storage.set('Idiom','02'); //espanhol
             break;
-          case 11:
+          case "full-promo":
             this.onesignalAppId='574a5c13-9a8e-46fb-85cf-3698d35cc750';
             this.firebaseSenderId='1067216235696';
             this.projectName = 'full-promo';
             storage.set('Idiom','01'); //português
             break;
-          case 12:
+          case "sehc":
             this.onesignalAppId='41ad100c-898c-4a9f-99d9-277244f36858';
             this.firebaseSenderId='159095755019';
             this.projectName = 'sehc';
             storage.set('Idiom','02'); //espanhol
             break;
-          case 13:
+          case "club-learn":
             this.onesignalAppId='9844d205-8452-4e21-8128-45d424748be8';
             this.firebaseSenderId='173961594534';
             this.projectName = 'club-learn';
             storage.set('Idiom','01'); //português
+            break;
+          default:
+            this.onesignalAppId='946eb156-716e-4000-853f-18f41cc2b193';
+            this.firebaseSenderId='23981024898';
+            this.projectName = 'localhost';
+            storage.set('Idiom','02'); //português
+            storage.set('TextColor','black'); //português
             break;
         }
 

@@ -22,26 +22,37 @@
     <ion-grid>
       <ion-item *ngFor="let projeto of videos | search : terms">
         <div *ngIf="projeto.content_only == 1" (click)="presentModal(projeto.contents)">
+          <ion-row *ngIf="version == '01'">
+            <ion-row> 
+                       
+              <ion-thumbnail style="position: relative;">
+                <img src="{{ projeto.thumb }}">
+              </ion-thumbnail>
+            </ion-row>
             <ion-row>
-              <ion-row>          
-                <ion-thumbnail style="position: relative;">
-                  <img *ngIf="projeto.projectConcluded && projeto.projectConcluded == true" style="position: absolute; right: 0; top: 0; left: auto; bottom: auto; height: 60px !important; width: auto;" src={{iconConcluido}}>
-                  <img src="{{ projeto.thumb }}">
-                </ion-thumbnail>
+              <ion-row style="width: 100%; padding: 10px 0;">
+                <h2 [ngClass]="project == 'know-house' ?  'font-style know-house-title' : ''">{{ projeto.tituloApp? projeto.tituloApp : projeto.titulo }}</h2>
               </ion-row>
               <ion-row>
-                <ion-row style="width: 100%; padding: 10px 0;">
-                  <h2 [ngClass]="project == 'know-house' ?  'font-style know-house-title' : ''">{{ projeto.tituloApp? projeto.tituloApp : projeto.titulo }}</h2>
-                </ion-row>
-                <ion-row>
-                  <p>{{ projeto.descricao }}</p>
-                </ion-row>
+                <p>{{ projeto.descricao }}</p>
               </ion-row>
             </ion-row>
-          </div>
+          </ion-row>
+
+          <ion-row *ngIf="version == '02'">
+            <ion-col col-4>          
+              <ion-thumbnail>
+                <img src="{{ projeto.thumb }}">
+              </ion-thumbnail></ion-col>
+            <ion-col col-8>
+              <h2 [ngClass]="project == 'know-house' ?  'font-style know-house-title' : ''">{{ projeto.tituloApp? projeto.tituloApp : projeto.titulo }}</h2>
+              <p>{{ projeto.descricao }}</p>
+            </ion-col>
+          </ion-row>          
+        </div>
 
         <div *ngIf="!projeto.content_only || projeto.content_only !== 1" (click)="openProject(projeto)">
-          <ion-row>
+          <ion-row *ngIf="version == '01'">
             <ion-row>          
               <ion-thumbnail style="position: relative;">
                 <img *ngIf="projeto.projectConcluded && projeto.projectConcluded == true" style="position: absolute; right: 0; top: 0; left: auto; bottom: auto; height: 60px !important; width: auto;" src={{iconConcluido}}>
@@ -57,6 +68,18 @@
               </ion-row>
             </ion-row>
           </ion-row>
+
+          <ion-row *ngIf="version == '02'">
+            <ion-col col-4>          
+              <ion-thumbnail>
+                <img *ngIf="projeto.projectConcluded && projeto.projectConcluded == true" style="position: absolute; right: 0; top: 0; left: auto; bottom: auto; height: 60px !important;" src={{iconConcluido}}>
+                <img src="{{ projeto.thumb }}">
+              </ion-thumbnail></ion-col>
+            <ion-col col-8>
+              <h2 [ngClass]="project == 'know-house' ?  'font-style know-house-title' : ''">{{ projeto.tituloApp? projeto.tituloApp : projeto.titulo }}</h2>
+              <p>{{ projeto.descricao }}</p>
+            </ion-col>
+          </ion-row>  
         </div>
 
 

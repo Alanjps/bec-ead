@@ -377,7 +377,7 @@ export class ListVideosPage {
             let toast = this.toastCtrl.create({
               duration: 6000,
               position: 'top',
-              message: `${$attachment.name} foi baixado com sucesso.`
+              message: `${$attachment.name} ${this.idiom == '01' ? 'foi baixado com sucesso' : 'bajado con éxito'}.`
             });
             toast.present();
           });
@@ -496,8 +496,6 @@ export class ListVideosPage {
                   // a must be equal to b
                   return 0;
                 })
-
-                console.log("this.videos -> ",this.videos)
 
                 this.storage.set('AvailableProjects'+type, true)
                 loading.dismiss();

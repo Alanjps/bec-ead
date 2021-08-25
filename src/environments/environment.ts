@@ -10,7 +10,7 @@ export var environment = {
     //style-orange
 
 
-
+/* 
  //KNOW-HOUSE -----------------------------------
   PROJECT: 'know-house',
   TEXT_COLOR_V1: 'text-default-black',  
@@ -20,7 +20,7 @@ export var environment = {
   PUSHER_APP_KEY: "25af961ea9f2ef86b9aa",
   PUSHER_APP_SECRET: "c6060d1a53114a8365da",
   PUSHER_APP_CLUSTER: "us2", 
-
+ */
   
 /* 
 //EDICOM -----------------------------------
@@ -58,7 +58,7 @@ export var environment = {
   PUSHER_APP_CLUSTER: "us2", 
  */
 
-/*  
+ 
 //VCC -----------------------------------
   PROJECT: 'ead',
   TEXT_COLOR_V1: 'text-default-black',  
@@ -68,7 +68,7 @@ export var environment = {
   PUSHER_APP_KEY: "458631d9d874e22b5c16",
   PUSHER_APP_SECRET: "ceac567fed3ab7dd2dd1",
   PUSHER_APP_CLUSTER: "us2",
- */
+
 
 
 /* 
@@ -105,8 +105,8 @@ export var environment = {
   PUSHER_APP_KEY: "a56afa599a1032dfb9cc",
   PUSHER_APP_SECRET: "c779cd95649268404b03",
   PUSHER_APP_CLUSTER: "us2",
- */
 
+ */
 
 /*  
 //HABILITY -----------------------------------

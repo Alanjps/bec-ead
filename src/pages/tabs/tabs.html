@@ -1,43 +1,35 @@
 <ion-tabs #appTabs selectedIndex="2" *ngIf="project == 'marketing-house' && (version == '02' || version == '01') && renderRoot == true" [ngClass]="chatAtTop == true ? 'ion-tabs' : ''">
   <ion-tab [root]="tab8" tabIcon="tab-mrkhouse-perfil"></ion-tab>
   <ion-tab [root]="tab7" tabIcon="tab-mrkhouse-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>
-  <ion-tab [root]="tab1" tabIcon="tab-mrkhouse-agenda" (ionSelect)="redirectToListPage()"></ion-tab>
+  <ion-tab [root]="tab1" tabIcon="tab-mrkhouse-agenda" (ionSelect)="redirectToListPage()" [rootParams]="param01"></ion-tab>
   <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-mrkhouse-foto"></ion-tab>
-  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-mrkhouse-news"></ion-tab>
+  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-mrkhouse-news" [rootParams]="param02"></ion-tab>
 </ion-tabs>
 
 <ion-tabs #appTabs selectedIndex="2" *ngIf="project == 'edicom' && (version == '02' || version == '01') && renderRoot == true" [ngClass]="chatAtTop == true ? 'ion-tabs' : ''">
   <ion-tab [root]="tab8" tabIcon="tab-edicom-perfil"></ion-tab>
   <ion-tab [root]="tab7" tabIcon="tab-edicom-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>
-  <ion-tab [root]="tab1" tabIcon="tab-edicom-agenda" (ionSelect)="redirectToListPage()"></ion-tab>
+  <ion-tab [root]="tab1" tabIcon="tab-edicom-agenda" (ionSelect)="redirectToListPage()" [rootParams]="param01"></ion-tab>
   <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-edicom-foto"></ion-tab>
-  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-edicom-news"></ion-tab>
+  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-edicom-news" [rootParams]="param02"></ion-tab>
 </ion-tabs>
  
 
 <ion-tabs #appTabs selectedIndex="2" *ngIf="project == 'ead' && (version == '02' || version == '01') && renderRoot == true" [ngClass]="chatAtTop == true ? 'ion-tabs' : ''">
   <ion-tab [root]="tab8" tabIcon="tab-vcc-perfil"></ion-tab>
   <ion-tab [root]="tab7" tabIcon="tab-vcc-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>
-  <ion-tab [root]="tab1" tabIcon="tab-vcc-agenda" (ionSelect)="redirectToListPage()"></ion-tab>
+  <ion-tab [root]="tab1" tabIcon="tab-vcc-agenda" (ionSelect)="redirectToListPage()" [rootParams]="param01"></ion-tab>
   <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-vcc-foto"></ion-tab>
-  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-vcc-news"></ion-tab>
+  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-vcc-news" [rootParams]="param02"></ion-tab>
 </ion-tabs>
 
 <ion-tabs #appTabs selectedIndex="2" *ngIf="project == 'hkt369' && (version == '02' || version == '01') && renderRoot == true" [ngClass]="chatAtTop == true ? 'ion-tabs' : ''">
   <ion-tab [root]="tab8" tabIcon="tab-hkt369-perfil"></ion-tab>
   <ion-tab [root]="tab7" tabIcon="tab-hkt369-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>
-  <ion-tab [root]="tab1" tabIcon="tab-hkt369-agenda" (ionSelect)="redirectToListPage()"></ion-tab>
+  <ion-tab [root]="tab1" tabIcon="tab-hkt369-agenda" (ionSelect)="redirectToListPage()" [rootParams]="param01"></ion-tab>
   <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-hkt369-foto"></ion-tab>
-  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-hkt369-news"></ion-tab>
+  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-hkt369-news" [rootParams]="param02"></ion-tab>
 </ion-tabs>
-
-<!-- <ion-tabs #appTabs selectedIndex="2" *ngIf="project == 'know-house' && (version == '02' || version == '01') && renderRoot == true" [ngClass]="chatAtTop == true ? 'ion-tabs' : ''">
-  <ion-tab [root]="tab8" tabIcon="tab-knowh-perfil"></ion-tab>
-  <ion-tab [root]="tab7" tabIcon="tab-knowh-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>
-  <ion-tab [root]="tab1" tabIcon="tab-knowh-agenda" (ionSelect)="redirectToListPage()"></ion-tab>
-  <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-knowh-foto"></ion-tab>
-  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-knowh-news"></ion-tab>
-</ion-tabs> -->
 
 <ion-tabs #appTabs selectedIndex="2" *ngIf="project == 'know-house' && (version == '02' || version == '01') && renderRoot == true" [ngClass]="chatAtTop == true ? 'ion-tabs' : ''">
   <ion-tab [root]="tab8" tabIcon="tab-knowh-perfil"></ion-tab>
@@ -50,65 +42,65 @@
 <ion-tabs #appTabs selectedIndex="2" *ngIf="project == 'simples-trade' && (version == '02' || version == '01') && renderRoot == true" [ngClass]="chatAtTop == true ? 'ion-tabs' : ''">
   <ion-tab [root]="tab8" tabIcon="tab-strade-perfil"></ion-tab>
   <ion-tab [root]="tab7" tabIcon="tab-strade-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>
-  <ion-tab [root]="tab1" tabIcon="tab-strade-agenda" (ionSelect)="redirectToListPage()"></ion-tab>
+  <ion-tab [root]="tab1" tabIcon="tab-strade-agenda" (ionSelect)="redirectToListPage()" [rootParams]="param01"></ion-tab>
   <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-strade-foto"></ion-tab>
-  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-strade-news"></ion-tab>
+  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-strade-news" [rootParams]="param02"></ion-tab>
 </ion-tabs>
 
 <ion-tabs #appTabs selectedIndex="2" *ngIf="project == 'r2m' && (version == '02' || version == '01') && renderRoot == true" [ngClass]="chatAtTop == true ? 'ion-tabs' : ''">
   <ion-tab [root]="tab8" tabIcon="tab-r2m-perfil"></ion-tab>
   <ion-tab [root]="tab7" tabIcon="tab-r2m-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>
-  <ion-tab [root]="tab1" tabIcon="tab-r2m-agenda" (ionSelect)="redirectToListPage()"></ion-tab>
+  <ion-tab [root]="tab1" tabIcon="tab-r2m-agenda" (ionSelect)="redirectToListPage()" [rootParams]="param01"></ion-tab>
   <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-r2m-foto"></ion-tab>
-  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-r2m-news"></ion-tab>
+  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-r2m-news" [rootParams]="param02"></ion-tab>
 </ion-tabs>
 
 <ion-tabs #appTabs selectedIndex="2" *ngIf="project == 'ava' && (version == '02' || version == '01') && renderRoot == true" [ngClass]="chatAtTop == true ? 'ion-tabs' : ''">
   <ion-tab [root]="tab8" tabIcon="tab-ava-perfil"></ion-tab>
   <ion-tab [root]="tab7" tabIcon="tab-ava-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>
-  <ion-tab [root]="tab1" tabIcon="tab-ava-agenda" (ionSelect)="redirectToListPage()"></ion-tab>
+  <ion-tab [root]="tab1" tabIcon="tab-ava-agenda" (ionSelect)="redirectToListPage()" [rootParams]="param01"></ion-tab>
   <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-ava-foto"></ion-tab>
-  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-ava-news"></ion-tab>
+  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-ava-news" [rootParams]="param02"></ion-tab>
 </ion-tabs>
 
 <ion-tabs #appTabs selectedIndex="2" *ngIf="project == 'tmc' && (version == '02' || version == '01') && renderRoot == true" [ngClass]="chatAtTop == true ? 'ion-tabs' : ''">
   <ion-tab [root]="tab8" tabIcon="tab-tmc-perfil"></ion-tab>
   <ion-tab [root]="tab7" tabIcon="tab-tmc-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>
-  <ion-tab [root]="tab1" tabIcon="tab-tmc-agenda" (ionSelect)="redirectToListPage()"></ion-tab>
+  <ion-tab [root]="tab1" tabIcon="tab-tmc-agenda" (ionSelect)="redirectToListPage()" [rootParams]="param01"></ion-tab>
   <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-tmc-foto"></ion-tab>
-  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-tmc-news"></ion-tab>
+  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-tmc-news" [rootParams]="param02"></ion-tab>
 </ion-tabs>
 
 <ion-tabs #appTabs selectedIndex="2" *ngIf="project == 'hability' && (version == '02' || version == '01') && renderRoot == true" [ngClass]="chatAtTop == true ? 'ion-tabs' : ''">
   <ion-tab [root]="tab8" tabIcon="tab-hability-perfil"></ion-tab>
   <ion-tab [root]="tab7" tabIcon="tab-hability-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>
-  <ion-tab [root]="tab1" tabIcon="tab-hability-agenda" (ionSelect)="redirectToListPage()"></ion-tab>
+  <ion-tab [root]="tab1" tabIcon="tab-hability-agenda" (ionSelect)="redirectToListPage()" [rootParams]="param01"></ion-tab>
   <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-hability-foto"></ion-tab>
-  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-hability-news"></ion-tab>
+  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-hability-news" [rootParams]="param02"></ion-tab>
 </ion-tabs>
 
 <ion-tabs #appTabs color="primary" selectedIndex="2" *ngIf="project == 'full-promo' && (version == '02' || version == '01') && renderRoot == true" [ngClass]="chatAtTop == true ? 'ion-tabs' : ''">
   <ion-tab [root]="tab8" tabIcon="tab-full-promo-perfil"></ion-tab>
   <ion-tab [root]="tab7" tabIcon="tab-full-promo-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>
-  <ion-tab [root]="tab1" tabIcon="tab-full-promo-agenda" (ionSelect)="redirectToListPage()"></ion-tab>
+  <ion-tab [root]="tab1" tabIcon="tab-full-promo-agenda" (ionSelect)="redirectToListPage()" [rootParams]="param01"></ion-tab>
   <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-full-promo-foto"></ion-tab>
-  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-full-promo-news"></ion-tab>
+  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-full-promo-news" [rootParams]="param02"></ion-tab>
 </ion-tabs>
 
 <ion-tabs #appTabs selectedIndex="2" *ngIf="project == 'sehc' && (version == '02' || version == '01') && renderRoot == true" [ngClass]="chatAtTop == true ? 'ion-tabs' : ''">
   <ion-tab [root]="tab8" tabIcon="tab-sehc-perfil"></ion-tab>
   <ion-tab [root]="tab7" tabIcon="tab-sehc-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>
-  <ion-tab [root]="tab1" tabIcon="tab-sehc-agenda" (ionSelect)="redirectToListPage()"></ion-tab>
+  <ion-tab [root]="tab1" tabIcon="tab-sehc-agenda" (ionSelect)="redirectToListPage()" [rootParams]="param01"></ion-tab>
   <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-sehc-foto"></ion-tab>
-  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-sehc-news"></ion-tab>
+  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-sehc-news" [rootParams]="param02"></ion-tab>
 </ion-tabs>
 
 <ion-tabs #appTabs selectedIndex="2" *ngIf="project == 'club-learn' && (version == '02' || version == '01') && renderRoot == true" [ngClass]="chatAtTop == true ? 'ion-tabs' : ''">
   <ion-tab [root]="tab8" tabIcon="tab-club-learn-perfil"></ion-tab>
   <ion-tab [root]="tab7" tabIcon="tab-club-learn-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>
-  <ion-tab [root]="tab1" tabIcon="tab-club-learn-agenda" (ionSelect)="redirectToListPage()"></ion-tab>
+  <ion-tab [root]="tab1" tabIcon="tab-club-learn-agenda" (ionSelect)="redirectToListPage()" [rootParams]="param01"></ion-tab>
   <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-club-learn-foto"></ion-tab>
-  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-club-learn-news"></ion-tab>
+  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-club-learn-news" [rootParams]="param02"></ion-tab>
 </ion-tabs>
 
 <!-- LOCALHOST -->
@@ -116,7 +108,7 @@
 <ion-tabs #appTabs selectedIndex="2" *ngIf="project == 'localhost' && (version == '02' || version == '01') && renderRoot == true" [ngClass]="chatAtTop == true ? 'ion-tabs' : ''">
   <ion-tab [root]="tab8" tabIcon="tab-localhost-perfil"></ion-tab>
   <ion-tab [root]="tab7" tabIcon="tab-localhost-notificacao" tabBadge="{{totalNotification}}" tabBadgeStyle="danger"></ion-tab>
-  <ion-tab [root]="tab1" tabIcon="tab-localhost-agenda" (ionSelect)="redirectToListPage()"></ion-tab>
+  <ion-tab [root]="tab1" tabIcon="tab-localhost-agenda" (ionSelect)="redirectToListPage()" [rootParams]="param01"></ion-tab>
   <ion-tab *ngIf="showTab04 == true" [root]="tab9" tabIcon="tab-localhost-foto"></ion-tab>
-  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-localhost-news"></ion-tab>
+  <ion-tab *ngIf="showTab05 == true" [root]="tab10" tabIcon="tab-localhost-news" [rootParams]="param02"></ion-tab>
 </ion-tabs>

@@ -1,68 +1,45 @@
-page-notification{
-  /*     .segment-md {
-          .segment-button {
-              border-bottom-color: #9c000000 !important;
-          }
-      } */
-      
-      .segment{
-          background-color: #cdcdcd !important;
-          font-weight: bold;
-      }
-      .segment-button{
-         color: #203141e1 !important;
-         text-transform: none !important;
-         font-size: 1.5rem !important;
-      }
-      .segment-activated {
-          color: #203141 !important;
-          border-color: #203141 !important;
-      }
-  
-      .row{
-          align-items: center;
-      }
-  
-      .notification{
-          text-align: left;
-          /* background-color: #f0f8ff00; */
-          //background: none;
-          background-color: white;
-          p{
-              font-size: 1.2rem;
-          }
-      }
-  
-      .read-notification{
-          text-align: left;
-          background: none;
-          color: lightgray;
-          p{
-              font-size: 1.2rem;
-              color: lightgray;
-          }
-      }
-  
-  /*     .ion-content{
-          .scroll-content {
-              margin-top: 60px !important;
-          }
-      } */
-      .ion-content-v02{
-          .scroll-content {
-              margin-top: 60px !important;
-          }
-      }
-  }
-  
-  /* .expanded {
-      transition: .5;
-  
-      .expand-wrapper {
-          background-color: rgba(128, 128, 128, 0.295);
-      }
-      
-      .input-wrapper{
-          background-color: #ececed;
-      }
-  } */
+page-notification{     
+    .segment{
+        background-color: #cdcdcd !important;
+        font-weight: bold;
+    }
+    .segment-button{
+        color: #203141e1 !important;
+        text-transform: none !important;
+        font-size: 1.5rem !important;
+    }
+    .segment-activated {
+        color: #203141 !important;
+        border-color: #203141 !important;
+    }
+
+    .row{
+        align-items: center;
+    }
+
+    .notification{
+        text-align: left;
+        /* background-color: #f0f8ff00; */
+        //background: none;
+        background-color: white;
+        p{
+            font-size: 1.2rem;
+        }
+    }
+
+    .read-notification{
+        text-align: left;
+        background: none;
+        color: lightgray;
+        p{
+            font-size: 1.2rem;
+            color: lightgray;
+        }
+    }
+
+    .ion-content-v02{
+        .scroll-content {
+            margin-top: 80px !important;
+        }
+    }
+}
