@@ -63,6 +63,8 @@ export class ListVideosPage {
   public iconTryAgain: string = '';
   public iconPlay: string = '';
   public iconConcluido: string = '';
+  public type: string = '';
+
 
   constructor(
     public navCtrl: NavController, 
@@ -88,6 +90,7 @@ export class ListVideosPage {
     });
   }
   ngOnInit(){
+    this.type = this.navParams.data.type; 
     this.storage.get('Project').then((value)=>{
       this.project = value;
       /*PROJETOS:
@@ -404,7 +407,6 @@ export class ListVideosPage {
   }
 
   ionViewDidEnter(){
-    const type = this.navParams.data.type;
     this.storage.get('Project').then((value)=>{
       this.project = value;
       /*PROJETOS:
@@ -414,14 +416,13 @@ export class ListVideosPage {
       */
     });
     this.storage.get("AppConfig").then((config) => {
-      const type = this.navParams.data.type;
-      if(type == "DEFAULT"){
+      if(this.type == "DEFAULT"){
         if (config.internoApp3 && config.internoApp3['text']){
           this.titleTesteira = config.internoApp3['text'];
         }else{
           this.titleTesteira = this.idiom == '01' ? 'Agenda' : 'Mi agenda';
         }
-      }else if(type == "ICON5"){
+      }else if(this.type == "ICON5"){
         if (config.internoApp3 && config.internoApp5['text']){
           this.titleTesteira = config.internoApp5['text'];
         }else{
@@ -435,14 +436,15 @@ export class ListVideosPage {
       this.version = value;
     });
 
-    this.storage.get('AvailableProjects'+type)
+    this.storage.get('AvailableProjects'+this.type)
     .then((value)=>{
-      if (value == null){
+
+      if (value == null || this.project == "full-promo"){
         this.storage.get('clienteCompanyId').then((companyId) => {
           this.storage.get('clienteId').then((clienteId) => {
             this.videos = [];
 
-            this.http.getAll('/api/projects-ids', { company_id: companyId, user_id: clienteId, type })
+            this.http.getAll('/api/projects-ids', { company_id: companyId, user_id: clienteId, type: this.type })
             .subscribe(async (ids:any) => {
               ids.map( async(id) => {           
                 let loading = this.loadingCtrl.create({
@@ -450,7 +452,7 @@ export class ListVideosPage {
                 });
                 loading.present();
                 await new Promise((resolve, reject)=>{
-                  this.http.getAll('/api/conteudos', { company_id: companyId, user_id: clienteId, type, project_id: id})
+                  this.http.getAll('/api/conteudos', { company_id: companyId, user_id: clienteId, type: this.type, project_id: id})
                   .subscribe((data:any) => {
 
                     data.forEach((element, index) => {
@@ -497,7 +499,7 @@ export class ListVideosPage {
                   return 0;
                 })
 
-                this.storage.set('AvailableProjects'+type, true)
+                this.storage.set('AvailableProjects'+this.type, true)
                 loading.dismiss();
                 this.checkFinishedProjects();
               });

@@ -17,7 +17,6 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 })
 export class HoleriteComponent {
   public ENV = ENV;
-  public credential: any;
   public idiom: any;
   public project: string;
   public version : string;
@@ -38,7 +37,6 @@ export class HoleriteComponent {
     private dom: DomSanitizer,
     private iab: InAppBrowser
   ) {
-    this.credential = navParams.data;
 
     storage.get('GlobalUrl').then((value) => {
       this.globalUrl = value;
@@ -130,7 +128,7 @@ export class HoleriteComponent {
   }
 
   confirm(){
-    this.viewCtrl.dismiss(this.credential);
+    this.viewCtrl.dismiss();
   }
   
   cancel(){

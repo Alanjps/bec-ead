@@ -20,21 +20,6 @@ import { environment as ENV } from '../../environments/environment' ;
 })
 export class FullPromoHomePage {
 
-  public credential: any = {
-    id:'',
-    documento:'',
-    password:'',
-    confirmPassword:'',
-    nome:'',
-    email:'',
-    nascimento:'',
-    whatsapp:'',
-    empresa:'',
-    thumb:'',
-    profile_id:'',
-    company_id:''
-  };
-
   public ENV = ENV;
   public version : String;
 
@@ -105,37 +90,15 @@ export class FullPromoHomePage {
     switch (page) {
       case 'administrativo':
 
-          let holeriteModal = this.modalCtrl.create('holerite-modal',this.credential);
+          let holeriteModal = this.modalCtrl.create('holerite-modal');
           holeriteModal.onDidDismiss(data => {
-            /* if (data){
-              let loading = this.loadingCtrl.create({
-                content: 'Espere...'
-              });
-              loading.present();
-              this.makeRegister();
-              this.storage.set('first', false);
-              if (this.credential.firstAccess == true)
-                this.navCtrl.push('tab-page');
-              loading.dismiss();
-            } */
           });
           holeriteModal.present();
           
         break;
       case 'treinamento':
-        let projectModal = this.modalCtrl.create('list-videos-page');
+        let projectModal = this.modalCtrl.create('list-videos-page',{type: 'DEFAULT'});
         projectModal.onDidDismiss(data => {
-          /* if (data){
-            let loading = this.loadingCtrl.create({
-              content: 'Espere...'
-            });
-            loading.present();
-            this.makeRegister();
-            this.storage.set('first', false);
-            if (this.credential.firstAccess == true)
-              this.navCtrl.push('tab-page');
-            loading.dismiss();
-          } */
         });
         projectModal.present();
         break;

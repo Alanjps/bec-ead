@@ -203,7 +203,7 @@
         </ion-list>
       </ion-item>
     </ion-grid>
-    <div *ngIf="ENV.PROJECT == 'full-promo'" padding class="grid-style" >
+    <div *ngIf="ENV.PROJECT == 'full-promo' && type == 'DEFAULT'" padding class="grid-style" >
       <button class="button-style button-style-{{ENV.PROJECT}}" *ngIf="idiom =='01'" ion-button (click)="confirm()"><p>Voltar</p></button>
       <button class="button-style button-style-{{ENV.PROJECT}}" *ngIf="idiom =='02'" ion-button (click)="confirm()"><p>Volver</p></button>
     </div>
