@@ -199,6 +199,15 @@ $colors: (
         filter: none;
       }
     }
+    &[class*="tab-know-house-results"]{
+      content: url($url-know-house+"internoApp6.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
 
     //-------------------------------------------------------
     //VCC -------------------------------------------------------
@@ -247,6 +256,15 @@ $colors: (
     }
     &[class*="tab-vcc-news"]{
       content: url($url-vcc+"internoApp5.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-vcc-results"]{
+      content: url($url-vcc+"internoApp6.svg") !important;
       &[ng-reflect-is-active="true"]{
         filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
       }
@@ -309,6 +327,15 @@ $colors: (
         filter: none;
       }
     }
+    &[class*="tab-mrkhouse-results"]{
+      content: url($url-mrkhouse+"internoApp6.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
 
     //-------------------------------------------------------
     //DESCUBRE -------------------------------------------------------
@@ -357,6 +384,15 @@ $colors: (
     }
     &[class*="tab-hkt369-news"]{
       content: url($url-descubre+"internoApp5.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-hkt369-results"]{
+      content: url($url-descubre+"internoApp6.svg") !important;
       &[ng-reflect-is-active="true"]{
         filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
       }
@@ -420,6 +456,15 @@ $colors: (
         filter: none;
       }
     }
+    &[class*="tab-strade-results"]{
+      content: url($url-simples-trade+"internoApp6.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
 
     //-------------------------------------------------------
     //READY TO MARKET -------------------------------------------------------
@@ -468,6 +513,15 @@ $colors: (
     }
     &[class*="tab-r2m-news"]{
       content: url($url-r2m+"internoApp5.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-r2m-results"]{
+      content: url($url-r2m+"internoApp6.svg") !important;
       &[ng-reflect-is-active="true"]{
         filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
       }
@@ -530,6 +584,15 @@ $colors: (
         filter: none;
       }
     }
+    &[class*="tab-ava-results"]{
+      content: url($url-ava+"internoApp6.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
     
     //-------------------------------------------------------
     //TMC -------------------------------------------------------
@@ -578,6 +641,15 @@ $colors: (
     }
     &[class*="tab-tmc-news"]{
       content: url($url-tmc+"internoApp5.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-tmc-results"]{
+      content: url($url-tmc+"internoApp6.svg") !important;
       &[ng-reflect-is-active="true"]{
         filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
       }
@@ -639,7 +711,16 @@ $colors: (
       &[ng-reflect-is-active="false"]{
         filter: none;
       }
-    }   
+    }
+    &[class*="tab-hability-results"]{
+      content: url($url-hability+"internoApp6.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
     
     
     //-------------------------------------------------------
@@ -695,7 +776,16 @@ $colors: (
       &[ng-reflect-is-active="false"]{
         filter: none;
       }
-    }    
+    }
+    &[class*="tab-full-promo-results"]{
+      content: url($url-full-promo+"internoApp6.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
     
     //-------------------------------------------------------
     //SEHC -------------------------------------------------------
@@ -750,7 +840,16 @@ $colors: (
       &[ng-reflect-is-active="false"]{
         filter: none;
       }
-    }    
+    }
+    &[class*="tab-sehc-results"]{
+      content: url($url-sehc+"internoApp6.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }   
     
     //-------------------------------------------------------
     //CLUB LEARN -------------------------------------------------------
@@ -806,6 +905,15 @@ $colors: (
         filter: none;
       }
     }
+    &[class*="tab-club-learn-results"]{
+      content: url($url-club-learn+"internoApp6.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
     
     //-------------------------------------------------------
     //LOCALHOST -------------------------------------------------------
@@ -854,6 +962,15 @@ $colors: (
     }
     &[class*="tab-localhost-news"]{
       content: url($url-localhost+"internoApp5.svg") !important;
+      &[ng-reflect-is-active="true"]{
+        filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
+      }
+      &[ng-reflect-is-active="false"]{
+        filter: none;
+      }
+    }
+    &[class*="tab-localhost-results"]{
+      content: url($url-localhost+"internoApp6.svg") !important;
       &[ng-reflect-is-active="true"]{
         filter: invert(46%) sepia(60%) saturate(2731%) hue-rotate(202deg) brightness(102%) contrast(101%);
       }

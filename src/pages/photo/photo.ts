@@ -405,7 +405,7 @@ export class PhotoPage {
                 if (result){
                   let toast = this.toastCtrl.create({
                     message: this.idiom == '01' ? "Foto removida com sucesso." : 
-                    this.idiom == '02' ? "Foto removida com sucesso." : '',
+                    this.idiom == '02' ? "Foto eliminada con éxito." : '',
                     duration: 3000,
                     position: 'top'
                   });

@@ -1,0 +1,33 @@
+page-results {
+
+    .segment-md .segment-button.activated, .segment-md .segment-button.segment-activated {
+        border-color: #488aff;
+        opacity: 1;
+        background-color: #488aff;
+        color: white;
+        font-weight: bolder;
+    }
+
+    .segment-md .segment-button {
+        border: none !important;
+        font-weight: bolder !important;
+    }
+
+    .segment-button {
+        border-radius: 2px;
+        overflow: hidden;
+        height: 3.6rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: #488aff;
+        transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1), color 300ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1), background-color 300ms cubic-bezier(0.4, 0, 0.2, 1), color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1), background-color 300ms cubic-bezier(0.4, 0, 0.2, 1), color 300ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        margin: 0.4rem 0.2rem;
+        padding: 0 1.1em;
+    }
+
+}
+

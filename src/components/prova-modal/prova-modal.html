@@ -1,0 +1,73 @@
+
+<ion-header [ngClass]="version == '01' ? 'principalHeader' : version == '02' ? 'principalHeaderV02' : 'principalHeader'">
+  <div>
+    <img [ngClass]="version == '01' ? 'principal-icon' : version == '02' ? 'principal-icon-v02' : 'principal-icon'"
+     src="{{ globalUrl + clienteCompanyLogo }}" />
+
+    <img *ngIf="version == '01'" class="testeira-v01" 
+    src="{{ globalUrl + '/storage/uploads/configs/testeira1.png' }}" >
+
+    <img *ngIf="version == '02'" class="testeira-v02" 
+    src="{{ globalUrl + '/storage/uploads/configs/testeira2.png' }}" >
+
+  </div>
+</ion-header>
+<ion-content style="background-color: #fff;" class="content {{ENV.PROJECT}}-custom-bg" [ngClass]="version == '01' ? 'margin-content-l1' : version == '02' ? 'margin-content-l2' : 'margin-content-l1'" padding>
+  
+  <ion-list>
+    <ion-grid class="grid-style">
+      <ion-row>
+        <h5><b>{{test.isScoreable == 1 ? 'Prova' : 'Questionário'}} - {{test.created_at}}</b>: {{test.nome}}</h5>
+      </ion-row>
+    </ion-grid>
+    
+    <div class=singleQuestao *ngFor="let questao of testOverview; let i = index">
+      <ion-label >
+        {{i+1}} - {{questao['questao']}}
+      </ion-label>
+      <small *ngIf="questao.overview[0].pontos > 0 && (questao['tipo'] == 'TEXT' || questao['tipo'] == 'NUMBER' || questao['tipo'] == 'UPLOAD')" style="margin-left: 5px;"><b>({{questao.overview[0].pontos}} pts)</b></small>
+      <ion-input  *ngIf="questao['tipo'] == 'TEXT'" type="text"  readonly value={{questao.user_answer[0]}} ></ion-input>
+      <ion-input  *ngIf="questao['tipo'] == 'NUMBER'" type="number" readonly value={{questao.user_answer[0]}} ></ion-input>
+  
+      <ion-list no-lines *ngIf="questao['tipo'] == 'CHECK' || questao['tipo'] == 'RADIO'">
+        <ion-item *ngFor="let opcao of questao['overview'];  let o = index">
+          <ion-col col-1 style="justify-content: center; display: inline-flex; align-items: center;">
+            <ion-icon *ngIf="opcao.isCorrect == 1 && opcao.setAsUserAnswer == 1 " name="md-checkmark"></ion-icon>
+            <ion-icon *ngIf="opcao.isCorrect == 0 && opcao.setAsUserAnswer == 1 " name="md-close"></ion-icon>
+          </ion-col>
+          <ion-col col-10 style="justify-content: left; display: inline-flex; align-items: center;">
+            <span [ngClass]="opcao.isCorrect == 1 && opcao.setAsUserAnswer == 0 ? 'correctAnswer' : 'defaultAnswer'" >{{opcao.texto}} </span>
+            <small *ngIf="opcao.pontos > 0 && test.isScoreable == 1" style="margin-left: 5px;"><b>{{opcao.pontos}} pts</b></small>
+          </ion-col>
+        </ion-item>
+      </ion-list>
+  
+      <ion-list no-lines padding *ngIf="questao['tipo'] == 'UPLOAD'">
+        <div *ngIf="questao.user_answer" class="camera">
+          <img src={{questao.user_answer}} alt="Upload">
+        </div>
+      </ion-list>
+
+    </div>
+
+    <div *ngIf="test.isScoreable == 1">
+      <div padding *ngIf="idiom =='01'" >
+        <h4>Resumo</h4>
+        <div>Pontuação mínima: <b>{{test.pontuacao_minima}} pts</b></div>
+        <div>Pontuacao atingida: <b>{{test.pontuacao_final}} pts</b></div>
+      </div>
+  
+      <div padding *ngIf="idiom =='02'" >
+        <h4>Resumen</h4>
+        <div>Puntuación mínima: <b>{{test.pontuacao_minima}} pts</b></div>
+        <div>Puntuación lograda: <b>{{test.pontuacao_final}} pts</b></div>
+      </div>
+    </div>
+
+  </ion-list>
+
+  <div padding class="grid-style" style="padding-bottom: 110px !important;">
+    <button class="button-style button-style-{{ENV.PROJECT}}" *ngIf="idiom =='01'" ion-button (click)="confirm()"><p>Voltar</p></button>
+    <button class="button-style button-style-{{ENV.PROJECT}}" *ngIf="idiom =='02'" ion-button (click)="confirm()"><p>Volver</p></button>
+  </div>
+</ion-content>

@@ -1,0 +1,72 @@
+<ion-header [ngClass]="version == '01' ? 'principalHeader' : version == '02' ? 'principalHeaderV02' : 'principalHeader'">
+  <div>
+    <img [ngClass]="version == '01' ? 'principal-icon' : version == '02' ? 'principal-icon-v02' : 'principal-icon'"
+     src="{{ globalUrl + clienteCompanyLogo }}" />
+
+    <img *ngIf="version == '01'" class="testeira-v01" 
+    src="{{ globalUrl + '/storage/uploads/configs/testeira1.png' }}" >
+
+    <img *ngIf="version == '02'" class="testeira-v02" 
+    src="{{ globalUrl + '/storage/uploads/configs/testeira2.png' }}" >
+
+    <p class="header-title header-title-{{ENV.HEADER_TEXT}}">{{titleTesteira}}  {{complementTitle? '| ' + complementTitle : ''}}</p>
+  </div>
+  <menu-sup></menu-sup>
+</ion-header>
+
+<ion-content class="content {{ENV.PROJECT}}-custom-bg" padding style="margin-top: 20px; position: relative;" [ngClass]="version == '01' ? 'margin-content-l1' : version == '02' ? 'margin-content-l2' : 'margin-content-l1'">
+
+    <ion-card padding>
+      <ion-row style="vertical-align: middle; align-items: center;">
+        <ion-col>
+          <ion-row style="height: 7rem; align-items: center;"><h1>Média de Pontos: <b> {{mediaPontos}}</b></h1></ion-row>
+          <ion-row style="height: 2rem; align-items: center;"><h1>Posição no Ranking: <b> {{posicaoRanking}}</b></h1></ion-row>
+          <ion-row><small></small></ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+
+    <ion-segment padding [(ngModel)]="testType">
+      <ion-segment-button value="scoreable">
+        Testes
+      </ion-segment-button>
+      <ion-segment-button value="non-scoreable">
+        Questionários
+      </ion-segment-button>
+    </ion-segment>
+
+    <div padding [ngSwitch]="testType" style="padding-bottom: 200px;">
+      <ion-list no-lines id="listScoreable" style="height:300px; overflow: auto;" *ngSwitchCase="'scoreable'">
+        <ion-item *ngFor="let test of tests">
+          <ion-card>
+            <ion-row style="vertical-align: middle; align-items: center;">
+              <ion-col col-9>
+                <ion-row><b>{{test.nome}} </b></ion-row>
+                <ion-row><small>{{test.created_at}}</small></ion-row>
+              </ion-col>
+              <ion-col>
+                <button  style="width: auto;" ion-button (click)="openModal(test)"><ion-icon name="eye"></ion-icon></button>
+              </ion-col>
+            </ion-row>
+          </ion-card>
+        </ion-item>
+      </ion-list>
+
+
+      <ion-list no-lines id="listNonScoreable" style="height:300px; overflow: auto;" *ngSwitchCase="'non-scoreable'" >
+        <ion-item *ngFor="let questionary of questionaries">
+          <ion-card>
+            <ion-row style="vertical-align: middle; align-items: center;">
+              <ion-col col-9>
+                <ion-row><b>{{questionary.nome}} </b></ion-row>
+                <ion-row><small>{{questionary.created_at}}</small></ion-row>
+              </ion-col>
+              <ion-col>
+                <button  style="width: auto;" ion-button (click)="openModal(questionary)"><ion-icon name="eye"></ion-icon></button>
+              </ion-col>
+            </ion-row>
+            </ion-card>
+        </ion-item>
+      </ion-list>
+    </div>
+</ion-content>

@@ -21,9 +21,8 @@ export class TabsPage {
   tab8 = 'edit-user-page';
   tab9 = 'photo-page';
   tab10 = 'list-videos-page';
+  tab11 = 'results-page'
 
-  public showTab5:boolean = true;
-  public showTabSair:boolean = true;
   public renderRoot: boolean = false;
   public chatAtTop: boolean = true;
   public notificationEnabled: boolean = false;
@@ -32,6 +31,7 @@ export class TabsPage {
   public project: string;
   public showTab04: boolean = false;
   public showTab05: boolean = false;
+  public showTab06: boolean = false;
 
   param01 = {
     type: "DEFAULT"
@@ -101,24 +101,27 @@ export class TabsPage {
       this.storage.get('clienteCompanyId').then((companyId) => {
         this.storage.get('clienteId').then((clienteId) => {
           this.http.getAll('/api/conteudos', { company_id: companyId, user_id: clienteId, type: "ICON4" })
-            .subscribe((data:any) => {
-              if (data.length > 0) this.showTab04 = true;
-              this.http.getAll('/api/conteudos', { company_id: companyId, user_id: clienteId, type: "ICON5" })
-                .subscribe((data:any) => {
-                  if (data.length > 0) this.showTab05 = true;
-                  
-                  this.getTotalNotifications(true);
+          .subscribe((data1:any) => {
+            
+            if (data1.length > 0) this.showTab04 = true;
+            this.http.getAll('/api/conteudos', { company_id: companyId, user_id: clienteId, type: "ICON5" })
+            .subscribe((data2:any) => {
+              if (data2.length > 0) this.showTab05 = true;
+              this.http.getAll('/api/testes/get-test-informations',{ company_id: companyId, user_id: clienteId },'get')
+              .subscribe((data3)=>{
+                if (data3.length > 0) this.showTab06 = true;
+              })
+            })
+          })
+          this.getTotalNotifications(true);
 
-                  setTimeout(()=>{
-                    setInterval(()=>{
-                      this.getTotalNotifications();
-                    },5000);
-                  },5000);
+          setTimeout(()=>{
+            setInterval(()=>{
+              this.getTotalNotifications();
+            },5000);
+          },5000);
 
-                  this.renderRoot = true;
-
-              });
-            });
+          this.renderRoot = true;
         });
       });
     });
