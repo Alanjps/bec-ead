@@ -156,8 +156,8 @@ PUSHER_APP_ID: "1193372",
 PUSHER_APP_KEY: "5a5d9d9d6e878a5a139e",
 PUSHER_APP_SECRET: "cfc406609b91179a3e40",
 PUSHER_APP_CLUSTER: "us2",
-
  */
+
 /* 
 //HKT-369 -----------------------------------
 PROJECT: 'hkt369',

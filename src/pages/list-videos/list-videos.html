@@ -137,13 +137,13 @@
                   <p *ngIf="exibirNota && idiom == '01'">Sua nota foi: <span>{{nota}}</span> de um total de {{notaMaxima}}.</p>
                   <p *ngIf="exibirNota && idiom == '02'">Calificación fue: <span>{{nota}}</span> de un total de {{notaMaxima}}.</p>
               
-                  <button *ngIf="fazerTeste" (click)=openQuiz(item) id=buttonQuiz ion-button full color="light" icon-start>
+                  <button *ngIf="fazerTeste && showQuiz" (click)=openQuiz(item) id=buttonQuiz ion-button full color="light" icon-start>
                     <ion-icon name="md-bulb"></ion-icon>
-                    <p *ngIf="idiom == '01'">RESPONDER QUESTIONÁRIO</p>
-                    <p *ngIf="idiom == '02'">RESPONDER ENCUESTA</p>
+                    <p *ngIf="idiom == '01'">RESPONDER QUESTIONÁRIO {{ tentativasTeste > 0 ? 'NOVAMENTE' : ''}}</p>
+                    <p *ngIf="idiom == '02'">RESPONDER ENCUESTA {{ tentativasTeste > 0 ? 'OTRA VEZ' : ''}}</p>
                   </button>
               
-                  <button *ngIf="!fazerTeste" ion-button full color="light" icon-start>
+                  <button *ngIf="!fazerTeste && showQuiz" ion-button full color="light" icon-start>
                     <ion-icon name="md-bulb"></ion-icon>
                     <p *ngIf="idiom == '01'">QUESTIONÁRIO RESPONDIDO</p>
                     <p *ngIf="idiom == '02'">ENCUESTA RESPONDIDO</p>

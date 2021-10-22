@@ -91,34 +91,28 @@ export class ResultsPage {
 
         loading.present();
 
-
-
-          
-          this.http.getAll('/api/testes/get-test-informations',{ company_id: companyId, user_id: clienteId },'get')
-          .subscribe((data)=>{
-            data = data.map((d) =>{
-              return {
-                ...d,
-                created_at: d.created_at ? moment(d.created_at).locale('pt-br').format('DD/MMM') : null
-              }
-            })
-  
-            this.tests = data.filter(d => d.isScoreable == 1)
-            this.questionaries = data.filter(d => d.isScoreable == 0)
-
-            this.http.getAll('/api/testes/get-score-ranking',{ company_id: companyId},'get')
-            .subscribe((rank)=>{
-              console.log("RANK -> ",rank)
-    
-              if (rank && this.tests && this.tests.length > 0){
-                const myScore = rank.find(r => r.user_id == clienteId) ? rank.find(r => r.user_id == clienteId) : '-'
-                this.mediaPontos = myScore ?  parseFloat(myScore.media_pontuacao).toFixed(1) : ''
-                this.posicaoRanking = myScore ? `${(rank.map(d => d.user_id).indexOf(myScore.user_id)+1)}°` : '-'
-              }
-              loading.dismiss();
-            })
+        this.http.getAll('/api/testes/get-test-informations',{ company_id: companyId, user_id: clienteId },'get')
+        .subscribe((data)=>{
+          data = data.map((d) =>{
+            return {
+              ...d,
+              created_at: d.created_at ? moment(d.created_at).locale('pt-br').format('DD/MMM') : null
+            }
           })
-        
+
+          this.tests = data.filter(d => d.isScoreable == 1)
+          this.questionaries = data.filter(d => d.isScoreable == 0)
+
+          this.http.getAll('/api/testes/get-score-ranking',{ company_id: companyId},'get')
+          .subscribe((rank)=>{   
+            if (rank && this.tests && this.tests.length > 0){
+              const myScore = rank.find(r => r.user_id == clienteId) ? rank.find(r => r.user_id == clienteId) : '-'
+              this.mediaPontos = myScore ?  parseFloat(myScore.media_pontuacao).toFixed(1) : ''
+              this.posicaoRanking = myScore ? `${(rank.map(d => d.user_id).indexOf(myScore.user_id)+1)}°` : '-'
+            }
+            loading.dismiss();
+          })
+        })
       })
     })
     

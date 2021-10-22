@@ -49,6 +49,7 @@ export class ListVideosPage {
   public exibirNota: boolean = false;
   public nota: any;
   public fazerTeste: boolean = true;
+  public tentativasTeste: number = 0;
   public hasCertificado: boolean = false;
   public urlCertificado: string;
   public exibirBoxTeste: boolean = false;
@@ -64,6 +65,8 @@ export class ListVideosPage {
   public iconPlay: string = '';
   public iconConcluido: string = '';
   public type: string = '';
+  public showQuiz: boolean = false;
+  public aguardandoCorrecao: boolean = false;
 
 
   constructor(
@@ -139,7 +142,9 @@ export class ListVideosPage {
   openQuiz(lesson) {
     let profileModal = this.modalCtrl.create('quiz', { lesson_id: lesson.id });
     profileModal.onDidDismiss(data => {
-      this.fazerQuiz(lesson, true);
+      if (data) {
+        this.fazerQuiz(lesson, true);
+      }
     });
     profileModal.present();
   }
@@ -150,15 +155,20 @@ export class ListVideosPage {
 
   cleanTeste(){
     this.fazerTeste = true;
+    this.showQuiz = true;
     this.exibirNota = false;
     this.nota = null;
     this.hasCertificado = false;
     this.urlCertificado = '';
+    this.tentativasTeste = 0;
+    this.aguardandoCorrecao = false;
   }
 
   fazerQuiz(lesson, showAlert?) {
+    this.showQuiz = false;
     let lesson_id = lesson.id;
     let user_id = 0;
+
     this.storage.get('clienteId').then((valor) => {
       user_id = valor;
       let vars: any = {
@@ -167,35 +177,46 @@ export class ListVideosPage {
       };
 
       this.authService.request('/api/testes/resultado', vars).then((result) => {
+        console.log("RESULTADO -> ",result)
+
         if (result) {
-          this.nota = result.pontuacao_final;
-          this.notaMaxima = result.test.maxPontos;
-          if (result.is_aprovado == '1') {
-            this.checkFinishedProjects();
+          this.tentativasTeste = result.totalTentativas
 
-            this.alertTitle = "Parabéns!";
-            this.alertSubtitle = "<p>Você passou no teste.</p><br/><img class=\"emoji\" src=\""+this.iconSuccess+"\" />";
-            //ATINGIU E NÃO PRECISA MAIS FAZER O TESTE
-            //se for teste do tipo questionario, pode refazer o teste quantas vezes quiser.
-            this.fazerTeste = result.test.isScoreable === 0 ? true : false;
-
-
-            //SE TEM CERRTIFICADO
-            if (result.certificado && result.test.showCertificado == 1) {
-              this.hasCertificado = true;
-              this.urlCertificado = result.certificado['path'];
-              this.showCertificado(lesson);
-            }
+          //aguardando correcao?
+          if (result.awaiting_correction == 1){
+            this.aguardandoCorrecao = true
           }else{
-            if ( result.test.max_tentativas == 0 || result.totalTentativas < result.test.max_tentativas){
-              this.alertTitle = "Você não passou no teste.";
-              this.alertSubtitle = "<p>Não desista! Tente novamente.</p><br/><img class=\"emoji\" src=\""+this.iconTryAgain+"\" />";
-            }else{
-              this.alertTitle = "Você não passou no teste.";
-              this.alertSubtitle = "<p>Entre em contato com um curador, ele estará à disposição para ajudar!</p><br/><img class=\"emoji\" src=\""+this.iconFailure+"\" />";
+
+            this.aguardandoCorrecao = false
+            this.nota = result.pontuacao_final;
+            this.notaMaxima = result.test.maxPontos;
+
+            if (result.is_aprovado == '1') {
+              this.checkFinishedProjects();
+
+              this.alertTitle = "Parabéns!";
+              this.alertSubtitle = "<p>Você passou no teste.</p><br/><img class=\"emoji\" src=\""+this.iconSuccess+"\" />";
+              //ATINGIU E NÃO PRECISA MAIS FAZER O TESTE
+              //se for teste do tipo questionario, pode refazer o teste quantas vezes quiser.
               this.fazerTeste = result.test.isScoreable === 0 ? true : false;
+
+              //SE TEM CERRTIFICADO
+              if (result.certificado && result.test.showCertificado == 1) {
+                this.hasCertificado = true;
+                this.urlCertificado = result.certificado['path'];
+                this.showCertificado(lesson);
+              }
+            }else{
+              if ( result.test.max_tentativas == 0 || result.totalTentativas < result.test.max_tentativas){
+                this.alertTitle = "Você não passou no teste.";
+                this.alertSubtitle = "<p>Não desista! Tente novamente.</p><br/><img class=\"emoji\" src=\""+this.iconTryAgain+"\" />";
+              }else{
+                this.alertTitle = "Você não passou no teste.";
+                this.alertSubtitle = "<p>Entre em contato com um curador, ele estará à disposição para ajudar!</p><br/><img class=\"emoji\" src=\""+this.iconFailure+"\" />";
+                this.fazerTeste = result.test.isScoreable === 0 ? true : false;
+              }
             }
-          }
+          }          
         } else {
           /**NÃO FEZ O TESTE */
         }
@@ -206,11 +227,13 @@ export class ListVideosPage {
 
       });
     });
+    this.showQuiz = true;
   }
 
   checaResultado(lesson, showAlert?) {
     let lesson_id = lesson.id;
     let user_id = 0;
+    this.showQuiz = false;
     this.storage.get('clienteId').then((valor) => {
       user_id = valor;
       let vars: any = {
@@ -218,13 +241,32 @@ export class ListVideosPage {
         lesson_id: lesson.id
       };
       this.authService.request('/api/testes/checa-resultado', vars).then((result) => {
+        console.log("RESULT -> ",result)
         if (result) {
           this.nota = result.pontuacao_final;
           this.notaMaxima = result.test.maxPontos;
+          this.aguardandoCorrecao = result.awaiting_correction
+          this.tentativasTeste = result.totalTentativas
+
+          const test = result.test
+          if (test.block_test == 1){
+            if(test.isScoreable == 0){
+              if(test.max_tentativas > 0 && result.totalTentativas >= test.max_tentativas){
+                this.fazerTeste = false
+              }
+            }else if(test.isScoreable == 1){
+              if(result.pontuacao_final >= result.pontuacao_minima || test.max_tentativas > 0 && result.totalTentativas >= test.max_tentativas){
+                this.fazerTeste = false
+              }
+            }
+          }else{
+            this.fazerTeste = true
+          }
+
           if (result.is_aprovado == '1') {
             this.checkFinishedProjects();
             //se for teste do tipo questionario, pode refazer o teste quantas vezes quiser.
-            this.fazerTeste = result.test.isScoreable === 0 ? true : false;
+            //this.fazerTeste = result.test.isScoreable === 0 ? true : false;
 
             //SE TEM CERRTIFICADO
             if (result.certificado && result.test.showCertificado == 1) {
@@ -232,14 +274,19 @@ export class ListVideosPage {
               this.urlCertificado = result.certificado['path'];
               this.showCertificado(lesson);
             }
-          }else{
+          }/* else{
             if ( result.test.max_tentativas != 0 || result.totalTentativas >= result.test.max_tentativas){
                this.fazerTeste = result.test.isScoreable === 0 ? true : false;
             }
-          }
+          } */
+        }
+
+        if ( lesson.isScoreable == 1 ) {
+          this.exibirNota = true;
         }
       });
     });
+    this.showQuiz = true;
   }
 
   showAlert() {
