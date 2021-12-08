@@ -17,6 +17,10 @@
     color:#000 !important;
 }
 
+.text-default-alignment-center{
+    text-align: center;
+}
+
 .text-default-white{
     color:#FFF !important;
 }
@@ -45,6 +49,9 @@
     }
 }
 
+.border-bottom-black{
+    border-bottom: solid black;
+}
 
 
 //BACKGROUND --------------------------------------------------------------------
@@ -311,6 +318,10 @@
         color: #fff;
         font-family: "Radikal";
         border-radius: 14px;
+    }
+    &-full-promo{
+        background-color: #cccccc !important;
+        color: #000;
     }
 }
 

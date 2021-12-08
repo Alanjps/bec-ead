@@ -10,7 +10,7 @@ export var environment = {
     //style-orange
 
 
-
+/* 
  //KNOW-HOUSE -----------------------------------
   PROJECT: 'know-house',
   TEXT_COLOR_V1: 'text-default-black',  
@@ -20,7 +20,7 @@ export var environment = {
   PUSHER_APP_KEY: "25af961ea9f2ef86b9aa",
   PUSHER_APP_SECRET: "c6060d1a53114a8365da",
   PUSHER_APP_CLUSTER: "us2", 
-
+ */
   
 /* 
 //EDICOM -----------------------------------
@@ -106,7 +106,7 @@ export var environment = {
   PUSHER_APP_SECRET: "c779cd95649268404b03",
   PUSHER_APP_CLUSTER: "us2",
 
- */
+*/
 
 /*  
 //HABILITY -----------------------------------
@@ -121,17 +121,19 @@ PUSHER_APP_CLUSTER: "us2",
   */
 
 
-/* 
+
 //FULL PROMO (CONECTIVIDADE RH) -----------------------------------
 PROJECT: 'full-promo',
 TEXT_COLOR_V1: 'text-default-black',  
 HEADER_TEXT: 'style-white',
+BORDER_BOTTOM: 'border-bottom-black',
+LOGIN_TEXT_ALIGN: 'text-default-alignment-center',
 
 PUSHER_APP_ID: "1185839",
 PUSHER_APP_KEY: "fdabf8306298d76cf103",
 PUSHER_APP_SECRET: "8a03d797c5b7d22a129b",
 PUSHER_APP_CLUSTER: "us2",
- */
+
 
 /* 
 //SEHC (HOMEO EDUCA) -----------------------------------
@@ -156,8 +158,8 @@ PUSHER_APP_ID: "1193372",
 PUSHER_APP_KEY: "5a5d9d9d6e878a5a139e",
 PUSHER_APP_SECRET: "cfc406609b91179a3e40",
 PUSHER_APP_CLUSTER: "us2",
-
  */
+
 /* 
 //HKT-369 -----------------------------------
 PROJECT: 'hkt369',

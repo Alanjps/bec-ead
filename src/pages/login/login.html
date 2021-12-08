@@ -6,8 +6,10 @@
   <ion-list>
 
       <ion-item *ngIf="idiom == '01'" class="fieldElement">
-        <ion-label class="{{ENV.TEXT_COLOR_V1}}" floating>CPF/CNPJ</ion-label>
-        <ion-input class="{{ENV.TEXT_COLOR_V1}}" type="text" autocomplete="off" [brmasker]="{person: true}" [(ngModel)]="credential.documento"></ion-input>
+        <ion-label *ngIf="project != 'full-promo'" class="{{ENV.TEXT_COLOR_V1}}" floating>CPF/CNPJ</ion-label>
+        <ion-label *ngIf="project == 'full-promo'" class="{{ENV.TEXT_COLOR_V1}} {{ENV.LOGIN_TEXT_ALIGN}}" floating>CPF</ion-label>
+
+        <ion-input class="{{ENV.TEXT_COLOR_V1}} {{ENV.BORDER_BOTTOM}}" type="text" autocomplete="off" [brmasker]="{person: true}" [(ngModel)]="credential.documento"></ion-input>
       </ion-item>
 
       <ion-item *ngIf="idiom == '02'"  class="fieldElement">
@@ -16,9 +18,9 @@
       </ion-item>
 
       <ion-item *ngIf="hide"  class="fieldElement" style="margin-top: 12px;">
-        <ion-label *ngIf="idiom == '01'" class="{{ENV.TEXT_COLOR_V1}}" floating>SENHA</ion-label>
+        <ion-label *ngIf="idiom == '01'" class="{{ENV.TEXT_COLOR_V1}} {{ENV.LOGIN_TEXT_ALIGN}}" floating>SENHA</ion-label>
         <ion-label *ngIf="idiom == '02'" class="{{ENV.TEXT_COLOR_V1}}" floating>CONTRASEÑA</ion-label>
-        <ion-input class="{{ENV.TEXT_COLOR_V1}}" type="password" [(ngModel)]="credential.password"></ion-input>
+        <ion-input class="{{ENV.TEXT_COLOR_V1}} {{ENV.BORDER_BOTTOM}}" type="password" [(ngModel)]="credential.password"></ion-input>
       </ion-item>
 
     </ion-list>
@@ -27,12 +29,12 @@
       <div style="margin-top: 20px; margin-bottom: 20px;" *ngIf="idiom == '02'">He olvidado mi contraseña</div>
     </a>
 
-    <button class="button-style button-style-{{ENV.PROJECT}} disable-hover button button-md button-default button-default-md button-full button-full-md" ion-button full icon-start (click)="login()">
+    <button *ngIf="(credential.documento != '' && project == 'full-promo') || project != 'full-promo' " class="button-style button-style-{{ENV.PROJECT}} disable-hover button button-md button-default button-default-md button-full button-full-md" ion-button full icon-start (click)="login()">
       <p *ngIf="idiom == '01'">Entrar</p>
       <p *ngIf="idiom == '02'">Iniciar sesión</p>
     </button>
 
-    <button class="button-style button-style-{{ENV.PROJECT}} disable-hover button button-md button-default button-default-md button-full button-full-md" *ngIf="project != 'edicom'" ion-button full icon-start (click)="openPage('downloads')">
+    <button *ngIf="(credential.documento != '' && project == 'full-promo') || project != 'edicom' && project != 'full-promo'" class="button-style button-style-{{ENV.PROJECT}} disable-hover button button-md button-default button-default-md button-full button-full-md" ion-button full icon-start (click)="openPage('downloads')">
       <p *ngIf="idiom == '01'">Meus Downloads</p>
       <p *ngIf="idiom == '02'">Mis Archivos</p>
     </button>
