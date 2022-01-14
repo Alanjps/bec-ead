@@ -39,12 +39,12 @@
             </ion-row>
           </ion-row>
 
-          <ion-row *ngIf="version == '02'">
+          <ion-row *ngIf="version == '02'" class="content-max-width">
             <ion-col col-4>          
-              <ion-thumbnail>
-                <img src="{{ projeto.thumb }}">
+              <ion-thumbnail class="thumb-box">
+                <img src="{{ projeto.thumb }}" class="thumb-max-width">
               </ion-thumbnail></ion-col>
-            <ion-col col-8>
+            <ion-col col-8 class="text-vertical-align">
               <h2 [ngClass]="project == 'know-house' ?  'font-style know-house-title' : ''">{{ projeto.tituloApp? projeto.tituloApp : projeto.titulo }}</h2>
               <p>{{ projeto.descricao }}</p>
             </ion-col>
@@ -69,13 +69,13 @@
             </ion-row>
           </ion-row>
 
-          <ion-row *ngIf="version == '02'">
+          <ion-row *ngIf="version == '02'" class="content-max-width">
             <ion-col col-4>          
-              <ion-thumbnail>
+              <ion-thumbnail class="thumb-box">
                 <img *ngIf="projeto.projectConcluded && projeto.projectConcluded == true" style="position: absolute; right: 0; top: 0; left: auto; bottom: auto; height: 60px !important;" src={{iconConcluido}}>
-                <img src="{{ projeto.thumb }}">
+                <img src="{{ projeto.thumb }}" class="thumb-max-width">
               </ion-thumbnail></ion-col>
-            <ion-col col-8>
+            <ion-col col-8 class="text-vertical-align">
               <h2 [ngClass]="project == 'know-house' ?  'font-style know-house-title' : ''">{{ projeto.tituloApp? projeto.tituloApp : projeto.titulo }}</h2>
               <p>{{ projeto.descricao }}</p>
             </ion-col>
@@ -83,12 +83,12 @@
         </div>
 
 
-        <ion-list no-lines [ngClass]="projeto.showAulas ? 'listAulas show' : 'listAulas'">
+        <ion-list no-lines [ngClass]="projeto.showAulas ? 'listAulas show content-max-width' : 'listAulas content-max-width'">
           <ion-item *ngFor="let item of projeto.lessons " [ngClass]="item.expanded == true ? 'expanded' : ''" >
             <button detail-none (click)="expandItem(item)" ion-item class="bg-transparent" 
             *ngIf="item.forCertificate == true &&  item.gotCertified == true || item.forCertificate == false">
               <ion-buttons end>
-                <ion-item>
+                <ion-item style="justify-content: center;">
                   <div col-9 style="display: inline-block; vertical-align: middle;">
                     <h2 [ngClass]="project == 'know-house' ?  'font-style know-house' : ''">{{ item.titulo }}</h2>
                   </div>

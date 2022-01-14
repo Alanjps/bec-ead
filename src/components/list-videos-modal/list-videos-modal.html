@@ -4,6 +4,9 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
   ">
     <div style="display: flex; justify-content: space-between; height: auto;">
       <div>
@@ -34,8 +37,10 @@
       <video #videoPlayer class="video-player" autoplay="true" controls controlsList="nodownload" style="max-width: 100%; max-height: 100%;"></video>
     </div>
     
-    <div *ngIf="exibirEmbed && urlEmbed">
-      <iframe  [src]="urlEmbed" style="width:100%;" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div *ngIf="exibirEmbed && urlEmbed" style="
+      margin-left: auto;
+      margin-right: auto;">
+      <iframe  [src]="urlEmbed" style="max-width: 100%; max-height: 100%;" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     
   </div>

@@ -11,39 +11,40 @@
   <p class="header-title header-title-{{ENV.HEADER_TEXT}}">{{titleTesteira}}  {{complementTitle? '| ' + complementTitle : ''}}</p>
   <menu-sup></menu-sup>
 </ion-header>
-  <ion-content class="content {{ENV.PROJECT}}-custom-bg" [ngClass]="version == '01' ? 'margin-content-l1' : version == '02' ? 'margin-content-l2' : 'margin-content-l1'">
-      <ion-list padding style="margin-bottom: 120px !important;">
-        <ion-item *ngFor="let item of items">
-          <ion-grid *ngIf="item.expanded == false" style="background-color: white;">
-            <ion-row>
-              <ion-col col-1>
-                <ion-icon *ngIf="item.lido == 0" name="notifications-outline"></ion-icon>
-                <ion-icon [ngClass]="item.lido == 1 ? 'read-notification' : 'notification'" *ngIf="item.lido == 1" name="md-checkmark"></ion-icon>
-              </ion-col>
-              <ion-col col-11>
-                <button  detail-none (click)="expandItem(item)" [ngClass]="item.lido == 1 ? 'read-notification' : 'notification'">
-                  <h2>{{ item?.remetente.nome }}</h2>
-                  <p [innerHTML]="item?.mensagem_formatada.substr(0,40)+'...'" class="message-receptive"></p>
-                  <p>{{ item?.created_at }}</p>
-                </button>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-  
-          <expandable [expanded]="item.expanded" [ngClass]="item.expanded == true ? 'expanded' : ''">
-            <div padding style="overflow: auto;" (click)="expandItem(item)" class="notification">
-              <h2>{{ item?.remetente.nome }}</h2>
-              <p [innerHTML]="item.mensagem_formatada" class="message-receptive"></p>
-              <p>{{ item?.created_at }}</p>
-            </div>
-          </expandable>
-        </ion-item>
-      </ion-list>
 
-      <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
-        <ion-infinite-scroll-content>
-          
-          </ion-infinite-scroll-content>
-      </ion-infinite-scroll>      
+<ion-content class="content {{ENV.PROJECT}}-custom-bg" [ngClass]="version == '01' ? 'margin-content-l1' : version == '02' ? 'margin-content-l2' : 'margin-content-l1'">
+  <ion-list padding style="margin-bottom: 120px !important;">
+    <ion-item *ngFor="let item of items" class="content-max-width">
+      <ion-grid *ngIf="item.expanded == false" style="background-color: white;">
+        <ion-row>
+          <ion-col col-1>
+            <ion-icon *ngIf="item.lido == 0" name="notifications-outline"></ion-icon>
+            <ion-icon [ngClass]="item.lido == 1 ? 'read-notification' : 'notification'" *ngIf="item.lido == 1" name="md-checkmark"></ion-icon>
+          </ion-col>
+          <ion-col col-11>
+            <button  detail-none (click)="expandItem(item)" [ngClass]="item.lido == 1 ? 'read-notification' : 'notification'">
+              <h2>{{ item?.remetente.nome }}</h2>
+              <p [innerHTML]="item?.mensagem_formatada.substr(0,40)+'...'" class="message-receptive"></p>
+              <p>{{ item?.created_at }}</p>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <expandable [expanded]="item.expanded" [ngClass]="item.expanded == true ? 'expanded' : ''">
+        <div padding style="overflow: auto;" (click)="expandItem(item)" class="notification">
+          <h2>{{ item?.remetente.nome }}</h2>
+          <p [innerHTML]="item.mensagem_formatada" class="message-receptive"></p>
+          <p>{{ item?.created_at }}</p>
+        </div>
+      </expandable>
+    </ion-item>
+  </ion-list>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content>
+      
+      </ion-infinite-scroll-content>
+  </ion-infinite-scroll>      
              
 </ion-content>

@@ -35,7 +35,7 @@
   </ion-header>
 
   <ion-content padding>
-    <ion-card style="padding-top: 80px;" padding-top *ngIf="motivos && motivos.length > 0">
+    <ion-card style="padding-top: 80px;" class="content-max-width" padding-top *ngIf="motivos && motivos.length > 0">
       <ion-label *ngIf="idiom == '01'">Selecione um motivo.</ion-label>
       <ion-label *ngIf="idiom == '02'">Seleccione una asitencia</ion-label>
       <ion-list>
@@ -48,7 +48,7 @@
       </ion-list>
     </ion-card>
 
-    <ion-card  style="padding-top: 80px;" *ngIf="motivos && motivos.length <= 0">
+    <ion-card  style="padding-top: 80px;" class="content-max-width" *ngIf="motivos && motivos.length <= 0">
       <h1 *ngIf="idiom == '01'">Não há motivos cadastrados.</h1>
       <h1 *ngIf="idiom == '02'">No hay razones registradas.</h1>
     </ion-card>
@@ -77,7 +77,7 @@
     </ion-grid>
   </ion-header>
 
-  <ion-content padding *ngIf="recents && recents.length > 0">
+  <ion-content padding *ngIf="recents && recents.length > 0" class="content-max-width">
     <p *ngIf="idiom == '01'">Abaixo a lista dos últimos usuários que você conversou</p>
     <p *ngIf="idiom == '02'">Abajo el listado de los ultimos contactos hechos</p>
     
@@ -132,7 +132,7 @@
     </ion-grid>
   </ion-header>
 
-  <ion-content padding *ngIf="showMessageAllBox == false" class="message-container" style="height: 90%;">
+  <ion-content padding *ngIf="showMessageAllBox == false" class="message-container content-max-width" style="height: 90%;">
     <ion-list>
       <div id="chat-anchor"></div>
       <div *ngIf="selectedUserId != null">

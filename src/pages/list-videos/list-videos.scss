@@ -200,3 +200,21 @@ ion-item {
       }
   }
 }
+
+.thumb-max-width{
+  max-width: 120px;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.text-vertical-align{
+  margin-top: auto; 
+  margin-bottom: auto;
+}
+
+.thumb-box{
+  display: flex; 
+  justify-content: center;
+}
