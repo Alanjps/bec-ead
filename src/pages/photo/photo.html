@@ -17,7 +17,9 @@
 <ion-content class="content {{ENV.PROJECT}}-custom-bg" [ngClass]="version == '01' ? 'margin-content-l1' : version == '02' ? 'margin-content-l2' : 'margin-content-l1'" 
   style="position: relative;">
 
-  <div [@inOutAnimation] *ngIf="expanded" style="transition: 2s;">
+  <div [@inOutAnimation] *ngIf="expanded" style="transition: 2s; max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;">
     <img *ngIf="imageProject" style="text-align: center; width: 100% !important;" [src]="imageProject.thumb" />
     <p style="text-align: center; padding: 20px 10%;">{{imageProject?.descricao}}</p>
   </div>

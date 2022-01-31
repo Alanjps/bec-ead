@@ -16,13 +16,13 @@
 
 <ion-content class="content {{ENV.PROJECT}}-custom-bg" padding style="margin-top: 20px; position: relative;" [ngClass]="version == '01' ? 'margin-content-l1' : version == '02' ? 'margin-content-l2' : 'margin-content-l1'">
   
-  <ion-searchbar *ngIf='version == "01"' [(ngModel)]="terms" [showCancelButton]="shouldShowCancel" placeholder="O que está buscando?"> </ion-searchbar>
+  <ion-searchbar *ngIf='version == "01"' class="content-max-width" [(ngModel)]="terms" [showCancelButton]="shouldShowCancel" placeholder="O que está buscando?"> </ion-searchbar>
 
   <ion-list no-lines class="lessons-container" *ngIf="playVideo == false">
     <ion-grid>
       <ion-item *ngFor="let projeto of videos | search : terms">
         <div *ngIf="projeto.content_only == 1" (click)="presentModal(projeto.contents)">
-          <ion-row *ngIf="version == '01'">
+          <ion-row *ngIf="version == '01'" class="content-max-width">
             <ion-row> 
                        
               <ion-thumbnail style="position: relative;">
@@ -52,7 +52,7 @@
         </div>
 
         <div *ngIf="!projeto.content_only || projeto.content_only !== 1" (click)="openProject(projeto)">
-          <ion-row *ngIf="version == '01'">
+          <ion-row *ngIf="version == '01'" class="content-max-width">
             <ion-row>          
               <ion-thumbnail style="position: relative;">
                 <img *ngIf="projeto.projectConcluded && projeto.projectConcluded == true" style="position: absolute; right: 0; top: 0; left: auto; bottom: auto; height: 60px !important; width: auto;" src={{iconConcluido}}>

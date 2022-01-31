@@ -22,7 +22,7 @@ export var environment = {
   PUSHER_APP_CLUSTER: "us2", 
  */
   
-/* 
+
 //EDICOM -----------------------------------
   PROJECT: 'edicom',
   TEXT_COLOR_V1: 'text-default-white',  
@@ -32,7 +32,7 @@ export var environment = {
 	PUSHER_APP_KEY: "7b8b5ea20f7a185be995",
 	PUSHER_APP_SECRET: "789567e75724f82b17dc",
   PUSHER_APP_CLUSTER: "us2", 
- */
+
 
 /*   
 //R2M -----------------------------------
@@ -58,7 +58,7 @@ export var environment = {
   PUSHER_APP_CLUSTER: "us2", 
  */
 
- 
+/*  
 //VCC -----------------------------------
   PROJECT: 'ead',
   TEXT_COLOR_V1: 'text-default-black',  
@@ -69,7 +69,7 @@ export var environment = {
   PUSHER_APP_SECRET: "ceac567fed3ab7dd2dd1",
   PUSHER_APP_CLUSTER: "us2",
 
-
+ */
 
 /* 
 //MARKETING HOUSE ------------------------
